@@ -2,7 +2,7 @@
 
 
 
-* [1.概述](ads-tracking-api.md#概述)
+* [1.概述](ads-tracking-api.md#1)
 * [2.名词及概念解释](ads-tracking-api.md#名词及概念解释)
 * [3.系统校验规则说明](ads-tracking-api.md#系统校验规则说明)
   * [3.1 AI 与应用相关](ads-tracking-api.md#ai与应用相关：)
@@ -20,7 +20,7 @@
   * [6.6 Onelink API](ads-tracking-api.md#6-6-onelink-api)
   * [6.7 Normallink API](ads-tracking-api.md#6-7-normallink-api)
 
-### 1.概述 {#概述}
+### 1.概述 {#1}
 
 为满足广大客户更灵活创建广告监测链接的诉求，GrowingIO（以下简称GIO）提供了一套创建监测链接的API。本文档旨在说明一些调用流程，逻辑及相关接口说明。
 
