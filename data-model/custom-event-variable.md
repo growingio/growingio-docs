@@ -1,4 +1,23 @@
-# 自定义事件和变量
+# 自定义变量
+
+* [1.自定义变量使用方法](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#1)
+  * [1.1 标识符](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#11)
+  * [1.2 名称](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#12)
+  * [1.3 描述](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#13)
+* [2.页面级变量](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#2)
+  * [2.1 页面级变量的持久性范围](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#21)
+  * [2.2 页面级变量使用的场景](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#22)
+* [3.转化变量](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#3)
+  * [3.1 归因方式](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#%E5%BD%92%E5%9B%A0%E6%96%B9%E5%BC%8F)
+  * [3.2 失效时间](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#32)
+  * [3.3 转化变量的归因模型](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#33)
+  * [3.4 转化变量的持久性范围](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#34)
+  * [3.5 转化变量的使用场景](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#%E8%BD%AC%E5%8C%96%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF)
+  * [3.6 分析场景示例](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#%E5%88%86%E6%9E%90%E5%9C%BA%E6%99%AF%E7%A4%BA%E4%BE%8B)
+* [4.用户变量](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#4)
+  * [4.1 归因模型](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#41)
+  * [4.2 用户变量的归因](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#42)
+  * [4.3 用户变量的持久性范围](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#43)
 
 重要：如果您目前使用的是 1.x 版本的 SDK，希望升级至 2.x 版本，请注意：您需要联系您的 GrowingIO 对接人，我们需要帮您开启后台 2.x 版本所对应功能。如果您直接集成 2.x 版本，而后台对应功能未开启的话，可能会造成数据丢失的问题。
 
@@ -9,13 +28,13 @@ GrowingIO使用自定义变量来提高数据定义的灵活性。GrowingIO的�
 3. 转化变量
 4. 用户变量
 
-   请注意，在 GrowingIO 的一个项目内，自定义事件的个数上限为500个，事件级变量的个数上限为100个（并非每个事件可附带100个变量，而是整个项目中只可以有100个事件级变量），页面级变量的个数上限为50个，转化变量的个数上限为10个，用户变量的个数上限为50个。
+请注意，在 GrowingIO 的一个项目内，自定义事件的个数上限为 500 个，事件级变量的个数上限为 100 个（并非每个事件可附带 100 个变量，而是整个项目中只可以有 100 个事件级变量），页面级变量的个数上限为 50 个，转化变量的个数上限为 10 个，用户变量的个数上限为 50 个。
 
-## 1.自定义变量使用方法 {#自定义变量使用方法}
+## 1.自定义变量使用方法 {#1}
 
 在具体的将自定义变量添加到网站或者移动应用上之前，GrowingIO要求先在打点管理的界面上进行变量的声明操作，然后再开展具体的添加自定义变量的操作。在自定义变量的声明界面上需要输入下列对所有变量来说通用的信息：
 
-### 标识符 {#标识符}
+### 1.1 标识符 {#11}
 
 * 标识符是代表某一个具体变量的一种具有唯一性要求的符号，标识符用来唯一的代表一个打点事件或者变量，即整个打点系统内部标识符在所有的变量和打点指标之间是唯一的。在新创建任何一种类型的变量的时候，这个新的变量的标识符不能跟任何一个已有变量和打点事件的标识符重复。在一个变量的标识符确定之后，在代码中就可以使用这个标识符来唯一代表该变量，请仔细检查确保声明的标识符和代码中使用标识符一致。如果出现了不一致的情况，GrowingIO将视为没有收到声明了的变量的数据，而那个在代码中发送的跟声明中标识符不一样的变量的数据会被GrowingIO认为没有声明而丢弃。GrowingIO虽然支持标识符的修改，但是不建议频繁修改，因为每一次标识符的修改都需要在声明界面和代码上同时作出修改，以保证标识符的一致性。
 * 标识符的设置细节规则如下
@@ -23,27 +42,27 @@ GrowingIO使用自定义变量来提高数据定义的灵活性。GrowingIO的�
   * 标识符仅允许大小写英文、数字、下划线、以及英文冒号，并且不能以数字和冒号开
   * 标识符的长度限制在50个英文字符之内
 
-### 名称 {#名称}
+### 1.2 名称 {#12}
 
 * 名称是变量具体在使用的时候显示在报表上的一种变量的称呼。客户给变量一个名称，这个名称会出现在报表界面上用以指代当前所设置的变量对应的维度。名称允许客户经常改动，需要注意的是，名称修改以后，对应的报表界面上的维度名称也会跟着修改。
 * 名称的设置细节规则如下
   * 名称允许重名，可以使用大小写英文、中文以及各种符号，长度限制在30个字符之内。
 
-### 描述 {#描述}
+### 1.3 描述 {#13}
 
 * 可以使用较长的一段文字来描述某一个变量设置的目的，意义。
 * 描述的设置细节规则如下
   * 描述允许重复，可以使用大小写英文、中文以及各种符号，长度限制在150个字符之内。
 
-## 2.页面级变量 {#页面级变量}
+## 2.页面级变量 {#2}
 
 **定义：页面级变量继承自原页面属性（PS字段），此变量与页面绑定，可作为维度分解页面浏览量及页面上发生的无埋点指标。**
 
-### **页面级变量的持久性范围** {#页面级变量的持久性范围}
+### 2.1 **页面级变量的持久性范围** {#21}
 
 页面级变量的持久性范围仅在当前页面内，随着用户操作行为导致页面一旦变化，保存在页面级变量中的值就宣告失效。也就是说，页面级变量作为维度，只能用于分解它们标记的页面（如上述的商品详情页和频道页）的无埋点指标，不能用于分解本页面的埋点指标或任何其他页面上指标。
 
-### **页面级变量使用的场景** {#页面级变量使用的场景}
+### 2.2 **页面级变量使用的场景** {#22}
 
 页面级变量可以用于下述场景
 
@@ -59,9 +78,7 @@ GrowingIO使用自定义变量来提高数据定义的灵活性。GrowingIO的�
 
 在按上图所示，为所有商品详情页打上页面级变量的标签后，在GrowingIO后台，上述5个页面级变量均会成为“维度”，可在各分析图表、工具中选用。例如在单图中，即可按商品ID来分解页面浏览量：
 
-![](https://docs.growingio.com/.gitbook/assets/yemianji.png)
-
-#### 分析场景示例二 {#分析场景示例二}
+**分析场景示例二**
 
 例如，在某门户网站里存在多个频道（新闻、娱乐等），用户可能会浏览新闻类页面，也可能会浏览娱乐类页面，那么在这样的场景下，GrowingIO推荐设置一个页面级变量来保存页面的类型信息，然后使用类似于下面代码来将这样的页面类型的信息保存在一个页面级变量中。我们为所有的新闻类页面调用下述代码，为它们打上“频道=新闻”这样一个标签，然后在GrowingIO后台即可按频道来分解用户的浏览行为。
 
@@ -77,7 +94,7 @@ GrowingIO.setPageVariable\(Activity activity, ”channel”, “新闻”\);
 
 \[Growing setPageVariableWithKey:@"channel" andStringValue:@"新闻" toViewController:myViewController\];
 
-## 3.转化变量 {#转化变量}
+## 3.转化变量 {#3}
 
 **定义：转化变量是一种强大的变量类型，可以根据不同的业务需求去配置一个转化变量的归因方式和持久性范围。随着归因模型的不同，持久性范围的不同，用户发生的事件将会归到或者不归到某一个转化变量的值上。**
 
@@ -85,7 +102,7 @@ GrowingIO.setPageVariable\(Activity activity, ”channel”, “新闻”\);
 
 转化变量的归因计算是以自然天为单位的，也就是说当天发生的转化行为，需要第二天才能够在GrowingIO后台图表中进行分析。
 
-### **归因方式** {#归因方式}
+### 3.1 **归因方式** {#归因方式}
 
 当发生一个事件的时候，GrowingIO会通过转化变量中配置的归因模型，去计算应该将这个事件归到转化变量中的哪一个有效值上，转化变量目前支持以下三种归因模型：
 
@@ -135,7 +152,7 @@ GrowingIO.setPageVariable\(Activity activity, ”channel”, “新闻”\);
 
 请注意，虽然GrowingIO支持在声明并且使用了一段时间的某一个转化变量上进行更改归因方式的操作，但是归因方式的改变将导致该转化变量的报表上展现的数据将出现两种或者多种归因方式混合的情况。这将导致数据出现错误，从错误的数据得出的结论也是错误的。所以，GrowingIO建议重新启用新的转化变量来实现更改归因方式的需求。
 
-### **失效时间** {#失效时间}
+### 3.2 **失效时间** {#32}
 
 对于转换变量来讲，失效时间是一个配置项。GrowingIO目前支持访问，一天，一周，一月这四种失效的配置项。这四种配置项的意义分别是：
 
@@ -151,15 +168,15 @@ GrowingIO.setPageVariable\(Activity activity, ”channel”, “新闻”\);
 * 如果失效是一周，保存在转化变量中的站内搜索词“手机”在下周一早上的七点十五分失效。
 * 如果失效是一月，保存在转化变量中的站内搜索词“手机”将在三十天之后的早上七点十五分失效。
 
-### **转化变量的归因模型** {#转化变量的归因模型}
+### 3.3 **转化变量的归因模型** {#33}
 
 转化变量通过归因配置项来确定某个具体的转化变量的归因模型。
 
-### **转化变量的持久性范围** {#转化变量的持久性范围}
+### 3.4 **转化变量的持久性范围** {#34}
 
 转化变量通过失效配置项来确定某个具体的转化变量的持久性范围。
 
-### **转化变量的使用场景** {#转化变量的使用场景}
+### 3.5 **转化变量的使用场景** {#转化变量的使用场景}
 
 转化变量可以用于回答下列业务问题：
 
@@ -167,19 +184,19 @@ GrowingIO.setPageVariable\(Activity activity, ”channel”, “新闻”\);
 * 使用线性归因模型，内部搜索的效果怎样，某个具体的搜索词带来了多少订单，营业收入。
 * 使用最近归因模型，同一个内部活动的不同入口分别带来了多少内部活动详情页面的浏览。
 
-### 分析场景示例 {#分析场景示例}
+### 3.6 分析场景示例 {#分析场景示例}
 
 在电商购物场景中，可将促使用户下单的前序行为如：活动页浏览、搜索、站内banner点击等，定义为转化变量，用于分解下单行为。例如，我们在用户进行搜索时，通过转化变量上传其输入的搜索词，即可在GrowingIO后台按以下方式分解不同搜索词带来的下单转化：
 
 ![](https://docs.growingio.com/.gitbook/assets/zhuanhuabianliang.png)
 
-## 4.用户变量 {#用户变量}
+## 4.用户变量 {#4}
 
 用户变量用来保存跟用户本身相关的信息，例如用户的姓名，性别，会员卡等级等等。不建议在用户变量中保存跟交互行为相关的信息，例如当前正在浏览的商品，当前正在查看的某一个SaaS项目。这些随着用户的交互行为会发生变化的信息GrowingIO建议使用前面提到的页面级变量和转化变量来保存。
 
 在某些情况下，某些特定的用户信息会发生变化。例如，某个用户在某天从银卡会员升级成了金卡会员。那么这位用户在银卡会员的时候发生的页面浏览，访问，购买等事件应该归属于银卡会员这个值还是金卡会员这个值呢？这个取决于用户变量的归因配置项。
 
-### 归因模型 {#归因模型}
+### 4.1 归因模型 {#41}
 
 当发生一个事件的时候，GrowingIO会通过用户变量中配置的归因模型去计算应该将这个事件归到用户变量中的哪一个值上，用户变量支持两种归因模型：
 
@@ -191,11 +208,11 @@ GrowingIO.setPageVariable\(Activity activity, ”channel”, “新闻”\);
 
 当事件发生时，往后看，事件的所有权重全部分配给用户变量中**最终设置的值**上。例如，在前面的某个用户在某天从银卡升级成为金卡的例子中，在最终这种归因模型下，所有银卡时候发生的页面浏览，访问，购买事件等等都会归到金卡上。
 
-### **用户变量的归因** {#用户变量的归因}
+### 4.2 **用户变量的归因** {#42}
 
 用户变量通过归因配置项来确定某个具体的用户变量的归因模型。
 
-### **用户变量的持久性范围** {#用户变量的持久性范围}
+### 4.3 **用户变量的持久性范围** {#43}
 
 用户变量默认的持久性范围是永远。当某个用户配置上某一个用户变量的某一个值时，如果后面没有再修改，那么这个用户在今后会一直保持这个值。也就是说，用户在之后不管多久的时间段内发生的各种各样的事件都可以归到这个用户变量的值上，除非之后显式的更改了这个用户变量的值。
 

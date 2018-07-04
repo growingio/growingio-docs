@@ -431,7 +431,7 @@ view3.growingAttributesValue = @“ad3”;
 
 ### 自定义数据上传&配置指导 {#自定义数据上传配置指导}
 
-您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，具体请参考[相关文档](custom-data-implement-guide.md)。
+您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，具体请参考[相关文档](../data-model/custom-data-implement-guide.md)。
 
 ### SDK 1.x 版本升级指导 {#sdk-1x-版本升级指导}
 
@@ -495,7 +495,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 **2.2 GrowingIO 后台配置**
 
-在 GrowingIO 后台进行用户属性字段配置，是在 “项目配置” - “CS字段配置” 页面。升级至 2.x 版本后，取消了上述配置方式。您可以在 **“管理” - “自定义事件和变量” 页面中的 “应用级变量” 和 “用户变量” Tab 页**分别找到自动为您迁移过去的两种变量的配置。配置方式请参考[相关帮助文档](custom-data-implement-guide.md#自定义数据-上传步骤)。
+在 GrowingIO 后台进行用户属性字段配置，是在 “项目配置” - “CS字段配置” 页面。升级至 2.x 版本后，取消了上述配置方式。您可以在 **“管理” - “自定义事件和变量” 页面中的 “应用级变量” 和 “用户变量” Tab 页**分别找到自动为您迁移过去的两种变量的配置。配置方式请参考[相关帮助文档](../data-model/custom-data-implement-guide.md#自定义数据-上传步骤)。
 
 **3. 迁移页面属性字段（PS字段）**
 
@@ -526,7 +526,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 **2.2 GrowingIO 后台配置**
 
-您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档](custom-data-implement-guide.md#自定义数据-上传步骤)
+您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档](../data-model/custom-data-implement-guide.md#自定义数据-上传步骤)
 
 #### 4. 迁移自定义事件（埋点事件） {#4-迁移自定义事件埋点事件}
 
