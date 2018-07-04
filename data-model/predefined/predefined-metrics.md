@@ -1,7 +1,7 @@
 # 指标
 
-* [第一部分:访问级指标](predefined-metrics.md#di-yi-bu-fen-fang-wen-ji-zhi-biao)
-  * [1.访问量\(web/app\)](predefined-metrics.md#1fang-wen-liang)
+* [第一部分：访问级指标](predefined-metrics.md#di-yi-bu-fen-fang-wen-ji-zhi-biao)
+  * [1.访问量（web/app）](predefined-metrics.md#1fang-wen-liang)
   * [2.访问用户人均访问次数（web/app） \[ 访问用户 / 访问量 \]](predefined-metrics.md#2)
   * [3.每次访问页面浏览量（web/app） \[ 访问量 / 页面浏览量 \]](predefined-metrics.md#3)
   * [4.总访问时长（web/app）](predefined-metrics.md#4)
@@ -33,7 +33,7 @@
 
 > **衡量网站总体访问情况**
 
-#### 1.访问量\(web/app\) {#1fang-wen-liang}
+#### 1.访问量（web/app） {#1fang-wen-liang}
 
 访问的数量。与页面级变量一起使用时，代表着该页面被访问的次数。
 
