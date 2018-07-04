@@ -1,7 +1,7 @@
 # 事件分析
 
 * [1.简介](event-analysis.md#1-jian-jie)
-  * [1.1什么是事件？](https://growingio.gitbook.io/docs/data-analytics/event-analysis#1-1-shen-me-shi-shi-jian)
+  * [1.1什么是事件？](event-analysis.md#1-1-shen-me-shi-shi-jian)
   * [1.2事件分析能解决什么问题？](https://growingio.gitbook.io/docs/data-analytics/event-analysis#%E4%BA%8B%E4%BB%B6%E5%88%86%E6%9E%90%E8%83%BD%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%9F)
 * [2.事件分析介绍](https://growingio.gitbook.io/docs/data-analytics/event-analysis#2-shi-jian-fen-xi-jie-shao)
   * [2.1 线图](https://growingio.gitbook.io/docs/data-analytics/event-analysis#21-xian-tu)
