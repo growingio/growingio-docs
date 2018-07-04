@@ -168,7 +168,7 @@
 
 **数据校验第一步：本地开发环境校验**
 
-GrowingIO 提供了 SDK debug 模式以及 [debug 工具](../sdk-integration/growingio-debugger.md)，来帮助您完成数据的校验。
+GrowingIO 提供了 SDK debug 模式以及 [debug 工具](../../sdk-integration/growingio-debugger.md)，来帮助您完成数据的校验。
 
 **log 中自定义数据的关键字**
 

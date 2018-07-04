@@ -292,7 +292,7 @@ gio('sendPage');
 
 ### 自定义数据上传&配置指导 {#自定义数据上传配置指导}
 
-您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，具体请参考[相关文档](../data-model/custom-data-implement-guide.md)。
+您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，具体请参考[相关文档](../data-model/zi-ding-yi-shi-jian-he-bian-liang/custom-data-implement-guide.md)。
 
 ### 1.x 版本 SDK 升级指导 {#1x-版本-sdk-升级指导}
 
@@ -312,7 +312,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 * CS1字段，会强制命名为“登陆用户ID”，并且上传接口与其他变量不同。
 * CS2-10字段，会迁移至“应用级变量”，应用级变量与CS字段的使用方式无任何区别。
-* CS11-20字段，会迁移至“[用户变量”](../data-model/custom-event-variable.md#用户变量)。两者的区别主要在于：用户变量支持自定义的归因方式。
+* CS11-20字段，会迁移至“[用户变量”](../data-model/zi-ding-yi-shi-jian-he-bian-liang/custom-event-variable.md#用户变量)。两者的区别主要在于：用户变量支持自定义的归因方式。
 
 **2.1 上传接口：**
 
@@ -358,13 +358,13 @@ gio('people.set', peopleVariables); // 多个变量，可组合为一个JSON对�
 
 **2.2 GrowingIO 后台配置**
 
-在 GrowingIO 后台进行用户属性字段配置，是在 “项目配置” - “CS字段配置” 页面。升级至 2.x 版本后，取消了上述配置方式。您可以在 **“管理” - “自定义事件和变量” 页面中的 “应用级变量” 和 “用户变量” Tab 页**分别找到自动为您迁移过去的两种变量的配置。配置方式请参考[相关帮助文档](../data-model/custom-data-implement-guide.md)。
+在 GrowingIO 后台进行用户属性字段配置，是在 “项目配置” - “CS字段配置” 页面。升级至 2.x 版本后，取消了上述配置方式。您可以在 **“管理” - “自定义事件和变量” 页面中的 “应用级变量” 和 “用户变量” Tab 页**分别找到自动为您迁移过去的两种变量的配置。配置方式请参考[相关帮助文档](../data-model/zi-ding-yi-shi-jian-he-bian-liang/custom-data-implement-guide.md)。
 
 **3. 迁移页面属性字段（PS字段）**
 
 如果您未做页面属性字段上传，请忽略此部分。
 
-类似于用户属性字段，在 2.x 版本中，页面属性字段被迁移到了“[页面级变量](../data-model/custom-event-variable.md#页面级变量)”。与页面属性字段不同的是，**页面级变量相当于过去的 PS 字段，不再存在过去的 PG 字段**。
+类似于用户属性字段，在 2.x 版本中，页面属性字段被迁移到了“[页面级变量](../data-model/zi-ding-yi-shi-jian-he-bian-liang/custom-event-variable.md#页面级变量)”。与页面属性字段不同的是，**页面级变量相当于过去的 PS 字段，不再存在过去的 PG 字段**。
 
 **3.1 上传接口**
 
@@ -388,7 +388,7 @@ gio('page.set', pageLevelVariables); //多个变量，可组合为一个对象�
 
 **3.2 GrowingIO 后台配置**
 
-您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档](../data-model/custom-data-implement-guide.md#第二步：在-打点管理-中完成配置)
+您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档](../data-model/zi-ding-yi-shi-jian-he-bian-liang/custom-data-implement-guide.md#第二步：在-打点管理-中完成配置)
 
 #### 4. 迁移自定义事件（埋点事件） {#4-迁移自定义事件埋点事件}
 
