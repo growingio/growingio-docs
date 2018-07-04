@@ -1,8 +1,17 @@
 # 留存分析
 
-## 留存分析 {#留存分析}
+* [1.简介](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#1-jian-jie)
+* [2.功能](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#2-gong-neng)
+  * [2.1新建留存默认界面](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#2-1-xin-jian-liu-cun-mo-ren-jie-mian)
+  * [2.2留存下钻到分群](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#%E7%95%99%E5%AD%98%E4%B8%8B%E9%92%BB%E5%88%B0%E5%88%86%E7%BE%A4)
+  * [2.3统计](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#%E7%BB%9F%E8%AE%A1%E5%8F%A3%E5%BE%84)口径
+  * [3.应用场景](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#3-ying-yong-chang-jing)[3.1场景1](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#3-1-chang-jing-1)
+* [3.2场景2](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#3-2-chang-jing-2)
+* [3.3场景3](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#3-3-chang-jing-3)
+* [3.4场景4](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#3-4-chang-jing-4)
+* [4.常见问题](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#4-chang-jian-wen-ti)
 
-### 简介 {#简介}
+## 1.简介
 
 留存，顾名思义，就是用户在你的网站/App中留下来、持续使用的意思。
 
@@ -12,9 +21,9 @@
 
 在GrowingIO的留存分析工具中，您可以灵活地自定义"目标用户"，设置特定的 "起始行为"和 "留存行为"，来观测目标用户的留存情况。
 
-### 功能 {#功能}
+## 2.功能
 
-#### 新建留存默认界面 {#新建留存默认界面}
+### 2.1新建留存默认界面
 
 当您通过导航中的 "分析" 进入留存分析或单图列表留存分析 tab 下 "新建"进入留存分析时，页面上默认显示的是过去14天 "全部访问用户"做过 "任意行为" \(回访网站/App\)留存情况。直白来说，就是过去14天访问过网站/App 的用户，在后面的每天再回来访问网站/App 的用户就是留存用户，这些留存用户占初始用户的比例就是留存率。我们先来认识一下留存分析界面。
 
@@ -144,7 +153,7 @@ c.可以选择的最远日期从该项目生效日期开始；
 
 同样地，您可以根据具体业务需求灵活的切换时间与显示粒度。
 
-### 留存下钻到分群 {#留存下钻到分群}
+### 2.2留存下钻到分群 {#留存下钻到分群}
 
 留存分析中提供了一键创建分群的功能，可以快速定位留存和未留存用户，打通分析到运营环节。鼠标点击留存表的日期行单元格即可出现以下效果。当前钻取有3个限制条件需要注意：
 
@@ -154,7 +163,7 @@ c.可以选择的最远日期从该项目生效日期开始；
 
    ![](https://docs.growingio.com/.gitbook/assets/liu-cun-xia-zuan.png)
 
-### 统计口径 {#统计口径}
+### 2.3统计口径 {#统计口径}
 
 留存图中的数据是根据留存表来绘制的，我们针对留存表来说明一下数据统计口径。首先，需要明确的是，留存表中的每个绝对值，指的都是人数。
 
@@ -186,9 +195,11 @@ c.可以选择的最远日期从该项目生效日期开始；
 
   ![](https://docs.growingio.com/.gitbook/assets/liu-cun-shuai-ju-li-new.png)
 
-### 应用场景 {#应用场景}
+## 3.应用场景
 
-#### 场景1：以提升新用户次周留存为目标的产品改版效果评估 {#场景1：以提升新用户次周留存为目标的产品改版效果评估}
+### 3.1场景1
+
+#### 以提升新用户次周留存为目标的产品改版效果评估
 
 某社交 APP想要提升新用户的次周留存率，并以此为业务目标进行了新版本产品迭代，想要评估改版的有效性。  
 在GrowingIO留存功能中，可以通过 **"维度对比"** 快速实现评估。
@@ -207,7 +218,9 @@ c.可以选择的最远日期从该项目生效日期开始；
 
 可以看出，2.3 版本的新用户次周留存率有明显提升。
 
-#### 场景2：评估产品内不同功能的表现 {#场景2：评估产品内不同功能的表现}
+### 3.2场景2
+
+#### 评估产品内不同功能的表现
 
 成功的产品功能应该具备2个特点：被更多的用户使用，该功能的用户黏度高。
 
@@ -231,7 +244,9 @@ c.可以选择的最远日期从该项目生效日期开始；
 
 可以看出：功能A的表现是最好的：覆盖用户量和用户留存率都更高。
 
-#### 场景3：度量某个产品激活手段是否有效 {#场景3：度量某个产品激活手段是否有效}
+### 3.3场景3
+
+#### 度量某个产品激活手段是否有效
 
 某社区电商产品为了推广电商模块，采用了 "签到奖励"的激活手段，用户签到之后可以获得积分，可以用来抵扣电商购物时的部分金额，期望可以用这种激活手段来拉动电商模块的活跃度和购买转化。
 
@@ -251,7 +266,9 @@ c.可以选择的最远日期从该项目生效日期开始；
 
 上线之后，使用 "签到奖励"功能的用户回来使用"签到奖励"的留存率很高，但到电商模块交易的比较少，说明签到奖励对于激活电商模块的效果不够好，需要进一步调整签到奖励策略或结合其他激活手段。
 
-#### 场景4：不同运营活动的效果衡量 {#场景4：不同运营活动的效果衡量}
+### 3.4场景4
+
+#### 不同运营活动的效果衡量 {#场景4：不同运营活动的效果衡量}
 
 电商、互联网金融理财、OTA 等等很多业务，发放优惠券刺激老用户服务复购是非常常见的场景。常见的优惠券有满减券、返现券、组合券等等。那么，哪种优惠券更加有效呢？对于选定的目标用户，同时对不同的用户发放不同优惠券做优惠券有效性测试。
 
@@ -271,20 +288,20 @@ c.可以选择的最远日期从该项目生效日期开始；
 
 通过留存曲线可以看到，不同优惠券领取的用户量和后后续对刺激用户后续投资/购买的差异。
 
-### 常见问题 {#常见问题}
+## 4.常见问题
 
-#### 1. 行为对比&gt;对比起始行为对比，出现的 "未做过" 是什么意思？ {#1-行为对比对比起始行为对比，出现的-未做过-是什么意思？}
+#### 4.1. 行为对比&gt;对比起始行为对比，出现的 "未做过" 是什么意思？ {#1-行为对比对比起始行为对比，出现的-未做过-是什么意思？}
 
 为了帮助您更好的判断 "做过某个行为 A"和留存行为之间的相关性，我们提供了 "未做过行为 A" 和留存行为之间的相关性。如果未做过行为A的用户留存率比做过行为A的用户留存率更高，说明行为 A 不是1个对用户留存有帮助的行为。
 
-#### 2.留存分析中在留存趋势细节表中切换天、周留存，为什么显示用户数不同？ {#2留存分析中在留存趋势细节表中切换天、周留存，为什么显示用户数不同？}
+#### 4.2留存分析中在留存趋势细节表中切换天、周留存，为什么显示用户数不同？ {#2留存分析中在留存趋势细节表中切换天、周留存，为什么显示用户数不同？}
 
 造成用户数差异的原因有：
 
 1. 周留存分析时会根据设置的时间范围调整到自然周，比如设置的时间为周三，在分析周留存的时候会自动从当周的周一开始分析。所以周留存和天留存的统计时间范围可能是不同的。
 2. 周留存中的用户数表示当周做过起始行为的用户，如果用户在当周的三天做过起始行为，在天留存表中会表示为三个用户，而在周留存表中会表示为一个。
 
-#### 3.查看留存的时候，如何区分IOS和安卓呢？ {#3查看留存的时候，如何区分ios和安卓呢？}
+#### 4.3查看留存的时候，如何区分IOS和安卓呢？ {#3查看留存的时候，如何区分ios和安卓呢？}
 
 可以在「细分对比」里，选择不同的平台。
 
