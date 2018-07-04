@@ -1,5 +1,9 @@
 # 智能路径
 
+* [1.简介](https://growingio.gitbook.io/docs/data-analytics/pathfinder#1-jian-jie)
+* [2](https://growingio.gitbook.io/docs/data-analytics/pathfinder#2-shi-yong-jian-jie).使用介绍
+* [3.常见问题](https://growingio.gitbook.io/docs/data-analytics/pathfinder#3-chang-jian-wen-ti)
+
 ## 1.简介
 
 「智能路径」是基于GrowingIO全量数据采集，以及机器学习技术而设计的功能模块。在「智能路径」中您只需要选择「转化目标」即可获得用户真实的转化路径。帮助您了解用户的访问轨迹，以及更好的使用GrowingIO漏斗转化功能进行对转化路径的剖析。
