@@ -3,12 +3,12 @@
 
 
 * [1.简介](heatmap-web.md#1-jian-jie)
-*   [ 1.1.热图绘制规则](heatmap-web.md#1-1-re-tu-hui-zhi-gui-ze)
-*    [1.2.元素点击率计算方式](heatmap-web.md#二、元素点击率计算方式：)
-*    [1.3.监控面板说明](heatmap-web.md#三、监控面板说明：)
+  * [1.1.热图绘制规则](heatmap-web.md#1-1-re-tu-hui-zhi-gui-ze)
+  * [1.2.元素点击率计算方式](heatmap-web.md#二、元素点击率计算方式：)
+  * [1.3.监控面板说明](heatmap-web.md#三、监控面板说明：)
 * [2.常见问题](heatmap-web.md#2-chang-jian-wen-ti)
-*    [2.1.绘制方式的影响范围](heatmap-web.md#四、绘制方式的影响范围：)
-*  [  2.2.其他具体圈选规则](heatmap-web.md#五、其他具体圈选规则)
+  * [2.1.绘制方式的影响范围](heatmap-web.md#四、绘制方式的影响范围：)
+  * [2.2.其他具体圈选规则](heatmap-web.md#五、其他具体圈选规则)
 
 ## 1.简介
 
