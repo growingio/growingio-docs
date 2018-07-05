@@ -5,3 +5,5 @@
 * [权限管理](rights-management.md)
 * [爬虫规则](bot-rule.md)
 
+通过一些规则设置，更好地使用和管理产品。
+

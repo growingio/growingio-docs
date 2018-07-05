@@ -1,8 +1,6 @@
 # 原始数据导出 1.0 API（deprecated）
 
-注意：
-
-**原始数据导出 2.0 API 已经上线，如果原始数据导出功能需要升级到2.0版本请联系客户经理，并请及时按照**[**原始数据导出 2.0 API**](https://docs.growingio.com/api/raw-data-export-2.0.html)**的字段格式更新原始数据的ETL脚本程序。**
+**注意：原始数据导出 2.0 API 已经上线，如果原始数据导出功能需要升级到 2.0 版本请联系客户经理，并请及时按照**[**原始数据导出 2.0 API**](https://docs.growingio.com/api/raw-data-export-2.0.html)**的字段格式更新原始数据的 ETL 脚本程序。**
 
 **如您使用的是 2.x 版本的 SDK，请务必使用**[ **2.0 版本的原始数据导出的 API**](https://docs.growingio.com/api/yuan-shi-shu-ju-dao-chu-2.0-api.html)。
 
@@ -10,11 +8,11 @@
 2. 原始数据导出为付费功能，且只能导出从开通日起的数据，原始数据仅保留15天，请定期下载。
 3. 在进行导出之前，请务必参考[“GrowingIO接口认证”文档](https://docs.growingio.com/api/authentication.html)，完成接口认证获取token。
 
-### Resource {#resource}
+## 1.Resource
 
 GET [https://www.growingio.com/insights/:ai/:date.json](https://www.growingio.com/insights/:ai/:date.json)
 
-#### Authorization {#authorization}
+### 1.1 Authorization
 
 在 Header 里面添加两个属性：
 
@@ -23,7 +21,7 @@ GET [https://www.growingio.com/insights/:ai/:date.json](https://www.growingio.co
 | X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
 | Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
 
-#### URL Parameter {#url-parameter}
+### 1.2 URL Parameter
 
 | 名字 | 类型 | 描述 | 示例 |
 | --- | --- | --- | --- |
@@ -33,7 +31,7 @@ GET [https://www.growingio.com/insights/:ai/:date.json](https://www.growingio.co
 
 date分为两种格式：精确到天\(20160520\)或者精确到小时\(2016052008,20日早上8点\)，分别对应下载天级别数据与小时级别数据。均为中国时间，不是UTC时间。
 
-#### Responses {#responses}
+### 1.3 Responses
 
 Status Code: 200 OK
 
@@ -51,11 +49,11 @@ Status Code: 200 OK
 
 使用下载接口时，可以先检查 status 字段，为 FINISHED 时才拿 downlinks 进行下载。
 
-### 导出数据字段说明 {#导出数据字段说明}
+### 2.导出数据字段说明
 
 GrowingIO全量数据划分成三个级别，visit，page，action
 
-#### visit {#visit}
+#### 2.1 visit
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值（example） |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -85,7 +83,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 | lat | gps纬度 | double | mobile平台，需要gps权限 |  |
 | lng | gps经度 | double | mobile平台独有的字段 | 29.43982，精确到小数点后5位 |
 
-#### page {#page}
+#### 2.2 page
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值（example） |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -124,7 +122,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 | ps9 | ... | string\(200\) |  |  |
 | ps10 | ... | string\(200\) |  | ~ |
 
-#### action {#action}
+#### 2.3 action
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值（example） |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -142,7 +140,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 | index | 列表序号 | bigint | 列表类型标签的序号 | 用于标记列表内的第几项，分析列表中最常被点击的内容或者首项推广效果等等 |
 | info | 事件附加信息 | string\(200\) | 用户自定义事件信息 | 对应growingAttributesInfo设置的字段信息 |
 
-#### 字段备注 {#字段备注}
+### 3.字段备注
 
 1. 三张数据表分别代表GIO定义的三种数据级别，访问级别（visit），页面级别（page）与标签级别（action）。visit代表访问级别的数据，按照session定义访问，page代表页面级别数据，打开的浏览页面就是一条记录，一条访问级别数据对应多条页面级别，action级别数据代表标签数据，定义页面元素标签的显示，点击，提交等事件，三者形成整个用户行为数据层级。目前导出的数据类型除了action下的imp\(impression\)类型因为数据量过大不可导出，其它数据都已经导出。
 2. sendTime与eventTime的区别在于前者相当于是GIO平台接收到的时间，而eventTime是事件在客户端真正发生的时间，客户可以根据eventTime重现用户操作时间线。
@@ -153,9 +151,9 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 7. mobile端浏览器打开页面访问，默认platform类型为Web，若是需要区分则建议根据osVersion。
 8. action数据中index，info为补充字段，参考changelog说明。
 
-**在全量数据之外，提供GrowingIO平台圈选数据映射关系表，包括action\_tag与rules表\(接口将更新于2016年8月9日\)**
+**在全量数据之外，提供 GrowingIO 平台圈选数据映射关系表，包括 action\_tag 与 rules 表\(接口将更新于2016年8月9日\)**
 
-#### action\_tag {#actiontag}
+#### 3.1 action\_tag {#actiontag}
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值\(example\) |
 | --- | --- | --- | --- |
@@ -163,7 +161,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 | action\_id | 事件ID | string\(30\) | 标签事件的唯一id web的action\_id以wa开头，mobile以ma开头 |  |
 | rule\_id | 规则id | string\(8\) | 匹配事件的规则id，该id为growingio平台圈选的标签的唯一id | 该值由字母与数字组成，例如‘1ba052a9’ |
 
-#### rules（从统计数据的规则逻辑API获取） {#rules（从统计数据的规则逻辑api获取）}
+#### 3.2 rules（从统计数据的规则逻辑API获取） {#rules（从统计数据的规则逻辑api获取）}
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值\(example\) |
 | --- | --- | --- | --- |
@@ -171,7 +169,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 | name | 规则名称 | string\(200\) | 圈选的标签名称 | 该名称不可以作为唯一主键，只是便于使用区分 |
 | ruleType | 规则类型 | string\(10\) | 规则在定义时可能有不同的类型，例如按钮的imp或者clck | 值包括 page, imp, clck, chng, sbmt |
 
-#### 备注 {#备注}
+#### 3.3 备注 {#备注}
 
 1. 在基础部分数据导出（visit, page, action\)之外，提供圈选数据与action级别数据的映射部分。
 2. 通过action数据中的action\_id与action\_tag中的action\_id聚合，绑定对应的rule\_id（映射的规则名称）到action数据上。
