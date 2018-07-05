@@ -1,11 +1,11 @@
 # 计算结果数据 API
 
-* [1.看板数据 API 定义](reporting-api.md#看板数据api-定义)
-* [2.单图数据 API 定义](reporting-api.md#单图数据api-定义)
-* [3.分群 API 定义](reporting-api.md#分群-api-定义)
-* [4.规则逻辑 API 接口](reporting-api.md#规则逻辑-api-接口)
+* [1.看板数据 API 定义](reporting-api.md#dashboard-api)
+* [2.单图数据 API 定义](reporting-api.md#chart-api)
+* [3.分群 API 定义](reporting-api.md#segmentation-api)
+* [4.规则逻辑 API 接口](reporting-api.md#rule-api)
 
-### 1.看板数据 API 定义 {#看板数据api-定义}
+### 1.看板数据 API 定义 {#dashboard-api}
 
 注意：
 
@@ -50,7 +50,7 @@ Status Code: 200 OK
 }
 ```
 
-### 2.单图数据 API 定义 {#单图数据api-定义}
+### 2.单图数据 API 定义 {#chart-api}
 
 **单图下载每秒限速 2 次**
 
@@ -125,7 +125,7 @@ Status Code: 200 OK
 }
 ```
 
-### 3.分群 API 定义 {#分群-api-定义}
+### 3.分群 API 定义 {#segmentation-api}
 
 #### Resource {#resource}
 
@@ -195,7 +195,7 @@ cs1_name    cs2_name
 12249    GrowingIO
 ```
 
-### 4.规则逻辑 API 接口 {#规则逻辑-api-接口}
+### 4.规则逻辑 API 接口 {#rule-api}
 
 #### Resource {#resource}
 

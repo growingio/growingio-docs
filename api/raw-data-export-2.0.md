@@ -1,16 +1,16 @@
 # 原始数据导出 2.0 API
 
-* [1.原始数据导出 2.0 API 功能概要](raw-data-export-2.0.md#原始数据导出-20-api-功能概要)
-* [2.原始数据导出 2.0 API 接口定义](raw-data-export-2.0.md#原始数据导出-20-api-接口定义)
-* [3.原始数据导出版本和GrowingIO数据主版本（SDK 版本）关系](raw-data-export-2.0.md#原始数据导出版本和growingio数据主版本（sdk-版本）关系)
-* [4.原始数据导出 2.0 和原始数据导出 1.0 主要区别](raw-data-export-2.0.md#原始数据导出-20-和原始数据导出-10-主要区别)
-* [5.原始数据导出 2.0 导出数据字段说明](raw-data-export-2.0.md#原始数据导出-20-导出数据字段说明)
+* [1.原始数据导出 2.0 API 功能概要](raw-data-export-2.0.md#summary)
+* [2.原始数据导出 2.0 API 接口定义](raw-data-export-2.0.md#definition)
+* [3.原始数据导出版本和GrowingIO数据主版本（SDK 版本）关系](raw-data-export-2.0.md#sdk-explaination)
+* [4.原始数据导出 2.0 和原始数据导出 1.0 主要区别](raw-data-export-2.0.md#changelog)
+* [5.原始数据导出 2.0 导出数据字段说明](raw-data-export-2.0.md#metadata)
 
 原始数据导出为付费功能，且只能导出从开通之日起的原始数据，原始数据仅保留15天，请定期下载。
 
 在进行原始数据导出之前，请务必参考[“GrowingIO接口认证”文档](https://docs.growingio.com/api/authentication.html)，完成接口认证获取token。
 
-### 1.原始数据导出 2.0 API 功能概要 {#原始数据导出-20-api-功能概要}
+### 1.原始数据导出 2.0 API 功能概要 {#summary}
 
 1. “2.0版”提供了小时级别的原始数据导出。
 
@@ -19,58 +19,89 @@
 2. “2.0版”在包含所有“1.0版”具有的数据表和字段的基础上添加了数据主版本2.0（SDK 2.x）版本具有的自定义事件和变量的数据表和字段，并对包括广告监测数据导出在内的所有数据导出表的字段做了统一处理。
 3. “2.0版”兼容并包含了"1.0版"的所有数据字段。
 
-### 2.原始数据导出 2.0 API 接口定义 {#原始数据导出-20-api-接口定义}
+### 2.原始数据导出 2.0 API 接口定义 {#definition}
 
-GET [https://www.growingio.com/v2/insights/{export\_type}/{data\_type}/{ai}/{export\_date}.json](https://www.growingio.com/v2/insights/%7Bexport_type%7D/%7Bdata_type%7D/%7Bai%7D/%7Bexport_date%7D.json)?expire={minutes}
+{% api-method method="get" host="https://www.growingio.com/v2/insights/:export\_type/:data\_type/:ai/:export\_date.json?expire={minutes}" path="" %}
+{% api-method-summary %}
+ 导出原始数据
+{% endapi-method-summary %}
 
-在 Header 里面添加两个属性：
+{% api-method-description %}
 
-| 名字 | 类型 | 描述 | 示例 |
-| --- | --- | --- |
-| X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
-| Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
+{% endapi-method-description %}
 
-其中
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="export\_type" type="string" required=true %}
+导出任务类型，系统目前支持小时与天的导出，可选值：hour 或者 day  
+{% endapi-method-parameter %}
 
-* {export\_type} —— 导出任务类型，系统目前支持小时与天数据的导出，可选值为：
-  * hour：按小时导出数据
-  * day ：按天导出数据，将返回当天 24 小时数据链接
-* {data\_type} —— 导出数据类型，系统支持以下数据类型的导出：
-  * visit：访问事件
-  * page：页面浏览事件
-  * action：动作事件，包含点击，提交等动作
-  * action\_tag：动作事件与圈选规则关联关系
-  * custom\_event：自定义事件
-  * ads\_track\_activation：广告激活事件
-  * ads\_track\_click：广告点击事件
-  * pvar \(page level variable\)：页面级变量
-  * evar \(conversion variable\)：转化变量
-* {export\_date} —— 导出数据北京时间，格式为 yyyyMMddHHmm，表示请求导出哪段时间内的数据；分为以下情况：
-  * 当 {export\_type} 为 day 时，只会截取 export\_date 中 yyyyMMdd，其余将忽略
-  * 当 {export\_type} 为 hour 时，只会截取 export\_date 中 yyyyMMddHH，其余将忽略
-* {minutes} —— 生成的链接的失效时间，单位为分钟，如果不设定，返回的所有链接将会在 5 分钟后失效
+{% api-method-parameter name="data\_type" type="string" required=true %}
+导出数据类型，系统支持以下数据类型的导出，可选值：  
+  
+\* visit: 访问事件  
+\* page: 页面事件  
+\* action: 动作事件，包括点击、修改等动作  
+\* action\_tag: 动作事件与圈选规则关联关系  
+\* custom\_event: 自定义事件  
+\* ads\_track\_activation: 广告激活事件  
+\* ads\_track\_click: 广告点击事件  
+\* pvar: 页面级变量  
+\* evar: 转化变量
+{% endapi-method-parameter %}
 
-请求返回的数据格式为:
+{% api-method-parameter name="ai" type="string" required=true %}
 
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="export\_date" type="string" required=true %}
+导出数据北京时间，格式为 yyyyMMddHHmm, 表现请求导出哪段时间内的数据，分为以下情况：  
+  
+\* 当 export\_type 为 day 时，只会截取 export\_date 中 yyyyMMdd，其余将忽略  
+\* 当  export\_type 为 hour 时，只会截图 export\_date 中 yyyyMMddHH，其余将忽略
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="X-Client-Id" type="string" required=true %}
+GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。示例：'X-Client-Id: 123abc'
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Authorization" type="string" required=true %}
+ 认证后获取到的 Token，示例: 'Authorization: Token XXXX'
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="minutes" type="integer" required=false %}
+ 链接失效时间，单位为分钟，默认为 5
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
 {
-
-"status": "",
-
-"downloadLinks": \[\],
-
-"exportType": "",
-
-"dataType": "",
-
-"exportDate": "",
-
-"exportVersion": "",
-
-"requestTime": "",
-
+  "status": "",
+  "downloadLinks": [],
+  "exportType": "",
+  "dataType": "",
+  "exportDate": "",
+  "exportVersion": "",
+  "requestTime": "",
 "errorMsg": ""
-
 }
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 返回结果中的字段含义为：
 
@@ -90,13 +121,13 @@ GET [https://www.growingio.com/v2/insights/{export\_type}/{data\_type}/{ai}/{exp
 * requestTime 客户请求发生时服务器时间
 * errorMsg 当请求发生错误时，服务器返回的错误信息
 
-### 3.原始数据导出版本和GrowingIO数据主版本（SDK 版本）关系 {#原始数据导出版本和growingio数据主版本（sdk-版本）关系}
+### 3.原始数据导出版本和GrowingIO数据主版本（SDK 版本）关系 {#sdk-explaination}
 
 ![](https://docs.growingio.com/.gitbook/assets/datafeed.png)
 
 在“原始数据导出 2.0 API” 上线之前，使用数据主版本2的客户也在使用“原始数据导出 1.0 API”。在“原始数据导出 1.0 API”版本中并没有包括如：页面级变量、转化变量这样的原始数据。在“原始数据导出 2.0 API”中提供了这部分原始数据的导出功能。
 
-### 4.原始数据导出 2.0 和原始数据导出 1.0 主要区别 {#原始数据导出-20-和原始数据导出-10-主要区别}
+### 4.原始数据导出 2.0 和原始数据导出 1.0 主要区别 {#changelog}
 
 #### 接口请求 URL {#接口请求-url}
 
@@ -112,47 +143,33 @@ GET [https://www.growingio.com/v2/insights/{export\_type}/{data\_type}/{ai}/{exp
 
 原始数据导出 1.0 接口返回数据格式：
 
+```text
 {
-
-"status":"FINISHED",
-
-"downlinks":\[
-
-"link1",
-
-"link2"
-
-\]
-
+  "status":"FINISHED",
+  "downlinks":[
+    "link1",
+    "link2"
+  ]
 }
+```
 
 原始数据导出 2.0 接口返回数据格式：
 
+```text
 {
-
-"status”:"FINISHED",
-
-"downloadLinks":\[
-
-"link1",
-
-"link2"
-
-\],
-
-"exportType":"",
-
-"dataType":"",
-
-"exportDate":"",
-
-"exportVersion":"",
-
-"requestTime":"",
-
-"errorMsg":""
-
+  "status”:"FINISHED",
+  "downloadLinks":[
+    "link1",
+    "link2"
+  ],
+  "exportType":"",
+  "dataType":"",
+  "exportDate":"",
+  "exportVersion":"",
+  "requestTime":"",
+  "errorMsg":""
 }
+```
 
 #### 数据文件的获取方式和组织 {#数据文件的获取方式和组织}
 
@@ -196,7 +213,7 @@ pvar：新增类型
 
 evar：新增类型
 
-### 5.原始数据导出 2.0 导出数据字段说明 {#原始数据导出-20-导出数据字段说明}
+### 5.原始数据导出 2.0 导出数据字段说明 {#metadata}
 
 #### page请求导出字段 {#page请求导出字段}
 
