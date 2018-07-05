@@ -1,12 +1,12 @@
 # 漏斗分析
 
-* [1.简介](funnel-analysis.md#1-jian-jie)
-* [2.使用场景和案例](funnel-analysis.md#2-shi-yong-chang-jing-he-an-li)
-  * [2.1案例](funnel-analysis.md#2-1-an-li)
-  * [2.2.建立你的第一个漏斗](funnel-analysis.md#2-2-jian-li-ni-de-di-yi-ge-lou-dou)
-  * [2.3漏斗内容解读](funnel-analysis.md#2-3-lou-dou-nei-rong-jie-du)
-  * [2.4漏斗使用 Tips](funnel-analysis.md#2-4-lou-dou-shi-yong-tips)
-* [3.常见问题](funnel-analysis.md#3-chang-jian-wen-ti)
+* [1.简介](https://growingio.gitbook.io/docs/data-analytics/funnel-analysis#1-jian-jie)
+* [2.使用场景和案例](https://growingio.gitbook.io/docs/data-analytics/funnel-analysis#2-shi-yong-chang-jing-he-an-li)
+  * [2.1案例](https://growingio.gitbook.io/docs/data-analytics/funnel-analysis#2-1-an-li)
+  * [2.2.建立你的第一个漏斗](https://growingio.gitbook.io/docs/data-analytics/funnel-analysis#2-2-jian-li-ni-de-di-yi-ge-lou-dou)
+  * [2.3漏斗内容解读](https://growingio.gitbook.io/docs/data-analytics/funnel-analysis#2-3-lou-dou-nei-rong-jie-du)
+  * [2.4漏斗使用 Tips](https://growingio.gitbook.io/docs/data-analytics/funnel-analysis#2-4-lou-dou-shi-yong-tips)
+* [3.常见问题](https://growingio.gitbook.io/docs/data-analytics/funnel-analysis#3-chang-jian-wen-ti)
 
 ## 1.简介
 
