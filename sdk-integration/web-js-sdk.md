@@ -1,24 +1,27 @@
 # Web JS SDK
 
-* [SDK 安装](web-js-sdk.md#sdk-安装)
-* [Web JS 系统变量](web-js-sdk.md#web-js-系统变量)
-* [Web JS SDK API](web-js-sdk.md#web-js-sdk-2-1-api)
-* [自定义数据上传&配置指南](web-js-sdk.md#自定义数据上传配置指导)
-* [1.x 版本 SDK 升级指导](web-js-sdk.md#1x-版本-sdk-升级指导)
-* [GrowingIO Web Debugger](web-js-sdk.md#growingio-web-debugger)
+* [集成 SDK 和 API 导入](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#ji-cheng-sdk-he-api-dao-ru)
+  * [1.SDK 代码安装](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#sdk-%E5%AE%89%E8%A3%85)
+  * [2.Web JS 系统变量](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#web-js-%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F)
+  * [3.Web JS SDK 2.1 API](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#3-web-js-sdk-2-1-api)
+  * [4.自定义数据上传 & 配置指导](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE%E6%8C%87%E5%AF%BC)
+* [1.x 旧版本 SDK 升级指导](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#1x-jiu-ban-ben-sdk-sheng-ji-zhi-dao)
+  * [1. 重新集成 SDK](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#1-zhong-xin-ji-cheng-sdk)
+  * [2. 迁移用户属性字段（CS字段）](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#2-qian-yi-yong-hu-shu-xing-zi-duan-cs-zi-duan)
+  * [3. 迁移页面属性字段（PS字段）](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)
+  * [4. 迁移自定义事件（埋点事件）](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)
+  * [5. 数据校验](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#5-shu-ju-xiao-yan)
+* [GrowingIO Web Debugger](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#growingio-web-debugger)
 
-### SDK 代码安装 {#sdk-安装}
+## 集成 SDK 和 API 导入
+
+### 1.SDK 代码安装 {#sdk-安装}
 
 重要：如果您目前已经在使用GrowingIO 1.x 版本的 SDK，希望升级到最新版本 \(V2.1），您需要联系您的 GrowingIO 对接人，我们需要帮您开启新版本 SDK 的功能。如果您忽略该提醒自助升级，而后台对应功能未开启的话，可能会带来数据丢失的问题。[如何升级?](web-js-sdk.md#1x-版本-sdk-升级指导)
 
-#### GrowingIO Web JS SDK 分为两个部分 {#growingio-web-js-sdk-21-分为两个部分}
+#### 1.1 **页面代码如下所示**
 
-1. 页面代码（Page Code）
-2. gio.js库文件（Library）
-
-**页面代码如下所示：**
-
-**请将以下的页面代码放置到需要分析的页面中的&lt;head&gt;和&lt;/head&gt;标签之间，即可完成Web JS SDK 2.1页面代码的安装。**
+**请将以下的页面代码放置到需要分析的页面中的 &lt;head&gt; 和 &lt;/head&gt; 标签之间，即可完成 Web JS SDK 2.1页面代码的安装。**
 
 ```text
 <!-- GrowingIO Analytics code version 2.1 -->
@@ -37,21 +40,21 @@
 <!-- End GrowingIO Analytics code version: 2.1 -->
 ```
 
-**gio.js文件**
+#### 1.2 **gio.js 文件**
 
-可以看到页面代码中有对gio.js文件的引用，gio.js的地址为[http://assets.growingio.com/2.1/gio.js](https://github.com/growingio/help_site/tree/f4b4103b288205f6a9b13e0c4692f4d65a2ab386/assets.growingio.com/2.1/gio.js)
+可以看到页面代码中有对 gio.js 文件的引用，gio.js 的地址为[http://assets.growingio.com/2.1/gio.js](https://github.com/growingio/help_site/tree/f4b4103b288205f6a9b13e0c4692f4d65a2ab386/assets.growingio.com/2.1/gio.js)
 
-请注意使用具体的项目ID替换上述代码中 ‘your projectId’ 的部分。
+请注意使用具体的项目 ID 替换上述代码中 ‘your projectId’ 的部分。
 
-建议在安装页面代码结束之后，建议使用GrowingIO Web Debugger验证一下服务器请求发送是否正常。
+建议在安装页面代码结束之后，建议使用 GrowingIO Web Debugger 验证一下服务器请求发送是否正常。
 
-### Web JS 系统变量 {#web-js-系统变量}
+### 2.Web JS 系统变量 {#web-js-系统变量}
 
-Web JS SDK可以配置一些系统变量来控制 Web JS SDK 的数据发送。
+Web JS SDK 可以配置一些系统变量来控制 Web JS SDK 的数据发送。
 
 有以下系统变量在实施时可以使用以下这些系统变量：
 
-#### imp系统变量 {#imp系统变量}
+#### 2.1 imp 系统变量
 
 作用：禁止元素浏览量采集
 
@@ -61,7 +64,7 @@ GrowingIO 提供两种采集，元素浏览和元素点击，文本框内容修�
 gio('config', {'imp':false});
 ```
 
-#### hashtag系统变量 {#hashtag系统变量}
+#### 2.2 hashtag 系统变量
 
 作用：启用 hashtag 作为标识页面的一部分
 
@@ -75,9 +78,9 @@ gio('config', {'hashtag':true});
 
 来监听 hashtag 的变化，并区分页面来收集页面数据，每次 hashtag 改变都会触发一次PV，hashtag 的信息也会记录在页面URL中。
 
-### Web JS SDK 2.1 API
+### 3.Web JS SDK 2.1 API
 
-#### API简介：
+#### 3.1 API 简介
 
 ```text
 // 初始化参数
@@ -111,11 +114,9 @@ gio('setUserId', userId);
 gio('clearUserId');
 ```
 
-#### init {#init}
+#### 3.2 init  {#init}
 
-初始化参数，设置项目ID和一些常用的配置项。
-
-参数：
+初始化参数，用来设置项目ID和一些常用的配置项：
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
 | --- | --- | --- |
@@ -133,11 +134,9 @@ gio('init', projectId, options);
 gio('init', '1234567890', {'imp':false});
 ```
 
-#### track {#track}
+#### 3.3 设置自定义事件和事件级变量（track） {#track}
 
-发送一个事件。在添加所需要发送的事件代码之前，需要在打点管理用户界面配置事件以及事件级变量。
-
-参数：
+在添加所需要发送的事件代码之前，需要在打点管理用户界面配置事件以及事件级变量。
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
 | --- | --- | --- | --- |
@@ -166,11 +165,9 @@ gio('track', 'registerSuccess', {'gender':'male', 'age':21});
 gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zhejiang'});
 ```
 
-#### page.set {#pageset}
+#### 3.4 设置页面级变量（page.set） {#pageset}
 
 发送页面级别的维度信息，在添加代码之前必须在打点管理界面上声明页面级变量。
-
-参数：
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
 | --- | --- | --- | --- |
@@ -194,11 +191,9 @@ gio('page.set', {'pageName': 'Home Page', 'author': 'Zhang San'});
 gio('page.set', 'author', 'Zhang San');
 ```
 
-#### evar.set {#evarset}
+#### 3.5 设置转化变量（evar.set） {#evarset}
 
 发送一个转化信息用于高级归因分析，在添加代码之前必须在打点管理界面上声明转化变量。
-
-参数
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
 | --- | --- | --- | --- |
@@ -222,11 +217,9 @@ gio('evar.set', 'campaignId'，'1234567890');
 gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
 ```
 
-#### people.set {#peopleset}
+#### 3.6 设置用户级变量（people.set） {#peopleset}
 
 发送用户信息用于用户信息相关分析，在添加代码之前必须在打点管理界面上声明转化变量。
-
-参数：
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
 | --- | --- | --- | --- |
@@ -250,11 +243,9 @@ gio('people.set', 'gender', 'male');
 gio('people.set', {'gender':'male', 'age':'25'});
 ```
 
-#### setUserId {#setuserid}
+#### 3.7 设置登录用户id（setUserId） {#setuserid}
 
-当用户登录之后调用setUserId API，设置登录用户ID。
-
-参数：
+当用户登录之后调用 setUserId API ，设置登录用户 ID 。
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
 | --- | --- |
@@ -270,41 +261,41 @@ gio('setUserId', userId);
 gio('setUserId', '1234567890');
 ```
 
-#### clearUserId {#clearuserid}
+#### 3.8 上传登录用户 ID（clearUserId） {#clearuserid}
 
-当用户登出之后调用clearUserId，清除已经设置的登录用户ID。
+当用户登出之后调用 clearUserId ，清除已经设置的登录用户 ID 。
 
 ```text
 //clearUserId API原型和调用示例
 gio('clearUserId');
 ```
 
-#### sendPage {#sendpage}
+#### 3.9 手动发送页面浏览事件 sendPage {#sendpage}
 
-在默认情况下，由于用户浏览网站的交互行为导致当前页面的URL产生变化时，GrowingIO的Web JS SDK会发送一个page类型的请求。在一些特殊的情况下，例如用户在访问单页应用（Single Page Application）类型的网站时，用户的操作会导致业务上面理解的页面产生了变化，但是当前的URL可能并没有改变。
+在默认情况下，由于用户浏览网站的交互行为导致当前页面的 URL 产生变化时，GrowingIO 的 Web JS SDK 会发送一个 page 类型的请求。在一些特殊的情况下，例如用户在访问单页应用（Single Page Application）类型的网站时，用户的操作会导致业务上面理解的页面产生了变化，但是当前的 URL 可能并没有改变。
 
-这时，可以调用GrowingIO提供的sendPage接口手动发送页面浏览事件。这个接口的调用将会发送出一条‘page’类型的数据，GIO服务器在收到page类型的数据之后，页面浏览量这个预定义指标会加1。
+这时，可以调用GrowingIO提供的 sendPage 接口手动发送页面浏览事件。这个接口的调用将会发送出一条‘page’类型的数据，GIO 服务器在收到 page 类型的数据之后，页面浏览量这个预定义指标会加 1。
 
 ```text
 //sendPage API原型和调用示例
 gio('sendPage');
 ```
 
-### 自定义数据上传&配置指导 {#自定义数据上传配置指导}
+### 4.自定义数据上传 & 配置指导 {#自定义数据上传配置指导}
 
-您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，具体请参考[相关文档](../data-model/event-variable/custom-event.md)。
+您的 APP 或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，具体请参考[相关文档](../data-model/event-variable/custom-event.md)。
 
-### 1.x 版本 SDK 升级指导 {#1x-版本-sdk-升级指导}
+## 1.x 旧版本 SDK 升级指导
 
-本文旨在帮助您从 1.x 版本无缝升级至 2.x 版本，由于两个版本的诸多接口、方法、字段含义均有较大变动，因此建议您在升级前一定参照本文完成必要的实施工作。
+如果您目前使用的是 1.x 版本的 SDK，希望升级至 2.x 版本，请注意：您需要联系您的 GrowingIO 对接人，我们需要帮您开启后台 2.x 版本所对应功能。如果您直接集成 2.x 版本，而后台对应功能未开启的话，可能会造成数据丢失的问题。
 
-**1. 重新集成 SDK**
+### **1. 重新集成 SDK**
 
 * [Web JS SDK 开发文档](web-js-sdk-2.x/)
 
 Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据是否正常上传。开启 debug mode 的方式请见上述文档中初始化方法部分。
 
-**2. 迁移用户属性字段（CS字段）**
+### **2. 迁移用户属性字段（CS字段）**
 
 如果您未做用户属性字段上传，请忽略此部分。
 
@@ -314,11 +305,11 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 * CS2-10字段，会迁移至“应用级变量”，应用级变量与CS字段的使用方式无任何区别。
 * CS11-20字段，会迁移至“[用户变量”](../data-model/event-variable/custom-variable.md#用户变量)。两者的区别主要在于：用户变量支持自定义的归因方式。
 
-**2.1 上传接口：**
+#### **2.1 上传接口**
 
 2.x 版本中的上传用户变量方法有较大改动，不再将 `'setCSn'` 这个字段作为参数，方法中只需写入用户变量的 key - value 对。
 
-**Web 端：**
+**Web 端**
 
 * 1.x 版本方法格式：
 
@@ -356,19 +347,19 @@ gio('people.set', key, value); // 单个变量
 gio('people.set', peopleVariables); // 多个变量，可组合为一个JSON对象peopleVariables传入
 ```
 
-**2.2 GrowingIO 后台配置**
+#### **2.2 GrowingIO 后台配置**
 
 在 GrowingIO 后台进行用户属性字段配置，是在 “项目配置” - “CS字段配置” 页面。升级至 2.x 版本后，取消了上述配置方式。您可以在 **“管理” - “自定义事件和变量” 页面中的 “应用级变量” 和 “用户变量” Tab 页**分别找到自动为您迁移过去的两种变量的配置。配置方式请参考[相关帮助文档](../data-model/event-variable/custom-event.md)。
 
-**3. 迁移页面属性字段（PS字段）**
+### **3. 迁移页面属性字段（PS字段）**
 
 如果您未做页面属性字段上传，请忽略此部分。
 
 类似于用户属性字段，在 2.x 版本中，页面属性字段被迁移到了“[页面级变量](../data-model/event-variable/custom-variable.md#页面级变量)”。与页面属性字段不同的是，**页面级变量相当于过去的 PS 字段，不再存在过去的 PG 字段**。
 
-**3.1 上传接口**
+#### **3.1 上传接口**
 
-**Web 端：**
+**Web 端**
 
 * 1.x 版本方法格式：
 
@@ -386,19 +377,19 @@ gio('page.set', key, value);
 gio('page.set', pageLevelVariables); //多个变量，可组合为一个对象传入
 ```
 
-**3.2 GrowingIO 后台配置**
+#### **3.2 GrowingIO 后台配置**
 
 您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档](../data-model/event-variable/custom-event.md#第二步：在-打点管理-中完成配置)
 
-#### 4. 迁移自定义事件（埋点事件） {#4-迁移自定义事件埋点事件}
+### 4. 迁移自定义事件（埋点事件）
 
 如果您未做自定义事件的上传，请忽略此部分。
 
 2.x 版本的自定义事件，在概念上与 1.x 版本无任何区别，但上传接口和配置方式上有以下变更。
 
-**4.1 上传接口**
+#### **4.1 上传接口**
 
-**Web 端：**
+**Web 端**
 
 * 1.x 版本方法格式：
 
@@ -415,11 +406,11 @@ gio('track', eventId, eventLevelVariables);
 gio('track', eventId, number, eventLevelVariables);
 ```
 
-**4.2 GrowingIO 后台配置**
+#### **4.2 GrowingIO 后台配置**
 
 自定义事件的配置，同 1.x 版本一样，也是在\*\*“管理” - “自定义事件和变量” 页面中的 “自定义事件” Tab 页\*\*。但您会发现，除了 “自定义事件” Tab 页外，现在还提供了 “事件级变量” Tab 页来专门管理事件级变量的配置。您只需在 “事件级变量” Tab 页完成事件级变量的配置，然后在新建自定义事件时，从已经建好的事件级变量中选择即可。
 
-#### 5. 数据校验 {#5-数据校验}
+### 5. 数据校验
 
 在完成了上述代码实施和配置后，我们当然需要对数据是否成功上传进行校验。校验工作分为两步完成。
 
@@ -444,7 +435,7 @@ debug 工具的工作界面如下图：
 
 在 GrowingIO 分析后台，找到 “单图” - “新建事件分析”，然后在图表中选择您设计好的 “指标+维度”，查看是否有数据。当然，您需要首先确保您的自定义事件或变量确实有被触发。
 
-### GrowingIO Web Debugger {#growingio-web-debugger}
+## GrowingIO Web Debugger
 
 GrowingIO Debugger是GrowingIO推出的调试 SDK所发送数据的工具。在GrowingIO Debugger的帮助下，实施工程师可以看到在什么样的页面上，在什么时机向GrowingIO发送了什么样的服务器请求。
 
