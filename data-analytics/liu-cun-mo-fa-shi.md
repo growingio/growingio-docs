@@ -1,11 +1,18 @@
 # 留存魔法师
 
-## 留存魔法师 {#留存魔法师}
+## 
+
+* [1.简介](https://growingio.gitbook.io/docs/~/edit/drafts/-LGe3pcHiz-TRfx3eqpP/data-analytics/liu-cun-mo-fa-shi#1-jian-jie)
+* [2.使用案例：](https://growingio.gitbook.io/docs/~/edit/drafts/-LGe3pcHiz-TRfx3eqpP/data-analytics/liu-cun-mo-fa-shi#2-shi-yong-an-li)
+* [功能简介](https://growingio.gitbook.io/docs/~/edit/drafts/-LGe3pcHiz-TRfx3eqpP/data-analytics/liu-cun-mo-fa-shi#%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B)
+* [常见问题](https://growingio.gitbook.io/docs/~/edit/drafts/-LGe3pcHiz-TRfx3eqpP/data-analytics/liu-cun-mo-fa-shi#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+
+## 1.[简介](liu-cun-mo-fa-shi.md#jian-jie)
 
 Linkedin发现一星期内加到5个联系人的用户，他们的留存率/使用频度/停留时间是那些没有加到5个联系人的用户的3-5倍，这个是他们找到的驱动增长的魔法数字。  
 用户访问初期在网站/App的某些行为、频次可能会让用户留下来，并且长久使用，成为忠诚用户。发现了这些行为和发生次数，优化产品，促进用户使用这些功能，就可能带来更高的留存率。留存魔法师向您呈现用户访问初期的行为、频次与留存的相关关系，找到促进增长的魔法数字。
 
-### 使用案例： {#使用案例：}
+## 2.使用案例：
 
 #### 一个社交App如何发现自己的魔法数字 {#一个社交app如何发现自己的魔法数字}
 
