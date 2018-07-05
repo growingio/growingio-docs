@@ -1,40 +1,10 @@
 # 自定义事件
 
-* [步骤](custom-data-implement-guide.md#bu-zhou)
-  * [1.从数据需求到具体 “指标+维度”](custom-data-implement-guide.md#1-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)
-  * [2.在「事件和变量」中完成配置](custom-data-implement-guide.md#2-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
-  * [3.代码部署](custom-data-implement-guide.md#3-dai-ma-bu-shu)
-  * [4.数据校验](custom-data-implement-guide.md#4-shu-ju-xiao-yan)
-
-**重要：**如果您正在使用的 1.x 版本的 SDK ，请参考[此文档](https://docs.growingio.com/SDK/zidingyi_config_1.x/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E7%9A%84%E4%B8%8A%E4%BC%A0%E4%B8%8E%E9%85%8D%E7%BD%AE1.x.html)进行自定义数据的上传和配置。
-
-如您所知，您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，他们包括：
-
-* 自定义事件 + 事件级变量
-* [页面级变量](https://docs.growingio.com/implementation/event-variable/custom-event/custom-variables-introduction/page-level-variable.html)
-* [转化变量](https://docs.growingio.com/implementation/event-variable/custom-event/custom-variables-introduction/conversion-variable.html)
-* [用户变量](https://docs.growingio.com/implementation/event-variable/custom-event/custom-variables-introduction/user-variable.html)
-
-上述的 “自定义事件” 在 GrowingIO 分析后台体现为一个 “指标”，而 ”事件级变量“、”页面级变量“、”转化变量“ 和 ”用户变量“ 均为 ”维度“。
-
-数量上限：
-
-**SDK 最新版本 2.x （2018年）**
-
-|  | 付费前 | 付费后 |
-| --- | --- | --- | --- | --- | --- |
-| 自定义事件 | 20 | 500 |
-| 事件级变量 | 10 | 100 |
-| 页面级变量 | 5 | 60 |
-| 转化变量 | 3 | 10 |
-| 用户变量 | 10 | 50 |
-
-**SDK 1.x 旧版本**
-
-|  | 付费前 | 付费后 |
-| --- | --- | --- |
-| 自定义事件 | 20 | 500 |
-| 事件级变量 | 10 | 100 |
+* [步骤](custom-event.md#bu-zhou)
+  * [1.从数据需求到具体 “指标+维度”](custom-event.md#1-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)
+  * [2.在「事件和变量」中完成配置](custom-event.md#2-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
+  * [3.代码部署](custom-event.md#3-dai-ma-bu-shu)
+  * [4.数据校验](custom-event.md#4-shu-ju-xiao-yan)
 
 ### 步骤：
 
