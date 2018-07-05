@@ -37,7 +37,7 @@
     * [维度](data-model/predefined/predefined-dimensions.md)
   * [圈选定义事件（需要改）](data-model/circle/README.md)
     * [Web圈选](data-model/circle/circle-web.md)
-    * [移动端圈选](data-model/circle/circle-app-1.md)
+    * [移动端圈选](data-model/circle/circle-app.md)
     * [指标管理](data-model/circle/circle-metrics-management.md)
   * [事件和变量（打点）](data-model/event-variable/README.md)
     * [自定义事件](data-model/event-variable/custom-event.md)
