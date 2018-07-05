@@ -1,8 +1,8 @@
 # 智能路径
 
-* [1.简介](https://growingio.gitbook.io/docs/data-analytics/pathfinder#1-jian-jie)
-* [2](https://growingio.gitbook.io/docs/data-analytics/pathfinder#2-shi-yong-jian-jie).使用介绍
-* [3.常见问题](https://growingio.gitbook.io/docs/data-analytics/pathfinder#3-chang-jian-wen-ti)
+* [1.简介](pathfinder.md#1-jian-jie)
+* [2.使用介绍](pathfinder.md#2-shi-yong-jian-jie)
+* [3.常见问题](pathfinder.md#3-chang-jian-wen-ti)
 
 ## 1.简介
 
