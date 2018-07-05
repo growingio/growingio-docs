@@ -1,15 +1,12 @@
-# 自定义数据上传和配置
+# 自定义事件
 
-* [四种 “自定义数据”](custom-data-implement-guide.md#四种-自定义数据-上传方式)
-* [“自定义数据” 上传步骤](custom-data-implement-guide.md#自定义数据-上传步骤)
-  * [第一步：从数据需求到具体 “指标+维度”](custom-data-implement-guide.md#di-yi-bu-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)
-  * [第二步：在 ”打点管理“ 中完成配置](custom-data-implement-guide.md#第二步：在-打点管理-中完成配置)
-  * [第三步：代码部署](custom-data-implement-guide.md#第三步：代码部署)
-  * [第四步：数据校验](custom-data-implement-guide.md#第四步：数据校验)
+* [步骤](custom-data-implement-guide.md#bu-zhou)
+  * [1.从数据需求到具体 “指标+维度”](custom-data-implement-guide.md#1-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)
+  * [2.在「事件和变量」中完成配置](custom-data-implement-guide.md#2-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
+  * [3.代码部署](custom-data-implement-guide.md#3-dai-ma-bu-shu)
+  * [4.数据校验](custom-data-implement-guide.md#4-shu-ju-xiao-yan)
 
-**重要：**如果您正在使用的1.x版本的SDK，请参考[此文档](https://docs.growingio.com/SDK/zidingyi_config_1.x/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E7%9A%84%E4%B8%8A%E4%BC%A0%E4%B8%8E%E9%85%8D%E7%BD%AE1.x.html)进行自定义数据的上传和配置。
-
-### 四种 “自定义数据” {#四种-自定义数据-上传方式}
+**重要：**如果您正在使用的 1.x 版本的 SDK ，请参考[此文档](https://docs.growingio.com/SDK/zidingyi_config_1.x/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E7%9A%84%E4%B8%8A%E4%BC%A0%E4%B8%8E%E9%85%8D%E7%BD%AE1.x.html)进行自定义数据的上传和配置。
 
 如您所知，您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，他们包括：
 
@@ -18,26 +15,42 @@
 * [转化变量](https://docs.growingio.com/implementation/event-variable/custom-event/custom-variables-introduction/conversion-variable.html)
 * [用户变量](https://docs.growingio.com/implementation/event-variable/custom-event/custom-variables-introduction/user-variable.html)
 
-上述的 “自定义事件” 在GrowingIO分析后台体现为一个 “指标”，而 ”事件级变量“、”页面级变量“、”转化变量“ 和 ”用户变量“ 均为 ”维度“。
+上述的 “自定义事件” 在 GrowingIO 分析后台体现为一个 “指标”，而 ”事件级变量“、”页面级变量“、”转化变量“ 和 ”用户变量“ 均为 ”维度“。
 
-如您需要，请参考本页内容，完成此类自定义数据的上传。
+数量上限：
 
-请注意，自定义事件的个数上限为500个，事件级变量的个数上限为100个（并非每个事件可附带100个变量，而是整个项目中只可以有100个事件级变量），页面级变量的个数上限为50个，转化变量的个数上限为10个，用户变量的个数上限为50个。
+**SDK 最新版本 2.x （2018年）**
 
-### “自定义数据” 上传步骤 {#自定义数据-上传步骤}
+|  | 付费前 | 付费后 |
+| --- | --- | --- | --- | --- | --- |
+| 自定义事件 | 20 | 500 |
+| 事件级变量 | 10 | 100 |
+| 页面级变量 | 5 | 60 |
+| 转化变量 | 3 | 10 |
+| 用户变量 | 10 | 50 |
 
-#### 总体流程 {#总体流程}
+**SDK 1.x 旧版本**
 
-1. 从数据需求出发，梳理指标、维度
-2. 在【管理】-【自定义事件与变量】中完成配置
-3. 在代码中完成 API 调用
-4. 数据校验
+|  | 付费前 | 付费后 |
+| --- | --- | --- |
+| 自定义事件 | 20 | 500 |
+| 事件级变量 | 10 | 100 |
+
+### 步骤：
+
+1.从数据需求出发，梳理指标、维度
+
+2.在「导航栏」-「数据管理」-「事件与变量」中完成配置
+
+3.在代码中完成 API 调用
+
+4.数据校验
 
 以下针对上述 4 个步骤进行详细说明。
 
-#### 第一步：从数据需求到具体 “指标+维度”
+### **1.从数据需求到具体 “指标+维度”**
 
-在GrowingIO上着手进行任何分析之前，首先要确定的一个问题是：如何设计“指标+维度”的体系？对于无埋点数据，我们通过圈选确定“指标”，而“维度”则由 GrowingIO 提供了数个[预定义的维度](https://docs.growingio.com/growingio-shu-ju-mo-xing/yu-ding-yi-wei-du.html)。对于自定义数据，我们可以相对更自由地选择“指标+维度”的体系。
+在 GrowingIO 上着手进行任何分析之前，首先要确定的一个问题是：如何设计“指标+维度”的体系？对于无埋点数据，我们通过圈选确定“指标”，而“维度”则由 GrowingIO 提供了数个[预定义的维度](https://docs.growingio.com/growingio-shu-ju-mo-xing/yu-ding-yi-wei-du.html)。对于自定义数据，我们可以相对更自由地选择“指标+维度”的体系。
 
 更具体的说，从一个实际场景出发，我们需要确定在分析中需要用到哪些量化的值，然后用什么样的维度来分解这些值。例如，对于电商在分析用户下单情况时，用户的下单量、下单金额就是我们需要量化的“指标”，而每个订单所含具体商品、商品分类、优惠券信息等就是“维度”。那么对于下单这件事，我们就可以这样设计 ”指标+维度“：
 
@@ -60,11 +73,11 @@
 * “自定义事件”无法用于创建复合指标，也无法被“页面级变量”创建的维度分解。
 * “转化变量”创建的维度，只能够分解用“自定义事件”创建的指标，不能够分解无埋点指标（圈选得到的指标）。
 
-#### 第二步：在 ”打点管理“ 中完成配置 {#第二步：在-打点管理-中完成配置}
+### 2.**在「事件和变量」中完成配置**
 
-当我们完成 ”指标+维度“ 的设计之后，请勿直接开始代码的部署，需要先到 GrowingIO 后台找到【管理】-【自定义事件与变量】功能，在其中完成对应的配置。
+当我们完成 ”指标+维度“ 的设计之后，请勿直接开始代码的部署，需要先到 GrowingIO 后台找到**「导航栏」-「数据管理」-「事件和变量」**功能，在其中完成对应的配置。
 
-**事件级变量配置：**
+#### **a.事件级变量配置：**
 
 对每一个事件级变量，建议您在配置之前，先按下表列出配置细项，其中
 
@@ -81,7 +94,7 @@
 
 点击确定，即完成了事件级变量的配置。
 
-**自定义事件配置：**
+#### **b.自定义事件配置：**
 
 对于每一个自定义事件，建议您在配置之前，先按下表列出配置细项，其中
 
@@ -99,7 +112,7 @@
 
 点击保存配置，即完成了自定义事件的配置。
 
-**页面级变量配置：**
+#### **c.页面级变量配置：**
 
 对于每一个页面级变量，建议您在配置之前，先按下表列出配置细项，其中
 
@@ -115,7 +128,7 @@
 
 点击确定，即完成了页面级变量的配置。
 
-**转化变量配置：**
+#### **d.转化变量配置：**
 
 对于每一个转化变量，建议您在配置之前，先按下表列出配置细项，其中
 
@@ -133,7 +146,7 @@
 
 点击确定，即完成了转化变量的配置。
 
-**用户变量配置：**
+#### **e.用户变量配置：**
 
 对于每一个用户变量，建议您在配置之前，先按下表列出配置细项，其中
 
@@ -154,7 +167,7 @@
 
 ![](https://docs.growingio.com/.gitbook/assets/11%20%281%29.png)
 
-#### 第三步：代码部署 {#第三步：代码部署}
+### 3.代码部署
 
 在完成了配置后，即可在代码中完成以上设计的 “自定义事件和变量” 的部署。具体的说，就是调用 GrowingIO 提供的API接口，上传数据。
 
@@ -162,11 +175,11 @@
 * [Android 接口文档](https://docs.growingio.com/sdk-20/sdk-20-api-wen-dang/android-sdk-api-wen-dang.html)
 * [iOS 接口文档](https://docs.growingio.com/sdk-20/sdk-20-api-wen-dang/ios-sdk-api-wen-dang.html)
 
-#### 第四步：数据校验 {#第四步：数据校验}
+### 4.数据校验
 
 在完成了【管理】-【自定义事件与变量】的配置，以及代码实施后，我们当然需要对数据是否成功上传进行校验。校验工作分为两步完成。
 
-**数据校验第一步：本地开发环境校验**
+#### 4.1 **本地开发环境校验**
 
 GrowingIO 提供了 SDK debug 模式以及 [debug 工具](../../sdk-integration/growingio-debugger.md)，来帮助您完成数据的校验。
 
@@ -177,7 +190,7 @@ GrowingIO 提供了 SDK debug 模式以及 [debug 工具](../../sdk-integration/
 * 在 evar 条目中，可以看到上传的 “转化变量” 数据
 * 在 ppl 条目中，可以找到 “用户变量” 对应的数据
 
-**1. Web 端**
+**Web 端**
 
 对 Web 端的开发者，GrowingIO 提供了 Chrome 浏览器插件形式的 debug 工具，请在[这里](https://docs.growingio.com/sdk-integration/web-debugger/web-debugger-install.html)下载安装。
 
@@ -185,29 +198,29 @@ debug 工具的工作界面如下图：
 
 ![](https://docs.growingio.com/assets/WebDebuggerInstall5.png)
 
-**2. 移动端**
+**移动端**
 
 对移动端的开发者，GrowingIO 的 SDK 提供了 debug 模式，在 SDK 初始化代码中可以找到。如下图：
 
-Android：
+**Android：**
 
 ![](https://docs.growingio.com/.gitbook/assets/12%20%282%29.jpeg)
 
 **注：如果您 Android 的包添加了截图中代码仍无法打印出 GrowingIO 相关 log 的话，请在**`GrowingIO.startWithConfiguration()`**方法后，添加:**`GConfig.DEBUG = true;`
 
-iOS：
+**iOS：**
 
 ![](https://docs.growingio.com/.gitbook/assets/13.jpeg)
 
 开启 debug 模式后，您需要在app上触发一下打点事件，在打出的log里搜索上述关键字就能找到对应自定义事件&变量上传的数据。
 
-**数据校验第二步：GrowingIO 后台图表验证**
+#### 4.2 **GrowingIO 后台图表验证**
 
 在 GrowingIO 分析后台，找到 “分析” - “新建事件分析”，然后在图表中选择您设计好的 “指标+维度”，查看是否有数据。当然，您需要首先确保您的自定义事件或变量确实有被触发。
 
 至此，您已经完成了 “自定义数据” 的上传，如您在配置或添加代码中有任何疑问，请联系您的客户成功经理咨询，或在工单系统中反馈问题。谢谢。
 
-#### 注意：自定义事件及变量的分析应用范围 {#注意：自定义事件及变量的分析应用范围}
+**注意：自定义事件及变量的分析应用范围**
 
 自定义事件与变量能够帮助我们收集到更多行为及业务数据，在 GrowingIO 的可视化平台中，它们也拥有不同的应用范围。
 

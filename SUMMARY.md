@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [GrowingIO 帮助文档](README.md)
 * [GrowingIO 简介](introduction.md)
 * [快速上手](get-started.md)
 * [产品更新日志](product-changelog.md)
@@ -35,12 +35,12 @@
   * [指标和维度（预定义）](data-model/predefined/README.md)
     * [指标](data-model/predefined/predefined-metrics.md)
     * [维度](data-model/predefined/predefined-dimensions.md)
-  * [圈选定义事件](data-model/circle/README.md)
+  * [圈选定义事件（需要改）](data-model/circle/README.md)
     * [Web圈选](data-model/circle/circle-web.md)
     * [移动端圈选](data-model/circle/circle-app-1.md)
     * [指标管理](data-model/circle/circle-metrics-management.md)
-  * [自定义事件和变量](data-model/zi-ding-yi-shi-jian-he-bian-liang/README.md)
-    * [自定义数据上传和配置](data-model/zi-ding-yi-shi-jian-he-bian-liang/custom-data-implement-guide.md)
+  * [事件和变量（打点）](data-model/zi-ding-yi-shi-jian-he-bian-liang/README.md)
+    * [自定义事件](data-model/zi-ding-yi-shi-jian-he-bian-liang/custom-data-implement-guide.md)
     * [自定义变量](data-model/zi-ding-yi-shi-jian-he-bian-liang/custom-event-variable.md)
 * [系统配置](configuration/README.md)
   * [项目管理](configuration/project-configuration.md)
