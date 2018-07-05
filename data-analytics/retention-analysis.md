@@ -1,15 +1,18 @@
 # 留存分析
 
-* [1.简介](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#1-jian-jie)
-* [2.功能](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#2-gong-neng)
-  * [2.1新建留存默认界面](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#2-1-xin-jian-liu-cun-mo-ren-jie-mian)
-  * [2.2留存下钻到分群](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#%E7%95%99%E5%AD%98%E4%B8%8B%E9%92%BB%E5%88%B0%E5%88%86%E7%BE%A4)
-  * [2.3统计](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#%E7%BB%9F%E8%AE%A1%E5%8F%A3%E5%BE%84)口径
-  * [3.应用场景](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#3-ying-yong-chang-jing)[3.1场景1](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#3-1-chang-jing-1)
-* [3.2场景2](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#3-2-chang-jing-2)
-* [3.3场景3](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#3-3-chang-jing-3)
-* [3.4场景4](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#3-4-chang-jing-4)
-* [4.常见问题](https://growingio.gitbook.io/docs/~/drafts/-LGZSt-DeumBuiZf0cqT/primary/data-analytics/retention-analysis#4-chang-jian-wen-ti)
+
+
+* [1.简介](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#1-jian-jie)
+* [2.功能](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#2-gong-neng)
+  * [2.1新建留存默认界面](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#2-1-xin-jian-liu-cun-mo-ren-jie-mian)
+  * [2.2留存下钻到分群](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#2-2)
+  * [2.3统计口径](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#2-3)
+* [3.应用场景](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#3-ying-yong-chang-jing)
+  * [3.1场景1](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#3-1-chang-jing-1)
+  * [3.2场景2](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#3-2-chang-jing-2)
+  * [3.3场景3](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#3-3-chang-jing-3)
+  * [3.4场景4](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#3-4-chang-jing-4)
+* [4.常见问题](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#4-chang-jian-wen-ti)
 
 ## 1.简介
 
@@ -153,7 +156,7 @@ c.可以选择的最远日期从该项目生效日期开始；
 
 同样地，您可以根据具体业务需求灵活的切换时间与显示粒度。
 
-### 2.2留存下钻到分群 {#留存下钻到分群}
+### 2.2留存下钻到分群 {#2-2}
 
 留存分析中提供了一键创建分群的功能，可以快速定位留存和未留存用户，打通分析到运营环节。鼠标点击留存表的日期行单元格即可出现以下效果。当前钻取有3个限制条件需要注意：
 
@@ -163,7 +166,7 @@ c.可以选择的最远日期从该项目生效日期开始；
 
    ![](https://docs.growingio.com/.gitbook/assets/liu-cun-xia-zuan.png)
 
-### 2.3统计口径 {#统计口径}
+### 2.3统计口径 {#2-3}
 
 留存图中的数据是根据留存表来绘制的，我们针对留存表来说明一下数据统计口径。首先，需要明确的是，留存表中的每个绝对值，指的都是人数。
 
