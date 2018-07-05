@@ -496,7 +496,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 * CS1字段，会强制命名为“登陆用户ID”，并且上传接口与其他变量不同。
 * CS2-10字段，会迁移至“应用级变量”，应用级变量与CS字段的使用方式无任何区别。
-* CS11-20字段，会迁移至“[用户变量](../data-model/event-variable/custom-event-variable.md#用户变量)”。两者的区别主要在于：用户变量支持自定义的归因方式。
+* CS11-20字段，会迁移至“[用户变量](../data-model/event-variable/custom-variable.md#用户变量)”。两者的区别主要在于：用户变量支持自定义的归因方式。
 
 **2.1 上传接口：**
 

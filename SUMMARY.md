@@ -41,7 +41,7 @@
     * [指标管理](data-model/circle/circle-metrics-management.md)
   * [事件和变量（打点）](data-model/event-variable/README.md)
     * [自定义事件](data-model/event-variable/custom-event.md)
-    * [自定义变量](data-model/event-variable/custom-event-variable.md)
+    * [自定义变量](data-model/event-variable/custom-variable.md)
 * [系统配置](configuration/README.md)
   * [项目管理](configuration/project-configuration.md)
   * [用户管理](configuration/user-configuration.md)
