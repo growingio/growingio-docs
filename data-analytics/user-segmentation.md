@@ -12,7 +12,7 @@
   * [3.1用户ID类型](user-segmentation.md#用户id类型)
   * [3.2"用户是"](user-segmentation.md#用户是)
   * [3.3"用户做过"](user-segmentation.md#用户做过)
-* [4.常见问题](user-segmentation.md#常见问题)
+* [4.常见问题](user-segmentation.md#4)
 
 ## [1.简介](user-segmentation.md#1-jian-jie)
 
@@ -214,7 +214,7 @@
 
 这里值得注意的是，选择自定义打点事件时，这里只支持"计数器"类型，暂时不支持其他类型的数据。
 
-## 4.常见问题 {#常见问题}
+## 4.常见问题 {#4}
 
 **1. 上传登陆用户ID列表时，我上传了500个用户，为什么实际上得到的用户数量小于500？**
 
