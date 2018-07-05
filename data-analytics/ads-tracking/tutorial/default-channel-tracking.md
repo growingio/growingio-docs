@@ -1,8 +1,17 @@
 # 默认的渠道来源跟踪
 
-## 默认的渠道来源跟踪 {#默认的渠道来源跟踪}
+* [1.访问来源](default-channel-tracking.md#1)
+* [2.搜索词](default-channel-tracking.md#2)
+* [3.自主投放追踪](default-channel-tracking.md#3)
+* [4.公司域名与GIO短链建立映射关系](default-channel-tracking.md#4)
+  * [4.1需求背景](default-channel-tracking.md#41)
+  * [4.2解决方案](default-channel-tracking.md#42)
+* [5.自主调用Api接口创建链接](default-channel-tracking.md#5)
+  * [5.1输入](default-channel-tracking.md#51)
+  * [5.2输出](default-channel-tracking.md#52)
+  * [5.3接口请求示例](default-channel-tracking.md#53)
 
-### 1. 访问来源 {#1----访问来源}
+### 1. 访问来源 {#1}
 
 GrowingIO会根据一次访问中的第一个页面的referrer判断访问来源，将referrer\_domain作为访问来源；同时，GrowingIO默认启用了「最终非直接点击」归因模型，回溯周期是30天（2016年1月30日以前，回溯周期是7天）。  
 以「今天的访问来源」举例：
@@ -24,13 +33,13 @@ GrowingIO通过项目ID\(AI\)来区分是否外站，如果当前referrer页面�
 
 ![](https://docs.growingio.com/.gitbook/assets/growingio-qu-dao-gen-zong-1.jpg)
 
-### 2. 搜索词 {#2----搜索词}
+### 2. 搜索词 {#2}
 
 用户使用搜索引擎，并在搜索框中输入搜索词，返回结果中出现您的网站，用户通过搜索引擎的返回结果访问您的网站，我们会记录用户在搜索框中输入的「搜索词」；  
 GrowingIO针对Google\(含DoubleClick\)、百度\(baidu\)、搜狗\(sogou\)、好搜\(haosou\)、Bing共计5个搜索引擎解析用户搜索词，包括付费搜索和自然搜索结果；  
 注意: 由于Google和百度对于搜索引擎的自然搜索结果启用了搜索词屏蔽，我们无法获取Google和百度「自然搜索结果」的搜索词
 
-### 3.自主投放追踪 {#3自主投放追踪}
+### 3. 自主投放追踪 {#3}
 
 我们提供utm参数和自定义参数的方式跟踪您网站的自主投放渠道  
 具体请参照：[自主投放URL构建工具](https://assets.growingio.com/help/doc/%E8%AF%A5%E6%96%87%E6%A1%A3%E7%94%A8%E6%9D%A5%E7%94%9F%E6%88%90%E6%8A%95%E6%94%BEURL_V2.0.xlsm)
@@ -59,15 +68,15 @@ GrowingIO直接支持百度统计的参数解析；如果您的自主投放追�
 
 如果url中有中文字符，建议使用utf-8 encode中文字符，但请保留utm关键词。
 
-### 4.公司域名与GIO短链建立映射关系 {#4公司域名与gio短链建立映射关系}
+### 4. 公司域名与GIO短链建立映射关系 {#4}
 
-#### 需求背景： {#需求背景：}
+#### 4.1 需求背景： {#41}
 
 A:针对诸如百度SEM等投放渠道，要求落地页链接为帐户注册主域名
 
 B: 客户有品牌强化需求，希望用自己域名代替GIO短链
 
-#### 解决方案： {#解决方案：}
+#### 4.2 解决方案： {#42}
 
 开发一个接口专门跳转到Growing的短链。
 
@@ -79,7 +88,7 @@ B: 客户有品牌强化需求，希望用自己域名代替GIO短链
 
 如 xxx.com/gs/fjse7FE 。然后拿该链接正常投放就可以了。
 
-### 5.自主调用Api接口创建链接 {#5自主调用api接口创建链接}
+### 5. 自主调用Api接口创建链接 {#5}
 
 POST [https://gta.growingio.com/api/v1/projects/project\_id/activities](https://gta.growingio.com/api/v1/projects/project_id/activities)
 
@@ -87,7 +96,7 @@ POST [https://gta.growingio.com/api/v1/projects/project\_id/activities](https://
 
 注意：将以下内容作为JSON Body，post到上述链接。
 
-#### 输入 {#输入}
+#### 5.1 输入 {#51}
 
 | 字段名称\(\*为必填\) | 填写示例 | 中文含义 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -104,7 +113,7 @@ POST [https://gta.growingio.com/api/v1/projects/project\_id/activities](https://
 | packageName | com.growingio.android.growingio.app | 安卓包名 |
 | comment | 推广预算两万 | 备注 |
 
-#### 输出 {#输出}
+#### 5.2 输出 {#52}
 
 | 字段名称 | 示例 | 中文含义 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -124,7 +133,7 @@ POST [https://gta.growingio.com/api/v1/projects/project\_id/activities](https://
 | createdAt | 1484397370856 | 创建时间 |
 | shortUrl | [https://s.growingio.com/6XNmKl](https://s.growingio.com/6XNmKl) | 用于投放的短链 |
 
-#### 接口请求示例 {#接口请求示例}
+#### 5.3 接口请求示例 {#53}
 
 ```text
 POST /api/v1/projects/nxog09md/activities HTTP/1.1

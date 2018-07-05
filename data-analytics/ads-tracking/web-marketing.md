@@ -1,16 +1,18 @@
 # 推广网站
 
-对于网站/H5 产品，GrowingIO通过 UTM 参数区分不同链接来源，进行访问，跳出率等行为统计。您也可以自行[参考学习资料进行 UTM 参数的配置](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/xue-xi-zi-liao)，区别在于通过「广告监测」创建的链接可以统计链接点击数据。
+对于网站/H5 产品，GrowingIO通过 UTM 参数区分不同链接来源，进行访问，跳出率等行为统计。您也可以自行[参考学习资料进行 UTM 参数的配置](https://growingio.gitbook.io/docs/~/drafts/-LGeHFArYJpbiRutbPC4/primary/data-analytics/ads-tracking/tutorial/utm-parameters)，区别在于通过「广告监测」创建的链接可以统计链接点击数据。
 
-* [1.链接新建与管理](web-marketing.md#lian-jie-xin-jian-yu-guan-li)
-* [2.数据报表](web-marketing.md#2-shu-ju-bao-biao)
-  * [基础数据](web-marketing.md#21-ji-chu-shu-ju)
-  * [深度行为分析](web-marketing.md#22-shen-du-hang-wei-fen-xi)
-* [3.数据说明](web-marketing.md#3-shu-ju-shuo-ming)
+* [1.链接新建与管理](web-marketing.md#1)
+  * [1.1 新建链接](web-marketing.md#11)
+  * [1.2 推广管理](web-marketing.md#12)
+* [2.数据报表](web-marketing.md#2)
+  * [2.1 基础数据](web-marketing.md#21)
+  * [2.2 深度行为分析](web-marketing.md#22)
+* [3.数据说明](web-marketing.md#3)
 
-### 1.链接新建与管理 {#lian-jie-xin-jian-yu-guan-li}
+### 1.链接新建与管理 {#1}
 
-#### 新建链接 {#新建链接}
+#### 1.1 新建链接 {#11}
 
 1. 点击进入GIO后台，广告监测，选择网站推广。
 2. 进入“配置与管理”模块“推广管理”，点击“新建监测”。
@@ -20,15 +22,15 @@
 
 ![](https://docs.growingio.com/.gitbook/assets/1%20%283%29.png)
 
-#### 推广管理 {#推广管理}
+#### 1.2 推广管理 {#12}
 
 可进行链接的增删改查。
 
 ![](https://docs.growingio.com/.gitbook/assets/4%20%282%29.png)
 
-### 2.数据报表
+### 2.数据报表 {#2}
 
-#### 2.1 基础数据
+#### 2.1 基础数据 {#21}
 
 #### 推广详细 {#推广详细}
 
@@ -40,7 +42,7 @@
 
 ![](https://docs.growingio.com/.gitbook/assets/2%20%285%29.png)
 
-#### 2.2 深度行为分析
+#### 2.2 深度行为分析 {#22}
 
 如您需要将广告的维度数据与其他指标和维度数据进行关联分析，可以使用「事件分析」功能进行深度事件分析。
 
@@ -53,7 +55,7 @@
 
 以上使用方式可以沿用在“漏斗分析”,“留存分析”,“用户分群”等模块。
 
-### 3.数据说明
+### 3.数据说明 {#3}
 
 1. 点击：链接的点击次数之和。
 2. 访问用户量：对网站、mApp有过访问的用户的数量。

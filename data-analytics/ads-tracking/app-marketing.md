@@ -2,37 +2,44 @@
 
 如果您需要跟踪 App（安卓 or iOS）的推广效果，可以使用此功能。使用之前请确保您的 App 中加载了GrowingIO 的 SDK1.0.3 以上。
 
-* [1.使用方法](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)
-  * [1.1 新建链接](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#11-xin-jian-lian-jie)
-  * [1.2 推广管理](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#%E6%8E%A8%E5%B9%BF%E7%AE%A1%E7%90%86)
-* [2.数据报表](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#2-shu-ju-bao-biao)
+* [1.使用方法](app-marketing.md#1)
+  * [1.1 新建链接](app-marketing.md#11)
+    * [1.1.1 新建普通链接「Normal-Link」](app-marketing.md#111)
+    * [1.1.2 One-Link](app-marketing.md#112)
+    * [1.1.3 Deep-Link](app-marketing.md#113)
+  * [1.2 推广管理](app-marketing.md#12)
+* [2.数据报表](app-marketing.md#2-shu-ju-bao-biao)
 
-  * [2.1 基础数据](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#21-ji-chu-shu-ju)
-  * [2.2 异常数据报告](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#22-yi-chang-shu-ju-bao-gao)
-  * [2.3 深度分析](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90)
+  * [2.1 基础数据](app-marketing.md#21)
+    * [2.1.1 激活概览](app-marketing.md#211)
+    * [2.1.2 推广详细](app-marketing.md#212)
+  * [2.2 异常数据报告](app-marketing.md#22)
+  * [2.3 深度分析](app-marketing.md#23)
 
-  [3.渠道配置指南](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#3-qu-dao-pei-zhi-zhi-nan)
+  [3.渠道配置指南](app-marketing.md#3-qu-dao-pei-zhi-zhi-nan)
 
-  * [3.1 今日头条](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#31-jin-ri-tou-tiao)
-  * [3.2 广点通](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#32-guang-dian-tong)
-  * [3.3 爱奇艺](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#%E7%88%B1%E5%A5%87%E8%89%BA)
-  * [3.4 百度原生信息流](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#%E7%99%BE%E5%BA%A6%E5%8E%9F%E7%94%9F%E4%BF%A1%E6%81%AF%E6%B5%81)
-  * [3.5 Inmobi](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#inmobi)
-  * [3.6 微博超级粉丝通](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#%E5%BE%AE%E5%8D%9A%E8%B6%85%E7%BA%A7%E7%B2%89%E4%B8%9D%E9%80%9A)
+  * [3.1 今日头条](app-marketing.md#31)
+  * [3.2 广点通](app-marketing.md#32)
+  * [3.3 爱奇艺](app-marketing.md#33)
+  * [3.4 百度原生信息流](app-marketing.md#34)
+  * [3.5 Inmobi](app-marketing.md#35)
+  * [3.6 微博超级粉丝通](app-marketing.md#36)
 
-* [4.数据说明](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#4-shu-ju-shuo-ming)
-* [5. 归因逻辑](https://growingio.gitbook.io/docs/~/edit/drafts/-LGP86NS3NCXGg-ctwe3/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#%E5%BD%92%E5%9B%A0%E9%80%BB%E8%BE%91)
-* [6.权限配置](https://growingio.gitbook.io/docs/~/edit/drafts/-LGPLaREtHnW3MKDeDWt/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#6-quan-xian-pei-zhi)
-* [7.权限配置](https://growingio.gitbook.io/docs/~/edit/drafts/-LGPLaREtHnW3MKDeDWt/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#%E6%9D%83%E9%99%90%E9%85%8D%E7%BD%AE)
-* [8.数据下载与导出](https://growingio.gitbook.io/docs/~/edit/drafts/-LGPLaREtHnW3MKDeDWt/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AF%BC%E5%87%BA)
-  * [8.1 报表数据下载](https://growingio.gitbook.io/docs/~/edit/drafts/-LGPLaREtHnW3MKDeDWt/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#%E6%8A%A5%E8%A1%A8%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD)
-  * [8.2 日志导出](https://growingio.gitbook.io/docs/~/edit/drafts/-LGPLaREtHnW3MKDeDWt/fen-xi-gong-ju/guang-gao-jian-ce/tui-guang-app#%E6%97%A5%E5%BF%97%E5%AF%BC%E5%87%BA)
+* [4.数据说明](app-marketing.md#4-shu-ju-shuo-ming)
+* [5.归因逻辑](app-marketing.md#5-gui-yin-luo-ji)
+  * [5.1 如何定义用户？用户唯一设备号？](app-marketing.md#51)
+  * [5.2 归因规则是？](app-marketing.md#52)
+* [6.权限配置](app-marketing.md#6-quan-xian-pei-zhi)
+* [7.权限配置](app-marketing.md#7-quan-xian-pei-zhi)
+* [8.数据下载与导出](app-marketing.md#8-shu-ju-xia-zai-yu-dao-chu)
+  * [8.1 报表数据下载](app-marketing.md#81)
+  * [8.2 日志导出](app-marketing.md#82)
 
-## 1.使用方法 {#使用方法}
+### 1. 使用方法 {#1}
 
-### 1.1 新建链接
+### 1.1 新建链接 {#11}
 
-#### 1.1.1 新建普通链接「Normal-Link」
+#### 1.1.1 新建普通链接「Normal-Link」 {#111}
 
 1. 点击进入GIO后台，广告监测，要推广的APP。
 2. 进入“配置与管理”模块“推广管理”，点击“新建监测”。
@@ -44,7 +51,7 @@
 
 ![](https://docs.growingio.com/.gitbook/assets/import.png)
 
-#### 1.1.2 One-Link
+#### 1.1.2 One-Link {#112}
 
 当你需要使用一条监测链接同时推广iOS和安卓APP时，使用此类型。
 
@@ -53,7 +60,7 @@
 3. 点击每条链接可以在右侧滑出“快速预览”，切换操作系统分别查看iOS及安卓的数据。
 4. 在“基础数据” 模块，One-Link类型的链接会分化成形如“监测链接0327-Onelink\_iOS”及“监测链接0327-Onelink\_Android“两条链接。
 
-#### 1.1.3 Deep-Link {#deep-link}
+#### 1.1.3 Deep-Link {#113}
 
 当你需要已安装用户站外点击链接可以直接打开APP时，可以使用Deep-Link类型。
 
@@ -66,7 +73,7 @@
 
 特别说明：Deep-Link 目前在内测中，如需体验请页面申请或者联系 GIO CSM 或发送邮件至adtrack@growing.io。
 
-### 1.2 推广管理 {#推广管理}
+### 1.2 推广管理 {#12}
 
 使用推广管理模块进行链接的增删改查。
 
@@ -74,17 +81,17 @@
 
 点击每条链接右侧可以快速滑出快速预览。
 
-## 2.数据报表
+### 2.数据报表
 
-### 2.1 基础数据
+### 2.1 基础数据 {#21}
 
-#### 2.1.1 激活概览 {#激活概览}
+#### 2.1.1 激活概览 {#211}
 
 系统为每个应用统计全部激活，推广激活，自然激活以及新登录和次日留存数据。可分天，分小时查看。
 
 ![](https://docs.growingio.com/.gitbook/assets/5.png)
 
-#### 2.1.2 推广详细 {#推广详细}
+#### 2.1.2 推广详细 {#212}
 
 1. 点击选择您要查看的APP，进入“基础数据” ，“推广详细”模块。
 2. 推广数据可分天查看，也可查看今天分小时数据。数据实时提供。
@@ -93,13 +100,13 @@
 5. 点击“自定义列指标”，选择需要的指标数据。可选的指标有：展现，去重点击，点击率，激活，转化率，次日留存，新登录。
 6. 查询结果可直接下载。
 
-### 2.2 异常数据报告
+### 2.2 异常数据报告 {#22}
 
 系统会针对广告投放运行一系列模型&规则识别数据的异常性，并提供相关数据报告。 1. 选中目标APP，进入“基础数据”中“异常数据报告”模块。 2. 可以根据业务诉求进行部分异常数据识别规则配置。 3. 可点击“自定义列指标”进行指标选择，可选择的列指标有：去重点击，激活，异常点击，异常激活。
 
 ![](https://docs.growingio.com/.gitbook/assets/7.png)
 
-### 2.3 深度分析 {#深度分析}
+### 2.3 深度分析 {#23}
 
 GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以下步骤可以进行不同渠道效果的深度事件分析：
 
@@ -111,7 +118,7 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
 以上逻辑可沿用在分群，漏斗分析等地方，引用相关维度即可进行深度分析。
 
-## 3.渠道配置指南
+### 3.渠道配置指南
 
 当前已对接渠道：
 
@@ -121,7 +128,7 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
 （未出现在上述渠道名单的渠道可以在渠道管理功能中新增配置）
 
-### 3.1 今日头条
+### 3.1 今日头条 {#31}
 
 1. 进入GIO后台，为今日头条的投放生成一条监测链接。进入“渠道管理”模块，点击“今日头条”，“是否回传激活”字段设置为“是”。
 
@@ -133,7 +140,7 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
 ![](https://docs.growingio.com/.gitbook/assets/10%20%281%29.png)
 
-### 3.2 广点通
+### 3.2 广点通 {#32}
 
 1. 进入GIO后台，为广点通的投放生成一条监测链接。进入“渠道配置”模块，点击“广点通”，“是否回传激活”字段设置为“是”。
 2. 进入广点通后台，“工具箱”。创建移动应用转化
@@ -153,14 +160,14 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
 1. 完成以上步骤后，需要将转化规则的状态改为：启用。
 
-### 3.3 爱奇艺 {#爱奇艺}
+### 3.3 爱奇艺 {#33}
 
 1. 在GIO后台生成一条目标渠道为“爱奇艺”的监测链接。
 2. 将链接放置到爱奇艺广告后台，创意部分的“第三方点击监测”上。
 
    ![](https://docs.growingio.com/.gitbook/assets/13.png)
 
-### 3.4 百度原生信息流 {#百度原生信息流}
+### 3.4 百度原生信息流 {#34}
 
 1. 创建一条“百度信息流”的监测链接。
 2. 在百度原生信息流平台创建一条“APP下载转化”。填写相应信息。
@@ -172,7 +179,7 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
    ![](https://docs.growingio.com/.gitbook/assets/15.png)
 
-### 3.5 Inmobi {#inmobi}
+### 3.5 Inmobi {#35}
 
 1. 进入Growingio广告监测后台，进入推广管理，创建监测并选取Inmobi渠道，生成监测链接。
 2. 进入Inmobi后台，创建主张，选择GrowingIO渠道，创建成功后，将Inmobi生成的appID复制并填写到GrowingIO后台相应链接上。
@@ -181,7 +188,7 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
    ![](https://docs.growingio.com/.gitbook/assets/inmobi2.png)
 
-### 3.6 微博超级粉丝通 {#微博超级粉丝通}
+### 3.6 微博超级粉丝通 {#36}
 
 1.在GIO后台生成一条目标渠道为“超级粉丝通”的监测链接。
 
@@ -191,7 +198,7 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
 3.将微博超级粉丝通后台生成的“company” 字段复制到GrowingIO后台
 
-## 4.数据说明
+### 4.数据说明
 
 1. 展现：使用展现监测链接后，广告被展现的次数统计之和。
 2. 全部点击：链接的点击次数之和。
@@ -202,17 +209,17 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 7. 次日留存：激活后，第二天再次打开APP的设备数。
 8. 新登录：激活后，新注册并登陆的设备数。
 
-## 5.归因逻辑 {#归因逻辑}
+### 5.归因逻辑
 
-#### 5.1 如何定义用户？用户唯一设备号？
+#### 5.1 如何定义用户？用户唯一设备号？ {#51}
 
 对于安卓应用，GIO优先使用IMEI号进行精准激活匹配，没有IMEI的情况下采用AndroidID匹配，如果也没有获取到AndroidID，则采用IP+UA的方式模糊匹配。 对于iOS应用，GIO优先使用IDFA进行精准激活匹配，没有IDFA则使用IP+UA的方式模糊匹配。
 
-#### 5.2 归因规则是？
+#### 5.2 归因规则是？ {#52}
 
 按照Last Click（最近点击）规则，同时辅以反作弊规则进行归因。系统归因时间窗默认15天。
 
-## 6.权限配置
+### 6.权限配置
 
 如果希望精确控制不同角色查看广告监测模块中的不同数据，可以使用权限配置模块。特别说明：此模块为高级功能，使用之前请确保您所在组织开通了此功能，详情可垂询相关CSM。具体使用方法：
 
@@ -226,7 +233,7 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
 
 
-## 7.权限配置 {#权限配置}
+### 7.权限配置
 
 如果希望精确控制不同角色查看广告监测模块中的不同数据，可以使用权限配置模块。特别说明：此模块为高级功能，使用之前请确保您所在组织开通了此功能，详情可垂询相关CSM。具体使用方法：
 
@@ -236,17 +243,17 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
 ![](https://docs.growingio.com/.gitbook/assets/16.png)
 
-## 8.数据下载与导出 {#数据下载与导出}
+### 8.数据下载与导出
 
 根据实际需要，GIO提供不同形式的数据导出。
 
-### 8.1 报表数据下载 {#报表数据下载}
+### 8.1 报表数据下载 {#81}
 
 基础数据部分所有页面查询结果报表都可以通过右侧的“下载”按钮进行报表下载。
 
 ![](https://docs.growingio.com/.gitbook/assets/18.png)
 
-### 8.2 日志导出 {#日志导出}
+### 8.2 日志导出 {#82}
 
 如果需要日志数据，可以通过“日志下载”模块导出日志数据。
 
