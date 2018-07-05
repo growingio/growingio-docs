@@ -1,18 +1,16 @@
 # 留存分析
 
-
-
-* [1.简介](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#1-jian-jie)
-* [2.功能](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#2-gong-neng)
-  * [2.1新建留存默认界面](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#2-1-xin-jian-liu-cun-mo-ren-jie-mian)
-  * [2.2留存下钻到分群](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#2-2)
-  * [2.3统计口径](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#2-3)
-* [3.应用场景](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#3-ying-yong-chang-jing)
-  * [3.1场景1](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#3-1-chang-jing-1)
-  * [3.2场景2](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#3-2-chang-jing-2)
-  * [3.3场景3](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#3-3-chang-jing-3)
-  * [3.4场景4](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#3-4-chang-jing-4)
-* [4.常见问题](https://growingio.gitbook.io/docs/~/edit/drafts/-LGeCeYG-yw62R97_xEg/data-analytics/retention-analysis#4-chang-jian-wen-ti)
+* [1.简介](retention-analysis.md#1-jian-jie)
+* [2.功能](retention-analysis.md#2-gong-neng)
+  * [2.1新建留存默认界面](retention-analysis.md#2-1-xin-jian-liu-cun-mo-ren-jie-mian)
+  * [2.2留存下钻到分群](retention-analysis.md#2-2)
+  * [2.3统计口径](retention-analysis.md#2-3)
+* [3.应用场景](retention-analysis.md#3-ying-yong-chang-jing)
+  * [3.1场景1](retention-analysis.md#3-1-chang-jing-1)
+  * [3.2场景2](retention-analysis.md#3-2-chang-jing-2)
+  * [3.3场景3](retention-analysis.md#3-3-chang-jing-3)
+  * [3.4场景4](retention-analysis.md#3-4-chang-jing-4)
+* [4.常见问题](retention-analysis.md#4-chang-jian-wen-ti)
 
 ## 1.简介
 
