@@ -60,5 +60,5 @@
 
 ### 2.2.其他具体圈选规则 {#五、其他具体圈选规则}
 
-可以参见 [web 圈选](https://docs.growingio.com/Features/circle/Web.html)。
+可以参见 [web 圈选](../../data-model/circle/circle-web.md)。
 
