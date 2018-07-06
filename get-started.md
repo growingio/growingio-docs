@@ -4,7 +4,7 @@
 
 欢迎使用 GrowingIO，我们为你准备了强大的数据采集和分析工具和服务，从这里开始你的数据分析之旅：
 
-#### 第一步：与工程师一起接入SDK {#第一步：与工程师一起接入sdk}
+#### 第一步：与工程师一起接入 SDK {#第一步：与工程师一起接入sdk}
 
 1. [JS SDK 配置](https://docs.growingio.com/sdk-integration/sdk-2.x-docs/web-js-sdk-2.x/web-js-sdk-2.1-pagecode.html)
 2. [Android SDK 配置](https://docs.growingio.com/sdk-integration/sdk-2.x-docs/android-sdk-2.x/android-sdk-2.3.1.html/)
@@ -36,6 +36,8 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 9. 实时分析 [文档](https://docs.growingio.com/visualization/realtime.html)
 10. 概览分析 [文档](https://docs.growingio.com/visualization/overview.html)
 11. 业务场景 [文档](https://docs.growingio.com/visualization/scenarios.html)
+12. web 圈选 文档 \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)
+13. 移动端圈选 文档 \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)
 
 #### 第五步：开始进行分析 {#第五步：开始进行分析}
 
