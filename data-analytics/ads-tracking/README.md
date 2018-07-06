@@ -4,7 +4,7 @@ GrowingIO提供一系列功能帮助客户跟踪不同场景推广产品的效�
 
 根据技术实现原理和推广效果的衡量指标差异：
 
-推广网站，[请看这里](https://growingio.gitbook.io/docs/~/drafts/-LGeHFArYJpbiRutbPC4/primary/data-analytics/ads-tracking/web-marketing)；如果你推广的是 App ，[请看这里](https://growingio.gitbook.io/docs/~/drafts/-LGeHFArYJpbiRutbPC4/primary/data-analytics/ads-tracking/app-marketing)。
+推广网站，[请看这里](web-marketing.md)；如果你推广的是 App ，[请看这里](app-marketing.md)。
 
 {% page-ref page="web-marketing.md" %}
 

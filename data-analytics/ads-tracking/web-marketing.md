@@ -1,6 +1,6 @@
 # 推广网站
 
-对于网站/H5 产品，GrowingIO通过 UTM 参数区分不同链接来源，进行访问，跳出率等行为统计。您也可以自行[参考学习资料进行 UTM 参数的配置](https://growingio.gitbook.io/docs/~/drafts/-LGeHFArYJpbiRutbPC4/primary/data-analytics/ads-tracking/tutorial/utm-parameters)，区别在于通过「广告监测」创建的链接可以统计链接点击数据。
+对于网站/H5 产品，GrowingIO通过 UTM 参数区分不同链接来源，进行访问，跳出率等行为统计。您也可以自行[参考学习资料进行 UTM 参数的配置](utm-parameters.md)，区别在于通过「广告监测」创建的链接可以统计链接点击数据。
 
 * [1.链接新建与管理](web-marketing.md#1)
   * [1.1 新建链接](web-marketing.md#11)
