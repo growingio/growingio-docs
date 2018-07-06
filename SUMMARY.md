@@ -19,6 +19,7 @@
     * [自定义首页](data-analytics/dashboard/homepage.md)
     * [概览看板](data-analytics/dashboard/overview.md)
     * [实时看板](data-analytics/dashboard/realtime.md)
+  * [单图](data-analytics/dan-tu.md)
   * [广告监测](data-analytics/ads-tracking/README.md)
     * [推广网站](data-analytics/ads-tracking/web-marketing.md)
     * [推广 App](data-analytics/ads-tracking/app-marketing.md)
