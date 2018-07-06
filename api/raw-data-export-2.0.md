@@ -8,7 +8,7 @@
 
 原始数据导出为付费功能，且只能导出从开通之日起的原始数据，原始数据仅保留15天，请定期下载。
 
-在进行原始数据导出之前，请务必参考[“GrowingIO接口认证”文档](https://docs.growingio.com/api/authentication.html)，完成接口认证获取token。
+在进行原始数据导出之前，请务必参考 [“GrowingIO接口认证”文档](https://docs.growingio.com/api/authentication.html)，完成接口认证获取 token 。
 
 ### 1.原始数据导出 2.0 API 功能概要 {#summary}
 
