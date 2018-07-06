@@ -1,34 +1,32 @@
 # 自定义变量
 
-* [1.自定义变量使用方法](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#1)
-  * [1.1 标识符](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#11)
-  * [1.2 名称](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#12)
-  * [1.3 描述](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#13)
-* [2.页面级变量](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#2)
-  * [2.1 页面级变量的持久性范围](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#21)
-  * [2.2 页面级变量使用的场景](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#22)
-* [3.转化变量](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#3)
-  * [3.1 归因方式](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#%E5%BD%92%E5%9B%A0%E6%96%B9%E5%BC%8F)
-  * [3.2 失效时间](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#32)
-  * [3.3 转化变量的归因模型](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#33)
-  * [3.4 转化变量的持久性范围](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#34)
-  * [3.5 转化变量的使用场景](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#%E8%BD%AC%E5%8C%96%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF)
-  * [3.6 分析场景示例](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#%E5%88%86%E6%9E%90%E5%9C%BA%E6%99%AF%E7%A4%BA%E4%BE%8B)
-* [4.用户变量](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#4)
-  * [4.1 归因模型](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#41)
-  * [4.2 用户变量的归因](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#42)
-  * [4.3 用户变量的持久性范围](https://growingio.gitbook.io/docs/~/edit/drafts/-LGZulFnOpem7tt9Rew7/data-model/custom-event-variable#43)
+* [1.自定义变量使用方法](custom-variable.md#1)
+  * [1.1 标识符](custom-variable.md#11)
+  * [1.2 名称](custom-variable.md#12)
+  * [1.3 描述](custom-variable.md#13)
+* [2.页面级变量](custom-variable.md#2)
+  * [2.1 页面级变量的持久性范围](custom-variable.md#21)
+  * [2.2 页面级变量使用的场景](custom-variable.md#22)
+* [3.转化变量](custom-variable.md#3)
+  * [3.1 归因方式](custom-variable.md#归因方式)
+  * [3.2 失效时间](custom-variable.md#32)
+  * [3.3 转化变量的归因模型](custom-variable.md#33)
+  * [3.4 转化变量的持久性范围](custom-variable.md#34)
+  * [3.5 转化变量的使用场景](custom-variable.md#35)
+  * [3.6 分析场景示例](custom-variable.md#36)
+* [4.用户变量](custom-variable.md#4)
+  * [4.1 归因模型](custom-variable.md#41)
+  * [4.2 用户变量的归因](custom-variable.md#42)
+  * [4.3 用户变量的持久性范围](custom-variable.md#43)
 
 重要：如果您目前使用的是 1.x 版本的 SDK，希望升级至 2.x 版本，请注意：您需要联系您的 GrowingIO 对接人，我们需要帮您开启后台 2.x 版本所对应功能。如果您直接集成 2.x 版本，而后台对应功能未开启的话，可能会造成数据丢失的问题。
 
 GrowingIO使用自定义变量来提高数据定义的灵活性。GrowingIO的自定义变量功能包括：
 
-1. 事件级变量
+1. [事件级变量](custom-event.md)
 2. 页面级变量
 3. 转化变量
 4. 用户变量
-
-请注意，在 GrowingIO 的一个项目内，自定义事件的个数上限为 500 个，事件级变量的个数上限为 100 个（并非每个事件可附带 100 个变量，而是整个项目中只可以有 100 个事件级变量），页面级变量的个数上限为 50 个，转化变量的个数上限为 10 个，用户变量的个数上限为 50 个。
 
 ## 1.自定义变量使用方法 {#1}
 
@@ -176,7 +174,7 @@ GrowingIO.setPageVariable\(Activity activity, ”channel”, “新闻”\);
 
 转化变量通过失效配置项来确定某个具体的转化变量的持久性范围。
 
-### 3.5 **转化变量的使用场景** {#转化变量的使用场景}
+### 3.5 **转化变量的使用场景** {#35}
 
 转化变量可以用于回答下列业务问题：
 
@@ -184,7 +182,7 @@ GrowingIO.setPageVariable\(Activity activity, ”channel”, “新闻”\);
 * 使用线性归因模型，内部搜索的效果怎样，某个具体的搜索词带来了多少订单，营业收入。
 * 使用最近归因模型，同一个内部活动的不同入口分别带来了多少内部活动详情页面的浏览。
 
-### 3.6 分析场景示例 {#分析场景示例}
+### 3.6 分析场景示例 {#36}
 
 在电商购物场景中，可将促使用户下单的前序行为如：活动页浏览、搜索、站内banner点击等，定义为转化变量，用于分解下单行为。例如，我们在用户进行搜索时，通过转化变量上传其输入的搜索词，即可在GrowingIO后台按以下方式分解不同搜索词带来的下单转化：
 

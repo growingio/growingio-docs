@@ -6,7 +6,7 @@
 
 APP 或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，他们包括：
 
-* 自定义事件 + 事件级变量
+* [自定义事件 + 事件级变量](custom-event.md)
 * [页面级变量](https://docs.growingio.com/implementation/event-variable/custom-event/custom-variables-introduction/page-level-variable.html)
 * [转化变量](https://docs.growingio.com/implementation/event-variable/custom-event/custom-variables-introduction/conversion-variable.html)
 * [用户变量](https://docs.growingio.com/implementation/event-variable/custom-event/custom-variables-introduction/user-variable.html)

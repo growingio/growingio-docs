@@ -5,27 +5,31 @@
 * [3.分群 API 定义](reporting-api.md#segmentation-api)
 * [4.规则逻辑 API 接口](reporting-api.md#rule-api)
 
-### 1.看板数据 API 定义 {#dashboard-api}
+###  {#dashboard-api}
 
 注意：
 
-1. 本页API中的project\_id、dashboard\_id、chart\_id字段，均可在项目页面url中找到，如："[https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R](https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R)" 中的"nxog09md"和"YoX28w7R"分别是project\_id和dashboard\_id。
-2. 在进行导出之前，请务必参考[“GrowingIO接口认证”文档](https://docs.growingio.com/growingio_api_auth.html)，完成接口认证获取token。
+* 本页 API 中的 project\_id、dashboard\_id、chart\_id 字段，均可在项目页面url中找到，如："[https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R](https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R)"  中的 "nxog09md" 和 "YoX28w7R" 分别是 project\_id 和dashboard\_id。
+* 在进行导出之前，请务必参考[“GrowingIO接口认证”文档](https://docs.growingio.com/growingio_api_auth.html)，完成接口认证获取 token 。
 
-#### Resource {#resource}
+### 1.看板数据 API 定义 {#dashboard-api}
+
+获取看板中的图表信息
+
+**1.1 Resource**
 
 GET [https://www.growingio.com/projects/:project\_id/dashboards/:dashboard\_id.json](https://www.growingio.com/projects/:project_id/dashboards/:dashboard_id.json)
 
-#### Authorization {#authorization}
+#### 1.2 Authorization {#authorization}
 
 在 Header 里面添加两个属性：
 
 | 名字 | 类型 | 描述 | 示例 |
 | --- | --- | --- |
-| X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
+| X-Client-Id | String | GrowingIO 分配的公钥，请在 GrowingIO 后台“项目配置”页面获取 | X-Client-Id: 123abc |
 | Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
 
-#### Response {#response}
+#### 1.3 Response {#response}
 
 Status Code: 200 OK
 
@@ -52,15 +56,15 @@ Status Code: 200 OK
 
 ### 2.单图数据 API 定义 {#chart-api}
 
-**单图下载每秒限速 2 次**
+获取单图信息（单图下载每秒限速 2 次）
 
-#### Resource {#resource}
+#### 2.1 Resource {#resource}
 
 GET [https://www.growingio.com/projects/:project\_id/charts/:chart\_id.json](https://www.growingio.com/projects/:project_id/charts/:chart_id.json)
 
 注意：**跳出率、平均访问时长、每次访问页面浏览量、访问用户人均访问次数**以及基于以上指标的其他指标，在以**小时**为 interval 的请求中，返回值都为0。
 
-#### Authorization {#authorization}
+#### 2.2 Authorization {#authorization}
 
 在 Header 里面添加两个属性：
 
@@ -69,7 +73,7 @@ GET [https://www.growingio.com/projects/:project\_id/charts/:chart\_id.json](htt
 | X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
 | Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
 
-#### Query Parameter {#query-parameter}
+#### 2.3 Query Parameter {#query-parameter}
 
 | 名字 | 类型 | 描述 | 示例 |
 | --- | --- | --- | --- |
@@ -77,7 +81,7 @@ GET [https://www.growingio.com/projects/:project\_id/charts/:chart\_id.json](htt
 | endTime | integer | 数据结束时间 | 1462118400000 |
 | interval | integer | 数据间隔 | 86400000 |
 
-#### Responses {#responses}
+#### 2.4 Responses {#responses}
 
 Status Code: 200 OK
 
@@ -127,11 +131,13 @@ Status Code: 200 OK
 
 ### 3.分群 API 定义 {#segmentation-api}
 
-#### Resource {#resource}
+#### 3.1 获取分群列表 {#resource}
+
+**3.1.1  Resource** 
 
 GET [https://www.growingio.com/projects/:project\_id/segmentations.json](https://www.growingio.com/projects/:project_id/segmentations.json)
 
-#### Authorization {#authorization}
+**3.1.2 Authorization**
 
 在 Header 里面添加两个属性：
 
@@ -140,11 +146,11 @@ GET [https://www.growingio.com/projects/:project\_id/segmentations.json](https:/
 | X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
 | Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
 
-#### Query Parameter {#query-parameter}
+**3.1.3  Parameter**
 
 无
 
-#### Responses {#responses}
+**3.1.4 Responses**
 
 Status Code: 200 OK
 
@@ -168,11 +174,13 @@ Status Code: 200 OK
 ]
 ```
 
-#### Resource {#resource}
+#### 3.2 获取特定分群的用户列表 {#resource}
+
+**3.2.1 Resource**
 
 GET [https://www.growingio.com/projects/:project\_id/segmentations/:segmentation\_id/users.csv](https://www.growingio.com/projects/:project_id/segmentations/:segmentation_id/users.csv)
 
-#### Authorization {#authorization}
+**3.2.2 Authorization**
 
 在 Header 里面添加两个属性：
 
@@ -181,11 +189,11 @@ GET [https://www.growingio.com/projects/:project\_id/segmentations/:segmentation
 | X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
 | Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
 
-#### Query Parameter {#query-parameter}
+**3.2.3 Query Parameter**
 
 无
 
-#### Responses {#responses}
+**3.2.4 Responses**
 
 Status Code: 200 OK  
 CSV 文件以 Tab 分隔，内容是上传的 CS 属性字段
@@ -197,11 +205,13 @@ cs1_name    cs2_name
 
 ### 4.规则逻辑 API 接口 {#rule-api}
 
-#### Resource {#resource}
+获取圈选元素的规则
+
+#### 4.1 Resource {#resource}
 
 GET [https://www.growingio.com/projects/:project\_id/rules.csv](https://www.growingio.com/projects/:project_id/rules.csv)
 
-#### Authorization {#authorization}
+#### 4.2 Authorization {#authorization}
 
 在 Header 里面添加两个属性：
 
@@ -210,11 +220,11 @@ GET [https://www.growingio.com/projects/:project\_id/rules.csv](https://www.grow
 | X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
 | Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
 
-#### Query Parameter {#query-parameter}
+#### 4.3 Query Parameter {#query-parameter}
 
 无
 
-#### Responses {#responses}
+#### 4.4 Responses {#responses}
 
 Status Code: 200 OK  
 CSV 文件内容以 Tab 分隔
@@ -246,4 +256,6 @@ Status Code: 500 Server Error
   ]
 }
 ```
+
+
 
