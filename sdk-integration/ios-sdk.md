@@ -929,7 +929,7 @@ CS5: sales\_name:销售员小王
 
 **其他CS字段遵循相似的设置方法**
 
-**在上传成功两小时后，您需要在「项目管理-项目配置-CS 配置中」进行字段配置和激活，配置成功后便可开始使用 CS 字段进行分析。配置过程请参考** [**属性数据\(CS\)上传配置文档**](../data-model/event-variable/custom-event.md#2-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)**。**
+**在上传成功两小时后，您需要在「项目管理-项目配置-CS 配置中」进行字段配置和激活，配置成功后便可开始使用 CS 字段进行分析。配置过程请参考** [**属性数据\(CS\)上传配置文档**](../data-model/event-variable/custom-event.md#e-yong-hu-bian-liang-pei-zhi)**。**
 
 #### 设置元素对象 {#设置元素对象}
 
