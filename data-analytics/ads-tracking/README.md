@@ -6,3 +6,11 @@ GrowingIO提供一系列功能帮助客户跟踪不同场景推广产品的效�
 
 推广网站，[请看这里](https://growingio.gitbook.io/docs/~/drafts/-LGeHFArYJpbiRutbPC4/primary/data-analytics/ads-tracking/web-marketing)；如果你推广的是 App ，[请看这里](https://growingio.gitbook.io/docs/~/drafts/-LGeHFArYJpbiRutbPC4/primary/data-analytics/ads-tracking/app-marketing)。
 
+{% page-ref page="web-marketing.md" %}
+
+{% page-ref page="app-marketing.md" %}
+
+{% page-ref page="utm-parameters.md" %}
+
+{% page-ref page="default-channel-tracking.md" %}
+
