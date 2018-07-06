@@ -7,11 +7,11 @@
 
 通过以下分析工具创建的：
 
-* [事件分析](https://docs.growingio.com/analytics-tools/event-analysis.html)
-* [漏斗分析](https://docs.growingio.com/analytics-tools/funnel-analysis.html)
-* [留存分析](https://docs.growingio.com/analytics-tools/cohort-analysis.html)
+* [事件分析](event-analysis.md)
+* [漏斗分析](funnel-analysis.md)
+* [留存分析](retention-analysis.md)
 
-图表都可以在**"单图"**中管理。您可以在网格视图和列表视图中切换以满足不同的管理需求。
+图表都可以在**"**[**单图**](dan-tu.md)**"**中管理。您可以在网格视图和列表视图中切换以满足不同的管理需求。
 
 ## 2.功能介绍
 
