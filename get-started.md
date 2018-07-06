@@ -12,8 +12,8 @@
 
 #### 第二步：在工程师的协助下，进行重要配置 {#第二步：在工程师的协助下，进行重要配置}
 
-1. 如果你是使用了 \#hashtag 的单页面应用，请[进行配置](sdk-integration/web-js-sdk.md#22-hashtag-xi-tong-bian-liang)
-2. 95% 的用户都会上传[用户属性字段](sdk-integration/web-js-sdk.md#peopleset)，这样你就可以知道产品内的行为是由具体的哪个用户做的。比如想要对比登录和未登录用户的差异，就需要上传登录用户ID。
+1. 如果你是使用了 \#hashtag 的单页面应用，请[进行配置](https://docs.growingio.com/sdk-integration/sdk-2.x-docs/web-js-sdk-2.x/system-variables.html)
+2. 95% 的用户都会上传[用户属性字段](https://docs.growingio.com/sdk-integration/sdk-2.x-docs/custom-data-implement-guide.html#%E7%94%A8%E6%88%B7%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%EF%BC%9A)，这样你就可以知道产品内的行为是由具体的哪个用户做的。比如想要对比登录和未登录用户的差异，就需要上传登录用户ID。
 
 #### 第三步：选择数据定义方式 {#第三步：选择数据定义方式}
 
@@ -35,8 +35,8 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 8. 热图 [文档](data-analytics/heatmap/)
 9. 实时分析 [文档](data-analytics/dashboard/realtime.md)
 10. 概览分析 [文档](data-analytics/dashboard/overview.md)
-11. web 圈选 文档 \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)
-12. 移动端圈选 文档 \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)
+11. web 圈选 [文档](http://growing.cn-bj.ufileos.com/web_circle.pdf) \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)
+12. 移动端圈选 [文档](http://growing.cn-bj.ufileos.com/app_circle.pdf) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)
 
 #### 第五步：开始进行分析 {#第五步：开始进行分析}
 
@@ -47,4 +47,14 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 3. [漏斗分析使用手册](https://s.growingio.com/9PXbR0)
 4. [留存分析使用手册](https://s.growingio.com/p8QD3x)
 5. [用户分群使用手册](https://s.growingio.com/9PaAZ8)
+
+### 小程序
+
+GrowingIO 所有分析能力都同样支持小程序，同时，还对小程序提供了更有针对性的支持：
+
+1.集成[小程序 SDK ](sdk-integration/xiao-cheng-xu-sdk.md)，以进行数据采集
+
+2.通过[小程序圈选](data-model/circle/xiao-cheng-xu-quan-xuan.md)或配置[事件和变量](data-model/event-variable/shi-jian-he-bian-liang-xiao-cheng-xu.md)来进行数据定义
+
+3.通过[小程序概览](data-analytics/xiao-cheng-xu-gai-lan.md)了解数据情况
 
