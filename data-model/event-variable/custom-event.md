@@ -6,6 +6,18 @@
   * [3.代码部署](custom-event.md#3-dai-ma-bu-shu)
   * [4.数据校验](custom-event.md#4-shu-ju-xiao-yan)
 
+### 步骤：
+
+1.从数据需求出发，梳理指标、维度
+
+2.在「导航栏」-「数据管理」-「事件与变量」中完成配置
+
+3.在代码中完成 API 调用
+
+4.数据校验
+
+以下针对上述 4 个步骤进行详细说明。
+
 ### **1.从数据需求到具体 “指标+维度”**
 
 在 GrowingIO 上着手进行任何分析之前，首先要确定的一个问题是：如何设计“指标+维度”的体系？对于无埋点数据，我们通过圈选确定“指标”，而“维度”则由 GrowingIO 提供了数个[预定义的维度](https://docs.growingio.com/growingio-shu-ju-mo-xing/yu-ding-yi-wei-du.html)。对于自定义数据，我们可以相对更自由地选择“指标+维度”的体系。
@@ -72,7 +84,7 @@
 
 #### **c.页面级变量配置：**
 
-对于每一个页面级变量，建议您在配置之前，先按下表列出配置细项，其中
+对于每一个[页面级变量](custom-variable.md#2)，建议您在配置之前，先按下表列出配置细项，其中
 
 * 变量名称 ==&gt; GrowingIO 后台维度名称
 * 变量描述 ==&gt; 可选，仅作备注使用
@@ -88,13 +100,13 @@
 
 #### **d.转化变量配置：**
 
-对于每一个转化变量，建议您在配置之前，先按下表列出配置细项，其中
+对于每一个[转化变量](custom-variable.md#3)，建议您在配置之前，先按下表列出配置细项，其中
 
 * 变量名称 ==&gt; GrowingIO 后台维度名称
 * 变量描述 ==&gt; 可选，仅作备注使用
 * 变量标识符 ==&gt; 此变量在代码中的标识，可以为英文、下划线和数字，大小写敏感
-* 归因方式 ==&gt; 转化归因的算法，可为最初、最近或线性（具体解释请参考[转化变量](https://docs.growingio.com/implementation/event-variable/custom-event/custom-variables-introduction/conversion-variable.html#gui-yin-fang-shi)介绍）；归因方式选定后，不建议修改，因为修改归因方式会导致修改前的所有数据失效
-* 失效 ==&gt; 转化变量的失效时间（具体解释请参考[转化变量](https://docs.growingio.com/implementation/event-variable/custom-event/custom-variables-introduction/conversion-variable.html#shi-xiao-shi-jian)介绍）
+* 归因方式 ==&gt; 转化归因的算法，可为最初、最近或线性（具体解释请参考[转化变量](custom-variable.md#33)介绍）；归因方式选定后，不建议修改，因为修改归因方式会导致修改前的所有数据失效
+* 失效 ==&gt; 转化变量的失效时间（具体解释请参考[转化变量](custom-variable.md#34)介绍）
 
 ![](https://docs.growingio.com/.gitbook/assets/7%20%281%29.png)
 
@@ -106,12 +118,12 @@
 
 #### **e.用户变量配置：**
 
-对于每一个用户变量，建议您在配置之前，先按下表列出配置细项，其中
+对于每一个[用户变量](custom-variable.md#4)，建议您在配置之前，先按下表列出配置细项，其中
 
 * 变量名称 ==&gt; GrowingIO 后台维度名称
 * 变量描述 ==&gt; 可选，仅作备注使用
 * 变量标识符 ==&gt; 此变量在代码中的标识，可以为英文、下划线和数字，大小写敏感
-* 归因方式 ==&gt; 用户变量归因的算法（具体解释请参考[用户变量](https://docs.growingio.com/implementation/event-variable/custom-event/custom-variables-introduction/user-variable.html#gui-yin-mo-xing)介绍）
+* 归因方式 ==&gt; 用户变量归因的算法（具体解释请参考[用户变量](custom-variable.md#42)介绍）
 
 ![](https://docs.growingio.com/.gitbook/assets/9%20%281%29.png)
 
