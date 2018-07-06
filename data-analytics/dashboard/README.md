@@ -1,10 +1,10 @@
 # 看板
 
-* [1.简介](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#1-jian-jie)
-* [2.功能说明](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#2-gong-neng-shuo-ming)
+* [1.简介](./#1-jian-jie)
+* [2.功能说明](./#2-gong-neng-shuo-ming)
   * [2.1.看板列表页](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#2-1-kan-ban-lie-biao-ye)
   * [2.2.新建或编辑看板](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#2-2-xin-jian-huo-bian-ji-kan-ban)
-* [3.常见问题](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#3-chang-jian-wen-ti)
+* [3.常见问题](./#3-chang-jian-wen-ti)
 
 ## 1.简介
 
@@ -81,5 +81,5 @@
 
 **2. 从看板中移除某个图表时该图表会被删除么？**
 
-不会。移除某个图表只会影响当前的看板，您还可以把移除的图表重新添加到该看板中。被移除的图表在「[单图](https://docs.growingio.com/visualization/charts.html)」中可以找到。
+不会。移除某个图表只会影响当前的看板，您还可以把移除的图表重新添加到该看板中。被移除的图表在「单图」中可以找到。
 
