@@ -6,7 +6,9 @@
 * [1.x 版本 SDK 升级指导](ios-sdk.md#sdk-1x-版本升级指导)
 * [GrowingIO Mobile Debugger](ios-sdk.md#growingio-mobile-debugger)
 
-### SDK 代码安装
+## 集成 SDK 和 API 导入
+
+### 1. SDK 代码安装
 
 如果您的 iOS 项目中集成了 Firebase SDK，请确保使用的 Firebase SDK 版本在 4.8.1 及以上，并且集成 GrowingIO SDK 2.1.1 及以上版本，否则会造成数据采集不到的情况。
 
@@ -67,16 +69,16 @@ GrowingIO 支持两种 iOS SDK 安装方式：
 
 #### 5. 设置 URL Scheme
 
-**（1）获取URL Scheme**
+#### **（1）获取URL Scheme**
 
 * 添加新产品：登录官网 -&gt; 点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 点击“新建应用”-&gt;选择添加 iOS 应用 -&gt; 填写“应用名称“，点击下一步 -&gt;在第二段中标黄字体。
 * 现有产品：登录官网 -&gt; 点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 找到对应产品的 URL Scheme
 
 ![&#x9879;&#x76EE;&#x7BA1;&#x7406;](https://docs.growingio.com/.gitbook/assets/image.png)
 
-**（2）添加 URL Scheme（growing.xxxxxxxxxxxxxxxx）到项目中，以便唤醒您的程序进行圈选**
+#### **（2）添加 URL Scheme（growing.xxxxxxxxxxxxxxxx）到项目中，以便唤醒您的程序进行圈选**
 
-**（3）在 AppDelegate 中添加激活圈选的代码**
+#### **（3）在 AppDelegate 中添加激活圈选的代码**
 
 ```text
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
@@ -130,7 +132,7 @@ _**请确保将代码添加在上面描述的位置，添加到其他函数中�
 
 #### 7. 重要配置项
 
-#### 7.1 设置界面元素ID {#设置界面元素id}
+#### 7.1 设置界面元素ID
 
 当您的应用界面改版时，可能会导致无法准确地统计已经圈选的元素。因此，对于应用中的主要流程涉及到的界面元素，建议您为它们设置固定的唯一ID，以保证数据的一致性。
 
@@ -164,7 +166,7 @@ _**请确保将代码添加在上面描述的位置，添加到其他函数中�
 
 （4）对于已经集成过旧版SDK并圈选过的应用，对某个元素设置ID后再圈选它，指标数值会从零开始计算，类似初次集成SDK后发版的效果，但不影响之前圈选的其它指标数据。如果不希望出现这种情况，请不要使用这个方法。
 
-#### 7.2 采集广告Banner数据 {#采集广告banner数据}
+#### 7.2 采集广告Banner数据
 
 很多应用上方都有横向滚动的Banner广告。对于这样的广告，如果要收集数据，请在响应点击的控件上添加如下代码
 
@@ -240,7 +242,7 @@ view3.growingAttributesValue = @“ad3”;
 
 **其他设置（如设置“登录用户ID”）请前往**[ **iOS SDK API**](ios-sdk.md#ios-sdk-api)**中查看。**
 
-### iOS SDK API {#ios-sdk-api}
+### 2. iOS SDK API {#ios-sdk-api}
 
 #### API简介 {#api简介}
 
@@ -429,11 +431,11 @@ view3.growingAttributesValue = @“ad3”;
 [Growing clearUserId];
 ```
 
-### 自定义数据上传&配置指导 {#自定义数据上传配置指导}
+## 自定义数据上传&配置指导
 
 您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，具体请参考[相关文档](../data-model/event-variable/custom-event.md)。
 
-### SDK 1.x 版本升级指导 {#sdk-1x-版本升级指导}
+## SDK 1.x 版本升级指导
 
 本文旨在帮助您从 1.x 版本无缝升级至 2.x 版本，由于两个版本的诸多接口、方法、字段含义均有较大变动，因此建议您在升级前一定参照本文完成必要的实施工作。
 
@@ -524,9 +526,9 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 + (void)setPageVariable:(NSDictionary<NSString *, NSObject *> *)variable toViewController:(UIViewController *)viewController;
 ```
 
-**2.2 GrowingIO 后台配置**
+#### 3**.2 GrowingIO 后台配置**
 
-您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档](../data-model/event-variable/custom-event.md#自定义数据-上传步骤)
+您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档](../data-model/event-variable/custom-event.md#c-ye-mian-ji-bian-liang-pei-zhi)
 
 #### 4. 迁移自定义事件（埋点事件） {#4-迁移自定义事件埋点事件}
 
@@ -573,7 +575,7 @@ GrowingIO 提供了 SDK debug 模式以及 debug 工具，来帮助您完成数�
 
 在 GrowingIO 分析后台，找到 “单图” - “新建事件分析”，然后在图表中选择您设计好的 “指标+维度”，查看是否有数据。当然，您需要首先确保您的自定义事件或变量确实有被触发。
 
-### GrowingIO Mobile Debugger
+## GrowingIO Mobile Debugger
 
 GrowingIO Debugger是GrowingIO推出的调试 SDK所发送数据的工具。在GrowingIO Debugger的帮助下，实施工程师可以看到在什么样的页面上，在什么时机向GrowingIO发送了什么样的服务器请求。
 
