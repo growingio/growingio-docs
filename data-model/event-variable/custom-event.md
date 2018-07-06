@@ -3,6 +3,11 @@
 * [步骤](custom-event.md#bu-zhou)
   * [1.从数据需求到具体 “指标+维度”](custom-event.md#1-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)
   * [2.在「事件和变量」中完成配置](custom-event.md#2-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
+    * 事件级变量
+    * 自定义事件
+    * 页面级变量
+    * 转化变量
+    * 用户变量
   * [3.代码部署](custom-event.md#3-dai-ma-bu-shu)
   * [4.数据校验](custom-event.md#4-shu-ju-xiao-yan)
 
@@ -47,7 +52,7 @@
 
 当我们完成 ”指标+维度“ 的设计之后，请勿直接开始代码的部署，需要先到 GrowingIO 后台找到**「导航栏」-「数据管理」-「事件和变量」**功能，在其中完成对应的配置。
 
-#### **a.事件级变量配置：**
+#### 2.1 **事件级变量**
 
 对每一个事件级变量，建议您在配置之前，先按下表列出配置细项，其中
 
@@ -64,7 +69,7 @@
 
 点击确定，即完成了事件级变量的配置。
 
-#### **b.自定义事件配置：**
+#### 2**.2 自定义事件**
 
 对于每一个自定义事件，建议您在配置之前，先按下表列出配置细项，其中
 
@@ -82,7 +87,7 @@
 
 点击保存配置，即完成了自定义事件的配置。
 
-#### **c.页面级变量配置：**
+#### 2.3 **页面级变量**
 
 对于每一个[页面级变量](custom-variable.md#2)，建议您在配置之前，先按下表列出配置细项，其中
 
@@ -98,7 +103,7 @@
 
 点击确定，即完成了页面级变量的配置。
 
-#### **d.转化变量配置：**
+#### 2**.4 转化变量**
 
 对于每一个[转化变量](custom-variable.md#3)，建议您在配置之前，先按下表列出配置细项，其中
 
@@ -116,7 +121,7 @@
 
 点击确定，即完成了转化变量的配置。
 
-#### **e.用户变量配置：**
+#### 2**.5 用户变量**
 
 对于每一个[用户变量](custom-variable.md#4)，建议您在配置之前，先按下表列出配置细项，其中
 
@@ -141,9 +146,9 @@
 
 在完成了配置后，即可在代码中完成以上设计的 “自定义事件和变量” 的部署。具体的说，就是调用 GrowingIO 提供的API接口，上传数据。
 
-* [JS 接口文档](https://docs.growingio.com/sdk-20/sdk-20-api-wen-dang/js-sdk-api-wen-dang.html)
-* [Android 接口文档](https://docs.growingio.com/sdk-20/sdk-20-api-wen-dang/android-sdk-api-wen-dang.html)
-* [iOS 接口文档](https://docs.growingio.com/sdk-20/sdk-20-api-wen-dang/ios-sdk-api-wen-dang.html)
+* [JS 接口文档](../../sdk-integration/web-js-sdk.md#31-api-jian-jie)
+* [Android 接口文档](../../sdk-integration/android-sdk.md#2-android-sdk-api)
+* [iOS 接口文档](../../sdk-integration/ios-sdk.md#api简介)
 
 ### 4.数据校验
 
