@@ -1,8 +1,14 @@
 # 看板
 
-### 简介 {#简介}
+* [1.简介](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#1-jian-jie)
+* [2.功能说明](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#2-gong-neng-shuo-ming)
+* [2.1.看板列表页](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#2-1-kan-ban-lie-biao-ye)
+* [2.2.新建或编辑看板](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#2-2-xin-jian-huo-bian-ji-kan-ban)
+* [3.常见问题](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#3-chang-jian-wen-ti)
 
-多个分析图表可以有效组合成业务"看板"进行监控分析。您在看板中可以达成以下目标：
+## 1.简介
+
+**多个分析图表可以有效组合成业务"看板"进行监控分析。**您在看板中可以达成以下目标：
 
 * 将**多个图表添加到同一个看板**中进行分析监控；
 * 通过权限管理允许多个用户**异步协作编辑同一个看板**，并可查看 change log；
@@ -16,18 +22,18 @@
 * 市场人员的看板可能是监控各个渠道来源指标；
 * 销售的看板可能是潜在客户的活跃度…
 
-### 功能说明 {#功能说明}
+## 2.功能说明
 
-#### 看板列表页 {#看板列表页}
+### 2.1.看板列表页
 
-看板列表页提供了
+看板列表页提供：
 
 * 新建看板
 * 分 tab 查看：我的、订阅、全部
 * 切换查看视图：网格视图和列表视图
 * 搜索目标看板：按照看板创建人或看板名称查找目标看板
 
-#### 新建或编辑看板 {#新建或编辑看板}
+### 2.2.新建或编辑看板
 
 新建和编辑看板时，可以完成的操作包括如下，需要注意除了「订阅」和「下载」以及通过链接分享，其他各项功能都会受到权限控制，您可能没有权限进行某些操作：
 
@@ -67,9 +73,9 @@
 
 ![](https://docs.growingio.com/.gitbook/assets/qi-ta-gong-neng.png)
 
-### 常见问题 {#常见问题}
+## 3.常见问题
 
-**1.为什么我 hover 到图表上时没有出现角标？**
+#### **1.为什么我 hover 到图表上时没有出现角标？**
 
 因为您没有修改当前看板的权限。同样地，修改名称，添加和移除图表都收到编辑权限的控制。
 
