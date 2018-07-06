@@ -1,4 +1,4 @@
-# 自定义事件
+# 自定义事件和变量的配置
 
 * [步骤](custom-event.md#bu-zhou)
   * [1.从数据需求到具体 “指标+维度”](custom-event.md#1-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)

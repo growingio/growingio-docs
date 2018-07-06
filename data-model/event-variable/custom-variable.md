@@ -1,4 +1,4 @@
-# 自定义变量
+# 自定义变量场景
 
 * [1.自定义变量使用方法](custom-variable.md#1)
   * [1.1 标识符](custom-variable.md#11)
