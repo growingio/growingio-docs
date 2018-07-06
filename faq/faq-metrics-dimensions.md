@@ -1,4 +1,4 @@
-# 指标和维度常见问题
+# 指标和维度
 
 * [指标](faq-metrics-dimensions.md#1)
 * [维度](faq-metrics-dimensions.md#2)

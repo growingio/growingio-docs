@@ -1,4 +1,4 @@
-# SDK 集成常见问题
+# SDK 集成
 
 ### 1. 移动端 SDK 数据发送策略是怎样的？ {#data-send-policy}
 
