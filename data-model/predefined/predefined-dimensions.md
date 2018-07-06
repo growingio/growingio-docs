@@ -1,45 +1,45 @@
 # 维度
 
-在 GrowingIO 数据模型中，提供了 36 个预定义维度，支持丰富的分析场景，同时也可以通过[创建自定义变量](https://docs.growingio.com/implementation/event-variable/custom-event/)的方式添加其他变量。
+在 GrowingIO 数据模型中，提供了 36 个预定义维度，支持丰富的分析场景，同时也可以通过[创建自定义变量](../event-variable/)的方式添加其他变量。
 
-* [第一部分：用户来源维度](predefined-dimensions.md#第一部分用户来源维度)
-  * [1.访问来源（web/app）](predefined-dimensions.md#1访问来源webapp)
-  * [2.一级访问来源（web/app）](predefined-dimensions.md#2一级访问来源webapp)
-  * [3.搜索词（web/app）](predefined-dimensions.md#3搜索词webapp)
-  * [4.App 版本（app）](predefined-dimensions.md#4app-版本app)
-  * [5.自定义 App 渠道（app）](predefined-dimensions.md#5自定义-app-渠道app)
-* [第二部分：地域信息维度](predefined-dimensions.md#第二部分地域信息维度)
-  * [1.城市名称（web/app）](predefined-dimensions.md#1城市名称webapp)
-  * [2.地区名称（web/app）](predefined-dimensions.md#2地区名称webapp)
-  * [3.国家代码（web/app）](predefined-dimensions.md#3国家代码webapp)
-  * [4.国家名称（web/app）](predefined-dimensions.md#4国家名称webapp)
-* [第三部分：设备信息维度](predefined-dimensions.md#第三部分设备信息维度)
-  * [1.网站/手机应用（web/app）](predefined-dimensions.md#1网站手机应用webapp)
-  * [2.屏幕大小（web/app）](predefined-dimensions.md#2屏幕大小webapp)
-  * [3.操作系统（web/app）](predefined-dimensions.md#3操作系统webapp)
-  * [4.操作系统版本（web/app）](predefined-dimensions.md#4操作系统版本webapp)
-  * [5.操作系统语言（web/app）](predefined-dimensions.md#5操作系统语言webapp)
-  * [6.浏览器（web）](predefined-dimensions.md#6浏览器web)
-  * [7.浏览器版本（web）](predefined-dimensions.md#7浏览器版本web)
-  * [8.设备品牌（app）](predefined-dimensions.md#8设备品牌app)
-  * [9.设备型号（web/app）](predefined-dimensions.md#9设备型号webapp)
-  * [10.设备类型（web/app）](predefined-dimensions.md#10设备类型webapp)
-* [第四部分：其他维度](predefined-dimensions.md#第四部分其他维度)
-  * [1.域名（web）](predefined-dimensions.md#1域名web)
-  * [2.页面（web/app）](predefined-dimensions.md#2页面webapp)
-  * [3.页面来源（web/app）](predefined-dimensions.md#3页面来源webapp)
-  * [4.设备方向（app）](predefined-dimensions.md#4设备方向app)
-  * [5.元素内容（web/app）](predefined-dimensions.md#5元素内容webapp)
-  * [6.元素位置（web/app）](predefined-dimensions.md#6元素位置webapp)
-  * [7.时间（web/app）](predefined-dimensions.md#6时间webapp)
-* [常见问题](predefined-dimensions.md#常见问题)
-  * [“超出维度行数上限”是什么意思？](predefined-dimensions.md#超出维度行数上限是什么意思)
+* [第一部分：用户来源维度](predefined-dimensions.md#01)
+  * [1.访问来源（web/app）](predefined-dimensions.md#11)
+  * [2.一级访问来源（web/app）](predefined-dimensions.md#12)
+  * [3.搜索词（web/app）](predefined-dimensions.md#13)
+  * [4.App 版本（app）](predefined-dimensions.md#14)
+  * [5.自定义 App 渠道（app）](predefined-dimensions.md#15)
+* [第二部分：地域信息维度](predefined-dimensions.md#02)
+  * [1.城市名称（web/app）](predefined-dimensions.md#21)
+  * [2.地区名称（web/app）](predefined-dimensions.md#22)
+  * [3.国家代码（web/app）](predefined-dimensions.md#23)
+  * [4.国家名称（web/app）](predefined-dimensions.md#24)
+* [第三部分：设备信息维度](predefined-dimensions.md#03)
+  * [1.网站/手机应用（web/app）](predefined-dimensions.md#31)
+  * [2.屏幕大小（web/app）](predefined-dimensions.md#32)
+  * [3.操作系统（web/app）](predefined-dimensions.md#33)
+  * [4.操作系统版本（web/app）](predefined-dimensions.md#34)
+  * [5.操作系统语言（web/app）](predefined-dimensions.md#35)
+  * [6.浏览器（web）](predefined-dimensions.md#36)
+  * [7.浏览器版本（web）](predefined-dimensions.md#37)
+  * [8.设备品牌（app）](predefined-dimensions.md#38)
+  * [9.设备型号（web/app）](predefined-dimensions.md#39)
+  * [10.设备类型（web/app）](predefined-dimensions.md#310)
+* [第四部分：其他维度](predefined-dimensions.md#04)
+  * [1.域名（web）](predefined-dimensions.md#41)
+  * [2.页面（web/app）](predefined-dimensions.md#42)
+  * [3.页面来源（web/app）](predefined-dimensions.md#43)
+  * [4.设备方向（app）](predefined-dimensions.md#44)
+  * [5.元素内容（web/app）](predefined-dimensions.md#45)
+  * [6.元素位置（web/app）](predefined-dimensions.md#46)
+  * [7.时间（web/app）](predefined-dimensions.md#47)
+* [常见问题](predefined-dimensions.md#05)
+  * [“超出维度行数上限”是什么意思？](predefined-dimensions.md#51)
 
-### 第一部分：用户来源维度 {#第一部分用户来源维度}
+### 第一部分：用户来源维度 {#01}
 
 > **通过用户来源了解用户是怎样来到你的网站上的。**
 
-#### 1.访问来源（web/app） {#1访问来源webapp}
+#### 1.访问来源（web/app） {#11}
 
 网站的流量来源，可以是百度，谷歌，优酷等站外渠道，也可能是直接访问\*该网站。可以通过设置 UTM 参数来确定流量具体是哪个广告带来的。
 
@@ -55,7 +55,7 @@
 | 查看分享给单个好友的页面链接 | 微信-单聊 | GroiwngIO会识别到微信的环境，同时微信会给出相应的技术参数，即可以判断为好友信息中打开。 |
 | 打开分享到朋友圈、群聊、单聊消息中的URL链接 | 微信-其他 | 如果仅是URL，只会追踪具体的URL，但可以识别在微信环境中打开。 |
 
-#### 2.一级访问来源（web/app） {#2一级访问来源webapp}
+#### 2.一级访问来源（web/app） {#12}
 
 为了便于分析，我们将访问来源进行了归类：直接访问，搜索引擎，社交媒体，外部链接四大部分。
 
@@ -79,15 +79,15 @@ weibo.com，t.cn, weibo.cn，zhihu.com，linkedin.com，renren.com，facebook.co
 **外部链接：**   
 除了社交媒体，搜索引擎和直接访问之外的来源。
 
-#### 3.搜索词（web/app） {#3搜索词webapp}
+#### 3.搜索词（web/app） {#13}
 
 用户从搜索引擎进入网站所使用的搜索词；一般情况下付费搜索的搜索词可以被解析，而百度谷歌渠道自然搜索词无法获取。
 
-#### 4.App 版本（app） {#4app-版本app}
+#### 4.App 版本（app） {#14}
 
 App 的版本号
 
-#### 5.自定义 App 渠道（app） {#5自定义-app-渠道app}
+#### 5.自定义 App 渠道（app） {#15}
 
 自定义 App 渠道，在集成SDK的时候，设置分包渠道，主要针对安卓用户。
 
@@ -123,75 +123,75 @@ UTM 渠道归因模式为非直接访问的最后一次访问。
 
 ![&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;](http://growing.cn-bj.ufileos.com/ccc13.png)
 
-### 第二部分：地域信息维度 {#第二部分地域信息维度}
+### 第二部分：地域信息维度 {#02}
 
 > **了解用户在哪里访问你的网站**
 
-#### 1.城市名称（web/app） {#1城市名称webapp}
+#### 1.城市名称（web/app） {#21}
 
 web 基于 IP 地址，以城市作为维度值，目前只支持国内城市。   
 app 基于 IP 地址和 GPS 。
 
-#### 2.地区名称（web/app） {#2地区名称webapp}
+#### 2.地区名称（web/app） {#22}
 
 web 基于IP地址，该维度包含国内省级以上行政区，以及国外地区。   
 app 基于 IP 地址和 GPS 。
 
-#### 3.国家代码（web/app） {#3国家代码webapp}
+#### 3.国家代码（web/app） {#23}
 
 用户所在的国家的英文缩写，常见的维度值有：CN，US，JP，SG等。
 
-#### 4.国家名称（web/app） {#4国家名称webapp}
+#### 4.国家名称（web/app） {#24}
 
 用户所在的国家的名称，常见的有：中国，美国，英国，新加坡等。
 
 > 技术说明：维度指为「未知」的原因：可能是用户使用的是移动网络，或开了代理。
 
-### 第三部分：设备信息维度 {#第三部分设备信息维度}
+### 第三部分：设备信息维度 {#03}
 
 > **了解用户使用什么设备访问你的网站**
 
-#### 1.网站/手机应用（web/app） {#1网站手机应用webapp}
+#### 1.网站/手机应用（web/app） {#31}
 
 用于区分该设备是接入了 GrowingIO 的 JS SDK 还是 iOS SDK、Android SDK 等。
 
-#### 2.屏幕大小（web/app） {#2屏幕大小webapp}
+#### 2.屏幕大小（web/app） {#32}
 
 web 端是窗口大小，移动端是屏幕大小。
 
-#### 3.操作系统（web/app） {#3操作系统webapp}
+#### 3.操作系统（web/app） {#33}
 
 用户所使用的操作系统，比如 Windows 8 ，Windows 7 ，Mac OS X ，Android。
 
-#### 4.操作系统版本（web/app） {#4操作系统版本webapp}
+#### 4.操作系统版本（web/app） {#34}
 
 同「浏览器」，但是会按照不同的版本进行区分，比如 Android 4.0 等。
 
-#### 5.操作系统语言（web/app） {#5操作系统语言webapp}
+#### 5.操作系统语言（web/app） {#35}
 
 统计不同的操作系统语言的使用情况，比如简体中文等。
 
-#### 6.浏览器（web） {#6浏览器web}
+#### 6.浏览器（web） {#36}
 
 用户所用浏览器的类型，比如 Chrome，Chrome Mobile，Safari，IE 等。
 
-#### 7.浏览器版本（web） {#7浏览器版本web}
+#### 7.浏览器版本（web） {#37}
 
 同「浏览器」，但是会按照不同的版本进行区分，比如 Chrome 47.0.2526 等。
 
-#### 8.设备品牌（app） {#8设备品牌app}
+#### 8.设备品牌（app） {#38}
 
 将不同设备的品牌作为维度值。
 
-#### 9.设备型号（web/app） {#9设备型号webapp}
+#### 9.设备型号（web/app） {#39}
 
 用于区分具体的机型。
 
-#### 10.设备类型（web/app） {#10设备类型webapp}
+#### 10.设备类型（web/app） {#310}
 
 设备的类型，平板和手机。
 
-### 第四部分：其他维度 {#第四部分其他维度}
+### 第四部分：其他维度 {#04}
 
 > **页面级维度**
 
@@ -199,11 +199,11 @@ web 端是窗口大小，移动端是屏幕大小。
 用户先访问了 [https://www.growingio.com/](https://www.growingio.com/)   
 再访问了 [https://www.growingio.com/circle](https://www.growingio.com/circle)
 
-#### 1.域名（web） {#1域名web}
+#### 1.域名（web） {#41}
 
 www.growingio.com 是这两个页面的域名。
 
-#### 2.页面（web/app） {#2页面webapp}
+#### 2.页面（web/app） {#42}
 
 对于 web 端可以这样理解：   
 / 是 [https://www.growingio.com/](https://www.growingio.com/) 的页面。   
@@ -213,32 +213,32 @@ www.growingio.com 是这两个页面的域名。
 android : activity + fragment   
 iOS : UIViewController
 
-#### 3.页面来源（web/app） {#3页面来源webapp}
+#### 3.页面来源（web/app） {#43}
 
 这次访问中 [https://www.growingio.com/circle](https://www.growingio.com/circle) 这个页面的页面来源是 [https://www.growingio.com/](https://www.growingio.com/) 。
 
 > **事件级维度：当次事件发生时，对应的维度**
 
-#### 4.设备方向（app） {#4设备方向app}
+#### 4.设备方向（app） {#44}
 
 可以理解为用户的手机时横屏还是竖屏。
 
-#### 5.元素内容（web/app） {#5元素内容webapp}
+#### 5.元素内容（web/app） {#45}
 
 定义圈选元素时，对应元素的「内容」。
 
-#### 6.元素位置（web/app） {#6元素位置webapp}
+#### 6.元素位置（web/app） {#46}
 
 定义圈选元素时，对于元素的「顺序」。
 
-#### 7.时间（web/app） {#6时间webapp}
+#### 7.时间（web/app） {#47}
 
 以「小时」粒度切分时，代表当前小时的开始到结束；   
 以「天」粒度切分时，代表北京时间的 0:00-24:00。
 
-### 常见问题 {#常见问题}
+### 常见问题 {#05}
 
-#### “超出维度行数上限”是什么意思？ {#超出维度行数上限是什么意思}
+#### “超出维度行数上限”是什么意思？ {#51}
 
 我们使用维度和指标来进行数据分析。维度用来决定一个分析的角度，指标用来展现这个角度的数据。例如，我们可以使用“网站/手机应用”作为维度，页面浏览量作为指标，在GrowingIO中制作出下面这张表：
 
@@ -255,5 +255,5 @@ iOS : UIViewController
 
 在整理模式中，每当添加一个新的值到页面维度中，系统会自动计算出当前页面浏览量总数的前95%的维度的值按照从大到小排序的位置编号值，假设为x。如果x小于5000，则页面维度的不同的值保留到该位置为止，剩下的维度值和相应的指标数值合并到一个称为“超出维度行数上限”的行中。如果x大于5000，则按照页面浏览量数值大小，取前5000行，剩下的维度值和相应的指标数值合并到一个称为“超出维度行数上限”的行中。
 
-其他常见问题详见[这里](https://docs.growingio.com/faq/definitions.html)。
+其他常见问题详见[这里](../../faq/faq-metrics-dimensions.md)。
 
