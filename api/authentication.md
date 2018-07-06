@@ -28,78 +28,78 @@ ____________                  ___________    (ai/project/auth)   _____________
 
 GrowingIO 会给每个项目分配个公钥\(X-Client-Id\)和私钥。具体认证步骤如下。
 
-1. 用户打开客户页面，会向 Client Server 发起一个请求
-2. Client Server 在渲染页面时，会向 Growing Server 做认证请求，请求参数包括 ai, project 和 auth，头部参数包含 公钥（X-Client-Id ）。
+* 用户打开客户页面，会向 Client Server 发起一个请求
+* Client Server 在渲染页面时，会向 Growing Server 做认证请求，请求参数包括 ai, project 和 auth，头部参数包含 公钥（X-Client-Id ）。
 
-   ```text
-   POST https://www.growingio.com/auth/token -H "X-Client-Id: client-id" -d "project=123abc&ai=13411891aaffda&tm=1465020309123&auth=ab3i5dazoo58314l0qqrj1aslfj1ldfaqeroqi"
-   ```
+```text
+POST https://www.growingio.com/auth/token -H "X-Client-Id: client-id" -d "project=123abc&ai=13411891aaffda&tm=1465020309123&auth=ab3i5dazoo58314l0qqrj1aslfj1ldfaqeroqi"
+```
 
-   其中，auth 的计算方式是，
+其中，auth 的计算方式是，
 
-   Java 版本示例代码
+Java 版本示例代码
 
-   ```text
-   public String authToken(String secret, String project, String ai, Long tm) throws Exception {
-     String message = "POST\n/auth/token\nproject="+project+"&ai="+ai+"&tm="+tm;
-     Mac hmac = Mac.getInstance("HmacSHA256");
-     hmac.init(new SecretKeySpec(secret.getBytes("UTF-8"), "HmacSHA256"));
-     byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
-     return Hex.encodeHexString(signature);
-   }
+```text
+public String authToken(String secret, String project, String ai, Long tm) throws Exception {
+  String message = "POST\n/auth/token\nproject="+project+"&ai="+ai+"&tm="+tm;
+  Mac hmac = Mac.getInstance("HmacSHA256");
+  hmac.init(new SecretKeySpec(secret.getBytes("UTF-8"), "HmacSHA256"));
+  byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
+  return Hex.encodeHexString(signature);
+}
 
-   authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
-   ```
+authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
+```
 
-   Scala 版本示例代码
+Scala 版本示例代码
 
-   ```text
-   import javax.crypto.Mac
-   import javax.crypto.spec.SecretKeySpec
-   import org.apache.commons.codec.binary.Hex
+```text
+import javax.crypto.Mac
+import javax.crypto.spec.SecretKeySpec
+import org.apache.commons.codec.binary.Hex
 
-   def authToken(secret: String, project: String, ai: String, tm: Long) = {
-    val messages = s"POST\n/auth/token\nproject=$project&ai=$ai&tm=$tm"
-    val hmac = Mac.getInstance("HmacSHA256")
-    hmac.init(new SecretKeySpec(secret.getBytes("UTF-8"), "HmacSHA256"))
-    val signature = hmac.doFinal(messages.getBytes("UTF-8"))
-    Hex.encodeHexString(signature)
-   }
+def authToken(secret: String, project: String, ai: String, tm: Long) = {
+ val messages = s"POST\n/auth/token\nproject=$project&ai=$ai&tm=$tm"
+ val hmac = Mac.getInstance("HmacSHA256")
+ hmac.init(new SecretKeySpec(secret.getBytes("UTF-8"), "HmacSHA256"))
+ val signature = hmac.doFinal(messages.getBytes("UTF-8"))
+ Hex.encodeHexString(signature)
+}
 
-   authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
-   ```
+authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
+```
 
-   PHP版本示例代码
+PHP版本示例代码
 
-   ```text
-   <?php
+```text
+<?php
 
-   function authToken($secret, $project, $ai, $tm) {
-       $str = "POST\n/auth/token\nproject=${project}&ai=${ai}&tm=${tm}";
-       $signature = hash_hmac("sha256", $str, $secret);
-       return $signature;
-   }
+function authToken($secret, $project, $ai, $tm) {
+    $str = "POST\n/auth/token\nproject=${project}&ai=${ai}&tm=${tm}";
+    $signature = hash_hmac("sha256", $str, $secret);
+    return $signature;
+}
 
-   authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
-   ?>
-   ```
+authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
+?>
+```
 
-   Python 版本示例代码
+Python 版本示例代码
 
-   ```text
-   import hashlib
-   import hmac
+```text
+import hashlib
+import hmac
 
-   def authToken(secret, project, ai, tm):
-     message = ("POST\n/auth/token\nproject=" + project + "&ai=" + ai + "&tm=" + tm).encode('utf-8')
-     signature = hmac.new(bytes(secret.encode('utf-8')), bytes(message), digestmod=hashlib.sha256).hexdigest()
-     return signature
+def authToken(secret, project, ai, tm):
+  message = ("POST\n/auth/token\nproject=" + project + "&ai=" + ai + "&tm=" + tm).encode('utf-8')
+  signature = hmac.new(bytes(secret.encode('utf-8')), bytes(message), digestmod=hashlib.sha256).hexdigest()
+  return signature
 
-   authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
-   ```
+authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
+```
 
-3. Growing Server 收到数据后，会用请求的 body 和 key 做同样的加密，计算是不是匹配。如果匹配，返回认证码给 Client Server。
-4. Client Server 拿到认证码后，可以使用这个认证码去请求在 GrowingIO 中的数据，比如看板和单图。
+1. Growing Server 收到数据后，会用请求的 body 和 key 做同样的加密，计算是不是匹配。如果匹配，返回认证码给 Client Server。
+2. Client Server 拿到认证码后，可以使用这个认证码去请求在 GrowingIO 中的数据，比如看板和单图。
 
 ### 3.API 定义 {#api-definition}
 

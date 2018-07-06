@@ -1,7 +1,5 @@
 # 广告监测链接创建服务API说明
 
-
-
 * [1.概述](ads-tracking-api.md#introduction)
 * [2.名词及概念解释](ads-tracking-api.md#terminology)
 * [3.系统校验规则说明](ads-tracking-api.md#explaination)

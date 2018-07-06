@@ -1,6 +1,6 @@
 # 原始数据导出 服务端SDK
 
-**目前仅提供Java版本的GrowingIO数据平台API SDK**
+**目前仅提供 Java 版本的 GrowingIO 数据平台 API SDK**
 
 ### 使用方式 {#使用方式}
 
