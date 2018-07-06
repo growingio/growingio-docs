@@ -12,6 +12,7 @@
   * [4. 迁移自定义事件（埋点事件）](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)
   * [5. 数据校验](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#5-shu-ju-xiao-yan)
 * [GrowingIO Web Debugger](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#growingio-web-debugger)
+* [如何集成 1.x 版本 SDK](web-js-sdk.md#ru-he-ji-cheng-1x-ban-ben-sdk)
 
 ## 集成 SDK 和 API 导入
 
