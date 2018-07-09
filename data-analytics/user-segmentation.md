@@ -133,7 +133,7 @@
 
 分群列表页可以看到"上传登录用户 ID" 入口，需要注意的是，是否可以上传受到2个因素的限制：
 
-1. 项目中是否配置了用户变量，如果没有配置，则无法上传，具体参考[说明](https://docs.growingio.com/sdk-integration/sdk-2.x-docs/custom-data-implement-guide.html#%E7%94%A8%E6%88%B7%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%EF%BC%9A)；
+1. 项目中是否配置了用户变量，如果没有配置，则无法上传，具体参考[说明](../data-model/event-variable/custom-event.md#25-yong-hu-bian-liang)；
 
 ![](https://docs.growingio.com/segmentation_v2/%E4%B8%8A%E4%BC%A0%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7%20ID%20%EF%BC%88%E6%B2%A1%E6%9C%89%20CS1%EF%BC%89.png)
 
