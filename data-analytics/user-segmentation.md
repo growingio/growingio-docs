@@ -1,13 +1,13 @@
 # 用户分群
 
-* 1[.简介](user-segmentation.md#1-jian-jie)
+* [1.简介](user-segmentation.md#1-jian-jie)
 * [2.功能介绍](user-segmentation.md#2-1)
   * [2.1分群列表](user-segmentation.md#2-1-1)
   * [2.2创建分群](user-segmentation.md#2-2)
-  * [2.3分群计算和使用](user-segmentation.md#分群计算和使用)
+  * [2.3分群计算和使用](user-segmentation.md#2-3)
   * [2.4分群API](user-segmentation.md#2-4)
-  * [2.5编辑分群](user-segmentation.md#编辑分群)
-  * [2.6权限控制](user-segmentation.md#权限控制)
+  * [2.5编辑分群](user-segmentation.md#2-5)
+  * [2.6权限控制](user-segmentation.md#2-6)
 * [3.统计口径](user-segmentation.md#3-0)
   * [3.1用户ID类型](user-segmentation.md#3-1)
   * [3.2"用户是"](user-segmentation.md#3-2)
