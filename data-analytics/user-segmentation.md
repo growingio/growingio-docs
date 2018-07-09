@@ -175,7 +175,7 @@
 
 ### 2.4分群API {#2-4}
 
-分群 API 参考 [API 文档](https://docs.growingio.com/api/reporting-api.html#%E5%88%86%E7%BE%A4-api-%E5%AE%9A%E4%B9%89)
+分群 API 参考 [API 文档](../api/reporting-api.md#segmentation-api)
 
 ### 2.5编辑分群 {#2-5}
 
