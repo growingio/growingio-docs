@@ -6,7 +6,7 @@ GrowingIO目前提供统计数据导出、原始数据导出和数据管理三�
 * [计算结果数据 API](reporting-api.md)
 * [原始数据导出 1.0 API（deprecated）](raw-data-export-1.0.md)
 * [原始数据导出 2.0 API](raw-data-export-1.0.md)
-* [原始数据导出 服务端SDK](raw-data-export-code-example.md)
+* [原始数据导出 服务端SDK]()
 * [删除用户 API](delete-visitor-api.md)
 
   
