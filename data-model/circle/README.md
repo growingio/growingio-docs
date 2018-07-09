@@ -6,9 +6,13 @@ description: 这里需要讲圈选的技术原理。
 
 
 
+{% page-ref page="circle-web.md" %}
 
+{% page-ref page="circle-app.md" %}
 
-## 圈选命名规范 {#圈选命名规范}
+{% page-ref page="xiao-cheng-xu-quan-xuan.md" %}
+
+### 圈选命名规范
 
 ### 1.数据定义 {#1数据定义}
 
