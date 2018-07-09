@@ -10,7 +10,7 @@
 注意：
 
 * 本页 API 中的 project\_id、dashboard\_id、chart\_id 字段，均可在项目页面url中找到，如："[https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R](https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R)"  中的 "nxog09md" 和 "YoX28w7R" 分别是 project\_id 和dashboard\_id。
-* 在进行导出之前，请务必参考[“GrowingIO接口认证”文档](https://docs.growingio.com/growingio_api_auth.html)，完成接口认证获取 token 。
+* 在进行导出之前，请务必参考[“GrowingIO接口认证”文档](authentication.md)，完成接口认证获取 token 。
 
 ### 1.看板数据信息 API {#dashboard-api}
 
