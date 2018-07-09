@@ -6,12 +6,12 @@
 
 ### 1.术语 {#terminology}
 
-* **公钥（** **X-Client-Id）**: GrowingIO 分配的项目公钥，请求时用来做身份校验的一串字符码
+* **公钥（** **X-Client-Id）**: GrowingIO 分配的项目公钥，请求时用来做身份校验的一串字符码，请在项目配置页面获取
 * **私钥**: 双方所约定的加密算法的私钥
-* **ai**: 项目ID，可在项目管理的项目概览里获得这串ID，也是集成 SDK 时 setAccountId 所用的部分。
+* **ai**: 项目ID，可在项目配置中获得，也是集成 SDK 时 setAccountId 所用的部分。
 * **project**: 项目UID，访问项目的时候，页面 URL 以 /projects/:project\_uid 开头，例如 "[https://www.growingio.com/admin/projects/nxog09md/dashboard"中的"nxog09md"。](https://www.growingio.com/admin/projects/nxog09md/dashboard%22%E4%B8%AD%E7%9A%84%22nxog09md%22%E3%80%82]%28https://www.growingio.com/admin/projects/nxog09md/dashboard%22%E4%B8%AD%E7%9A%84%22nxog09md%22%E3%80%82]%28https://www.growingio.com/admin/projects/nxog09md/dashboard%22%E4%B8%AD%E7%9A%84%22nxog09md%22%E3%80%82]%28https://www.growingio.com/admin/projects/nxog09md/dashboard%22%E4%B8%AD%E7%9A%84%22nxog09md%22%E3%80%82%29]%28https://www.growingio.com/admin/projects/nxog09md/dashboard%22%E4%B8%AD%E7%9A%84%22nxog09md%22%E3%80%82]%28https://www.growingio.com/admin/projects/nxog09md/dashboard%22%E4%B8%AD%E7%9A%84%22nxog09md%22%E3%80%82]%28https://www.growingio.com/admin/projects/nxog09md/dashboard%22%E4%B8%AD%E7%9A%84%22nxog09md%22%E3%80%82]%28https://www.growingio.com/admin/projects/nxog09md/dashboard%22%E4%B8%AD%E7%9A%84%22nxog09md%22%E3%80%82%29%29/)
 * **auth**: 通过认证算法计算出来的签名，见第二部分示例代码
-* **tm**: 当前请求时间戳
+* **tm**: 当前请求时间戳（unix 毫秒时间戳\)
 
 ### 2.认证 {#authentication}
 

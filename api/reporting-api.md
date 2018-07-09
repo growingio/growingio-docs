@@ -1,8 +1,8 @@
-# 计算结果数据 API
+# 统计数据导出 API
 
-* [1.看板数据 API 定义](reporting-api.md#dashboard-api)
-* [2.单图数据 API 定义](reporting-api.md#chart-api)
-* [3.分群 API 定义](reporting-api.md#segmentation-api)
+* [1.看板数据信息 API](reporting-api.md#dashboard-api)
+* [2.单图数据下载 API](reporting-api.md#chart-api)
+* [3.分群下载 API](reporting-api.md#segmentation-api)
 * [4.规则逻辑 API 接口](reporting-api.md#rule-api)
 
 ###  {#dashboard-api}
@@ -12,7 +12,7 @@
 * 本页 API 中的 project\_id、dashboard\_id、chart\_id 字段，均可在项目页面url中找到，如："[https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R](https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R)"  中的 "nxog09md" 和 "YoX28w7R" 分别是 project\_id 和dashboard\_id。
 * 在进行导出之前，请务必参考[“GrowingIO接口认证”文档](https://docs.growingio.com/growingio_api_auth.html)，完成接口认证获取 token 。
 
-### 1.看板数据 API 定义 {#dashboard-api}
+### 1.看板数据信息 API {#dashboard-api}
 
 获取看板中的图表信息
 
@@ -54,15 +54,13 @@ Status Code: 200 OK
 }
 ```
 
-### 2.单图数据 API 定义 {#chart-api}
+### 2.单图数据下载 API {#chart-api}
 
-获取单图信息（单图下载每秒限速 2 次）
+获取单图数据（单图下载每秒限速 2 次）
 
 #### 2.1 Resource {#resource}
 
 GET [https://www.growingio.com/projects/:project\_id/charts/:chart\_id.json](https://www.growingio.com/projects/:project_id/charts/:chart_id.json)
-
-注意：**跳出率、平均访问时长、每次访问页面浏览量、访问用户人均访问次数**以及基于以上指标的其他指标，在以**小时**为 interval 的请求中，返回值都为0。
 
 #### 2.2 Authorization {#authorization}
 
@@ -79,7 +77,7 @@ GET [https://www.growingio.com/projects/:project\_id/charts/:chart\_id.json](htt
 | --- | --- | --- | --- |
 | startTime | integer | 数据起始时间 | 1462118400000 |
 | endTime | integer | 数据结束时间 | 1462118400000 |
-| interval | integer | 数据间隔 | 86400000 |
+| interval | integer | 数据间隔 | 3600000 \(小时\) 86400000 \(天\) 604800000 \(周\) 2592000000 \(月\) |
 
 #### 2.4 Responses {#responses}
 
@@ -115,21 +113,13 @@ Status Code: 200 OK
     [dimension1_v1, dimension2_v1, metric1, metric2],
     [dimension1_v2, dimension2_v1, metric1, metric2]
 
-    // 聚合数字
+    // 大数字
     [metric1]
-
-    // 气泡图
-    [dimension_v1, metric1, metric2, metric3, metric4],
-    [dimension_v2, metric1, metric2, metric3, metric4]
-
-    // 双向柱图
-    [dimension_v1, metric1],
-    [dimension_v2, metric1]
   ]
 }
 ```
 
-### 3.分群 API 定义 {#segmentation-api}
+### 3.分群下载 API {#segmentation-api}
 
 #### 3.1 获取分群列表 {#resource}
 
