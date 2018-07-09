@@ -2,8 +2,8 @@
 
 * [1.简介](./#1-jian-jie)
 * [2.功能说明](./#2-gong-neng-shuo-ming)
-  * [2.1.看板列表页](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#2-1-kan-ban-lie-biao-ye)
-  * [2.2.新建或编辑看板](https://growingio.gitbook.io/docs/~/edit/drafts/-LGhz9SUr_ZWKUjg3i04/data-analytics/dashboard#2-2-xin-jian-huo-bian-ji-kan-ban)
+  * [2.1.看板列表页](./#2-1)
+  * [2.2.新建或编辑看板](./#2-2)
 * [3.常见问题](./#3-chang-jian-wen-ti)
 
 ## 1.简介
