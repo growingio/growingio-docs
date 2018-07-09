@@ -173,7 +173,7 @@
 * 进入用户细查
 * 套用在各个分析工具中进行分析
 
-### 2.4分群API {#2-4}
+### 2.4分群下载API {#2-4}
 
 分群 API 参考 [API 文档](../api/reporting-api.md#segmentation-api)
 
