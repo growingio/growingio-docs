@@ -1,9 +1,9 @@
 # Web JS SDK
 
-* 集成 SDK 和 API 导入
-  * 1.SDK 代码安装
-  * 2.Web JS 系统变量
-  * 3.Web JS SDK 2.1 API
+* [集成 SDK 和 API 导入](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#ji-cheng-sdk-he-api-dao-ru)
+  * [1.SDK 代码安装](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#sdk-%E5%AE%89%E8%A3%85)
+  * [2.Web JS 系统变量](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#web-js-%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F)
+  * [3.Web JS SDK 2.1 API](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#3-web-js-sdk-2-1-api)
   * [4.自定义数据上传 & 配置指导](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE%E6%8C%87%E5%AF%BC)
 * [1.x 旧版本 SDK 升级指导](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#1x-jiu-ban-ben-sdk-sheng-ji-zhi-dao)
   * [1. 重新集成 SDK](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#1-zhong-xin-ji-cheng-sdk)
@@ -14,9 +14,9 @@
 * [GrowingIO Web Debugger](https://growingio.gitbook.io/docs/~/drafts/-LGduzeZ7QWp537-6Hk-/primary/sdk-integration/web-js-sdk#growingio-web-debugger)
 * [如何集成 1.x 版本 SDK](web-js-sdk.md#ru-he-ji-cheng-1x-ban-ben-sdk)
 
-## 集成 SDK 和 API 导入 {#sdk-api}
+## 集成 SDK 和 API 导入
 
-### 1.SDK 代码安装 {#1-sdk}
+### 1.SDK 代码安装 {#sdk-安装}
 
 重要：如果您目前已经在使用GrowingIO 1.x 版本的 SDK，希望升级到最新版本 \(V2.1），您需要联系您的 GrowingIO 对接人，我们需要帮您开启新版本 SDK 的功能。如果您忽略该提醒自助升级，而后台对应功能未开启的话，可能会带来数据丢失的问题。[如何升级?](web-js-sdk.md#1x-版本-sdk-升级指导)
 
