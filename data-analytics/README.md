@@ -14,19 +14,19 @@ GrowingIO 提供了多种强大的分析工具，帮助你进行高效分析，�
 
 {% page-ref page="funnel-analysis.md" %}
 
-4.留存分析：
+4.留存分析：留存曲线是一个产品的生命线，只有做好留存，产品才能更好地发展，常用的留存分析有日留存、周留存和月留存，都可以通过留存分析来做到。
 
 {% page-ref page="retention-analysis.md" %}
 
-
+5.热图：用户行为更加直观，基于内容的热图绘制更专业，让产品优化有的放矢。
 
 {% page-ref page="heatmap/" %}
 
-
+6.看板：数据监控和分析的效率工具，将重要的图表一键 pin 到首页，在看板中进行数据的聚合、整理和分享。
 
 {% page-ref page="dashboard/" %}
 
-{% page-ref page="dan-tu.md" %}
+7.广告监测：市场和运营人员的大杀器，每个渠道的流量和质量情况一清二楚，每个渠道的价值一一呈现，再也不会盲目投放了。
 
 {% page-ref page="ads-tracking/" %}
 

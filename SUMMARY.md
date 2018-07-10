@@ -37,7 +37,7 @@
   * [数据模型](data-model/predefined/README.md)
     * [指标](data-model/predefined/predefined-metrics.md)
     * [维度](data-model/predefined/predefined-dimensions.md)
-  * [圈选定义事件](data-model/circle/README.md)
+  * [圈选](data-model/circle/README.md)
     * [Web圈选](data-model/circle/circle-web.md)
     * [移动端圈选](data-model/circle/circle-app.md)
     * [小程序圈选](data-model/circle/xiao-cheng-xu-quan-xuan.md)

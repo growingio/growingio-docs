@@ -1,10 +1,10 @@
 ---
-description: 这里需要讲圈选的技术原理。
+description: 将无埋点 SDK 采集上来的数据进行定义。
 ---
 
-# 圈选定义事件
+# 圈选
 
-
+根据您的平台选择相应的圈选方式：
 
 {% page-ref page="circle-web.md" %}
 
