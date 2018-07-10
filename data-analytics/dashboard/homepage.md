@@ -22,7 +22,7 @@
 
 您第一次登录时，默认在首页上会看到两个系统预置看板，分别是：
 
-* [概览](https://docs.growingio.com/visualization/overview.html)
+* 概览
 * [实时](https://docs.growingio.com/visualization/realtime.html)
 
 需要说明的是，概览和实时作为系统预置看板，暂时不支持从首页中移除，如果您不关心概览和实时，可以通过拖动排序的方式将这两个系统看板拖动到主动添加的看板下方。
