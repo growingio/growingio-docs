@@ -9,31 +9,19 @@
     * [1.1.3 Deep-Link](app-marketing.md#113)
   * [1.2 推广管理](app-marketing.md#12)
 * [2.数据报表](app-marketing.md#2-shu-ju-bao-biao)
-
   * [2.1 基础数据](app-marketing.md#21)
     * [2.1.1 激活概览](app-marketing.md#211)
     * [2.1.2 推广详细](app-marketing.md#212)
   * [2.2 异常数据报告](app-marketing.md#22)
   * [2.3 深度分析](app-marketing.md#23)
-
-  [3.渠道配置指南](app-marketing.md#3-qu-dao-pei-zhi-zhi-nan)
-
-  * [3.1 今日头条](app-marketing.md#31)
-  * [3.2 广点通](app-marketing.md#32)
-  * [3.3 爱奇艺](app-marketing.md#33)
-  * [3.4 百度原生信息流](app-marketing.md#34)
-  * [3.5 Inmobi](app-marketing.md#35)
-  * [3.6 微博超级粉丝通](app-marketing.md#36)
-
-* [4.数据说明](app-marketing.md#4-shu-ju-shuo-ming)
-* [5.归因逻辑](app-marketing.md#5-gui-yin-luo-ji)
-  * [5.1 如何定义用户？用户唯一设备号？](app-marketing.md#51)
-  * [5.2 归因规则是？](app-marketing.md#52)
-* [6.权限配置](app-marketing.md#6-quan-xian-pei-zhi)
-* [7.权限配置](app-marketing.md#7-quan-xian-pei-zhi)
-* [8.数据下载与导出](app-marketing.md#8-shu-ju-xia-zai-yu-dao-chu)
-  * [8.1 报表数据下载](app-marketing.md#81)
-  * [8.2 日志导出](app-marketing.md#82)
+* [3.数据说明](app-marketing.md#3-shu-ju-shuo-ming)
+* [4.归因逻辑](app-marketing.md#4-gui-yin-luo-ji)
+  * [4.1 如何定义用户？用户唯一设备号？](app-marketing.md#51)
+  * [4.2 归因规则是？](app-marketing.md#52)
+* [5.权限配置](app-marketing.md#5-quan-xian-pei-zhi)
+* [6.数据下载与导出](app-marketing.md#6-shu-ju-xia-zai-yu-dao-chu)
+  * [6.1 报表数据下载](app-marketing.md#81)
+  * [6.2 日志导出](app-marketing.md#82)
 
 ### 1. 使用方法 {#1}
 
@@ -118,87 +106,7 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
 以上逻辑可沿用在分群，漏斗分析等地方，引用相关维度即可进行深度分析。
 
-### 3.渠道配置指南
-
-当前已对接渠道：
-
-个推、今日头条、百度原生信息流、多盟、智慧推、360点睛广告平台、uc（阿里汇川）、优酷、广点通、微信广告平台、腾讯视频、Adwords、百度搜索、腾讯新闻、Admob、爱奇艺、InMobi、小米、网易有道智选、微博粉丝通
-
-巨掌积分墙、知乎广告平台、美图、陌陌、时趣互动、趣米、百度DSP、畅思、艾德思齐、Vungle、搜狐视频、力美、chartboost、点入、百度联盟、新浪视频、搜狗搜索、Tapjoy、趣头条 Aiclk、神马搜索、Mobvista、Adconly、百思不得姐、勤诚互动、品友互动、小米互娱、斗鱼TV、快手、芋儿拍
-
-（未出现在上述渠道名单的渠道可以在渠道管理功能中新增配置）
-
-### 3.1 今日头条 {#31}
-
-1. 进入GIO后台，为今日头条的投放生成一条监测链接。进入“渠道管理”模块，点击“今日头条”，“是否回传激活”字段设置为“是”。
-
-![](https://docs.growingio.com/.gitbook/assets/9.png)
-
-1. 进入头条后台，“工具箱”。新建“转化跟踪”。
-2. 进行移动应用APP API转化新建。输入应用下载地址，比如APP的iTunes下载地址。
-3. 配置完成后，请按照今日头条自动联调流程完成后续过程，联调成功后进行计划引用。
-
-![](https://docs.growingio.com/.gitbook/assets/10%20%281%29.png)
-
-### 3.2 广点通 {#32}
-
-1. 进入GIO后台，为广点通的投放生成一条监测链接。进入“渠道配置”模块，点击“广点通”，“是否回传激活”字段设置为“是”。
-2. 进入广点通后台，“工具箱”。创建移动应用转化
-3. 填写具体内容，转化类别选择“激活”，转化方案选择“API方案一”。
-4. FeedbackURL填写GIO后台分配的链接。
-5. 完成创建转化后，记录您的账户ID，转化里的encrypt\_key以及sign\_key。将信息填写到GIO后台相应链接上。
-6. 启用联调测试，按照流程进行联调。首先，点击“现在联调”。
-
-![](https://docs.growingio.com/.gitbook/assets/11.png)
-
-1. 然后填写设备号并提交：
-
-![](https://docs.growingio.com/.gitbook/assets/12.png)
-
-特别说明：  
-对于安卓手机，键盘依次输入："\*\#06\#"会出现本机IMEI号。对于iOS设备，以关键词“IDFA”搜索AppStore后，下载相关应用，从应用里获取当前设备IDFA。
-
-1. 完成以上步骤后，需要将转化规则的状态改为：启用。
-
-### 3.3 爱奇艺 {#33}
-
-1. 在GIO后台生成一条目标渠道为“爱奇艺”的监测链接。
-2. 将链接放置到爱奇艺广告后台，创意部分的“第三方点击监测”上。
-
-   ![](https://docs.growingio.com/.gitbook/assets/13.png)
-
-### 3.4 百度原生信息流 {#34}
-
-1. 创建一条“百度信息流”的监测链接。
-2. 在百度原生信息流平台创建一条“APP下载转化”。填写相应信息。
-3. 将GIO生成的监测链接填写到“监测地址”。
-
-![](https://docs.growingio.com/.gitbook/assets/14.png)
-
-1. 将百度原生信息流后台的akey复制并填写到GIO相应链接上。
-
-   ![](https://docs.growingio.com/.gitbook/assets/15.png)
-
-### 3.5 Inmobi {#35}
-
-1. 进入Growingio广告监测后台，进入推广管理，创建监测并选取Inmobi渠道，生成监测链接。
-2. 进入Inmobi后台，创建主张，选择GrowingIO渠道，创建成功后，将Inmobi生成的appID复制并填写到GrowingIO后台相应链接上。
-
-   ![](https://docs.growingio.com/.gitbook/assets/inmobi1.png)
-
-   ![](https://docs.growingio.com/.gitbook/assets/inmobi2.png)
-
-### 3.6 微博超级粉丝通 {#36}
-
-1.在GIO后台生成一条目标渠道为“超级粉丝通”的监测链接。
-
-2.将监测链接填写到微博超级粉丝通后台
-
-![](https://docs.growingio.com/.gitbook/assets/%E8%B6%85%E7%BA%A7%E7%B2%89%E4%B8%9D%E9%80%9A1.png)
-
-3.将微博超级粉丝通后台生成的“company” 字段复制到GrowingIO后台
-
-### 4.数据说明
+### 3.数据说明
 
 1. 展现：使用展现监测链接后，广告被展现的次数统计之和。
 2. 全部点击：链接的点击次数之和。
@@ -209,31 +117,17 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 7. 次日留存：激活后，第二天再次打开APP的设备数。
 8. 新登录：激活后，新注册并登陆的设备数。
 
-### 5.归因逻辑
+### 4.归因逻辑
 
-#### 5.1 如何定义用户？用户唯一设备号？ {#51}
+#### 4.1 如何定义用户？用户唯一设备号？ {#51}
 
 对于安卓应用，GIO优先使用IMEI号进行精准激活匹配，没有IMEI的情况下采用AndroidID匹配，如果也没有获取到AndroidID，则采用IP+UA的方式模糊匹配。 对于iOS应用，GIO优先使用IDFA进行精准激活匹配，没有IDFA则使用IP+UA的方式模糊匹配。
 
-#### 5.2 归因规则是？ {#52}
+#### 4.2 归因规则是？ {#52}
 
 按照Last Click（最近点击）规则，同时辅以反作弊规则进行归因。系统归因时间窗默认15天。
 
-### 6.权限配置
-
-如果希望精确控制不同角色查看广告监测模块中的不同数据，可以使用权限配置模块。特别说明：此模块为高级功能，使用之前请确保您所在组织开通了此功能，详情可垂询相关CSM。具体使用方法：
-
-1. 为需要被控制权限的群体创建一个角色，比如代理商角色，并将具体用户赋予此角色。
-2. 进入“用户管理”，功能权限模块，选中“广告监测”，进行不同模块的功能权限定义。
-
-![](https://docs.growingio.com/.gitbook/assets/16.png)
-
-1. 进入“广告监测”模块，并点击进入“权限配置”模块，新建权限。
-2. 选择角色及目标用户，选中需要被控制的应用&推广活动。
-
-
-
-### 7.权限配置
+### 5.权限配置
 
 如果希望精确控制不同角色查看广告监测模块中的不同数据，可以使用权限配置模块。特别说明：此模块为高级功能，使用之前请确保您所在组织开通了此功能，详情可垂询相关CSM。具体使用方法：
 
@@ -243,17 +137,17 @@ GIO提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
 ![](https://docs.growingio.com/.gitbook/assets/16.png)
 
-### 8.数据下载与导出
+### 6.数据下载与导出
 
 根据实际需要，GIO提供不同形式的数据导出。
 
-### 8.1 报表数据下载 {#81}
+### 6.1 报表数据下载 {#81}
 
 基础数据部分所有页面查询结果报表都可以通过右侧的“下载”按钮进行报表下载。
 
 ![](https://docs.growingio.com/.gitbook/assets/18.png)
 
-### 8.2 日志导出 {#82}
+### 6.2 日志导出 {#82}
 
 如果需要日志数据，可以通过“日志下载”模块导出日志数据。
 

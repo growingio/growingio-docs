@@ -23,6 +23,7 @@
   * [广告监测](data-analytics/ads-tracking/README.md)
     * [推广网站](data-analytics/ads-tracking/web-marketing.md)
     * [推广 App](data-analytics/ads-tracking/app-marketing.md)
+    * [渠道配置指南](data-analytics/ads-tracking/channel-config-manual.md)
     * [UTM 参数使用指南](data-analytics/ads-tracking/utm-parameters.md)
     * [默认的渠道来源跟踪](data-analytics/ads-tracking/default-channel-tracking.md)
   * [小程序概览](data-analytics/xiao-cheng-xu-gai-lan.md)
