@@ -9,6 +9,10 @@ GrowingIO目前提供统计数据导出、原始数据导出和数据管理三�
 * [原始数据导出 服务端SDK]()
 * [删除用户 API](delete-visitor-api.md)
 
+API 更新日志
+
+{% page-ref page="../changelog-api.md" %}
+
   
 
 

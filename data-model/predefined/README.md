@@ -1,7 +1,5 @@
 ---
-description: >-
-  GrowingIO支持 Web，App 等多个用户平台，这给 GrowingIO
-  的数据模型提出了较高的要求，既要适配用户在网站上的操作行为模式，又要适配用户在 App 上的操作行为逻辑。
+description: GrowingIO 支持 Web，App 等多个用户平台
 ---
 
 # 数据模型
