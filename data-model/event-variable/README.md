@@ -1,3 +1,7 @@
+---
+description: 了解、配置、上传和校验
+---
+
 # 事件和变量（打点）
 
 **重要：**如果您正在使用的 1.x 版本的 SDK ，请参考[此文档](https://docs.growingio.com/SDK/zidingyi_config_1.x/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E7%9A%84%E4%B8%8A%E4%BC%A0%E4%B8%8E%E9%85%8D%E7%BD%AE1.x.html)进行自定义数据的上传和配置。
