@@ -1,8 +1,12 @@
+---
+description: 没有任何产品不需要留存分析，除非还没有学会分析的方法
+---
+
 # 留存分析
 
-> [留存分析使用手册](https://s.growingio.com/p8QD3x)
+> [**留存分析使用手册**](https://s.growingio.com/p8QD3x)
 >
-> [留存分析教学视频](https://s.growingio.com/4PpoAK)
+> [**留存分析教学视频**](https://s.growingio.com/4PpoAK)
 
 * [1.简介](retention-analysis.md#1-jian-jie)
 * [2.功能](retention-analysis.md#2-gong-neng)

@@ -4,7 +4,7 @@ description: 最多用户使用的、强大而灵活的数据分析工具
 
 # 事件分析
 
-> [事件分析使用手册​](https://s.growingio.com/nvN9MB%20)
+> [**事件分析使用手册​**](https://s.growingio.com/nvN9MB%20)
 
 * [1.简介](event-analysis.md#1-jian-jie)
   * [1.1什么是事件？](event-analysis.md#1-1)
