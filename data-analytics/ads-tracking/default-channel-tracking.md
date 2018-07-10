@@ -82,17 +82,17 @@ B: 客户有品牌强化需求，希望用自己域名代替GIO短链
 
 例如提供一个xxx.com/gs/:short\_id的接口，short\_id的参数是大小写敏感的7个字符，包含数字和字符。
 
-该接口只要将收到的short\_id参数拼接到 [https://s.growingio.com/](https://s.growingio.com/) 之后， 并跳转过去即可。
+该接口只要将收到的short\_id参数拼接到 **https://s.growingio.com/** 之后， 并跳转过去即可。
 
-投放广告前，将GrowingIO中来源管理生成的短链， 如[https://s.growingio.com/fjse7FE](https://s.growingio.com/fjse7FE) 中的s.growingio.com替换为xxx.com/gs。
+投放广告前，将GrowingIO中来源管理生成的短链， 如**https://s.growingio.com/fjse7FE** 中的s.growingio.com替换为xxx.com/gs。
 
 如 xxx.com/gs/fjse7FE 。然后拿该链接正常投放就可以了。
 
 ### 5. 自主调用Api接口创建链接 {#5}
 
-POST [https://gta.growingio.com/api/v1/projects/project\_id/activities](https://gta.growingio.com/api/v1/projects/project_id/activities)
+POST **https://gta.growingio.com/api/v1/projects/project\_id/activities**
 
-上述地址中的 project\_id 取值请参考[“GrowingIO接口认证”](https://docs.growingio.com/growingio_api_auth.html)章节的“术语”。
+上述地址中的 project\_id 取值请参考[“GrowingIO接口认证”](../../api/authentication.md)章节的“术语”。
 
 注意：将以下内容作为JSON Body，post到上述链接。
 
@@ -131,7 +131,7 @@ POST [https://gta.growingio.com/api/v1/projects/project\_id/activities](https://
 | projectId | 5138bdb96 | 项目ID |
 | creatorName | Jacky | 创建人 |
 | createdAt | 1484397370856 | 创建时间 |
-| shortUrl | [https://s.growingio.com/6XNmKl](https://s.growingio.com/6XNmKl) | 用于投放的短链 |
+| shortUrl | **https://s.growingio.com/6XNmKl** | 用于投放的短链 |
 
 #### 5.3 接口请求示例 {#53}
 
