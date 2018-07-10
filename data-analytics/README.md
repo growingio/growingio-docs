@@ -30,3 +30,17 @@ GrowingIO 提供了多种强大的分析工具，帮助你进行高效分析，�
 
 {% page-ref page="ads-tracking/" %}
 
+除此之外 GrowingIO 还提供了其他众多分析工具，满足你多样的分析需求：
+
+{% page-ref page="pathfinder.md" %}
+
+{% page-ref page="liu-cun-mo-fa-shi.md" %}
+
+{% page-ref page="user-engagement-analysis.md" %}
+
+{% page-ref page="heatmap/" %}
+
+{% page-ref page="dashboard/overview.md" %}
+
+{% page-ref page="dashboard/realtime.md" %}
+

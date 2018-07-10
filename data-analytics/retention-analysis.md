@@ -1,5 +1,9 @@
 # 留存分析
 
+> [留存分析使用手册](https://s.growingio.com/p8QD3x)
+>
+> [留存分析教学视频](https://s.growingio.com/4PpoAK)
+
 * [1.简介](retention-analysis.md#1-jian-jie)
 * [2.功能](retention-analysis.md#2-gong-neng)
   * [2.1新建留存默认界面](retention-analysis.md#2-1-xin-jian-liu-cun-mo-ren-jie-mian)
