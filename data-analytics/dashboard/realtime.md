@@ -44,7 +44,7 @@
 
 选择指标，可以看到目前圈选过的所有的指标，点击您关心的指标。
 
-了解圈选：[https://docs.growingio.com/Features/circle.html](https://docs.growingio.com/Features/circle.html)
+了解[圈选](../../data-model/circle/)
 
 * **选择图表样式**
 
