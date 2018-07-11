@@ -4,12 +4,12 @@
 
 目前，小程序概况看板提供默认6个场景的数据：
 
-1. [增长指标]()
-2. [获客场景]()
-3. [分享场景]()
-4. [页面分析]()
-5. [用户画像]()
-6. [错误分析]()
+1. [增长指标](xiao-cheng-xu-gai-lan.md#zeng-chang-zhi-biao)
+2. [获客场景](xiao-cheng-xu-gai-lan.md#huo-ke-chang-jing)
+3. [分享场景](xiao-cheng-xu-gai-lan.md#fen-xiang-chang-jing)
+4. [页面分析](xiao-cheng-xu-gai-lan.md#ye-mian-fen-xi)
+5. [用户画像](xiao-cheng-xu-gai-lan.md#yong-hu-hua-xiang)
+6. [错误分析](xiao-cheng-xu-gai-lan.md#cuo-wu-fen-xi)
 
 对于进阶分析需求，比如转化分析、自定义事件、更多维度拆分等，可以使用 GrowingIO 的高级分析功能，自行制作单图和看板来分析，并且可以添加到首页做日常监测。
 

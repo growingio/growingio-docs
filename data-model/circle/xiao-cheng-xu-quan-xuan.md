@@ -1,7 +1,7 @@
 # 小程序圈选
 
-* [页面指标定义](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/data-model/circle/xiao-cheng-xu-quan-xuan#ye-mian-zhi-biao-ding-yi)
-* [行为指标定义](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/data-model/circle/xiao-cheng-xu-quan-xuan#hang-wei-zhi-biao-ding-yi)
+* [页面指标定义](xiao-cheng-xu-quan-xuan.md#ye-mian-zhi-biao-ding-yi)
+* [行为指标定义](xiao-cheng-xu-quan-xuan.md#hang-wei-zhi-biao-ding-yi)
 
 ## 页面指标定义
 

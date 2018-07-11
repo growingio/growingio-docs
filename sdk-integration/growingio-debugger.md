@@ -4,9 +4,9 @@
   * [Web Debugger 安装](growingio-debugger.md#web-debugger-an-zhuang)
   * [使用 Web Debugger 测试数据](growingio-debugger.md#shi-yong-web-debugger-ce-shi-shu-ju)
 * [GrowingIO Mobile Debugger](growingio-debugger.md#growingio-mobile-debugger)
-  * 启动 Mobile Debugger
+  * [启动 Mobile Debugger](growingio-debugger.md#qi-dong-mobile-debugger)
   * [使用 Moible Debugger 测试数据](growingio-debugger.md#shi-yong-mobile-debugger-ce-shi-shu-ju)
-* [GrowingIO 小程序 Debugger](https://growingio.gitbook.io/docs/~/edit/drafts/-LH7zO9OimvSCwdRwlgR/sdk-integration/growingio-debugger#growingio-xiao-cheng-xu-debugger)
+* [GrowingIO 小程序 Debugger](growingio-debugger.md#growingio-minidebugger)
 
 GrowingIO Debugger是GrowingIO推出的调试 SDK所发送数据的工具。在GrowingIO Debugger的帮助下，实施工程师可以看到在什么样的页面上，在什么时机向GrowingIO发送了什么样的服务器请求。
 
@@ -103,7 +103,7 @@ ppl：“用户变量” 数据
 
 imp（元素浏览数据）数据量级过大，影响Mobile Debugger性能，Mobile Debugger不展示这部分数据。
 
-### GrowingIO 小程序 Debugger
+### GrowingIO 小程序 Debugger {#growingio-minidebugger}
 
 数据校验Debugger功能，可以支持用户根据自己的交互体验，实时看到GrowingIO采集的数据，完成数据收集的校验。
 
