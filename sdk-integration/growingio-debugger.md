@@ -112,11 +112,11 @@ imp（元素浏览数据）数据量级过大，影响Mobile Debugger性能，Mo
 2. 打开微信，进入集成了小程序SDK的小程序中。
 3. 等待5秒左右，可以看到用户显示在页面中。
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
 在小程序Debugger页面，会展示目前接入Debugger实时传输数据的小程序用户，以及部分用户微信信息、设备、操作系统的信息。但是部分信息的展示，需要在SDK中设置微信用户属性设置。详情请见 SDK 微信用户属性设置。
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](../.gitbook/assets/image%20%282%29.png)
 
   
 选择自己的用户头像，点击“下一步”，进入用户行为记录页面。
