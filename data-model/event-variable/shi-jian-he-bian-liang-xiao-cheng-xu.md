@@ -10,7 +10,7 @@ GrowingIO预置了两个小程序的标准自定义事件，分享到群聊或�
 
 **微信小程序分享到好友或群聊信息**
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%289%29.png)
 
 **程序错误**
 
