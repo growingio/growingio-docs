@@ -73,20 +73,29 @@ var gio = require("utils/gio-minp.js");// version 是你的小程序的版本号
 | debug | true \| false | 是否开启调试模式，可以看到采集的数据，默认 false |
 | version | string | 你的小程序的版本号 |
 
+{% hint style="info" %}
 forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程序里面设置用户标识符，存储在微信 Storage 里面。这个用户标识符潜在可能会被`clearStorage` 清除掉，所以有可能不同的用户标识符对应同一个微信里的 `openid`。如果你的微信小程序在用户打开后会去做登陆并且获取 `openid` 和/或 `unionid`，强烈建议设置 `forceLogin` 为 true。当 forceLogin 为 true 的时候，用户标识符会使用 openid。具体集成示例：
 
-​
+
 
 ```text
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', forceLogin: true });...// 当获取到 openid 后，调用以下方法gio("identify", openid, unionid);
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', forceLogin: true });
+...
+// 当获取到 openid 后，调用以下方法
+gio("identify", openid, unionid);
 ```
+{% endhint %}
 
-### 特别注意 {#te-bie-zhu-yi}
+### 特别注意
 
 如果你使用 mpvue 来开发小程序的应用，为了让 GrowingIO SDK 能自动采集到真实行为事件，需要把 Vue 作为初始化参数传入。比如在 main.js 这样子集成，
 
 ```text
-import gio from './utils/gio-minp'import Vue from 'vue'import App from './App'​gio(‘init‘, '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
+import gio from './utils/gio-minp'
+import Vue from 'vue'
+import App from './App'
+​
+gio(‘init‘, '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
 ```
 
 gio-minp 默认是用 module.exports, 对于 import 不支持，可以修改 gio-minp.js 最后部分代码，把 `, module.exports = gio`修改成`; export default gio`。
@@ -116,17 +125,30 @@ gio-minp 默认是用 module.exports, 对于 import 不支持，可以修改 gio
 当用户在你的小程序上登陆获取到 openid 后，可以用过 `identify` 接口绑定微信用户ID，后续在 GrowingIO 中获取更准确的微信访问用户量。示例代码如下，
 
 ```text
-wx.request({   url: 'https://YOUR_HOST_NAME/wechat/code2key',  method: 'GET',  data: { code: res.code }  success: res =>     var openid = res.data.openid;    var unionid = res.data.unionid;    ...    gio('identify', res.data.openid, res.data.unionid)})
+wx.request({ 
+  url: 'https://YOUR_HOST_NAME/wechat/code2key',
+  method: 'GET',
+  data: { code: res.code }
+  success: res => 
+    var openid = res.data.openid;
+    var unionid = res.data.unionid;
+    ...
+    gio('identify', res.data.openid, res.data.unionid)
+})
 ```
 
-如果你希望直接用 openid 来替换 GrowingIO 自行设置的用户标识符，请在初始化的时候指定 forceLogin 参数为 true。详见[SDK标准接入指南/tag-management/sdk-integration](https://growingio.gitbook.io/miniprogram/tag-management/sdk-integration)
+如果你希望直接用 openid 来替换 GrowingIO 自行设置的用户标识符，请在初始化的时候指定 forceLogin 参数为 true。详见[SDK添加标准代码](https://growingio.gitbook.io/docs/~/edit/drafts/-LH63IC_CQDsX8RsyU_H/sdk-integration/xiao-cheng-xu-sdk#tian-jia-zhui-zong-dai-ma)。
 
 #### 设置微信用户信息
 
 当用户在你的小程序上绑定微信信息后，可以通过 `setVisitor` 接口设置微信用户信息，后续在 GrowingIO 中分析这个数据。示例代码如下，
 
 ```text
-wx.getUserInfo({   success: res =>     ...    gio('setVisitor', res.userInfo);})
+wx.getUserInfo({ 
+  success: res => 
+    ...
+    gio('setVisitor', res.userInfo);
+})
 ```
 
 微信信息包含**微信昵称**、**微信头像**、**性别、微信所填国家、微信所填省份、微信所填城市**。
@@ -176,7 +198,10 @@ tap 事件是手指触摸后马上离开时触发的事件。当 wxml 中的 vie
 longpress 事件是手指触摸后，超过350ms再离开时触发的事件。当 wxml 的 view 绑定了 bindlongpress 事件以后，在事件处理函数执行的时候，SDK 会自动采集 longpress 事件，发送数据包含但不限于以下信息：点击事件时间、事件发生所在页面、点击控件相关信息。比如如下，
 
 ```text
-<view data-title='复仇者联盟3' data-index='1' bindlongpress='clickMovie'>  <image src='IMAGE—URL' mode='aspectFill'/>  <text>复仇者联盟3</text></view>
+<view data-title='复仇者联盟3' data-index='1' bindtap='clickMovie'>
+  <image src='IMAGE—URL' mode='aspectFill'/>
+  <text>复仇者联盟3</text>
+</view>
 ```
 
 注意这里的 `data-title` 和 `data-index` 属性，因为微信小程序的限制，无法采集到控件的内容和结构数据，所以在小程序 SDK 里面我们采取的是声明式编程，通过在 wxml 文件里面设置 data- 属性，可以给 view 控件添加额外的`内容`和`位置`属性，方便后续在分析时可以按照元素内容和元素位置做分析，对于列表式的组件特别有用和方便。
@@ -188,7 +213,17 @@ longpress 事件是手指触摸后，超过350ms再离开时触发的事件。�
 change 事件是针对 checkbox, radio, picker-view 这些控件，当选择项发生改变时触发的事件。当 wxml 的 view 绑定了 bingchange 事件以后，在事件处理函数执行的时候，SDK 会自动采集 change 事件，发送数据包含但不限于以下信息：选择事件的发生时间、事件发生所在页面。如果设置了要采集内容，则也会包含选择项的内容信息。比如如下，
 
 ```text
-<checkbox-group bindchange='checkboxChange' data-growing-track>  <label class='checkbox'>    <checkbox value='GrowingIO' checked='true' /> GrowingIO  </label>  <label class='checkbox'>    <checkbox value='Tencent' checked='false' /> 腾讯小程序分析工具  </label>  <label class='checkbox'>    <checkbox value='Google' checked='false' /> Google Analytics  </label></checkbox-group>
+<checkbox-group bindchange='checkboxChange' data-growing-track>
+  <label class='checkbox'>
+    <checkbox value='GrowingIO' checked='true' /> GrowingIO
+  </label>
+  <label class='checkbox'>
+    <checkbox value='Tencent' checked='false' /> 腾讯小程序分析工具
+  </label>
+  <label class='checkbox'>
+    <checkbox value='Google' checked='false' /> Google Analytics
+  </label>
+</checkbox-group>
 ```
 
 当用户选择了某项以后，因为这里设置了 `data-growing-track` 属性，所以会采集到这一项对应的 value 值。
@@ -198,7 +233,13 @@ change 事件是针对 checkbox, radio, picker-view 这些控件，当选择项�
 confirm 事件是对于 input 和 textarea 控件，当输入完成后触发的事件。当 wxml 的 view 绑定了 bindconfirm 事件以后，在事件处理函数执行的时候，SDK 会自动采集 confirm 事件，发送数据包含但不限于以下信息：输入事件的发生时间、事件发生所在页面。如果设置了要采集内容，则也会包含输入的内容。比如如下，
 
 ```text
-<input class='new-todo'       value='{{ input }}'       placeholder='Anything here...'       data-growing-track='true'       bindinput='inputChangeHandle'       bindconfirm='addTodoHandle'/>
+<input class='new-todo'
+       value='{{ input }}'
+       placeholder='Anything here...'
+       data-growing-track='true'
+       bindinput='inputChangeHandle'
+       bindconfirm='addTodoHandle'
+/>
 ```
 
 当用户输入完成后，因为这里指定了 `data-growing-track` 属性，所以会采集到输入的内容。
