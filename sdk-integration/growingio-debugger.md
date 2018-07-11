@@ -102,3 +102,19 @@ ppl：“用户变量” 数据
 
 imp（元素浏览数据）数据量级过大，影响Mobile Debugger性能，Mobile Debugger不展示这部分数据。
 
+### GrowingIO 小程序 Debugger
+
+数据校验Debugger功能，可以支持用户根据自己的交互体验，实时看到GrowingIO采集的数据，完成数据收集的校验。
+
+在完成SDK集成，点击“去检测”后，会跳转进入小程序Debugger的页面。进入Debugger页面后：
+
+1. 保证操作集成小程序SDK的手机和登录GrowingIO的电脑处在同一网路环境下。
+2. 打开微信，进入集成了小程序SDK的小程序中。
+3. 等待5秒左右，可以看到用户显示在页面中。
+
+![](../.gitbook/assets/image%20%282%29.png)
+
+在小程序Debugger页面，会展示目前接入Debugger实时传输数据的小程序用户，以及部分用户微信信息、设备、操作系统的信息。但是部分信息的展示，需要在SDK中设置微信用户属性设置。详情请见 SDK 微信用户属性设置。
+
+
+

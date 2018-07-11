@@ -4,7 +4,7 @@
 
 ### 集成SDK的阶段和流程
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%287%29.png)
 
 如果您已经注册GrowingIO,并且已经有创建或者集成SDK的项目了，您可以进行如下选择：
 
@@ -21,13 +21,13 @@
 {% tab title="在已有项目中添加小程序应用" %}
 在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“应用管理“。在项目概览页面，点击“**新建应用**“来创建一个新应用。
 
-![](../.gitbook/assets/image%20%289%29.png)
+![](../.gitbook/assets/image%20%2810%29.png)
 
 ![](../.gitbook/assets/image%20%281%29.png)
 
 然后会到达SDK集成页面，填写小程序的应用名称，和小程序的AppID ,点击“下一步”，即可以到达小程序SDK接入的页面。
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/image%20%285%29.png)
 {% endtab %}
 
 {% tab title="创建新的GrowingIO项目" %}
@@ -35,9 +35,9 @@
 
 如果你已经注册 GrowingIO，使用小程序分析功能需要用一个全新的项目的话，在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“**项目概览**“。在项目概览页面，点击“**新建项目**“来创建一个新项目。在创建好的新项目里，你会看到使用引导，点击“**添加追踪代码**“即可开始。
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../.gitbook/assets/image%20%283%29.png)
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%289%29.png)
 
 在代码集成页面，选择“**小程序**“平台，输入**应用名称**和**小程序 AppID**，点击“下一步”。
 {% endtab %}
@@ -99,7 +99,7 @@ gio-minp 默认是用 module.exports, 对于 import 不支持，可以修改 gio
 2. 打开开发设置，到服务器域名配置部分
 3. 在`request合法域名`中添加：https://wxapi.growingio.com
 
-![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../.gitbook/assets/image%20%2810%29.png)
+![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../.gitbook/assets/image%20%2811%29.png)
 
 ### 检测数据
 
