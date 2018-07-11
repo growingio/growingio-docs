@@ -4,8 +4,9 @@
   * [Web Debugger 安装](growingio-debugger.md#web-debugger-an-zhuang)
   * [使用 Web Debugger 测试数据](growingio-debugger.md#shi-yong-web-debugger-ce-shi-shu-ju)
 * [GrowingIO Mobile Debugger](growingio-debugger.md#growingio-mobile-debugger)
-  * [启动Mobile Debugger ](growingio-debugger.md#qi-dong-mobile-debugger)
+  * 启动 Mobile Debugger
   * [使用 Moible Debugger 测试数据](growingio-debugger.md#shi-yong-mobile-debugger-ce-shi-shu-ju)
+* [GrowingIO 小程序 Debugger](https://growingio.gitbook.io/docs/~/edit/drafts/-LH7zO9OimvSCwdRwlgR/sdk-integration/growingio-debugger#growingio-xiao-cheng-xu-debugger)
 
 GrowingIO Debugger是GrowingIO推出的调试 SDK所发送数据的工具。在GrowingIO Debugger的帮助下，实施工程师可以看到在什么样的页面上，在什么时机向GrowingIO发送了什么样的服务器请求。
 
