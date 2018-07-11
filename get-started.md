@@ -38,10 +38,10 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 8. 热图 [文档](data-analytics/heatmap/)
 9. 实时分析 [文档](data-analytics/dashboard/realtime.md)
 10. 概览分析 [文档](data-analytics/dashboard/overview.md)
-11. **小程序概览** [文档](data-analytics/xiao-cheng-xu-gai-lan/)
+11. **小程序概览** [文档](data-analytics/xiao-cheng-xu-gai-lan.md)
 12. web 圈选 [文档](http://growing.cn-bj.ufileos.com/web_circle.pdf) \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)
 13. 移动端圈选 [文档](http://growing.cn-bj.ufileos.com/app_circle.pdf) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)
-14. **小程序圈选** [文档](data-model/circle/xiao-cheng-xu-quan-xuan/) 
+14. **小程序圈选** [文档](data-model/circle/xiao-cheng-xu-quan-xuan.md) 
 
 #### 第五步：开始进行分析 {#第五步：开始进行分析}
 
@@ -59,7 +59,7 @@ GrowingIO 所有分析能力都同样支持小程序，同时，还对小程序�
 
 1.集成[小程序 SDK ](sdk-integration/xiao-cheng-xu-sdk.md)，以进行数据采集
 
-2.通过[小程序圈选](data-model/circle/xiao-cheng-xu-quan-xuan/)来进行数据定义
+2.通过[小程序圈选](data-model/circle/xiao-cheng-xu-quan-xuan.md)来进行数据定义
 
-3.通过[小程序概览](data-analytics/xiao-cheng-xu-gai-lan/)了解数据情况
+3.通过[小程序概览](data-analytics/xiao-cheng-xu-gai-lan.md)了解数据情况
 

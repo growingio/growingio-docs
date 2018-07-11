@@ -1,5 +1,14 @@
 # 小程序 SDK
 
+* [小程序SDK集成前工作​](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/sdk-integration/xiao-cheng-xu-sdk#xiao-cheng-xu-sdk-ji-cheng-qian-gong-zuo)
+  * ​[1. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#1-sdk-dai-ma-an-zhuang)[确定集成SDK的项目](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/sdk-integration/xiao-cheng-xu-sdk#que-ding-ji-cheng-sdk-de-xiang-mu)
+  * ​[2. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#ios-sdk-api)[在已有项目中添加小程序应用](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/sdk-integration/xiao-cheng-xu-sdk#zai-yi-you-xiang-mu-zhong-tian-jia-xiao-cheng-xu-ying-yong) \| [创建新的GrowingIO项目](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/sdk-integration/xiao-cheng-xu-sdk#chuang-jian-xin-de-growingio-xiang-mu)
+* [​小程序SDK标准接入指南](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/sdk-integration/xiao-cheng-xu-sdk#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
+  * ​[1. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#1-zhong-xin-ji-cheng-sdk)[下载小程序采集 SDK](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/sdk-integration/xiao-cheng-xu-sdk#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
+  * ​2. [添加追踪代码​](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/sdk-integration/xiao-cheng-xu-sdk#tian-jia-zhui-zong-dai-ma)
+  * ​[3. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)[添加请求服务器域名](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/sdk-integration/xiao-cheng-xu-sdk#tian-jia-qing-qiu-fu-wu-qi-yu-ming)
+  * ​[4. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)[检测数据](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/sdk-integration/xiao-cheng-xu-sdk#jian-ce-shu-ju)
+
 ## 小程序SDK集成前工作
 
 ### 确定集成SDK的项目

@@ -10,7 +10,7 @@ description: 将无埋点 SDK 采集上来的数据进行定义。
 
 {% page-ref page="circle-app.md" %}
 
-{% page-ref page="xiao-cheng-xu-quan-xuan/" %}
+{% page-ref page="xiao-cheng-xu-quan-xuan.md" %}
 
 ### 圈选命名规范
 

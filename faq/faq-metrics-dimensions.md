@@ -101,7 +101,7 @@ GrowingIO 使用 IP 地址来判断用户来自的城市或者地区。城市或
 #### 2.4 监控付费推广（渠道来源）的utm，对应到维度这里是哪些，怎样使用？ {#4监控付费推广（渠道来源）的utm，对应到维度这里是哪些，怎样使用？}
 
 相关维度：  
-UTM 参数现在有，广告来源（utm\_source），广告媒介（utm\_medium ），广告关键字（utm\_term ），广告内容（utm\_content ）。您可以参考[如下文章](../data-analytics/ads-tracking/utm-parameters/)去配置UTM渠道追踪。我们建议你可以使用[广告监测](../data-analytics/ads-tracking/)功能。
+UTM 参数现在有，广告来源（utm\_source），广告媒介（utm\_medium ），广告关键字（utm\_term ），广告内容（utm\_content ）。您可以参考[如下文章](../data-analytics/ads-tracking/utm-parameters.md)去配置UTM渠道追踪。我们建议你可以使用[广告监测](../data-analytics/ads-tracking/)功能。
 
 使用场景：  
 UTM 广告系列参数对着陆页面的 url 进行标注，可以区别衡量各种营销渠道所带来的访客价值。在这里渠道归因采取的是非直接访问的最后点击模型。 比如，访客于 9:30 访问网站。我们进行渠道归因时，会统计在 10:00 点开始，回溯 30 天时间，其最后一次通过外站（非直接流量）进来时的 UTM 参数，关键词和 refer URL。举个例子，访客 A 通过百度推广进入网站，然后通过新浪的 Banner 再次进入网站，最后一次通过直接输入 URL 进入网站完成购买，我们会认为这次转化由新浪 Banner 贡献。

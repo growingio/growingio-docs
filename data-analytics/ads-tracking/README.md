@@ -14,7 +14,7 @@ GrowingIO 提供一系列功能帮助客户跟踪不同场景推广产品的效�
 
 了解广告监测的相关知识：
 
-{% page-ref page="utm-parameters/" %}
+{% page-ref page="utm-parameters.md" %}
 
 {% page-ref page="default-channel-tracking.md" %}
 
