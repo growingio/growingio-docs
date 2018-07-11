@@ -103,7 +103,7 @@ gio-minp 默认是用 module.exports, 对于 import 不支持，可以修改 gio
 
 ### 检测数据
 
-当集成成功后，需要回到 GrowingIO SDK 集成页面检测数据。请在添加了追踪代码的小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。详情可见小程序Debugger。
+当集成成功后，需要回到 GrowingIO SDK 集成页面检测数据。请在添加了追踪代码的小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。详情可见[小程序Debugger](https://growingio.gitbook.io/docs/~/drafts/-LH61Ni6lwUWAkWLDYpB/primary/sdk-integration/growingio-debugger#growingio-xiao-cheng-xu-debugger)。
 
 ## SDK高级设置&数据采集配置
 
