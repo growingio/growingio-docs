@@ -1,19 +1,18 @@
 # iOS SDK
 
-* [集成 SDK 和 API 导入](ios-sdk.md#ji-cheng-sdk-he-api-dao-ru)
+* [集成最新 SDK 和 API 导入](ios-sdk.md#ji-cheng-sdk-he-api-dao-ru)
   * [1. SDK 代码安装](ios-sdk.md#1-sdk-dai-ma-an-zhuang)
   * [2. iOS SDK API](ios-sdk.md#ios-sdk-api)
   * [3. 自定义数据上传&配置指导](ios-sdk.md#3-zi-ding-yi-shu-ju-shang-chuan-pei-zhi-zhi-dao)
-* [1.x 版本 SDK 升级指导](ios-sdk.md#sdk-1x-版本升级指导)
+* [1.x 旧版本 SDK 升级指导](ios-sdk.md#sdk-1x-版本升级指导)
   * [1. 重新集成 SDK](ios-sdk.md#1-zhong-xin-ji-cheng-sdk)
   * [2. 迁移用户属性字段（CS字段）](ios-sdk.md#2-qian-yi-yong-hu-shu-xing-zi-duan-cs-zi-duan)
   * [3. 迁移页面属性字段（PS字段）](ios-sdk.md#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)
   * [4. 迁移自定义事件（埋点事件）](ios-sdk.md#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)
   * [5. 数据校验](ios-sdk.md#5-shu-ju-xiao-yan)
-* [GrowingIO Mobile Debugger](ios-sdk.md#growingio-mobile-debugger)
-* [如何集成 1.  x 版本 SDK](ios-sdk.md#ru-he-ji-cheng-1x-ban-ben-sdk)
+* [如何集成 1.  x 旧版本 SDK](ios-sdk.md#ru-he-ji-cheng-1x-ban-ben-sdk)
 
-## 集成 SDK 和 API 导入
+## 集成最新 SDK 和 API 导入
 
 ### 1. SDK 代码安装
 
@@ -442,7 +441,7 @@ view3.growingAttributesValue = @“ad3”;
 
 您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，具体请参考[相关文档](../data-model/event-variable/custom-event.md)。
 
-## SDK 1.x 版本升级指导
+## SDK 1.x 旧版本升级指导
 
 本文旨在帮助您从 [1.x 版本](ios-sdk.md#ru-he-ji-cheng-1x-ban-ben-sdk)无缝升级至 2.x 版本，由于两个版本的诸多接口、方法、字段含义均有较大变动，因此建议您在升级前一定参照本文完成必要的实施工作。
 
@@ -572,7 +571,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 ### 5. 数据校验
 
-在完成了上述代码实施和配置后，我们当然需要对数据是否成功上传进行校验。校验工作分为两步完成。
+在完成了上述代码实施和配置后，我们当然需要对数据是否成功上传进行校验。[点击查看 GrowingIO Mobile Debugger 的安装和使用](growingio-debugger.md#growingio-mobile-debugger)。校验工作分为两步完成。
 
 **数据校验第一步：本地开发环境校验**
 
@@ -586,17 +585,7 @@ GrowingIO 提供了 SDK debug 模式以及 debug 工具，来帮助您完成数�
 
 在 GrowingIO 分析后台，找到 “单图” - “新建事件分析”，然后在图表中选择您设计好的 “指标+维度”，查看是否有数据。当然，您需要首先确保您的自定义事件或变量确实有被触发。
 
-## GrowingIO Mobile Debugger
-
-GrowingIO Debugger是GrowingIO推出的调试 SDK所发送数据的工具。在GrowingIO Debugger的帮助下，实施工程师可以看到在什么样的页面上，在什么时机向GrowingIO发送了什么样的服务器请求。
-
-在数据驱动增长的实践中，数据准确性一直以来是一个必须重视的课题。数据分析行业中有一句谚语：Garbage In, Garbage Out，简称GIGO。这句谚语告诉我们：如果我们在实施阶段的方案有纰漏导致收集的数据就是错误的，那么基于错误的数据得出的结论就一定是有问题的，所以我们必须重视GrowingIO产品的实施工作，来确保实施方案的严谨正确，从而保证收集到的数据是尽最大可能准确的。
-
-而在GrowingIO产品的实施过程中，GrowingIO Debugger能够帮助工程师、技术实施顾问清楚的看到发送出去的服务器请求是什么？发送的时机是什么？数据是不是按照实施方案中所描述的那样进行发送。有了GrowingIO Web Debugger的帮助，实施工程师可以通过高质量的实施，给分析师带来高质量高准确性的数据，这将大大有利于在企业内部养成数据驱动决策的文化和习惯。使用数据，使用高质量的数据帮助企业获得真正的增长。
-
-[点击查看 GrowingIO Mobile Debugger 的安装和使用](growingio-debugger.md#growingio-mobile-debugger)。
-
-## 如何集成 1.x 版本 SDK
+## 如何集成 1.x 旧版本 SDK
 
 ### 1. 选择 SDK 安装方式 {#1-选择-sdk-安装方式}
 
