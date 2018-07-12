@@ -1,20 +1,33 @@
 # Android SDK
 
-* [集成最新 SDK 和 API 导入](android-sdk.md#ji-cheng-sdk-he-api-dao-ru)
-  * [1. SDK 代码安装](android-sdk.md#1sdk-dai-ma-an-zhuang)
+* 入门
+  * [1. 集成](android-sdk.md#1-ji-cheng)
   * [2. Android SDK API](android-sdk.md#2-android-sdk-api)
-  * [3. 自定义数据上传&配置指导](android-sdk.md#自定义数据上传配置指导)
-* [1.x 旧版本 SDK 升级指导](android-sdk.md#1x-版本-sdk-升级指导)
+    * 自定义事件 API
+    * SDK 配置 API
+* 验证 GrowingIO SDK 精准采集发送
+  * 验证工具使简介
+  * 无埋点事件数据发送验证
+  * 自定义事件数据发送验证
+  * 验证圈选是否正常
+  * 热图显示正常
+* 说明
+  * 边界文档
+    * 无埋点边界
+    * 埋点边界
+  * 第三方支持库明细
+  * 数据发送策略介绍
+* [旧版本升级](android-sdk.md#jiu-ban-ben-sheng-ji)
   * [1. 重新集成 SDK](android-sdk.md#1-zhong-xin-ji-cheng-sdk)
   * [2. 迁移用户属性字段（CS字段）](android-sdk.md#2-qian-yi-yong-hu-shu-xing-zi-duan-cs-zi-duan)
   * [3. 迁移页面属性字段（PS字段）](android-sdk.md#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)
   * [4. 迁移自定义事件（埋点事件）](android-sdk.md#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)
   * [5. 数据校验](android-sdk.md#5-shu-ju-xiao-yan)
-* [如何集成 1.x 旧版本 SDK](android-sdk.md#ru-he-ji-cheng-1x-ban-ben-sdk)
+* [旧版本 SDK 集成 ](android-sdk.md#jiu-ban-ben-sdk-ji-cheng)
 
-## 集成最新 SDK 和 API 导入
+## 入门
 
-### 1.SDK 代码安装
+### 1.集成
 
 #### 1. 添加依赖
 
@@ -482,7 +495,7 @@ GrowingIO.getInstance().clearUserId();
 
 您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，具体请参考[相关文档](../data-model/event-variable/custom-event.md)。
 
-## 1.x 旧版本 SDK 升级指导
+## 旧版本升级
 
 本文旨在帮助您从 1.x 版本无缝升级至 2.x 版本，由于两个版本的诸多接口、方法、字段含义均有较大变动，因此建议您在升级前一定参照本文完成必要的实施工作。
 
@@ -656,7 +669,7 @@ gio.track(String eventId, JSONObject eventLevelVariables);
 
 在完成了上述代码实施和配置后，我们当然需要对数据是否成功上传进行校验。[点击查看 GrowingIO Mobile Debugger 的安装和使用](growingio-debugger.md#growingio-mobile-debugger)。
 
-## 如何集成 1.x 旧版本 SDK
+## 旧版本 SDK 集成
 
 从0.9.85版（2016年7月20日发布）起，SDK的集成方式发生变化，下方文档已经更新。
 
