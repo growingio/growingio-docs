@@ -1,8 +1,8 @@
 # Web JS SDK
 
-* [集成 SDK 和 API 导入](web-js-sdk.md#sdk-api)
+* [集成最新 SDK 和 API 导入](web-js-sdk.md#sdk-api)
   * [1.SDK 代码安装](web-js-sdk.md#1-sdk)
-  * [2.Web JS 系统变量](web-js-sdk.md#12)
+  * [2.Web JS SDK 系统变量](web-js-sdk.md#12)
   * [3.Web JS SDK 2.1 API](web-js-sdk.md#13)
     * [3.1 API 简介](web-js-sdk.md#131)
     * [3.2 init ](web-js-sdk.md#132)
@@ -33,7 +33,7 @@
 
 #### 1.1 **页面代码**
 
-请将以下的页面代码放置到需要分析的页面中的 &lt;head&gt; 和 &lt;/head&gt; 标签之间，即可完成 Web JS SDK 2.1页面代码的安装。
+请将以下的页面代码放置到需要分析的页面中的 &lt;head&gt; 和 &lt;/head&gt; 标签之间，即可完成 Web JS SDK 2.1页面代码的安装。请注意使用**具体的项目 ID** 替换代码中的 **your projectId** 。
 
 ```text
 <!-- GrowingIO Analytics code version 2.1 -->
@@ -52,41 +52,37 @@
 <!-- End GrowingIO Analytics code version: 2.1 -->
 ```
 
-#### 1.2 **gio.js 文件**
+#### 1.2 GrowingIO Web Debugger
 
-可以看到页面代码中有对 gio.js 文件的引用，gio.js 的地址为 [http://assets.growingio.com/2.1/gio.js](https://github.com/growingio/help_site/tree/f4b4103b288205f6a9b13e0c4692f4d65a2ab386/assets.growingio.com/2.1/gio.js)
+完成页面代码安装并重新部署您的网站应用后，建议使用[ GrowingIO Web Debugger ](growingio-debugger.md#growingio-web-debugger)验证数据发送是否正常。Web Debugger可以通过可视化界面让您一睹 GrowingIO 强大的数据采集能力。
 
-请注意使用**具体的项目 ID** 替换上述代码中 ‘**your projectId**’ 的部分。
-
-建议在安装页面代码结束之后，建议使用[ GrowingIO Web Debugger ](growingio-debugger.md#growingio-web-debugger)验证一下服务器请求发送是否正常。
-
-### 2.Web JS 系统变量 {#12}
+### 2.Web JS SDK系统变量 {#12}
 
 Web JS SDK 可以配置一些系统变量来控制 Web JS SDK 的数据发送。
 
-#### 2.1 imp 系统变量
-
-作用：禁止元素浏览量采集
-
-GrowingIO 提供两种采集，元素浏览和元素点击，文本框内容修改等交互行为。对于内容基本固定的网站来说，可以直接禁用元素浏览量采集。
-
-```text
-gio('config', {'imp':false});
-```
-
-#### 2.2 hashtag 系统变量
+#### 2.1 hashtag 系统变量
 
 作用：启用 hashtag 作为标识页面的一部分
 
 默认值：false
 
-GrowingIO默认不会把 hashtag 识别成页面 URL 的一部分。对于使用 hashtag 作为单页应用页面切换的网站来说，可以使用
+GrowingIO默认不会把 hashtag 识别成页面 URL 的一部分。对于使用 hashtag 进行页面跳转的单页面网站应用来说，可以使用
 
 ```text
 gio('config', {'hashtag':true});
 ```
 
-来监听 hashtag 的变化，并区分页面来收集页面数据，每次 hashtag 改变都会触发一次PV，hashtag 的信息也会记录在页面URL中。
+来监听 hashtag 的变化，并采集不同页面的数据。每次 hashtag 的改变都会触发一次PV，hashtag 的信息也会记录在页面URL中。
+
+#### 2.2 imp 系统变量
+
+作用：禁止元素浏览量采集
+
+除点击、修改、提交等用户行为数据的采集，GrowingIO 还提供元素浏览量\(简称imp\)的无埋点采集。对于内容基本固定的网站，可以直接禁用元素浏览量采集。
+
+```text
+gio('config', {'imp':false});
+```
 
 ### 3.Web JS SDK 2.1 API {#13}
 
