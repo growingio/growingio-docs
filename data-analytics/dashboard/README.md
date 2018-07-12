@@ -59,7 +59,11 @@ description: 将具有相同业务意义的图表进行添加、整理和分享
 
 ![](https://docs.growingio.com/.gitbook/assets/tian-jia-dan-tu.png)
 
-还可以通过按住拖动的方式**调整看板中图表顺序**以体现图表的重要程度或层级结构；通过按住拖拽的方式**调整图表大小**；如下图所示，当 hover 到图表上出现角标时即可操作调整顺序或大小：
+还可以通过按住拖动的方式**调整看板中图表顺序**以体现图表的重要程度或层级结构；
+
+通过按住拖拽的方式**调整图表大小**；
+
+如下图所示，当 hover 到图表上出现角标时即可操作调整顺序或大小：
 
 ![](https://docs.growingio.com/.gitbook/assets/resizereorder.png)
 
