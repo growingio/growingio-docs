@@ -5,7 +5,7 @@
   * [2.Web JS SDK 系统变量](web-js-sdk.md#12)
   * [3.Web JS SDK 2.1 API](web-js-sdk.md#13)
     * [3.1 API 简介](web-js-sdk.md#131)
-    * [3.2 init ](web-js-sdk.md#132)
+    * [3.2 初始化 \(init\)](web-js-sdk.md#132)
     * [3.3 设置自定义事件和事件级变量（track）](web-js-sdk.md#track)
     * [3.4 设置页面级变量（page.set）](web-js-sdk.md#134)
     * [3.5 设置转化变量（evar.set）](web-js-sdk.md#135)
@@ -120,7 +120,7 @@ gio('setUserId', userId);
 gio('clearUserId');
 ```
 
-#### 3.2 init  {#132}
+#### 3.2 初始化 \(init\) {#132}
 
 初始化参数，用来设置项目ID和一些常用的配置项：
 
