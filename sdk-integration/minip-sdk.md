@@ -16,7 +16,7 @@
 
 ### 确定集成SDK的项目
 
-![&#x96C6;&#x6210;SDK&#x7684;&#x9636;&#x6BB5;&#x548C;&#x6D41;&#x7A0B;](../.gitbook/assets/image%20%2816%29.png)
+![&#x96C6;&#x6210;SDK&#x7684;&#x9636;&#x6BB5;&#x548C;&#x6D41;&#x7A0B;](../.gitbook/assets/image%20%2817%29.png)
 
 如果您已经注册GrowingIO,并且已经有创建或者集成SDK的项目了，您可以进行如下选择：
 
@@ -112,7 +112,7 @@ gio-minp 默认是用 module.exports, 对于 import 不支持，可以修改 gio
 2. 打开开发设置，到服务器域名配置部分
 3. 在`request合法域名`中添加：https://wxapi.growingio.com
 
-![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../.gitbook/assets/image%20%2821%29.png)
+![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../.gitbook/assets/image%20%2822%29.png)
 
 ### 检测数据
 
