@@ -11,7 +11,7 @@ description: 这是一份新同学使用 GrowingIO 指南
 1. [JS SDK 配置](sdk-integration/web-js-sdk.md)
 2. [Android SDK 配置](sdk-integration/android-sdk.md)
 3. [iOS SDK 配置](sdk-integration/ios-sdk.md)
-4. [**小程序 SDK 配置**](sdk-integration/xiao-cheng-xu-sdk.md)
+4. [小程序 SDK 配置](sdk-integration/xiao-cheng-xu-sdk.md)
 
 #### 第二步：在工程师的协助下，进行重要配置 {#第二步：在工程师的协助下，进行重要配置}
 
