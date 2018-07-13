@@ -1,22 +1,22 @@
 # 小程序 SDK
 
-* [小程序SDK集成前工作​](xiao-cheng-xu-sdk.md#xiao-cheng-xu-sdk-ji-cheng-qian-gong-zuo)
-  * ​[1. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#1-sdk-dai-ma-an-zhuang)[确定集成SDK的项目](xiao-cheng-xu-sdk.md#que-ding-ji-cheng-sdk-de-xiang-mu)
-  * ​[2. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#ios-sdk-api)[在已有项目中添加小程序应用](xiao-cheng-xu-sdk.md#zai-yi-you-xiang-mu-zhong-tian-jia-xiao-cheng-xu-ying-yong) \| [创建新的GrowingIO项目](xiao-cheng-xu-sdk.md#chuang-jian-xin-de-growingio-xiang-mu)
-* ​[小程序SDK标准接入指南](xiao-cheng-xu-sdk.md#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
-  * [1. 下载小程序采集SDK](xiao-cheng-xu-sdk.md#xia-zai-xiao-cheng-xu-cai-ji-sdk)
-  * [​2. 添加追踪代码​](xiao-cheng-xu-sdk.md#tian-jia-zhui-zong-dai-ma)
-  * ​[3. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)[添加请求服务器域名](xiao-cheng-xu-sdk.md#tian-jia-qing-qiu-fu-wu-qi-yu-ming)
-  * ​[4. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)[检测数据](xiao-cheng-xu-sdk.md#jian-ce-shu-ju)
-* [SDK高级设置](xiao-cheng-xu-sdk.md#sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi)
-  * ​[小程序SDK 微信用户属性设置](xiao-cheng-xu-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)
-  * [无埋点采集事件逻辑和高级配置](xiao-cheng-xu-sdk.md#wu-mai-dian-cai-ji-shi-jian-luo-ji-he-gao-ji-pei-zhi)
+* [小程序SDK集成前工作​](minip-sdk.md#xiao-cheng-xu-sdk-ji-cheng-qian-gong-zuo)
+  * ​[1. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#1-sdk-dai-ma-an-zhuang)[确定集成SDK的项目](minip-sdk.md#que-ding-ji-cheng-sdk-de-xiang-mu)
+  * ​[2. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#ios-sdk-api)[在已有项目中添加小程序应用](minip-sdk.md#zai-yi-you-xiang-mu-zhong-tian-jia-xiao-cheng-xu-ying-yong) \| [创建新的GrowingIO项目](minip-sdk.md#chuang-jian-xin-de-growingio-xiang-mu)
+* ​[小程序SDK标准接入指南](minip-sdk.md#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
+  * [1. 下载小程序采集SDK](minip-sdk.md#xia-zai-xiao-cheng-xu-cai-ji-sdk)
+  * [​2. 添加追踪代码​](minip-sdk.md#tian-jia-zhui-zong-dai-ma)
+  * ​[3. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)[添加请求服务器域名](minip-sdk.md#tian-jia-qing-qiu-fu-wu-qi-yu-ming)
+  * ​[4. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)[检测数据](minip-sdk.md#jian-ce-shu-ju)
+* [SDK高级设置](minip-sdk.md#sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi)
+  * ​[小程序SDK 微信用户属性设置](minip-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)
+  * [无埋点采集事件逻辑和高级配置](minip-sdk.md#wu-mai-dian-cai-ji-shi-jian-luo-ji-he-gao-ji-pei-zhi)
 
 ## 小程序SDK集成前工作
 
 ### 确定集成SDK的项目
 
-![&#x96C6;&#x6210;SDK&#x7684;&#x9636;&#x6BB5;&#x548C;&#x6D41;&#x7A0B;](../.gitbook/assets/image%20%2815%29.png)
+![&#x96C6;&#x6210;SDK&#x7684;&#x9636;&#x6BB5;&#x548C;&#x6D41;&#x7A0B;](../.gitbook/assets/image%20%2816%29.png)
 
 如果您已经注册GrowingIO,并且已经有创建或者集成SDK的项目了，您可以进行如下选择：
 
@@ -112,7 +112,7 @@ gio-minp 默认是用 module.exports, 对于 import 不支持，可以修改 gio
 2. 打开开发设置，到服务器域名配置部分
 3. 在`request合法域名`中添加：https://wxapi.growingio.com
 
-![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../.gitbook/assets/image%20%2820%29.png)
+![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../.gitbook/assets/image%20%2821%29.png)
 
 ### 检测数据
 
@@ -120,7 +120,7 @@ gio-minp 默认是用 module.exports, 对于 import 不支持，可以修改 gio
 
 ## SDK高级设置&数据采集配置
 
-### SDK 微信用户属性设置
+### SDK 微信用户属性设 置 {#wechat-user-attributions-setting}
 
 作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。下面是专门针对用户的三个接口。
 
