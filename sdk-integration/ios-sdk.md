@@ -12,7 +12,33 @@
   * [5. 数据校验](ios-sdk.md#5-shu-ju-xiao-yan)
 * [如何集成 1.  x 旧版本 SDK](ios-sdk.md#ru-he-ji-cheng-1x-ban-ben-sdk)
 
-## 集成最新 SDK 和 API 导入
+### 入门
+
+* 集成SDK
+* iOS SDK  API 说明
+  * 自定义事件和变量
+  * 特殊配制
+
+### **集成验证**
+
+* **MobileDebugger** 
+* **自定义事件验证**
+* **无埋点事件验证**
+* **圈选功能验证**
+* **常见问题**
+
+### 移动端产品运营
+
+1. MobileDebugger
+2. 圈选
+3. 热图
+4. 常见问题
+
+### 1.X 升级 2.X 指导
+
+
+
+
 
 ### 1. SDK 代码安装
 
