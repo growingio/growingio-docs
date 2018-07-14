@@ -9,11 +9,11 @@
   * [重要配置项 API](android-sdk.md#5重要配置选项)
   * [自定义事件和变量 API](android-sdk.md#5重要配置选项-1)
 * [旧版本升级](android-sdk.md#jiu-ban-ben-sheng-ji)
-  * [1. 重新集成 SDK](android-sdk.md#1-zhong-xin-ji-cheng-sdk)
-  * [2. 迁移用户属性字段（CS字段）](android-sdk.md#2-qian-yi-yong-hu-shu-xing-zi-duan-cs-zi-duan)
-  * [3. 迁移页面属性字段（PS字段）](android-sdk.md#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)
-  * [4. 迁移自定义事件（埋点事件）](android-sdk.md#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)
-  * [5. 数据校验](android-sdk.md#5-shu-ju-xiao-yan)
+  * [更新 SDK 版本号为最新版本](android-sdk.md#1-geng-xin-sdk-ban-ben-hao-wei-zui-xin-ban-ben)
+  * [迁移用户属性字段（CS字段）](android-sdk.md#2-qian-yi-yong-hu-shu-xing-zi-duan-cs-zi-duan)
+  * [迁移页面属性字段（PS字段）](android-sdk.md#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)
+  * [迁移自定义事件（埋点事件）](android-sdk.md#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)
+  * [数据校验](android-sdk.md#5-shu-ju-xiao-yan)
 * [旧版本 SDK 集成 ](android-sdk.md#jiu-ban-ben-sdk-ji-cheng)
 
 ## 集成
