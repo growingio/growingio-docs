@@ -1,7 +1,7 @@
 # iOS SDK
 
 * [集成最新 SDK 和 API 导入](ios-sdk.md#ji-cheng-sdk-he-api-dao-ru)
-  * [1. SDK](ios-sdk.md#1-sdk-dai-ma-an-zhuang) [集成](ios-sdk.md#ji-cheng-sdk-he-api-dao-ru)
+  * 1. [SDK代码安装](ios-sdk.md#1-sdk-dai-ma-an-zhuang)
   * [2. iOS SDK API](ios-sdk.md#ios-sdk-api) 
   * [3. 自定义数据上传&配置指导](ios-sdk.md#3-zi-ding-yi-shu-ju-shang-chuan-pei-zhi-zhi-dao)
 * [1.x 旧版本 SDK 升级指导](ios-sdk.md#sdk-1x-版本升级指导)
@@ -18,7 +18,7 @@
 
 如果您的 iOS 项目中集成了 Firebase SDK，请确保使用的 Firebase SDK 版本在 4.8.1 及以上，并且集成 GrowingIO SDK 2.1.1 及以上版本，否则会造成数据采集不到的情况。
 
-#### 1. 选择 SDK 集成方式
+#### 1. 选择 SDK 安装方式
 
 请确保您的 XCode 版本为 7.3 或者其后的版本。
 
