@@ -7,7 +7,7 @@
     * [自定义事件](custom-event.md#22-zi-ding-yi-shi-jian)
     * [页面级变量](custom-event.md#23-ye-mian-ji-bian-liang)
     * [转化变量](custom-event.md#24-zhuan-hua-bian-liang)
-    * [用户变量](custom-event.md#25-yong-hu-bian-liang)
+    * [用户变量](custom-event.md#25)
   * [3.代码部署](custom-event.md#3-dai-ma-bu-shu)
   * [4.数据校验](custom-event.md#4-shu-ju-xiao-yan)
 
@@ -121,7 +121,7 @@
 
 点击确定，即完成了转化变量的配置。
 
-#### 2**.5 用户变量**
+#### 2**.5 用户变量** {#25}
 
 对于每一个[用户变量](custom-variable.md#4)，建议您在配置之前，先按下表列出配置细项，其中
 

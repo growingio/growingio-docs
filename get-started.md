@@ -16,7 +16,7 @@ description: 这是一份新同学使用 GrowingIO 指南
 #### 第二步：在工程师的协助下，进行重要配置 {#第二步：在工程师的协助下，进行重要配置}
 
 1. 如果你是使用了 \#hashtag 的单页面应用，请[进行配置](sdk-integration/web-js-sdk.md#21-hashtag-xi-tong-bian-liang)
-2. 95% 的用户都会上传[用户属性字段](data-model/event-variable/custom-event.md#25-yong-hu-bian-liang)，这样你就可以知道产品内的行为是由具体的哪个用户做的。比如想要对比登录和未登录用户的差异，就需要上传登录用户ID。
+2. 95% 的用户都会上传[用户属性字段](data-model/event-variable/custom-event.md#25)，这样你就可以知道产品内的行为是由具体的哪个用户做的。比如想要对比登录和未登录用户的差异，就需要上传登录用户ID。
 
 #### 第三步：选择数据定义方式 {#第三步：选择数据定义方式}
 
