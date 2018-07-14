@@ -40,7 +40,7 @@
 
 ### 1.集成 SDK  {#1-sdk}
 
-#### 1.1 **页面代码**
+#### 1.1 跟踪**代码**
 
 请将以下的页面代码放置到需要分析的页面中的 &lt;head&gt; 和 &lt;/head&gt; 标签之间，即可完成 Web JS SDK 2.1页面代码的安装。请注意使用**具体的项目 ID** 替换代码中的 **your projectId** 。
 
@@ -66,8 +66,6 @@
 完成页面代码安装并重新部署您的网站应用后，建议使用[ GrowingIO Web Debugger ](growingio-debugger.md#growingio-web-debugger)验证数据发送是否正常。Web Debugger可以通过可视化界面让您一睹 GrowingIO 强大的数据采集能力。
 
 ### 2.Web JS SDK系统变量 {#12}
-
-Web JS SDK 可以配置一些系统变量来控制 Web JS SDK 的数据发送。
 
 #### 2.1 hashtag 系统变量
 
