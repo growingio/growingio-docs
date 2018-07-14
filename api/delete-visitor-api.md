@@ -4,7 +4,7 @@
 
 ### 删除用户API
 
-将用户从项目中删除，禁止该用户继续访问项目的数据。
+从原始数据中删除用户的数据，支持批量删除。
 
 {% api-method method="post" host="https://data.growingio.com/:projectId/deleteVisitor?auth=:auth\_token" path="" %}
 {% api-method-summary %}
