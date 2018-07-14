@@ -6,6 +6,8 @@ description: 美好的文档由大家共同打造。
 
 感谢以下同学对帮助文档的贡献：
 
+@江岭
+
 @Eric
 
 @大葱
@@ -29,8 +31,6 @@ description: 美好的文档由大家共同打造。
 @sihan
 
 @二狗
-
-@tianyu
 
 @GrowingIO
 

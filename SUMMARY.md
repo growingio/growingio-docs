@@ -32,7 +32,7 @@
   * [Web JS SDK](sdk-integration/web-js-sdk.md)
   * [Android SDK](sdk-integration/android-sdk.md)
   * [iOS SDK](sdk-integration/ios-sdk.md)
-  * [小程序 SDK](sdk-integration/minip-sdk.md)
+  * [小程序 SDK](sdk-integration/xiao-cheng-xu-sdk.md)
   * [GrowingIO Debugger](sdk-integration/growingio-debugger.md)
 * [数据定义](data-model/README.md)
   * [数据模型](data-model/predefined/README.md)

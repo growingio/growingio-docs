@@ -5,18 +5,14 @@
   * [2.Web JS SDK 系统变量](web-js-sdk.md#12)
   * [3.Web JS SDK 2.1 API](web-js-sdk.md#13)
     * [3.1 API 简介](web-js-sdk.md#131)
-    * [3.2 初始化 \(init\)](web-js-sdk.md#132)
-    * [3.3 设置自定义事件和事件级变量 \(track\)](web-js-sdk.md#track)
-    * [3.4 设置页面级变量 \(page.set\)](web-js-sdk.md#134)
-    * [3.5 设置转化变量 \(evar.set\)](web-js-sdk.md#135)
-    * [3.6 设置用户级变量 \(people.set\)](web-js-sdk.md#136)
-    * [3.7 设置登录用户id \(setUserId\)](web-js-sdk.md#137)
-    * [3.8 上传登录用户id \(clearUserId\)](web-js-sdk.md#138)
-    * [3.9 设置数据采集黑名单 \(growing-ignore\)](web-js-sdk.md#139)
-    * [3.10 开启输入文本框内容采集 \(growing-track\)](web-js-sdk.md#1310)
-    * [3.11 手动设置采集文本信息 \(data-growing-title\)](web-js-sdk.md#1311)
-    * [3.12 手动设置采集位置信息 \(data-growing-idx\)](web-js-sdk.md#1312)
-    * [3.13 手动发送页面浏览事件 \(sendPage\)](web-js-sdk.md#1313)
+    * [3.2 init ](web-js-sdk.md#132)
+    * [3.3 设置自定义事件和事件级变量（track）](web-js-sdk.md#track)
+    * [3.4 设置页面级变量（page.set）](web-js-sdk.md#134)
+    * [3.5 设置转化变量（evar.set）](web-js-sdk.md#135)
+    * [3.6 设置用户级变量（people.set）](web-js-sdk.md#136)
+    * [3.7 设置登录用户id（setUserId）](web-js-sdk.md#137)
+    * [3.8 上传登录用户 ID（clearUserId）](web-js-sdk.md#138)
+    * [3.9 手动发送页面浏览事件 sendPage](web-js-sdk.md#139)
   * [4.自定义数据上传 & 配置指导](web-js-sdk.md#14)
 * [1.x 旧版本 SDK 升级指导](web-js-sdk.md#2)
   * [1. 重新集成 SDK](web-js-sdk.md#21)
@@ -124,7 +120,7 @@ gio('setUserId', userId);
 gio('clearUserId');
 ```
 
-#### 3.2 初始化 \(init\) {#132}
+#### 3.2 init  {#132}
 
 初始化参数，用来设置项目ID和一些常用的配置项：
 
@@ -144,7 +140,7 @@ gio('init', projectId, options);
 gio('init', '1234567890', {'imp':false});
 ```
 
-#### 3.3 设置自定义事件和事件级变量 \(track\) {#track}
+#### 3.3 设置自定义事件和事件级变量（track） {#track}
 
 在添加所需要发送的事件代码之前，需要在打点管理用户界面配置事件以及事件级变量。
 
@@ -175,7 +171,7 @@ gio('track', 'registerSuccess', {'gender':'male', 'age':21});
 gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zhejiang'});
 ```
 
-#### 3.4 设置页面级变量 \(page.set\) {#134}
+#### 3.4 设置页面级变量（page.set） {#134}
 
 发送页面级别的维度信息，在添加代码之前必须在打点管理界面上声明页面级变量。
 
@@ -201,7 +197,7 @@ gio('page.set', {'pageName': 'Home Page', 'author': 'Zhang San'});
 gio('page.set', 'author', 'Zhang San');
 ```
 
-#### 3.5 设置转化变量 \(evar.set\) {#135}
+#### 3.5 设置转化变量（evar.set） {#135}
 
 发送一个转化信息用于高级归因分析，在添加代码之前必须在打点管理界面上声明转化变量。
 
@@ -227,7 +223,7 @@ gio('evar.set', 'campaignId'，'1234567890');
 gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
 ```
 
-#### 3.6 设置用户级变量 \(people.set\) {#136}
+#### 3.6 设置用户级变量（people.set） {#136}
 
 发送用户信息用于用户信息相关分析，在添加代码之前必须在打点管理界面上声明转化变量。
 
@@ -253,7 +249,7 @@ gio('people.set', 'gender', 'male');
 gio('people.set', {'gender':'male', 'age':'25'});
 ```
 
-#### 3.7 设置登录用户 ID \(setUserId\) {#137}
+#### 3.7 设置登录用户id（setUserId） {#137}
 
 当用户登录之后调用 setUserId API ，设置登录用户 ID 。
 
@@ -271,7 +267,7 @@ gio('setUserId', userId);
 gio('setUserId', '1234567890');
 ```
 
-#### 3.8 上传登录用户 ID \(clearUserId\) {#138}
+#### 3.8 上传登录用户 ID（clearUserId） {#138}
 
 当用户登出之后调用 clearUserId ，清除已经设置的登录用户 ID 。
 
@@ -280,63 +276,7 @@ gio('setUserId', '1234567890');
 gio('clearUserId');
 ```
 
-#### 3.9 **设置数据采集黑名单 \(**growing-ignore**\)** {#139}
-
-如果您希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
-
-```text
-    <div growing-ignore='true'>
-      …
-    </div>
-```
-
-#### 3.10 **开启输入文本框内容采集 \(**growing-track**\)** {#1310}
-
-由于输入文本框可能涉及一些隐私信息，比如账号、密码等，GrowingIO在采集数据的时候默认不采集输入文本框的数据。如果您希望采集某些文本框输入内容，比如搜索词，可以在input标签中设置growing-track属性，这样该文本框中的输入内容就会被采集到。如果input类型是password，即使开启内容采集，也不会采集该文本框的输入内容。
-
-```text
-    <input type='text' growing-track='true' />
-```
-
-JS代码请以售前人员提供的为主，进行正确添加。
-
-#### 3.11 **手动设置采集文本信息 \(**data-growing-title**\)** {#1311}
-
-对于一些图片或者区块，可以通过设置 title 或者 data-growing-title 属性来设置采集点点文本。比如，
-
-```text
-<li data-growing-title="上一页" 
-                 class="ant-pagination-disabled ant-pagination-prev">
-  <a></a>
-</li>
-```
-
-这时，采集到的 li 结点的内容就是_"上一页"_。
-
-更多的文本信息规则，可以参考[第4节：What\(内容\)](https://sishen.gitbooks.io/gio-js-book/dom/4what.html)和[第1节：内容规则](https://sishen.gitbooks.io/gio-js-book/5/1.html)。
-
-#### 3.12 **手动设置采集位置信息 \(**data-growing-idx**\)** {#1312}
-
-除了内容以外，元素在列表里所在位置在某些场景下也是非常重要的信息，比如对于推荐广告位而言，我们是希望知道哪个位置的点击率最高。GrowingIO SDK 会自动识别列表元素，并附带上元素在列表里的位置。
-
-LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表内所有元素结点都会附带上位置信息。其他标签默认并不会带有位置信息，比如一些用 DIV 标签做的平铺容器。对于这种情况，可以使用 data-growing-idx。当在容器 DOM 结点上设置 data-growing-idx 属性，容器内的所有 DOM 元素同样，都会继承该属性值。比如
-
-```text
-<div data-growing-idx="1">
-  <div class="left-container">
-    <img src="" alt="图片1"/>
-  </div>
-  <div class="right-container">
-    <h3 class="title">
-      文章一标题
-    </h3>
-  </div>
-</div>
-```
-
-更多的位置信息规则，可以参考[第2节：位置规则](https://sishen.gitbooks.io/gio-js-book/5/2.html)。
-
-#### 3.13 手动发送页面浏览事件 \(sendPage\) {#1313}
+#### 3.9 手动发送页面浏览事件 sendPage {#139}
 
 在默认情况下，由于用户浏览网站的交互行为导致当前页面的 URL 产生变化时，GrowingIO 的 Web JS SDK 会发送一个 page 类型的请求。在一些特殊的情况下，例如用户在访问单页应用（Single Page Application）类型的网站时，用户的操作会导致业务上面理解的页面产生了变化，但是当前的 URL 可能并没有改变。
 
@@ -655,6 +595,8 @@ GrowingIO 提供两种采集，元素浏览和元素点击/修改等交互行为
 ```
 
 JS代码请以售前人员提供的为主，进行正确添加。
+
+至此您的 SDK 整合已经完成，我们就可以接收您的数据，之后您可以登录 www.growingio.com 的网站即可开始进行圈选。
 
 #### 4.7 **手动设置采集文本信息**
 
