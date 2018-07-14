@@ -5,7 +5,7 @@
   * ​[2. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#ios-sdk-api)[在已有项目中添加小程序应用](xiao-cheng-xu-sdk.md#zai-yi-you-xiang-mu-zhong-tian-jia-xiao-cheng-xu-ying-yong) \| [创建新的GrowingIO项目](xiao-cheng-xu-sdk.md#chuang-jian-xin-de-growingio-xiang-mu)
 * ​[小程序SDK标准接入指南](xiao-cheng-xu-sdk.md#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
   * [1. 下载小程序采集SDK](xiao-cheng-xu-sdk.md#xia-zai-xiao-cheng-xu-cai-ji-sdk)
-  * [​2. 添加追踪代码​](xiao-cheng-xu-sdk.md#tian-jia-zhui-zong-dai-ma)
+  * [​2. 添加跟踪代码](xiao-cheng-xu-sdk.md#tian-jia-gen-zong-dai-ma)
   * ​[3. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)[添加请求服务器域名](xiao-cheng-xu-sdk.md#tian-jia-qing-qiu-fu-wu-qi-yu-ming)
   * ​[4. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)[检测数据](xiao-cheng-xu-sdk.md#jian-ce-shu-ju)
 * [SDK高级设置](xiao-cheng-xu-sdk.md#sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi)
@@ -64,7 +64,9 @@ $ curl https://assets.growingio.com/gio-minp.js -o gio-minp.js
 在微信小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前：
 
 ```text
-var gio = require("utils/gio-minp.js");// version 是你的小程序的版本号gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' });
+var gio = require("utils/gio-minp.js");// version 是你的小程序的版本号
+
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' });
 ```
 
 其中GrowingIO 项目ID、微信小程序的 AppID，即为**SDK安装页面** 第②部分 **代码框中生成的代码。**
