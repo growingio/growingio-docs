@@ -5,8 +5,6 @@
 * [3.分群下载 API](reporting-api.md#segmentation-api)
 * [4.规则逻辑 API 接口](reporting-api.md#rule-api)
 
-###  {#dashboard-api}
-
 注意：
 
 * 本页 API 中的 project\_id、dashboard\_id、chart\_id 字段，均可在项目页面url中找到，如："[https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R](https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R)"  中的 "nxog09md" 和 "YoX28w7R" 分别是 project\_id 和dashboard\_id。
@@ -16,24 +14,45 @@
 
 获取看板中的图表信息
 
-**1.1 Resource**
+{% api-method method="get" host="https://www.growingio.com/projects/:project\_id/dashboards/:dashboard\_id.json" path="" %}
+{% api-method-summary %}
 
-GET [https://www.growingio.com/projects/:project\_id/dashboards/:dashboard\_id.json](https://www.growingio.com/projects/:project_id/dashboards/:dashboard_id.json)
+{% endapi-method-summary %}
 
-#### 1.2 Authorization {#authorization}
+{% api-method-description %}
 
-在 Header 里面添加两个属性：
+{% endapi-method-description %}
 
-| 名字 | 类型 | 描述 | 示例 |
-| --- | --- | --- |
-| X-Client-Id | String | GrowingIO 分配的公钥，请在 GrowingIO 后台“项目配置”页面获取 | X-Client-Id: 123abc |
-| Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="dashboard\_id" type="string" required=true %}
+看板 id
+{% endapi-method-parameter %}
 
-#### 1.3 Response {#response}
+{% api-method-parameter name="project\_id" type="string" required=true %}
+项目 id
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
-Status Code: 200 OK
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+ 认证 Token，见 API 认证文档
+{% endapi-method-parameter %}
 
-```text
+{% api-method-parameter name="X-Client-Id" type="string" required=true %}
+GrowingIO 分配的公钥，见 API 认证文档
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
 {
   id: "Dashboard Uid",
   name: "Dashboard Name",
@@ -53,37 +72,70 @@ Status Code: 200 OK
   ]
 }
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
 
 ### 2.单图数据下载 API {#chart-api}
 
 获取单图数据（单图下载每秒限速 2 次）
 
-#### 2.1 Resource {#resource}
+{% api-method method="get" host="https://www.growingio.com/projects/:project\_id/charts/:chart\_id.json" path="" %}
+{% api-method-summary %}
 
-GET [https://www.growingio.com/projects/:project\_id/charts/:chart\_id.json](https://www.growingio.com/projects/:project_id/charts/:chart_id.json)
+{% endapi-method-summary %}
 
-#### 2.2 Authorization {#authorization}
+{% api-method-description %}
 
-在 Header 里面添加两个属性：
+{% endapi-method-description %}
 
-| 名字 | 类型 | 描述 | 示例 |
-| --- | --- | --- |
-| X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
-| Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="chart\_id" type="string" required=true %}
+单图 id
+{% endapi-method-parameter %}
 
-#### 2.3 Query Parameter {#query-parameter}
+{% api-method-parameter name="project\_id" type="string" required=true %}
+项目 id
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
-| 名字 | 类型 | 描述 | 示例 |
-| --- | --- | --- | --- |
-| startTime | integer | 数据起始时间 | 1462118400000 |
-| endTime | integer | 数据结束时间 | 1462118400000 |
-| interval | integer | 数据间隔 | 3600000 \(小时\) 86400000 \(天\) 604800000 \(周\) 2592000000 \(月\) |
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+认证 Token，见 API 认证文档
+{% endapi-method-parameter %}
 
-#### 2.4 Responses {#responses}
+{% api-method-parameter name="X-Client-Id" type="string" required=true %}
+GrowingIO 分配的公钥，见 API 认证文档
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
-Status Code: 200 OK
+{% api-method-query-parameters %}
+{% api-method-parameter name="interval" type="integer" required=false %}
+数据粒度，3600000\(小时\)，86400000\(天\)，604800000\(周\), 2592000000\(月\)，默认为天
+{% endapi-method-parameter %}
 
-```text
+{% api-method-parameter name="endTime" type="integer" required=true %}
+数据结束时间，unix 毫秒时间戳
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="startTime" type="integer" required=true %}
+数据起始时间，unix 毫秒时间戳
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
 {
   id: "Chart Uid",
   name: "Chart Name",
@@ -118,33 +170,52 @@ Status Code: 200 OK
   ]
 }
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
 
 ### 3.分群下载 API {#segmentation-api}
 
 #### 3.1 获取分群列表 {#resource}
 
-**3.1.1  Resource** 
+{% api-method method="get" host="https://www.growingio.com/projects/:project\_id/segmentations.json" path="" %}
+{% api-method-summary %}
 
-GET [https://www.growingio.com/projects/:project\_id/segmentations.json](https://www.growingio.com/projects/:project_id/segmentations.json)
+{% endapi-method-summary %}
 
-**3.1.2 Authorization**
+{% api-method-description %}
 
-在 Header 里面添加两个属性：
+{% endapi-method-description %}
 
-| 名字 | 类型 | 描述 | 示例 |
-| --- | --- | --- |
-| X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
-| Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="project\_id" type="string" required=true %}
+项目 id
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
-**3.1.3  Parameter**
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+认证 Token，见 API 认证文档
+{% endapi-method-parameter %}
 
-无
+{% api-method-parameter name="X-Client-Id" type="string" required=true %}
+GrowingIO 分配的公钥，见 API 认证文档
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
-**3.1.4 Responses**
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
 
-Status Code: 200 OK
+{% endapi-method-response-example-description %}
 
-```text
+```
 [
   {
     id: "Segmentation Uid",
@@ -163,79 +234,125 @@ Status Code: 200 OK
   ...
 ]
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 #### 3.2 获取特定分群的用户列表 {#resource}
 
-**3.2.1 Resource**
+{% api-method method="get" host="https://www.growingio.com/projects/:project\_id/segmentations/:segmentation\_id/users.csv" path="" %}
+{% api-method-summary %}
 
-GET [https://www.growingio.com/projects/:project\_id/segmentations/:segmentation\_id/users.csv](https://www.growingio.com/projects/:project_id/segmentations/:segmentation_id/users.csv)
+{% endapi-method-summary %}
 
-**3.2.2 Authorization**
+{% api-method-description %}
 
-在 Header 里面添加两个属性：
+{% endapi-method-description %}
 
-| 名字 | 类型 | 描述 | 示例 |
-| --- | --- | --- |
-| X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
-| Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="segmentation\_id" type="string" required=true %}
+分群 id
+{% endapi-method-parameter %}
 
-**3.2.3 Query Parameter**
+{% api-method-parameter name="project\_id" type="string" required=true %}
+项目 id
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
-无
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+认证 Token，见 API 认证文档
+{% endapi-method-parameter %}
 
-**3.2.4 Responses**
+{% api-method-parameter name="X-Client-Id" type="string" required=true %}
+GrowingIO 分配的公钥，见 API 认证文档
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
-Status Code: 200 OK  
-CSV 文件以 Tab 分隔，内容是上传的 CS 属性字段
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+以 Tab 分割的 csv 文件，内容为上传的用户属性
+{% endapi-method-response-example-description %}
 
-```text
-cs1_name    cs2_name    
+```
+cs1    name    
 12249    GrowingIO
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+\*\*\*\*
 
 ### 4.规则逻辑 API 接口 {#rule-api}
 
-获取圈选元素的规则
+获取圈选元素定义
 
-#### 4.1 Resource {#resource}
+{% api-method method="get" host="https://www.growingio.com/projects/:project\_id/rules.csv" path="" %}
+{% api-method-summary %}
 
-GET [https://www.growingio.com/projects/:project\_id/rules.csv](https://www.growingio.com/projects/:project_id/rules.csv)
+{% endapi-method-summary %}
 
-#### 4.2 Authorization {#authorization}
+{% api-method-description %}
 
-在 Header 里面添加两个属性：
+{% endapi-method-description %}
 
-| 名字 | 类型 | 描述 | 示例 |
-| --- | --- | --- |
-| X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
-| Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="project\_id" type="string" required=true %}
+项目 id
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
-#### 4.3 Query Parameter {#query-parameter}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+认证 Token，见 API 认证文档
+{% endapi-method-parameter %}
 
-无
+{% api-method-parameter name="X-Client-Id" type="string" required=true %}
+GrowingIO 分配的公钥，见 API 认证文档
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
-#### 4.4 Responses {#responses}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+以 Tab 分割的 csv 文件
+{% endapi-method-response-example-description %}
 
-Status Code: 200 OK  
-CSV 文件内容以 Tab 分隔
-
-```text
+```
 ruleId,eventName,eventType
 f2503720,元素_注册按钮,clck
 ```
+{% endapi-method-response-example %}
 
-Status Code: 401 Unauthorized
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
 
-```text
+{% endapi-method-response-example-description %}
+
+```
 {
   "message": "Unauthorized",
   "errors": []
 }
 ```
+{% endapi-method-response-example %}
 
-Status Code: 500 Server Error
+{% api-method-response-example httpCode=500 %}
+{% api-method-response-example-description %}
 
-```text
+{% endapi-method-response-example-description %}
+
+```
 {
   "message": "Request timeout",
   "errors": [
@@ -246,6 +363,10 @@ Status Code: 500 Server Error
   ]
 }
 ```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 
 
