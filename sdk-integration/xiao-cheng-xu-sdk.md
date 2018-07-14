@@ -5,7 +5,7 @@
   * ​[2. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#ios-sdk-api)[在已有项目中添加小程序应用](xiao-cheng-xu-sdk.md#zai-yi-you-xiang-mu-zhong-tian-jia-xiao-cheng-xu-ying-yong) \| [创建新的GrowingIO项目](xiao-cheng-xu-sdk.md#chuang-jian-xin-de-growingio-xiang-mu)
 * ​[小程序SDK标准接入指南](xiao-cheng-xu-sdk.md#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
   * [1. 下载小程序采集SDK](xiao-cheng-xu-sdk.md#xia-zai-xiao-cheng-xu-cai-ji-sdk)
-  * [​2. 添加跟踪代码](xiao-cheng-xu-sdk.md#tian-jia-gen-zong-dai-ma)
+  * [​2. 添加追踪代码​](xiao-cheng-xu-sdk.md#tian-jia-zhui-zong-dai-ma)
   * ​[3. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)[添加请求服务器域名](xiao-cheng-xu-sdk.md#tian-jia-qing-qiu-fu-wu-qi-yu-ming)
   * ​[4. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)[检测数据](xiao-cheng-xu-sdk.md#jian-ce-shu-ju)
 * [SDK高级设置](xiao-cheng-xu-sdk.md#sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi)
@@ -25,7 +25,7 @@
 
 `*注：如果已有项目且集成了其他应用，新建的项目，数据不能和原有项目中的数据合并。例如：拥有小程序A，iOS端产品，如果各个应用集成在同一个项目ID中，且都上传登录用户ID，登录用户计算时会去重，并且在使用高级分析功能时，可以同时选择跨平台的行为和登录用户。但是如果小程序和APP不在同一个项目ID下，登录用户计算分别在两个项目中，不会去重计算；高级分析功能中，也不能跨平台选择登录用户ID和行为。`
 
-如果你还未注册 GrowingIO，请[点击链接访问注册页面](https://accounts.growingio.com/signup?utm_source=docs&utm_content=minp)，完成注册后你会看到使用引导，点击“**添加跟踪代码**“即可开始。
+如果你还未注册 GrowingIO，请[点击链接访问注册页面](https://accounts.growingio.com/signup?utm_source=docs&utm_content=minp)，完成注册后你会看到使用引导，点击“**添加追踪代码**“即可开始。
 
 ### 在已有项目中添加小程序应用
 
@@ -41,9 +41,9 @@
 
 ### 创建新的GrowingIO项目
 
-如果你还未注册 GrowingIO，请[点击链接访问注册页面](https://accounts.growingio.com/signup?utm_source=docs&utm_content=minp)，完成注册后你会看到使用引导，点击“**添加跟踪代码**“即可开始。
+如果你还未注册 GrowingIO，请[点击链接访问注册页面](https://accounts.growingio.com/signup?utm_source=docs&utm_content=minp)，完成注册后你会看到使用引导，点击“**添加追踪代码**“即可开始。
 
-如果你已经注册 GrowingIO，使用小程序分析功能需要用一个全新的项目的话，在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“**项目概览**“。在项目概览页面，点击“**新建项目**“来创建一个新项目。在创建好的新项目里，你会看到使用引导，点击“**添加跟踪代码**“即可开始。![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyRLnN1UW6BL8O3mEr%2F-LGySEePLI1xZvcmo0KX%2Fimage.png?alt=media&token=c9960fdc-81b9-42a1-8604-069d0ad6bdaf)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyRLnN1UW6BL8O3mEr%2F-LGySTNxnseL1EsH7kN8%2Fimage.png?alt=media&token=91d05ea5-95d4-4104-b228-0f1837d5201b)
+如果你已经注册 GrowingIO，使用小程序分析功能需要用一个全新的项目的话，在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“**项目概览**“。在项目概览页面，点击“**新建项目**“来创建一个新项目。在创建好的新项目里，你会看到使用引导，点击“**添加追踪代码**“即可开始。![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyRLnN1UW6BL8O3mEr%2F-LGySEePLI1xZvcmo0KX%2Fimage.png?alt=media&token=c9960fdc-81b9-42a1-8604-069d0ad6bdaf)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyRLnN1UW6BL8O3mEr%2F-LGySTNxnseL1EsH7kN8%2Fimage.png?alt=media&token=91d05ea5-95d4-4104-b228-0f1837d5201b)
 
 在代码集成页面，选择“**小程序**“平台，输入**应用名称**和**小程序 AppID**，点击下一步。
 
@@ -59,14 +59,12 @@ $ curl https://assets.growingio.com/gio-minp.js -o gio-minp.js
 
 当下载到 gio-minp.js 文件以后，把文件放在微信小程序项目里，比如 utils 目录下。下面会假设 SDK 文件放在 utils 目录下。
 
-### 添加跟踪代码
+### 添加追踪代码
 
 在微信小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前：
 
 ```text
-var gio = require("utils/gio-minp.js");// version 是你的小程序的版本号
-
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' });
+var gio = require("utils/gio-minp.js");// version 是你的小程序的版本号gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' });
 ```
 
 其中GrowingIO 项目ID、微信小程序的 AppID，即为**SDK安装页面** 第②部分 **代码框中生成的代码。**
@@ -122,7 +120,7 @@ gio-minp 默认是用 module.exports, 对于 import 不支持，可以修改 gio
 
 ## SDK高级设置&数据采集配置
 
-### SDK 微信用户属性设 置 {#wechat-user-attributions-setting}
+### SDK 微信用户属性设置
 
 作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。下面是专门针对用户的三个接口。
 
