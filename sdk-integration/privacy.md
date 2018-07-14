@@ -1,4 +1,4 @@
-# SDK 工作方式与安全性说明
+# SDK 简介与安全性说明
 
 * [1.SDK工作方式](privacy.md#1)
   * [1.1 JS SDK](privacy.md#1-1)
@@ -59,7 +59,7 @@ GrowingIO使用SSL对数据传输进行加密。
 
 ### 4.符合欧盟《一般数据保护条例》 \(GDPR\) {#4}
 
-GrowingIO在Mobile SDK 2.3.2，JS SDK 2.1.8及以上版本中提供了以下的API供开发者调用满足客户网站或移动应用符合欧盟区的《一般数据保护条例》\(GDPR\)。
+2018年5月21日起，GrowingIO在Web、Android和iOS SDK中提供了以下的API供开发者调用满足客户网站或移动应用符合欧盟区的《一般数据保护条例》\(GDPR\)。
 
 * GrowingIO SDK提供默认是否开启数据采集的配置项
 * GrowingIO SDK提供关闭或开启全局数据采集的接口，开发者可在APP中任何场景时调用该接口
@@ -67,7 +67,7 @@ GrowingIO在Mobile SDK 2.3.2，JS SDK 2.1.8及以上版本中提供了以下的A
 
 #### 4.1 接口内容 {#4-1}
 
-| 接口名称 | Android | iOS | JS |
+| 接口名称 | Android | iOS | Web |
 | --- | --- | --- | --- |
 | 全局配置项 | .disableDataCollect\(\) |  |  |
 | 关闭或开启全局数据采集 | // 不采集数据 GrowingIO.getInstance\(\).disableDataCollect\(\); // 收集数据 GrowingIO.getInstance\(\).enableDataCollect\(\) | disableDataCollect    enableDataCollect | // 开启gdpr，停止数据采集 window.gio\('config',{"dataCollect":"false"}\); // 关闭gdpr，开始数据采集 window.gio\('config',{"dataCollect":"true"}\); 放在send之前 |

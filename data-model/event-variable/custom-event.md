@@ -3,11 +3,11 @@
 * [步骤](custom-event.md#bu-zhou)
   * [1.从数据需求到具体 “指标+维度”](custom-event.md#1-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)
   * [2.在「事件和变量」中完成配置](custom-event.md#2-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
-    * 事件级变量
-    * 自定义事件
-    * 页面级变量
-    * 转化变量
-    * 用户变量
+    * [事件级变量](custom-event.md#21-shi-jian-ji-bian-liang)
+    * [自定义事件](custom-event.md#22-zi-ding-yi-shi-jian)
+    * [页面级变量](custom-event.md#23-ye-mian-ji-bian-liang)
+    * [转化变量](custom-event.md#24-zhuan-hua-bian-liang)
+    * [用户变量](custom-event.md#25-yong-hu-bian-liang)
   * [3.代码部署](custom-event.md#3-dai-ma-bu-shu)
   * [4.数据校验](custom-event.md#4-shu-ju-xiao-yan)
 
