@@ -1,37 +1,46 @@
 # Web JS SDK
 
-* [集成最新 SDK 和 API 导入](web-js-sdk.md#sdk-api)
-  * [1.SDK 代码安装](web-js-sdk.md#1-sdk)
+* [新一代2.x版本 SDK 与 API 手册](web-js-sdk.md#sdk-api)
+  * [1.SDK 集成](web-js-sdk.md#1-sdk)
   * [2.Web JS SDK 系统变量](web-js-sdk.md#12)
   * [3.Web JS SDK 2.1 API](web-js-sdk.md#13)
     * [3.1 API 简介](web-js-sdk.md#131)
-    * [3.2 init ](web-js-sdk.md#132)
+    * [3.2 初始化 \(init\)](web-js-sdk.md#132)
     * [3.3 设置自定义事件和事件级变量（track）](web-js-sdk.md#track)
     * [3.4 设置页面级变量（page.set）](web-js-sdk.md#134)
     * [3.5 设置转化变量（evar.set）](web-js-sdk.md#135)
     * [3.6 设置用户级变量（people.set）](web-js-sdk.md#136)
     * [3.7 设置登录用户id（setUserId）](web-js-sdk.md#137)
     * [3.8 上传登录用户 ID（clearUserId）](web-js-sdk.md#138)
-    * [3.9 手动发送页面浏览事件 sendPage](web-js-sdk.md#139)
+    * [3.9 设置数据采集黑名单 \(growing-ignore\)​](web-js-sdk.md#139)
+    * [3.10 开启输入文本框内容采集 \(growing-track\)​](web-js-sdk.md#1310)
+    * [3.11 手动设置采集文本信息 \(data-growing-title](web-js-sdk.md#1311)
+    * [3.12 手动设置采集位置信息 \(data-growing-idx\)​](web-js-sdk.md#1312)
+    * [​3.13 手动发送页面浏览事件 \(sendPage\)​](web-js-sdk.md#1313)
   * [4.自定义数据上传 & 配置指导](web-js-sdk.md#14)
-* [1.x 旧版本 SDK 升级指导](web-js-sdk.md#2)
+  * [5.注意事项](web-js-sdk.md#35)
+* [上一代1.x版本 SDK 升级指导](web-js-sdk.md#2)
   * [1. 重新集成 SDK](web-js-sdk.md#21)
   * [2. 迁移用户属性字段（CS字段）](web-js-sdk.md#22)
   * [3. 迁移页面属性字段（PS字段）](web-js-sdk.md#23)
   * [4. 迁移自定义事件（埋点事件）](web-js-sdk.md#24)
   * [5. 数据校验](web-js-sdk.md#25)
-* [如何集成 1.x 旧版本 SDK](web-js-sdk.md#3)
+* [上一代1.x版本 SDK 使用说明](web-js-sdk.md#3)
   * [1.获取 JS SDK](web-js-sdk.md#31)
   * [2.整合 JS SDK 至 web 环境](web-js-sdk.md#32)
   * [3.用户自定义维度](web-js-sdk.md#33)
   * [4.JS SDK 高级功能说明](web-js-sdk.md#34)
-  * [5.注意事项](web-js-sdk.md#35)
+  * [5.注意事项](web-js-sdk.md#35-1)
 
-## 集成最新 SDK 和 API 导入 {#sdk-api}
+## 新一代2.x版本 SDK 与 API 手册 {#sdk-api}
 
-### 1.SDK 代码安装 {#1-sdk}
+2018年初 GrowingIO 发布了数据采集能力更强大，接口更丰富，兼容性更强的新一代2.x版本SDK。
 
-#### 1.1 **页面代码**
+GrowingIO JS SDK 支持 IE6 以上的 IE 浏览器、360 浏览器、谷歌浏览器、搜狗浏览器、火狐浏览器、QQ 浏览器、Safari 浏览器、Maxthon、Mobile 端浏览器等市面上所有主流浏览器，并且全面支持 H5。
+
+### 1.SDK 集成 {#1-sdk}
+
+#### 1.1 跟踪**代码**
 
 请将以下的页面代码放置到需要分析的页面中的 &lt;head&gt; 和 &lt;/head&gt; 标签之间，即可完成 Web JS SDK 2.1页面代码的安装。请注意使用**具体的项目 ID** 替换代码中的 **your projectId** 。
 
@@ -58,8 +67,6 @@
 
 ### 2.Web JS SDK系统变量 {#12}
 
-Web JS SDK 可以配置一些系统变量来控制 Web JS SDK 的数据发送。
-
 #### 2.1 hashtag 系统变量
 
 作用：启用 hashtag 作为标识页面的一部分
@@ -78,7 +85,7 @@ gio('config', {'hashtag':true});
 
 作用：禁止元素浏览量采集
 
-除点击、修改、提交等用户行为数据的采集，GrowingIO 还提供元素浏览量\(简称imp\)的无埋点采集。对于内容基本固定的网站，可以直接禁用元素浏览量采集。
+除点击、修改、提交等用户行为数据的采集，GrowingIO 还提供元素浏览量\(简称imp\)的无埋点采集功能。对于内容基本固定的网站，可以直接禁用元素浏览量采集。
 
 ```text
 gio('config', {'imp':false});
@@ -120,7 +127,7 @@ gio('setUserId', userId);
 gio('clearUserId');
 ```
 
-#### 3.2 init  {#132}
+#### 3.2 初始化 \(init\)​ {#132}
 
 初始化参数，用来设置项目ID和一些常用的配置项：
 
@@ -276,7 +283,65 @@ gio('setUserId', '1234567890');
 gio('clearUserId');
 ```
 
-#### 3.9 手动发送页面浏览事件 sendPage {#139}
+#### 3.9 设置数据采集黑名单 \(growing-ignore\)​ {#139}
+
+如果您希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
+
+```text
+    <div growing-ignore='true'>
+      …
+    </div>
+```
+
+#### 3.10 开启输入文本框内容采集 \(growing-track\)​ {#1310}
+
+由于输入文本框可能涉及一些隐私信息，比如账号、密码等，GrowingIO在采集数据的时候默认不采集输入文本框的数据。如果您希望采集某些文本框输入内容，比如搜索词，可以在input标签中设置growing-track属性，这样该文本框中的输入内容就会被采集到。如果input类型是password，即使开启内容采集，也不会采集该文本框的输入内容。
+
+```text
+    <input type='text' growing-track='true' />
+```
+
+JS代码请以售前人员提供的为主，进行正确添加。
+
+至此您的 SDK 整合已经完成，我们就可以接收您的数据，之后您可以登录 www.growingio.com 的网站即可开始进行圈选。
+
+#### ​3.11 手动设置采集文本信息 \(data-growing-title\)​ {#1311}
+
+对于一些图片或者区块，可以通过设置 title 或者 data-growing-title 属性来设置采集点点文本。比如，
+
+```text
+<li data-growing-title="上一页" 
+                 class="ant-pagination-disabled ant-pagination-prev">
+  <a></a>
+</li>
+```
+
+这时，采集到的 li 结点的内容就是_"上一页"_。
+
+更多的文本信息规则，可以参考[第4节：What\(内容\)](https://sishen.gitbooks.io/gio-js-book/dom/4what.html)和[第1节：内容规则](https://sishen.gitbooks.io/gio-js-book/5/1.html)。
+
+#### 3.12 手动设置采集位置信息 \(data-growing-idx\) {#1312}
+
+除了内容以外，元素在列表里所在位置在某些场景下也是非常重要的信息，比如对于推荐广告位而言，我们是希望知道哪个位置的点击率最高。GrowingIO SDK 会自动识别列表元素，并附带上元素在列表里的位置。
+
+LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表内所有元素结点都会附带上位置信息。其他标签默认并不会带有位置信息，比如一些用 DIV 标签做的平铺容器。对于这种情况，可以使用 data-growing-idx。当在容器 DOM 结点上设置 data-growing-idx 属性，容器内的所有 DOM 元素同样，都会继承该属性值。比如
+
+```text
+<div data-growing-idx="1">
+  <div class="left-container">
+    <img src="" alt="图片1"/>
+  </div>
+  <div class="right-container">
+    <h3 class="title">
+      文章一标题
+    </h3>
+  </div>
+</div>
+```
+
+更多的位置信息规则，可以参考[第2节：位置规则](https://sishen.gitbooks.io/gio-js-book/5/2.html)。
+
+#### ​3.13 手动发送页面浏览事件 \(sendPage\)​ {#1313}
 
 在默认情况下，由于用户浏览网站的交互行为导致当前页面的 URL 产生变化时，GrowingIO 的 Web JS SDK 会发送一个 page 类型的请求。在一些特殊的情况下，例如用户在访问单页应用（Single Page Application）类型的网站时，用户的操作会导致业务上面理解的页面产生了变化，但是当前的 URL 可能并没有改变。
 
@@ -291,15 +356,43 @@ gio('sendPage');
 
 您的 APP 或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据指标及维度，具体请参考[相关文档](../data-model/event-variable/custom-event.md)。
 
-## 1.x 旧版本 SDK 升级指导 {#2}
+### 5.注意事项 {#35}
+
+#### 5.1 **Angular 1.4 以下版本冲突**
+
+目前 Angular 1.4 以下版本与GrowingIO使用的MutationObserver 有冲突，这个是 Angular 的 bug，不好解决。我们建议您升级到 Angular 1.4 或者按照上述“禁用显示内容采集”方法关闭 impression 记录。
+
+#### 5.2 **允许 iframe 加载**
+
+在GrowingIO 平台上使用可视化圈选指标功能需要使用 iframe 来加载目标页面。如果您的网站禁止了 iframe 加载，就无法正常使用圈选功能定义指标，需要设置允许iframe加载。
+
+如果您的网站使用https协议，需将配置修改成
+
+```text
+X-Frame-Options: Allow-From https://www.growingio.com
+```
+
+如果您的网站使用http协议，需将配置修改成
+
+```text
+X-Frame-Options: Allow-From http://www.growingio.com
+```
+
+#### 5.3 **请勿复写 window 对象**
+
+可视化圈选指标功能需要保证您的网站与GrowingIO平台之间的通信。如果window.top、window.parent、window.name、window.location被复写，将导致无法圈选。
+
+#### 5.4 **页面内部嵌入的 iframe 元素如何加载 SDK 和圈选** 
+
+iframe 元素可以将一个页面嵌入到另一个页面里，iframe 元素会创建包含另外一个文档的内联框架（即行内框架）。简单理解iframe可以将多个相互独立的页面展示在一页上。所以我们需要在iframe内部再次加载SDK代码收集iframe内部的元素浏览、点击数据。 同普通网页加载SDK方式相同，将SDK复制到iframe标签内部即可完成SDK安装。
+
+## 上一代1.x版本 SDK 升级指导 {#2}
 
 如果您目前使用的是 1.x 版本的 SDK，希望升级至 2.x 版本，请注意：您需要联系您的 GrowingIO 对接人，我们需要帮您开启后台 2.x 版本所对应功能。如果您直接集成 2.x 版本，而后台对应功能未开启的话，可能会造成数据丢失的问题。
 
 ### **1. 重新集成 SDK** {#21}
 
-* [Web JS SDK 开发文档](web-js-sdk-2.x/)
-
-Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据是否正常上传。开启 debug mode 的方式请见上述文档中初始化方法部分。
+请参考[添加 Web JS SDK 跟踪代码](web-js-sdk.md#11-gen-zong-dai-ma)
 
 ### **2. 迁移用户属性字段（CS字段）** {#22}
 
@@ -437,11 +530,9 @@ debug 工具的工作界面如下图：
 
 在 GrowingIO 分析后台，找到 “单图” - “新建事件分析”，然后在图表中选择您设计好的 “指标+维度”，查看是否有数据。当然，您需要首先确保您的自定义事件或变量确实有被触发。
 
-## 如何集成 1.x 旧版本 SDK {#3}
+## 上一代1.x版本 SDK 使用说明 {#3}
 
-GrowingIO 提供 JS SDK,将代码插入到客户的网页中以后我们就可以接收用户的行为数据了。
-
-我们的 JS SDK 支持 IE6 以上的 IE 浏览器、360 浏览器、谷歌浏览器、搜狗浏览器、火狐浏览器、QQ 浏览器、Safari 浏览器、Maxthon、Mobile 端浏览器，并且全面支持 H5，覆盖市面上主流的浏览器。
+如果您正在使用上一代1.x版本 SDK 且暂时不愿[进行迁移升级](web-js-sdk.md#2)，以下我们为您提供上一代1.x版本 SDK 使用说明
 
 ### 1.获取 JS SDK {#31}
 
