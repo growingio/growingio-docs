@@ -28,7 +28,7 @@
     * [默认的渠道来源跟踪](data-analytics/ads-tracking/default-channel-tracking.md)
   * [小程序概览](data-analytics/xiao-cheng-xu-gai-lan.md)
 * [添加跟踪代码](sdk-integration/README.md)
-  * [安全性说明](sdk-integration/privacy.md)
+  * [SDK工作方式与安全性说明](sdk-integration/privacy.md)
   * [Web JS SDK](sdk-integration/web-js-sdk.md)
   * [Android SDK](sdk-integration/android-sdk.md)
   * [iOS SDK](sdk-integration/ios-sdk.md)
