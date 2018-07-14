@@ -1,4 +1,4 @@
-# SDK工作方式与安全性说明
+# SDK 工作方式与安全性说明
 
 * [1.SDK工作方式](privacy.md#1)
   * [1.1 JS SDK](privacy.md#1-1)
