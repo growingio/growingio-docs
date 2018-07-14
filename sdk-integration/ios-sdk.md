@@ -1,8 +1,8 @@
 # iOS SDK
 
 * [集成最新 SDK 和 API 导入](ios-sdk.md#ji-cheng-sdk-he-api-dao-ru)
-  * [1. SDK 代码安装](ios-sdk.md#1-sdk-dai-ma-an-zhuang)
-  * [2. iOS SDK API](ios-sdk.md#ios-sdk-api)
+  * [1. SDK](ios-sdk.md#1-sdk-dai-ma-an-zhuang) [集成](ios-sdk.md#ji-cheng-sdk-he-api-dao-ru)
+  * [2. iOS SDK API](ios-sdk.md#ios-sdk-api) 
   * [3. 自定义数据上传&配置指导](ios-sdk.md#3-zi-ding-yi-shu-ju-shang-chuan-pei-zhi-zhi-dao)
 * [1.x 旧版本 SDK 升级指导](ios-sdk.md#sdk-1x-版本升级指导)
   * [1. 重新集成 SDK](ios-sdk.md#1-zhong-xin-ji-cheng-sdk)
@@ -12,13 +12,13 @@
   * [5. 数据校验](ios-sdk.md#5-shu-ju-xiao-yan)
 * [如何集成 1.  x 旧版本 SDK](ios-sdk.md#ru-he-ji-cheng-1x-ban-ben-sdk)
 
-## 集成最新 SDK 和 API 导入
+### 集成最新 SDK 和 API 导入
 
 ### 1. SDK 代码安装
 
 如果您的 iOS 项目中集成了 Firebase SDK，请确保使用的 Firebase SDK 版本在 4.8.1 及以上，并且集成 GrowingIO SDK 2.1.1 及以上版本，否则会造成数据采集不到的情况。
 
-#### 1. 选择 SDK 安装方式
+#### 1. 选择 SDK 集成方式
 
 请确保您的 XCode 版本为 7.3 或者其后的版本。
 
@@ -62,8 +62,6 @@ GrowingIO 支持两种 iOS SDK 安装方式：
 | libicucore.tbd | 用于APP连接圈选页面解析 |
 | libsqlite3.tbd | 存储日志 |
 | CoreLocation.framework | 用于读取地理位置信息（如果您的app有权限） |
-
-**添加完成以后，库的引用如下:**
 
 **提醒：**
 
