@@ -1,5 +1,25 @@
 # 事件和指标
 
+* ​[事件和指标的关系](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#shi-jian-he-zhi-biao-de-guan-xi)​
+  * ​[什么是 “事件”](https://growingio.gitbook.io/docs/~/edit/drafts/-LGyNfnU9qfd7AXzFkhu/data-model/yu-ding-yi-shu-ju#shen-me-shi-shi-jian)​
+  * ​[“指标” 是对事件的度量](https://growingio.gitbook.io/docs/~/edit/drafts/-LGyNfnU9qfd7AXzFkhu/data-model/yu-ding-yi-shu-ju#zhi-biao-shi-dui-shi-jian-de-du-liang)​
+* ​[预定义指标](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#yu-ding-yi-zhi-biao)​
+  * ​[第一部分：访问级指标](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A%E8%AE%BF%E9%97%AE%E7%BA%A7%E6%8C%87%E6%A0%87)​
+  * ​[第二部分：用户级指标](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%9A%E7%94%A8%E6%88%B7%E7%BA%A7%E6%8C%87%E6%A0%87)​
+  * ​[第三部分：页面级指标](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%9A%E9%A1%B5%E9%9D%A2%E7%BA%A7%E6%8C%87%E6%A0%87)​
+  * ​[第四部分：事件级指标](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86%EF%BC%9A%E4%BA%8B%E4%BB%B6%E7%BA%A7%E6%8C%87%E6%A0%87)​
+* ​[自定义-无埋点圈选事件实施和管理](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#zi-ding-yi-wu-mai-dian-quan-xuan-shi-jian-shi-shi-he-guan-li)​
+  * ​[Web圈选](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#web-quan-xuan)​
+  * ​[App圈选](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#app-quan-xuan)​
+  * ​[小程序圈选](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#xiao-cheng-xu-quan-xuan)​
+  * ​[圈选命名规范](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#quan-xuan-ming-ming-gui-fan)​
+* ​[自定义-打点事件事件实施和管理](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#zi-ding-yi-da-dian-shi-jian-shi-jian-shi-shi-he-guan-li)​
+  * ​[总体流程](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#zong-ti-liu-cheng)​
+  * ​[第一步：从数据需求到具体 “指标+维度”](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#di-yi-bu-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)​
+  * ​[第二步：在 ”打点管理“ 中完成配置](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#di-er-bu-zai-da-dian-guan-li-zhong-wan-cheng-pei-zhi)​
+  * ​[第三步：代码部署](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#di-san-bu-dai-ma-bu-shu)​
+  * ​[第四步：数据校验](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-model/yu-ding-yi-shu-ju#di-si-bu-shu-ju-xiao-yan)​
+
 ## 事件和指标的关系 {#shi-jian-he-zhi-biao-de-guan-xi}
 
 ### **什么是 “事件”** {#shen-me-shi-shi-jian}
