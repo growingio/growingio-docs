@@ -48,6 +48,7 @@
     * [自定义事件和变量的配置](data-model/event-variable/custom-event.md)
     * [自定义变量场景](data-model/event-variable/custom-variable.md)
     * [小程序事件和变量](data-model/event-variable/shi-jian-he-bian-liang-xiao-cheng-xu.md)
+  * [事件和指标](data-model/shi-jian-he-zhi-biao.md)
 * [系统配置](configuration/README.md)
   * [项目管理](configuration/project-configuration.md)
   * [用户管理](configuration/user-configuration.md)
