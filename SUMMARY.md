@@ -38,6 +38,7 @@
   * [数据模型](data-model/predefined/README.md)
     * [指标](data-model/predefined/predefined-metrics.md)
     * [维度](data-model/predefined/predefined-dimensions.md)
+  * [“事件、指标、维度、变量” 是什么](data-model/shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md)
   * [圈选](data-model/circle/README.md)
     * [Web圈选](data-model/circle/circle-web.md)
     * [移动端圈选](data-model/circle/circle-app.md)
