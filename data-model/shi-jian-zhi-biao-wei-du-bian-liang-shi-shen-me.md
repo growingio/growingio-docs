@@ -80,13 +80,26 @@ GrowingIO 通过 sdk 默认采集很多[预定义维度](predefined/predefined-d
 
 #### 事件分析
 
-
+![&#x4E8B;&#x4EF6;&#x5206;&#x6790;-&#x9009;&#x62E9;&#x7EF4;&#x5EA6;&#x62C6;&#x5206;&#x6307;&#x6807;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LHWdQehi-dq3IywOtVW%2F-LHWfW8KxFrh0wX_UKeN%2Fimage.png?alt=media&token=7e68f7ad-5b16-4d05-a0c5-bd09e4d280be)
 
 #### 漏斗分析
 
+![&#x6F0F;&#x6597;&#x5206;&#x6790;-&#x901A;&#x8FC7;&#x7EF4;&#x5EA6;&#x5BF9;&#x6F0F;&#x6597;&#x6B65;&#x9AA4;&#x8FDB;&#x884C;&#x7EC6;&#x5206;&#x6216;&#x8FC7;&#x6EE4;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LHWdQehi-dq3IywOtVW%2F-LHWgDnrvDSVb1JMTh90%2Fimage.png?alt=media&token=728eb5c4-5548-4430-8ee3-f71e2db5604a)
+
 #### 留存分析
 
+![&#x7559;&#x5B58;&#x5206;&#x6790;-&#x901A;&#x8FC7;&#x7EF4;&#x5EA6;&#x5BF9;&#x8D77;&#x59CB;&#x6216;&#x7559;&#x5B58;&#x884C;&#x4E3A;&#x8FDB;&#x884C;&#x7EC6;&#x5206;&#x6216;&#x8FC7;&#x6EE4;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LHWdQehi-dq3IywOtVW%2F-LHWgUGN2OSkxLE4PL66%2Fimage.png?alt=media&token=d63e2cc0-3f7b-4025-9aa5-c254af5238e6)
+
 #### 用户分群
+
+![&#x7528;&#x6237;&#x5206;&#x7FA4;-&#x9009;&#x62E9;&#x7EF4;&#x5EA6;&#x4F5C;&#x4E3A;&#x5206;&#x7FA4;&#x6761;&#x4EF6;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LHWdQehi-dq3IywOtVW%2F-LHWge_wOn0MNsTdAdyK%2Fimage.png?alt=media&token=7d55084b-bdae-4908-bc90-48e8c65c70f3)
+
+![&#x7528;&#x6237;&#x5206;&#x7FA4;-&#x901A;&#x8FC7;&#x7EF4;&#x5EA6;&#x5BF9;&#x67D0;&#x4E2A;&#x6B65;&#x9AA4;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LHWdQehi-dq3IywOtVW%2F-LHWgj49aclorV16l3kH%2Fimage.png?alt=media&token=4989ca17-ad4a-4339-830b-9226faa0c996)
+
+
+
+  
+
 
 
 
