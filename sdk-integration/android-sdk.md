@@ -1,13 +1,13 @@
 # Android SDK
 
-* [集成](android-sdk.md#1-ji-cheng)
+* [集成](android-sdk.md#ji-cheng)
   * [添加依赖](android-sdk.md#1-tian-jia-yi-lai)
   * [添加 URLScheme 和网络权限](android-sdk.md#2-tian-jia-urlscheme-he-wang-luo-quan-xian)
   * [初始化SDK](android-sdk.md#3-chu-shi-hua-sdk)
   * [代码混淆](android-sdk.md#4-dai-ma-hun-xiao)
-* [SDK API](android-sdk.md#2-android-sdk-api)
-  * [重要配置项 API](android-sdk.md#5重要配置选项)
-  * [自定义事件和变量 API](android-sdk.md#5重要配置选项-1)
+* [SDK API](android-sdk.md#sdk-api)
+  * [重要配置项 API](android-sdk.md#1-zhong-yao-pei-zhi-xiang-api)
+  * [自定义事件和变量 API](android-sdk.md#2-zi-ding-yi-shi-jian-he-bian-liang-api)
 * [旧版本升级](android-sdk.md#jiu-ban-ben-sheng-ji)
   * [更新 SDK 版本号为最新版本](android-sdk.md#1-geng-xin-sdk-ban-ben-hao-wei-zui-xin-ban-ben)
   * [迁移用户属性字段（CS字段）](android-sdk.md#2-qian-yi-yong-hu-shu-xing-zi-duan-cs-zi-duan)
@@ -134,8 +134,6 @@ public class MyApplication extends Application {
 
 （4）`setChannel`方法的参数定义了“自定义App渠道”这个维度的值。
 
-添加代码之后，**请先 Clean 项目**，然后再进行编译。
-
 ### 4. 代码混淆
 
 如果你启用了混淆，请在你的proguard-rules.pro中加入如下代码：
@@ -163,7 +161,7 @@ public class MyApplication extends Application {
 R.string.growingio*
 ```
 
-**添加代码之后，请先Clean项目，然后再进行编译，并在你的 Android App 安装了 SDK 后重新启动几次 App，以保证行为采集数据自动发送给 GrowingIO，完成检测。**
+**添加代码之后，请先Clean项目，然后再进行编译，并在你的 Android App 安装了 SDK 后重新启动几次 App，保证行为采集数据自动发送给 GrowingIO，以便顺利完成检测。**
 
 ## SDK API
 
@@ -256,9 +254,9 @@ GrowingIO.startWithConfiguration(this, new Configuration()
 
 #### **\(7\) 调试查看发送数据日志**
 
-为了方便开发人员调试 GrowingIO SDK ，我们提供了调试 API 和 [Mobile Debugger](growingio-debugger.md#shi-yong-mobile-debugger-ce-shi-shu-ju) 两种方式查看 APP 采集数据的发送，强烈建议您使用 Mobile Debugger 在每一次产品上线前检查您的数据发送，其中调试 API 使用说明如下：
+为了方便开发人员调试 GrowingIO SDK ，我们提供了调试 API 和 [Mobile Debugger](growingio-debugger.md#growingio-mobile-debugger) 两种方式查看 APP 采集数据的发送，强烈建议您使用 Mobile Debugger 在每一次产品上线前检查您的数据发送，其中调试 API 使用说明如下：
 
-`setDebugMode(true)` ：查看数据采集发送日志，默认值为`false` 不开启；
+`setDebugMode(true)` ：查看数据采集发送日志，默认值为`false`不开启；
 
 `setTestMode(true)`：实时发送数据，不遵循移动网络状态下数据发送大小限制和缓存策略，默认值为`false`不开启；
 

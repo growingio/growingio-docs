@@ -60,7 +60,9 @@ evar：“转化变量” 数据
 
 ppl：“用户变量” 数据
 
-###  GrowingIO Mobile Debugger
+
+
+### GrowingIO Mobile Debugger
 
 #### 启动Mobile Debugger
 
