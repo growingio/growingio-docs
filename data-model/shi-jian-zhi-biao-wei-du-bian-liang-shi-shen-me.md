@@ -32,15 +32,23 @@
 
 您在使用 GrowingIO 后台分析平台时，会在各个不同的工具中使用到 "事件" 和 "指标"。常见的分析工具如：事件分析、漏斗分析、留存分析和用户分群，发起新建时都要选择对应的事件或指标作为分析对象。
 
-GrowingIO 提供了通过 SDK 默认采集到的很多预定义指标，也提供了自定义事件和指标的能力，具体可以参考[事件和指标]()章节。
+GrowingIO 提供了通过 SDK 默认采集到的很多预定义指标，也提供了自定义事件和指标的能力，具体可以参考[事件和指标](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md#shi-jian-he-zhi-biao)章节。
 
 #### 事件分析
 
+![&#x4E8B;&#x4EF6;&#x5206;&#x6790;-&#x9009;&#x62E9;&#x4E8B;&#x4EF6;&#x6216;&#x6307;&#x6807;&#x4F5C;&#x4E3A;&#x5206;&#x6790;&#x5BF9;&#x8C61;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LHWKwpBRNve3A-7qf1a%2F-LHWLm47JpOUzS2CaIAs%2Fimage.png?alt=media&token=79fe39fc-b90c-4061-b421-31c7e13a448d)
+
 #### 漏斗分析
+
+![&#x6F0F;&#x6597;&#x5206;&#x6790;-&#x9009;&#x62E9;&#x4E8B;&#x4EF6;&#x4F5C;&#x4E3A;&#x6F0F;&#x6597;&#x6B65;&#x9AA4;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LHWKwpBRNve3A-7qf1a%2F-LHWM7aWAVL3YSUyWN9x%2Fimage.png?alt=media&token=94dcec8d-9c72-4362-ab5c-8a81e55c412e)
 
 #### 留存分析
 
+![&#x7559;&#x5B58;&#x5206;&#x6790;-&#x9009;&#x62E9;&#x4E8B;&#x4EF6;&#x4F5C;&#x4E3A;&#x8D77;&#x59CB;&#x548C;&#x7559;&#x5B58;&#x884C;&#x4E3A;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LHWKwpBRNve3A-7qf1a%2F-LHWMYEF8rAYWcol_Vs2%2Fimage.png?alt=media&token=572f218c-a309-46a3-a330-15df5b58dade)
+
 #### 用户分群
+
+![&#x7528;&#x6237;&#x5206;&#x7FA4;-&#x9009;&#x62E9;&#x4E8B;&#x4EF6;&#x4F5C;&#x4E3A;&#x5206;&#x7FA4;&#x6761;&#x4EF6;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LHWKwpBRNve3A-7qf1a%2F-LHWMlfcf343LUlAct70%2Fimage.png?alt=media&token=42f6cb46-4518-4a7b-9230-35af8683a0a6)
 
 ## 维度和变量
 
