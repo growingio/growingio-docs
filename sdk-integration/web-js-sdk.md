@@ -11,11 +11,11 @@
     * [3.5 设置转化变量（evar.set）](web-js-sdk.md#135)
     * [3.6 设置用户级变量（people.set）](web-js-sdk.md#136)
     * [3.7 设置登录用户id（setUserId）](web-js-sdk.md#137)
-    * [3.8 上传登录用户 ID（clearUserId）](web-js-sdk.md#138)
-    * [3.9 设置数据采集黑名单 \(growing-ignore\)​](web-js-sdk.md#39-she-zhi-shu-ju-cai-ji-hei-ming-dan)
-    * ​[3.10 开启输入文本框内容采集 \(growing-track\)​](web-js-sdk.md#310-kai-qi-shu-ru-wen-ben-kuang-nei-rong-cai-ji)
-    * [3.11 手动设置采集文本信息 \(data-growing-title\)](web-js-sdk.md#311-shou-dong-she-zhi-cai-ji-wen-ben-xin-xi)
-    * [​3.12 手动设置采集位置信息 \(data-growing-idx\)​](web-js-sdk.md#312-shou-dong-she-zhi-cai-ji-wei-zhi-xin-xi)
+    * [3.8 清除登录用户 ID（clearUserId）](web-js-sdk.md#138)
+    * [3.9 设置数据采集黑名单 \(growing-ignore\)​](web-js-sdk.md#39-she-zhi-shu-ju-cai-ji-hei-ming-dan-growingignore)
+    * [​3.10 开启输入文本框内容采集 \(growing-track\)​](web-js-sdk.md#310-kai-qi-shu-ru-wen-ben-kuang-nei-rong-cai-ji-growingtrack)
+    * [3.11 手动设置采集文本信息 \(data-growing-title\)](web-js-sdk.md#311-shou-dong-she-zhi-cai-ji-wen-ben-xin-xi-datagrowingtitle)
+    * ​[3.12 手动设置采集位置信息 \(data-growing-idx\)​](web-js-sdk.md#312-shou-dong-she-zhi-cai-ji-wei-zhi-xin-xi-datagrowingidx)
     * [3.13 手动发送页面浏览事件 \(sendPage\)​](web-js-sdk.md#139)
   * [4.自定义数据上传 & 配置指导](web-js-sdk.md#14)
   * [5.注意事项](web-js-sdk.md#35)
@@ -274,7 +274,7 @@ gio('setUserId', userId);
 gio('setUserId', '1234567890');
 ```
 
-#### 3.8 上传登录用户 ID（clearUserId） {#138}
+#### 3.8 清除登录用户 ID（clearUserId） {#138}
 
 当用户登出之后调用 clearUserId ，清除已经设置的登录用户 ID 。
 
@@ -283,7 +283,7 @@ gio('setUserId', '1234567890');
 gio('clearUserId');
 ```
 
-#### 3.9 **设置数据采集黑名单**
+#### 3.9 **设置数据采集黑名单** \(growing-ignore\)​
 
 如果您希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
 
@@ -293,7 +293,7 @@ gio('clearUserId');
     </div>
 ```
 
-#### 3.10 **开启输入文本框内容采集**
+#### 3.10 **开启输入文本框内容采集** \(growing-track\)​
 
 由于输入文本框可能涉及一些隐私信息，比如账号、密码等，GrowingIO在采集数据的时候默认不采集输入文本框的数据。如果您希望采集某些文本框输入内容，比如搜索词，可以在input标签中设置growing-track属性，这样该文本框中的输入内容就会被采集到。如果input类型是password，即使开启内容采集，也不会采集该文本框的输入内容。
 
@@ -305,7 +305,7 @@ JS代码请以售前人员提供的为主，进行正确添加。
 
 至此您的 SDK 整合已经完成，我们就可以接收您的数据，之后您可以登录 www.growingio.com 的网站即可开始进行圈选。
 
-#### 3.11 **手动设置采集文本信息**
+#### 3.11 **手动设置采集文本信息** \(data-growing-title\)​
 
 对于一些图片或者区块，可以通过设置 title 或者 data-growing-title 属性来设置采集点点文本。比如，
 
@@ -320,7 +320,7 @@ JS代码请以售前人员提供的为主，进行正确添加。
 
 更多的文本信息规则，可以参考[第4节：What\(内容\)](https://sishen.gitbooks.io/gio-js-book/dom/4what.html)和[第1节：内容规则](https://sishen.gitbooks.io/gio-js-book/5/1.html)。
 
-#### 3.12 **手动设置采集位置信息**
+#### 3.12 **手动设置采集位置信息** \(data-growing-idx\)​
 
 除了内容以外，元素在列表里所在位置在某些场景下也是非常重要的信息，比如对于推荐广告位而言，我们是希望知道哪个位置的点击率最高。GrowingIO SDK 会自动识别列表元素，并附带上元素在列表里的位置。
 
@@ -341,7 +341,7 @@ LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表�
 
 更多的位置信息规则，可以参考[第2节：位置规则](https://sishen.gitbooks.io/gio-js-book/5/2.html)。
 
-#### 3.13 手动发送页面浏览事件 sendPage {#139}
+#### 3.13 手动发送页面浏览事件 sendPage \(sendPage\)​ {#139}
 
 在默认情况下，由于用户浏览网站的交互行为导致当前页面的 URL 产生变化时，GrowingIO 的 Web JS SDK 会发送一个 page 类型的请求。在一些特殊的情况下，例如用户在访问单页应用（Single Page Application）类型的网站时，用户的操作会导致业务上面理解的页面产生了变化，但是当前的 URL 可能并没有改变。
 
