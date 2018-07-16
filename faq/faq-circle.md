@@ -17,7 +17,7 @@ GrowingIO可以让用户方便的圈选定义一组多个页面。例如,在定�
 
 例如,GrowingIO 博客文章的地址如下： [`https://blog.growingio.com/post/`](https://blog.growingio.com/post/) 具体路径,那么我们在路径中输入 /posts/\* 就会圈选出所有的博客单篇文章的页面。注意此时的路径开关需要打开。
 
-具体使用可以参考[圈选-定义页面](../data-model/circle/circle-web.md#1-1)。
+具体使用可以参考[圈选-定义页面]()。
 
 #### 1.**3 圈选模式里的高亮实线和高亮虚线分别表示什么？**
 

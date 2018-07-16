@@ -1,4 +1,4 @@
-# 指标
+# 预定义指标
 
 * [第一部分：访问级指标](predefined-metrics.md#di-yi-bu-fen-fang-wen-ji-zhi-biao)
   * [1.访问量（web/app）](predefined-metrics.md#1fang-wen-liang)

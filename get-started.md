@@ -16,15 +16,15 @@ description: 这是一份新同学使用 GrowingIO 指南
 #### 第二步：在工程师的协助下，进行重要配置 {#第二步：在工程师的协助下，进行重要配置}
 
 1. 如果你是使用了 \#hashtag 的单页面应用，请[进行配置](sdk-integration/web-js-sdk.md#21-hashtag-xi-tong-bian-liang)
-2. 95% 的用户都会上传[用户属性字段](data-model/event-variable/custom-event.md#25)，这样你就可以知道产品内的行为是由具体的哪个用户做的。比如想要对比登录和未登录用户的差异，就需要上传登录用户ID。
+2. 95% 的用户都会上传[用户属性字段]()，这样你就可以知道产品内的行为是由具体的哪个用户做的。比如想要对比登录和未登录用户的差异，就需要上传登录用户ID。
 
 #### 第三步：选择数据定义方式 {#第三步：选择数据定义方式}
 
 GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「埋点 - 自定义事件和变量」：
 
-1. 通过 [web圈选](data-model/circle/circle-web.md) 、[iOS / Android移动端圈选](data-model/circle/circle-app.md)进行数据定义。
-2. 通过埋点[创建自定义事件和变量](data-model/event-variable/)
-3. 了解 [GrowingIO 数据模型](data-model/predefined/) 。
+1. 通过 [web圈选]() 、[iOS / Android移动端圈选]()进行数据定义。
+2. 通过埋点[创建自定义事件和变量]()
+3. 了解 [GrowingIO 数据模型](data-model/predefined.md) 。
 
 #### 第四步：使用数据分析工具 {#第四步：使用数据分析工具}
 
@@ -41,7 +41,7 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 11. **小程序概览** [文档](data-analytics/xiao-cheng-xu-gai-lan.md)
 12. web 圈选 [文档](http://growing.cn-bj.ufileos.com/web_circle.pdf) \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)
 13. 移动端圈选 [文档](http://growing.cn-bj.ufileos.com/app_circle.pdf) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)
-14. **小程序圈选** [文档](data-model/circle/xiao-cheng-xu-quan-xuan.md) 
+14. **小程序圈选** [文档]() 
 
 #### 第五步：开始进行分析 {#第五步：开始进行分析}
 
@@ -59,7 +59,7 @@ GrowingIO 所有分析能力都同样支持小程序，同时，还对小程序�
 
 1.集成[小程序 SDK ](sdk-integration/xiao-cheng-xu-sdk.md)，以进行数据采集
 
-2.通过[小程序圈选](data-model/circle/xiao-cheng-xu-quan-xuan.md)来进行数据定义
+2.通过[小程序圈选]()来进行数据定义
 
 3.通过[小程序概览](data-analytics/xiao-cheng-xu-gai-lan.md)了解数据情况
 

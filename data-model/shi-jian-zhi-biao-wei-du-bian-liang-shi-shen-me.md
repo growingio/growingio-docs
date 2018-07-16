@@ -54,7 +54,7 @@ GrowingIO 提供了通过 SDK 默认采集到的很多预定义指标，也提�
 
 ### 维度和变量的关系
 
-"变量"，是在自定义数据中引入的概念，具体可以参考[维度](predefined/predefined-dimensions.md#zi-ding-yi-da-dian-wei-du-bian-liang)章节。在进行数据定义时，事件和变量是构成事件完整描述的2个概念。
+"变量"，是在自定义数据中引入的概念，具体可以参考[维度](predefined-dimensions.md#zi-ding-yi-da-dian-wei-du-bian-liang)章节。在进行数据定义时，事件和变量是构成事件完整描述的2个概念。
 
 维度和指标是数据分析中两个基础概览。指标是一个具体的度量，维度对指标进行细分以便于进行对比发现指标的异常。举例来说，当我们看到 昨天的 "跳出率" 指标是 45%时，我们并不能直接得到任何的结论或者观点判断这个数据是高是低。这个时候，我们可以用 "落地页" 维度对  "跳出率" 指标进行细分，发现手机端 H5 落地页跳出率达到了80%，而 PC 网页跳出率只有20%，就会明显发现异常。
 
@@ -76,7 +76,7 @@ GrowingIO 提供了通过 SDK 默认采集到的很多预定义指标，也提�
 
 ### 维度和变量在 GrowingIO 中的使用
 
-GrowingIO 通过 sdk 默认采集很多[预定义维度](predefined/predefined-dimensions.md#yu-ding-yi-wei-du)用以分析；同事也支持自定义变量配置得到自定以维度，请参考[维度文档](predefined/predefined-dimensions.md#zi-ding-yi-da-dian-wei-du-bian-liang)。处理成指标的变量，使用方法与上文（[事件和指标](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md#shi-jian-he-zhi-biao)）中提到的使用一致。处理成维度的变量，GrowingIO 中作为 "维度" 在不同的分析工具中使用。预定义和自定义维度的使用，举例说明： 
+GrowingIO 通过 sdk 默认采集很多[预定义维度](predefined-dimensions.md#yu-ding-yi-wei-du)用以分析；同事也支持自定义变量配置得到自定以维度，请参考[维度文档](predefined-dimensions.md#zi-ding-yi-da-dian-wei-du-bian-liang)。处理成指标的变量，使用方法与上文（[事件和指标](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md#shi-jian-he-zhi-biao)）中提到的使用一致。处理成维度的变量，GrowingIO 中作为 "维度" 在不同的分析工具中使用。预定义和自定义维度的使用，举例说明： 
 
 #### 事件分析
 
