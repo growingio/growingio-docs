@@ -10,7 +10,7 @@ description: 了解数据是如何定义是进入分析的前提，这个模块�
 
 {% page-ref page="shi-jian-he-zhi-biao/" %}
 
-{% page-ref page="predefined-dimensions.md" %}
+{% page-ref page="wei-du/predefined-dimensions.md" %}
 
   
 
