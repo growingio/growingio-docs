@@ -1,11 +1,11 @@
 # “事件、指标、维度、变量” 是什么
 
-* [事件和指标]()
-  * [事件和指标的关系]()
-  * [事件和指标在 GrowingIO 中的使用]()
-* [维度和变量]()
-  * [维度和变量的关系]()
-  * [维度和变量在 GrowingIO 中的使用]()
+* [事件和指标](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md#shi-jian-he-zhi-biao)
+  * [事件和指标的关系](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md#shi-jian-he-zhi-biao-de-guan-xi)
+  * [事件和指标在 GrowingIO 中的使用](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md#shi-jian-he-zhi-biao-zai-growingio-zhong-de-shi-yong)
+* [维度和变量](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md#wei-du-he-bian-liang)
+  * [维度和变量的关系](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md#wei-du-he-bian-liang-de-guan-xi)
+  * [维度和变量在 GrowingIO 中的使用](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md#wei-du-he-bian-liang-zai-growingio-zhong-de-shi-yong)
 
 ## 事件和指标
 
@@ -68,9 +68,11 @@ GrowingIO 提供了通过 SDK 默认采集到的很多预定义指标，也提�
 
 ### 维度和变量在 GrowingIO 中的使用
 
-GrowingIO 通过 sdk 默认采集很多[预定义维度](predefined/predefined-dimensions.md#yu-ding-yi-wei-du)用以分析；同事也支持自定义变量配置得到自定以维度，请参考[维度文档](predefined/predefined-dimensions.md#zi-ding-yi-da-dian-wei-du-bian-liang)。处理成指标的变量，使用方法与上文（[事件和指标]()）中提到的使用一致。处理成维度的变量，GrowingIO 中作为 "维度" 在不同的分析工具中使用。预定义和自定义维度的使用，举例说明： 
+GrowingIO 通过 sdk 默认采集很多[预定义维度](predefined/predefined-dimensions.md#yu-ding-yi-wei-du)用以分析；同事也支持自定义变量配置得到自定以维度，请参考[维度文档](predefined/predefined-dimensions.md#zi-ding-yi-da-dian-wei-du-bian-liang)。处理成指标的变量，使用方法与上文（[事件和指标](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md#shi-jian-he-zhi-biao)）中提到的使用一致。处理成维度的变量，GrowingIO 中作为 "维度" 在不同的分析工具中使用。预定义和自定义维度的使用，举例说明： 
 
 #### 事件分析
+
+
 
 #### 漏斗分析
 
