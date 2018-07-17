@@ -18,7 +18,7 @@ GrowingIO支持 Web，App，小程序 等多个用户平台，这给 GrowingIO �
 
 在上面的这个过程中，涉及到了**3个平台**：微信（广告投放媒体）、H5、App 三端；**2个 ID**：小明在完成注册之前，对于电商平台来说是匿名用户，假设这个时候他的 匿名 ID 是 xxxx，完成注册后获得了注册用户 ID: xiaoming 。我们希望通过 GrowingIO 能够完成小明在这3端的转化是如何完成的。为了满足以上诉求，
 
-1. GrowingIO 采用四个层级的数据模型：**用户 - 访问 - 页面浏览 - 事件**
+1. GrowingIO 采用四个可数实体（Countable Entity）层级的数据模型：**用户 - 访问 - 页面浏览 - 事件**
 2. GrowingIO 提供了 "访问用户 ID" 和 "登录用户 ID" 两种用户 ID 体系
 
 ### **四层模型：用户 - 访问 - 页面浏览 - 事件**
@@ -29,11 +29,11 @@ GrowingIO支持 Web，App，小程序 等多个用户平台，这给 GrowingIO �
 
 在这四个层级上，每一个层级都有一些[维度和指标。](terminology.md)
 
-我们使用D：代表维度，M：代表指标。斜体表示数量可扩展的自定义维度或者指标。
+我们使用C：代表可数实体，D：代表维度，M：代表指标。斜体表示数量可扩展的自定义维度或者指标。
 
 GrowingIO的数据模型可以表示如下：
 
-1. **用户（Visitor（User））**
+1. **C：用户（Visitor（User））**
    1. D：网站/手机应用（WebSite/mApp）
    2. D：屏幕大小（Screen Size）
    3. D：操作系统（Operation System）
@@ -47,7 +47,7 @@ GrowingIO的数据模型可以表示如下：
    11. D：移动应用-监测链接（Mobile App Tracking Link）\[mApp\]
    12. M：访问用户量（Visitor）
    13. M：新访问用户量（New Visitor）
-2. **访问（Visit（mApp Open））**
+2. **C：访问（Visit（mApp Open））**
    1. D：访问来源（Visit Referral）\[Web\]
    2. D：一级访问来源（First Level Visit Referral）\[Web\]
    3. D：搜索词（Search Keyword）\[Web\]
@@ -83,38 +83,26 @@ GrowingIO的数据模型可以表示如下：
    33. M：跳出率（Bounce Rate）\[Web\]
    34. M：退出（Exit）\[Web\]
    35. M：退出率（Exit Rate）\[Web\]
-3. **页面浏览（PageView）**
+3. **C：页面浏览（PageView）**
    1. D：域名（Domain）\[Web\]
    2. D：页面（Page）\[Web\]
    3. D：页面来源（Page Referral）\[Web\]
-   4. D：_自定义页面级变量（Custom Page Level Variable）_
+   4. _D：自定义页面级变量（Custom Page Level Variable）_
    5. M：页面浏览量（Page View）
-   6. M：圈选页面的页面浏览量（Circled Page Page View）
-4. **事件（Event）**
+   6. _M：圈选页面的页面浏览量（Circled Page Page View）_
+4. **C：事件（Event）**
    1. D：元素内容（Element Content）
    2. D：元素位置（Element Location）
-   3. D：_自定义事件级变量（Custom Event Level Variable）_
-   4. M：_自定义事件（Custom Event）_
+   3. _D：自定义事件级变量（Custom Event Level Variable）_
+   4. _M：自定义事件（Custom Event）_
    5. M：激活（First Launch）\[mApp\]
-   6. M：圈选事件（Circled Event）
+   6. _M：圈选事件（Circled Event）_
 
 ### 访问用户 和 登录用户
 
 #### 访问用户
 
-访问用户ID是GrowingIO随时生成的唯一ID，如果你想要分析的是产品所有访客，可以选择“访问用户”；上面的例子中，小明访问 H5注册页面时，GrowingIO 会生成1个随机的 ID 作为小明在该 H5站点的唯一 ID, 并记录在浏览器 cookie 中。
-
-不同的SDK生成访问用户ID的策略有所不同：
-
-JS SDK：随机UUID
-
-Android：优先使用AndroidID编码生成，其次使用IMEI编码生成，最后使用UUID
-
-iOS：优先使用IDFA，其次使用IDFV，最后使用UUID
-
-小程序：随机UUID
-
-注意：在绝大多数场景下，SDK都可以保证同一设备的访问用户始终唯一，但是例如：浏览器用户清除Cookie, 隐私浏览模式, iOS卸载重装, Android更新ROM等行为都会破坏设备的访问用户ID.
+访问用户ID是GrowingIO随时生成的唯一ID，如果你想要分的是析产品所有访客，可以选择“访问用户”；上面的例子中，小明访问 H5注册页面时，GrowingIO 会获取浏览器 cookie 会据此生成1个唯一的 ID 作为小明在该 H5站点的唯一 ID
 
 ####  登录用户
 
@@ -127,4 +115,8 @@ iOS：优先使用IDFA，其次使用IDFV，最后使用UUID
 ## 无埋点（圈选）和打点数据模型一致性说明
 
 GrowingIO 支持无埋点采集+圈选定义数据，以及通过打点方式自定义数据。这两种方式的数据都符合上述的四层数据模型。这四层模型进一步总结成 GrowingIO 后台可用来分析的数据，包含了以下两大模块：
+
+{% page-ref page="events-metrics/" %}
+
+{% page-ref page="dimensions/" %}
 
