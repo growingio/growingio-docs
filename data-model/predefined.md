@@ -63,23 +63,24 @@ GrowingIO的数据模型可以表示如下：
    15. D：地区名称（District Name）
    16. D：城市名称（City Name）
    17. D：App版本（App Version）\[mApp\]
-   18. D：自定义App渠道（Custom App Channel）\[mApp\]
-   19. M：访问量（Visit）
-   20. M：访问用户人均访问次数（Average Visit per Visitor）
-   21. M：总访问时长（分钟）（Total Time Spent per Visit）
-   22. M：平均访问时长（分钟）（Average Time Spent per Visit）
-   23. M：每次访问页面浏览量（Average Page View per Visit）
-   24. M：进入量（Entry）\[Web\]
-   25. M：访问用户人均进入次数（Average Entry per Visitor）\[Web\]
-   26. M：总进入时长（Total Time Spent on Entry）\[Web\]
-   27. M：平均进入时长（Average Time Spent per Entry）\[Web\]
-   28. M：每次进入页面浏览量（Average Page View Per Entry）\[Web\]
-   29. M：总页面停留时长（Total Time Spent on Page）\[Web\]
-   30. M：平均页面停留时长（Average Time Spent on Page）\[Web\]
-   31. M：跳出次数（Bounce）\[Web\]
-   32. M：跳出率（Bounce Rate）\[Web\]
-   33. M：退出（Exit）\[Web\]
-   34. M：退出率（Exit Rate）\[Web\]
+   18. D：设备方向（Device Landscape or Portrait）\[mApp\]
+   19. D：自定义App渠道（Custom App Channel）\[mApp\]
+   20. M：访问量（Visit）
+   21. M：访问用户人均访问次数（Average Visit per Visitor）
+   22. M：总访问时长（分钟）（Total Time Spent per Visit）
+   23. M：平均访问时长（分钟）（Average Time Spent per Visit）
+   24. M：每次访问页面浏览量（Average Page View per Visit）
+   25. M：进入量（Entry）\[Web\]
+   26. M：访问用户人均进入次数（Average Entry per Visitor）\[Web\]
+   27. M：总进入时长（Total Time Spent on Entry）\[Web\]
+   28. M：平均进入时长（Average Time Spent per Entry）\[Web\]
+   29. M：每次进入页面浏览量（Average Page View Per Entry）\[Web\]
+   30. M：总页面停留时长（Total Time Spent on Page）\[Web\]
+   31. M：平均页面停留时长（Average Time Spent on Page）\[Web\]
+   32. M：跳出次数（Bounce）\[Web\]
+   33. M：跳出率（Bounce Rate）\[Web\]
+   34. M：退出（Exit）\[Web\]
+   35. M：退出率（Exit Rate）\[Web\]
 3. **C：页面浏览（PageView）**
    1. D：域名（Domain）\[Web\]
    2. D：页面（Page）\[Web\]
@@ -88,13 +89,12 @@ GrowingIO的数据模型可以表示如下：
    5. M：页面浏览量（Page View）
    6. _M：圈选页面的页面浏览量（Circled Page Page View）_
 4. **C：事件（Event）**
-   1. D：设备方向（Device Landscape or Portrait）\[mApp\]
-   2. D：元素内容（Element Content）
-   3. D：元素位置（Element Location）
-   4. _D：自定义事件级变量（Custom Event Level Variable）_
-   5. _M：自定义事件（Custom Event）_
-   6. M：激活（First Launch）\[mApp\]
-   7. _M：圈选事件（Circled Event）_
+   1. D：元素内容（Element Content）
+   2. D：元素位置（Element Location）
+   3. _D：自定义事件级变量（Custom Event Level Variable）_
+   4. _M：自定义事件（Custom Event）_
+   5. M：激活（First Launch）\[mApp\]
+   6. _M：圈选事件（Circled Event）_
 
 ### 访问用户 和 登录用户
 
