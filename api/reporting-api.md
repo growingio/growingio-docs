@@ -31,7 +31,7 @@
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="project\_id" type="string" required=true %}
-项目 id
+项目 uid
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -100,7 +100,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="project\_id" type="string" required=true %}
-项目 id
+项目 uid
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -194,7 +194,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="project\_id" type="string" required=true %}
-项目 id
+项目 uid
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -258,7 +258,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="project\_id" type="string" required=true %}
-项目 id
+项目 uid
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -307,7 +307,7 @@ cs1    name
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="project\_id" type="string" required=true %}
-项目 id
+项目 uid
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
