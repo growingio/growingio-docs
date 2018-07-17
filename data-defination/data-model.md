@@ -29,11 +29,11 @@ GrowingIO支持 Web，App，小程序 等多个用户平台，这给 GrowingIO �
 
 在这四个层级上，每一个层级都有一些[维度和指标。](terminology.md)
 
-我们使用C：代表可数实体，D：代表维度，M：代表指标。斜体表示数量可扩展的自定义维度或者指标。
+我们使用D：代表维度，M：代表指标。斜体表示数量可扩展的自定义维度或者指标。
 
 GrowingIO的数据模型可以表示如下：
 
-1. **C：用户（Visitor（User））**
+1. **用户（Visitor（User））**
    1. D：网站/手机应用（WebSite/mApp）
    2. D：屏幕大小（Screen Size）
    3. D：操作系统（Operation System）
@@ -47,7 +47,7 @@ GrowingIO的数据模型可以表示如下：
    11. D：移动应用-监测链接（Mobile App Tracking Link）\[mApp\]
    12. M：访问用户量（Visitor）
    13. M：新访问用户量（New Visitor）
-2. **C：访问（Visit（mApp Open））**
+2. **访问（Visit（mApp Open））**
    1. D：访问来源（Visit Referral）\[Web\]
    2. D：一级访问来源（First Level Visit Referral）\[Web\]
    3. D：搜索词（Search Keyword）\[Web\]
@@ -83,14 +83,14 @@ GrowingIO的数据模型可以表示如下：
    33. M：跳出率（Bounce Rate）\[Web\]
    34. M：退出（Exit）\[Web\]
    35. M：退出率（Exit Rate）\[Web\]
-3. **C：页面浏览（PageView）**
+3. **页面浏览（PageView）**
    1. D：域名（Domain）\[Web\]
    2. D：页面（Page）\[Web\]
    3. D：页面来源（Page Referral）\[Web\]
    4. _D：自定义页面级变量（Custom Page Level Variable）_
    5. M：页面浏览量（Page View）
    6. _M：圈选页面的页面浏览量（Circled Page Page View）_
-4. **C：事件（Event）**
+4. **事件（Event）**
    1. D：元素内容（Element Content）
    2. D：元素位置（Element Location）
    3. _D：自定义事件级变量（Custom Event Level Variable）_
