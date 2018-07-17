@@ -136,3 +136,11 @@ function authToken($projectKeyId, $secretKey, $keyArray)
 }
 ```
 
+
+
+### 3. 旧版本上传接口
+
+之前使用旧版本上传接口的请尽快升级到新版本接口，避免数据上传结果和线上配置出现不一致。
+
+
+

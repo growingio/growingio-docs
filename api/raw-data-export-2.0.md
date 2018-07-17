@@ -278,7 +278,7 @@ evar：新增类型
 | ip | ip | string\(15\) | IP地址（ip address） | 127.0.0.1 | IP地址（ip address） |
 | userAgent | userAgent | string\(512\) | User Agent，例如浏览器信息或者移动设备信息 | Mozilla/5.0 \(Linux; Android 6.0; V9 Build/MRA58K; wv\) AppleWebKit/537.36 \(KHTML |  |
 | operatingSystem | （新加） | string\(3\) | 操作系统（operating system） | iOS / Android |  |
-| operatingSystemVersion | osVersion\(新旧不同\) | string\(50\) | 操作系统版本（operating system version） | iOS iOS 11.0.1 /Android Android 6.0.1 |  |
+| operatingSystemVersion | osVersion\(新旧不同\) | string\(50\) | 操作系统版本（operating system version） | iOS 11.0.1 /Android 6.0.1 |  |
 | clientVersion | appVersion\(新旧不同\) | string\(20\) | 客户的产品版本，仅限移动端 | 1.0 |  |
 | channel | channel | string\(40\) | app的下载渠道，仅限移动端 | App Store |  |
 | deviceBrand | manufacturer\(新旧不同\) | string\(20\) | 设备品牌（device brand） | google |  |
