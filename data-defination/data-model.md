@@ -1,11 +1,11 @@
 # 数据模型
 
-* [数据模型简介](predefined.md#shu-ju-mo-xing-jian-jie)
-  * [四层模型：用户 - 访问 - 页面浏览 - 事件](predefined.md#si-ceng-mo-xing-yong-hu-fang-wen-ye-mian-lan-shi-jian)
-  * [访问用户 和 登录用户](predefined.md#fang-wen-yong-hu-he-deng-lu-yong-hu)
-    * [访问用户](predefined.md#fang-wen-yong-hu)
-    * [登录用户](predefined.md#deng-lu-yong-hu)
-* [无埋点（圈选）和打点数据模型一致性说明](predefined.md#wu-mai-dian-quan-xuan-he-da-dian-shu-ju-mo-xing-yi-zhi-xing-shuo-ming)
+* [数据模型简介](data-model.md#shu-ju-mo-xing-jian-jie)
+  * [四层模型：用户 - 访问 - 页面浏览 - 事件](data-model.md#si-ceng-mo-xing-yong-hu-fang-wen-ye-mian-lan-shi-jian)
+  * [访问用户 和 登录用户](data-model.md#fang-wen-yong-hu-he-deng-lu-yong-hu)
+    * [访问用户](data-model.md#fang-wen-yong-hu)
+    * [登录用户](data-model.md#deng-lu-yong-hu)
+* [无埋点（圈选）和打点数据模型一致性说明](data-model.md#wu-mai-dian-quan-xuan-he-da-dian-shu-ju-mo-xing-yi-zhi-xing-shuo-ming)
 
 ## 数据模型简介
 
@@ -27,7 +27,7 @@ GrowingIO支持 Web，App，小程序 等多个用户平台，这给 GrowingIO �
 
 ![&#x56DB;&#x5C42;&#x6811;&#x5F62;&#x7ED3;&#x6784;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LHWllLuJXiaZOdbWcp5%2F-LHWygFc97JBAqidzyKH%2Fimage.png?alt=media&token=f202ecc4-98c0-4dba-86a2-097dbf015996)
 
-在这四个层级上，每一个层级都有一些[维度和指标。](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md)
+在这四个层级上，每一个层级都有一些[维度和指标。](terminology.md)
 
 我们使用C：代表可数实体，D：代表维度，M：代表指标。斜体表示数量可扩展的自定义维度或者指标。
 
@@ -110,7 +110,7 @@ GrowingIO的数据模型可以表示如下：
 
 除了 ID 之外，您还可以将登录用户的性别，年龄等信息上传。GrowingIO 通过您上传的登录用户ID 和用户的其他属性信息和 GrowingIO 采集的用户行为数据进行匹配，方便您对自己的用户做更深入的分析。
 
-[如何上传登录用户 ID 及其他属性信息？](wei-du/predefined-dimensions.md#yong-hu-bian-liang)
+[如何上传登录用户 ID 及其他属性信息？](dimensions/predefined-dimensions.md#yong-hu-bian-liang)
 
 ## 无埋点（圈选）和打点数据模型一致性说明
 

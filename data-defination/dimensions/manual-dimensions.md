@@ -1,30 +1,30 @@
 # 自定义-打点维度（变量）
 
-* [自定义变量使用场景](zi-ding-yi-da-dian-wei-du-bian-liang.md#zi-ding-yi-bian-liang-shi-yong-chang-jing)
-* [页面级变量](zi-ding-yi-da-dian-wei-du-bian-liang.md#ye-mian-ji-bian-liang)
-  * [页面级变量的持久性范围](zi-ding-yi-da-dian-wei-du-bian-liang.md#ye-mian-ji-bian-liang-de-chi-jiu-xing-fan-wei)
-  * [页面级变量使用的场景](zi-ding-yi-da-dian-wei-du-bian-liang.md#ye-mian-ji-bian-liang-shi-yong-de-chang-jing)
-  * [分析场景示例一](zi-ding-yi-da-dian-wei-du-bian-liang.md#fen-xi-chang-jing-shi-li-yi)
-  * [分析场景示例二](zi-ding-yi-da-dian-wei-du-bian-liang.md#fen-xi-chang-jing-shi-li-er)
-* [转化变量](zi-ding-yi-da-dian-wei-du-bian-liang.md#zhuan-hua-bian-liang)
-  * [归因方式](zi-ding-yi-da-dian-wei-du-bian-liang.md#gui-yin-fang-shi)
-  * [失效时间](zi-ding-yi-da-dian-wei-du-bian-liang.md#shi-xiao-shi-jian)
-  * [转化变量的归因模型](zi-ding-yi-da-dian-wei-du-bian-liang.md#zhuan-hua-bian-liang-de-gui-yin-mo-xing)
-  * [转化变量的持久性范围](zi-ding-yi-da-dian-wei-du-bian-liang.md#zhuan-hua-bian-liang-de-chi-jiu-xing-fan-wei)
-  * [转化变量的使用场景](zi-ding-yi-da-dian-wei-du-bian-liang.md#zhuan-hua-bian-liang-de-shi-yong-chang-jing)
-  * [分析场景示例](zi-ding-yi-da-dian-wei-du-bian-liang.md#fen-xi-chang-jing-shi-li)
-* [用户变量](zi-ding-yi-da-dian-wei-du-bian-liang.md#yong-hu-bian-liang)
-  * [归因模型](zi-ding-yi-da-dian-wei-du-bian-liang.md#gui-yin-mo-xing)
-  * [用户变量的归因](zi-ding-yi-da-dian-wei-du-bian-liang.md#yong-hu-bian-liang-de-gui-yin)
-  * [用户变量的持久性范围](zi-ding-yi-da-dian-wei-du-bian-liang.md#yong-hu-bian-liang-de-chi-jiu-xing-fan-wei)
-* [自定义变量的配置和上传](zi-ding-yi-da-dian-wei-du-bian-liang.md#zi-ding-yi-bian-liang-de-pei-zhi-he-shang-chuan)
-  * [第一步：在 “事件和变量”中完成配置](zi-ding-yi-da-dian-wei-du-bian-liang.md#di-yi-bu-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
-  * [第二步：代码部署](zi-ding-yi-da-dian-wei-du-bian-liang.md#di-er-bu-dai-ma-bu-shu)
-  * [第三步：数据校验](zi-ding-yi-da-dian-wei-du-bian-liang.md#di-san-bu-shu-ju-xiao-yan)
+* [自定义变量使用场景](manual-dimensions.md#zi-ding-yi-bian-liang-shi-yong-chang-jing)
+* [页面级变量](manual-dimensions.md#ye-mian-ji-bian-liang)
+  * [页面级变量的持久性范围](manual-dimensions.md#ye-mian-ji-bian-liang-de-chi-jiu-xing-fan-wei)
+  * [页面级变量使用的场景](manual-dimensions.md#ye-mian-ji-bian-liang-shi-yong-de-chang-jing)
+  * [分析场景示例一](manual-dimensions.md#fen-xi-chang-jing-shi-li-yi)
+  * [分析场景示例二](manual-dimensions.md#fen-xi-chang-jing-shi-li-er)
+* [转化变量](manual-dimensions.md#zhuan-hua-bian-liang)
+  * [归因方式](manual-dimensions.md#gui-yin-fang-shi)
+  * [失效时间](manual-dimensions.md#shi-xiao-shi-jian)
+  * [转化变量的归因模型](manual-dimensions.md#zhuan-hua-bian-liang-de-gui-yin-mo-xing)
+  * [转化变量的持久性范围](manual-dimensions.md#zhuan-hua-bian-liang-de-chi-jiu-xing-fan-wei)
+  * [转化变量的使用场景](manual-dimensions.md#zhuan-hua-bian-liang-de-shi-yong-chang-jing)
+  * [分析场景示例](manual-dimensions.md#fen-xi-chang-jing-shi-li)
+* [用户变量](manual-dimensions.md#yong-hu-bian-liang)
+  * [归因模型](manual-dimensions.md#gui-yin-mo-xing)
+  * [用户变量的归因](manual-dimensions.md#yong-hu-bian-liang-de-gui-yin)
+  * [用户变量的持久性范围](manual-dimensions.md#yong-hu-bian-liang-de-chi-jiu-xing-fan-wei)
+* [自定义变量的配置和上传](manual-dimensions.md#zi-ding-yi-bian-liang-de-pei-zhi-he-shang-chuan)
+  * [第一步：在 “事件和变量”中完成配置](manual-dimensions.md#di-yi-bu-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
+  * [第二步：代码部署](manual-dimensions.md#di-er-bu-dai-ma-bu-shu)
+  * [第三步：数据校验](manual-dimensions.md#di-san-bu-shu-ju-xiao-yan)
 
 ## 自定义变量使用场景
 
-我们在[自定义打点事件](../shi-jian-he-zhi-biao/zi-ding-yi-da-dian-shi-jian-shi-shi-he-guan-li.md#di-yi-bu-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)章节中提及，自定义事件和变量都是为业务分析服务的，需要经过以下几个步骤完成梳理和配置：
+我们在[自定义打点事件](../events-metrics/manual-metrics.md#di-yi-bu-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)章节中提及，自定义事件和变量都是为业务分析服务的，需要经过以下几个步骤完成梳理和配置：
 
 1. 从数据需求出发，梳理指标、维度
 2. 在 【数据管理】-【事件和变量】 中完成配置
@@ -48,9 +48,9 @@
 * 用户性别
 * ...
 
-那么现在很明显了，订单总量与订单总金额这两个指标，需要用“自定义事件”来实现；商品ID/名称、优惠券名称等维度，则用 “事件级变量” 来实现 \(在[自定义事件](../shi-jian-he-zhi-biao/zi-ding-yi-da-dian-shi-jian-shi-shi-he-guan-li.md#di-er-bu-zai-da-dian-guan-li-zhong-wan-cheng-pei-zhi)章节已经介绍过 \)。而，"转化入口" 和 "用户性别"，则可以考虑通过 "转化变量" 和 "用户变量" 来实现。下面会来分别介绍，GrowingIO的四种自定义变量：
+那么现在很明显了，订单总量与订单总金额这两个指标，需要用“自定义事件”来实现；商品ID/名称、优惠券名称等维度，则用 “事件级变量” 来实现 \(在[自定义事件](../events-metrics/manual-metrics.md#di-er-bu-zai-da-dian-guan-li-zhong-wan-cheng-pei-zhi)章节已经介绍过 \)。而，"转化入口" 和 "用户性别"，则可以考虑通过 "转化变量" 和 "用户变量" 来实现。下面会来分别介绍，GrowingIO的四种自定义变量：
 
-1. [事件级变量](../shi-jian-he-zhi-biao/zi-ding-yi-da-dian-shi-jian-shi-shi-he-guan-li.md#di-yi-bu-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)
+1. [事件级变量](../events-metrics/manual-metrics.md#di-yi-bu-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)
 2. 页面级变量
 3. 转化变量
 4. 用户变量

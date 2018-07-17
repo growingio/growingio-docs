@@ -1,6 +1,6 @@
 # 预定义维度
 
-在 GrowingIO 数据模型中，提供了 36 个预定义维度，支持丰富的分析场景，同时也可以通过[创建自定义变量](zi-ding-yi-da-dian-wei-du-bian-liang.md)的方式添加其他变量。
+在 GrowingIO 数据模型中，提供了 36 个预定义维度，支持丰富的分析场景，同时也可以通过[创建自定义变量](manual-dimensions.md)的方式添加其他变量。
 
 * [第一部分：用户来源维度](predefined-dimensions.md#01)
   * [1.访问来源（web/app）](predefined-dimensions.md#11)

@@ -1,10 +1,10 @@
 # 自定义-打点事件实施和管理
 
-* [总体流程](zi-ding-yi-da-dian-shi-jian-shi-shi-he-guan-li.md#zong-ti-liu-cheng)
-* [第一步：从数据需求到具体 “指标+维度”](zi-ding-yi-da-dian-shi-jian-shi-shi-he-guan-li.md#di-yi-bu-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)
-* [第二步：在 ”打点管理“ 中完成配置](zi-ding-yi-da-dian-shi-jian-shi-shi-he-guan-li.md#di-er-bu-zai-da-dian-guan-li-zhong-wan-cheng-pei-zhi)
-* [第三步：代码部署](zi-ding-yi-da-dian-shi-jian-shi-shi-he-guan-li.md#di-san-bu-dai-ma-bu-shu)
-* [第四步：数据校验](zi-ding-yi-da-dian-shi-jian-shi-shi-he-guan-li.md#di-si-bu-shu-ju-xiao-yan)
+* [总体流程](manual-metrics.md#zong-ti-liu-cheng)
+* [第一步：从数据需求到具体 “指标+维度”](manual-metrics.md#di-yi-bu-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)
+* [第二步：在 ”打点管理“ 中完成配置](manual-metrics.md#di-er-bu-zai-da-dian-guan-li-zhong-wan-cheng-pei-zhi)
+* [第三步：代码部署](manual-metrics.md#di-san-bu-dai-ma-bu-shu)
+* [第四步：数据校验](manual-metrics.md#di-si-bu-shu-ju-xiao-yan)
 
 ## 总体流程
 

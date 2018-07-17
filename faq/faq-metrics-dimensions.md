@@ -42,7 +42,7 @@ GrowingIO 从集成代码后开始获取用户数据，因此在刚刚集成代�
 
 #### 1.7 访问用户量和新访问用户量，登录用户量和新登录用户量的区别？ {#8访问用户量和新访问用户量，登录用户量和新登录用户量的区别？}
 
-具体解释可以看[这里](../data-model/shi-jian-he-zhi-biao/predefined-metrics.md#di-er-bu-fen-yong-hu-ji-zhi-biao)
+具体解释可以看[这里](../data-defination/events-metrics/predefined-metrics.md#di-er-bu-fen-yong-hu-ji-zhi-biao)
 
 注意： 1. 您需要上传用户属性字段来统计登录用户数量。
 
@@ -82,13 +82,13 @@ GrowingIO 从集成代码后开始获取用户数据，因此在刚刚集成代�
 
 #### 2.1 访问来源和一级访问来源怎样使用？ {#1访问来源和一级访问来源怎样使用？}
 
-[访问来源](../data-model/wei-du/predefined-dimensions.md#11)可以帮助您了解该网站流量来源，访问来源可以是百度，谷歌，优酷等站外渠道，也可能是直接访问该网站。您可以通过访问来源维度查看不同来源的流量质量；
+[访问来源](../data-defination/dimensions/predefined-dimensions.md#11)可以帮助您了解该网站流量来源，访问来源可以是百度，谷歌，优酷等站外渠道，也可能是直接访问该网站。您可以通过访问来源维度查看不同来源的流量质量；
 
-而[一级访问来源](../data-model/wei-du/predefined-dimensions.md#12)将访问来源进行了细分：一级访问来源将访问来源分为直接访问，搜索引擎，社交媒体，外部链接四大部分，方便您更方便地对来源归类，分析不同来源的流量效果。
+而[一级访问来源](../data-defination/dimensions/predefined-dimensions.md#12)将访问来源进行了细分：一级访问来源将访问来源分为直接访问，搜索引擎，社交媒体，外部链接四大部分，方便您更方便地对来源归类，分析不同来源的流量效果。
 
 #### 2.2 如果我想区分手机访问的用户和电脑访问的用户，我应该用哪个维度？ {#2如果我想区分手机访问的用户和电脑访问的用户，我应该用哪个维度？}
 
-您可以通过[「操作系统」](../data-model/wei-du/predefined-dimensions.md#33)来区分。
+您可以通过[「操作系统」](../data-defination/dimensions/predefined-dimensions.md#33)来区分。
 
 #### 2.3 城市和地区的判断原理是什么？什么场景使用哪个维度？ {#3城市和地区的判断原理是什么？什么场景使用哪个维度？}
 

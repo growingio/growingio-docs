@@ -24,7 +24,7 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 
 1. 通过 [web圈选]() 、[iOS / Android移动端圈选]()进行数据定义。
 2. 通过埋点[创建自定义事件和变量]()
-3. 了解 [GrowingIO 数据模型](data-model/predefined.md) 。
+3. 了解 [GrowingIO 数据模型](data-defination/data-model.md) 。
 
 #### 第四步：使用数据分析工具 {#第四步：使用数据分析工具}
 
