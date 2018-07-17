@@ -1,4 +1,4 @@
-# 数据管理API\(GDPR\)
+# 数据管理 API \(GDPR\)
 
 为符合 GDPR 规范，GrowingIO 提供删除用户原始数据的功能。
 
@@ -40,7 +40,7 @@ auth token
 {% endapi-method-query-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="visitUserId" type="array" required=false %}
+{% api-method-parameter name="visitUserId" type="array" required=true %}
 user id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
