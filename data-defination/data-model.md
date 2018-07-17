@@ -18,7 +18,7 @@ GrowingIO支持 Web，App，小程序 等多个用户平台，这给 GrowingIO �
 
 在上面的这个过程中，涉及到了**3个平台**：微信（广告投放媒体）、H5、App 三端；**2个 ID**：小明在完成注册之前，对于电商平台来说是匿名用户，假设这个时候他的 匿名 ID 是 xxxx，完成注册后获得了注册用户 ID: xiaoming 。我们希望通过 GrowingIO 能够完成小明在这3端的转化是如何完成的。为了满足以上诉求，
 
-1. GrowingIO 采用四个可数实体（Countable Entity）层级的数据模型：**用户 - 访问 - 页面浏览 - 事件**
+1. GrowingIO 采用四个层级的数据模型：**用户 - 访问 - 页面浏览 - 事件**
 2. GrowingIO 提供了 "访问用户 ID" 和 "登录用户 ID" 两种用户 ID 体系
 
 ### **四层模型：用户 - 访问 - 页面浏览 - 事件**
@@ -87,22 +87,22 @@ GrowingIO的数据模型可以表示如下：
    1. D：域名（Domain）\[Web\]
    2. D：页面（Page）\[Web\]
    3. D：页面来源（Page Referral）\[Web\]
-   4. _D：自定义页面级变量（Custom Page Level Variable）_
+   4. D：_自定义页面级变量（Custom Page Level Variable）_
    5. M：页面浏览量（Page View）
-   6. _M：圈选页面的页面浏览量（Circled Page Page View）_
+   6. M：圈选页面的页面浏览量（Circled Page Page View）
 4. **事件（Event）**
    1. D：元素内容（Element Content）
    2. D：元素位置（Element Location）
-   3. _D：自定义事件级变量（Custom Event Level Variable）_
-   4. _M：自定义事件（Custom Event）_
+   3. D：_自定义事件级变量（Custom Event Level Variable）_
+   4. M：_自定义事件（Custom Event）_
    5. M：激活（First Launch）\[mApp\]
-   6. _M：圈选事件（Circled Event）_
+   6. M：圈选事件（Circled Event）
 
 ### 访问用户 和 登录用户
 
 #### 访问用户
 
-访问用户ID是GrowingIO随时生成的唯一ID，如果你想要分的是析产品所有访客，可以选择“访问用户”；上面的例子中，小明访问 H5注册页面时，GrowingIO 会获取浏览器 cookie 会据此生成1个唯一的 ID 作为小明在该 H5站点的唯一 ID
+访问用户ID是GrowingIO随时生成的唯一ID，如果你想要分析的是产品所有访客，可以选择“访问用户”；上面的例子中，小明访问 H5注册页面时，GrowingIO 会生成1个随机的 ID 作为小明在该 H5站点的唯一 ID, 并记录在浏览器 cookie 中。
 
 ####  登录用户
 
