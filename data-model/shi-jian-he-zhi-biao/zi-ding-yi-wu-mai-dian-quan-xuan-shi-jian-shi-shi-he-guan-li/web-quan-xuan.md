@@ -1,17 +1,4 @@
-# 自定义-无埋点圈选事件实施和管理
-
-* [Web圈选](zi-ding-yi-wu-mai-dian-quan-xuan-shi-jian-shi-shi-he-guan-li.md#web-quan-xuan)
-* [App圈选](zi-ding-yi-wu-mai-dian-quan-xuan-shi-jian-shi-shi-he-guan-li.md#app-quan-xuan)
-* [小程序圈选](zi-ding-yi-wu-mai-dian-quan-xuan-shi-jian-shi-shi-he-guan-li.md#xiao-cheng-xu-quan-xuan)
-* [圈选命名规范](zi-ding-yi-wu-mai-dian-quan-xuan-shi-jian-shi-shi-he-guan-li.md#quan-xuan-ming-ming-gui-fan)
-
-圈选，是利用GrowingIO进行数据分析之前的数据定义过程。您需要根据业务需求，将需要分析的关键事件通过可视化地方式在您的产品界面中定义出来，这个过程，就是圈选。
-
-**例如：** 你关心首页banner的浏览/点击情况，那你就需要对首页banner这个元素进行圈选
-
-GrowingIO提供了丰富的数据定义方式，您可以对您的网页、iOS App、Android App、小程序进行圈选。进入圈选模式后，需要点击相应的元素并根据界面提示做相应的选择进行保存，就能在GrowingIO后台 “指标管理“ 中看到圈选的事件。
-
-## Web圈选
+# Web圈选
 
 GrowingIO 全量采集用户行为数据，你可以通过「圈选」来定义元素和页面，作为数据分析的基础指标。
 
@@ -21,9 +8,9 @@ GrowingIO 全量采集用户行为数据，你可以通过「圈选」来定义�
 
 ![](https://docs.growingio.com/.gitbook/assets/9412f46a-d87c-41ef-9ee6-9e6e408f4c6a-12626-00000bcf696b73c5_tmp.jpg)
 
-#### 1.开始圈选 {#1-kai-shi-quan-xuan}
+## 1.开始圈选
 
-**1.1 定义页面**
+### **1.1 定义页面**
 
 **在定义页面之前需要理解的基本规则：**
 
@@ -131,7 +118,7 @@ GrowingIO 互联网金融解决方案落地页 [**https://www.growingio.com**](h
 
 ![](https://docs.growingio.com/.gitbook/assets/21_17_01__04_25_2018.jpg)
 
-**1.2 定义元素**
+### **1.2 定义元素**
 
 在**「圈选」**模式下找到你想要定义的元素。
 
@@ -209,47 +196,47 @@ GrowingIO 互联网金融解决方案落地页 [**https://www.growingio.com**](h
 
 然后在「事件分析」中使用「元素内容」的维度进行分析。
 
-#### 2.FAQ {#2-faq}
+## 2.FAQ
 
-**2.1 如何定义“一组同类元素之和”？**
+### **2.1 如何定义“一组同类元素之和”？**
 
 如果该元素有同类元素，不限定所有的限定条件，即是统计一组同类元素之和的数据。
 
-**2.2 对于已定义过的元素，更改定义规则后，应该如何保存？**
+### **2.2 对于已定义过的元素，更改定义规则后，应该如何保存？**
 
 更改新的规则后，如果原有数据仍然想继续统计，请选择“另存为”来定义新的规则。
 
-**2.3 如何进行文本“内容”的模糊匹配？**
+### **2.3 如何进行文本“内容”的模糊匹配？**
 
 限定“内容”的情况下，将鼠标移动到“内容”的右边，可以看到一个小铅笔，点击小铅笔后，便打开了文本和模式编辑弹窗。默认为精准匹配，即“限定内容为xxx”，若改成模糊匹配，则意义是“限定内容包含xxx”。 保存元素规则后，将按照新的规则进行统计，如果原有数据仍然想继续统计，请选择“另存为”。
 
 ![](https://docs.growingio.com/.gitbook/assets/223435.jpg)
 
-**2.4 3月21日迭代后，新旧版本规则对应关系**
+### **2.4 3月21日迭代后，新旧版本规则对应关系**
 
 ![](https://docs.growingio.com/.gitbook/assets/ping-mu-kuai-zhao-20180319-shang-wu-11.24.51.png)
 
-#### 3.圈选元素的新增文案（web） {#3-quan-xuan-yuan-su-de-xin-zeng-wen-an-web}
+## 3.圈选元素的新增文案（web）
 
-**3.1 元素标签**
+### **3.1 元素标签**
 
 元素类型是通过 HTML 标签进行标记的，标签是 HTML 语言中最基本的单位。圈选弹出框里会告诉用户圈到的元素类型。
 
 具体可能圈选到的标签可以参考：[https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element)​
 
-**3.2 圈选到容器的情况**
+### **3.2 圈选到容器的情况**
 
 我们认为的“容器”是嵌套了一个或多个最底层元素的元素。当所圈选的元素是一个有嵌套关系的容器时，为了方便您的圈选，我们对这些最底层元素也同时做了高亮处理，高亮的元素都是支持圈选的。
 
 我们对于容器关系的元素圈选，容器内的元素点击数计算会有以下两种情况： 1. 当前选中容器是类型为 A 的超链接元素，该超链接元素的点击数包含其嵌套区域内部所有元素的点击数总和。 2. 在其他情况下，容器本身的点击数不包含内部所嵌套其他元素的点击数。如果需要整个容器内的点击数总和，请分别圈选该容器内部的各个元素后使用合并简单指标进行计算点击数。
 
-#### 4.不能圈选的可能原因以及对应方法（web） {#4-bu-neng-quan-xuan-de-ke-neng-yuan-yin-yi-ji-dui-ying-fang-fa-web}
+## 4.不能圈选的可能原因以及对应方法（web）
 
-**4.1 不能圈选的原因**
+### **4.1 不能圈选的原因**
 
 不能圈选的原因包含了，但不仅限于： 1. 元素包含属性：data-growing-ignore， 因此不可以被圈选。如果需要圈选该元素，请去除该属性。 2. 密码框不支持被圈选。 3. 元素已经被圈选，因此不能被重复圈选。 4. 元素是叶子节点，无文本内容，且元素的占屏幕面积超过50%，因此不能被圈选。如果需要圈选该元素，请添加data-growing-circle属性。 5. 元素所在的Dom嵌套层数过多，不在倒数后两层；或者层数符合但是没有实际内容，因此不能被圈选。
 
-**4.2 data-growing-circle属性的使用帮助：**
+### **4.2 data-growing-circle属性的使用帮助：**
 
 元素是叶子节点，无文本内容，且元素的占屏幕面积超过50%，因此不能被圈选。如果需要圈选该元素，请添加data-growing-circle属性。例如 ：
 
@@ -263,7 +250,7 @@ GrowingIO 互联网金融解决方案落地页 [**https://www.growingio.com**](h
 <div  id= "d1" style="border: 1px solid black; width: 80%; height: 80%" data-growing-circle></div>
 ```
 
-#### 常见问题（web） {#chang-jian-wen-ti-web}
+## 5.常见问题（web）
 
 **1.如果我的页面改版，现在标记的指标是不是需要重新定义？**
 
@@ -327,165 +314,4 @@ X-Frame-Options: Allow-From https://www.growingio.com
 GrowingIO根据您网站HTML结构识别和定义页面上的元素。有的时候网站上的HTML标签写法完全相同，呈现在页面上的几个同类元素，可能HTML代码完全相同。此时GrowingIO采集、圈选数据时无法区分开。我们通过HTML标签的id和class来区分元素，这种情况下您可以在需要区分的标签class中添加一些字符串用于区分。
 
 **仍有疑问？请参考**[**常见问题－圈选部分**](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/faq/faq-circle)​
-
-## App圈选
-
-SDK安卓大于等于 0.9.96，iOS 大于等于 0.9.37 为新版。新版 与旧版在圈选的操作上有所区别，旧版操作将在文末进行介绍 。
-
-#### 准备工作 {#zhun-bei-gong-zuo}
-
-请接入SDK，并把集成SDK的App安装到您的手机。 请确保使用已发布的最新版App进行圈选，以防因为版本不同，出现数据量偏差。
-
-注意：安卓移动端圈选在小米开发者版本和 MIUI8稳定版下调不起小红点，是因为这两个版本系统禁止了悬浮框权限，您可以先尝试信任下。步骤：安全中心-授权管理-应用权限管理-找到您要设置权限的app-找到悬浮框权限-进行授权信任。当然也可以换用其他安卓手机进行圈选。
-
-#### 开始圈选 {#kai-shi-quan-xuan}
-
-**一、登录状态下进入圈选，选择嵌有SDK的目标应用（安卓/iOS）， 开始圈选。**
-
-![](https://docs.growingio.com/.gitbook/assets/quan-xuan-1.png)
-
-**二、手机扫码（确保安装了嵌有SDK的目标应用）， 微信扫码需要在浏览器中打开，浏览器扫码后打开以下页面，点击在手机上圈选可直接唤起应用。**
-
-![](https://docs.growingio.com/.gitbook/assets/app-quan-app-qi-dong-jie-mian-1.png)
-
-**三、初始界面 ：启动圈选后，会看到如下界面，将红点拖动到任一界面元素， 松开即对该元素进行圈选。**
-
-![](https://docs.growingio.com/.gitbook/assets/yi-dong-xin-quan-xuan-di-yi-bu.png)
-
-**四、把页面定义为指标**
-
-拖动红点到指定位置并松开后，进入”选择内容”界面 。中间的蓝色区域，上方代表当前整个页面，下方是刚才红点儿覆盖的元素， 被标记为“按钮”。他们都带有对应内容的截图。
-
-![](https://docs.growingio.com/.gitbook/assets/yi-dong-duan-quan-xuan-di-san-bu.png)
-
-点击代表”页面”的蓝色区域，就进入了页面指标定义界面。
-
-![](https://docs.growingio.com/.gitbook/assets/yi-dong-xin-quan-xuan-di-4-bu.png)
-
-（1）请在最上方的“名称”区域，给当前的页面指标命名。默认的名称是当前页面的标题。输入框下方的“原始名称”，是个当前页面的技术标识。
-
-（2）对于安卓应用，页面技术标识是Activity或者Fragment的名称；对于iOS应用，页面技术标识是UIViewController的名称。
-
-（3）中间的图片区域是当前页面的截图。
-
-（4）最下方的图表代表了当前页面的近期浏览数据。
-
-（5）点击“保存”按钮，就会把当前页面保存成指标，然后您可以在GrowingIO网站中创建图表时引用它。
-
-**五、把界面元素定义为指标（整个按钮/按钮中的文字）**
-
-在圈选调出的蓝色区域中，下方代表按钮的部分，也包含了按钮中所有文字。点击下拉箭头可以看到如下界面。
-
-![](https://docs.growingio.com/.gitbook/assets/yi-dong-xin-quan-xuan-di-san-bu.png)
-
-（1）选择“按钮”部分，表示选中整个按钮。当您对于按钮内可能的文字变化不关心时，请选择此项，定义的指标将只统计按钮的数据，忽略内部文字变化。选择后进入按钮定义界面：
-
-![](https://docs.growingio.com/.gitbook/assets/yi-dong-xin-quan-xuan-di-wu-bu.png)
-
-在这个界面中，除了通用的指标命名之外，下方紧挨着的是这个元素所在页面的描述。“Coding”是我们在程序中为页面定义的标题，"ProjectOtherFragment”则是这个页面的技术标识。
-
-界面下方分为两个Tab，分别是“当前位置”和“同类元素”。出现这样的Tab时，意味着这个按钮在一个按顺序排列的列表中。
-
-a.选择“当前位置”，这样定义的指标，将只统计刚才红点儿覆盖的位置，而不把整个列表中其他元素算进来。运营人员查看不同位置对于点击量的影响时，可以使用这个Tab来定义指标。
-
-b.选择“同类元素”，则表示，定义的指标会把整个列表中每个位置都统计进来，包括所有用户看到的所有内容。
-
-（2）选择“所有文字项”中的任意一个文字，意味着您关心文字的内容。不管是只显示当前的文字时候才统计，还是想把这个文字项所有可能的值都拿来做横向柱图，都请选择此项。
-
-![](https://docs.growingio.com/.gitbook/assets/yi-dong-duan-xin-quan-xuan-di-liu-bu.png)
-
-a.如果选择“当前元素”的Tab，定义了指标。那么只有选中的文字不改变时，才进行统计。
-
-b.如果选择“当前位置”的Tab，定义了指标。那么只有红点覆盖的那个按钮里的文字才统计，不管选的文字有没有发生变化。
-
-c.如果选择“同类元素”，定义了指标。那么整个列表中每个按钮里那个文字都会被统计下来。这样的指标在横向柱状图中使用，会自动把每个文字作为一项列出来。如果运营人员要查看发布的内容哪个最受欢迎，可以选择按钮中的标题文字，然后使用“同类元素”定义指标。这样，就能做出每个标题对应点击量的横向柱状图。
-
-**六、旧版SDK圈选操作**
-
-![](https://docs.growingio.com/.gitbook/assets/yi-dong-quan-xuan-jiu-ban-1.png)
-
-（1）把页面定义为指标：“点击红圈”即进入页面定义页 ；
-
-（2）把界面元素定义为指标： “拖拽红圈”至想要定义的元素位置 即可进入指标定义页面 。
-
-![](https://docs.growingio.com/.gitbook/assets/yi-dong-duan-quan-xuan-jiu-ban-2.png)
-
-## 小程序圈选
-
-#### 页面指标定义 {#ye-mian-zhi-biao-ding-yi}
-
-进入圈选页面后，显示的是所有自动采集到的页面。在这个页面，你可以看到以下信息：
-
-1. 当前要圈选的小程序的产品名
-2. 当前要圈选的小程序的 AppID
-3. 当前要圈选的小程序的过去 7 天数据表现
-4. 当前要圈选的小程序自动采集到的页面列表及其数据
-
-![&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x5708;&#x9009;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LFBrLMQ6Br7wdTsoufB%2F-LFBwCOk9pJuFNhJ7T5u%2F%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A1%B5%E9%9D%A2%E5%9C%88%E9%80%89%E4%BB%8B%E7%BB%8D.png?alt=media&token=5b1c37ea-48a4-4ddc-a4cd-650c6df009dc)
-
-从上图的样例可以看到，GrowingIO 小程序自动采集到 6 个页面，每个页面的具体访问趋势显示在列表内。如果要定义某个页面为指标用于后续分析，点击“**定义页面**“按钮，然后可以看到弹出框，如下图。
-
-![&#x5C0F;&#x7A0B;&#x5E8F;&#x5B9A;&#x4E49;&#x9875;&#x9762;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LFBrLMQ6Br7wdTsoufB%2F-LFCIlgMuUd8kMMlyBIc%2F%E5%9C%88%E9%80%89%E9%A1%B5%E9%9D%A2%E7%BB%86%E8%8A%82.png?alt=media&token=5b245215-0878-4209-bef8-77e2ba4a9864)
-
-输入页面名称，点击保存，就定义好了一个页面指标。之后，就可以在分析工具里面使用这个指标了。
-
-这里值得注意的是元素点击分布，显示的数据是在这个页面，行为被点击/输入的次数，可以理解成为简易的交互热图分布。
-
-点击具体页面的容器区域，就会进入到该页面的行为指标定义页面，具体见下一节。
-
-#### 行为指标定义 {#hang-wei-zhi-biao-ding-yi}
-
-进入页面的行为圈选页面后，显示的是该页面所有自动采集到的行为页面。在这个页面，你可以看到以下信息：
-
-1. 当前小程序页面的页面名称
-2. 当前小程序页面的页面路径
-3. 当前小程序页面的过去 7 天数据表现
-4. 当前小程序页面自动采集到的行为列表及其数据
-
-![&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x5185;&#x884C;&#x4E3A;&#x5708;&#x9009;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LFCqNxsL3IBFp-oAtuG%2F-LFD2JJj8RC0hIy797uZ%2F%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A1%8C%E4%B8%BA%E5%9C%88%E9%80%89.png?alt=media&token=ff416bc8-3192-40df-aabb-9599d663834b)
-
- 从上图的样例可以看到，GrowingIO 小程序在榜单页面自动采集到 2 个行为，每个行为的具体点击趋势显示在列表内。如果要定义某个行为为指标用于后续分析，点击“**定义行为**“按钮，然后可以看到弹出框，如下图。
-
-![&#x5C0F;&#x7A0B;&#x5E8F;&#x5B9A;&#x4E49;&#x884C;&#x4E3A;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LFCqNxsL3IBFp-oAtuG%2F-LFD59ZE5It-ZMFZ3yJs%2F%E5%9C%88%E9%80%89%E8%A1%8C%E4%B8%BA%E7%BB%86%E8%8A%82.png?alt=media&token=b8b3dc50-6138-4ff7-8b93-96ff8d4b05cf)
-
-输入行为名称，点击保存，就定义好了一个行为指标。
-
-**这里值得注意**的是元素内容分布和元素位置分布，显示的数据是在这个页面，行为被点击/输入时，对应的内容和位置的交互热图分布。在[无埋点采集事件](https://growingio.gitbook.io/miniprogram/tag-management/sdk-logic/autotrack#tap)里介绍了，如果在视图里使用了 data-title 和 data-index 这种声明式编程，就能在行为数据里看到这些数据。
-
-之后，就可以在分析工具里面使用这个指标了，同时可以在**数据管理-圈选指标**中管理这个指标。
-
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyovQeg-F1vyUV53N6%2F-LGyp73W8d2ZjpMXS8hJ%2Fimage.png?alt=media&token=ca5e17d1-fd60-42ba-ae96-0daa5c314f09)
-
-## 圈选命名规范
-
-#### 1.数据定义 {#1-shu-ju-ding-yi}
-
-在数据定义中，我们已经为您预设了相应的名称。您只需要对名称进行简单的修改，就可以保存了
-
-推荐格式为：
-
-\[`定义类型_名称`\]
-
-* **定义类型**是指您定义对象的类型，常见的有`页面_XX`,`元素_XX`,`列表_XX`等等
-* **名称**是方便您回忆的，推荐您按照定义对象来命名，常见的有`XX_首页LOGO`，`XX_登录按钮`，`XX_广告栏`
-
-当您关闭限制条件进行高级定义时。请您在命名时进行标注，方便您自己和您的同事进行理解和回忆
-
-例如
-
-`跨页面_元素_XX`,`元素_所有XX`
-
-#### 2.指标名称 {#2-zhi-biao-ming-cheng}
-
-在创建指标时，我们希望您按照如下的格式进行命名，方便您和您的同事进行进一步的数据分析。
-
-推荐格式为： \[`平台_指标名字_统计含义`\]
-
-例子： `iOS_登录按钮_点击率`，`Web_加入我们_浏览量`，`Android_付款流程_漏斗转化` 等等
-
-如果您的产品版本迭代很频繁，且每次迭代后需要重新圈选指标的话，建议您在名称最后加上版本号，以便在重新圈选后与历史版本的指标作区分。
-
-#### 3.图表名称 {#3-tu-biao-ming-cheng}
-
-在创建图表时，我们推荐您在命名前加上\[`平台_XXX`\]前缀，以帮助您快速的了解图表的含义
 
