@@ -25,6 +25,8 @@ GrowingIO支持 Web，App，小程序 等多个用户平台，这给 GrowingIO �
 
 需要说明的是，这四层数据模型是树形属性。在实际用户浏览网站或使用 App 时，一个用户可以发起多个访问，一个访问中会有多个页面浏览，同一个1个页面上会触发多个不同事件，如下图所示：
 
+![&#x56DB;&#x5C42;&#x6811;&#x5F62;&#x7ED3;&#x6784;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LHWllLuJXiaZOdbWcp5%2F-LHWygFc97JBAqidzyKH%2Fimage.png?alt=media&token=f202ecc4-98c0-4dba-86a2-097dbf015996)
+
 在这四个层级上，每一个层级都有一些[维度和指标。](shi-jian-zhi-biao-wei-du-bian-liang-shi-shen-me.md)
 
 我们使用C：代表可数实体，D：代表维度，M：代表指标。斜体表示数量可扩展的自定义维度或者指标。
