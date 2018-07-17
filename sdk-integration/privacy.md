@@ -67,51 +67,97 @@ GrowingIO使用SSL对数据传输进行加密。
 
 #### 4.1 接口内容 {#4-1}
 
-| 接口名称 | Android | iOS | Web |
-| --- | --- | --- | --- |
-| 全局配置项 | .disableDataCollect\(\) |  |  |
-| 关闭或开启全局数据采集 | // 不采集数据 GrowingIO.getInstance\(\).disableDataCollect\(\); // 收集数据 GrowingIO.getInstance\(\).enableDataCollect\(\) | disableDataCollect    enableDataCollect | // 开启gdpr，停止数据采集 window.gio\('config',{"dataCollect":"false"}\); // 关闭gdpr，开始数据采集 window.gio\('config',{"dataCollect":"true"}\); 放在send之前 |
-| 获取访问用户ID | GrowingIO.getInstance\(\).getVisitUserId\(\); | getVisitUserId | window.gio\('getVisitUserId'\); 放在send之后 |
+Android:
 
-#### **4.2 Andorid 样例** {#4-2}
+* 全局配置项
 
-```text
-GrowingIO.startWithConfiguration(this, new Configuration()
-        .disableDataCollect()        // 开启GDPR， 不采集数据。 默认采集
-        .useID()
-        .trackAllFragments());
-//  不采集数据
-GrowingIO.getInstance().disableDataCollect();
-// 收集数据
+```java
+.disableDataCollect() 
+```
+
+* 关闭或开启全局数据采集
+
+```java
+// 不采集数据 
+GrowingIO.getInstance().disableDataCollect(); 
+// 收集数据 
 GrowingIO.getInstance().enableDataCollect();
-// 获取设备Id
-GrowingIO.getInstance().getVisitUserId();
 ```
 
-#### **4.3 iOS 样例** {#4-3}
+* 获取访问用户ID
 
-```text
-// 开启GDPR
-[Growing disableDataCollect];
-
-// 关闭GDPR
-[Growing enableDataCollect];
-
-// 获取设备ID
-NSString *viId = [Growing getVisitUserId];
+```java
+GrowingIO.getInstance().getVisitUserId(); 
 ```
 
-#### **4.4 JS 样例** {#4-4}
+* 样例
 
-```text
-// 开启gdpr，停止数据采集
+```java
+GrowingIO.startWithConfiguration(this, new Configuration() 
+.disableDataCollect() // 开启GDPR， 不采集数据。 默认采集 
+.useID() 
+.trackAllFragments()); 
+// 不采集数据 
+GrowingIO.getInstance().disableDataCollect(); 
+// 收集数据 
+GrowingIO.getInstance().enableDataCollect(); 
+// 获取访问用户ID 
+GrowingIO.getInstance().getVisitUserId(); 
+```
 
-window.gio('config',{"dataCollect":"false"});
+iOS:
 
-// 关闭gdpr，开始数据采集
-window.gio('config',{"dataCollect":"true"});
+* 全局配置项（无）
+* 关闭或开启全局数据采集
 
-获取访问用户ID
-window.gio('getVisitUserId')   放在send之后
+```objectivec
+disableDataCollect 
+enableDataCollect 
+```
+
+* 获取访问用户ID
+
+```objectivec
+getVisitUserId 
+```
+
+* 样例
+
+```objectivec
+// 开启GDPR 
+[Growing disableDataCollect]; 
+// 关闭GDPR 
+[Growing enableDataCollect]; 
+// 获取设备ID 
+NSString *viId = [Growing getVisitUserId]; 
+```
+
+JS:
+
+* 全局配置项 （无）
+* 关闭或开启全局数据采集
+
+```javascript
+// 开启gdpr，停止数据采集 
+window.gio('config',{"dataCollect":"false"}); 
+// 关闭gdpr，开始数据采集 
+window.gio('config',{"dataCollect":"true"}); // 放在send之前 
+```
+
+* 获取访问用户 ID
+
+```javascript
+window.gio('getVisitUserId'); // 放在send之后
+```
+
+* 样例
+
+```javascript
+// 开启gdpr，停止数据采集 
+window.gio('config',{"dataCollect":"false"}); 
+// 关闭gdpr，开始数据采集 
+window.gio('config',{"dataCollect":"true"}); 
+// 获取访问用户ID 
+window.gio('getVisitUserId'); // 放在send之后
 ```
 
