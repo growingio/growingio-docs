@@ -60,7 +60,7 @@
   * [原始数据导出 2.0 API](api/raw-data-export-2.0.md)
   * [数据管理 API \(GDPR\)](api/delete-visitor-api.md)
   * [广告监测链接创建服务 API](api/ads-tracking-api.md)
-  * [用户属性上传 API](api/yong-hu-shu-xing-shang-chuan-api.md)
+  * [用户属性上传 API](api/user-property-upload.md)
 * [常见问题](faq/README.md)
   * [SDK 集成](faq/faq-sdk.md)
   * [圈选常见问题](faq/faq-circle.md)
