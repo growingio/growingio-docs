@@ -19,11 +19,13 @@ GrowingIO 支持通过离线的方式批量上传登录用户属性，配合 SDK
 {% api-method-parameter name="ai" type="string" required=true %}
 项目 id
 {% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
+{% api-method-query-parameters %}
 {% api-method-parameter name="auth" type="string" required=true %}
 针对每条数据独立生成的认证，计算方式见本文档第二节
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endapi-method-query-parameters %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="userProperty1" type="string" required=false %}
