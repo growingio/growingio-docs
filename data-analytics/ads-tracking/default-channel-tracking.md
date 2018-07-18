@@ -13,7 +13,7 @@
 
 ### 1. 访问来源 {#1}
 
-GrowingIO会根据一次访问中的第一个页面的referrer判断访问来源，将referrer\_domain作为访问来源；同时，GrowingIO默认启用了「最终非直接点击」归因模型，回溯周期是30天（2016年1月30日以前，回溯周期是7天）。  
+GrowingIO 会根据一次访问中的第一个页面的 referrer 判断访问来源，将referrer\_domain 作为访问来源；同时，GrowingIO 默认启用了「最终非直接点击」归因模型，回溯周期是 30 天（2016 年 1 月 30 日以前，回溯周期是 7 天）。  
 以「今天的访问来源」举例：
 
 * case1:某个用户今天最后一次访问的第一个页面referrer\_domain是google.com（外站），那么该次访问的来源会被判定为google.com；
