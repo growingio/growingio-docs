@@ -105,6 +105,42 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 {% endapi-method-spec %}
 {% endapi-method %}
 
+
+
+{% api-method method="get" host="https://www.growingio.com" path="/v2/insights/{export\_type}/{ai}/{export\_date}.json?expire={minutes}" %}
+{% api-method-summary %}
+导出全部类型数据
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
+
 返回结果中的字段含义为：
 
 * status 表示导出状态，可能值为：
