@@ -64,7 +64,5 @@ description: 分钟级别的监控看板
 
 #### 3.3 编辑 {#编辑}
 
-当您点击编辑时，每一个图表的右上方都有一个关闭的按钮，点击可以删除您不需要的图表，同时下方可以拖动大小，适用于个性化设置，设置好后，点击保存便可。
-
-![](https://lh4.googleusercontent.com/ZCm1g-qMqxpLdD5hz-PYeJPmSEJQ9uUf2HTO-7PfJvNFDOSQPlNnqamaSD6hqvif2Zgfy6Sd5Bm_NtPyQ3MNfxsi3Rw2vnjExcWn6yu7HQ4W29jFh9xy16pxXunVUx7asUaLExpT)
+当您点击右上角的「编辑」时，每一个图表的右上方都有一个关闭的按钮，点击可以删除您不需要的图表，同时下方可以拖动大小，适用于个性化设置，设置好后，点击保存便可。
 
