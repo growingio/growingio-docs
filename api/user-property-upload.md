@@ -87,7 +87,7 @@ Body 内的 userProperty 1-N 为您在 GrowingIO 系统内定义的用户属性�
 
 ### 2. 认证
 
-为防止误传和恶意攻击， GrowingIO 服务器会对收到的每条数据做校验，因此需要在 query 参数中提供校验码。校验码生成代码见下方示例，其中 keyArray 为 loginUserId，一次性上传多条时，使用逗号隔开，如上方示例中，第一条 keyArray 为 1234，第二条为 1234,1235。
+为防止误传和恶意攻击， GrowingIO 服务器会对收到的每条数据做校验，因此需要在 query 参数中提供校验码。校验码生成代码见下方示例，其中 keyArray 为 loginUserId，一次性上传多条时，使用逗号隔开，如上方示例中，第一条 keyArray 为 `1234`，第二条为 `1234,1235`。
 
 Java:
 
