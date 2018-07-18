@@ -61,7 +61,7 @@ $ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
 
 ### 添加跟踪代码
 
-在微信小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前：
+在微信小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，**请注意一定要放在 App\(\) 之前**：
 
 ```text
 var gio = require("utils/gio-minp.js");
