@@ -22,8 +22,8 @@ description: 这是一份新同学使用 GrowingIO 指南
 
 GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「埋点 - 自定义事件和变量」：
 
-1. 通过 [web圈选]() 、[iOS / Android移动端圈选]()进行数据定义。
-2. 通过埋点[创建自定义事件和变量]()
+1. 通过 [web 圈选](data-defination/events-metrics/circle-metrics/web-circle.md) 、[iOS / Android 移动端圈选](data-defination/events-metrics/circle-metrics/app-circle.md)进行数据定义。
+2. 通过埋点创建[自定义事件](data-defination/events-metrics/manual-metrics.md)和[变量](data-defination/dimensions/manual-dimensions.md)
 3. 了解 [GrowingIO 数据模型](data-defination/data-model.md) 。
 
 #### 第四步：使用数据分析工具 {#第四步：使用数据分析工具}

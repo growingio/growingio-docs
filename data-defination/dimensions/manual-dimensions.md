@@ -1,4 +1,4 @@
-# 自定义-打点维度（变量）
+# 打点维度（变量）
 
 * [自定义变量使用场景](manual-dimensions.md#zi-ding-yi-bian-liang-shi-yong-chang-jing)
 * [页面级变量](manual-dimensions.md#ye-mian-ji-bian-liang)
