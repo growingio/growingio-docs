@@ -58,7 +58,7 @@
   * [原始数据导出 2.0 API](api/raw-data-export-2.0.md)
   * [广告监测链接创建服务 API](api/ads-tracking-api.md)
   * [统计数据导出 API](api/reporting-api.md)
-  * [用户属性上传 API](api/user-property-upload.md)
+  * [用户变量上传 API](api/user-property-upload.md)
   * [数据管理 API \(GDPR\)](api/delete-visitor-api.md)
   * [原始数据导出 1.0 API（已废弃）](api/raw-data-export-1.0.md)
   * [API 更新日志](api/changelog-api.md)

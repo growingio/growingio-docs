@@ -1,4 +1,4 @@
-# 用户属性上传 API
+# 用户变量上传 API
 
 * [1. 接口](user-property-upload.md#1-jie-kou)
 * [2. 认证](user-property-upload.md#2-ren-zheng)
