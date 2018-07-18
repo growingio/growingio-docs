@@ -34,7 +34,7 @@
   * [iOS SDK](sdk-integration/ios-sdk.md)
   * [小程序 SDK](sdk-integration/xiao-cheng-xu-sdk.md)
   * [GrowingIO Debugger](sdk-integration/growingio-debugger/README.md)
-    * [Debugger 最佳实践：验证打点事件](sdk-integration/growingio-debugger/best-practice.md)
+    * [验证打点事件](sdk-integration/growingio-debugger/best-practice.md)
   * [SDK 更新日志](sdk-integration/changelog-sdk.md)
 * [数据定义](data-defination/README.md)
   * [数据模型](data-defination/data-model.md)

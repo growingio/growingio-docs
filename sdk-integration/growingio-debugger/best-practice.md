@@ -1,4 +1,4 @@
-# Debugger 最佳实践：验证打点事件
+# 验证打点事件
 
 * [概述](best-practice.md#gai-shu)
 * [cstm \(事件以及关联的事件级变量\) 事件](best-practice.md#cstm-shi-jian-yi-ji-guan-lian-de-shi-jian-ji-bian-liang-shi-jian)

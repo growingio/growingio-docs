@@ -271,7 +271,7 @@ GrowingIO.startWithConfiguration(this, new Configuration()
 
 ### 2. 自定义事件和变量 API
 
-您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成[数据分析报表](../data-analytics/)。除自动收集的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](../data-defination/events-metrics/manual-metrics.md)和[变量](../data-defination/dimensions/manual-dimensions.md)，下面介绍自定义事件和变量 API 使用方法。
+您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，进行[数据分析](../data-analytics/)。除自动收集的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](../data-defination/events-metrics/manual-metrics.md)和[变量](../data-defination/dimensions/manual-dimensions.md)，下面介绍自定义事件和变量 API 使用方法。
 
 #### API 简介
 
@@ -507,7 +507,7 @@ Tips：建议您在开发中，使用 `DebugMode` 或者 [**Mobile Debugger**](g
 
 * CS1字段，会强制命名为“登陆用户ID”，并且上传接口与其他变量不同。
 * CS2-10字段，会迁移至“应用级变量”，应用级变量与CS字段的使用方式无任何区别。
-* CS11-20字段，会迁移至“[用户变量]()”。两者的区别主要在于：用户变量支持自定义的归因方式。
+* CS11-20字段，会迁移至[“用户变量”](../data-defination/dimensions/manual-dimensions.md#yong-hu-bian-liang)。两者的区别主要在于：用户变量支持自定义的归因方式。
 
 **2.1 上传接口：**
 
@@ -570,13 +570,13 @@ gio.setPageVariable(Fragment fragment, JSONObject pageLevelVariables);
 
 **2.2 GrowingIO 后台配置**
 
-您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档]()
+您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档](../data-defination/dimensions/manual-dimensions.md#ye-mian-ji-bian-liang)。
 
 ### **3. 迁移页面属性字段（PS字段）**
 
 如果您未做页面属性字段上传，请忽略此部分。
 
-类似于用户属性字段，在 2.x 版本中，页面属性字段被迁移到了“[页面级变量]()”。与页面属性字段不同的是，**页面级变量相当于过去的 PS 字段，不再存在过去的 PG 字段**。
+类似于用户属性字段，在 2.x 版本中，页面属性字段被迁移到了“[页面级变量](../data-defination/dimensions/manual-dimensions.md#ye-mian-ji-bian-liang)”。与页面属性字段不同的是，**页面级变量相当于过去的 PS 字段，不再存在过去的 PG 字段**。
 
 **3.1 上传接口**
 
@@ -606,7 +606,7 @@ gio.setPageVariable(Fragment fragment, JSONObject pageLevelVariables);
   
 **3.2 GrowingIO 后台配置**
 
-您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档]()
+您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档](../data-defination/dimensions/manual-dimensions.md#ye-mian-ji-bian-liang)。
 
 ### 4. 迁移自定义事件（埋点事件）
 
@@ -988,7 +988,7 @@ private void setGrowingIOCS() {
 
 **其他CS字段遵循相似的设置时机**
 
-**在上传成功两小时后，您需要在「项目管理-项目配置-CS 配置中」进行字段配置和激活，配置成功后便可开始使用 CS 字段进行分析。配置过程请参考** [**属性数据\(CS\)上传配置文档**]()**。**
+**在上传成功两小时后，您需要在「项目管理-项目配置-CS 配置中」进行字段配置和激活，配置成功后便可开始使用 CS 字段进行分析。**
 
 #### 设置界面元素内容 {#设置界面元素内容}
 
