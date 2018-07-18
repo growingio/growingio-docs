@@ -1,4 +1,4 @@
-# 自定义-打点事件实施和管理
+# 打点事件
 
 * [总体流程](manual-metrics.md#zong-ti-liu-cheng)
 * [第一步：从数据需求到具体 “指标+维度”](manual-metrics.md#di-yi-bu-cong-shu-ju-xu-qiu-dao-ju-ti-zhi-biao-wei-du)
