@@ -11,9 +11,12 @@ description: 最有效的转化分析利器
 * [1.简介](funnel-analysis.md#1-jian-jie)
 * [2.使用场景和案例](funnel-analysis.md#2-shi-yong-chang-jing-he-an-li)
   * [2.1 案例](funnel-analysis.md#2-1-an-li)
-  * [2.2 建立你的第一个漏斗](funnel-analysis.md#2-2-jian-li-ni-de-di-yi-ge-lou-dou)
-  * [2.3 漏斗内容解读](funnel-analysis.md#2-3-lou-dou-nei-rong-jie-du)
-  * [2.4 漏斗使用 Tips](funnel-analysis.md#2-4-lou-dou-shi-yong-tips)
+  * [2.2 建立你的第一个漏斗](funnel-analysis.md#22-jian-li-ni-de-di-yi-ge-lou-dou)
+    * [2.2.1 简单漏斗创建](funnel-analysis.md#简单漏斗创建)
+    * [2.2.2 创建对比漏斗](funnel-analysis.md#创建对比漏斗)
+    * [2.2.3 使用打点事件创建漏斗](funnel-analysis.md#使用自定义（打点）事件创建漏斗)
+  * [2.3 漏斗内容解读](funnel-analysis.md#23-lou-dou-nei-rong-jie-du)
+  * [2.4 漏斗使用 Tips](funnel-analysis.md#24-lou-dou-shi-yong-tips)
 * [3.常见问题](funnel-analysis.md#3-chang-jian-wen-ti)
 
 ## 1.简介
@@ -70,7 +73,7 @@ description: 最有效的转化分析利器
 
 ### 2.2 建立你的第一个漏斗
 
-#### 简单漏斗创建 {#简单漏斗创建}
+#### 2.2.1 简单漏斗创建 {#简单漏斗创建}
 
 1.从“分析”页面，选择“漏斗”，进入漏斗创建页面。
 
@@ -95,7 +98,7 @@ description: 最有效的转化分析利器
 
 ![](https://docs.growingio.com/.gitbook/assets/ldbz6.png)
 
-#### 创建对比漏斗 {#创建对比漏斗}
+#### 2.2.2 创建对比漏斗 {#创建对比漏斗}
 
 **a.维度对比**
 
@@ -111,9 +114,9 @@ description: 最有效的转化分析利器
 
 ![image](http://growing.cn-bj.ufileos.com/1funnel.gif)
 
-#### 使用自定义（打点）事件创建漏斗 {#使用自定义（打点）事件创建漏斗}
+#### 2.2.3 使用打点事件创建漏斗 {#使用自定义（打点）事件创建漏斗}
 
-漏斗中的可选事件，包括了圈选事件和打点事件，可以在同一个漏斗分析不同步骤中同时使用圈选和打点事件。
+漏斗中的可选事件，包括了[圈选事件](../data-defination/events-metrics/circle-metrics/)和[打点事件](../data-defination/events-metrics/manual-metrics.md)，可以在同一个漏斗分析不同步骤中同时使用圈选和打点事件。
 
 除了上述案例中演示的对所有步骤同时过滤的方法外，漏斗分析支持对每个步骤单独添加过滤条件。
 
