@@ -142,5 +142,53 @@ function authToken($projectKeyId, $secretKey, $keyArray)
 
 之前使用旧版本上传接口的请尽快升级到新版本接口，避免数据上传结果和线上配置出现不一致。
 
+{% api-method method="post" host="https://data.growingio.com/saas/:ai/user" path="" %}
+{% api-method-summary %}
 
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="ai" type="string" required=true %}
+项目 id
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="auth" type="string" required=true %}
+针对每条数据独立生成的认证
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="cs2" type="string" required=true %}
+用户属性2
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="cs1" type="string" required=true %}
+登录用户 id
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+旧版本上传接口使用 cs1-cs20 的方式上传用户属性，对应的签名计算中 keyArray 为 user\_id:1234,1235。
 
