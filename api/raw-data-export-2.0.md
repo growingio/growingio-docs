@@ -2,6 +2,8 @@
 
 *  [1.原始数据导出 2.0 API 功能概要](raw-data-export-2.0.md#summary)
 * [2.原始数据导出 2.0 API 接口定义](raw-data-export-2.0.md#definition)
+  * [GET 按类型导出原始数据](raw-data-export-2.0.md#an-lei-xing-dao-chu-yuan-shi-shu-ju)
+  * [GET 导出全部类型原始数据](raw-data-export-2.0.md#dao-chu-quan-bu-lei-xing-yuan-shi-shu-ju)
 * [3.原始数据导出版本和GrowingIO数据主版本（SDK 版本）关系](raw-data-export-2.0.md#sdk-explaination)
 * [4.原始数据导出 2.0 和原始数据导出 1.0 主要区别](raw-data-export-2.0.md#changelog)
 * [5.原始数据导出 2.0 导出数据字段说明](raw-data-export-2.0.md#metadata)

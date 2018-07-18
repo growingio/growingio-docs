@@ -34,6 +34,7 @@
   * [iOS SDK](sdk-integration/ios-sdk.md)
   * [小程序 SDK](sdk-integration/xiao-cheng-xu-sdk.md)
   * [GrowingIO Debugger](sdk-integration/growingio-debugger.md)
+  * [SDK 更新日志](sdk-integration/changelog-sdk.md)
 * [数据定义](data-defination/README.md)
   * [数据模型](data-defination/data-model.md)
   * [名词解释](data-defination/terminology.md)
@@ -68,6 +69,5 @@
   * [数据安全](faq/faq-privacy.md)
   * [基本问题](faq/untitled.md)
   * [产品使用](faq/chan-pin-shi-yong.md)
-* [SDK 更新日志](changelog-sdk.md)
 * [内容贡献者](contributor.md)
 

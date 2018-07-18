@@ -1,5 +1,9 @@
 # 用户属性上传 API
 
+* [1. 接口](user-property-upload.md#1-jie-kou)
+* [2. 认证](user-property-upload.md#2-ren-zheng)
+* [3. 旧版本上传接口](user-property-upload.md#3-jiu-ban-ben-shang-chuan-jie-kou)
+
 GrowingIO 支持通过离线的方式批量上传登录用户属性，配合 SDK 中上传的登录用户 id，可以在不发版的情况下更新用户属性规则。
 
 ### 1. 接口

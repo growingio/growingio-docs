@@ -1,8 +1,6 @@
 # 原始数据导出 1.0 API（已废弃）
 
-
-
-**注意：原始数据导出 2.0 API 已经上线，如果原始数据导出功能需要升级到 2.0 版本请联系客户经理，并请及时按照**[**原始数据导出 2.0 API**](https://docs.growingio.com/api/raw-data-export-2.0.html)**的字段格式更新原始数据的 ETL 脚本程序。**
+**注意：原始数据导出 2.0 API 已经上线，如果原始数据导出功能需要升级到 2.0 版本请联系客户成功经理，并请及时按照**[**原始数据导出 2.0 API**](https://docs.growingio.com/api/raw-data-export-2.0.html)**的字段格式更新原始数据的 ETL 脚本程序。**
 
 **如您使用的是 2.x 版本的 SDK，请务必使用**[ **2.0 版本的原始数据导出的 API**](https://docs.growingio.com/api/yuan-shi-shu-ju-dao-chu-2.0-api.html)。
 
