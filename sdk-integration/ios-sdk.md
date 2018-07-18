@@ -1,16 +1,16 @@
 # iOS SDK
 
-* [集成最新 SDK 和 API 导入](ios-sdk.md#ji-cheng-sdk-he-api-dao-ru)
-  * 1. [SDK代码安装](ios-sdk.md#1-sdk-dai-ma-an-zhuang)
-  * [2. iOS SDK API](ios-sdk.md#ios-sdk-api) 
-  * [3. 自定义数据上传&配置指导](ios-sdk.md#3-zi-ding-yi-shu-ju-shang-chuan-pei-zhi-zhi-dao)
-* [1.x 旧版本 SDK 升级指导](ios-sdk.md#sdk-1x-版本升级指导)
-  * [1. 重新集成 SDK](ios-sdk.md#1-zhong-xin-ji-cheng-sdk)
-  * [2. 迁移用户属性字段（CS字段）](ios-sdk.md#2-qian-yi-yong-hu-shu-xing-zi-duan-cs-zi-duan)
-  * [3. 迁移页面属性字段（PS字段）](ios-sdk.md#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)
-  * [4. 迁移自定义事件（埋点事件）](ios-sdk.md#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)
-  * [5. 数据校验](ios-sdk.md#5-shu-ju-xiao-yan)
-* [如何集成 1.  x 旧版本 SDK](ios-sdk.md#ru-he-ji-cheng-1x-ban-ben-sdk)
+* [集成最新 SDK 和 API 导入](ios-sdk.md#ji-cheng-zui-xin-sdk-he-api-dao-ru)
+  * [SDK代码安装](ios-sdk.md#1-sdk-dai-ma-an-zhuang)
+  * [iOS SDK API](ios-sdk.md#ios-sdk-api) 
+  * [自定义数据上传&配置指导](ios-sdk.md#3-zi-ding-yi-shu-ju-shang-chuan-pei-zhi-zhi-dao)
+* [1.x 旧版本 SDK 升级指导](ios-sdk.md#sdk-1x-jiu-ban-ben-sheng-ji-zhi-dao)
+  * [重新集成 SDK](ios-sdk.md#1-zhong-xin-ji-cheng-sdk)
+  * [迁移用户属性字段（CS字段）](ios-sdk.md#2-qian-yi-yong-hu-shu-xing-zi-duan-cs-zi-duan)
+  * [迁移页面属性字段（PS字段）](ios-sdk.md#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)
+  * [迁移自定义事件（埋点事件）](ios-sdk.md#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)
+  * [数据校验](ios-sdk.md#5-shu-ju-xiao-yan)
+* [如何集成 1.  x 旧版本 SDK](ios-sdk.md#ru-he-ji-cheng-1x-jiu-ban-ben-sdk)
 
 ### 集成最新 SDK 和 API 导入
 
@@ -84,7 +84,7 @@ GrowingIO 支持两种 iOS SDK 安装方式：
 
 #### **（3）在 AppDelegate 中添加激活圈选的代码**
 
-```text
+```objectivec
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     if ([Growing handleUrl:url])
@@ -100,7 +100,7 @@ GrowingIO 支持两种 iOS SDK 安装方式：
 
 * 如果您的 AppDelegate 中，实现了其中一个或者多个方法，请在已实现的函数中，调用`[Growing handleUrl:]`:
 
-```text
+```objectivec
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
@@ -108,7 +108,7 @@ GrowingIO 支持两种 iOS SDK 安装方式：
 
 * 如果以上所有函数都未实现，则请实现以下方法并调用`[Growing handleUrl:]`:
 
-```text
+```objectivec
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation
 ```
 
@@ -118,7 +118,7 @@ GrowingIO 支持两种 iOS SDK 安装方式：
 
 在 AppDelegate 中引入`#import "Growing.h"`并添加启动方法
 
-```text
+```objectivec
 #import "Growing.h"
 
 - (BOOL)application:(UIApplication *)application
@@ -149,7 +149,7 @@ _**请确保将代码添加在上面描述的位置，添加到其他函数中�
 
 （1）接口
 
-```text
+```objectivec
 @interface UIView(GrowingAttributes)
 @property (nonatomic, copy)NSString *growingAttributesUniqueTag;
 @end
@@ -157,7 +157,7 @@ _**请确保将代码添加在上面描述的位置，添加到其他函数中�
 
 （2）代码写法：请加在viewWillAppear或者时机更早的函数里。
 
-```text
+```objectivec
 -(void)viewWillAppear
 {
     UIView *MyView;
@@ -174,7 +174,7 @@ _**请确保将代码添加在上面描述的位置，添加到其他函数中�
 
 很多应用上方都有横向滚动的Banner广告。对于这样的广告，如果要收集数据，请在响应点击的控件上添加如下代码
 
-```text
+```objectivec
 UIView *view;
 …
 view.growingAttributesValue = 广告的唯一ID;
@@ -187,7 +187,7 @@ view.growingAttributesValue = 广告的唯一ID;
 
 例如，当您的横向滚动广告共有3张广告图时，您可以在3个响应点击的View上分别设置不同的广告唯一ID，类似如下效果：
 
-```text
+```objectivec
 view1.growingAttributesValue = @“ad1”;
 view2.growingAttributesValue = @“ad2”;
 view3.growingAttributesValue = @“ad3”;
@@ -225,7 +225,7 @@ view3.growingAttributesValue = @“ad3”;
 
 添加以下方法以启用Hashtag识别：
 
-```text
+```objectivec
     // 设置为 YES, 将启用 HashTag
     + (void)enableHybridHashTag:(BOOL)enable;
 ```
@@ -250,7 +250,7 @@ view3.growingAttributesValue = @“ad3”;
 
 #### API简介 {#api简介}
 
-```text
+```objectivec
 // 发送事件 API
 + (void)track:(NSString *)eventId;
 + (void)track:(NSString *)eventId withNumber:(NSNumber *)number;
@@ -291,7 +291,7 @@ view3.growingAttributesValue = @“ad3”;
 | number | Number | 否 | 事件的数值，没有number参数时，事件默认加1；当出现number参数时，事件自增number的数值。 |
 | eventLevelVariable | JSON Object | 否 | 事件发生时所伴随的维度信息。 |
 
-```text
+```objectivec
 // track API原型
 + (void)track:(NSString *)eventId;
 + (void)track:(NSString *)eventId withNumber:(NSNumber *)number;
@@ -299,17 +299,17 @@ view3.growingAttributesValue = @“ad3”;
 + (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
-```text
+```objectivec
 // track API调用示例一
 [Growing track:@"registerSuccess"];
 ```
 
-```text
+```objectivec
 // track API调用示例二
 [Growing track:@"registerSuccess" withVariable:@{@"gender":@"male", @"age":@"21"}];
 ```
 
-```text
+```objectivec
 // track API调用示例三
 [Growing track:@"loanAmount" withNumber:@800000 andVariable:@{@"loanType":@"houseMortgage", @"province":@"Zhejiang"}];
 ```
@@ -326,19 +326,19 @@ view3.growingAttributesValue = @“ad3”;
 | value | String | 否 | 页面级变量的值 |
 | pageLevelVariables | JSON Object | 否 | 页面级别的信息 |
 
-```text
+```objectivec
 // setPageVariable API原型
 + (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;
 + (void)setPageVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue toViewController:(UIViewController *)viewController;
 + (void)setPageVariable:(NSDictionary<NSString *, NSObject *> *)variable toViewController:(UIViewController *)viewController;
 ```
 
-```text
+```objectivec
 // setPageVariable API调用示例一
 [Growing setPageVariableWithKey:@"author" andStringValue:@"Zhang San" toViewController:myViewController];
 ```
 
-```text
+```objectivec
 // setPageVariable API调用示例二
 [Growing setPageVariable:@{@"pageName":@"Home Page", @"author":@"Zhang San"} toViewController:myViewController];
 ```
@@ -355,19 +355,19 @@ view3.growingAttributesValue = @“ad3”;
 | Value | String | 否 | 转化变量的值 |
 | conversionVariables | JSON Object | 否 | 转化变量用于高级归因分析 |
 
-```text
+```objectivec
 // setEvar API原型
 + (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
 + (void)setEvarWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
 + (void)setEvar:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
-```text
+```objectivec
 // setEvar API调用示例一
 [Growing setEvarWithKey:@"campaignId" andStringValue:@"1234567890"];
 ```
 
-```text
+```objectivec
 // setEvar API调用示例二
 [Growing setEvar:@{@"campaignId":@"12345", @"campaignOwner":@"Li Si"}];
 ```
@@ -384,19 +384,19 @@ view3.growingAttributesValue = @“ad3”;
 | value | String | 否 | 用户变量的值 |
 | customerVariables | JSON Object | 否 | 用户变量用于用户信息相关的分析 |
 
-```text
+```objectivec
 // setPeopleVariable API原型
 + (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
 + (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
 + (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
-```text
+```objectivec
 // setPeopleVariable API调用示例一
 [Growing setPeopleVariableWithKey:@"gender" andStringValue:@"male"];
 ```
 
-```text
+```objectivec
 // setPeopleVariable API调用示例二
 [Growing setPeopleVariable:@{@"gender":@"male", @"age":@"25"}];
 ```
@@ -409,12 +409,12 @@ view3.growingAttributesValue = @“ad3”;
 | --- | --- |
 | userId | String | 是 | 用户的登录用户ID |
 
-```text
+```objectivec
 // setUserId API原型
 + (void)setUserId:(NSString *)userId;
 ```
 
-```text
+```objectivec
 // setuserId API调用示例
 [Growing setUserId:@"1234567890"];
 ```
@@ -425,12 +425,12 @@ view3.growingAttributesValue = @“ad3”;
 
 当用户登出之后调用clearUserId，清除已经设置的登录用户ID。
 
-```text
+```objectivec
 // clearUserId API原型
 + (void)clearUserId;
 ```
 
-```text
+```objectivec
 // clearUserId API调用示例
 [Growing clearUserId];
 ```
@@ -469,7 +469,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 * 1.x 版本方法格式：
 
-```text
+```objectivec
 [Growing setCS1Value:@"100324" forKey:@"user_id"];
 [Growing setCS2Value:@"943123" forKey:@"company_id"];
 [Growing setCS3Value:@"张溪梦" forKey:@"user_name"];
@@ -479,7 +479,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 对于 CS1 字段，也就是登陆用户ID，请使用以下方法：
 
-```text
+```objectivec
 // 设置登录用户ID API
 + (void)setUserId:(NSString *)userId;
 
@@ -489,7 +489,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 对于应用级变量，也就是 1.x 版本中的 CS2 - CS10，请使用以下方法：
 
-```text
+```objectivec
 [Growing setAppVariable:@{@"key1":@"value1", @"key2":@2}];
 [Growing setAppVariableWithKey:@"key1" andStringValue:@"value1"];
 [Growing setAppVariableWithKey:@"key2" andNumberValue:@2];
@@ -497,7 +497,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 对于用户变量，也就是 1.x 版本中的 CS11 - CS20，请使用以下方法：
 
-```text
+```objectivec
 + (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
 + (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
 + (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable; // 多个变量，可组合为一个对象传入
@@ -517,7 +517,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 * 1.x 版本方法格式：
 
-```text
+```objectivec
 @property (nonatomic, copy) NSString* growingAttributesPageGroup;
 @property (nonatomic, copy) NSString* growingAttributesPS1;
 @property (nonatomic, copy) NSString* growingAttributesPS2;
@@ -526,7 +526,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 * 2.x 版本方法格式：
 
-```text
+```objectivec
 + (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;
 
 + (void)setPageVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue toViewController:(UIViewController *)viewController;
@@ -548,7 +548,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 * 1.x 版本方法格式：
 
-```text
+```objectivec
 @interface Growing: NSObject
 + (void)track: (NSString *) event properties: (nullable NSDictionary *) properties;
 @end
@@ -556,7 +556,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 * 2.x 版本方法格式：
 
-```text
+```objectivec
 + (void)track:(NSString *)eventId;
 + (void)track:(NSString *)eventId withNumber:(NSNumber *)number;
 + (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;
@@ -575,7 +575,25 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 GrowingIO 提供了 SDK debug 模式以及 debug 工具，来帮助您完成数据的校验。 对移动端的开发者，GrowingIO 的 SDK 提供了 debug 模式，在 SDK 初始化代码中可以找到。如下图： ![](../../.gitbook/assets/13%20%282%29.jpeg) 
 
-![](https://docs.growingio.com/.gitbook/assets/13%20%282%29.jpeg)
+### 6. 添加初始化函数
+
+在 AppDelegate 中引入`#import "Growing.h"`并添加启动方法
+
+```objectivec
+#import "Growing.h"
+
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+      ...
+      // 启动GrowingIO
+      [Growing startWithAccountId:@"xxxxxxxxxxxxxxxx"]; //替换为您的ID
+      // 其他配置
+      // 开启Growing调试日志 可以开启日志
+      // [Growing setEnableLog:YES];
+  }
+```
+
+_**请确保将代码添加在上面描述的位置，添加到其他函数中或者异步 block 中可能导致数据不准确！**_
 
 开启 debug 模式后，您需要在app上触发一下打点事件，在打出的log里搜索上述关键字就能找到对应自定义事件&变量上传的数据。
 
@@ -644,7 +662,7 @@ B. 手动安装依赖
 
 在 AppDelegate 中引入`#import "Growing.h"`并添加启动方法
 
-```text
+```objectivec
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
       ...
@@ -675,7 +693,7 @@ B. 手动安装依赖
 1. 添加您的 URL Scheme（growing.xxxxxxxxxxxxxxxx）到项目中，URL Scheme 位于项目设置 target -&gt; 选项卡 Info -&gt; URL Types；
 2. 在 AppDelegate 中调用函数 \[Growing handleUrl:\] 来接收 URL
 
-```text
+```objectivec
 - (BOOL)application:(UIApplication *)appation openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     if ([Growing handleUrl:url])
@@ -691,15 +709,15 @@ B. 手动安装依赖
 
 * 如果您的 AppDelegate 中，实现了其中一个或者多个方法，请在已实现的函数中，调用 `[Growing handleUrl:]`:
 
-```text
+```objectivec
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
 ```
 
-* 如果以上所有函数都未实现，则请实现以下方法并调用 `[Growing handleUrl:]`:
+* 如果以上所有函数都未实现，则请实现以下方法并调用`[Growing handleUrl:]`
 
-```text
+```objectivec
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation
 ```
 
@@ -722,7 +740,7 @@ B. 手动安装依赖
 3. 设置ID的方法如下：
 4. 接口
 
-   ```text
+   ```objectivec
    @interface UIView(GrowingAttributes)
    @property (nonatomic, copy)   NSString* growingAttributesUniqueTag;
    @end
@@ -730,7 +748,7 @@ B. 手动安装依赖
 
 5. 代码写法：请加在viewWillAppear或者时机更早的函数里。
 
-```text
+```objectivec
 -(void)viewWillAppear
 {
     UIView * MyView;
@@ -748,7 +766,7 @@ B. 手动安装依赖
 
 对于这样的广告，如果要收集数据，请在响应点击的控件上添加如下代码
 
-```text
+```objectivec
 UIView *view;
 …
 view.growingAttributesValue = 广告的唯一ID;
@@ -761,10 +779,10 @@ view.growingAttributesValue = 广告的唯一ID;
 
 例如，当您的横向滚动广告共有3张广告图时，您可以在3个响应点击的View上分别设置不同的广告唯一ID，类似如下效果：
 
-```text
-view1.growingAttributesValue = @“ad1”;
-view2.growingAttributesValue = @“ad2”;
-view3.growingAttributesValue = @“ad3”;
+```objectivec
+view1.growingAttributesValue = @"ad1";
+view2.growingAttributesValue = @"ad2";
+view3.growingAttributesValue = @"ad3";
 ```
 
 此外，当您想采集一些可能没有文字的控件（比如UIImageView，UIView）时，也可以给属性growingAttributesValue赋值作为文字，用来在圈选的时候区分不同的内容。
@@ -777,7 +795,7 @@ view3.growingAttributesValue = @“ad3”;
 
 为处理这种场景，我们提供了取别名的方法来区分这两种情况下的页面，接口如下：
 
-```text
+```objectivec
 @interface UIViewController(GrowingAttributes)
 @property (nonatomic, copy)   NSString* growingAttributesPageName;
 @end
@@ -788,7 +806,7 @@ view3.growingAttributesValue = @“ad3”;
 1. 某个应用的商品列表页是用`ListViewController`实现的，所以默认的页面名称都是`ListViewController`。
 2. 如果想区分衣物类商品列表和食品类商品列表，分别看它们的浏览量，可以这样做：
 
-   ```text
+   ```objectivec
    //ListViewController类的实现文件
    -(void)viewWillAppear
    {
@@ -813,9 +831,14 @@ view3.growingAttributesValue = @“ad3”;
 
 如果您需要采集应用内某个输入框内的文字（例如搜索框），请调用如下接口进行设置
 
-`UIView * view; // view可以是UITextField, UITextView, UISearchBar ... view.growingAttributesDonotTrackValue = NO;`
-
 其中，view代表要被采集的输入框。 当这个输入框失去焦点（包括应用退到后台），且输入框内容跟获取焦点前相比发生变化时，输入框内文字会被发送回GrowingIO。 请注意：对于密码输入框，即便标记为需要采集，SDK也会忽略，不采集它的数据。
+
+```objectivec
+// view可以是UITextField, UITextView, UISearchBar 
+UIView * view; 
+... 
+view.growingAttributesDonotTrackValue = NO;
+```
 
 #### Facebook广告SDK {#facebook广告sdk}
 
@@ -823,7 +846,9 @@ view3.growingAttributesValue = @“ad3”;
 
 请在main函数第一行调用下方函数。APP启动后，将不允许修改采集模式。
 
-`[Growing setAspectMode:GrowingAspectModeDynamicSwizzling]`
+```objectivec
+[Growing setAspectMode:GrowingAspectModeDynamicSwizzling]
+```
 
 #### 采集H5页面数据 {#采集h5页面数据}
 
@@ -837,9 +862,9 @@ view3.growingAttributesValue = @“ad3”;
 
 对于 1.3.1 及以上 SDK 版本，添加以下方法以启用Hashtag识别：
 
-```text
-    // 设置为 YES, 将启用 HashTag
-    + (void)enableHybridHashTag:(BOOL)enable;
+```objectivec
+// 设置为 YES, 将启用 HashTag
++ (void)enableHybridHashTag:(BOOL)enable;
 ```
 
 ### 8. 其他配置项 {#8-其他配置项}
@@ -876,7 +901,7 @@ CS5: sales\_name:销售员小王
 
 用户可以填入自定义的数据，该数据不会持久化，在数据变化的时候填入即可
 
-```text
+```objectivec
 -(void)someMethod
 {
     …
@@ -924,7 +949,7 @@ CS5: sales\_name:销售员小王
 
 例如“加入购物车”按钮，可以设置成加入购物车的具体商品名称或ID。
 
-```text
+```objectivec
 UIView * view;
 ...
 view.growingAttributesInfo = "The New iPad";
@@ -932,7 +957,7 @@ view.growingAttributesInfo = "The New iPad";
 
 #### 忽略某元素 {#忽略某元素}
 
-```text
+```objectivec
 UIView * view;
 ...
 view.growingAttributesDonotTrack = YES;
