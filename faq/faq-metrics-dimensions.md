@@ -3,6 +3,10 @@
 * [指标](faq-metrics-dimensions.md#1)
 * [维度](faq-metrics-dimensions.md#2)
 
+[预定义指标的基本解释](../data-defination/events-metrics/predefined-metrics.md)
+
+[预定义维度的基本解释](../data-defination/dimensions/predefined-dimensions.md)
+
 ### 1. 指标 {#1}
 
 #### 1.1 如何区分 PV 和 UV？ {#1如何区分-pv-和-uv？}
