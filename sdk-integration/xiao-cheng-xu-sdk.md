@@ -78,7 +78,7 @@ var gio = require("utils/gio-minp.js");// version 是你的小程序的版本号
 | version | string | 你的小程序的版本号 |
 
 {% hint style="info" %}
-forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程序里面设置用户标识符，存储在微信 Storage 里面。这个用户标识符潜在可能会被`clearStorage` 清除掉，所以有可能不同的用户标识符对应同一个微信里的 `openid`。如果你的微信小程序在用户打开后会去做登陆并且获取 `openid` 和/或 `unionid`，强烈建议设置 `forceLogin` 为 true。当 forceLogin 为 true 的时候，用户标识符会使用 openid。具体集成示例：
+forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程序里面设置用户标识符，存储在微信 Storage 里面。这个用户标识符潜在可能会被`clearStorage` 清除掉，所以有可能不同的用户标识符对应同一个微信里的 `openid`。如果你的微信小程序在用户打开后会去做登录并且获取 `openid` 和/或 `unionid`，可以设置 `forceLogin` 为 true。当 forceLogin 为 true 的时候，用户标识符会使用 openid，潜在风险是如果用户没有登录，数据不会发送。具体集成示例：
 
 
 
@@ -101,10 +101,10 @@ import gio from './utils/gio-minp'
 import Vue from 'vue'
 import App from './App'
 ​
-gio(‘init‘, '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
 ```
 
-gio-minp 默认是用 module.exports, 对于 import 不支持，可以修改 gio-minp.js 最后部分代码，把 `, module.exports = gio`修改成`; export default gio`。
+gio-minp 默认是用 module.exports 对于 import 不支持，可以修改 gio-minp.js 最后部分代码，把 `, module.exports = gio`修改成`; export default gio`。
 
 ### 添加请求服务器域名
 
