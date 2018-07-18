@@ -90,6 +90,8 @@ gio("identify", openid, unionid);
 ```
 {% endhint %}
 
+**注意：**如果你的微信小程序在用户打开后不要求用户授权获取openid和/或 unionid，但是设置了forceLogin为True，那么GroiwngIO不能采集到用户的数据，所以请特别注意这个参数的设置。
+
 ### 特别注意
 
 如果你使用 mpvue 来开发小程序的应用，为了让 GrowingIO SDK 能自动采集到真实行为事件，需要把 Vue 作为初始化参数传入。比如在 main.js 这样子集成，
