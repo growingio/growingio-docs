@@ -60,6 +60,7 @@
   * [用户属性上传 API](api/user-property-upload.md)
   * [数据管理 API \(GDPR\)](api/delete-visitor-api.md)
   * [原始数据导出 1.0 API（已废弃）](api/raw-data-export-1.0.md)
+  * [API 更新日志](api/changelog-api.md)
 * [常见问题](faq/README.md)
   * [SDK 集成](faq/faq-sdk.md)
   * [圈选常见问题](faq/faq-circle.md)
@@ -67,7 +68,6 @@
   * [数据安全](faq/faq-privacy.md)
   * [基本问题](faq/untitled.md)
   * [产品使用](faq/chan-pin-shi-yong.md)
-* [API 更新日志](changelog-api.md)
 * [SDK 更新日志](changelog-sdk.md)
 * [内容贡献者](contributor.md)
 
