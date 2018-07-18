@@ -86,13 +86,11 @@ API中给出了打点事件和事件级变量的上传方式，以及[其他打�
 
 **数据校验第一步：本地开发环境校验**
 
-GrowingIO 提供了 SDK debug 模式以及 [debug 工具](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/sdk-integration/growingio-debugger)，来帮助您完成数据的校验。
+GrowingIO 提供了 SDK debug 模式以及 debug 工具，来帮助您完成数据的校验。具体请参考 [Debugger最佳实践](../../sdk-integration/growingio-debugger/best-practice.md#cstm-shi-jian-yi-ji-guan-lian-de-shi-jian-ji-bian-liang-shi-jian)。
 
 **数据校验第二步：GrowingIO 后台图表验证**
 
 在 GrowingIO 分析后台，找到 “单图” - “新建事件分析”，然后在图表中选择您设计好的 “指标+维度”，查看是否有数据。当然，您需要首先确保打点事件或维度确实有被触发。
-
-详细文档：[打点数据验证方法](https://s.growingio.com/ZpbXBY)
 
 至此，您已经完成了 “打点事件” 的上传，如您在配置或添加代码中有任何疑问，请联系您的客户成功经理咨询，或在工单系统中反馈问题。谢谢。
 

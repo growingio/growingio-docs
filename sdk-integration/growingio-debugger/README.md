@@ -1,12 +1,12 @@
 # GrowingIO Debugger
 
-* [GrowingIO Web Debugger](growingio-debugger.md#growingio-web-debugger)
-  * [Web Debugger 安装](growingio-debugger.md#web-debugger-an-zhuang)
-  * [使用 Web Debugger 测试数据](growingio-debugger.md#shi-yong-web-debugger-ce-shi-shu-ju)
-* [GrowingIO Mobile Debugger](growingio-debugger.md#growingio-mobile-debugger)
-  * [启动 Mobile Debugger](growingio-debugger.md#qi-dong-mobile-debugger)
-  * [使用 Moible Debugger 测试数据](growingio-debugger.md#shi-yong-mobile-debugger-ce-shi-shu-ju)
-* [GrowingIO 小程序 Debugger](growingio-debugger.md#growingio-minidebugger)
+* [GrowingIO Web Debugger](./#growingio-web-debugger)
+  * [Web Debugger 安装](./#web-debugger-an-zhuang)
+  * [使用 Web Debugger 测试数据](./#shi-yong-web-debugger-ce-shi-shu-ju)
+* [GrowingIO Mobile Debugger](./#growingio-mobile-debugger)
+  * [启动 Mobile Debugger](./#qi-dong-mobile-debugger)
+  * [使用 Moible Debugger 测试数据](./#shi-yong-mobile-debugger-ce-shi-shu-ju)
+* [GrowingIO 小程序 Debugger](./#growingio-minidebugger)
 
 GrowingIO Debugger是GrowingIO推出的调试 SDK所发送数据的工具。在GrowingIO Debugger的帮助下，实施工程师可以看到在什么样的页面上，在什么时机向GrowingIO发送了什么样的服务器请求。
 
@@ -121,11 +121,11 @@ imp（元素浏览数据）数据量级过大，影响Mobile Debugger性能，Mo
 
 在小程序Debugger页面，会展示目前接入Debugger实时传输数据的小程序用户，以及部分用户微信信息、设备、操作系统的信息。但是部分信息的展示，例如用户微信名称、头像、国家、省份、城市，需要在SDK中设置微信用户属性设置。详情请见SDK 微信用户属性设置。
 
-![](../.gitbook/assets/fanfan1.png)
+![](../../.gitbook/assets/fanfan1.png)
 
 选择自己的用户头像，点击“下一步”，进入用户行为记录页面。
 
 和小程序产生交互（访问、页面浏览、点击等），即在此页面可以看到数据行为的记录。
 
-![](../.gitbook/assets/2018-07-10-23.04.19.gif)
+![](../../.gitbook/assets/2018-07-10-23.04.19.gif)
 

@@ -14,7 +14,7 @@ description: GrowingIO 使用自主研发的 SDK 实现数据采集功能。添�
 
 {% page-ref page="xiao-cheng-xu-sdk.md" %}
 
-{% page-ref page="growingio-debugger.md" %}
+{% page-ref page="growingio-debugger/" %}
 
 {% page-ref page="changelog-sdk.md" %}
 

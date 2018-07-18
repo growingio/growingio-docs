@@ -254,7 +254,7 @@ GrowingIO.startWithConfiguration(this, new Configuration()
 
 #### **\(7\) 调试查看发送数据日志**
 
-为了方便开发人员调试 GrowingIO SDK ，我们提供了调试 API 和 [Mobile Debugger](growingio-debugger.md#growingio-mobile-debugger) 两种方式查看 APP 采集数据的发送，强烈建议您使用 Mobile Debugger 在每一次产品上线前检查您的数据发送，其中调试 API 使用说明如下：
+为了方便开发人员调试 GrowingIO SDK ，我们提供了调试 API 和 [Mobile Debugger](growingio-debugger/#growingio-mobile-debugger) 两种方式查看 APP 采集数据的发送，强烈建议您使用 Mobile Debugger 在每一次产品上线前检查您的数据发送，其中调试 API 使用说明如下：
 
 `setDebugMode(true)` ：查看数据采集发送日志，默认值为`false`不开启；
 
@@ -497,7 +497,7 @@ GrowingIO.getInstance().clearUserId();
 
 * [Android SDK 集成](android-sdk.md#ji-cheng)
 
-Tips：建议您在开发中，使用 `DebugMode` 或者 [**Mobile Debugger**](growingio-debugger.md#shi-yong-mobile-debugger-ce-shi-shu-ju) 校验 GrowingIO SDK 的数据是否正常上传，其中开启`DebugMode`的方式见[调试查看发送数据日志](android-sdk.md#7-tiao-shi-cha-kan-fa-song-shu-ju-ri-zhi)。
+Tips：建议您在开发中，使用 `DebugMode` 或者 [**Mobile Debugger**](growingio-debugger/#shi-yong-mobile-debugger-ce-shi-shu-ju) 校验 GrowingIO SDK 的数据是否正常上传，其中开启`DebugMode`的方式见[调试查看发送数据日志](android-sdk.md#7-tiao-shi-cha-kan-fa-song-shu-ju-ri-zhi)。
 
 ### **2. 迁移用户属性字段（CS字段）**
 
@@ -638,7 +638,7 @@ gio.track(String eventId, JSONObject eventLevelVariables);
 
 ### 5. 数据校验
 
-在完成了上述代码实施和配置后，我们当然需要对数据是否成功上传进行校验。[点击查看 GrowingIO Mobile Debugger 的安装和使用](growingio-debugger.md#growingio-mobile-debugger)。
+在完成了上述代码实施和配置后，我们当然需要对数据是否成功上传进行校验。[点击查看 GrowingIO Mobile Debugger 的安装和使用](growingio-debugger/#growingio-mobile-debugger)。
 
 ## 旧版本 SDK 集成
 

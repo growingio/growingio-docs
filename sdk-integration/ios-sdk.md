@@ -569,7 +569,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 ### 5. 数据校验
 
-在完成了上述代码实施和配置后，我们当然需要对数据是否成功上传进行校验。[点击查看 GrowingIO Mobile Debugger 的安装和使用](growingio-debugger.md#growingio-mobile-debugger)。校验工作分为两步完成。
+在完成了上述代码实施和配置后，我们当然需要对数据是否成功上传进行校验。[点击查看 GrowingIO Mobile Debugger 的安装和使用](growingio-debugger/#growingio-mobile-debugger)。校验工作分为两步完成。
 
 **数据校验第一步：本地开发环境校验**
 

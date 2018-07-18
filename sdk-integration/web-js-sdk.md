@@ -64,7 +64,7 @@
 
 #### 1.2 GrowingIO Web Debugger
 
-完成页面代码安装并重新部署您的网站应用后，建议使用[ GrowingIO Web Debugger ](growingio-debugger.md#growingio-web-debugger)验证数据发送是否正常。Web Debugger可以通过可视化界面让您一睹 GrowingIO 强大的数据采集能力。
+完成页面代码安装并重新部署您的网站应用后，建议使用[ GrowingIO Web Debugger ](growingio-debugger/#growingio-web-debugger)验证数据发送是否正常。Web Debugger可以通过可视化界面让您一睹 GrowingIO 强大的数据采集能力。
 
 ### 2.Web JS SDK系统变量 {#12}
 
@@ -514,11 +514,11 @@ gio('track', eventId, number, eventLevelVariables);
 
 ### 5. 数据校验 {#25}
 
-在完成了上述代码实施和配置后，我们当然需要对数据是否成功上传进行校验。校验工作分为两步完成。GrowingIO 提供了 SDK debug 模式以及 debug 工具，来帮助您完成数据的校验。[点击查看 GrowingIO Web Debugger 的安装和使用](growingio-debugger.md#growingio-web-debugger)。
+在完成了上述代码实施和配置后，我们当然需要对数据是否成功上传进行校验。校验工作分为两步完成。GrowingIO 提供了 SDK debug 模式以及 debug 工具，来帮助您完成数据的校验。[点击查看 GrowingIO Web Debugger 的安装和使用](growingio-debugger/#growingio-web-debugger)。
 
 **数据校验第一步：本地开发环境校验**
 
-对 Web 端的开发者，GrowingIO 提供了 Chrome 浏览器插件形式的 debug 工具，请在[这里](growingio-debugger.md#web-debugger-an-zhuang)下载安装。
+对 Web 端的开发者，GrowingIO 提供了 Chrome 浏览器插件形式的 debug 工具，请在[这里](growingio-debugger/#web-debugger-an-zhuang)下载安装。
 
 debug 工具的工作界面如下图：
 
