@@ -271,7 +271,7 @@ GrowingIO.startWithConfiguration(this, new Configuration()
 
 ### 2. 自定义事件和变量 API
 
-您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成[数据分析报表](../data-analytics/)。除自动收集的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些自定义的数据[指标](../faq/faq-metrics-dimensions.md#1)及[维度](../faq/faq-metrics-dimensions.md#2)，具体接口含义请参考[相关文档]()，下面介绍自定义事件和变量 API 使用方法。
+您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成[数据分析报表](../data-analytics/)。除自动收集的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](../data-defination/events-metrics/manual-metrics.md)和[变量](../data-defination/dimensions/manual-dimensions.md)，下面介绍自定义事件和变量 API 使用方法。
 
 #### API 简介
 
