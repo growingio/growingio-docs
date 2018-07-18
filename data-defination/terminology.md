@@ -1,4 +1,4 @@
-# “事件、指标、维度、变量” 是什么
+# 名词解释
 
 * [事件和指标](terminology.md#shi-jian-he-zhi-biao)
   * [事件和指标的关系](terminology.md#shi-jian-he-zhi-biao-de-guan-xi)

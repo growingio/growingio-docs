@@ -36,7 +36,7 @@
   * [GrowingIO Debugger](sdk-integration/growingio-debugger.md)
 * [数据定义](data-defination/README.md)
   * [数据模型](data-defination/data-model.md)
-  * [“事件、指标、维度、变量” 是什么](data-defination/terminology.md)
+  * [名词解释](data-defination/terminology.md)
   * [事件和指标](data-defination/events-metrics/README.md)
     * [预定义指标](data-defination/events-metrics/predefined-metrics.md)
     * [无埋点圈选事件](data-defination/events-metrics/circle-metrics/README.md)
