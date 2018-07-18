@@ -1,4 +1,4 @@
-# 移动端热图
+# App 热图
 
 * [1.简介](heatmap-app.md#1-jian-jie)
 * [2.使用步骤](heatmap-app.md#2-shi-yong-bu-zhou)

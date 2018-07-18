@@ -14,7 +14,7 @@
   * [用户活跃分析](data-analytics/user-engagement-analysis.md)
   * [热图](data-analytics/heatmap/README.md)
     * [Web 端热图](data-analytics/heatmap/heatmap-web.md)
-    * [移动端热图](data-analytics/heatmap/heatmap-app.md)
+    * [App 热图](data-analytics/heatmap/heatmap-app.md)
   * [看板](data-analytics/dashboard/README.md)
     * [自定义首页](data-analytics/dashboard/homepage.md)
     * [概览看板](data-analytics/dashboard/overview.md)
