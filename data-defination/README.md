@@ -10,7 +10,7 @@ description: 了解数据定义是进入分析的前提，这个模块中我们�
 
 {% page-ref page="events-metrics/" %}
 
-{% page-ref page="dimensions/predefined-dimensions.md" %}
+{% page-ref page="dimensions/" %}
 
   
 

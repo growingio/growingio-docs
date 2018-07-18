@@ -16,7 +16,7 @@ description: 这是一份新同学使用 GrowingIO 指南
 #### 第二步：在工程师的协助下，进行重要配置 {#第二步：在工程师的协助下，进行重要配置}
 
 1. 如果你是使用了 \#hashtag 的单页面应用，请[进行配置](sdk-integration/web-js-sdk.md#21-hashtag-xi-tong-bian-liang)
-2. 95% 的用户都会上传用户属性字段，这样你就可以知道产品内的行为是由具体的哪个用户做的。比如想要对比登录和未登录用户的差异，就需要上传登录用户ID。
+2. 95% 的用户都会上传用户属性字段，这样你就可以知道产品内的行为是由具体的哪个用户做的。比如想要对比登录和未登录用户的差异，就需要上传登录用户 ID 。
 
 #### 第三步：选择数据定义方式 {#第三步：选择数据定义方式}
 
@@ -59,7 +59,7 @@ GrowingIO 所有分析能力都同样支持小程序，同时，还对小程序�
 
 1.集成[小程序 SDK ](sdk-integration/xiao-cheng-xu-sdk.md)，以进行数据采集
 
-2.通过[小程序圈选]()来进行数据定义
+2.通过[小程序圈选](data-defination/events-metrics/circle-metrics/mina-circle.md)来进行数据定义
 
 3.通过[小程序概览](data-analytics/xiao-cheng-xu-gai-lan.md)了解数据情况
 
