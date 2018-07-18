@@ -1,6 +1,6 @@
 # 原始数据导出 2.0 API
 
-* [1.原始数据导出 2.0 API 功能概要](raw-data-export-2.0.md#summary)
+*  [1.原始数据导出 2.0 API 功能概要](raw-data-export-2.0.md#summary)
 * [2.原始数据导出 2.0 API 接口定义](raw-data-export-2.0.md#definition)
 * [3.原始数据导出版本和GrowingIO数据主版本（SDK 版本）关系](raw-data-export-2.0.md#sdk-explaination)
 * [4.原始数据导出 2.0 和原始数据导出 1.0 主要区别](raw-data-export-2.0.md#changelog)
@@ -23,9 +23,9 @@
 
 ### 2.原始数据导出 2.0 API 接口定义 {#definition}
 
-{% api-method method="get" host="https://www.growingio.com/v2/insights/:export\_type/:data\_type/:ai/:export\_date.json?expire={minutes}" path="" %}
+{% api-method method="get" host="https://www.growingio.com" path="/v2/insights/:export\_type/${data\_type}/${ai}/${export\_date}.json?expire=${minutes}" %}
 {% api-method-summary %}
- 导出原始数据
+ 按类型导出原始数据
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -54,7 +54,7 @@
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ai" type="string" required=true %}
-
+项目 ID
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="export\_date" type="string" required=true %}
@@ -105,11 +105,9 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 {% endapi-method-spec %}
 {% endapi-method %}
 
-
-
-{% api-method method="get" host="https://www.growingio.com" path="/v2/insights/{export\_type}/{ai}/{export\_date}.json?expire={minutes}" %}
+{% api-method method="get" host="https://www.growingio.com" path="/v2/insights/${export\_type}/${ai}/${export\_date}.json?expire=${minutes}" %}
 {% api-method-summary %}
-导出全部类型数据
+导出全部类型原始数据
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -119,10 +117,37 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-parameter name="export\_type" type="string" required=true %}
+导出任务类型，系统目前支持小时与天的导出，可选值：hour 或者 day
+{% endapi-method-parameter %}
 
+{% api-method-parameter name="ai" type="string" required=true %}
+项目 ID
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="export\_date" type="string" required=true %}
+导出数据北京时间，格式为 yyyyMMddHHmm, 表现请求导出哪段时间内的数据，分为以下情况：   
+  
+\* 当 export\_type 为 day 时，只会截取 export\_date 中 yyyyMMdd，其余将忽略   
+\* 当 export\_type 为 hour 时，只会截图 export\_date 中 yyyyMMddHH，其余将忽略
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="X-Client-Id" type="string" required=false %}
+GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。示例：'X-Client-Id: 123abc'
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Authorization" type="string" required=false %}
+认证后获取到的 Token，示例: 'Authorization: Token XXXX'
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="minute" type="string" required=false %}
+链接失效时间，单位为分钟，默认为 5  
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -132,14 +157,30 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+    "status": "FINISHED",
+    "downloadLinks": {
+        "evar": [],
+        "pvar": [],
+        "action_tag": [],
+        "custom_event": [],
+        "page": [],
+        "ads_track_activation": [],
+        "visit": [],
+        "ads_track_click": [],
+        "action": []
+    },
+    "exportType": "hour",
+    "exportDate": "2018070100",
+    "exportVersion": "v2",
+    "requestTime": "2018-07-18 02:37",
+    "errorMsg": ""
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
 返回结果中的字段含义为：
 
