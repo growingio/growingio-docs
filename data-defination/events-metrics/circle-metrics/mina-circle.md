@@ -1,5 +1,8 @@
 # 小程序圈选
 
+* [页面指标定义](mina-circle.md#ye-mian-zhi-biao-ding-yi)
+* [行为指标定义](mina-circle.md#hang-wei-zhi-biao-ding-yi)
+
 ## 页面指标定义
 
 进入圈选页面后，显示的是所有自动采集到的页面。在这个页面，你可以看到以下信息：
