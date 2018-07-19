@@ -60,7 +60,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](https://growingio.atlassian.net/wiki/download/attachments/334102536/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-02%20%E4%B8%8B%E5%8D%884.31.06%202.png?version=1&modificationDate=1531126282388&cacheVersion=1&api=v2)
+![](../../.gitbook/assets/1.-chang-jing-1.png)
 
 ### **场景二：有关联事件级变量的计数器类型场景**
 
@@ -98,7 +98,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](https://growingio.atlassian.net/wiki/download/attachments/334102536/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-02%20%E4%B8%8B%E5%8D%884.31.06%202%202.png?version=1&modificationDate=1531126278625&cacheVersion=1&api=v2)
+![](../../.gitbook/assets/2.-chang-jing-2.png)
 
 ### **场景三：无关联事件级变量的数值类型场景**
 
@@ -128,7 +128,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](https://growingio.atlassian.net/wiki/download/attachments/334102536/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-02%20%E4%B8%8B%E5%8D%884.31.06%202%203.png?version=1&modificationDate=1531126281953&cacheVersion=1&api=v2)
+![](../../.gitbook/assets/3.-chang-jing-3.png)
 
 ### **场景四：有关联事件级变量的数值类型场景**
 
@@ -166,7 +166,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](https://growingio.atlassian.net/wiki/download/attachments/334102536/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-02%20%E4%B8%8B%E5%8D%884.31.06%202%203%202.png?version=1&modificationDate=1531126281509&cacheVersion=1&api=v2)
+![](../../.gitbook/assets/4.-chang-jing-4.png)
 
 ## **pvar\(**页面级变量**\) 事件**
 
@@ -201,7 +201,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](https://growingio.atlassian.net/wiki/download/attachments/334102536/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-03%20%E4%B8%8B%E5%8D%885.01.45.png?version=1&modificationDate=1531126281131&cacheVersion=1&api=v2)
+![](../../.gitbook/assets/5.pvar-ye-mian-ji-bian-liang-shi-jian.png)
 
 ## **evar \(**转化变量**\) 事件**
 
@@ -235,7 +235,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](https://growingio.atlassian.net/wiki/download/attachments/334102536/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-04%20%E4%B8%8B%E5%8D%886.08.14.png?version=1&modificationDate=1531126280751&cacheVersion=1&api=v2)
+![](../../.gitbook/assets/6.-zhuan-hua.png)
 
 ### **ppl \(**用户变量**\) 事件**
 
@@ -247,7 +247,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 #### **登录用户ID配置方式**
 
-![](https://growingio.atlassian.net/wiki/download/attachments/334102536/%E5%9B%BE%E7%89%87%201.png?version=1&modificationDate=1531126280332&cacheVersion=1&api=v2)
+![](../../.gitbook/assets/7.-yong-hu-bian-liang-he-id.png)
 
 #### **对应的代码**
 
@@ -267,7 +267,9 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](https://growingio.atlassian.net/wiki/download/attachments/334102536/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-05%20%E4%B8%8B%E5%8D%8812.04.48.png?version=1&modificationDate=1531126275847&cacheVersion=1&api=v2)![](https://growingio.atlassian.net/wiki/download/attachments/334102536/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-05%20%E4%B8%8B%E5%8D%8812.04.24.png?version=1&modificationDate=1531126276295&cacheVersion=1&api=v2)
+![](../../.gitbook/assets/8.1-yong-hu-bian-liang-he-shu-ju-yan-zheng.png)
+
+![](../../.gitbook/assets/8.2-yong-hu-bian-liang-he-shu-ju-yan-zheng.png)
 
 ### **场景二：其他用户变量**
 
@@ -300,5 +302,5 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](https://growingio.atlassian.net/wiki/download/attachments/334102536/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-04%20%E4%B8%8B%E5%8D%887.37.01.png?version=1&modificationDate=1531126279729&cacheVersion=1&api=v2)
+![](../../.gitbook/assets/9.-qi-ta-yong-hu-bian-liang.png)
 
