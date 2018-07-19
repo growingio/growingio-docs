@@ -26,7 +26,7 @@
 
 GIO广告监测链接信息架构
 
-![PNG](https://docs.growingio.com/.gitbook/assets/ads_tracking_api_1.png)
+![](../.gitbook/assets/growingio_tracking_api.png)
 
 因此，GIO中生成一条监测链接至少需要涵盖以下信息： AI：项目ID，可在项目管理的项目概览里获得这串ID，也是集成 SDK 时 setAccountId 所用的部分。 应用：应用ID。推广应用在GIO后台的分配的唯一应用ID。 推广活动：自定义的一个维度。示例：百度信息流推广，湖南区域推广等。 监测链接：一条链接（或二维码），可跟踪后续的点击，激活等时间。
 
