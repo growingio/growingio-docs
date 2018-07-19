@@ -26,13 +26,13 @@ GrowingIO 支持两种 iOS SDK 安装方式：
 
 一. 使用 CocoaPods 管理依赖
 
-1. 添加`pod 'GrowingIO', '~>2.3.3'`到 Podfile 中
+1. 添加`pod 'GrowingIO', '~>2.4.0'`到 Podfile 中
 2. 执行`pod update`，不要用`--no-repo-update`选项
 3. 直接进入安装文档的第四步
 
 二. 手动安装依赖
 
-1. 下载 [2.3.3](http://assets.growingio.com/sdk/GrowingIO-iOS-SDK-2.3.3.zip) 版 iOS SDK
+1. 下载 [2.4.0](https://assets.growingio.com/sdk/GrowingIO-iOS-SDK-2.4.0.zip) 版 iOS SDK
 2. 进行安装文档的第二步
 
 #### 2. 导入 SDK

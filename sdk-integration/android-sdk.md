@@ -33,7 +33,7 @@ buildscript {
     dependencies {
         //gradle建议版本
         classpath 'com.android.tools.build:gradle:3.1.3'
-        classpath 'com.growingio.android:vds-gradle-plugin:2.3.3'
+        classpath 'com.growingio.android:vds-gradle-plugin:2.4.0'
     }
 }
 ```
@@ -59,7 +59,7 @@ android {
     }
 }
 dependencies {
-        compile 'com.growingio.android:vds-android-agent:2.3.3@aar'
+        compile 'com.growingio.android:vds-android-agent:2.4.0@aar'
 }
 ```
 

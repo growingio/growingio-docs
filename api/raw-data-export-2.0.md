@@ -1,6 +1,6 @@
 # 原始数据导出 2.0 API
 
-*  [1.原始数据导出 2.0 API 功能概要](raw-data-export-2.0.md#summary)
+* [1.原始数据导出 2.0 API 功能概要](raw-data-export-2.0.md#summary)
 * [2.原始数据导出 2.0 API 接口定义](raw-data-export-2.0.md#definition)
   * [GET 按类型导出原始数据](raw-data-export-2.0.md#an-lei-xing-dao-chu-yuan-shi-shu-ju)
   * [GET 导出全部类型原始数据](raw-data-export-2.0.md#dao-chu-quan-bu-lei-xing-yuan-shi-shu-ju)
