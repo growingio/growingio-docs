@@ -1,7 +1,7 @@
 # 单图
 
-* [1.简介](dan-tu.md#1-jian-jie)
-* [2.功能介绍](dan-tu.md#2-gong-neng-jie-shao)
+* [1.简介](charts.md#1-jian-jie)
+* [2.功能介绍](charts.md#2-gong-neng-jie-shao)
 
 ## 1.简介
 

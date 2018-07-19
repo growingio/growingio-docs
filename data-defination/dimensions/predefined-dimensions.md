@@ -93,7 +93,7 @@ App 和小程序 的版本号
 
 在APP集成SDK的时候，针对安卓用户，设置分包渠道。
 
-在小程序中，则自动获取小程序打开的来源。目前支持微信中60多种统计场景，例如：二维码扫码，群聊中点击分享的小程序卡片等。详情请见[小程序概览-获客场景](../../data-analytics/xiao-cheng-xu-gai-lan.md#huo-ke-chang-jing)。
+在小程序中，则自动获取小程序打开的来源。目前支持微信中60多种统计场景，例如：二维码扫码，群聊中点击分享的小程序卡片等。详情请见[小程序概览-获客场景](../../data-analytics/mina-overview.md#huo-ke-chang-jing)。
 
 **案例：**在「事件分析」横向柱图中添加不同的「维度」，可以查看不同访问来源下的页面浏览量情况。
 
@@ -155,15 +155,15 @@ app 和小程序 基于 IP 地址和 GPS 。优先判断GPS值，GPS值缺失时
 
 #### 5.微信用户所在城市（小程序）
 
-小程序特有维度。表示用户在微信端设置的所在城市。使用前提是小程序SDK获取到微信访问用户属性。详情请见 [小程序SDK-微信用户属性设置](../../sdk-integration/xiao-cheng-xu-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)。
+小程序特有维度。表示用户在微信端设置的所在城市。使用前提是小程序SDK获取到微信访问用户属性。详情请见 [小程序SDK-微信用户属性设置](../../sdk-integration/mina-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)。
 
 #### 6.微信用户所在省（小程序）
 
-小程序特有维度。表示用户在微信端设置的所在省。使用前提是小程序SDK获取到微信访问用户属性。详情请见 [小程序SDK-微信用户属性设置](../../sdk-integration/xiao-cheng-xu-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)。
+小程序特有维度。表示用户在微信端设置的所在省。使用前提是小程序SDK获取到微信访问用户属性。详情请见 [小程序SDK-微信用户属性设置](../../sdk-integration/mina-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)。
 
 #### 7.微信用户所在国家（小程序）
 
-小程序特有维度。表示用户在微信端设置的所在国家。使用前提是小程序SDK获取到微信访问用户属性。详情请见 [小程序SDK-微信用户属性设置](../../sdk-integration/xiao-cheng-xu-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)。
+小程序特有维度。表示用户在微信端设置的所在国家。使用前提是小程序SDK获取到微信访问用户属性。详情请见 [小程序SDK-微信用户属性设置](../../sdk-integration/mina-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)。
 
 ### 第三部分：设备信息维度 {#03}
 
@@ -272,7 +272,7 @@ iOS : UIViewController
 
 #### 1. 微信用户性别 （小程序）
 
-小程序特有维度。表示用户在微信端设置的性别。通常为男、女、未知（表示未设置性别信息）。使用前提是小程序SDK获取到微信访问用户属性。详情请见 [小程序SDK-微信用户属性设置](../../sdk-integration/xiao-cheng-xu-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)。
+小程序特有维度。表示用户在微信端设置的性别。通常为男、女、未知（表示未设置性别信息）。使用前提是小程序SDK获取到微信访问用户属性。详情请见 [小程序SDK-微信用户属性设置](../../sdk-integration/mina-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)。
 
 ### 常见问题 {#05}
 

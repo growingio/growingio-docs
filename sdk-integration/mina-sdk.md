@@ -1,16 +1,16 @@
 # 小程序 SDK
 
-* [小程序SDK集成前工作​](xiao-cheng-xu-sdk.md#xiao-cheng-xu-sdk-ji-cheng-qian-gong-zuo)
-  * ​[1. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#1-sdk-dai-ma-an-zhuang)[确定集成SDK的项目](xiao-cheng-xu-sdk.md#que-ding-ji-cheng-sdk-de-xiang-mu)
-  * ​[2. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#ios-sdk-api)[在已有项目中添加小程序应用](xiao-cheng-xu-sdk.md#zai-yi-you-xiang-mu-zhong-tian-jia-xiao-cheng-xu-ying-yong) \| [创建新的GrowingIO项目](xiao-cheng-xu-sdk.md#chuang-jian-xin-de-growingio-xiang-mu)
-* ​[小程序SDK标准接入指南](xiao-cheng-xu-sdk.md#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
-  * [1. 下载小程序采集SDK](xiao-cheng-xu-sdk.md#xia-zai-xiao-cheng-xu-cai-ji-sdk)
-  * ​[2. 添加跟踪代码​](xiao-cheng-xu-sdk.md#tian-jia-gen-zong-dai-ma)
-  * ​[3. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)[添加请求服务器域名](xiao-cheng-xu-sdk.md#tian-jia-qing-qiu-fu-wu-qi-yu-ming)
-  * ​[4. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)[检测数据](xiao-cheng-xu-sdk.md#jian-ce-shu-ju)
-* [SDK高级设置](xiao-cheng-xu-sdk.md#sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi)
-  * ​[小程序SDK 微信用户属性设置](xiao-cheng-xu-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)
-  * [无埋点采集事件逻辑和高级配置](xiao-cheng-xu-sdk.md#wu-mai-dian-cai-ji-shi-jian-luo-ji-he-gao-ji-pei-zhi)
+* [小程序SDK集成前工作​](mina-sdk.md#xiao-cheng-xu-sdk-ji-cheng-qian-gong-zuo)
+  * ​[1. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#1-sdk-dai-ma-an-zhuang)[确定集成SDK的项目](mina-sdk.md#que-ding-ji-cheng-sdk-de-xiang-mu)
+  * ​[2. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#ios-sdk-api)[在已有项目中添加小程序应用](mina-sdk.md#zai-yi-you-xiang-mu-zhong-tian-jia-xiao-cheng-xu-ying-yong) \| [创建新的GrowingIO项目](mina-sdk.md#chuang-jian-xin-de-growingio-xiang-mu)
+* ​[小程序SDK标准接入指南](mina-sdk.md#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
+  * [1. 下载小程序采集SDK](mina-sdk.md#xia-zai-xiao-cheng-xu-cai-ji-sdk)
+  * ​[2. 添加跟踪代码​](mina-sdk.md#tian-jia-gen-zong-dai-ma)
+  * ​[3. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)[添加请求服务器域名](mina-sdk.md#tian-jia-qing-qiu-fu-wu-qi-yu-ming)
+  * ​[4. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)[检测数据](mina-sdk.md#jian-ce-shu-ju)
+* [SDK高级设置](mina-sdk.md#sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi)
+  * ​[小程序SDK 微信用户属性设置](mina-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)
+  * [无埋点采集事件逻辑和高级配置](mina-sdk.md#wu-mai-dian-cai-ji-shi-jian-luo-ji-he-gao-ji-pei-zhi)
 
 ## 小程序SDK集成前工作
 
