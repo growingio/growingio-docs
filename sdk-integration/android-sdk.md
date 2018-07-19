@@ -167,73 +167,212 @@ R.string.growingio*
 
 ### 1. 重要配置项 API
 
-#### **\(1\) 采集H5页面数据**
+#### **配置项列表：**
 
-如果您在App内嵌入了WebView（包括X5内核），请确保您已经调用过下面的方法，来采集H5页面的数据：
+| API | 说明 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| setDebugMode | 查看数据采集发送日志 |
+| setTestMode | 实时发送数据，开启则不遵循移动网络状态下数据发送大小限制以及缓存策略 |
+| trackBanner | 采集`Banner`数据，添加对`Banner`图片的描述 |
+| setGeoLocation | 采集用户`GPS`数据 |
+| trackEditText | 采集输入框内容 |
+| setMultiprocess | 支持多进程数据采集 |
+| supportMultiprocessCircle | 支持多进程圈选 |
+| setHashTagEnable | 支持 |
+| ~~setWebChromeClient~~ | ~~确保采集H5页面的数据，在第一次调用 WebView.loadUrl\(\) 之前调用此方法~~ （`SDK 2.3.1` 之后不用配置，请使用最新版 SDK） |
 
-```java
-WebView.setWebChromeClient(WebChromeClient client);
-```
+\*\*\*\*
 
-**请在第一次调用 WebView.loadUrl\(\)** 之前调用以上方法。
+### **setDebugMode**
 
-#### **\(2\) 采集Banner数据**
-
-很多应用的界面上方都有横向滚动的 Banner 广告。
-
-对于此类广告，如果您的应用通过 ViewPager、AdapterView 或者 RecyclerView 实现，请在 Banner创建时（包括动态创建）调用下面的接口来采集数据。
-
-```java
-GrowingIO.getInstance().trackBanner(banner, bannerDescriptions);
-```
-
-其中 bannerDescriptions 是 List&lt;String&gt;类型，包含所有广告图对应的广告内容描述，内容描述需要跟广告的顺序相同。
-
-例如，当您有 5 张广告图时，只需创建一个 String 类型的 List，然后按 5 个广告出现的顺序给 List 的元素设置对应的广告描述，同样设置 5 个元素即可。
-
-#### **\(3\) 采集GPS数据**
-
-如果您需要采集用户的GPS数据，请在获取坐标后，调用如下接口进行设置
+查看数据采集发送日志，能够在`Android Studio`中通过`Logcat`查看`GrowingIO`打印的数据发送日志，在 `APP` 的 `Application onCreate` 初始化`SDK`地方添加配置。
 
 ```java
-GrowingIO.getInstance().setGeoLocation(latitude, longitude);
+setDebugMode(boolean debugMode);
 ```
 
-其中，`latitude`是纬度，`longitude`是经度。
+**参数说明：**
 
-当用户下一次切换页面，或者发生点击行为时，GPS数据会被发送回GrowingIO。
+| 参数名 | 类型 | 必填 | 默认值 | 说明 |
+| --- | --- |
+| debugMode | boolean |  是 | false | 开启`GrowingIO`日志，true开启 |
 
-如果您需要清除用户的GPS信息，请调用如下接口
+**示例代码：**
 
 ```java
-GrowingIO.getInstance().clearGeoLocation();
+GrowingIO.startWithConfiguration(this,new Configuration()
+    //BuildConfig.DEBUG 这样配置就不会上线忘记关闭
+    .setDebugMode(BuildConfig.DEBUG)
+    ...
+    );
 ```
 
-#### **\(4\) 采集输入框数据**
 
-如果您需要采集应用内某个输入框内的文字（例如搜索框），请调用如下接口进行设置
+
+### setTestMode
+
+实时发送数据，开启则不遵循移动网络状态下数据发送大小限制以及采集数据缓存30秒发送策略。为了方便开发者查看日志，一般和`setDebugMode`一起使用。在 `APP` 的 `Application onCreate` 初始化`SDK`地方添加配置。
 
 ```java
-GrowingIO.getInstance().trackEditText(EditText);
+setTestMode(boolean testMode);
 ```
 
-其中，`EditText`代表要被采集的输入框。
+**参数说明：**
 
-当这个输入框失去焦点（包括应用退到后台），且输入框内容跟获取焦点前相比发生变化时，输入框内文字会被发送回GrowingIO。
+| 参数名 | 类型 | 必填 | 默认值 | 说明 |
+| --- | --- |
+| testMode | boolean |  是 | false | 开启测试模式，true开启 |
 
-请注意：对于密码输入框，即便标记为需要采集，SDK也会忽略，不采集它的数据。
+**示例代码：**
 
-#### **\(5\) 启用Hashtag识别**
+```java
+GrowingIO.startWithConfiguration(this,new Configuration()
+    //BuildConfig.DEBUG 这样配置就不会上线忘记关闭
+    .setTestMode(BuildConfig.DEBUG)
+    ...
+    );
+```
 
-在 SDK 初始化方法中设置
+\*\*\*\*
+
+### **trackBanner**
+
+采集`Banner`数据，应用的界面上方横向滚动的`Banner`广告。
+
+```java
+GrowingIO.getInstance().trackBanner(View banner,List<String> bannerDescriptions);
+```
+
+**参数说明：**
+
+| 参数名 | 类型 | 必填 | 默认值 | 说明 |
+| --- | --- | --- |
+| banner | View |   是           |    无                 | ViewPager、AdapterView、RecyclerView 实现的 View |
+| bannerDescriptions | List&lt;String&gt; |   是 |    无 | 广告内容描述，顺序需要跟 banner view 顺序一致 |
+
+**示例代码：**
+
+```java
+ //Banner 初始化代码
+ ViewPager banner = (ViewPager)findViewById(R.id.banner);
+ ...
+ //GrowingIO 采集 Banner 数据
+ GrowingIO.trackBanner(banner.getViewPager(), Arrays.asList("banner 1", "banner 2", "banner 3"));
+```
+
+{% hint style="warning" %}
+`Banner`描述和广告出现的顺序一致，调用通过`Log`查看或者[`MobileDebugger`](growingio-debugger/#shi-yong-mobile-debugger-ce-shi-shu-ju)的方式检查配置是否正确。 查看 `Banner imp` 事件 `e` 字段中 `v` 是否为您设置的 banner description。
+{% endhint %}
+
+**检验数据发送日志示例：** 
+
+```javascript
+{
+    "s":"02015456-079b-49cc-8b42-a5cc6136f0ec",
+    "t":"imp", // t 为事件类型 type
+    "tm":1531990474178,
+    "d":"com.growingio.android.test",
+    "p":"ConvenientBannerActivity",
+    "ptm":1531990413207,
+    "e":[
+        {
+            "x":"/MainWindow/LinearLayout[0]/FrameLayout[1]/FitWindowsLinearLayout[0]#action_bar_root/ContentFrameLayout[1]/FrameLayout[0]/RelativeLayout[0]/ConvenientBanner[0]#convenientBanner/LinearLayout[0]/RelativeLayout[0]/CBLoopViewPager[0]#cbLoopViewPager/ImageView[-]",
+            "tm":1531990474179,
+            "idx":1,
+            "v":"banner 2"  //假如现在滚动到第二个banner，V显示为您设置的描述
+        }
+    ]
+}
+```
+
+
+
+### setGeoLocation
+
+精确采集`GPS`数据，请在获取坐标后，调用接口设置位置信息。当用户下一次切换页面，或者发生点击行为时，`GPS`数据会被发送回`GrowingIO`。如果您不调用此接口也可以，我们会根据用户的`ip`定义用户位置，能够在最终的数据分析时看到`APP`用户地域分布。
+
+```java
+GrowingIO.getInstance().setGeoLocation(double latitude,double longitude);
+```
+
+**参数说明：**
+
+| 参数名 | 类型 | 必填 | 默认值 | 说明 |
+| --- | --- | --- |
+| latitude | double |  是 |   无 | 纬度 |
+| longitude | double |  是 |   无 | 经度 |
+
+**示例代码：**
+
+```java
+//北京的经纬度
+GrowingIO.getInstance().setGeoLocation(39.9046900000,116.4071700000);
+```
+
+{% hint style="warning" %}
+对应的清除地理位置方法为 `clearGeoLocation();` 
+{% endhint %}
+
+\*\*\*\*
+
+### **trackEditText**
+
+`GrowingIO` 默认采集输入框点击次数，不采集文字，在您需要采集应用内某个输入框内的文字（例如搜索框）时使用。当这个输入框失去焦点（包括应用退到后台），且输入框内容跟获取焦点前相比发生变化时，输入框内文字会被发送回`GrowingIO`。
+
+```java
+GrowingIO.getInstance().trackEditText(EditText editText);
+```
+
+**参数说明：**
+
+| 参数名 | 类型 | 必填 | 默认值 | 说明 |
+| --- | --- |
+| editText | EditText |   是 |   无 | 采集输入框 |
+
+**示例代码：**
+
+```java
+EditText editText = (EditText) findViewById(R.id.edit_text);
+...
+GrowingIO.getInstance().trackEditText(editText);
+```
+
+{% hint style="warning" %}
+1. 对于密码输入框，即便标记为需要采集，SDK也会忽略，不采集它的数据。
+2. 在输入框失去焦点的时候或者`onPause`时，才会采集事件，如果输入完成，输入框光标仍然在闪动，则不会采集事件。为了保证数据准确性，请每次用户输入完成时，让输入框失去焦点，可使用`editText.setFocusable(false);`
+{% endhint %}
+
+
+
+### setHashTagEnable
+
+启用`Hashtag`识别,在 `SDK` 初始化方法中设置
 
 ```java
 GrowingIO.startWithConfiguration(this, new Configuration().setHashTagEnable(true));
 ```
 
-#### **\(6\) 多进程支持**
+\*\*\*\*
 
-SDK默认不支持多进程使用， 但是可以通过confiuration 进行设置支持多进程。 设置方法为， 在需要使用SDK功能的进程的Application onCreate中初始化SDK：
+### **setMultiprocess & setMultiprocessCircle**
+
+多进程支持，`SDK`默认不支持多进程使用， 但是可以通过`confiuration`进行设置支持多进程。 在`Application onCreate` 中初始化SDK代码块中配置。
+
+```java
+//支持多进程数据采集
+setMutiprocess(boolean setMutiprocess);
+//支持多进程圈选
+setMultiprocessCircle(boolean smpc);
+```
+
+**参数说明：**
+
+| 参数名 | 类型 | 必填 | 默认值 | 说明 |
+| --- | --- | --- |
+| isMultiprocess | boolean |   是 |  false | 开启多进程数据采集 |
+| smpc | boolean |   是 |  false | 开启多进程圈选 |
+
+**示例代码：**
 
 ```java
 GrowingIO.startWithConfiguration(this, new Configuration()
@@ -242,46 +381,45 @@ GrowingIO.startWithConfiguration(this, new Configuration()
                   );
 ```
 
-其中supportMultiProcessCircle 与 setMutiprocess要同时使用， 而且多个进程中设置的值要相同。
+{% hint style="info" %}
+1. 为什么不默认支持多进程？
 
-**为什么不默认支持多进程？**
+        跨进程通信是一个相对较慢的过程， 默认不开启， 可以满足大部分用户的要求。
 
-跨进程通信是一个相对较慢的过程， 默认不开启， 可以满足大部分用户的要求。
+   2. 哪些进程需要初始化SDK？
 
-**哪些进程需要初始化SDK？**
+        需要使用SDK功能的进程需要初始化SDK， 所有的UI进程 + 部分Service进程\(如果这些进程中涉及手动打点\)。
+{% endhint %}
 
-需要使用SDK功能的进程需要初始化SDK， 所有的UI进程 + 部分Service进程\(如果这些进程中涉及手动打点\)。
 
-#### **\(7\) 调试查看发送数据日志**
 
-为了方便开发人员调试 GrowingIO SDK ，我们提供了调试 API 和 [Mobile Debugger](growingio-debugger/#growingio-mobile-debugger) 两种方式查看 APP 采集数据的发送，强烈建议您使用 Mobile Debugger 在每一次产品上线前检查您的数据发送，其中调试 API 使用说明如下：
+###  ~~setWebChromeClient~~
 
-`setDebugMode(true)` ：查看数据采集发送日志，默认值为`false`不开启；
+#### ~~采集H5页面数据~~**（SDK 2.3.1 之后不用配置，请使用最新版）**
 
-`setTestMode(true)`：实时发送数据，不遵循移动网络状态下数据发送大小限制和缓存策略，默认值为`false`不开启；
-
-**注意在 APP 上线前关闭，否则会导致采集数据日志打印，并且采集数据发送不遵循缓存策略**，代码如下：
+~~如果您在App内嵌入了WebView（包括X5内核），请确保您已经调用过下面的方法，来采集H5页面的数据：~~
 
 ```java
-GrowingIO.startWithConfiguration(this, new Configuration()
-                  .setDebugMode(true)
-                  .setTestMode(true)
-                  );
+WebView.setWebChromeClient(WebChromeClient client);
 ```
+
+~~**请在第一次调用 WebView.loadUrl\(\)** 之前调用以上方法。~~
+
+### 
 
 ### 2. 自定义事件和变量 API
 
-您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，进行[数据分析](../data-analytics/)。除自动收集的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](../data-defination/events-metrics/manual-metrics.md)和[变量](../data-defination/dimensions/manual-dimensions.md)，下面介绍自定义事件和变量 API 使用方法。
+您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，进行[数据分析](../data-analytics/)。除自动收集的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](../data-defination/events-metrics/manual-metrics.md)和[变量](../data-defination/dimensions/manual-dimensions.md)，下面介绍自定义事件和变量 API 使用方法，后文简称埋点事件API。
 
-#### API 简介
+#### API 简介 ：
 
 ```java
 // 发送事件 API
 GrowingIO gio = GrowingIO.getInstance();
 gio.track(String eventId);
 gio.track(String eventId, Number eventNumber);
-gio.track(String eventId, Number eventNumber, JSONObject eventLevelVariables);
 gio.track(String eventId, JSONObject eventLevelVariables);
+gio.track(String eventId, Number eventNumber, JSONObject eventLevelVariables);
 
 // 发送页面级变量 API
 GrowingIO gio = GrowingIO.getInstance();
@@ -316,7 +454,7 @@ GrowingIO.getInstance().setUserId(String userId);
 GrowingIO.getInstance().clearUserId();
 ```
 
-#### track
+### track
 
 发送一个事件。在添加所需要发送的事件代码之前，需要在打点管理用户界面配置事件以及事件级变量。
 
@@ -359,7 +497,7 @@ jsonObject.put("age", "21");
 gio.track("loanAmount", 80000, jsonObject);
 ```
 
-#### setPageVariable
+### setPageVariable
 
 发送页面级别的信息，在添加代码之前必须在打点管理界面上声明页面级变量。
 
@@ -392,7 +530,7 @@ jsonObject.put("age", "21");
 gio.setPageVariable(myActivity, jsonObject);
 ```
 
-#### setEvar
+### setEvar
 
 发送一个转化信息用于高级归因分析，在添加代码之前必须在打点管理界面上声明转化变量。
 
@@ -426,7 +564,7 @@ jsonObject.put("campaignOwner", "Li Si");
 gio.setEvar(jsonObject);
 ```
 
-#### setPeopleVariable
+### setPeopleVariable
 
 发送用户信息用于用户信息相关分析，在添加代码之前必须在打点管理界面上声明转化变量。
 
@@ -459,7 +597,7 @@ jsonObject.put("age", "21");
 gio.setPeopleVariable(jsonObject);
 ```
 
-#### setUserId
+### setUserId
 
 当用户登录之后调用setUserId API，设置登录用户ID。
 
@@ -474,7 +612,7 @@ GrowingIO.getInstance().setUserId("1234567890");
 
 注：如果您的应用是App，且每次用户升级App版本时无需重新登录的话，建议在用户每次升级App版本后初次访问时重新调用上述 setUserId 方法。
 
-#### clearUserId {#clearuserid}
+### clearUserId
 
 当用户登出之后调用clearUserId，清除已经设置的登录用户ID。
 
