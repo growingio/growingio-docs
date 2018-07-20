@@ -6,6 +6,22 @@
 
 GrowingIO提供了丰富的数据定义方式，您可以对您的网页、iOS App、Android App、小程序进行圈选。进入圈选模式后，需要点击相应的元素并根据界面提示做相应的选择进行保存，就能在GrowingIO后台 “指标管理“ 中看到圈选的事件。
 
+web 圈选，对加载了 JS SDK 的产品进行数据定义：
+
+{% page-ref page="web-circle.md" %}
+
+app 圈选，对 app 进行数据定义：
+
+{% page-ref page="app-circle.md" %}
+
+app 圈选，对小程序进行数据定义：
+
+{% page-ref page="mina-circle.md" %}
+
+批量管理圈选创建的事件：
+
+{% page-ref page="circle-metrics-management.md" %}
+
 ## 圈选命名规范
 
 #### 1.数据定义 {#1-shu-ju-ding-yi}

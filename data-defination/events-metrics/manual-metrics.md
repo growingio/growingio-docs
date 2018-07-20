@@ -9,7 +9,7 @@
 
 ## 第一步：从数据需求到具体 “指标+维度”
 
-在GrowingIO上着手进行任何分析之前，首先要确定的一个问题是：如何设计“指标+维度”的体系？对于无埋点数据，我们通过圈选确定“指标”，而“维度”则由 GrowingIO 提供了数个[预定义的维度](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-defination/dimensions#yu-ding-yi-wei-du)。对于自定义数据，我们可以相对更自由地选择“指标+维度”的体系。
+在GrowingIO上着手进行任何分析之前，首先要确定的一个问题是：如何设计“指标+维度”的体系？对于无埋点数据，我们通过圈选确定“指标”，而“维度”则由 GrowingIO 提供了数个[预定义的维度](../dimensions/predefined-dimensions.md)。对于自定义数据，我们可以相对更自由地选择“指标+维度”的体系。
 
 更具体的说，从一个实际场景出发，我们需要确定在分析中需要用到哪些量化的值，然后用什么样的维度来分解这些值。例如，对于电商在分析用户下单情况时，用户的下单量、下单金额就是我们需要量化的“指标”，而每个订单所含具体商品、商品分类、优惠券信息等就是“维度”。那么对于下单这件事，我们就可以这样设计 ”指标+维度“：
 
@@ -24,7 +24,7 @@
 
     ...
 
-那么现在很明显了，订单总量与订单总金额这两个指标，需要用 ”自定义事件“ 来实现；商品ID/名称、优惠券名称等维度，则可以通过[事件级变量](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-defination/events-metrics#shi-jian-ji-bian-liang-pei-zhi)来实现。
+那么现在很明显了，订单总量与订单总金额这两个指标，需要用 ”自定义事件“ 来实现；商品ID/名称、优惠券名称等维度，则可以通过[事件级变量](manual-metrics.md#shi-jian-ji-bian-liang-pei-zhi)来实现。
 
 在设计“指标+维度”体系时可能需要注意：
 
@@ -34,7 +34,7 @@
 
 当我们完成 ”指标+维度“ 的设计之后，请勿直接开始代码的部署，需要先到 GrowingIO 后台找到【数据管理】-【事件与变量】功能，在其中完成对应的配置。
 
-#### **自定义事件配置：** {#zi-ding-yi-shi-jian-pei-zhi}
+#### **自定义事件配置** {#zi-ding-yi-shi-jian-pei-zhi}
 
 对于每一个自定义事件，建议您在配置之前，先按下表列出配置细项，其中
 
@@ -50,7 +50,7 @@
 
 ![](https://docs.growingio.com/.gitbook/assets/4%20%281%29.png)
 
-#### **事件级变量配置：** {#shi-jian-ji-bian-liang-pei-zhi}
+#### **事件级变量配置** {#shi-jian-ji-bian-liang-pei-zhi}
 
 从第一步讲到的需求拆解得知，满足一个分析监控需求往往需要同时定义自定义事件和自定义维度。伴随打点事件最常用的是 “事件级变量”，此处一并说明配置方法。更多其他的打点维度请参考[打点维度](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-defination/dimensions#zi-ding-yi-da-dian-wei-du-bian-liang)文档。
 
@@ -73,12 +73,12 @@
 
 在完成了配置后，即可在代码中完成以上设计的 “自定义事件和变量” 的部署。具体的说，就是调用 GrowingIO 提供的API接口，上传数据。
 
-* ​[JS 接口文档](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/sdk-integration/web-js-sdk#3-web-js-sdk-2-1-api)​
-* ​[Android 接口文档](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/sdk-integration/android-sdk#2-android-sdk-api)​
-* ​[iOS 接口文档](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/sdk-integration/ios-sdk#ios-sdk-api)​
-* ​[小程序接口文档](https://growingio.gitbook.io/miniprogram/tag-management/sdk-logic/custom-event)​
+* ​[JS 接口文档](../../sdk-integration/web-js-sdk.md#13-1)​
+* ​[Android 接口文档](../../sdk-integration/android-sdk.md)​
+* ​[iOS 接口文档](../../sdk-integration/ios-sdk.md)​
+* ​[小程序接口文档](../../sdk-integration/mina-sdk.md)​
 
-API中给出了打点事件和事件级变量的上传方式，以及[其他打点维度（用户级变量、页面级变量、转化变量）](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-defination/dimensions#zi-ding-yi-da-dian-wei-du-bian-liang)的配置方法。
+API中给出了打点事件和事件级变量的上传方式，以及[其他打点维度（用户级变量、页面级变量、转化变量）](../dimensions/manual-dimensions.md)的配置方法。
 
 ## 第四步：数据校验
 

@@ -1,7 +1,5 @@
 # Web 端热图
 
-
-
 * [1.简介](heatmap-web.md#1-jian-jie)
   * [1.1.热图绘制规则](heatmap-web.md#1-1-re-tu-hui-zhi-gui-ze)
   * [1.2.元素点击率计算方式](heatmap-web.md#1-2)
@@ -9,6 +7,8 @@
 * [2.常见问题](heatmap-web.md#2-chang-jian-wen-ti)
   * [2.1.绘制方式的影响范围](heatmap-web.md#2-1)
   * [2.2.其他具体圈选规则](heatmap-web.md#2-2-qi-ta-ju-ti-quan-xuan-gui-ze)
+
+web 热图这样进入：导航栏 - 圈选 - 选择对应的网站 - 进入圈选界面，在圈选导航栏上可以切换到热图模式。
 
 ## 1.简介
 

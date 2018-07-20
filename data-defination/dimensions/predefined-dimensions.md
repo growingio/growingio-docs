@@ -66,7 +66,7 @@ a.从邮件中点击链接访问网站取决于电子邮件的提供商/程序�
 b.从 Microsoft Office 或 PDF 文件中点击链接访问网站；   
 c.通过点击由原 url 生成的短链接访问网站；   
 d.通过 App 点击链接访问网站（比如今日头条、微博、微信中的链接）；   
-e.通过点击一个 https 类型的 url 访问一个 http 类型的 url（比如如果点击 [https://example.com/1](https://example.com/1) 转到 [http://example.com/2](http://example.com/2), 对于 example.com/2 的分析会认为是直接访问）；   
+e.通过点击一个 https 类型的 url 访问一个 http 类型的 url（比如如果点击 https://example.com/1 转到 http://example.com/2, 对于 example.com/2 的分析会认为是直接访问）；   
 f.部分浏览器（特别是移动端浏览器）会把搜索跳转当成直接访问；
 
 **搜索引擎：**   
@@ -214,8 +214,8 @@ web 端是窗口大小，移动端是屏幕大小。
 > **页面级维度**
 
 对于 web 端可以这样理解：   
-用户先访问了 [https://www.growingio.com/](https://www.growingio.com/)   
-再访问了 [https://www.growingio.com/circle](https://www.growingio.com/circle)
+用户先访问了 https://www.growingio.com/   
+再访问了 https://www.growingio.com/circle
 
 #### 1.域名（web/小程序） {#41}
 
@@ -226,8 +226,8 @@ www.growingio.com 是这两个页面的域名。
 #### 2.页面（web/app/小程序） {#42}
 
 对于 web 端可以这样理解：   
-/ 是 [https://www.growingio.com/](https://www.growingio.com/) 的页面。   
-/circle 是 [https://www.growingio.com/circle](https://www.growingio.com/circle) 的页面。
+/ 是 https://www.growingio.com**/** 的页面。   
+/circle 是 https://www.growingio.com**/circle** 的页面。
 
 对于 app 端可以这样理解：   
 android : activity + fragment   
@@ -237,7 +237,7 @@ iOS : UIViewController
 
 #### 3.页面来源（web/app/小程序） {#43}
 
-这次访问中 [https://www.growingio.com/circle](https://www.growingio.com/circle) 这个页面的页面来源是 [https://www.growingio.com/](https://www.growingio.com/) 。
+这次访问中 https://www.growingio.com/circle 这个页面的页面来源是 https://www.growingio.com/ 。
 
 > **事件级维度：当次事件发生时，对应的维度**
 
@@ -284,7 +284,7 @@ iOS : UIViewController
 
 “网站/手机应用”维度一共有三个值，分别是：Web、iOS、Android、minP。那么右边的这几行数值分别代表这四个平台获得的页面浏览量指标。
 
-维度就像一个集合，其中存放的是从某个角度分析的描述性字符串。集合论中有一个重要的概念，叫做“基数”，描述的就是集合中元素的个数。在上面的这个例子中，我们使用的“网站/手机应用”维度有三个值，分别是“Web、iOS、Android”。在这个情况下，我们可以称这个维度的“基数”为3。不难想到，在GrowingIO系统中，有些维度的基数是很大的，例如页面维度。很多电子商务类型的网站，产品详情页URL会是类似于：[http://item.ecommerce.com/](http://item.ecommerce.com/){productId}.html。那么如果这个网站有N个商品有页面浏览（至少一次页面浏览），页面这个维度的基数就是N，可见这个时候N的值是非常巨大的。 GrowingIO系统为了更加专注资源在用户关注的页面或者事件上，引入了处理“巨大基数维度“（High Cardinality Dimensions）”算法来区别对待产生巨大流量页面、事件和长尾的页面、事件。
+维度就像一个集合，其中存放的是从某个角度分析的描述性字符串。集合论中有一个重要的概念，叫做“基数”，描述的就是集合中元素的个数。在上面的这个例子中，我们使用的“网站/手机应用”维度有三个值，分别是“Web、iOS、Android”。在这个情况下，我们可以称这个维度的“基数”为3。不难想到，在GrowingIO系统中，有些维度的基数是很大的，例如页面维度。很多电子商务类型的网站，产品详情页URL会是类似于：http:// item.ecommerce.com/{productId}.html。那么如果这个网站有N个商品有页面浏览（至少一次页面浏览），页面这个维度的基数就是N，可见这个时候N的值是非常巨大的。 GrowingIO系统为了更加专注资源在用户关注的页面或者事件上，引入了处理“巨大基数维度“（High Cardinality Dimensions）”算法来区别对待产生巨大流量页面、事件和长尾的页面、事件。
 
 以页面维度为例，算法细节如下：   
 以天作为一个计算单位，天级别的数据中包含的不同的值如果低于2000，则正常计算所有的页面，这些所有的页面都会作为“页面”维度的维度值展示在报表中。

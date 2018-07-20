@@ -270,9 +270,9 @@ GrowingIO 可以统计原生应用中的 H5 页面和 H5 做成的应用。
 
 * 原生应用中的H5页面，以及嵌在应用中的h5，
 
-  请参考[iOS/Android圈选指南](https://docs.growingio.com/Features/circle/iOSorAndroid.html)​
+  请参考[iOS/Android圈选指南](app-circle.md)​
 
-* 用H5做的应用请参考[web圈选指南](https://docs.growingio.com/Features/circle/Web.html)​
+* 用H5做的应用请参考[web圈选指南](web-circle.md)​
 
 **4.为什么圈选的元素只有点击量，没有浏览量？**
 
@@ -317,5 +317,5 @@ X-Frame-Options: Allow-From https://www.growingio.com
 
 GrowingIO根据您网站HTML结构识别和定义页面上的元素。有的时候网站上的HTML标签写法完全相同，呈现在页面上的几个同类元素，可能HTML代码完全相同。此时GrowingIO采集、圈选数据时无法区分开。我们通过HTML标签的id和class来区分元素，这种情况下您可以在需要区分的标签class中添加一些字符串用于区分。
 
-**仍有疑问？请参考**[**常见问题－圈选部分**](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/faq/faq-circle)​
+**仍有疑问？请参考**[**常见问题－圈选部分**](../../../faq/faq-circle.md)​
 
