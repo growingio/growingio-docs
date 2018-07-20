@@ -9,6 +9,7 @@
 
 * 本页 API 中的 project\_id、dashboard\_id、chart\_id 字段，均可在项目页面url中找到，如："[https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R](https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R)"  中的 "nxog09md" 和 "YoX28w7R" 分别是 project\_id 和dashboard\_id。
 * 在进行导出之前，请务必参考[“GrowingIO接口认证”文档](authentication.md)，完成接口认证获取 token 。
+* 统计数据导出的延迟一般为 30 分钟，比如导出早上 8 点到 9 点之间的数据时，一般需要 9:30 才能统计完毕。另外，每天凌晨因为需要运行天级别的统计任务，此时前一天的统计数据大概有 3-4 小时的延迟，一般凌晨 4 点以后会统计完毕。
 
 ### 1.看板数据信息 API {#dashboard-api}
 
