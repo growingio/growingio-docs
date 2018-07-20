@@ -25,6 +25,16 @@ GrowingIO 支持通过离线的方式批量上传登录用户变量，配合 SDK
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
+{% api-method-headers %}
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+application/json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Access-Token" type="string" required=true %}
+ 认证 Token，见 API 认证文档
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
 {% api-method-query-parameters %}
 {% api-method-parameter name="auth" type="string" required=true %}
 针对每条数据独立生成的认证，计算方式见本文档第二节
