@@ -45,6 +45,7 @@
       * [Web 圈选](data-defination/events-metrics/circle-metrics/web-circle.md)
       * [App 圈选](data-defination/events-metrics/circle-metrics/app-circle.md)
       * [小程序圈选](data-defination/events-metrics/circle-metrics/mina-circle.md)
+      * [圈选指标管理](data-defination/events-metrics/circle-metrics/quan-xuan-zhi-biao-guan-li.md)
     * [打点事件](data-defination/events-metrics/manual-metrics.md)
   * [维度和变量](data-defination/dimensions/README.md)
     * [预定义维度](data-defination/dimensions/predefined-dimensions.md)
