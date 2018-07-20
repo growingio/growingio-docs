@@ -8,7 +8,7 @@
 * [4.原始数据导出 2.0 和原始数据导出 1.0 主要区别](raw-data-export-2.0.md#changelog)
 * [5.原始数据导出 2.0 导出数据字段说明](raw-data-export-2.0.md#metadata)
 
-原始数据导出为付费功能，且只能导出从开通之日起的原始数据，原始数据仅保留15天，请定期下载。
+原始数据导出为付费功能，且只能导出从开通之日起的原始数据，原始数据仅保留15天，请定期下载。数据导出一般延迟为 30 分钟，比如早上 8 点到 9 点之间的数据，一般 9:30 会准备好。每天凌晨因为需要运行天级别的统计任务，所以导出任务会延迟 1-2 小时，在导出数据时请判断  `status` 字段 。
 
 导出时数据以每 64M 为单位分包发送，导出数据默认采用 gzip 压缩。原始数据中所有时间字段均为 [UTC](http://baike.baidu.com/link?url=T9ER87o8wd_ABq-oRrn839-Q2hxrV5WvIeQX2bJCOAWgne8C8BCw8yRWrISceZJEoR83GuIhdu0vSZFwzl4ngFrD7vUITsrlcY6U3Fj6lWCx7x0xWRTNDFOHkhJmnUW05hrb5df7vvz12EayMr_4b5QJZ1UcTs17ffae3wI18LNeF8j_4WpMZ_srcJHSXhpk) 时间，并非中国时间；此处导出的压缩包名也是由 UTC 时间命名。
 
@@ -136,11 +136,11 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="X-Client-Id" type="string" required=false %}
+{% api-method-parameter name="X-Client-Id" type="string" required=true %}
 GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。示例：'X-Client-Id: 123abc'
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Authorization" type="string" required=false %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 认证后获取到的 Token，示例: 'Authorization: Token XXXX'
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
