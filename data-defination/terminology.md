@@ -7,6 +7,8 @@
   * [维度和变量的关系](terminology.md#wei-du-he-bian-liang-de-guan-xi)
   * [维度和变量在 GrowingIO 中的使用](terminology.md#wei-du-he-bian-liang-zai-growingio-zhong-de-shi-yong)
 
+GrowingIO 默认提供了一些预定义的[指标](events-metrics/predefined-metrics.md)和[维度](dimensions/predefined-dimensions.md)，帮助你更好地进行数据分析。
+
 ## 事件和指标
 
 ### 事件和指标的关系
