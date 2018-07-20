@@ -1,10 +1,10 @@
 # 圈选指标管理
 
-* [简介](quan-xuan-zhi-biao-guan-li.md#jian-jie)
-* [简单指标](quan-xuan-zhi-biao-guan-li.md#jdzb)
-* [合并简单指标](quan-xuan-zhi-biao-guan-li.md#he-bing)
-* [复合指标](quan-xuan-zhi-biao-guan-li.md#fu-he)
-* [常见问题](quan-xuan-zhi-biao-guan-li.md#faq)
+* [简介](circle-metrics-management.md#jian-jie)
+* [简单指标](circle-metrics-management.md#jdzb)
+* [合并简单指标](circle-metrics-management.md#he-bing)
+* [复合指标](circle-metrics-management.md#fu-he)
+* [常见问题](circle-metrics-management.md#faq)
 
 ### **简介**
 
