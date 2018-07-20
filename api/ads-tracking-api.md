@@ -50,9 +50,13 @@ GIO广告监测链接信息架构
 
 ### 4.使用流程 {#user-flow}
 
-为保证数据安全，GrowingIO所有的API服务，请求Head中需要携带Token。Token获取详见：[https://docs.growingio.com/api/authentication.html](https://docs.growingio.com/api/authentication.html) 完整的监测链接创建流程见下图： 
+为保证数据安全，GrowingIO所有的API服务，请求Head中需要携带Token。
 
-![](https://docs.growingio.com/.gitbook/assets/ads_tracking_api_2.png)
+Token获取详见：[https://docs.growingio.com/api/authentication.html](https://docs.growingio.com/api/authentication.html) 
+
+完整的监测链接创建流程见下图： 
+
+![](../.gitbook/assets/growingio_tracking_api_2.png)
 
 ### 5.认证说明 {#authentication}
 
@@ -67,7 +71,11 @@ GIO广告监测链接信息架构
 
 #### 6.1 应用 API {#app-api}
 
-新建应用请在GIO后台操作，此接口仅提供应用ID的查询。 GET [https://www.growingio.com/api/v1/projects/{项目编号}/meta/products](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/products) Response: Status Code: 200 OK
+新建应用请在GIO后台操作，此接口仅提供应用ID的查询。 
+
+GET [https://www.growingio.com/api/v1/projects/{项目编号}/meta/products](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/products) 
+
+Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -109,7 +117,11 @@ Response 示例：
 
 #### 6.2 推广活动相关 API {#markerting-api}
 
-此部分相关接口可以查询已有活动的活动ID或者创建新的活动。 POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/campaigns) Request:
+此部分相关接口可以查询已有活动的活动ID或者创建新的活动。 
+
+POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/campaigns) 
+
+Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | --- | --- | --- |
@@ -143,7 +155,9 @@ Response: Status Code: 200 OK
 }
 ```
 
-GET [https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/campaigns) Response: Status Code: 200 OK
+GET [https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/campaigns) 
+
+Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | --- | --- | --- | --- |
@@ -170,7 +184,11 @@ Response 示例：
 
 ####  6.3 渠道管理 API {#channel-api}
 
-此相关部分API可以进行渠道的ID查询及新建渠道。 POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/channels) Request:
+此相关部分API可以进行渠道的ID查询及新建渠道。 
+
+POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/channels) 
+
+Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | --- | --- |
@@ -184,7 +202,9 @@ Response 示例：
 }
 ```
 
-GET [https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/channels) Response: Status Code: 200 OK
+GET [https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/channels) 
+
+Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | --- | --- | --- |
@@ -208,7 +228,13 @@ Response 示例：
 
 #### 6.4 链接创建 API {#link-api}
 
-GIO目前提供三种类型的监测链接：Normal-Link,One-Link,Deep-Link。 Normal-Link： 最常见的一种监测链接类型。适用于推广单个移动应用，引导用户进行APP的下载。场景包括：广告平台投放等。 特别说明：广点通/智汇推/微信广告平台/Inmobi,此四个渠道由于创建过程中需要获取广告平台的相关参数，故不支持API创建以上平台的监测链接。 One-Link： 当需要在一条链接里推广两个移动应用（安卓版和iOS版）时，推荐使用 One-Link。适用于短信，微信，邮件等不明用户操作系统的推广场景。 Deep-Link： 使用 Deep-Link 技术，已安装用户点击链接即可打开APP，未安装用户点击链接跳转到App Store。适用于通过短信/微信下的优惠券发送召唤用户重新打开并使用APP的场景。
+GIO目前提供三种类型的监测链接：Normal-Link，One-Link，Deep-Link。
+
+ Normal-Link： 最常见的一种监测链接类型。适用于推广单个移动应用，引导用户进行APP的下载。场景包括广告平台投放等。 特别说明：广点通/智汇推/微信广告平台/Inmobi，此四个渠道由于创建过程中需要获取广告平台的相关参数，故不支持API创建以上平台的监测链接。
+
+One-Link： 当需要在一条链接里推广两个移动应用（安卓版和iOS版）时，推荐使用 One-Link。适用于短信，微信，邮件等不明用户操作系统的推广场景。 
+
+Deep-Link： 使用 Deep-Link 技术，已安装用户点击链接即可打开APP，未安装用户点击链接跳转到App Store。适用于通过短信/微信下的优惠券发送召唤用户重新打开并使用APP的场景。
 
 请根据业务场景选择合适的监测链接。
 
@@ -216,7 +242,7 @@ GIO目前提供三种类型的监测链接：Normal-Link,One-Link,Deep-Link。 N
 
 Deeplink链接创建逻辑：
 
-![](https://docs.growingio.com/.gitbook/assets/ads_tracking_api_3.png)
+![](../.gitbook/assets/growingio_tracking_api_3.png)
 
 POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/deeplinks](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/deeplinks)
 
@@ -317,7 +343,13 @@ Response: Status Code: 200 OK
 
 #### **6.6 Onelink API**
 
-Onelink链接创建逻辑 ![](https://docs.growingio.com/.gitbook/assets/ads_tracking_api_4.png) POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/onelinks](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/onelinks)Request:
+Onelink链接创建逻辑
+
+ ![](../.gitbook/assets/growingio_tracking_api_4.png) 
+
+POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/onelinks](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/onelinks)
+
+Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -404,9 +436,13 @@ Response: Status Code: 200 OK
 
 #### **6.7 Normallink API**
 
-Normallink链接创建逻辑： ![](https://docs.growingio.com/.gitbook/assets/ads_tracking_api_5.png)
+Normallink链接创建逻辑：
 
-POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/normallinks](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/normallinks) Request:
+ ![](https://docs.growingio.com/.gitbook/assets/ads_tracking_api_5.png)
+
+POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/normallinks](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/normallinks) 
+
+Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | --- | --- | --- | --- | --- | --- |
