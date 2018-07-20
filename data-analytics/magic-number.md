@@ -4,10 +4,10 @@ description: 找到你产品的魔法数字
 
 # 留存魔法师
 
-* [1.简介](liu-cun-mo-fa-shi.md#1-jian-jie)
-* [2.使用案例](liu-cun-mo-fa-shi.md#2-shi-yong-an-li)
-* [3.功能简介](liu-cun-mo-fa-shi.md#3-gong-neng-jian-jie)
-* [4.常见问题](liu-cun-mo-fa-shi.md#4-chang-jian-wen-ti)
+* [1.简介](magic-number.md#1-jian-jie)
+* [2.使用案例](magic-number.md#2-shi-yong-an-li)
+* [3.功能简介](magic-number.md#3-gong-neng-jian-jie)
+* [4.常见问题](magic-number.md#4-chang-jian-wen-ti)
 
 ## 1.简介
 

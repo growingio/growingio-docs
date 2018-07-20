@@ -10,7 +10,7 @@
   * [漏斗分析](data-analytics/funnel-analysis.md)
   * [智能路径](data-analytics/pathfinder.md)
   * [留存分析](data-analytics/retention-analysis.md)
-  * [留存魔法师](data-analytics/liu-cun-mo-fa-shi.md)
+  * [留存魔法师](data-analytics/magic-number.md)
   * [用户活跃分析](data-analytics/user-engagement-analysis.md)
   * [热图](data-analytics/heatmap/README.md)
     * [Web 端热图](data-analytics/heatmap/heatmap-web.md)

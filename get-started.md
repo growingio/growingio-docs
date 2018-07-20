@@ -34,7 +34,7 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 4. 用户分群 [文档](data-analytics/user-segmentation.md) \| [使用手册](https://s.growingio.com/9PaAZ8) \|  [视频](https://s.growingio.com/ambRb4)
 5. 广告监测 [文档](data-analytics/ads-tracking/) \| [视频1](https://s.growingio.com/DmQMzB) \| [视频2](https://s.growingio.com/KqZEP3) \| [视频3](https://s.growingio.com/jvoRdB)
 6. 智能路径 [文档](data-analytics/pathfinder.md)
-7. 留存魔法师 [文档](data-analytics/liu-cun-mo-fa-shi.md)
+7. 留存魔法师 [文档](data-analytics/magic-number.md)
 8. 热图 [文档](data-analytics/heatmap/)
 9. 实时分析 [文档](data-analytics/dashboard/realtime.md)
 10. 概览分析 [文档](data-analytics/dashboard/overview.md)

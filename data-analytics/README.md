@@ -38,7 +38,7 @@ GrowingIO 提供了多种强大的分析工具，帮助你进行高效分析，�
 
 {% page-ref page="pathfinder.md" %}
 
-{% page-ref page="liu-cun-mo-fa-shi.md" %}
+{% page-ref page="magic-number.md" %}
 
 {% page-ref page="user-engagement-analysis.md" %}
 
