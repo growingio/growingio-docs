@@ -110,7 +110,7 @@ GrowingIO的数据模型可以表示如下：
 
 除了 ID 之外，您还可以将登录用户的性别，年龄等信息上传。GrowingIO 通过您上传的登录用户ID 和用户的其他属性信息和 GrowingIO 采集的用户行为数据进行匹配，方便您对自己的用户做更深入的分析。
 
-[如何上传登录用户 ID 及其他属性信息？](dimensions/predefined-dimensions.md#yong-hu-bian-liang)
+[如何上传登录用户 ID 及其他属性信息？](../api/user-property-upload.md)
 
 ## 无埋点（圈选）和打点数据模型一致性说明
 
