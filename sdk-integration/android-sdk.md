@@ -1064,7 +1064,7 @@ GrowingIO的数据分析工具提供了例如“应用版本”，“渠道”�
 
 **这些属性在作图时，将表现为维度。**
 
-**用户属性**
+#### **用户属性**
 
 用户属性只能用来表示登录用户本身的属性，至少包括用户ID。
 
@@ -1074,7 +1074,7 @@ GrowingIO的数据分析工具提供了例如“应用版本”，“渠道”�
 2. 账户属性，比如等级、类型标签等。
 3. 行为特征，比如是否有过购买记录之类。
 
-用户属性被称为CS字段，最多支持十个，从CS1到CS10，接口如下：
+用户属性被称为CS字段，SDK 上传最多支持10个，从CS1到CS10，接口如下：
 
 ```java
 GrowingIO growingIO = GrowingIO.getInstance();
@@ -1083,6 +1083,8 @@ growingIO.setCS2("CS2的key", "CS2的value");
 ...
 growingIO.setCS10("CS10的key", "CS10的value");
 ```
+
+> 注：CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考 [用户变量上传 API](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)
 
 在下面的例子中，总计上传5个用户属性，分别是：
 
@@ -1111,6 +1113,7 @@ private void setGrowingIOCS() {
 4. 对于未登录用户，不要设置任何CS字段。
 5. 如果没有用到所有的CS字段，剩下的可以不设置。
 6. 同一个CS字段，必须保持在各个平台意义相同。
+7. CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考 [用户变量上传 API](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)。
 
 **CS1字段设置时机**
 
@@ -1126,7 +1129,9 @@ private void setGrowingIOCS() {
 
 **其他CS字段遵循相似的设置时机**
 
-**在上传成功两小时后，您需要在「项目管理-项目配置-CS 配置中」进行字段配置和激活，配置成功后便可开始使用 CS 字段进行分析。**
+在上传成功两小时后，您需要在「项目管理-项目配置-CS 配置中」进行字段配置和激活，配置成功后便可开始使用 CS 字段进行分析。
+
+**注意：CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考** [**用户变量上传 API**](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)**。**
 
 #### 设置界面元素内容 {#设置界面元素内容}
 

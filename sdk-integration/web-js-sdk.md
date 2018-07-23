@@ -604,8 +604,9 @@ _vds.push(['setCS10', 'CS10的key', 'CS10的value']);
 4. 对于未登录用户，不要设置任何CS字段。
 5. 如果没有用到所有的CS字段，剩下的可以不设置。
 6. 同一个CS字段，必须保持在各个平台意义相同。
+7. CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考 [用户变量上传 API](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)。
 
-如下例子中，总计上传 4 个用户属性，分别是：
+如下例子中，总计上传 5个用户属性，分别是：
 
 **CS1:** user\_id:100324  
 **CS2:** company\_id:943123  
@@ -637,6 +638,8 @@ _vds.push(['setCS10', 'CS10的key', 'CS10的value']);
         })();
     </script>
 ```
+
+**需要注意，CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考** [**用户变量上传 API**](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)\*\*\*\*
 
 **在上传成功两小时后，您需要在「项目管理-项目配置-CS 配置中」进行字段配置和激活，配置成功后便可开始使用 CS 字段进行分析。**
 

@@ -883,7 +883,9 @@ GrowingIO的数据分析工具提供了例如“应用版本”，“渠道”�
 
 根据需求，可以用来指定用户的各种属性 1. 自然属性，比如性别、出生年月等。 2. 账户属性，比如等级、类型标签等。 3. 行为特征，比如是否有过购买记录之类。
 
-用户属性被称为CS字段，最多支持十个，从CS1到CS10。
+用户属性被称为CS字段，SDK 中最多支持10个，从CS1到CS10。
+
+> CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考 [用户变量上传 API](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)
 
 **我们举例说明它的用法。**
 
@@ -922,6 +924,7 @@ CS5: sales\_name:销售员小王
 4. 对于未登录用户，不要设置任何CS字段。
 5. 如果没有用到所有的CS字段，剩下的可以不设置。
 6. 同一个CS字段，必须保持在各个平台意义相同。
+7. CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考 [用户变量上传 API](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)。
 
 **对于CS1字段设置时机的说明**
 
@@ -941,7 +944,9 @@ CS5: sales\_name:销售员小王
 
 **其他CS字段遵循相似的设置方法**
 
-**在上传成功两小时后，您需要在「项目管理-项目配置-CS 配置中」进行字段配置和激活，配置成功后便可开始使用 CS 字段进行分析。**
+在上传成功两小时后，您需要在「项目管理-项目配置-CS 配置中」进行字段配置和激活，配置成功后便可开始使用 CS 字段进行分析。
+
+**注意：CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考** [**用户变量上传 API**](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)**。**
 
 #### 设置元素对象 {#设置元素对象}
 
