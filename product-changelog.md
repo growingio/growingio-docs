@@ -34,14 +34,14 @@ description: 我们一直在迭代！
 
 **访问来源中微信类来源：**
 
-GrowingIO根据微信的相关参数，进一步细化了微信类的访问来源，使流量来源归类更为准确。具体场景对应关系请见[访问来源-微信类来源](data-defination/dimensions/predefined-dimensions.md#11) 。原本没有referrer但在微信环境中访问的流量，6月13日前会被识别为直接访问，6月13日起会被归类为微信来源，相应的一级访问来源也会变化为社交媒体。
+GrowingIO根据微信的相关参数，进一步细化了微信类的访问来源，使流量来源归类更为准确。具体场景对应关系请见[访问来源-微信类来源](https://docs.growingio.com/implementation/data-model/predefined-dimensions.html#%E8%AE%BF%E9%97%AE%E6%9D%A5%E6%BA%90%EF%BC%88source--%EF%BC%89) 。原本没有referrer但在微信环境中访问的流量，6月13日前会被识别为直接访问，6月13日起会被归类为微信来源，相应的一级访问来源也会变化为社交媒体。
 
 ### 更新时间 2018年4月14日 版本号：V18.5.1 {#v-18-5-1}
 
 **新功能：**
 
-1. [漏斗分析支持每个步骤单独添加过滤条件](data-analytics/funnel-analysis.md)，您可以更加灵活地选择到某个事件并且添加对事件的限定；
-2. [留存图表可以下钻到分群](data-analytics/retention-analysis.md#2-2)：留存图表保存后，可以在留存表的「[日期行](https://docs.growingio.com/retention.html#%E7%BB%9F%E8%AE%A1%E5%8F%A3%E5%BE%84)」通过点击创建留存或未留存用户分群；
+1. [漏斗分析支持每个步骤单独添加过滤条件](https://docs.growingio.com/%E6%BC%8F%E6%96%97.html#%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%EF%BC%88%E6%89%93%E7%82%B9%EF%BC%89%E4%BA%8B%E4%BB%B6%E5%88%9B%E5%BB%BA%E6%BC%8F%E6%96%97)，您可以更加灵活地选择到某个事件并且添加对事件的限定；
+2. [留存图表可以下钻到分群](https://docs.growingio.com/retention.html#%E7%95%99%E5%AD%98%E4%B8%8B%E9%92%BB%E5%88%B0%E5%88%86%E7%BE%A4)：留存图表保存后，可以在留存表的「[日期行](https://docs.growingio.com/retention.html#%E7%BB%9F%E8%AE%A1%E5%8F%A3%E5%BE%84)」通过点击创建留存或未留存用户分群；
 
 **优化：**
 

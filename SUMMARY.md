@@ -51,7 +51,6 @@
   * [维度和变量](data-defination/dimensions/README.md)
     * [预定义维度](data-defination/dimensions/predefined-dimensions.md)
     * [打点维度（变量）](data-defination/dimensions/manual-dimensions.md)
-* [小程序事件和变量](xiao-cheng-xu-shi-jian-he-bian-liang.md)
 * [系统配置](configuration/README.md)
   * [项目管理](configuration/project-configuration.md)
   * [用户管理](configuration/user-configuration.md)
