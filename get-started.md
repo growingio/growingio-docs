@@ -39,8 +39,8 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 9. 实时分析 [文档](data-analytics/dashboard/realtime.md)
 10. 概览分析 [文档](data-analytics/dashboard/overview.md)
 11. **小程序概览** [文档](data-analytics/mina-overview.md)
-12. web 圈选 [文档](http://growing.cn-bj.ufileos.com/web_circle.pdf) \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)
-13. 移动端圈选 [文档](http://growing.cn-bj.ufileos.com/app_circle.pdf) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)
+12. web 圈选 [文档](data-defination/events-metrics/circle-metrics/web-circle.md) \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)
+13. App 端圈选 [文档](data-defination/events-metrics/circle-metrics/app-circle.md) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)
 14. **小程序圈选** [文档](data-defination/events-metrics/circle-metrics/mina-circle.md) 
 
 #### 第五步：开始进行分析 {#第五步：开始进行分析}
