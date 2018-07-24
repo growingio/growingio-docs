@@ -59,7 +59,7 @@ GrowingIO 所有分析能力都同样支持小程序，同时，还对小程序�
 
 1.集成[小程序 SDK ](sdk-integration/mina-sdk.md)，以进行数据采集
 
-2.通过[小程序圈选](data-defination/events-metrics/circle-metrics/mina-circle.md)来进行数据定义
+2.通过[小程序圈选](data-defination/events-metrics/circle-metrics/mina-circle.md)来进行数据定义，同时支持[打点事件和变量](data-defination/mina.md)
 
 3.通过[小程序概览](data-analytics/mina-overview.md)了解数据情况
 
