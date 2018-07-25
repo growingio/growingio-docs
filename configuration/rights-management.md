@@ -109,7 +109,7 @@
 
     基础数据-网页端-推广详细查看：控制用户是否可见网页端的推广详细报表。
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
  17. 项目管理
 
@@ -220,7 +220,7 @@
 
 Step1.点击项目下拉列表，进入到用户及权限管理界面
 
-![](../.gitbook/assets/image%20%2820%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
 Step2.点击左侧栏下方的新建「自定义角色」
 
@@ -228,7 +228,7 @@ Step2.点击左侧栏下方的新建「自定义角色」
 
 Step3.选择该用户可以使用的功能模块，以及其他权限
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 Step4.邀请新用户/将现有的用户变更为自定义角色
 
