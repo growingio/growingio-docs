@@ -29,7 +29,7 @@ URL**示意：**www.xxx.com **/** 12345/678/123 **?** id=1&ig=2
 如果你 SDK 是旧版本，请添加：
 
 ```text
-    _vds.push(['enableHT', true])
+_vds.push(['enableHT', true])
 ```
 
 如果你的 SDK 是最新版本，请添加这段代码：
