@@ -73,12 +73,12 @@
 
 在完成了配置后，即可在代码中完成以上设计的 “自定义事件和变量” 的部署。具体的说，就是调用 GrowingIO 提供的API接口，上传数据。
 
-* ​[JS 接口文档](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/sdk-integration/web-js-sdk#3-web-js-sdk-2-1-api)​
-* ​[Android 接口文档](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/sdk-integration/android-sdk#2-android-sdk-api)​
-* ​[iOS 接口文档](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/sdk-integration/ios-sdk#ios-sdk-api)​
-* ​[小程序接口文档](https://growingio.gitbook.io/miniprogram/tag-management/sdk-logic/custom-event)​
+* [​JS 接口文档​](../../sdk-integration/web-js-sdk.md#track)
+* [​Android 接口文档​](../../sdk-integration/android-sdk.md#2-zi-ding-yi-shi-jian-he-bian-liang-api)
+* [​iOS 接口文档​](../../sdk-integration/ios-sdk.md#ios-sdk-api)
+* ​[小程序接口文档​](../../sdk-integration/mina-sdk.md#zi-ding-yi-shi-jian-he-bian-liang)
 
-API中给出了打点事件和事件级变量的上传方式，以及[其他打点维度（用户级变量、页面级变量、转化变量）](https://growingio.gitbook.io/docs/~/drafts/-LGyNfnU9qfd7AXzFkhu/primary/data-defination/dimensions#zi-ding-yi-da-dian-wei-du-bian-liang)的配置方法。
+API 中给出了打点事件和事件级变量的上传方式，以及[其他打点维度（用户级变量、页面级变量、转化变量）](../dimensions/manual-dimensions.md)的配置方法。
 
 ## 第四步：数据校验
 
