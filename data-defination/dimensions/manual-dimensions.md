@@ -256,7 +256,7 @@ GrowingIO.setPageVariable\(Activity activity, ”channel”, “新闻”\);
 * [JS 接口文档](../../sdk-integration/web-js-sdk.md#3-web-js-sdk-2-1-api)
 * [Android 接口文档](../../sdk-integration/android-sdk.md#2-android-sdk-api)
 * [iOS 接口文档](../../sdk-integration/ios-sdk.md#ios-sdk-api)
-* [小程序接口文档](../../data-analytics/mina-overview.md)
+* [小程序接口文档](../../sdk-integration/mina-sdk.md#zi-ding-yi-shi-jian-he-bian-liang)
 
 {% hint style="info" %}
 API中给出了打点事件和自定义变量的上传方式
