@@ -4,7 +4,7 @@ description: 做好用户分群是精益化用户运营的基础
 
 # 用户分群
 
-> [**用户分群使用手册** ](https://s.growingio.com/9PaAZ8)
+> 📖 [**用户分群使用手册** ](https://s.growingio.com/9PaAZ8)
 
 * [1.简介](user-segmentation.md#1-jian-jie)
 * [2.功能介绍](user-segmentation.md#2-1)

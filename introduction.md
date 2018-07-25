@@ -8,6 +8,8 @@ GrowingIO 专注于互联网、金融、新零售、运营商等行业，帮助�
 
 GrowingIO 用数据驱动企业增长。
 
+![](.gitbook/assets/45_4_conversion_1_.gif)
+
 {% page-ref page="get-started.md" %}
 
 
