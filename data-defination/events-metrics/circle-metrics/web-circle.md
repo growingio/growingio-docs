@@ -26,17 +26,19 @@ URL**示意：**www.xxx.com **/** 12345/678/123 **?** id=1&ig=2
 
 如果页面中有 **\#**，请先设置后再进行数据采集和分析：我们默认不会把 hashtag 识别成页面 URL 的一部分。对于使用 hashtag 作为单页应用页面切换的网站来说，请在工程师的帮助下，添加下面的代码，使用`enableHT`来监听 hashtag 的变化，并区分页面来收集页面数据，每次 hashtag 改变都会触发一次PV，hashtag 的信息也会记录在页面 URL 中。
 
-如果你 SDK 是旧版本，请添加：
+如果你的[ SDK 是最新版本](../../../sdk-integration/web-js-sdk.md)，请添加这段代码：
+
+```text
+gio('config', {'hashtag':true});
+```
+
+如果你 [SDK 是旧版本](../../../sdk-integration/web-js-sdk.md#2-1)，请添加：
 
 ```text
 _vds.push(['enableHT', true])
 ```
 
-如果你的 SDK 是最新版本，请添加这段代码：
 
-```text
-gio('config', {'hashtag':true});
-```
 
 接下来开始定义页面：
 
