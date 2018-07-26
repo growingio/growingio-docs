@@ -8,8 +8,7 @@
 * [重要配置项 API](android-sdk.md#1-zhong-yao-pei-zhi-xiang-api)
 * [自定义事件和变量 API](android-sdk.md#2-zi-ding-yi-shi-jian-he-bian-liang-api)
 * [验证SDK是否正常工作](android-sdk.md#yan-zheng-sdk-shi-fou-zheng-chang-gong-zuo)
-* [GrowingIO 初始化配置项API](android-sdk.md#growingio-chu-shi-hua-pei-zhi-xiang-api)
-* [GrowingIO API](android-sdk.md#growingio-api)
+* [附录](android-sdk.md#fu-lu)
 * [旧版本升级](android-sdk.md#jiu-ban-ben-sheng-ji)
   * [更新 SDK 版本号为最新版本](android-sdk.md#1-geng-xin-sdk-ban-ben-hao-wei-zui-xin-ban-ben)
   * [迁移用户属性字段（CS字段）](android-sdk.md#2-qian-yi-yong-hu-shu-xing-zi-duan-cs-zi-duan)
@@ -521,22 +520,6 @@ WebView.setWebChromeClient(WebChromeClient client);
 
 您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，进行[数据分析](../data-analytics/)。除自动收集的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](../data-defination/events-metrics/manual-metrics.md)和[变量](../data-defination/dimensions/manual-dimensions.md)，下面介绍自定义事件和变量 API 使用方法，后文简称埋点事件API。
 
-### [预备知识](../faq/)
-
-**Android 常见的应用场景是一个`Activity`中嵌套多个`Fragment`，那么我们是怎么定义页面的呢？**
-
-APP进入一个页面之后，无论其中有多少层`Fragment`嵌套，200ms 内最后一个初始化完成的`Fragment`即认为当前的页面。在用户可见的界面上，有事件操作的归因都会这个`Fragment`上。您在埋点的时候一定要确认当前的页面，并在当前的页面埋点是最稳定可靠的。
-
-确认当前页面方法有三种：
-
-1.[圈选](../data-defination/events-metrics/circle-metrics/app-circle.md)，查看圈选页面为当前页面
-
-![](../.gitbook/assets/image%20%2837%29.png)
-
-2.[查看日志](android-sdk.md#setdebugmode)，进入页面发送的`page`的`p`为当前的页面
-
-3.使用[`Mobile Debugger`](growingio-debugger/#shi-yong-mobile-debugger-ce-shi-shu-ju)查看`page`事件的`p`
-
 
 
 ### API 简介 
@@ -678,6 +661,8 @@ gio.track("loanAmount", 80000, jsonObject);
 
 发送页面级别的信息，在添加代码之前必须在打点管理界面上声明页面级变量。
 
+使用此接口时，请先阅读 [**GrowingIO 对于页面的定义**](android-sdk.md#1growingio-dui-yu-ye-mian-de-ding-yi)。
+
 ```java
 // setPageVariable API原型
 GrowingIO gio = GrowingIO.getInstance();
@@ -693,7 +678,7 @@ gio.setPageVariable(Fragment fragment, JSONObject pageLevelVariables);
 ```
 
 {% hint style="info" %}
-请注意这里的`activity`和`fragment`参数，[它关乎GrowingIO对于页面的定义](android-sdk.md#yu-bei-zhi-shi)。
+请注意这里的`activity`和`fragment`参数，[**它关乎GrowingIO对于页面的定义**](android-sdk.md#1growingio-dui-yu-ye-mian-de-ding-yi)。
 
 参数选择当前界面上最后一个初始化完成的对象引用，例如一个`Activity`中嵌套多个`Fragment`情况，当前页面最后初始化完成的是`Fragment`，请确认当前页面`Fragment`，并且得到其当前引用，`new`对象将不会发送的哦。
 {% endhint %}
@@ -986,6 +971,8 @@ gio.setVisitor(jsonObject);
 
 ## 验证 SDK 是否正常工作
 
+验证 SDK 的采集事件数据发送至关重要，数据采集是数据分析的基础，保证了数据采集的精准才能帮助您做出正确的数据分析。GrowingIO 一直在努力满足市面上所有 APP 的数据自动采集，也成为无埋点数据采集，但是因为开发者的实现方式在江湖上不统一， 我们覆盖事件采集触发逻辑可能与您的实现方式有出入，所以强烈建议开发者验证 GrowingIO SDK 的数据发送，如果有任何问题，及时反馈技术支持，我们会一直努力增强我们的采集能力，给您更好的服务。
+
 ### GrowingIO采集事件介绍
 
 GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两种方式采集移动端APP，也就是通常所说的无埋点和埋点。下面将分别介绍这两种方式GrowingIO定义的采集事件类型。
@@ -1036,7 +1023,7 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 
 ## 附录
 
-GrowingIO 提供了初始化配置项 API 和运行时 API 来自定义SDK的采集，满足不同场景的定制采集。
+GrowingIO 提供了**初始化配置项 API** 和**运行时 API** 来自定义SDK的采集，满足不同场景的定制采集。
 
 ### GrowingIO 初始化配置项 API 
 
@@ -1717,6 +1704,21 @@ GrowingIO.setTabName(content, "MyContent");
 
 
 
-  
+## 常见问题
 
+### 1.GrowingIO 对于页面的定义
+
+**Android 常见的应用场景是一个`Activity`中嵌套多个`Fragment`，那么我们是怎么定义页面的呢？**
+
+APP进入一个页面之后，无论其中有多少层`Fragment`嵌套，200ms 内最后一个初始化完成的`Fragment`即认为当前的页面。在用户可见的界面上，有事件操作的归因都会这个`Fragment`上。您在埋点的时候一定要确认当前的页面，并在当前的页面埋点是最稳定可靠的。
+
+确认当前页面方法有三种：
+
+1.[圈选](../data-defination/events-metrics/circle-metrics/app-circle.md)，查看圈选页面为当前页面
+
+![](../.gitbook/assets/image%20%2837%29.png)
+
+2.[查看日志](android-sdk.md#setdebugmode)，进入页面发送的`page`的`p`为当前的页面
+
+3.使用[`Mobile Debugger`](growingio-debugger/#shi-yong-mobile-debugger-ce-shi-shu-ju)查看`page`事件的`p`
 
