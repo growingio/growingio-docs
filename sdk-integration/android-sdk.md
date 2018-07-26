@@ -1024,11 +1024,11 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 
 ### 圈选功能验证
 
-1. **圈选功能验证：**
+请先依据[圈选文档](../data-defination/events-metrics/circle-metrics/app-circle.md)，唤醒圈选功能，主要检查元素是否都可圈选，重点尝试WebView内部元素是否可圈。
 
-   请先依据[圈选文档](../data-defination/events-metrics/circle-metrics/app-circle.md)，唤醒圈选功能，主要检查元素是否都可圈选，重点尝试 -=
+当显示高亮则证明可圈，如图所示：
 
-2. **热图功能验证：**
+![&#x5143;&#x7D20;&#x9AD8;&#x4EAE;&#x8BC1;&#x660E;&#x53EF;&#x5708;](../.gitbook/assets/image%20%2851%29.png)
 
 \*\*\*\*
 
@@ -1036,7 +1036,7 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 
 ## 附录
 
-### 加段话
+GrowingIO 提供了初始化配置项 API 和运行时 API 来自定义SDK的采集，满足不同场景的定制采集。
 
 ### GrowingIO 初始化配置项 API 
 
@@ -1047,17 +1047,6 @@ GrowingIO.startWithConfiguration(this,
 new Configuration()
     .disableCellularImp()
     .disableImageViewCollection(false)
-    .setActivityLifecycleCallbacksRegistrar(new ActivityLifecycleCallbacksRegistrar() {
-        @Override
-        public void registerActivityLifecycleCallbacks(ActivityLifecycleCallbacks callbacks) {
-
-        }
-
-        @Override
-        public void unRegisterActivityLifecycleCallbacks(ActivityLifecycleCallbacks callbacks) {
-
-        }
-    })
     .setBulkSize(100)
     .setCellularDataLimit(1000)
     .setChannel("渠道号")
@@ -1073,14 +1062,11 @@ new Configuration()
     .setDisableImpression(false)
     .setFlushInterval(1000)
     .setMutiprocess(true)
-    .setProjectId("xxxxxxxxxx")
-    .setRnMode(true)
     .setSampling(0.34)
     .setSessionInterval(23000)
     .setTestMode(true)
     .setThrottle(false)
     .setTrackWebView(true)
-    .setURLScheme("growing.xxxxxxxx")
     .supportMultiProcessCircle(true)
     .trackAllFragments()
 );
@@ -1099,18 +1085,14 @@ new Configuration()
 #### 功能 API
 
 | 接口名称 | 默认值 | 含义 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | setDisabled\(`boolean` disabled\) | `false` | 设置为`true`时不采集数据 |
 | setTrackWebView\(`boolean` trackWebView\) | `true` | 设置为`false`时不采`WebView`数据 |
 | supportMultiProcessCircle\(`boolean` spmc\) | `false` | 是否使用了多进程圈选 |
 | setMutiprocess\(`boolean` isMultiprocess\) | `false` | 是否使用了多进程 |
 | trackAllFragments\(\) | `false` | 是否采集所有Fragment；调用则设置为`true` |
-| ~~_collectWebViewUserAgent_~~\(`boolean` collection\) | `true` | 是否使用`WebView`采集`UserAgent` |
 | disableCellularImp\(\) | `false` | 否关闭移动蜂窝网`impression`数据采集 |
-| ~~_disableImageViewCollection_~~\(`boolean` disable\) | `false` | 是否关闭采集`ImageView` `hash`计算 |
 | setHashTagEnable\(`boolean` hashTagEnable\) | `false` | 是否认为点击锚点链接的跳转是一个页面浏览 |
-| ~~_setActivityLifecycleCallbacksRegistrar_~~\(`ActivityLifecycleCallbacksRegistrar` registrar\) | 无 | 设置整体Activity生命周期的监听函数 |
-| ~~_setRnMode\(`boolean` rnMode\)_~~ | `false` | ~~在`ReactNative`环境会自动设置为`true`,`codova`版本需要用户手动调用~~ |
 
 #### 数据采集相关 API
 
@@ -1118,7 +1100,7 @@ new Configuration()
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | setSampling\(`double` sampling\) | 1 | 采样率\[0.01~1\],若设置sampling = 0.01，则 1% 的设备会被采集数据，每次启动会根据用户设置的采样率判断设备是否在采集的范围之内，使用**之前请咨询技术支持** |
 | setSessionInterval\(`long` sessionInterval\) | 30 \* 1000 | 在后台停留时长超过此值，则产生新的`sessionId`,发送`visit`事件。 |
-| **setThrottle\(**`boolean` throttle\) | `false` | 是否节流发送（节流发送时`imp`不发送） |
+| setThrottle\(`boolean` throttle\) | `false` | 是否节流发送（节流发送时`imp`不发送），不发送但是采集 |
 | setFlushInterval\(`long`  flushInterval\) | 30 \* 1000 | 数据刷新的最长时间间隔，默认30 秒 。如果距离上次发送数据事件超过此时间则发送事件 |
 | setDisableImpression\(`boolean`disableImp\) | `true` | 是否采集`imp`事件 |
 | setCellularDataLimit\(`long` cellularDataLimit\) | 3 \* 1024 \* 1024 | 一天的时间之内，在移动蜂窝网下的数据最大传输量，默认3M。 |
@@ -1145,8 +1127,7 @@ GrowingIO 所有 API 都需要在主线程调用。
 **API 明细：**
 
 | 接口名称 | 含义 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ~~**setActivityLifecycleCallbacksRegistrar\(`ActivityLifecycleCallbacksRegistrar` registrar\)**~~ | 添加 Activity 生命周期 callback  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [trackBanner\(`View` banner, `List<String>` bannerContents\)](android-sdk.md#trackbanner) | [因为 SDK 不能识别 Banner ,配置这个接口则不监听 banner 中的 Fragment 的生命周期，不采集生命周期涉及的用户行为数据](android-sdk.md#trackbanner) |
 | ignoredView\(`View` view\) | 忽略配置的 View ，不采集用户数据 |
 | ignoreFragment\(`Activity` activity, `android.app.Fragment` fragment\) | 忽略配置的 View ，不采集用户数据 |
@@ -1156,13 +1137,10 @@ GrowingIO 所有 API 都需要在主线程调用。
 | setPageName\(`Activity` activity, `String` name\) | 设置页面别名 |
 | setPageName\(`android.app.Fragment` fragment, `String` name\) | 设置页面别名 |
 | **setViewID\(`View` view, `String` id\)** | 设置 View id ，配置之后对应 xPath 中的 view id |
-| ~~_setScheme\(String scheme\)_~~ | 设置 APP 的 urlScheme |
 | setThrottle\(boolean throttle\) | 是否节流发送（节流发送时imp不发送），内部实际调用 Configuration 中的同名方法，所以在初始化时候配置和运行时动态配置，效果一样。 |
 | disable\(\) | GrowingIO 停止采集 |
 | resume\(\) | GrowingIO 恢复采集 |
 | stop\(\) | GrowingIO 停止采集，可以不在主线程调用 |
-| ~~_setTabName\(`View` tab, `String` name\)_~~ | 已经废弃 @Deprecated设置 Tab 的名称， xPath 中对应元素将以此命名 |
-| ~~_setPressed\(`View` view\)_~~ | 已经废弃 @Deprecated为 View 手动设置点击状态, 为没有点击状态的 View 设置下点击状态，以便 SDK 能够 Hook 到它 |
 | getSessionId\(\) | 得到 session id |
 | [trackEditText\(`EditText` editText\)](android-sdk.md#trackedittext) | [SDK 默认不采集用户输入框的内容，设置以后，采集除了密码以外的输入框文本内容。](android-sdk.md#trackedittext) |
 | trackFragment\(`Activity` activity, `Fragment` fragment\) | 如果APP初始化时候，没有设置 `trackAllFragment` 即不采集全部 `Fragment`，可以选择性采集指定 `Fragment`，设置之后 sdk 将监听 `Fragment` 的各个生命周期， 采集相关用户行为数据。  |
@@ -1171,8 +1149,8 @@ GrowingIO 所有 API 都需要在主线程调用。
 | setChannel \(`String` channel\) | 设置渠道名称 |
 | disableImpression\(\) | 不发送 `imp` |
 | setImp\(`boolean` enable\) |  `imp`事件开关，`true` 为打开 |
-| **trackWebView\(`WebView` webview, `WebChromeClient` client\)** | 采集 WebView 事件，默认采集 |
-| t**rackX5WebView\(`com.tencent.smtt.sdk.WebView` webView, `com.tencent.smtt.sdk.WebChromeClient` client\)** | 采集 X5WebView 事件，默认采集 |
+| trackWebView\(`WebView` webview, `WebChromeClient` client\) | 采集 WebView 事件，默认采集，您可以在不全量采集WebView的时候，定制采集某个`WebView` |
+| trackX5WebView\(`com.tencent.smtt.sdk.WebView` webView, `com.tencent.smtt.sdk.WebChromeClient` client\) | 采集 X5WebView 事件，默认采集 |
 
 
 
@@ -1738,8 +1716,6 @@ GrowingIO.setTabName(content, "MyContent");
 至此，您的SDK安装就成功了。您登录 GrowingIO 进入产品安装页面执行“数据检测”几分钟后就可以看到数据了。
 
 
-
-## 常见问题
 
   
 
