@@ -2,8 +2,8 @@
 
 * [第一部分：访问级指标](predefined-metrics.md#di-yi-bu-fen-fang-wen-ji-zhi-biao)
   * [1.访问量（web/app）](predefined-metrics.md#1fang-wen-liang)
-  * [2.访问用户人均访问次数（web/app） \[ 访问用户 / 访问量 \]](predefined-metrics.md#2)
-  * [3.每次访问页面浏览量（web/app） \[ 访问量 / 页面浏览量 \]](predefined-metrics.md#3)
+  * [2.访问用户人均访问次数（web/app） \[ ](predefined-metrics.md#2)[访问量](predefined-metrics.md#3) [/ ](predefined-metrics.md#2)[访问用户](predefined-metrics.md#2)[ \]](predefined-metrics.md#2)
+  * [3.每次访问页面浏览量（web/app） \[ ](predefined-metrics.md#3)[页面浏览量](predefined-metrics.md#3)[ / ](predefined-metrics.md#3)[访问量](predefined-metrics.md#3)[ \]](predefined-metrics.md#3)
   * [4.总访问时长（web/app）](predefined-metrics.md#4)
   * [5.平均访问时长（web/app） \[ 总访问时长 / 访问量 \]](predefined-metrics.md#5)
   * [6.退出次数（web/app）](predefined-metrics.md#6)
@@ -37,11 +37,11 @@
 
 访问的数量。与页面级变量一起使用时，代表着该页面被访问的次数。
 
-#### 2.访问用户人均访问次数（web/app/小程序） \[ 访问用户 / 访问量 \] {#2}
+#### 2.访问用户人均访问次数（web/app/小程序） \[ 访问量 / 访问用户 \] {#2}
 
 平均每个用户访问网站（打开 App）的次数。
 
-#### 3.每次访问页面浏览量（web/app/小程序） \[ 访问量 / 页面浏览量 \] {#3}
+#### 3.每次访问页面浏览量（web/app/小程序） \[  页面浏览量 / 访问量 \] {#3}
 
 平均每次访问浏览的页面的数量。
 
