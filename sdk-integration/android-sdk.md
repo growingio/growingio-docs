@@ -1114,16 +1114,15 @@ GrowingIO 所有 API 都需要在主线程调用。
 **API 明细：**
 
 | 接口名称 | 含义 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [trackBanner\(`View` banner, `List<String>` bannerContents\)](android-sdk.md#trackbanner) | [因为 SDK 不能识别 Banner ,配置这个接口则不监听 banner 中的 Fragment 的生命周期，不采集生命周期涉及的用户行为数据](android-sdk.md#trackbanner) |
 | ignoredView\(`View` view\) | 忽略配置的 View ，不采集用户数据 |
-| ignoreFragment\(`Activity` activity, `android.app.Fragment` fragment\) | 忽略配置的 View ，不采集用户数据 |
 | ignoreFragment\(`Activity` activity, `Fragment` fragment\) | 忽略配置的 View ，不采集用户数据 |
-| **setViewInfo\(`View` view, `String` info\)** | 配置 view 的 Tag，标记 View ，并在 GrowingIO 相关事件中发送 ，内容对应 `xPath` 中的 `obj` |
-| **setViewContent\(`View` view, `String` content\)** | 配置 view 的 Tag，标记 View ，并在 GrowingIO相关事件中发送，内容对应 `xPath` 中的 `v` |
+| setViewInfo\(`View` view, `String` info\) | 配置 view 的 Tag，标记 View ，并在 GrowingIO 相关事件中发送 ，内容对应 `xPath` 中的 `obj` 例如：在商品`ListView`添加购物车的场景中，每个商品`item`都含有一个加入购物车按钮，这时无法区分商品`item`与将它加入购物车按钮的一对一关系，此时调用此方法增加描述。注意：适用于原有`v`字段含义不大，只关注描述的场景，使用此接口后`v`字段将不采集 |
+| setViewContent\(`View` view, `String` content\) | 配置 view 的 Tag，标记 View ，并在 GrowingIO相关事件中发送，内容对应 `xPath` 中的 `v` SDK默认不会采集ImageView的内容，为了能对不同的图片元素（ImageView）区分统计，需要对每个具有分析意义的图片元素（ImageView）添加描述。 |
 | setPageName\(`Activity` activity, `String` name\) | 设置页面别名 |
-| setPageName\(`android.app.Fragment` fragment, `String` name\) | 设置页面别名 |
-| **setViewID\(`View` view, `String` id\)** | 设置 View id ，配置之后对应 xPath 中的 view id |
+| setPageName\(`Fragment` fragment, `String` name\) | 设置页面别名 |
+| setViewID\(`View` view, `String` id\) | 设置 View id ，配置之后对应 xPath 中的 view id当您的应用界面改版时，可能会导致无法准确地统计已经圈选的元素。因此，对于应用中的主要流程涉及到的界面元素，建议您为它们设置固定的唯一ID，以保证数据的一致性。 |
 | setThrottle\(boolean throttle\) | 是否节流发送（节流发送时imp不发送），内部实际调用 Configuration 中的同名方法，所以在初始化时候配置和运行时动态配置，效果一样。 |
 | disable\(\) | GrowingIO 停止采集 |
 | resume\(\) | GrowingIO 恢复采集 |
