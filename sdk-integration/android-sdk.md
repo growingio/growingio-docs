@@ -979,23 +979,23 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 
 #### 自动采集事件类型
 
-| 事件类型 | 含义 | 事件触发时机 | 建议验证重要级别 |
+| 事件类型 | 含义 | 发送时机 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| activate | 激活 | 当APP首次激活打开时 | 不需验证 |
-| vst | 应用访问 | 1.冷启动发送2.切换用户发送3.默认APP进入后台30秒以后再次打开会发送 | 不需验证 |
-| page | 页面浏览 | 每当进入一个页面时发送 | 重要 |
-| imp | 元素展现 | 页面元素发生变动的时候触发，比如弹框或者`ListView`滑动 | 不需验证 |
-| clck | 点击 | 点击实现了相关 click Listener 的元素控件，常见问题中将详细列举 | 一般 |
-| chng | 输入框内容变化 | 输入框`EditText`失去焦点，默认不采集输入内容 | 重要 |
-| reengage | DeepLink唤醒事件 | 通过扫描 DeepLink 二维码唤醒 APP 后发送 | 不需验证 |
+| activate | 激活 | 当APP首次激活打开时 |
+| vst | 应用访问 | 1.冷启动发送2.切换用户发送3.默认APP进入后台30秒以后再次打开会发送 |
+| page | 页面浏览 | 每当进入一个页面时发送 |
+| imp | 元素展现 | 页面元素发生变动的时候触发，比如弹框或者`ListView`滑动 |
+| clck | 点击 | 点击实现了相关 click Listener 的元素控件，[常见问题中将详细列举](android-sdk.md#2-dian-ji-shi-jian-cai-ji-luo-ji) |
+| chng | 输入框内容变化 | 输入框`EditText`失去焦点，默认不采集输入内容 |
+| reengage | DeepLink唤醒事件 | 通过扫描 DeepLink 二维码唤醒 APP 后发送 |
 
 #### 自定义事件类型
 
-| 事件类型 | 含义 | 采集条件 |
+| 事件类型 | 含义 | 发送时机 |
 | --- | --- | --- | --- | --- | --- |
-| cstm | 设置自定义事件 | 调用[`track`](android-sdk.md#track)后发送 |
-| pvar | 设置页面级变量 | 调用[`setPageVariable`](android-sdk.md#setpagevariable)后发送 |
-| evar | 设置转化变量 | 调用[`setEvar`](android-sdk.md#setevar)后发送 |
+| cstm | 自定义事件触发 | 调用[`track`](android-sdk.md#track)后发送 |
+| pvar | 页面级变量触发 | 调用[`setPageVariable`](android-sdk.md#setpagevariable)后发送 |
+| evar | 转化变量触发 | 调用[`setEvar`](android-sdk.md#setevar)后发送 |
 | ppl | 设置用户变量 | 调用[`setPeopleVariable`](android-sdk.md#setpeoplevariable)后发送 |
 | vstr | 设置访问用户变量 | 调用[`setVisitor`](android-sdk.md#setvisitor)后发送 |
 
@@ -1721,4 +1721,27 @@ APP进入一个页面之后，无论其中有多少层`Fragment`嵌套，200ms �
 2.[查看日志](android-sdk.md#setdebugmode)，进入页面发送的`page`的`p`为当前的页面
 
 3.使用[`Mobile Debugger`](growingio-debugger/#shi-yong-mobile-debugger-ce-shi-shu-ju)查看`page`事件的`p`
+
+\`\`
+
+### 2. 点击事件采集逻辑
+
+设置以下点击事件的控件会被采集点击事件，如果您自定义了点击事件，不在下方列举之内，将无法采集点击事件，影响数据分析。
+
+```java
+onCheckedChanged(android/widget/CompoundButton)
+onCheckedChanged(android/widget/RadioGroup)
+onClick(android/content/DialogInterface)
+onClick(android/view/View)
+onItemClick(android/widget/AdapterView;android/view/View)
+onItemSelected(android/widget/AdapterView;android/view/View)
+onNewIntent(android/content/Intent)
+onRatingChanged(android/widget/RatingBar)
+onStopTrackingTouch(android/widget/SeekBar)
+onFocusChange(android/view/View)
+onMenuItemClick(android/view/MenuItem)
+onOptionsItemSelected(android/view/MenuItem)
+onGroupClick(android/widget/ExpandableListView;android/view/View)
+onChildClick(android/widget/ExpandableListView;android/view/View)
+```
 
