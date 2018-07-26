@@ -26,5 +26,47 @@ GrowingIO提供了强大而全面的管理功能，您可以根据您的具体�
 
 ![](https://docs.growingio.com/.gitbook/assets/2%20%284%29.png)
 
+#### 
 
+#### 3.1配置Universal Link、应用宝微链接
+
+* 在应用管理页面，配置Universal Link，应用宝微链接（可选项）
+
+![&#x627E;&#x5230;&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x9875;&#x9762;](../.gitbook/assets/tu-pian.png)
+
+![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x9875;&#x9762;](../.gitbook/assets/ying-yong-guan-li.jpg)
+
+![](../.gitbook/assets/pei-zhi-universal-link.jpg)
+
+![](../.gitbook/assets/pei-zhi-wei-lian-jie.jpg)
+
+* 您需要按照如下提示完成配置Universal Link的配置
+
+
+
+1. 在您的Xcode客户端中勾选如下功能
+
+![](https://lh3.googleusercontent.com/Ir0ND5HCreWCk2OojBZcFRylDnmheLcf7GyJBZu1Tj85sXoknRrRfjUXrUlnxLdaFeJ8UeSM5-MGNnSjLaBxLmnBC0ipvWBOsJRPz2oEJCDTA_3yUG9JQa1lh-4CqZ9g6dK8o3hk)
+
+
+
+![](https://lh6.googleusercontent.com/CqwX-YCFCo3Ma2J6Nq8q7hJ-cMQrL-juUHselvoTryr6ELhKD6OISKURLP6hjFr3aPmsyykDZUF-hGVi3xyOKa-t2JpYb9LKLqvuXXlotvQ90L2VXIOFQ9szWqEaznUH93jB7BFH)
+
+  
+
+ 2.添加GIO域名到xcode
+
+![](https://lh4.googleusercontent.com/7YUukBuCgWU1GneNSNv7mB9mxZVh99dfFM2qzXmFDcod8bFy_JWWCsRdPMaIyCJuo4UYbk5R0NBpoEEiPsnloLPjwcuOB_AIdrKMOAQMMvJoilhp05MO4nDlc3l4LeUx6fjLQp37)
+
+
+
+3.复制您的teamID/bundle ID到Growing后台,并勾选“我已完成Xcode配置，开启Universal Link跳转”
+
+![](https://lh4.googleusercontent.com/DfoaT2L-yKMEHoCKctZRuKsyCo1ghlCM7L_ylxpZ-HqmQnuEHE0uugA9ZEBkE_KmXTTVBZQRIa9DvjnTtHSOKJK3VuO_mTYEs3LiOZDP_Uqo_GQF6Bg6Tx11ijy_BmFpzhblTTS9)
+
+
+
+4.应用宝微链接：GrowingIO 提供跳转到应用宝微链接的功能，应用宝微链接为腾讯应用宝体系下的微下载链接
+
+5.完成配置
 

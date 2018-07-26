@@ -36,12 +36,22 @@
 5. 根据您的实际投放情况选择不同的链接类型。
 6. 如果需要生成多条链接，新建过程中可以选择“批量创建”。
 7. 获取监测链接（或二维码），用于投放。
+8. 按照系统引导创建监测链接。
+9. 创建完成后在“推广管理”页面切换“Deep-Link”tab 进行链接管理。
+10. 点击每条链接可以在右侧滑出“快速预览”，切换操作系统分别查看 iOS 及安卓的数据。
+11. 针对Deep-Link类型，系统在其他类型链接统计指标之外，提供了“唤醒”指标，衡量多少人通过链接重新打开 APP。
+12. 在“基础数据” 模块，Deep-Link 类型的链接会分化成形如“监测链接 0327-Deeplink\_iOS ”及“监测链接0327-Deeplink\_Android “两条链接，增加“唤醒”及“唤醒转化率”两个指标。
+13. 此功能需要升级到 SDK2.3.0 以上。
 
-![](https://docs.growingio.com/.gitbook/assets/import.png)
+![](../../.gitbook/assets/ping-mu-kuai-zhao-20180713-shang-wu-11.24.50.png)
+
+
 
 #### 1.1.2 One-Link {#112}
 
 当你需要使用一条监测链接同时推广 iOS 和安卓 App 时，使用此类型。
+
+    1.填写链接名称并选择您想要投放的应用
 
 1. 按照系统引导创建链接。
 2. 创建过程中，如果名称为“监测链接0327”，完成后在“推广管理”页面切换“One-Link”tab 进行链接管理。
@@ -52,14 +62,36 @@
 
 当你需要已安装用户站外点击链接可以直接打开 App 时，可以使用 Deep-Link 类型。
 
-1. 按照系统引导创建监测链接。
-2. 创建完成后在“推广管理”页面切换“Deep-Link”tab 进行链接管理。
-3. 点击每条链接可以在右侧滑出“快速预览”，切换操作系统分别查看 iOS 及安卓的数据。
-4. 针对Deep-Link类型，系统在其他类型链接统计指标之外，提供了“唤醒”指标，衡量多少人通过链接重新打开 APP。
-5. 在“基础数据” 模块，Deep-Link 类型的链接会分化成形如“监测链接 0327-Deeplink\_iOS ”及“监测链接0327-Deeplink\_Android “两条链接，增加“唤醒”及“唤醒转化率”两个指标。
-6. 此功能需要升级到 SDK2.3.0 以上。
+1.1.3.1创建Deep-Link
 
-特别说明：Deep-Link 目前在内测中，如需体验请页面申请或者联系 GIO CSM 或发送邮件至 adtrack@growing.io 。
+1. 填写链接名称并选择您想要投放的应用
+2. 为这条监测链接选择所属推广活动
+3. 填写应用下载地址
+4. 填写链接对应活动的直达落地页参数（_在App里我们使用URI Scheme来像定位一个网页一样，定位一个应用甚至应用里的某个具体的功能或页面。App中我们定位我的某个功能页 面ID为1234的某个具体页面，通常是通过:myapp://com.gio.function?page=1234的URI Scheme来实现。其中，page=1234即为当前活动页的URI。填写前请与活动页的开发人员确认页面URI参数。_）
+5. 完成创建，投放应用 
+
+Notice：为了不影响Deep—Link功能的完整体验，请您配置Universal Link/应用宝微链接，[查看配置方法](https://growingio.gitbook.io/docs/~/edit/drafts/-LHr7TBH-VZwUeweSJmI/configuration/project-configuration#3)
+
+![](../../.gitbook/assets/chuang-jian-deeplink-ye-mian.jpg)
+
+1.1.3.2使用Deep-Link
+
+1. 创建完成后在“推广管理”页面切换“Deep-Link”tab 进行链接管理。
+2. 点击每条链接可以在右侧滑出“快速预览”，切换操作系统分别查看 iOS 及安卓的数据。
+3. 针对Deep-Link类型，系统在其他类型链接统计指标之外，提供了“唤醒”指标，衡量多少人通过链接重新打开 APP。 
+4. 在“基础数据” 模块，Deep-Link 类型的链接会分化成形如“监测链接 0327-Deeplink\_iOS ”及“监测链接0327-Deeplink\_Android “两条链接，增加“唤醒”及“唤醒转化率”两个指标。
+
+![](../../.gitbook/assets/lian-jie-xiang-qing-ye.png)
+
+| Deep-Link功能 | App  SDK版本 |
+| --- | --- | --- | --- |
+| 基础Deeplink功能（Scheme打开APP至首页） | 2.3.0 |
+| 直达落地页（Scheme打开至活动页） | 2.3.2 |
+| Universal Link/应用宝微链接支持 | 2.4.1 |
+
+注：SDK功能向下兼容
+
+###  {#12}
 
 ### 1.2 推广管理 {#12}
 

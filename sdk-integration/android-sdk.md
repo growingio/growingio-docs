@@ -5,9 +5,11 @@
   * [添加 URLScheme 和网络权限](android-sdk.md#2-tian-jia-urlscheme-he-wang-luo-quan-xian)
   * [初始化SDK](android-sdk.md#3-chu-shi-hua-sdk)
   * [代码混淆](android-sdk.md#4-dai-ma-hun-xiao)
-* [SDK API](android-sdk.md#sdk-api)
-  * [重要配置项 API](android-sdk.md#1-zhong-yao-pei-zhi-xiang-api)
-  * [自定义事件和变量 API](android-sdk.md#2-zi-ding-yi-shi-jian-he-bian-liang-api)
+* [重要配置项 API](android-sdk.md#1-zhong-yao-pei-zhi-xiang-api)
+* [自定义事件和变量 API](android-sdk.md#2-zi-ding-yi-shi-jian-he-bian-liang-api)
+* [验证SDK是否正常工作](android-sdk.md#yan-zheng-sdk-shi-fou-zheng-chang-gong-zuo)
+* [GrowingIO 初始化配置项API](android-sdk.md#growingio-chu-shi-hua-pei-zhi-xiang-api)
+* [GrowingIO API](android-sdk.md#growingio-api)
 * [旧版本升级](android-sdk.md#jiu-ban-ben-sheng-ji)
   * [更新 SDK 版本号为最新版本](android-sdk.md#1-geng-xin-sdk-ban-ben-hao-wei-zui-xin-ban-ben)
   * [迁移用户属性字段（CS字段）](android-sdk.md#2-qian-yi-yong-hu-shu-xing-zi-duan-cs-zi-duan)
@@ -163,11 +165,9 @@ R.string.growingio*
 
 **添加代码之后，请先Clean项目，然后再进行编译，并在你的 Android App 安装了 SDK 后重新启动几次 App，保证行为采集数据自动发送给 GrowingIO，以便顺利完成检测。**
 
-## SDK API
+## 重要配置
 
-### 1. 重要配置项 API
-
-#### **配置项列表：**
+#### **配置项列表**
 
 | API | 说明 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -183,7 +183,9 @@ R.string.growingio*
 
 \*\*\*\*
 
-### **setDebugMode**
+### **设置 Debug 模式**
+
+#### **setDebugMode**
 
 查看数据采集发送日志，能够在`Android Studio`中通过`Logcat`查看`GrowingIO`打印的数据发送日志，在 `APP` 的 `Application onCreate` 初始化`SDK`地方添加配置。
 
@@ -209,7 +211,9 @@ GrowingIO.startWithConfiguration(this,new Configuration()
 
 
 
-### setTestMode
+### 设置 Test 模式
+
+#### setTestMode
 
 实时发送数据，开启则不遵循移动网络状态下数据发送大小限制以及采集数据缓存30秒发送策略。为了方便开发者查看日志，一般和`setDebugMode`一起使用。在 `APP` 的 `Application onCreate` 初始化`SDK`地方添加配置。
 
@@ -235,7 +239,9 @@ GrowingIO.startWithConfiguration(this,new Configuration()
 
 \*\*\*\*
 
-### **trackBanner**
+### **采集广告 Banner 数据**
+
+#### **trackBanner**
 
 采集`Banner`数据，应用的界面上方横向滚动的`Banner`广告。
 
@@ -269,7 +275,8 @@ GrowingIO.getInstance().trackBanner(View banner,List<String> bannerDescriptions)
 ```javascript
 {
     "s":"02015456-079b-49cc-8b42-a5cc6136f0ec",
-    "t":"imp", // t 为事件类型 type
+    // t 为事件类型 type
+    "t":"imp", 
     "tm":1531990474178,
     "d":"com.growingio.android.test",
     "p":"ConvenientBannerActivity",
@@ -279,7 +286,8 @@ GrowingIO.getInstance().trackBanner(View banner,List<String> bannerDescriptions)
             "x":"/MainWindow/LinearLayout[0]/FrameLayout[1]/FitWindowsLinearLayout[0]#action_bar_root/ContentFrameLayout[1]/FrameLayout[0]/RelativeLayout[0]/ConvenientBanner[0]#convenientBanner/LinearLayout[0]/RelativeLayout[0]/CBLoopViewPager[0]#cbLoopViewPager/ImageView[-]",
             "tm":1531990474179,
             "idx":1,
-            "v":"banner 2"  //假如现在滚动到第二个banner，V显示为您设置的描述
+            //假如现在滚动到第二个banner，V显示为您设置的描述
+            "v":"banner 2" 
         }
     ]
 }
@@ -287,7 +295,9 @@ GrowingIO.getInstance().trackBanner(View banner,List<String> bannerDescriptions)
 
 
 
-### setGeoLocation
+### 采集 GPS 数据
+
+#### setGeoLocation
 
 精确采集`GPS`数据，请在获取坐标后，调用接口设置位置信息。当用户下一次切换页面，或者发生点击行为时，`GPS`数据会被发送回`GrowingIO`。如果您不调用此接口也可以，我们会根据用户的`ip`定义用户位置，能够在最终的数据分析时看到`APP`用户地域分布。
 
@@ -315,7 +325,9 @@ GrowingIO.getInstance().setGeoLocation(39.9046900000,116.4071700000);
 
 \*\*\*\*
 
-### **trackEditText**
+### **采集输入框数据**
+
+#### **trackEditText**
 
 `GrowingIO` 默认采集输入框点击次数，不采集文字，在您需要采集应用内某个输入框内的文字（例如搜索框）时使用。当这个输入框失去焦点（包括应用退到后台），且输入框内容跟获取焦点前相比发生变化时，输入框内文字会被发送回`GrowingIO`。
 
@@ -333,7 +345,6 @@ GrowingIO.getInstance().trackEditText(EditText editText);
 
 ```java
 EditText editText = (EditText) findViewById(R.id.edit_text);
-...
 GrowingIO.getInstance().trackEditText(editText);
 ```
 
@@ -344,17 +355,55 @@ GrowingIO.getInstance().trackEditText(editText);
 
 
 
-### setHashTagEnable
+### WebView 锚点链接页面访问
 
-启用`Hashtag`识别,在 `SDK` 初始化方法中设置
+#### setHashTagEnable
+
+开启之后，APP `WebView` 中的页面，如果用户点击带有锚点的跳转链接，则发送一次页面浏览事件，请在 `SDK` 初始化方法中设置，默认值为 false，即默认锚点链接不算做页面浏览事件。
+
+GrowingIO 默认不会把`HashTag`识别成页面 URL 的一部分，对于使用`HashTag`进行页面跳转的单页面网站应用来说，可以启用它来标识页面，`HashTag`的值也会记录在页面URL中。
 
 ```java
 GrowingIO.startWithConfiguration(this, new Configuration().setHashTagEnable(true));
 ```
 
-\*\*\*\*
+**例如：**
 
-### **setMultiprocess & setMultiprocessCircle**
+点击 APP `WebView` 中代码混淆的锚点链接，URL 中`#`号后面为锚点，设置后 SDK 会发送页面浏览事件，它的链接为：
+
+> [https://docs.growingio.com/docs/sdk-integration/android-sdk\#4-dai-ma-hun-xiao](https://docs.growingio.com/docs/sdk-integration/android-sdk#4-dai-ma-hun-xiao)
+
+![&#x70B9;&#x51FB;WebView&#x4E2D;&#x7684;&#x951A;&#x70B9;&#x94FE;&#x63A5;](../.gitbook/assets/image%20%2843%29.png)
+
+SDK发送对应采集数据：
+
+```javascript
+{
+    "u":"2e94075c-ead2-33ac-ab7f-f9611162efc4",
+    "s":"78383569-3038-4bd4-b27c-349939367922",
+    "tl":"Android SDK - 帮助文档",
+    //t 为事件类型，page 为页面浏览事件
+    "t":"page",
+    "tm":1532408777047,
+    "pt":"https",
+    "d":"com.growingio.android.test::docs.growingio.com",
+    //p 为页面，页面为 “/docs/sdk-integration/android-sdk#4-dai-ma-hun-xiao”
+    "p":"StandardWebView::/docs/sdk-integration/android-sdk#4-dai-ma-hun-xiao",
+    "rf":"https://docs.growingio.com/docs/sdk-integration/android-sdk#ji-cheng",
+    "cs1":"GrowingIO",
+    "appId":"fakeAppID",
+    "v":"Android SDK - 帮助文档",
+    "r":"WIFI",
+    "gesid":434,
+    "esid":153
+}
+```
+
+
+
+### 多进程支持
+
+#### **setMultiprocess & setMultiprocessCircle**
 
 多进程支持，`SDK`默认不支持多进程使用， 但是可以通过`confiuration`进行设置支持多进程。 在`Application onCreate` 中初始化SDK代码块中配置。
 
@@ -393,7 +442,64 @@ GrowingIO.startWithConfiguration(this, new Configuration()
 
 
 
-###  ~~setWebChromeClient~~
+### GDPR 数据采集开关
+
+**`SDK 2.3.2`** 以上版本支持
+
+| 接口名称 | 含义 |
+| --- | --- | --- |
+| disableDataCollect\(\) | 遵守欧洲联盟出台的通用数据保护条例，用户不授权，不采集用户数据 |
+| enableDataCollect\(\) | 遵守欧洲联盟出台的通用数据保护条例，用户授权，采集用户数据 |
+
+
+
+### DeepLink 回调参数获取
+
+#### setDeeplinkCallback  （`SDK 2.3.2`以上版本支持）
+
+通过获取回调参数，GrowingIO SDK将会传递指定活动页面参数至您的App，请根据此参数和业务场景，执行相关的交互。
+
+在 GrowingIO SDK 代码初始化部分配置。
+
+```java
+GrowingIO.startWithConfiguration(this, new Configuration()
+                .setDeeplinkCallback(new DeeplinkCallback() {
+                            @Override
+                            public void onReceive(Map<String, String> params, int status) {
+        
+                            }
+                        })
+            );
+```
+
+**返回值说明：**
+
+| 返回值名称 | 类型 | 说明 |
+| --- | --- | --- |
+| params                | Map&lt;String,String&gt; | 自定义参数，您自定义的键值对 |
+| status | int | DeeplinkCallback.SUCCESS ：自定义参数获取成功； DeeplinkCallback.PARSE\_ERROR ：解析异常；DeeplinkCallback.ILLEGAL\_URI ：非法URI； DeeplinkCallback.NO\_QUERY : 自定义参数为空。 |
+
+**示例代码：**
+
+```java
+GrowingIO.startWithConfiguration(this, new Configuration()
+                .setDeeplinkCallback(new DeeplinkCallback() {
+                            @Override
+                            public void onReceive(Map<String, String> params, int error) {
+                                 if (status == DeeplinkCallback.SUCCESS) {
+                                    //获得您的自定义参数，处理您的相关逻辑
+                                    Log.d("TestApplication", "DeepLink 参数获取成功，params" + params.toString());
+                                }
+                            }
+                        })
+            );
+```
+
+
+
+### ~~采集 WebView 页面数据~~
+
+####  ~~setWebChromeClient~~
 
 #### ~~采集H5页面数据~~**（SDK 2.3.1 之后不用配置，请使用最新版）**
 
@@ -405,16 +511,38 @@ WebView.setWebChromeClient(WebChromeClient client);
 
 ~~**请在第一次调用 WebView.loadUrl\(\)** 之前调用以上方法。~~
 
+{% hint style="info" %}
+目前仅支持 Android 原生`WebView`和腾讯`X5WebView`的无埋点数据采集，其中淘宝、有赞、APPCan、UC 默认不支持无埋点数据采集，如有需求请联系技术支持。
+{% endhint %}
+
 ### 
 
-### 2. 自定义事件和变量 API
+## 自定义事件和变量 API
 
 您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，进行[数据分析](../data-analytics/)。除自动收集的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](../data-defination/events-metrics/manual-metrics.md)和[变量](../data-defination/dimensions/manual-dimensions.md)，下面介绍自定义事件和变量 API 使用方法，后文简称埋点事件API。
 
-#### API 简介 ：
+### [预备知识](../faq/)
+
+**Android 常见的应用场景是一个`Activity`中嵌套多个`Fragment`，那么我们是怎么定义页面的呢？**
+
+APP进入一个页面之后，无论其中有多少层`Fragment`嵌套，200ms 内最后一个初始化完成的`Fragment`即认为当前的页面。在用户可见的界面上，有事件操作的归因都会这个`Fragment`上。您在埋点的时候一定要确认当前的页面，并在当前的页面埋点是最稳定可靠的。
+
+确认当前页面方法有三种：
+
+1.[圈选](../data-defination/events-metrics/circle-metrics/app-circle.md)，查看圈选页面为当前页面
+
+![](../.gitbook/assets/image%20%2837%29.png)
+
+2.[查看日志](android-sdk.md#setdebugmode)，进入页面发送的`page`的`p`为当前的页面
+
+3.使用[`Mobile Debugger`](growingio-debugger/#shi-yong-mobile-debugger-ce-shi-shu-ju)查看`page`事件的`p`
+
+
+
+### API 简介 
 
 ```java
-// 发送事件 API
+// 发送自定义事件 API
 GrowingIO gio = GrowingIO.getInstance();
 gio.track(String eventId);
 gio.track(String eventId, Number eventNumber);
@@ -452,17 +580,16 @@ GrowingIO.getInstance().setUserId(String userId);
 
 // 清除登录用户ID API
 GrowingIO.getInstance().clearUserId();
+
+// 设置访问用户变量，或者设置 A/B 测试标签
+GrowingIO.getInstance().setVisitor(JSONObject visitorVariable);
 ```
+
+
 
 ### track
 
-发送一个事件。在添加所需要发送的事件代码之前，需要在打点管理用户界面配置事件以及事件级变量。
-
-| 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- | --- | --- |
-| eventId | String | 是 | 事件标识符 |
-| number | Number | 否 | 事件的数值，没有number参数时，事件默认加一；当出现number参数时，事件自增number的数值 |
-| eventLevelVariable | JSONObject | 否 | 事件发生时所伴随的维度信息 |
+发送一个自定义事件。在添加所需要发送的事件代码之前，需要在打点管理用户界面配置事件以及事件级变量。
 
 ```java
 // track API原型
@@ -472,6 +599,26 @@ gio.track(String eventId, Number eventNumber);
 gio.track(String eventId, Number eventNumber, JSONObject eventLevelVariables);
 gio.track(String eventId, JSONObject eventLevelVariables);
 ```
+
+**参数说明：**
+
+| 参数名称 | 参数类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventId | String | 是 | 事件标识符 |
+| number | Number | 否 | 事件的数值，没有number参数时，事件默认加一；当出现number参数时，事件自增number的数值 |
+| eventLevelVariable | JSONObject | 否 | 事件发生时所伴随的维度信息 |
+
+**参数限制条件：**
+
+参数违反以下条件将不发送数据，`SDK 2.4.0` 以上能够在 Log 日志中查看对应报错，之下版本无提示信息。调用后请关注日志，查看数据发送是否成功，事件类型`t`为`cstm`。
+
+| 参数名称 | 限制条件 |
+| --- | --- | --- | --- |
+| eventId | 非空，长度限制小于等于50；`SDK 2.4.0`以下版本不支持中文，仅支持 0 到 9、a 到 z 以及下划线，并且不能以数字开头。 |
+|  number | 非空。 |
+| eventLevelVariable | 非空，长度限制小于等于100（`eventLevelVariable.length()<=100`）；`eventLevelVariable` 内部不允许含有`JSONObject`或者`JSONArray；key` 长度限制小于等于50，`value` 长度限制小等于1000。 |
+
+**示例代码：**
 
 ```java
 // track API调用示例一
@@ -497,15 +644,39 @@ jsonObject.put("age", "21");
 gio.track("loanAmount", 80000, jsonObject);
 ```
 
+**检验数据发送日志示例：** 
+
+注意 `t` 等于 `cstm` 字段，表示自定义事件发送成功，**var、n 其它字段无需仔细验证。**
+
+```javascript
+//展示 track 接口调用示例三日志内容
+{
+    "s":"31e3aa14-5241-490c-821c-a741e9bf0f87",
+    // t 为事件类型， track 接口调用发送的事件类型为 cstm
+    "t":"cstm",
+    "tm":1532085495251,
+    "d":"com.growingio.android.test",
+    // n 为 eventId 参数携带的值
+    "n":"loanAmount",
+    // var 为 eventLevelVariable 参数携带的值
+    "var":{
+        "gender":"male",
+        "age":"21"
+    },
+    "ptm":0,
+    // num 为 number 参数携带的值
+    "num":80000,
+    "gesid":18,
+    "esid":0,
+    "u":"b6247b01-a31a-3bc6-a391-4c456888c1ee"
+}
+```
+
+
+
 ### setPageVariable
 
 发送页面级别的信息，在添加代码之前必须在打点管理界面上声明页面级变量。
-
-| 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- | --- | --- |
-| key | String | 否 | 页面级变量的标识符 |
-| value | String | 否 | 页面级变量的值 |
-| pageLevelVariables | JSONObject | 否 | 页面级别的信息 |
 
 ```java
 // setPageVariable API原型
@@ -521,6 +692,34 @@ gio.setPageVariable(Fragment fragment, String key, Boolean value);
 gio.setPageVariable(Fragment fragment, JSONObject pageLevelVariables);
 ```
 
+{% hint style="info" %}
+请注意这里的`activity`和`fragment`参数，[它关乎GrowingIO对于页面的定义](android-sdk.md#yu-bei-zhi-shi)。
+
+参数选择当前界面上最后一个初始化完成的对象引用，例如一个`Activity`中嵌套多个`Fragment`情况，当前页面最后初始化完成的是`Fragment`，请确认当前页面`Fragment`，并且得到其当前引用，`new`对象将不会发送的哦。
+{% endhint %}
+
+**参数说明：**
+
+| 参数名称 | 参数类型 | 是否必须 | 说明 |
+| --- | --- | --- | --- | --- | --- |
+| activity | Activity | 是 | **最后一个初始化完成的页面** |
+| fragment | Fragment | 是 | **最后一个初始化完成的页面** |
+| key | String | 否 | 页面级变量的标识符 |
+| value | String | 否 | 页面级变量的值 |
+| pageLevelVariables | JSONObject | 否 | 页面级别的信息 |
+
+**参数限制条件：**
+
+参数违反以下条件将不发送数据，`SDK 2.4.0` 以上能够在 Log 日志中查看对应报错，之下版本无提示信息。调用后请关注日志，查看数据发送是否成功，事件类型`t`为`pvar`。
+
+| 参数名称 | 限制条件 |
+| --- | --- | --- | --- |
+| key  | 非空，长度限制小于等于50。 |
+| value | 非空，长度限制小于等于1000。 |
+| pageLevelVariables | 非空，长度限制小于等于100（`pageLevelVariable.length()<=100`）；`pageLevelVariable` 内部不允许含有`JSONObject`或者`JSONArray`；`key` 长度限制小于等于50，`value`长度限制小等于1000。 |
+
+**示例代码：**
+
 ```java
 // page.set API调用示例
 GrowingIO gio = GrowingIO.getInstance();
@@ -530,15 +729,39 @@ jsonObject.put("age", "21");
 gio.setPageVariable(myActivity, jsonObject);
 ```
 
+**检验数据发送日志示例：** 
+
+注意 `t` 等于`pvar`字段，表示自定义事件发送成功，其它字段无需仔细验证。
+
+```javascript
+{
+    "s":"0a7e8150-c409-45d4-96ed-b5781fe652cb",
+    // t 为事件类型，pvar 页面级事件
+    "t":"pvar",
+    "tm":1532337448255,
+    "d":"com.growingio.android.test",
+    "cs1":"GrowingIO",
+    "p":"SetUserIdFragment1",
+    "ptm":1532337448255,
+    //页面级变量
+    "var":{
+        "gender":"male",
+        "age":"21"
+    },
+    "gesid":292,
+    "esid":0
+}
+```
+
+{% hint style="danger" %}
+注意确认当前页面，通过[圈选](android-sdk.md#yu-bei-zhi-shi)方式最快能够定位当前页面，在当前页面埋点最稳定可靠。
+{% endhint %}
+
+
+
 ### setEvar
 
 发送一个转化信息用于高级归因分析，在添加代码之前必须在打点管理界面上声明转化变量。
-
-| 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- | --- | --- |
-| key | String | 否 | 转化变量的标识符 |
-| value | String | 否 | 转化变量的值 |
-| conversionVariables | JSONObject | 否 | 转化变量用于高级归因分析 |
 
 ```java
 // setEvar API原型
@@ -548,6 +771,24 @@ gio.setEvar(String key, Number value);
 gio.setEvar(String key, Boolean value);
 gio.setEvar(JSONObject conversionVariables);
 ```
+
+**参数说明：**
+
+| 参数名称 | 参数类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | String | 否 | 转化变量的标识符 |
+| value | String | 否 | 转化变量的值 |
+| conversionVariables | JSONObject | 否 | 转化变量用于高级归因分析 |
+
+**参数限制条件：**
+
+| 参数名称 | 限制条件 |
+| --- | --- | --- | --- |
+| key | 非空，长度限制小于等于50。 |
+| value | 非空，长度限制小于等于1000。 |
+| conversionVariables | 非空，长度限制小于等于100（`conversionVariables.length()<=100`）；`conversionVariables` 内部不允许含有`JSONObject`或者`JSONArray`；`key` 长度限制小于等于50，`value`长度限制小等于1000。 |
+
+**示例代码：**
 
 ```java
 // setEvar API调用示例一
@@ -564,15 +805,34 @@ jsonObject.put("campaignOwner", "Li Si");
 gio.setEvar(jsonObject);
 ```
 
+**检验数据发送日志示例：** 
+
+注意 `t` 等于`evar`字段，表示转化事件发送成功，其它字段无需仔细验证。
+
+```javascript
+{
+    "s":"e1c48845-dd60-4cf2-b1a5-a8e529d2188d",
+    // t 为事件类型， evar 为转化事件
+    "t":"evar",
+    "tm":1532338526083,
+    "d":"com.growingio.android.test",
+    "cs1":"GrowingIO",
+    // 转化变量
+    "var":{
+        "evarTest":111,
+        "campaignId":"1234567890",
+        "campaignOwner":"Li Si"
+    },
+    "gesid":300,
+    "esid":22
+}
+```
+
+
+
 ### setPeopleVariable
 
 发送用户信息用于用户信息相关分析，在添加代码之前必须在打点管理界面上声明转化变量。
-
-| 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- | --- | --- |
-| key | String | 否 | 用户变量的标识符 |
-| value | String | 否 | 用户变量的值 |
-| customerVariables | JSONObject | 否 | 用户变量用于用户信息相关的分析 |
 
 ```java
 // people.set API原型
@@ -582,6 +842,24 @@ gio.setPeopleVariable(String key, Number value);
 gio.setPeopleVariable(String key, Boolean value);
 gio.setPeopleVariable(JSONObject peopleVariables);
 ```
+
+**参数说明：**
+
+| 参数名称 | 参数类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | String | 否 | 用户变量的标识符 |
+| value | String | 否 | 用户变量的值 |
+| peopleVariables | JSONObject | 否 | 用户变量用于用户信息相关的分析 |
+
+**参数限制条件：**
+
+| 参数名称 | 限制条件 |
+| --- | --- | --- | --- |
+| key | 非空，长度限制小于等于50。 |
+| value | 非空，长度限制小于等于1000。 |
+| peopleVariables | 非空，长度限制小于等于100（`peopleVariables.length()<=100`）；`peopleVariables` 内部不允许含有`JSONObject`或者`JSONArray`；`key`长度限制小于等于50，`value`长度限制小等于1000。 |
+
+**示例代码：**
 
 ```java
 // people.set API调用示例一
@@ -597,29 +875,306 @@ jsonObject.put("age", "21");
 gio.setPeopleVariable(jsonObject);
 ```
 
+**检验数据发送日志示例：** 
+
+注意 `t` 等于`ppl`字段，表示用户变量发送成功，其它字段无需仔细验证。
+
+```javascript
+{
+    "s":"a35872af-13df-4479-90bc-25558d12328e",
+    // t 为事件类型， pvar 为发送用户变量事件
+    "t":"ppl",
+    "tm":1532339208991,
+    "d":"com.growingio.android.test",
+    "cs1":"GrowingIO",
+    // 用户变量
+    "var":{
+        "gender":"male",
+        "age":"21"
+    },
+    "gesid":311,
+    "esid":0
+}
+```
+
+
+
 ### setUserId
 
 当用户登录之后调用setUserId API，设置登录用户ID。
 
-| 参数名称 | 参数类型 | 是否必须 | 说明 |
+```java
+GrowingIO.getInstance().setUserId(String userId);
+```
+
+**参数说明：**
+
+| 参数名称 | 参数类型 | 必填 | 说明 |
 | --- | --- |
-| userId | String | 是 | 登录用户I，长度限制1000 |
+| userId | String | 是 | 登录用户Id，长度限制小于等于1000 |
+
+**示例代码：**
 
 ```java
-// setuserId API调用示例
 GrowingIO.getInstance().setUserId("1234567890");
 ```
 
-注：如果您的应用是App，且每次用户升级App版本时无需重新登录的话，建议在用户每次升级App版本后初次访问时重新调用上述 setUserId 方法。
+注：您的 App 每次用户升级版本时无需重新登录的话，建议在用户每次升级App 版本后初次访问时重新调用上述 setUserId 方法。
+
+
 
 ### clearUserId
 
 当用户登出之后调用clearUserId，清除已经设置的登录用户ID。
 
+**示例代码：**
+
 ```java
-// clearUserId API调用示例
 GrowingIO.getInstance().clearUserId();
 ```
+
+
+
+### setVisitor
+
+当用户未登录时，定义用户属性变量，也可用于A/B测试上传标签。
+
+```java
+GrowingIO.getInstance().setVisitor(String visitor);
+```
+
+**参数说明：**
+
+| 参数名称 | 参数类型 | 必填 | 说明 |
+| --- | --- |
+| visitorVariable | String | 是 |  |
+
+**示例代码：**
+
+```java
+GrowingIO gio = GrowingIO.getInstance();
+jsonObject.put("gender", "male");
+jsonObject.put("age", "21");
+gio.setVisitor(jsonObject);
+```
+
+**检验数据发送日志示例：** 
+
+注意 `t` 等于`vstr`字段，表示访问用户变量发送成功，其它字段无需仔细验证。
+
+```javascript
+{
+    "s":"d334b4a1-57eb-4bf4-b426-64c1cce5a5c0",
+    // t 为事件类型， vstr 为发送访问用户变量事件
+    "t":"vstr",
+    "tm":1532341259134,
+    "d":"com.growingio.android.test",
+    "cs1":"GrowingIO",
+    //访问用户变量
+    "var":{
+        "gender":"male",
+        "age":"21"
+    },
+    "gesid":322,
+    "esid":0
+}
+```
+
+\*\*\*\*
+
+\*\*\*\*
+
+## 验证 SDK 是否正常工作
+
+### GrowingIO采集事件介绍
+
+GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两种方式采集移动端APP，也就是通常所说的无埋点和埋点。下面将分别介绍这两种方式GrowingIO定义的采集事件类型。
+
+#### 自动采集事件类型
+
+| 事件类型 | 含义 | 事件触发时机 | 建议验证重要级别 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| activate | 激活 | 当APP首次激活打开时 | 不需验证 |
+| vst | 应用访问 | 1.冷启动发送2.切换用户发送3.默认APP进入后台30秒以后再次打开会发送 | 不需验证 |
+| page | 页面浏览 | 每当进入一个页面时发送 | 重要 |
+| imp | 元素展现 | 页面元素发生变动的时候触发，比如弹框或者`ListView`滑动 | 不需验证 |
+| clck | 点击 | 点击实现了相关 click Listener 的元素控件，常见问题中将详细列举 | 一般 |
+| chng | 输入框内容变化 | 输入框`EditText`失去焦点，默认不采集输入内容 | 重要 |
+| reengage | DeepLink唤醒事件 | 通过扫描 DeepLink 二维码唤醒 APP 后发送 | 不需验证 |
+
+#### 自定义事件类型
+
+| 事件类型 | 含义 | 采集条件 |
+| --- | --- | --- | --- | --- | --- |
+| cstm | 设置自定义事件 | 调用[`track`](android-sdk.md#track)后发送 |
+| pvar | 设置页面级变量 | 调用[`setPageVariable`](android-sdk.md#setpagevariable)后发送 |
+| evar | 设置转化变量 | 调用[`setEvar`](android-sdk.md#setevar)后发送 |
+| ppl | 设置用户变量 | 调用[`setPeopleVariable`](android-sdk.md#setpeoplevariable)后发送 |
+| vstr | 设置访问用户变量 | 调用[`setVisitor`](android-sdk.md#setvisitor)后发送 |
+
+
+
+### 验证工具
+
+#### [1. MobileDebugger](growingio-debugger/#qi-dong-mobile-debugger)
+
+#### [2.查看日志](android-sdk.md#setdebugmode)
+
+
+
+### 圈选功能验证
+
+1. **圈选功能验证：**
+
+   请先依据[圈选文档](../data-defination/events-metrics/circle-metrics/app-circle.md)，唤醒圈选功能，主要检查元素是否都可圈选，重点尝试 -=
+
+2. **热图功能验证：**
+
+\*\*\*\*
+
+
+
+## 附录
+
+### 加段话
+
+### GrowingIO 初始化配置项 API 
+
+GrowingIO 配置项均在`Application`的`onCreate`方法中SDK初始化代码块中设置，全部可配置项如下，下面将分类并描述含义。
+
+```java
+GrowingIO.startWithConfiguration(this,
+new Configuration()
+    .disableCellularImp()
+    .disableImageViewCollection(false)
+    .setActivityLifecycleCallbacksRegistrar(new ActivityLifecycleCallbacksRegistrar() {
+        @Override
+        public void registerActivityLifecycleCallbacks(ActivityLifecycleCallbacks callbacks) {
+
+        }
+
+        @Override
+        public void unRegisterActivityLifecycleCallbacks(ActivityLifecycleCallbacks callbacks) {
+
+        }
+    })
+    .setBulkSize(100)
+    .setCellularDataLimit(1000)
+    .setChannel("渠道号")
+    .setDebugMode(true)
+    .setDeeplinkCallback(new DeeplinkCallback() {
+        @Override
+        public void onReceive(Map<String, String> params, int error) {
+
+        }
+    })
+    .setDiagnose(false)
+    .setDisabled(false)
+    .setDisableImpression(false)
+    .setFlushInterval(1000)
+    .setMutiprocess(true)
+    .setProjectId("xxxxxxxxxx")
+    .setRnMode(true)
+    .setSampling(0.34)
+    .setSessionInterval(23000)
+    .setTestMode(true)
+    .setThrottle(false)
+    .setTrackWebView(true)
+    .setURLScheme("growing.xxxxxxxx")
+    .supportMultiProcessCircle(true)
+    .trackAllFragments()
+);
+```
+
+
+
+#### 基础配置 API
+
+| 接口名称 | 默认值 | 含义 |
+| --- | --- | --- | --- |
+| setChannel\(`String` channel\) | 无             | 设置渠道 |
+| ~~useID\(\)~~ | `true` | 已经废弃 @deprecated是否在计算`xpath`的时候控件使用`id，`默认使用`id`更精准，在版本`SDK 2.5.0`将删除此接口 |
+| setDeeplinkCallback\(`DeeplinkCallback`callback\) | 无 | DeepLink 回调接口，获得自定义参数以便跳转对应 APP页 面 |
+
+#### 功能 API
+
+| 接口名称 | 默认值 | 含义 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| setDisabled\(`boolean` disabled\) | `false` | 设置为`true`时不采集数据 |
+| setTrackWebView\(`boolean` trackWebView\) | `true` | 设置为`false`时不采`WebView`数据 |
+| supportMultiProcessCircle\(`boolean` spmc\) | `false` | 是否使用了多进程圈选 |
+| setMutiprocess\(`boolean` isMultiprocess\) | `false` | 是否使用了多进程 |
+| trackAllFragments\(\) | `false` | 是否采集所有Fragment；调用则设置为`true` |
+| ~~_collectWebViewUserAgent_~~\(`boolean` collection\) | `true` | 是否使用`WebView`采集`UserAgent` |
+| disableCellularImp\(\) | `false` | 否关闭移动蜂窝网`impression`数据采集 |
+| ~~_disableImageViewCollection_~~\(`boolean` disable\) | `false` | 是否关闭采集`ImageView` `hash`计算 |
+| setHashTagEnable\(`boolean` hashTagEnable\) | `false` | 是否认为点击锚点链接的跳转是一个页面浏览 |
+| ~~_setActivityLifecycleCallbacksRegistrar_~~\(`ActivityLifecycleCallbacksRegistrar` registrar\) | 无 | 设置整体Activity生命周期的监听函数 |
+| ~~_setRnMode\(`boolean` rnMode\)_~~ | `false` | ~~在`ReactNative`环境会自动设置为`true`,`codova`版本需要用户手动调用~~ |
+
+#### 数据采集相关 API
+
+| 接口名称 | 默认值 | 含义 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| setSampling\(`double` sampling\) | 1 | 采样率\[0.01~1\],若设置sampling = 0.01，则 1% 的设备会被采集数据，每次启动会根据用户设置的采样率判断设备是否在采集的范围之内，使用**之前请咨询技术支持** |
+| setSessionInterval\(`long` sessionInterval\) | 30 \* 1000 | 在后台停留时长超过此值，则产生新的`sessionId`,发送`visit`事件。 |
+| **setThrottle\(**`boolean` throttle\) | `false` | 是否节流发送（节流发送时`imp`不发送） |
+| setFlushInterval\(`long`  flushInterval\) | 30 \* 1000 | 数据刷新的最长时间间隔，默认30 秒 。如果距离上次发送数据事件超过此时间则发送事件 |
+| setDisableImpression\(`boolean`disableImp\) | `true` | 是否采集`imp`事件 |
+| setCellularDataLimit\(`long` cellularDataLimit\) | 3 \* 1024 \* 1024 | 一天的时间之内，在移动蜂窝网下的数据最大传输量，默认3M。 |
+| setBulkSize\(`int` bulkSize\) | 300 | 如果数据库存储数据条数大于等于`bulkSize`，则马上发送数据。 |
+
+### 
+
+### GrowingIO 运行时 API 
+
+GrowingIO 为 APP 提供运行时随意调用的 API ，使用方法如下：
+
+```java
+// 得到 GrowingIO 实例后可以调用其中 API
+GrowingIO gio = GrowingIO.getInstance();
+gio.setUserId("张溪梦");
+```
+
+{% hint style="danger" %}
+GrowingIO 所有 API 都需要在主线程调用。
+{% endhint %}
+
+\*\*\*\*
+
+**API 明细：**
+
+| 接口名称 | 含义 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ~~**setActivityLifecycleCallbacksRegistrar\(`ActivityLifecycleCallbacksRegistrar` registrar\)**~~ | 添加 Activity 生命周期 callback  |
+| [trackBanner\(`View` banner, `List<String>` bannerContents\)](android-sdk.md#trackbanner) | [因为 SDK 不能识别 Banner ,配置这个接口则不监听 banner 中的 Fragment 的生命周期，不采集生命周期涉及的用户行为数据](android-sdk.md#trackbanner) |
+| ignoredView\(`View` view\) | 忽略配置的 View ，不采集用户数据 |
+| ignoreFragment\(`Activity` activity, `android.app.Fragment` fragment\) | 忽略配置的 View ，不采集用户数据 |
+| ignoreFragment\(`Activity` activity, `Fragment` fragment\) | 忽略配置的 View ，不采集用户数据 |
+| **setViewInfo\(`View` view, `String` info\)** | 配置 view 的 Tag，标记 View ，并在 GrowingIO 相关事件中发送 ，内容对应 `xPath` 中的 `obj` |
+| **setViewContent\(`View` view, `String` content\)** | 配置 view 的 Tag，标记 View ，并在 GrowingIO相关事件中发送，内容对应 `xPath` 中的 `v` |
+| setPageName\(`Activity` activity, `String` name\) | 设置页面别名 |
+| setPageName\(`android.app.Fragment` fragment, `String` name\) | 设置页面别名 |
+| **setViewID\(`View` view, `String` id\)** | 设置 View id ，配置之后对应 xPath 中的 view id |
+| ~~_setScheme\(String scheme\)_~~ | 设置 APP 的 urlScheme |
+| setThrottle\(boolean throttle\) | 是否节流发送（节流发送时imp不发送），内部实际调用 Configuration 中的同名方法，所以在初始化时候配置和运行时动态配置，效果一样。 |
+| disable\(\) | GrowingIO 停止采集 |
+| resume\(\) | GrowingIO 恢复采集 |
+| stop\(\) | GrowingIO 停止采集，可以不在主线程调用 |
+| ~~_setTabName\(`View` tab, `String` name\)_~~ | 已经废弃 @Deprecated设置 Tab 的名称， xPath 中对应元素将以此命名 |
+| ~~_setPressed\(`View` view\)_~~ | 已经废弃 @Deprecated为 View 手动设置点击状态, 为没有点击状态的 View 设置下点击状态，以便 SDK 能够 Hook 到它 |
+| getSessionId\(\) | 得到 session id |
+| [trackEditText\(`EditText` editText\)](android-sdk.md#trackedittext) | [SDK 默认不采集用户输入框的内容，设置以后，采集除了密码以外的输入框文本内容。](android-sdk.md#trackedittext) |
+| trackFragment\(`Activity` activity, `Fragment` fragment\) | 如果APP初始化时候，没有设置 `trackAllFragment` 即不采集全部 `Fragment`，可以选择性采集指定 `Fragment`，设置之后 sdk 将监听 `Fragment` 的各个生命周期， 采集相关用户行为数据。  |
+| setGeoLocation\(`double` latitude, `double` longitude\) | 设置经纬度，并在 vst 事件中发送 |
+| clearGeoLocation\(\) | 清空经纬度 |
+| setChannel \(`String` channel\) | 设置渠道名称 |
+| disableImpression\(\) | 不发送 `imp` |
+| setImp\(`boolean` enable\) |  `imp`事件开关，`true` 为打开 |
+| **trackWebView\(`WebView` webview, `WebChromeClient` client\)** | 采集 WebView 事件，默认采集 |
+| t**rackX5WebView\(`com.tencent.smtt.sdk.WebView` webView, `com.tencent.smtt.sdk.WebChromeClient` client\)** | 采集 X5WebView 事件，默认采集 |
+
+
 
 
 
@@ -809,7 +1364,7 @@ URL Scheme的格式是growing.xxxxxxxxxxxxxxxx，它的获取方式有两种
 1. 添加新产品：登录官网 -&gt;点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 点击“新建应用”-&gt; 选择添加Android应用 -&gt; 第二段中"此应用的 URL Scheme 为:growing.xxxxxxxxxxxxxxxx”中标黄字体。
 2. 现有产品：登录官网 -&gt; 点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 找到对应产品的URL Scheme。
 
-![](../.gitbook/assets/image%20%2845%29.png)
+![](../.gitbook/assets/image%20%2849%29.png)
 
 ```groovy
 apply plugin: 'com.android.application'
@@ -1064,7 +1619,7 @@ GrowingIO的数据分析工具提供了例如“应用版本”，“渠道”�
 
 **这些属性在作图时，将表现为维度。**
 
-#### **用户属性**
+**用户属性**
 
 用户属性只能用来表示登录用户本身的属性，至少包括用户ID。
 
@@ -1074,7 +1629,7 @@ GrowingIO的数据分析工具提供了例如“应用版本”，“渠道”�
 2. 账户属性，比如等级、类型标签等。
 3. 行为特征，比如是否有过购买记录之类。
 
-用户属性被称为CS字段，SDK 上传最多支持10个，从CS1到CS10，接口如下：
+用户属性被称为CS字段，最多支持十个，从CS1到CS10，接口如下：
 
 ```java
 GrowingIO growingIO = GrowingIO.getInstance();
@@ -1083,8 +1638,6 @@ growingIO.setCS2("CS2的key", "CS2的value");
 ...
 growingIO.setCS10("CS10的key", "CS10的value");
 ```
-
-> 注：CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考 [用户变量上传 API](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)
 
 在下面的例子中，总计上传5个用户属性，分别是：
 
@@ -1113,7 +1666,6 @@ private void setGrowingIOCS() {
 4. 对于未登录用户，不要设置任何CS字段。
 5. 如果没有用到所有的CS字段，剩下的可以不设置。
 6. 同一个CS字段，必须保持在各个平台意义相同。
-7. CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考 [用户变量上传 API](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)。
 
 **CS1字段设置时机**
 
@@ -1129,9 +1681,7 @@ private void setGrowingIOCS() {
 
 **其他CS字段遵循相似的设置时机**
 
-在上传成功两小时后，您需要在「项目管理-项目配置-CS 配置中」进行字段配置和激活，配置成功后便可开始使用 CS 字段进行分析。
-
-**注意：CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考** [**用户变量上传 API**](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)**。**
+**在上传成功两小时后，您需要在「项目管理-项目配置-CS 配置中」进行字段配置和激活，配置成功后便可开始使用 CS 字段进行分析。**
 
 #### 设置界面元素内容 {#设置界面元素内容}
 
@@ -1186,6 +1736,10 @@ GrowingIO.setTabName(content, "MyContent");
 如果您有自定义的控件重写了`View`的`onTouchEvent`方法来判断和处理点击事件，那么必须调用它的`PerformClick`，并且设置相应的`onClickListener`。
 
 至此，您的SDK安装就成功了。您登录 GrowingIO 进入产品安装页面执行“数据检测”几分钟后就可以看到数据了。
+
+
+
+## 常见问题
 
   
 
