@@ -1,7 +1,6 @@
 # Table of contents
 
 * [GrowingIO 帮助文档](README.md)
-* [GrowingIO 简介](introduction.md)
 * [快速上手](get-started.md)
 * [产品更新日志](product-changelog.md)
 * [分析工具](data-analytics/README.md)

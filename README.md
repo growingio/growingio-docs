@@ -1,42 +1,14 @@
 # GrowingIO 帮助文档
 
-{% page-ref page="get-started.md" %}
+GrowingIO 作为基于用户行为的新一代数据分析产品。首推国内领先的“分析工具+运营咨询+持续增长”数据服务体系，帮助企业构建数据运营闭环。
 
-集成 SDK ：
+依托于快速部署无埋点技术，实时采集全量行为数据，通过搭建完整的数据监控体系，高效管控核心业务指标，用数据驱动企业业务增长。  
+  
+GrowingIO 专注于互联网、金融、新零售、运营商等行业，帮助企业挖掘更多商业价值。成立以来，服务超 7000 家企业级客户，获得人人贷、滴滴、陌陌、58 赶集、链家、春秋航空、Camera360、华住、如家、北森、销售易等数千家客户的青睐。
 
-{% page-ref page="sdk-integration/web-js-sdk.md" %}
+GrowingIO 用数据驱动企业增长。
 
-{% page-ref page="sdk-integration/android-sdk.md" %}
+![](.gitbook/assets/45_4_conversion_1_.gif)
 
-{% page-ref page="sdk-integration/ios-sdk.md" %}
 
-{% page-ref page="sdk-integration/mina-sdk.md" %}
-
-GrowingIO 提供预定义指标和维度：
-
-{% page-ref page="data-defination/events-metrics/predefined-metrics.md" %}
-
-{% page-ref page="data-defination/dimensions/predefined-dimensions.md" %}
-
-通过圈选创建事件 ：
-
-{% page-ref page="data-defination/events-metrics/circle-metrics/web-circle.md" %}
-
-{% page-ref page="data-defination/events-metrics/circle-metrics/app-circle.md" %}
-
-{% page-ref page="data-defination/events-metrics/circle-metrics/mina-circle.md" %}
-
-通过打点创建事件和变量：
-
-{% page-ref page="data-defination/events-metrics/manual-metrics.md" %}
-
-{% page-ref page="data-defination/dimensions/manual-dimensions.md" %}
-
-使用 GrowingIO 强大的分析工具进行数据分析：
-
-{% page-ref page="data-analytics/" %}
-
-查看 API 接口：
-
-{% page-ref page="api/" %}
 
