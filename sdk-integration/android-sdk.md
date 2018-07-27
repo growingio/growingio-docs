@@ -6,7 +6,7 @@
   * [初始化SDK](android-sdk.md#3-chu-shi-hua-sdk)
   * [代码混淆](android-sdk.md#4-dai-ma-hun-xiao)
 * [重要配置项 API](android-sdk.md#1-zhong-yao-pei-zhi-xiang-api)
-* [自定义事件和变量 API](android-sdk.md#2-zi-ding-yi-shi-jian-he-bian-liang-api)
+* [自定义事件和变量 API](android-sdk.md#zi-ding-yi-shi-jian-he-bian-liang-api)
 * [验证SDK是否正常工作](android-sdk.md#yan-zheng-sdk-shi-fou-zheng-chang-gong-zuo)
 * [附录](android-sdk.md#fu-lu)
 * [旧版本升级](android-sdk.md#jiu-ban-ben-sheng-ji)
@@ -16,6 +16,7 @@
   * [迁移自定义事件（埋点事件）](android-sdk.md#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)
   * [数据校验](android-sdk.md#5-shu-ju-xiao-yan)
 * [旧版本 SDK 集成 ](android-sdk.md#jiu-ban-ben-sdk-ji-cheng)
+* [常见问题](android-sdk.md#chang-jian-wen-ti)
 
 ## 集成
 
@@ -947,7 +948,7 @@ GrowingIO.getInstance().clearUserId();
 当用户未登录时，定义用户属性变量，也可用于A/B测试上传标签。
 
 ```java
-GrowingIO.getInstance().setVisitor(String visitor);
+GrowingIO.getInstance().setVisitor(JSONObject visitorVar)
 ```
 
 **参数说明：**
