@@ -49,7 +49,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 | 平台 | 方法原型 | 代码示例 |
 | --- | --- | --- | --- |
 | JS SDK | gio\('track', eventId\) ; | gio\('track', 'loginSuccess'\); |
-| Android SDK | GrowingIO.getInstance\(\).track\(String eventId\); | gio.track\("loginSuccess"\); |
+| Android SDK | GrowingIO.getInstance\(\).track\(`String` eventId\); | GrowingIO.getInstance\(\).track\("loginSuccess"\); |
 | iOS SDK | + \(void\)track:\(NSString \*\)eventId; | \[Growing track: @"loginSuccess"\]; |
 
 #### **数据验证方法**
@@ -62,7 +62,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](../../.gitbook/assets/1.-chang-jing-1.png)
+![](../../.gitbook/assets/image%20%2862%29.png)
 
 ### **场景二：有关联事件级变量的计数器类型场景**
 
@@ -89,7 +89,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 | 平台 | 方法原型 | 代码示例 |
 | --- | --- | --- | --- |
 | JS SDK | gio\('track', eventId, eventLevelVariables\); | gio\('track', 'loginSuccess', {loginWay\_var':'QQ'}\) |
-| Android SDK | GrowingIO.getInstance\(\).track\(String eventId, JSONObject  eventLevelVariables\); | GrowingIO.getInstance\(\).track\("loginSuccess", {"loginWay\_var":"QQ"}\) |
+| Android SDK | GrowingIO.getInstance\(\).track\(`String` eventId, `JSONObject`  eventLevelVariables\); | GrowingIO.getInstance\(\).track\("loginSuccess", new JSONObject\(\).put\("loginWay\_var","QQ"\)\); |
 | iOS SDK | + \(void\)track:\(NSString \*\)eventId withVariable:  \(NSDictionary&lt;NSString \*, NSObject \*&gt; \*\)variable; | \[Growing track:@"loginSuccess" withVariable:  @{@"loginWay\_var":@"QQ"}\]; |
 
 #### **数据验证方法**
@@ -102,7 +102,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](../../.gitbook/assets/2.-chang-jing-2.png)
+![](../../.gitbook/assets/image%20%2847%29.png)
 
 ### **场景三：无关联事件级变量的数值类型场景**
 
@@ -134,7 +134,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](../../.gitbook/assets/3.-chang-jing-3.png)
+![](../../.gitbook/assets/image%20%2854%29.png)
 
 ### **场景四：有关联事件级变量的数值类型场景**
 
@@ -160,9 +160,9 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 | 平台 | 方法原型 | 代码示例 |
 | --- | --- | --- | --- |
-| JS SDK | gio\('track', eventId, eventLevelVariables\); | gio\('track', 'orderAmount', 98.77,  {'orderId\_var':'\#123'}\) |
-| Android SDK | GrowingIO.getInstance\(\).track\(String eventId, JSONObject  eventLevelVariables\); | GrowingIO.getInstance\(\).track\("orderAmount", 98.77,  {"orderId\_var":"\#123"}\) |
-| iOS SDK | + \(void\)track:\(NSString \*\)eventId withVariable:  \(NSDictionary&lt;NSString \*, NSObject \*&gt; \*\)variable; | \[Growing track: @"orderAmount" withNumber:  @98.77 andVariable:@ {@"orderId\_var":@"\#123"}\] |
+| JS SDK | gio\('track', eventId, number, eventLevelVariables\); | gio\('track', 'orderAmount', 98.77,  {'orderId\_var':'\#123'}\) |
+| Android SDK | GrowingIO.getInstance\(\).track\(`String` eventId, `Number` eventNumber, `JSONObject`  eventLevelVariables\); | GrowingIO.getInstance\(\).track\("orderAmount", 98.77, new JSONObject\(\).put\("orderId\_var","\#123"\)\); |
+| iOS SDK | + \(void\)track:\(NSString \*\)eventId withNumber:\(NSNumber \*\)number andVariable:\(NSDictionary&lt;NSString \*, NSObject \*&gt; \*\)variable; | \[Growing track: @"orderAmount" withNumber:  @98.77 andVariable:@ {@"orderId\_var":@"\#123"}\] |
 
 #### **数据验证方法**
 
@@ -174,7 +174,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](../../.gitbook/assets/4.-chang-jing-4.png)
+![](../../.gitbook/assets/image%20%2812%29.png)
 
 ## **pvar\(**页面级变量**\) 事件**
 
@@ -198,7 +198,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 | 平台 | 方法原型 | 代码示例 |
 | --- | --- | --- | --- |
 | JS SDK | gio\('page.set', key, value\);或gio\('page.set', pageLevelVariables\); | gio\('page.set', {'skuName\_pvar': '女士中跟凉鞋', 'skuCategory\_pvar': '鞋靴'}\); |
-| Android SDK | //_下列方法中的Activity也可替换成Fragment_GrowingIO.getInstance\(\).setPageVariable\(Activity activity, String key, String value\);或GrowingIO.getInstance\(\).setPageVariable\(Activity activity, JSONObject  pageLevelVariables\); | JSONObject jsonObject = new JSONObject\(\); jsonObject.put\("skuName\_pvar", "女士中跟凉鞋"\); jsonObject.put\("skuCategory\_pvar", "鞋靴"\);GrowingIO.getInstance\(\).setPageVariable\(GoodsDetailActivity, jsonObject\); |
+| Android SDK | GrowingIO.getInstance\(\).setPageVariable\(`Activity` activity, `String`key, `String` value\);或GrowingIO.getInstance\(\).setPageVariable\(`Activity` activity, `JSONObject` pageLevelVariables\); | JSONObject jsonObject = new JSONObject\(\); jsonObject.put\("skuName\_pvar", "女士中跟凉鞋"\); jsonObject.put\("skuCategory\_pvar", "鞋靴"\);GrowingIO.getInstance\(\).setPageVariable\(GoodsDetailActivity, jsonObject\); |
 | iOS SDK | + \(void\)setPageVariableWithKey:\(NSString \*\)key andStringValue:\(NSString \*\)stringValue toViewController:\(UIViewController\*\)viewController;或+ \(void\)setPageVariable:\(NSDictionary&lt;NSString \*, NSObject \*&gt; \*\)variable toViewController: \(UIViewController \*\)viewController; | \[Growing setPageVariable:@{@"skuName\_pvar":@"女士中跟凉鞋", @"skuCategory\_pvar":@"鞋靴"} toViewController:GoodsDetailViewController\]; |
 
 ### **数据验证方法**
@@ -211,7 +211,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](../../.gitbook/assets/5.pvar-ye-mian-ji-bian-liang-shi-jian.png)
+![](../../.gitbook/assets/image%20%2830%29.png)
 
 ## **evar \(**转化变量**\) 事件**
 
@@ -247,7 +247,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](../../.gitbook/assets/6.-zhuan-hua.png)
+![](../../.gitbook/assets/image.png)
 
 ## **ppl \(**用户变量**\) 事件**
 
@@ -281,9 +281,9 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](../../.gitbook/assets/8.1-yong-hu-bian-liang-he-shu-ju-yan-zheng.png)
+![](../../.gitbook/assets/image%20%287%29.png)
 
-![](../../.gitbook/assets/8.2-yong-hu-bian-liang-he-shu-ju-yan-zheng.png)
+![](../../.gitbook/assets/image%20%2846%29.png)
 
 ### **场景二：其他用户变量**
 
@@ -306,7 +306,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 | --- | --- | --- | --- |
 | JS SDK | gio\('people.set', key, value\);或gio\('people.set', customerVariables\); | gio\('people.set', {'gender\_ppl': '男', 'age\_ppl': 25}\); |
 | Android SDK | GrowingIO.getInstance\(\).setPeopleVariable\(String key, String value\);或GrowingIO.getInstance\(\).setPeopleVariable\(JSONObject peopleVariables\); | JSONObject jsonObject = new JSONObject\(\);jsonObject.put\("gender\_ppl", "男"\);jsonObject.put\("age\_ppl", 25\);GrowingIO.getInstance\(\).setPeopleVariable\(jsonObject\); |
-| iOS SDK | + \(void\)setPeopleVariableWithKey:\(NSString \*\)key  andStringValue:\(NSString \*\)stringValue;或+ \(void\)setPeopleVariable:\(NSDictionary&lt;NSString \*, NSObject \*&gt; \*\)variable; | \[Growing setPeopleVariable:@{@"gender\_ppl":@"男", @"age\_ppl":@25}\]; |
+| iOS SDK | + \(void\)setPeopleVariableWithKey:\(NSString \*\)key  andStringValue:\(NSString \*\)stringValue; 或+ \(void\)setPeopleVariable:\(NSDictionary&lt;NSString \*, NSObject \*&gt; \*\)variable; | \[Growing setPeopleVariable:@{@"gender\_ppl":@"男", @"age\_ppl":@25}\]; |
 
 #### **数据验证方法**
 
@@ -318,5 +318,5 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](../../.gitbook/assets/9.-qi-ta-yong-hu-bian-liang.png)
+![](../../.gitbook/assets/image%20%2827%29.png)
 

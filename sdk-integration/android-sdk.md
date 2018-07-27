@@ -46,7 +46,7 @@ URL Scheme的格式是growing.xxxxxxxxxxxxxxxx，它的获取方式有两种：
 * 新产品的 URL Scheme ：登录官网 -&gt;点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 点击“新建应用”-&gt; 选择添加Android应用 -&gt; 第二段中"此应用的 URL Scheme 为:growing.xxxxxxxxxxxxxxxx”中标黄字体。
 * 现有产品的 URL Scheme ：登录官网 -&gt;点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 找到对应产品的URL Scheme。
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 ```groovy
 apply plugin: 'com.android.application'
@@ -372,7 +372,9 @@ GrowingIO.startWithConfiguration(this, new Configuration().setHashTagEnable(true
 
 > [https://docs.growingio.com/docs/sdk-integration/android-sdk\#4-dai-ma-hun-xiao](https://docs.growingio.com/docs/sdk-integration/android-sdk#4-dai-ma-hun-xiao)
 
-![&#x70B9;&#x51FB;WebView&#x4E2D;&#x7684;&#x951A;&#x70B9;&#x94FE;&#x63A5;](../.gitbook/assets/image%20%2843%29.png)
+
+
+![&#x70B9;&#x51FB;WebView&#x4E2D;&#x7684;&#x951A;&#x70B9;&#x94FE;&#x63A5;](../.gitbook/assets/image%20%2852%29.png)
 
 SDK发送对应采集数据：
 
@@ -629,7 +631,7 @@ gio.track("loanAmount", 80000, jsonObject);
 
 **检验数据发送日志示例：** 
 
-注意 `t` 等于 `cstm` 字段，表示自定义事件发送成功，**var、n 其它字段无需仔细验证。**
+注意 `t` 等于 `cstm` 字段，表示自定义事件发送成功，只需注意 `var`、`n` 、`num`字段，其它字段无需仔细验证**。**
 
 ```javascript
 //展示 track 接口调用示例三日志内容
@@ -655,7 +657,11 @@ gio.track("loanAmount", 80000, jsonObject);
 }
 ```
 
+{% hint style="info" %}
+#### 推荐您使用MobileDebugger，我们为您列举了应用场景和验证示例，请移步查看：[cstm 事件验证](growingio-debugger/best-practice.md#cstm-shi-jian-yi-ji-guan-lian-de-shi-jian-ji-bian-liang-shi-jian)。
+{% endhint %}
 
+### 
 
 ### setPageVariable
 
@@ -716,7 +722,7 @@ gio.setPageVariable(myActivity, jsonObject);
 
 **检验数据发送日志示例：** 
 
-注意 `t` 等于`pvar`字段，表示自定义事件发送成功，其它字段无需仔细验证。
+注意 `t` 等于`pvar`字段，表示自定义事件发送成功，只需注意 `var`字段，其它字段无需仔细验证**。**
 
 ```javascript
 {
@@ -739,10 +745,14 @@ gio.setPageVariable(myActivity, jsonObject);
 ```
 
 {% hint style="danger" %}
-注意确认当前页面，通过[圈选](android-sdk.md#yu-bei-zhi-shi)方式最快能够定位当前页面，在当前页面埋点最稳定可靠。
+注意确认当前页面，通过[圈选](android-sdk.md#yu-bei-zhi-shi)方式最快能够定位当前页面，在当前页面埋点最稳定可靠。如果页面未确认，可能在`Activity`和`Fragment`嵌套的场景下埋点失败。
 {% endhint %}
 
+{% hint style="info" %}
+#### 推荐您使用 MobileDebugger，我们为您列举了应用场景和验证示例，请移步查看：[ pvar 事件验证](growingio-debugger/best-practice.md#pvar-ye-mian-ji-bian-liang-shi-jian)
+{% endhint %}
 
+### 
 
 ### setEvar
 
@@ -792,7 +802,7 @@ gio.setEvar(jsonObject);
 
 **检验数据发送日志示例：** 
 
-注意 `t` 等于`evar`字段，表示转化事件发送成功，其它字段无需仔细验证。
+注意 `t` 等于`evar`字段，表示转化事件发送成功，只需注意 `var`字段，其它字段无需仔细验证。
 
 ```javascript
 {
@@ -813,7 +823,11 @@ gio.setEvar(jsonObject);
 }
 ```
 
+{% hint style="info" %}
+#### 推荐您使用 MobileDebugger，我们为您列举了应用场景和验证示例，请移步查看：[ evar 事件验证](growingio-debugger/best-practice.md#evar-zhuan-hua-bian-liang-shi-jian)
+{% endhint %}
 
+### 
 
 ### setPeopleVariable
 
@@ -862,7 +876,7 @@ gio.setPeopleVariable(jsonObject);
 
 **检验数据发送日志示例：** 
 
-注意 `t` 等于`ppl`字段，表示用户变量发送成功，其它字段无需仔细验证。
+注意 `t` 等于`ppl`字段，表示用户变量发送成功，只需注意 `var`字段，其它字段无需仔细验证。
 
 ```javascript
 {
@@ -882,7 +896,11 @@ gio.setPeopleVariable(jsonObject);
 }
 ```
 
+{% hint style="info" %}
+#### 推荐您使用 MobileDebugger，我们为您列举了应用场景和验证示例，请移步查看：[ ppl 事件验证](growingio-debugger/best-practice.md#ppl-yong-hu-bian-liang-shi-jian)
+{% endhint %}
 
+### 
 
 ### setUserId
 
@@ -906,7 +924,11 @@ GrowingIO.getInstance().setUserId("1234567890");
 
 注：您的 App 每次用户升级版本时无需重新登录的话，建议在用户每次升级App 版本后初次访问时重新调用上述 setUserId 方法。
 
+{% hint style="info" %}
+#### 推荐您使用 MobileDebugger，我们为您列举了应用场景和验证示例，请移步查看：[ 用户变量](growingio-debugger/best-practice.md#chang-jing-yi-yong-hu-bian-liang-zhi-deng-lu-yong-hu-id)
+{% endhint %}
 
+### 
 
 ### clearUserId
 
@@ -1015,7 +1037,7 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 
 当显示高亮则证明可圈，如图所示：
 
-![&#x5143;&#x7D20;&#x9AD8;&#x4EAE;&#x8BC1;&#x660E;&#x53EF;&#x5708;](../.gitbook/assets/image%20%2851%29.png)
+![&#x5143;&#x7D20;&#x9AD8;&#x4EAE;&#x8BC1;&#x660E;&#x53EF;&#x5708;](../.gitbook/assets/image%20%2861%29.png)
 
 \*\*\*\*
 
@@ -1332,7 +1354,7 @@ URL Scheme的格式是growing.xxxxxxxxxxxxxxxx，它的获取方式有两种
 1. 添加新产品：登录官网 -&gt;点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 点击“新建应用”-&gt; 选择添加Android应用 -&gt; 第二段中"此应用的 URL Scheme 为:growing.xxxxxxxxxxxxxxxx”中标黄字体。
 2. 现有产品：登录官网 -&gt; 点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 找到对应产品的URL Scheme。
 
-![](../.gitbook/assets/image%20%2849%29.png)
+![](../.gitbook/assets/image%20%2859%29.png)
 
 ```groovy
 apply plugin: 'com.android.application'
@@ -1719,7 +1741,7 @@ APP进入一个页面之后，无论其中有多少层`Fragment`嵌套，200ms �
 
 1.[圈选](../data-defination/events-metrics/circle-metrics/app-circle.md)，查看圈选页面为当前页面
 
-![](../.gitbook/assets/image%20%2837%29.png)
+![](../.gitbook/assets/image%20%2843%29.png)
 
 2.[查看日志](android-sdk.md#setdebugmode)，进入页面发送的`page`的`p`为当前的页面
 
