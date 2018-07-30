@@ -405,7 +405,7 @@ SDK发送对应采集数据：
 
 ### 多进程支持
 
-#### **setMultiprocess & setMultiprocessCircle**
+#### setMutiprocess & supportMultiProcessCircle
 
 多进程支持，`SDK`默认不支持多进程使用， 但是可以通过`confiuration`进行设置支持多进程。 在`Application onCreate` 中初始化SDK代码块中配置。
 
@@ -413,7 +413,7 @@ SDK发送对应采集数据：
 //支持多进程数据采集
 setMutiprocess(boolean setMutiprocess);
 //支持多进程圈选
-setMultiprocessCircle(boolean smpc);
+supportMultiProcessCircle(boolean smpc);
 ```
 
 **参数说明：**
