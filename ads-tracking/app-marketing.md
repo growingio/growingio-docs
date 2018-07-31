@@ -45,7 +45,7 @@
 
   
 
-![](../../.gitbook/assets/ping-mu-kuai-zhao-20180713-shang-wu-11.24.50.png)
+![](../.gitbook/assets/ping-mu-kuai-zhao-20180713-shang-wu-11.24.50.png)
 
 
 
@@ -77,7 +77,7 @@ Notice：为了不影响Deep—Link功能的完整体验，请您配置Universal
 
 
 
-![](../../.gitbook/assets/chuang-jian-deeplink-ye-mian.jpg)
+![](../.gitbook/assets/chuang-jian-deeplink-ye-mian.jpg)
 
 1.1.3.2使用Deep-Link
 
@@ -86,7 +86,7 @@ Notice：为了不影响Deep—Link功能的完整体验，请您配置Universal
 3. 针对Deep-Link类型，系统在其他类型链接统计指标之外，提供了“唤醒”指标，衡量多少人通过链接重新打开 APP。 
 4. 在“基础数据” 模块，Deep-Link 类型的链接会分化成形如“监测链接 0327-Deeplink\_iOS ”及“监测链接0327-Deeplink\_Android “两条链接，增加“唤醒”及“唤醒转化率”两个指标。
 
-![](../../.gitbook/assets/lian-jie-xiang-qing-ye.png)
+![](../.gitbook/assets/lian-jie-xiang-qing-ye.png)
 
 | Deep-Link功能 | App  SDK版本 |
 | --- | --- | --- | --- |

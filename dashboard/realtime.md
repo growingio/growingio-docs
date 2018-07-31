@@ -36,13 +36,13 @@ description: 分钟级别的监控看板
 
 下方的趋势图可以看到在每个时间段内的具体表现。
 
-![](../../.gitbook/assets/ping-mu-kuai-zhao-20180712-xia-wu-2.51.24.png)
+![](../.gitbook/assets/ping-mu-kuai-zhao-20180712-xia-wu-2.51.24.png)
 
 颜色较淡的线是上一个周期的数据，颜色较亮的线为本周期数据，趋势图对比两个周期看出具体的变化。
 
 #### 3.2 添加 {#添加}
 
-![](../../.gitbook/assets/ping-mu-kuai-zhao-20180712-xia-wu-2.53.13.png)
+![](../.gitbook/assets/ping-mu-kuai-zhao-20180712-xia-wu-2.53.13.png)
 
 点击右上角「添加图表」来监控自定义指标：
 
@@ -50,7 +50,7 @@ description: 分钟级别的监控看板
 
 选择指标，可以看到目前圈选过的所有的指标，点击您关心的指标。
 
-了解[圈选](../../data-defination/events-metrics/circle-metrics/)
+了解[圈选](../data-defination/events-metrics/circle-metrics/)
 
 * **选择图表样式**
 

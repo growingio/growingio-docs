@@ -92,7 +92,7 @@ B: 客户有品牌强化需求，希望用自己域名代替GIO短链
 
 POST **https://gta.growingio.com/api/v1/projects/project\_id/activities**
 
-上述地址中的 project\_id 取值请参考[“GrowingIO接口认证”](../../api/authentication.md)章节的“术语”。
+上述地址中的 project\_id 取值请参考[“GrowingIO接口认证”](../api/authentication.md)章节的“术语”。
 
 注意：将以下内容作为JSON Body，post到上述链接。
 

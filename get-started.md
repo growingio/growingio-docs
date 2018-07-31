@@ -32,13 +32,13 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 2. 漏斗分析 [文档](data-analytics/funnel-analysis.md) \| [使用手册](https://s.growingio.com/9PXbR0) \| [视频](https://s.growingio.com/kKdDjv)
 3. 留存分析 [文档](data-analytics/retention-analysis.md) \| [使用手册](https://s.growingio.com/p8QD3x) \| [视频](https://s.growingio.com/4PpoAK)
 4. 用户分群 [文档](data-analytics/user-segmentation.md) \| [使用手册](https://s.growingio.com/9PaAZ8) \|  [视频](https://s.growingio.com/ambRb4)
-5. 广告监测 [文档](data-analytics/ads-tracking/) \| [视频1](https://s.growingio.com/DmQMzB) \| [视频2](https://s.growingio.com/KqZEP3) \| [视频3](https://s.growingio.com/jvoRdB)
+5. 广告监测 [文档](ads-tracking/) \| [视频1](https://s.growingio.com/DmQMzB) \| [视频2](https://s.growingio.com/KqZEP3) \| [视频3](https://s.growingio.com/jvoRdB)
 6. 智能路径 [文档](data-analytics/pathfinder.md)
 7. 留存魔法师 [文档](data-analytics/magic-number.md)
 8. 热图 [文档](data-analytics/heatmap/)
-9. 实时分析 [文档](data-analytics/dashboard/realtime.md)
-10. 概览分析 [文档](data-analytics/dashboard/overview.md)
-11. **小程序概览** [文档](data-analytics/mina-overview.md)
+9. 实时分析 [文档](dashboard/realtime.md)
+10. 概览分析 [文档](dashboard/overview.md)
+11. **小程序概览** [文档](dashboard/mina-overview.md)
 12. web 圈选 [文档](data-defination/events-metrics/circle-metrics/web-circle.md) \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)
 13. App 端圈选 [文档](data-defination/events-metrics/circle-metrics/app-circle.md) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)
 14. **小程序圈选** [文档](data-defination/events-metrics/circle-metrics/mina-circle.md) 
@@ -61,5 +61,5 @@ GrowingIO 所有分析能力都同样支持小程序，同时，还对小程序�
 
 2.通过[小程序圈选](data-defination/events-metrics/circle-metrics/mina-circle.md)来进行数据定义，同时支持[打点事件和变量]()
 
-3.通过[小程序概览](data-analytics/mina-overview.md)了解数据情况
+3.通过[小程序概览](dashboard/mina-overview.md)了解数据情况
 
