@@ -58,16 +58,32 @@
 $ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
 ```
 
+对于 mpvue 用户，下载 gio-minp.esm.js 文件
+
+```text
+$ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
+```
+
 当下载到 gio-minp.js 文件以后，把文件放在微信小程序项目里，比如 utils 目录下。下面会假设 SDK 文件放在 utils 目录下。
 
 ### 添加跟踪代码
 
 在微信小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，**请注意一定要放在 App\(\) 之前**：
 
-```text
+```javascript
 var gio = require("utils/gio-minp.js");
 // version 是你的小程序的版本号，发版时请调整
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' });
+```
+
+对于 mpvue 用户，使用下面这种方式：
+
+```javascript
+import gio from './utils/gio-minp'
+import Vue from 'vue'
+import App from './App'
+​
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
 ```
 
 其中GrowingIO 项目ID、微信小程序的 AppID，即为**SDK安装页面** 第②部分 **代码框中生成的代码。**
@@ -94,20 +110,6 @@ gio("identify", openid, unionid);
 {% endhint %}
 
 **注意：**如果你的微信小程序在用户打开后不要求用户授权获取openid和/或 unionid，但是设置了forceLogin为True，那么GroiwngIO不能采集到用户的数据，所以请特别注意这个参数的设置。
-
-### 特别注意
-
-如果你使用 mpvue 来开发小程序的应用，为了让 GrowingIO SDK 能自动采集到真实行为事件，需要把 Vue 作为初始化参数传入。比如在 main.js 这样子集成，
-
-```text
-import gio from './utils/gio-minp'
-import Vue from 'vue'
-import App from './App'
-​
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
-```
-
-gio-minp 默认是用 module.exports 对于 import 不支持，可以修改 gio-minp.js 最后部分代码，把 `, module.exports = gio`修改成`; export default gio`。
 
 ### 添加请求服务器域名
 
