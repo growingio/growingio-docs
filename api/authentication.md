@@ -105,7 +105,7 @@ authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID
 
 #### Resource {#resource}
 
-POST [https://www.growingio.com/auth/token](https://www.growingio.com/auth/token)
+POST `https://www.growingio.com/auth/token`
 
 #### Authorization {#authorization}
 
