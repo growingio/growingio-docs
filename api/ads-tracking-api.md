@@ -52,7 +52,7 @@ GIO广告监测链接信息架构
 
 为保证数据安全，GrowingIO所有的API服务，请求Head中需要携带Token。
 
-Token获取详见：[https://docs.growingio.com/api/authentication.html](https://docs.growingio.com/api/authentication.html) 
+Token获取详见：`https://docs.growingio.com/api/authentication.html` 
 
 完整的监测链接创建流程见下图： 
 
@@ -73,7 +73,7 @@ Token获取详见：[https://docs.growingio.com/api/authentication.html](https:/
 
 新建应用请在GIO后台操作，此接口仅提供应用ID的查询。 
 
-GET [https://www.growingio.com/api/v1/projects/{项目编号}/meta/products](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/products) 
+GET `https://www.growingio.com/api/v1/projects/{项目编号}/meta/products` 
 
 Response: Status Code: 200 OK
 
@@ -119,7 +119,7 @@ Response 示例：
 
 此部分相关接口可以查询已有活动的活动ID或者创建新的活动。 
 
-POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/campaigns) 
+POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns` 
 
 Request:
 
@@ -155,7 +155,7 @@ Response: Status Code: 200 OK
 }
 ```
 
-GET [https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/campaigns) 
+GET `https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns` 
 
 Response: Status Code: 200 OK
 
@@ -186,7 +186,7 @@ Response 示例：
 
 此相关部分API可以进行渠道的ID查询及新建渠道。 
 
-POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/channels) 
+POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels` 
 
 Request:
 
@@ -202,7 +202,7 @@ Request:
 }
 ```
 
-GET [https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/channels) 
+GET `https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels` 
 
 Response: Status Code: 200 OK
 
@@ -244,7 +244,7 @@ Deeplink链接创建逻辑：
 
 ![](../.gitbook/assets/growingio_tracking_api_3.png)
 
-POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/deeplinks](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/deeplinks)
+POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/deeplinks`
 
 Request:
 
@@ -440,7 +440,7 @@ Normallink链接创建逻辑：
 
  ![](https://docs.growingio.com/.gitbook/assets/ads_tracking_api_5.png)
 
-POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/normallinks](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/normallinks) 
+POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/normallinks` 
 
 Request:
 
