@@ -214,11 +214,11 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 
 原始数据导出 1.0 接口格式：
 
-[https://www.growingio.com/insights/:ai/:date.json](https://www.growingio.com/insights/:ai/:date.json)
+`https://www.growingio.com/insights/:ai/:date.json`
 
 原始数据导出 2.0 接口格式：
 
-[https://www.growingio.com/v2/insights/{export\_type}/{data\_type}/{ai}/{export\_date}.json](https://www.growingio.com/v2/insights/%7Bexport_type%7D/%7Bdata_type%7D/%7Bai%7D/%7Bexport_date%7D.json)
+`https://www.growingio.com/v2/insights/{export_type}/{data_type}/{ai}/{export_date}.json`
 
 #### 接口响应数据格式 {#接口响应数据格式}
 
