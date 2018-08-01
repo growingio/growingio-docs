@@ -5,7 +5,7 @@
   * [添加 URLScheme 和网络权限](android-sdk.md#2-tian-jia-urlscheme-he-wang-luo-quan-xian)
   * [初始化SDK](android-sdk.md#3-chu-shi-hua-sdk)
   * [代码混淆](android-sdk.md#4-dai-ma-hun-xiao)
-* [重要配置项 API](android-sdk.md#1-zhong-yao-pei-zhi-xiang-api)
+* [重要配置](android-sdk.md#zhong-yao-pei-zhi)
 * [自定义事件和变量 API](android-sdk.md#zi-ding-yi-shi-jian-he-bian-liang-api)
 * [验证SDK是否正常工作](android-sdk.md#yan-zheng-sdk-shi-fou-zheng-chang-gong-zuo)
 * [附录](android-sdk.md#fu-lu)
@@ -1732,7 +1732,7 @@ GrowingIO.setTabName(content, "MyContent");
 
 ## 常见问题
 
-### 1.GrowingIO 对于页面的定义
+### 1. GrowingIO 对于页面的定义
 
 **Android 常见的应用场景是一个`Activity`中嵌套多个`Fragment`，那么我们是怎么定义页面的呢？**
 
@@ -1748,7 +1748,7 @@ APP进入一个页面之后，无论其中有多少层`Fragment`嵌套，200ms �
 
 3.使用[`Mobile Debugger`](growingio-debugger/#shi-yong-mobile-debugger-ce-shi-shu-ju)查看`page`事件的`p`
 
-\`\`
+
 
 ### 2. 点击事件采集逻辑
 
@@ -1770,4 +1770,37 @@ onOptionsItemSelected(android/view/MenuItem)
 onGroupClick(android/widget/ExpandableListView;android/view/View)
 onChildClick(android/widget/ExpandableListView;android/view/View)
 ```
+
+
+
+### 3. SDK 编译时性能和消耗时间
+
+GrowingIO Android SDK 的编译时耗时取决于您的项目大小，我们的原理是字节码插桩\(使用Transform API\)。  
+从clean项目， 执行assembleDebug， 如果添加了GrowingIO的SDK， 会大约增加50%的时间， 如果执行assembleRelease， 添加GrowingIO SDK 大约会增加30%的时间。   
+可以看出GrowingIO确实会影响您的编译时长，尤其是在项目比较大的情况。  
+如果您感觉到明显的编译耗时长，我们提供了一个在开发期间 GrowingIO 不参与编译的配置，如下：
+
+1.在 Project 项目中，gradle.properties 文件内添加
+
+```text
+# true GrowingIO 参与编译，false 不参与编译
+gioenable = true
+```
+
+2.在 Module 级别的 build.gradle 文件中增加配置 
+
+```groovy
+android {
+    defaultConfig {
+        resValue("string", "growingio_project_id", "您的项目ID")
+        resValue("string", "growingio_url_scheme", "您的URL Scheme")
+        // 增加 gioenable 的配置
+        resValue("string", "growingio_enable", project.gioenable)
+    }
+}
+```
+
+{% hint style="danger" %}
+**上线时，一定要将 gradle.properties 文件中的 gioenable 改为 true 。否则我们将无法采集数据。**
+{% endhint %}
 
