@@ -347,7 +347,7 @@ Onelink链接创建逻辑
 
  ![](../.gitbook/assets/growingio_tracking_api_4.png) 
 
-POST [https://www.growingio.com/api/v1/projects/{项目编号}/meta/onelinks](https://www.growingio.com/api/v1/projects/%7B%E9%A1%B9%E7%9B%AE%E7%BC%96%E5%8F%B7%7D/meta/onelinks)
+POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/onelinks`
 
 Request:
 
