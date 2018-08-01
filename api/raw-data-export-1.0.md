@@ -10,7 +10,7 @@
 
 ## 1.Resource
 
-GET [https://www.growingio.com/insights/:ai/:date.json](https://www.growingio.com/insights/:ai/:date.json)
+GET `https://www.growingio.com/insights/:ai/:date.json`
 
 ### 1.1 Authorization
 
