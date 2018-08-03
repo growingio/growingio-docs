@@ -112,13 +112,13 @@ POST `https://www.growingio.com/auth/token`
 在 Header 里面添加一个属性：
 
 | 名字 | 类型 | 描述 | 示例 |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
 
 #### Query Parameter {#query-parameter}
 
 | 名字 | 类型 | 描述 | 示例 |
-| --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | ai | String | 项目ID | 2a1b4018cd954ec2bcc69da5138bdb96 |
 | project | String | 项目UID | 123abc |
 | tm | Long | 申请时间戳 | 1465020309123 |

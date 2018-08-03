@@ -139,7 +139,7 @@ Web 2.1.7
 Android 1.1.9
 
 1. 修复因动态添加Fragment导致的page事件发送问题
-2. 修复WebView视频播放横屏问题，屏蔽有赞、淘宝的WebView ，增加对WVJBWebView的兼容，修复其他loadUrl的问题。
+2. 修复WebView视频播放横屏问题，屏蔽淘宝的WebView ，增加对WVJBWebView的兼容，修复其他loadUrl的问题。
 3. 修复因hook 静态代码造成的崩溃
 4. 优化获取mac地址的方式
 5. 优化 EditText 的 chng 事件发送，处理焦点变化问题

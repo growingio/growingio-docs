@@ -63,7 +63,7 @@ Token获取详见：`https://docs.growingio.com/api/authentication.html`
 详细的认证过程请参考：[认证说明](https://docs.growingio.com/api/ji-suan-jie-guo-shu-ju-api.html#authorization)
 
 | 名字 | 类型 | 描述 | 示例 |
-| --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
 | Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
 
@@ -78,7 +78,7 @@ GET `https://www.growingio.com/api/v1/projects/{项目编号}/meta/products`
 Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | id | String | 产品编号 | gnPNkoWA |
 | name | String | 名字 | 双十一推广 |
 | displayName | String | 对应 app 的 id | LPdgKARN |
@@ -124,7 +124,7 @@ POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns`
 Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | name | String | 名字 | 双十一推广 |
 | productId | String | 对应 app 的 id | LPdgKARN |
 
@@ -140,7 +140,7 @@ Request:
 Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | id | String | 活动 id | gnPNkoWA |
 | productId | String | 对应 app 的 id | LPdgKARN |
 | name | String | 名字 | 双十一推广 |
@@ -160,7 +160,7 @@ GET `https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns`
 Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | id | String | campaign id | gnPNkoWA |
 | name | String | 名字 | 双十一推广 |
 | productId | String | 对应 app 的 id | LPdgKARN |
@@ -191,7 +191,7 @@ POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels`
 Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | name | String | 名字 | 二维码推广 |
 
 示例：
@@ -207,7 +207,7 @@ GET `https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels`
 Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | id | String | channel id | gnPNkoWA |
 | name | String | 名字 | 今日头条 |
 
@@ -249,7 +249,7 @@ POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/deeplinks`
 Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | 0523信息流推广 |
 | projectId | String | 项目 id | "GQPDxPNm" |
 | productIdAndroid | String | 选填,\(iOS Android 至少填一个\),每个移动应用的唯一说明 | com.growingio.package |
@@ -280,7 +280,7 @@ Request:
 Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | linkId | String | 监测链接ID | GQPDxPNm |
 | id | String | 资源id | GQPDxPNm |
 | name | String | 链接名称 | 0523信息流推广 |
@@ -352,7 +352,7 @@ POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/onelinks`
 Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | 0523信息流推广 |
 | projectId | String | 项目 id | "GQPDxPNm" |
 | productIdAndroid | String | 选填,\(iOS Android 至少填一个\),每个移动应用的唯一说明 | com.growingio.package |
@@ -379,7 +379,7 @@ Request:
 Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | linkId | String | 监测链接ID | GQPDxPNm |
 | id | String | 资源id | GQPDxPNm |
 | name | String | 链接名称 | 0523信息流推广 |
@@ -445,7 +445,7 @@ POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/normallinks`
 Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | 0523信息流推广 |
 | productId | String | 必填 每个移动应用的唯一说明 | com.growingio.package |
 | channelId | String | 渠道 id，必填 | gnPNkoWA |
@@ -467,7 +467,7 @@ Request:
 Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | linkId | String | 监测链接ID | GQPDxPNm |
 | id | String | 资源id | GQPDxPNm |
 | name | String | 链接名称 | 0523信息流推广 |

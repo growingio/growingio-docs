@@ -41,13 +41,13 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 #### **事件配置方式示例**
 
 | **标识符** | **名称** | **事件级变量** | **类型** | **描述** |
-| --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | loginSuccess | 登录成功 | 无 | 计数器 | 登录成功次数 |
 
 #### **对应的代码**
 
 | 平台 | 方法原型 | 代码示例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | JS SDK | gio\('track', eventId\) ; | gio\('track', 'loginSuccess'\); |
 | Android SDK | GrowingIO.getInstance\(\).track\(`String` eventId\); | GrowingIO.getInstance\(\).track\("loginSuccess"\); |
 | iOS SDK | + \(void\)track:\(NSString \*\)eventId; | \[Growing track: @"loginSuccess"\]; |
@@ -73,13 +73,13 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 #### **事件配置方式示例**
 
 | **标识符** | **名称** | **事件级变量** | **类型** | **描述** |
-| --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | loginSuccess | 登录成功 | 登录方式 | 计数器 | 登录成功次数 |
 
 #### **事件级变量配置方式示例**
 
 | 标识符 | 名称 | 类型 | 描述 |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | loginWay\_var | 登录方式 | 字符串 | 登录方式，取值包括QQ、微信、手机等 |
 
 #### **对应的代码**
@@ -87,7 +87,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 此示例中的自定义事件为“登录成功（loginSuccess）”，关联一个事件级变量为“登录方式（loginWay\_var）”
 
 | 平台 | 方法原型 | 代码示例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | JS SDK | gio\('track', eventId, eventLevelVariables\); | gio\('track', 'loginSuccess', {loginWay\_var':'QQ'}\) |
 | Android SDK | GrowingIO.getInstance\(\).track\(`String` eventId, `JSONObject`  eventLevelVariables\); | GrowingIO.getInstance\(\).track\("loginSuccess", new JSONObject\(\).put\("loginWay\_var","QQ"\)\); |
 | iOS SDK | + \(void\)track:\(NSString \*\)eventId withVariable:  \(NSDictionary&lt;NSString \*, NSObject \*&gt; \*\)variable; | \[Growing track:@"loginSuccess" withVariable:  @{@"loginWay\_var":@"QQ"}\]; |
@@ -111,7 +111,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 **事件配置方式示例**
 
 | **标识符** | **名称** | **事件级变量** | **类型** | **描述** |
-| --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | orderAmount | 订单支付金额 | 无 | 数值 | 订单的金额 |
 
 #### **对应的代码**
@@ -119,7 +119,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 此示例中的自定义事件为“订单支付金额（orderAmount）”，此处的 number 参数值 98.77 为此订单中所支付金额
 
 | 平台 | 方法原型 | 代码示例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | JS SDK | gio\('track', eventId, number\); | gio\('track', 'orderAmount', 98.77\); |
 | Android SDK | GrowingIO.getInstance\(\).track\(String eventId, Number eventNumber\); | GrowingIO.getInstance\(\).track\("orderAmount", 98.77\); |
 | iOS SDK | + \(void\)track:\(NSString \*\)eventId withNumber:\(NSNumber \*\)number; | \[Growing track: @"orderAmount" withNumber:@98.77\]; |
@@ -145,13 +145,13 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 #### **事件配置方式示例**
 
 | **标识符** | **名称** | **事件级变量** | **类型** | **描述** |
-| --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | orderAmount | 订单支付金额 | 订单ID | 数值 | 订单的金额 |
 
 #### **事件级变量配置方式示例**
 
 | 标识符 | 名称 | 类型 | 描述 |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | orderId\_var | 订单ID | 字符串 | 订单ID |
 
 #### **对应的代码**
@@ -159,7 +159,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 此示例中的自定义事件为“订单支付金额（orderAmount）”，此处的 number 参数值 98.77 为此订单中所支付金额，\#123 为此订单ID
 
 | 平台 | 方法原型 | 代码示例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | JS SDK | gio\('track', eventId, number, eventLevelVariables\); | gio\('track', 'orderAmount', 98.77,  {'orderId\_var':'\#123'}\) |
 | Android SDK | GrowingIO.getInstance\(\).track\(`String` eventId, `Number` eventNumber, `JSONObject`  eventLevelVariables\); | GrowingIO.getInstance\(\).track\("orderAmount", 98.77, new JSONObject\(\).put\("orderId\_var","\#123"\)\); |
 | iOS SDK | + \(void\)track:\(NSString \*\)eventId withNumber:\(NSNumber \*\)number andVariable:\(NSDictionary&lt;NSString \*, NSObject \*&gt; \*\)variable; | \[Growing track: @"orderAmount" withNumber:  @98.77 andVariable:@ {@"orderId\_var":@"\#123"}\] |
@@ -187,7 +187,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 ### **页面级变量配置方式示例**
 
 | 标识符 | 名称 | 描述 |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | skuName\_pvar | 商品名称 | 商品名称 |
 | skuCategory\_pvar | 商品品类 | 商品品类，例如裙子、鞋靴等 |
 
@@ -196,7 +196,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 此示例中的页面级变量为“商品名称（skuName\_pvar）”、“商品品类（skuCategory\_pvar）”，在商品详情页面上设置了这两个页面级变量
 
 | 平台 | 方法原型 | 代码示例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | JS SDK | gio\('page.set', key, value\);或gio\('page.set', pageLevelVariables\); | gio\('page.set', {'skuName\_pvar': '女士中跟凉鞋', 'skuCategory\_pvar': '鞋靴'}\); |
 | Android SDK | GrowingIO.getInstance\(\).setPageVariable\(`Activity` activity, `String`key, `String` value\);或GrowingIO.getInstance\(\).setPageVariable\(`Activity` activity, `JSONObject` pageLevelVariables\); | JSONObject jsonObject = new JSONObject\(\); jsonObject.put\("skuName\_pvar", "女士中跟凉鞋"\); jsonObject.put\("skuCategory\_pvar", "鞋靴"\);GrowingIO.getInstance\(\).setPageVariable\(GoodsDetailActivity, jsonObject\); |
 | iOS SDK | + \(void\)setPageVariableWithKey:\(NSString \*\)key andStringValue:\(NSString \*\)stringValue toViewController:\(UIViewController\*\)viewController;或+ \(void\)setPageVariable:\(NSDictionary&lt;NSString \*, NSObject \*&gt; \*\)variable toViewController: \(UIViewController \*\)viewController; | \[Growing setPageVariable:@{@"skuName\_pvar":@"女士中跟凉鞋", @"skuCategory\_pvar":@"鞋靴"} toViewController:GoodsDetailViewController\]; |
@@ -224,7 +224,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 ### **转化变量配置方式示例**
 
 | 标识符 | 名称 | 描述 | 归因 | 失效 |
-| --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | enterSource\_evar | 商品详情页的入口来源 | 取值包括首页Banner、商品列表页等 | 根据需求选择（不涉及数据验证） | 根据需求选择（不涉及数据验证） |
 
 ### **对应的代码**
@@ -232,7 +232,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 此示例中的转化变量为“商品详情页的入口来源（enterSource\_evar）”，当进入详情页时设置了这个转化变量
 
 | 平台 | 方法原型 | 代码示例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | JS SDK | gio\('evar.set', key, value\);或gio\('evar.set', conversionVariables\); | gio\('evar.set', 'enterSource\_evar', '首页Banner'\);或gio\('evar.set', {'enterSource\_evar': '首页Banner'}\); |
 | Android SDK | GrowingIO.getInstance\(\).setEvar\(String key, String value\);或GrowingIO.getInstance\(\).setEvar\(JSONObject conversionVariables\); | GrowingIO.getInstance\(\).setEvar\("enterSource\_evar", "首页Banner"\);或JSONObject jsonObject = new JSONObject\(\);jsonObject.put\("enterSource\_evar", "首页Banner"\);GrowingIO.getInstance\(\).setEvar\(jsonObject\); |
 | iOS SDK | + \(void\)setEvarWithKey:\(NSString \*\)key andStringValue:\(NSString \*\)stringValue;或+ \(void\)setEvar:\(NSDictionary&lt;NSString \*, NSObject \*&gt; \*\)variable; | \[Growing setEvarWithKey:@"enterSource\_evar"  andStringValue:@"首页Banner"\];或\[Growing setEvar:@{@"enterSource\_evar":@"首页Banner"}\]; |
@@ -266,7 +266,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 此示例中的用户变量为登录用户ID，在用户登录时设置
 
 | 平台 | 方法原型 | 代码示例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | JS SDK | // 用户登录时，设置登录用户IDgio\('setUserId', userId\);// 用户退出登录时，清除登录用户IDgio\('clearUserId'\); | // 用户登录时，设置登录用户IDgio\('setUserId', '123456'\);// 用户退出登录时，清除登录用户IDgio\('clearUserId'\); |
 | Android SDK | //用户登录时，设置登录用户IDGrowingIO.getInstance\(\).setUserId\(String userId\);//用户退出登录时，清除登录用户IDGrowingIO.getInstance\(\).clearUserId\(\); | //用户登录时，设置登录用户IDGrowingIO.getInstance\(\).setUserId\("123456"\);//用户退出登录时，清除登录用户IDGrowingIO.getInstance\(\).clearUserId\(\); |
 | iOS SDK | //用户登录时，设置登录用户ID+ \(void\)setUserId:\(NSString \*\)userId;//用户退出登录时，清除登录用户ID+ \(void\)clearUserId; | //用户登录时，设置登录用户ID\[Growing setUserId:@"123456"\];//用户退出登录时，清除登录用户ID\[Growing clearUserId\]; |
@@ -294,7 +294,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 #### **其他用户变量配置方式示例**
 
 | 标识符 | 名称 | 描述 | 归因 |
-| --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | gender\_ppl | 用户性别 | 用户性别 | 根据需求选择（不涉及数据验证） |
 | age\_ppl | 用户年龄 | 用户年龄 | 根据需求选择（不涉及数据验证） |
 
@@ -303,7 +303,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 此示例中的用户变量为“用户性别（gender\_ppl）”、“用户年龄（age\_ppl）”，在用户登录或者变量值发生变化时进行设置
 
 | 平台 | 方法原型 | 代码示例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | JS SDK | gio\('people.set', key, value\);或gio\('people.set', customerVariables\); | gio\('people.set', {'gender\_ppl': '男', 'age\_ppl': 25}\); |
 | Android SDK | GrowingIO.getInstance\(\).setPeopleVariable\(String key, String value\);或GrowingIO.getInstance\(\).setPeopleVariable\(JSONObject peopleVariables\); | JSONObject jsonObject = new JSONObject\(\);jsonObject.put\("gender\_ppl", "男"\);jsonObject.put\("age\_ppl", 25\);GrowingIO.getInstance\(\).setPeopleVariable\(jsonObject\); |
 | iOS SDK | + \(void\)setPeopleVariableWithKey:\(NSString \*\)key  andStringValue:\(NSString \*\)stringValue; 或+ \(void\)setPeopleVariable:\(NSDictionary&lt;NSString \*, NSObject \*&gt; \*\)variable; | \[Growing setPeopleVariable:@{@"gender\_ppl":@"男", @"age\_ppl":@25}\]; |

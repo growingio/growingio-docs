@@ -299,7 +299,7 @@ evar：新增类型
 #### page请求导出字段 {#page请求导出字段}
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | visitUserId | userId | string\(36\) | 访问用户ID（visit user id） | 2f94c582-bd29-427d-8e4d-ae2cd0287ae1 | 匿名的访问用户ID，由GrowingIO自动生成。 |
 | sessionId | sessionId | string\(36\) | 访问ID（session id） | 45bcb40d-2963-4ef9-85d6-6583cd69d7b4 | 访问ID |
 | platform | platform | string\(10\) | 平台（platform） | web | 访问所属平台，可能值为 iOS / Android / Web 等 |
@@ -342,7 +342,7 @@ evar：新增类型
 
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | visitUserId | userId | string\(36\) | 访问用户ID（visit user id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 匿名的访问用户ID，由GrowingIO自动生成。 |
 | sessionId | sessionId | string\(36\) | 访问ID（session id） | 6b5099c7-6006-422d-92ac-4f3bf4ddd37c | 访问ID |
 | accountVersion | （新加） | string\(20\) | SDK版本（account version） | 2.3.0 | SDK版本信息 |
@@ -376,7 +376,7 @@ evar：新增类型
 #### action请求导出字段 {#action请求导出字段}
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | visitUserId | userId | string\(36\) | 访问用户ID（visit user id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 匿名的访问用户ID，由GrowingIO自动生成。 |
 | sessionId | sessionId | string\(36\) | 访问ID（session id） | 6b5099c7-6006-422d-92ac-4f3bf4ddd37c | 访问ID |
 | requestType | eventType | string\(10\) | 请求类型（request type） | clck | 根据请求的类型不同，可能值为：clck\(click\), chng\(change\)，sbmt\(submit\)以及imp\(impression\)，change |
@@ -394,7 +394,7 @@ evar：新增类型
 #### cstm请求导出字段 {#cstm请求导出字段}
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | visitUserId | \_userId（新旧不同） | string\(36\) | 访问用户ID（visituser id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 访问用户 ID 唯一标识 |
 | sessionId | \_sessionId（新旧不同） | string\(36\) | 访问ID（session id） | 6b5099c7-6006-422d-92ac-4f3bf4ddd37c | 当前访问唯一标识 |
 | time | \_eventTime（新旧不同） | bigint | 时间戳（time） | 1506069592985 | 请求在用户端发生的时间戳 |
@@ -412,7 +412,7 @@ evar：新增类型
 #### pvar请求导出字段 {#pvar请求导出字段}
 
 | 原始数据导出 2.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | visitUserId | string\(36\) | 访问用户ID（visit user id） | 1ba42333-87f2-3cc4-bb42-ac4176526796 | 访问用户 ID 唯一标识 |
 | sessionId | string\(36\) | 访问ID（session id） | c6575ef5-5c06-443e-bf6e-b12e1e37a3f8 | 当前访问唯一标识 |
 | time | bigint | 时间戳（time） | 1520899220665 | 请求在用户端发生的时间戳 |
@@ -426,7 +426,7 @@ evar：新增类型
 #### evar请求导出字段 {#evar请求导出字段}
 
 | 原始数据导出 2.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | visitUserId | string\(36\) | 访问用户ID（visit user id） | c6dc7078-19a8-43c8-a728-d7f78f38bc7b | 访问用户 ID 唯一标识 |
 | sessionId | string\(36\) | 访问ID（session id） | 372f87d0-c743-4b6b-a4c3-3833b90ce5e2 | 当前访问唯一标识 |
 | time | bigint | 时间戳（time） | 1521331185777 | 请求在用户端发生的时间戳 |
@@ -437,7 +437,7 @@ evar：新增类型
 #### action\_tag导出字段 {#actiontag导出字段}
 
 | 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | sendTime | sendtime | bigint | 发送时间（send time） | 1521331200412 | 请求在SDK发送的时间戳 |
 | actionRequestId | action\_id |  | GrowingIO系统Action内部ID | wa:0:24:1356477892:0 | GrowingIO系统内部用于标识一个action请求的ID |
 | ruleId | rule\_id |  | GrowingIO系统Rule内部ID | 99ae0dec | GrowingIO系统内部用于标识一个规则（Rule）的ID |
@@ -445,7 +445,7 @@ evar：新增类型
 #### ads\_track\_activation 请求导出字段 {#adstrackactivation-请求导出字段}
 
 | 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | visitUserId | userId | string\(36\) | 访问用户ID（visit user id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 匿名的访问用户ID，由GrowingIO自动生成。 |
 | idfa | idfa | string\(40\) | IDFA（id for advertiser） | F7A29C20-FD0D-4B68-BF4D-39EFC5C9A9C2 | iOS平台用于广告监测的ID：IDFA（id for advertiser） |
 | imei | imei | string\(40\) | IMEI | 100500636E9AA9 | Android平台用于广告监测的ID |
@@ -466,7 +466,7 @@ evar：新增类型
 #### ads\_track\_click 请求导出字段 {#adstrackclick-请求导出字段}
 
 | 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | idfa | idfa | string\(40\) | IDFA（id for advertiser） | F9AFF106-3C41-4B78-B20B-D3BB166DA620 | iOS平台用于广告监测的ID：IDFA（id for advertiser） |
 | imei | imei | string\(40\) | IMEI | 100500636E9AA9 | Android平台用于广告监测的ID |
 | uuid | uuid | string\(40\) | UUID | 00000000-37fc-f5ob-1e8d-484b190312e1 | 用于广告监测的ID的UUID格式 |

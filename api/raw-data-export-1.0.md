@@ -17,14 +17,14 @@ GET `https://www.growingio.com/insights/:ai/:date.json`
 在 Header 里面添加两个属性：
 
 | 名字 | 类型 | 描述 | 示例 |
-| --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
 | Authorization | String | 认证后获取到的 Token | Authorization: Token xxxxxx |
 
 ### 1.2 URL Parameter
 
 | 名字 | 类型 | 描述 | 示例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | ai | String | 项目 ID | 2a1b4018cd954ec2bcc69da5138bdb96 |
 | date | String | 具体数据日期 | 20160520 |
 | expire | Integer | 过期时间, 以分为单位 | 5 |
@@ -56,7 +56,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 #### 2.1 visit
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值（example） |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | userId | 用户ID | string\(36\) | 针对单个用户生成的唯一id | 例如，web网站生成一个有效期三年的cookie值，App 则为机器唯一标识码 |
 | sessionId | 会话ID | string\(36\) | "web: 30分钟过期的session值，代表一次会话。mobile: app退出30秒后再进入，刷新session值" |  |
 | sendTime | 发送时间 | bigint | 数据发送过来的时间 |  |
@@ -86,7 +86,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 #### 2.2 page
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值（example） |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | userId | 用户ID | string\(36\) | 针对单个用户生成的唯一id | 例如，web网站生成一个有效期三年的cookie值，App 则为机器唯一标识码 |
 | sessionId | 会话ID | string\(36\) | "web: 30分钟过期的session值，代表一次会话。mobile: app退出30秒后再进入，刷新session值" |  |
 | sendTime | 发送时间 | bigint | 数据发送过来的时间 |  |
@@ -125,7 +125,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 #### 2.3 action
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值（example） |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | userId | 用户ID | string\(36\) |  |  |
 | sessionId | 会话ID | string\(36\) | "web: 30分钟过期的session值，代表一次会话,。mobile: app退出30秒后再进入，刷新session值" |  |
 | sendTime | 发送时间 | bigint | 数据发送过来的时间 |  |
@@ -156,7 +156,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 #### 3.1 action\_tag {#actiontag}
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值\(example\) |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | sendTime | 发送时间 | bigint | 数据发送过来的时间 |  |
 | action\_id | 事件ID | string\(30\) | 标签事件的唯一id web的action\_id以wa开头，mobile以ma开头 |  |
 | rule\_id | 规则id | string\(8\) | 匹配事件的规则id，该id为growingio平台圈选的标签的唯一id | 该值由字母与数字组成，例如‘1ba052a9’ |
@@ -164,7 +164,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 #### 3.2 rules（从统计数据的规则逻辑API获取） {#rules（从统计数据的规则逻辑api获取）}
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值\(example\) |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | rule\_id | 规则id | string\(8\) | 匹配事件的规则id，该id为growingio平台圈选的标签的唯一id | 该值由字母与数字组成，例如‘1ba052a9’ |
 | name | 规则名称 | string\(200\) | 圈选的标签名称 | 该名称不可以作为唯一主键，只是便于使用区分 |
 | ruleType | 规则类型 | string\(10\) | 规则在定义时可能有不同的类型，例如按钮的imp或者clck | 值包括 page, imp, clck, chng, sbmt |
@@ -181,7 +181,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 #### 打点数据 custom\_attr {#打点数据-customattr}
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值\(example\) |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | sendTime | 发送时间 | bigint | 数据发送过来的时间 |  |
 | eventname | 埋点事件名称 | string | 用户定义的埋点事件名称 | 管理平台内定义 |
 | attribute | 埋点事件属性 | string | 埋点事件属性为json字符串 | 以`_` 开头的字段为growingio相关定义字段，包括\_sessionId，\_userId，\_domain，\_eventTime等，其他为客户自定义的字段 |
@@ -189,7 +189,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 **custom\_attr 内 attribute 字段说明**
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值\(example\) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | \_userId | 用户ID | string\(36\) | 针对单个用户生成的唯一id | 例如，web网站生成一个有效期三年的cookie值，mobile则为机器唯一标识码 |
 | \_sessionId | 会话ID | string\(36\) | "web: 30分钟过期的session值，代表一次会话。mobile: app退出30秒后再进入，刷新session值" |  |
 | \_eventTime | 事件发生时间 | bigint | 事件实际发生的时间 |  |
@@ -204,7 +204,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 **激活日志 ads\_track\_activation**
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值（example） |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | userId | 用户ID | string\(36\) | 针对单个用户生成的唯一id | 例如，web网站生成一个有效期三年的cookie值，App 则为机器唯一标识码 |
 | idfa | idfa | string\(32\) | iOS系统中的设备标志 | CCD6E1CD-8C4B-40CB-8A62-4BBC7AFE07D6 |
 | imei | imei | string\(32\) | 安卓系统中的设备唯一标志 | 10bc955ac2a67ed3 |
@@ -225,7 +225,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 **点击日志 ads\_track\_click**
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值（example） |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | idfa | idfa | string\(32\) | iOS系统中的设备标志 | CCD6E1CD-8C4B-40CB-8A62-4BBC7AFE07D6 |
 | imei | imei | string\(32\) | 安卓系统中的设备唯一标志 | 10bc955ac2a67ed3 |
 | uuid | uuid | string\(32\) | GIO在设备中成的设备标志ID | 略。即将下线，可忽视此字段 |
@@ -250,7 +250,7 @@ GET [https://www.growingio.com/projects/project\_id/activities.json](https://www
 **输出**
 
 | 字段名称 | 示例 | 中文含义 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | id | a9a7jrPB | -- |
 | name | 12.16增长大会 | 名称\(落地页命名\) |
 | href | www.growingio.com | 目标链接 |

@@ -35,7 +35,7 @@
 例如一个电影查询的APP，电影列表页的页面路径是 pages/list/list ，电影详情页的页面路径pages/item/item，其中电影列表页有多个类型，电影类型分为：动作，爱情，喜剧，其中分别展示Top200, Top100，Top10；电影详情页有多个类型，电影类型分为：动作，爱情，喜剧，其中展示每个具体的电影信息，具体如下
 
 | **页面** | 具体页面信息 | **页面详细路径** |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | 电影列表页 | 动作电影Top100 | pages/list/list?type=action&title=top100 |
 | 电影列表页 | 爱情电影Top200 | pages/list/list?type=love&title=top200 |
 | 电影列表页 | 喜剧电影Top10 | pages/list/list?type=comedy&title=top10 |

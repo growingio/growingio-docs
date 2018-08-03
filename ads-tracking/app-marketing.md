@@ -89,7 +89,7 @@ Notice：为了不影响Deep—Link功能的完整体验，请您配置Universal
 ![](../.gitbook/assets/lian-jie-xiang-qing-ye.png)
 
 | Deep-Link功能 | App  SDK版本 |
-| --- | --- | --- | --- |
+| :--- | :--- |
 | 基础Deeplink功能（Scheme打开APP至首页） | 2.3.0 |
 | 直达落地页（Scheme打开至活动页） | 2.3.2 |
 | Universal Link/应用宝微链接支持 | 2.4.1 |

@@ -191,7 +191,7 @@ gio('clearUserId');
 初始化参数，用来设置项目ID和一些常用的配置项：
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | projectId | String | 是 | 项目ID |
 | options | JSON Object | 否 | 系统变量配置 |
 
@@ -211,7 +211,7 @@ gio('init', '1234567890', {'imp':false});
 当用户登录之后调用 setUserId API ，设置登录用户 ID 。
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | userId | String | 是 | 用户的登录用户ID |
 
 ```text
@@ -238,7 +238,7 @@ gio('clearUserId');
 在添加所需要发送的事件代码之前，需要在打点管理用户界面配置事件以及事件级变量。
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | eventId | String | 是 | 事件标识符 |
 | number | Number | 否 | 事件的数值，没有number参数时，事件默认加1；当出现number参数时，事件自增number的数值。 |
 | eventLevelVariables | JSON Object | 否 | 包含事件级变量的JSON对象，暨事件发生时所伴随的维度信息。 |
@@ -269,7 +269,7 @@ gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zheji
 发送页面级别的维度信息，在添加代码之前必须在打点管理界面上声明页面级变量。
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | key | String | 否 | 页面级变量的标识符 |
 | value | String | 否 | 页面级变量的值 |
 | pageLevelVariables | JSON Object | 否 | 包含页面级变量的JSON对象，暨页面级别的信息 |
@@ -295,7 +295,7 @@ gio('page.set', 'author', 'Zhang San');
 发送一个转化信息用于高级归因分析，在添加代码之前必须在打点管理界面上声明转化变量。
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | key | String | 否 | 转化变量的标识符 |
 | Value | String | 否 | 转化变量的值 |
 | conversionVariables | JSON Object | 否 | 包含转化变量的JSON对象 |
@@ -321,7 +321,7 @@ gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
 发送用户信息用于用户信息相关分析，在添加代码之前必须在打点管理界面上声明转化变量。
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | key | String | 否 | 用户变量的标识符 |
 | value | String | 否 | 用户变量的值 |
 | customerVariables | JSON Object | 否 | 包含用户变量的JSON对象 |

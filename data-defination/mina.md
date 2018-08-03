@@ -25,7 +25,7 @@ gio('track', eventName: string, properties: object)
 参数说明：
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | eventName | string | 是 | 事件标识符 |
 | properties | object | 否 | 事件级变量，即事件发生时所伴随的维度信息参数 |
 
@@ -48,7 +48,7 @@ gio('setVisitor', properties: object)
 参数说明：
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | properties | object | 是 | 用户级变量，用户额外的信息参数 |
 
 示例：
@@ -72,7 +72,7 @@ gio('setUser', properties: object)
 参数说明：
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | properties | object | 是 | 用户级变量，用户额外的信息参数 |
 
 示例：
@@ -94,7 +94,7 @@ gio('setPage', properties: object)
 参数说明：
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | properties | object | 是 | 页面级变量，页面额外的信息参数 |
 
 示例：
@@ -116,7 +116,7 @@ gio('setEvar', properties: object)
 参数说明：
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | properties | object | 是 | 转化级变量，转化信息 |
 
 示例：

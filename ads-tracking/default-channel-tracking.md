@@ -47,7 +47,7 @@ GrowingIO针对Google\(含DoubleClick\)、百度\(baidu\)、搜狗\(sogou\)、�
 utm参数与GrowingIO提供的维度对应关系如下：
 
 | 名称 | 维度 | 例子 | 含义 |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | 广告来源 | utm\_source | utm\_source＝baidu | 这个广告投放在百度上 |
 | 广告媒介 | utm\_medium | utm\_medium＝cpc | 广告类型是点击付费 |
 | 广告名称 | utm\_campaign | utm\_campaign＝tryitfree | 这次推广名称:tryitfree |
@@ -59,7 +59,7 @@ GrowingIO直接支持百度统计的参数解析；如果您的自主投放追�
 维度对应关系如下表所示：
 
 | 名称（百度统计） | hm 参数名（百度统计） | 含 义 | GIO 参数名 | GIO 维度 |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | 媒介平台 （＊） | hmsr | 广告所投放的平台，如：新浪、搜狐等 | utm\_source | 广告来源 |
 | 计划名称 | hmpl | 广告所属的推广计划，如：元旦促销 | utm\_medium | 广告媒介 |
 | 单元名称 | hmcu | 广告所属的推广单元，如：七夕促销 | utm\_campaign | 广告名称 |
@@ -99,7 +99,7 @@ POST **https://gta.growingio.com/api/v1/projects/project\_id/activities**
 #### 5.1 输入 {#51}
 
 | 字段名称\(\*为必填\) | 填写示例 | 中文含义 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | \*advertiser | 普通推广为"none" | 推广平台 |
 | \*href | www.growingio.com | 目标链接 |
 | \*name | 12.16增长大会 | 名称\(落地页命名\)不可重复 |
@@ -116,7 +116,7 @@ POST **https://gta.growingio.com/api/v1/projects/project\_id/activities**
 #### 5.2 输出 {#52}
 
 | 字段名称 | 示例 | 中文含义 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | id | a9a7jrPB | -- |
 | name | 12.16增长大会 | 名称\(落地页命名\) |
 | href | www.growingio.com | 目标链接 |
