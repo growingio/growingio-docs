@@ -20,7 +20,7 @@
   * [setPageVariable](ios-sdk.md#setpagevariable)
   * [setEvar](ios-sdk.md#setevar)
   * [setPeopleVariable](ios-sdk.md#setpeoplevariable)
-  * [setVisiotr](ios-sdk.md#setvisitor)
+  * [setVisitor](ios-sdk.md#setvisitor)
   * [setUserId](ios-sdk.md#setuserid)
   * [clearUserId](ios-sdk.md#clearuserid)
 * [验证 SDK 是否正常工作](ios-sdk.md#yan-zheng-sdk-shi-fou-zheng-chang-gong-zuo)
@@ -49,7 +49,7 @@
 
 #### （2）手动集成 SDK 
 
-* 下载 [2.4.2](https://assets.growingio.com/sdk/GrowingIO-iOS-SDK-2.4.0.zip) 版 iOS SDK
+* 下载 [2.4.2](https://assets.growingio.com/sdk/GrowingIO-iOS-SDK-2.4.2.zip) 版 iOS SDK
 * 解压 iOS SDK 压缩文件
 * 将 Growing.h 和 libGrowing.a 添加到 iOS 工程
 

@@ -668,7 +668,7 @@ gio.track("loanAmount", 80000, jsonObject);
 
 发送页面级别的信息，在添加代码之前必须在打点管理界面上声明页面级变量。
 
-使用此接口时，请先阅读 [**GrowingIO 对于页面的定义**](android-sdk.md#1growingio-dui-yu-ye-mian-de-ding-yi)。
+使用此接口时，请先阅读 [**GrowingIO 对于页面的定义**](android-sdk.md#1-growingio-dui-yu-ye-mian-de-ding-yi)。
 
 ```java
 // setPageVariable API原型
@@ -685,7 +685,7 @@ gio.setPageVariable(Fragment fragment, JSONObject pageLevelVariables);
 ```
 
 {% hint style="info" %}
-请注意这里的`activity`和`fragment`参数，[**它关乎GrowingIO对于页面的定义**](android-sdk.md#1growingio-dui-yu-ye-mian-de-ding-yi)。
+请注意这里的`activity`和`fragment`参数，[**它关乎GrowingIO对于页面的定义**](android-sdk.md#1-growingio-dui-yu-ye-mian-de-ding-yi)。
 
 参数选择当前界面上最后一个初始化完成的对象引用，例如一个`Activity`中嵌套多个`Fragment`情况，当前页面最后初始化完成的是`Fragment`，请确认当前页面`Fragment`，并且得到其当前引用，`new`对象将不会发送的哦。
 {% endhint %}
