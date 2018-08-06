@@ -21,7 +21,7 @@
   * [概览看板](dashboard/overview.md)
   * [小程序概览](dashboard/mina-overview.md)
   * [实时看板](dashboard/realtime.md)
-  * [业务场景](dashboard/ye-wu-chang-jing.md)
+  * [业务场景](dashboard/templates.md)
 * [广告监测](ads-tracking/README.md)
   * [推广网站](ads-tracking/web-marketing.md)
   * [推广 App](ads-tracking/app-marketing.md)
