@@ -47,7 +47,7 @@ URL Scheme的格式是growing.xxxxxxxxxxxxxxxx，它的获取方式有两种：
 * 新产品的 URL Scheme ：登录官网 -&gt;点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 点击“新建应用”-&gt; 选择添加Android应用 -&gt; 第二段中"此应用的 URL Scheme 为:growing.xxxxxxxxxxxxxxxx”中标黄字体。
 * 现有产品的 URL Scheme ：登录官网 -&gt;点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 找到对应产品的URL Scheme。
 
-![](../.gitbook/assets/image%20%289%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 ```groovy
 apply plugin: 'com.android.application'
@@ -375,7 +375,7 @@ GrowingIO.startWithConfiguration(this, new Configuration().setHashTagEnable(true
 
 
 
-![&#x70B9;&#x51FB;WebView&#x4E2D;&#x7684;&#x951A;&#x70B9;&#x94FE;&#x63A5;](../.gitbook/assets/image%20%2859%29.png)
+![&#x70B9;&#x51FB;WebView&#x4E2D;&#x7684;&#x951A;&#x70B9;&#x94FE;&#x63A5;](../.gitbook/assets/image%20%2863%29.png)
 
 SDK发送对应采集数据：
 
@@ -521,7 +521,7 @@ WebView.setWebChromeClient(WebChromeClient client);
 
 ## 自定义事件和变量 API
 
-您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，进行[数据分析](../data-analytics/)。除自动收集的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](../data-defination/events-metrics/manual-metrics.md)和[变量](../data-defination/dimensions/manual-dimensions.md)，下面介绍自定义事件和变量 API 使用方法，后文简称埋点事件API。
+您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，进行[数据分析](../data-analytics/)。除自动收集的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](../data-definition/custom-event/)和[变量]()，下面介绍自定义事件和变量 API 使用方法，后文简称埋点事件API。
 
 
 
@@ -1034,11 +1034,11 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 
 ### 圈选功能验证
 
-请先依据[圈选文档](../data-defination/events-metrics/circle-metrics/app-circle.md)，唤醒圈选功能，主要检查元素是否都可圈选，重点尝试WebView内部元素是否可圈。
+请先依据[圈选文档](../data-definition/circle/app.md)，唤醒圈选功能，主要检查元素是否都可圈选，重点尝试WebView内部元素是否可圈。
 
 当显示高亮则证明可圈，如图所示：
 
-![&#x5143;&#x7D20;&#x9AD8;&#x4EAE;&#x8BC1;&#x660E;&#x53EF;&#x5708;](../.gitbook/assets/image%20%2869%29.png)
+![&#x5143;&#x7D20;&#x9AD8;&#x4EAE;&#x8BC1;&#x660E;&#x53EF;&#x5708;](../.gitbook/assets/image%20%2876%29.png)
 
 \*\*\*\*
 
@@ -1191,7 +1191,7 @@ Tips：建议您在开发中，使用 `DebugMode` 或者 [**Mobile Debugger**](g
 
 * CS1字段，会强制命名为“登陆用户ID”，并且上传接口与其他变量不同。
 * CS2-10字段，会迁移至“应用级变量”，应用级变量与CS字段的使用方式无任何区别。
-* CS11-20字段，会迁移至[“用户变量”](../data-defination/dimensions/manual-dimensions.md#yong-hu-bian-liang)。两者的区别主要在于：用户变量支持自定义的归因方式。
+* CS11-20字段，会迁移至[“用户变量”]()。两者的区别主要在于：用户变量支持自定义的归因方式。
 
 **2.1 上传接口：**
 
@@ -1254,13 +1254,13 @@ gio.setPageVariable(Fragment fragment, JSONObject pageLevelVariables);
 
 **2.2 GrowingIO 后台配置**
 
-您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档](../data-defination/dimensions/manual-dimensions.md#ye-mian-ji-bian-liang)。
+您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档]()。
 
 ### **3. 迁移页面属性字段（PS字段）**
 
 如果您未做页面属性字段上传，请忽略此部分。
 
-类似于用户属性字段，在 2.x 版本中，页面属性字段被迁移到了“[页面级变量](../data-defination/dimensions/manual-dimensions.md#ye-mian-ji-bian-liang)”。与页面属性字段不同的是，**页面级变量相当于过去的 PS 字段，不再存在过去的 PG 字段**。
+类似于用户属性字段，在 2.x 版本中，页面属性字段被迁移到了“[页面级变量]()”。与页面属性字段不同的是，**页面级变量相当于过去的 PS 字段，不再存在过去的 PG 字段**。
 
 **3.1 上传接口**
 
@@ -1290,7 +1290,7 @@ gio.setPageVariable(Fragment fragment, JSONObject pageLevelVariables);
   
 **3.2 GrowingIO 后台配置**
 
-您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档](../data-defination/dimensions/manual-dimensions.md#ye-mian-ji-bian-liang)。
+您需要在 **“管理” - “自定义事件和变量” 页面中的 “页面级变量” Tab 页**进行配置。配置方式请参考[相关帮助文档]()。
 
 ### 4. 迁移自定义事件（埋点事件）
 
@@ -1355,7 +1355,7 @@ URL Scheme的格式是growing.xxxxxxxxxxxxxxxx，它的获取方式有两种
 1. 添加新产品：登录官网 -&gt;点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 点击“新建应用”-&gt; 选择添加Android应用 -&gt; 第二段中"此应用的 URL Scheme 为:growing.xxxxxxxxxxxxxxxx”中标黄字体。
 2. 现有产品：登录官网 -&gt; 点击项目选择框 -&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 找到对应产品的URL Scheme。
 
-![](../.gitbook/assets/image%20%2867%29.png)
+![](../.gitbook/assets/image%20%2874%29.png)
 
 ```groovy
 apply plugin: 'com.android.application'
@@ -1740,9 +1740,9 @@ APP进入一个页面之后，无论其中有多少层`Fragment`嵌套，200ms �
 
 确认当前页面方法有三种：
 
-1.[圈选](../data-defination/events-metrics/circle-metrics/app-circle.md)，查看圈选页面为当前页面
+1.[圈选](../data-definition/circle/app.md)，查看圈选页面为当前页面
 
-![](../.gitbook/assets/image%20%2850%29.png)
+![](../.gitbook/assets/image%20%2854%29.png)
 
 2.[查看日志](android-sdk.md#setdebugmode)，进入页面发送的`page`的`p`为当前的页面
 

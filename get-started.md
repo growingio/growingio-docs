@@ -22,9 +22,9 @@ description: 欢迎使用 GrowingIO，这是一份新同学使用 GrowingIO 指�
 
 GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「埋点 - 自定义事件和变量」：
 
-1. 通过 [web 圈选](data-defination/events-metrics/circle-metrics/web-circle.md) 、[iOS / Android 移动端圈选](data-defination/events-metrics/circle-metrics/app-circle.md)进行数据定义。
-2. 通过埋点创建[自定义事件](data-defination/events-metrics/manual-metrics.md)和[变量](data-defination/dimensions/manual-dimensions.md)
-3. 了解 [GrowingIO 数据模型](data-defination/data-model.md) ，以及产品内[预定义指标](data-defination/events-metrics/predefined-metrics.md)和[维度](data-defination/dimensions/predefined-dimensions.md)的基本解释。
+1. 通过 [web 圈选](data-definition/circle/web.md) 、[iOS / Android 移动端圈选](data-definition/circle/app.md)进行数据定义。
+2. 通过埋点创建[自定义事件](data-definition/custom-event/)和[变量]()
+3. 了解 [GrowingIO 数据模型](data-model/) ，以及产品内[预定义指标]()和[维度]()的基本解释。
 
 #### 第四步：使用数据分析工具 {#第四步：使用数据分析工具}
 
@@ -39,9 +39,9 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 9. 实时分析 [文档](dashboard/realtime.md)
 10. 概览分析 [文档](dashboard/overview.md)
 11. **小程序概览** [文档](dashboard/mina-overview.md)
-12. web 圈选 [文档](data-defination/events-metrics/circle-metrics/web-circle.md) \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)
-13. App 端圈选 [文档](data-defination/events-metrics/circle-metrics/app-circle.md) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)
-14. **小程序圈选** [文档](data-defination/events-metrics/circle-metrics/mina-circle.md) 
+12. web 圈选 [文档](data-definition/circle/web.md) \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)
+13. App 端圈选 [文档](data-definition/circle/app.md) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)
+14. **小程序圈选** [文档](data-definition/circle/minp.md) 
 
 #### 第五步：开始进行分析 {#第五步：开始进行分析}
 
@@ -59,7 +59,7 @@ GrowingIO 所有分析能力都同样支持小程序，同时，还对小程序�
 
 1.集成[小程序 SDK ](sdk-integration/mina-sdk.md)，以进行数据采集
 
-2.通过[小程序圈选](data-defination/events-metrics/circle-metrics/mina-circle.md)来进行数据定义，同时支持[打点事件和变量]()
+2.通过[小程序圈选](data-definition/circle/minp.md)来进行数据定义，同时支持[打点事件和变量]()
 
 3.通过[小程序概览](dashboard/mina-overview.md)了解数据情况
 

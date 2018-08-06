@@ -1,8 +1,8 @@
 # Web 圈选
 
-* [定义页面](web-circle.md#11-ding-yi-ye-mian)
-* [定义元素](web-circle.md#12-ding-yi-yuan-su)
-* [常见问题 FAQ](web-circle.md#2-faq)
+* [定义页面](web.md#11-ding-yi-ye-mian)
+* [定义元素](web.md#12-ding-yi-yuan-su)
+* [常见问题 FAQ](web.md#2-faq)
 
 GrowingIO 全量采集用户行为数据，你可以通过「圈选」来定义元素和页面，作为数据分析的基础指标。
 
@@ -26,13 +26,13 @@ URL**示意：**www.xxx.com **/** 12345/678/123 **?** id=1&ig=2
 
 如果页面中有 **\#**，请先设置后再进行数据采集和分析：我们默认不会把 hashtag 识别成页面 URL 的一部分。对于使用 hashtag 作为单页应用页面切换的网站来说，请在工程师的帮助下，添加下面的代码，使用`enableHT`来监听 hashtag 的变化，并区分页面来收集页面数据，每次 hashtag 改变都会触发一次PV，hashtag 的信息也会记录在页面 URL 中。
 
-如果你的[ SDK 是最新版本](../../../sdk-integration/web-js-sdk.md)，请添加这段代码：
+如果你的[ SDK 是最新版本](../../sdk-integration/web-js-sdk.md)，请添加这段代码：
 
 ```text
 gio('config', {'hashtag':true});
 ```
 
-如果你 [SDK 是旧版本](../../../sdk-integration/web-js-sdk.md#2-1)，请添加：
+如果你 [SDK 是旧版本](../../sdk-integration/web-js-sdk.md#2-1)，请添加：
 
 ```text
 _vds.push(['enableHT', true])
@@ -280,9 +280,9 @@ GrowingIO 可以统计原生应用中的 H5 页面和 H5 做成的应用。
 
 * 原生应用中的H5页面，以及嵌在应用中的h5，
 
-  请参考[iOS/Android圈选指南](app-circle.md)​
+  请参考[iOS/Android圈选指南](app.md)​
 
-* 用H5做的应用请参考[web圈选指南](web-circle.md)​
+* 用H5做的应用请参考[web圈选指南](web.md)​
 
 **4.为什么圈选的元素只有点击量，没有浏览量？**
 
@@ -327,5 +327,5 @@ X-Frame-Options: Allow-From https://www.growingio.com
 
 GrowingIO根据您网站HTML结构识别和定义页面上的元素。有的时候网站上的HTML标签写法完全相同，呈现在页面上的几个同类元素，可能HTML代码完全相同。此时GrowingIO采集、圈选数据时无法区分开。我们通过HTML标签的id和class来区分元素，这种情况下您可以在需要区分的标签class中添加一些字符串用于区分。
 
-**仍有疑问？请参考**[**常见问题－圈选部分**](../../../faq/faq-circle.md)​
+**仍有疑问？请参考**[**常见问题－圈选部分**](../../faq/faq-circle.md)​
 

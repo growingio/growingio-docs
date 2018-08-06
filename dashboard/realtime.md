@@ -50,7 +50,7 @@ description: 分钟级别的监控看板
 
 选择指标，可以看到目前圈选过的所有的指标，点击您关心的指标。
 
-了解[圈选](../data-defination/events-metrics/circle-metrics/)
+了解[圈选](../data-definition/circle/)
 
 * **选择图表样式**
 

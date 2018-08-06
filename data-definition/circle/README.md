@@ -1,4 +1,4 @@
-# 无埋点圈选事件
+# 无埋点圈选
 
 圈选，是利用GrowingIO进行数据分析之前的数据定义过程。您需要根据业务需求，将需要分析的关键事件通过可视化地方式在您的产品界面中定义出来，这个过程，就是圈选。
 
@@ -8,19 +8,19 @@ GrowingIO提供了丰富的数据定义方式，您可以对您的网页、iOS A
 
 web 圈选，对加载了 JS SDK 的产品进行数据定义：
 
-{% page-ref page="web-circle.md" %}
+{% page-ref page="web.md" %}
 
 app 圈选，对 app 进行数据定义：
 
-{% page-ref page="app-circle.md" %}
+{% page-ref page="app.md" %}
 
 app 圈选，对小程序进行数据定义：
 
-{% page-ref page="mina-circle.md" %}
+{% page-ref page="minp.md" %}
 
 批量管理圈选创建的事件：
 
-{% page-ref page="circle-metrics-management.md" %}
+{% page-ref page="metric-management/" %}
 
 ## 圈选命名规范
 

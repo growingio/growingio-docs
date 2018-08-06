@@ -116,7 +116,7 @@ description: 最有效的转化分析利器
 
 #### 2.2.3 使用打点事件创建漏斗 {#使用自定义（打点）事件创建漏斗}
 
-漏斗中的可选事件，包括了[圈选事件](../data-defination/events-metrics/circle-metrics/)和[打点事件](../data-defination/events-metrics/manual-metrics.md)，可以在同一个漏斗分析不同步骤中同时使用圈选和打点事件。
+漏斗中的可选事件，包括了[圈选事件](../data-definition/circle/)和[打点事件](../data-definition/custom-event/)，可以在同一个漏斗分析不同步骤中同时使用圈选和打点事件。
 
 除了上述案例中演示的对所有步骤同时过滤的方法外，漏斗分析支持对每个步骤单独添加过滤条件。
 
