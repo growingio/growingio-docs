@@ -462,6 +462,7 @@ evar：新增类型
 | linkName | link\_name | string\(60\) | 链接名称 | 测试链接 | 2018/5/8 开始生效 |
 | campaignName | campaign\_name | string\(60\) | 活动名称 | 双十一推广 | 2018/5/8 开始生效 |
 | channelName | channel\_name | string\(60\) | 渠道名称 | 今日头条 | 2018/5/8 开始生效 |
+| adsVariable | （新加） | map&lt;string, string&gt; | 自定义维度 | {"store\_id" -&gt; "abcd"} | 2018/8/8 开始生效 |
 
 #### ads\_track\_click 请求导出字段 {#adstrackclick-请求导出字段}
 
@@ -482,6 +483,7 @@ evar：新增类型
 | linkName | link\_name | string\(60\) | 链接名称 | 测试链接 | 2018/5/8 开始生效 |
 | campaignName | campaign\_name | string\(60\) | 活动名称 | 双十一推广 | 2018/5/8 开始生效 |
 | channelName | channel\_name | string\(60\) | 渠道名称 | 今日头条 | 2018/5/8 开始生效 |
+| adsVariable | （新加） | map&lt;string, string&gt; | 自定义维度 | {"store\_id" -&gt; "1234"} | 2018/8/8 开始生效 |
 
 
 
