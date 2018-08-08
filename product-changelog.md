@@ -31,6 +31,7 @@ description: 我们一直在迭代！
 1. 小程序概览，接入小程序SDK，预置6个小程序概览内容，包括：增长指标、获客场景、分享场景、页面分析、用户画像、错误分析；
 2. 小程序圈选：支持直接定义页面（本期暂时不支持query的定义）和页面上的点击元素；
 3. 用户分群：进入详情页编辑分群时，可以将分群另存为1个新的分群。
+4. web 圈选插件上线：插件下载地址  [https://s.growingio.com/5EoKZl](https://s.growingio.com/5EoKZl) ；插件安装使用文档 [https://s.growingio.com/2Z4mBB](https://s.growingio.com/2Z4mBB) 。
 
 **优化：**
 

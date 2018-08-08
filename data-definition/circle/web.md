@@ -1,9 +1,5 @@
 # Web 圈选
 
-* [定义页面](web.md#11-ding-yi-ye-mian)
-* [定义元素](web.md#12-ding-yi-yuan-su)
-* [常见问题 FAQ](web.md#2-faq)
-
 GrowingIO 全量采集用户行为数据，你可以通过「圈选」来定义元素和页面，作为数据分析的基础指标。
 
 在没有定义过的情况下，GrowingIO 保留和回溯元素过去 7 天的点击量，页面过去 7 天的浏览量。
@@ -210,7 +206,17 @@ GrowingIO 互联网金融解决方案落地页 [**https://www.growingio.com**](h
 
 然后在「事件分析」中使用「元素内容」的维度进行分析。
 
-## 2.FAQ
+### 1.3 插件圈选
+
+GrowingIO 开发了支持 web 圈选的 Chrome 插件：
+
+插件下载地址 [https://s.growingio.com/5EoKZl](https://s.growingio.com/5EoKZl)  
+  
+插件安装使用文档 [https://s.growingio.com/2Z4mBB](https://s.growingio.com/2Z4mBB)
+
+安装成功后，直接在 Chrome 浏览器中打开网站 url ，登录你的账号，圈选页面和元素的方式与上面相同。
+
+## 2.常见问题 FAQ
 
 ### **2.1 如何定义“一组同类元素之和”？**
 
@@ -230,27 +236,19 @@ GrowingIO 互联网金融解决方案落地页 [**https://www.growingio.com**](h
 
 ![](https://docs.growingio.com/.gitbook/assets/ping-mu-kuai-zhao-20180319-shang-wu-11.24.51.png)
 
-## 3.圈选元素的新增文案（web）
+## 3.不能圈选的可能原因以及对应方法（web）
 
-### **3.1 元素标签**
+### **3.1 不能圈选的原因**
 
-元素类型是通过 HTML 标签进行标记的，标签是 HTML 语言中最基本的单位。圈选弹出框里会告诉用户圈到的元素类型。
+不能圈选的原因包含了，但不仅限于：
 
-具体可能圈选到的标签可以参考：[https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element)​
+* 元素包含属性：data-growing-ignore， 因此不可以被圈选。如果需要圈选该元素，请去除该属性。 
+* 密码框不支持被圈选。 
+* 元素已经被圈选，因此不能被重复圈选。 
+* 元素是叶子节点，无文本内容，且元素的占屏幕面积超过50%，因此不能被圈选。如果需要圈选该元素，请添加data-growing-circle属性。
+*  元素所在的 Dom 嵌套层数过多，不在倒数后两层；或者层数符合但是没有实际内容，因此不能被圈选。
 
-### **3.2 圈选到容器的情况**
-
-我们认为的“容器”是嵌套了一个或多个最底层元素的元素。当所圈选的元素是一个有嵌套关系的容器时，为了方便您的圈选，我们对这些最底层元素也同时做了高亮处理，高亮的元素都是支持圈选的。
-
-我们对于容器关系的元素圈选，容器内的元素点击数计算会有以下两种情况： 1. 当前选中容器是类型为 A 的超链接元素，该超链接元素的点击数包含其嵌套区域内部所有元素的点击数总和。 2. 在其他情况下，容器本身的点击数不包含内部所嵌套其他元素的点击数。如果需要整个容器内的点击数总和，请分别圈选该容器内部的各个元素后使用合并简单指标进行计算点击数。
-
-## 4.不能圈选的可能原因以及对应方法（web）
-
-### **4.1 不能圈选的原因**
-
-不能圈选的原因包含了，但不仅限于： 1. 元素包含属性：data-growing-ignore， 因此不可以被圈选。如果需要圈选该元素，请去除该属性。 2. 密码框不支持被圈选。 3. 元素已经被圈选，因此不能被重复圈选。 4. 元素是叶子节点，无文本内容，且元素的占屏幕面积超过50%，因此不能被圈选。如果需要圈选该元素，请添加data-growing-circle属性。 5. 元素所在的Dom嵌套层数过多，不在倒数后两层；或者层数符合但是没有实际内容，因此不能被圈选。
-
-### **4.2 data-growing-circle属性的使用帮助：**
+### **3.2 data-growing-circle 属性的使用帮助：**
 
 元素是叶子节点，无文本内容，且元素的占屏幕面积超过50%，因此不能被圈选。如果需要圈选该元素，请添加data-growing-circle属性。例如 ：
 
@@ -258,13 +256,13 @@ GrowingIO 互联网金融解决方案落地页 [**https://www.growingio.com**](h
  <div id= "d1" style="border: 1px solid black; width: 80%; height: 80%"></div>
 ```
 
-本来不可以圈选。在添加data-growing-circle 属性后，既可以圈选：
+本来不可以圈选。在添加data-growing-circle 属性后可以圈选：
 
 ```text
 <div  id= "d1" style="border: 1px solid black; width: 80%; height: 80%" data-growing-circle></div>
 ```
 
-## 5.常见问题（web）
+## 4.常见问题（web）
 
 **1.如果我的页面改版，现在标记的指标是不是需要重新定义？**
 
