@@ -26,6 +26,10 @@ GrowingIO 支持通过离线的方式批量上传登录用户变量，配合 SDK
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
+{% api-method-parameter name="Access-Token" type="string" required=true %}
+public Key
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="Content-Type" type="string" required=true %}
 application/json
 {% endapi-method-parameter %}
