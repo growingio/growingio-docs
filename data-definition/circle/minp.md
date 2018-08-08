@@ -41,11 +41,15 @@
 
 在定义“浏览电影列表页事件”的时候，可以定义页面路径 pages/list/list 的页面 ；进一步，想了解具体浏览的是什么类型和分类时，就可以通过“页面级变量” 的功能来实现定义。
 
-点击“页面级变量”tab，GrowingIO会自动根据页面查询条件（页面路径？后的内容），抓取可定义的key（标识符），已被定义过的页面级变量，会被标记为已定义，且不能再次被定义；未被定义的标识，会显示“立刻定义”。![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LIjrnMeRJp_VAJty9Bq%2F-LIkKu23D79bXIAVYf-x%2Fimage.png?alt=media&token=86726fb0-bb63-467b-bfdf-9cbca3721757)
+点击“页面级变量”tab，GrowingIO会自动根据页面查询条件（页面路径？后的内容），抓取可定义的key（标识符），已被定义过的页面级变量，会被标记为已定义，且不能再次被定义；未被定义的标识，会显示“立刻定义”。
+
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LIjrnMeRJp_VAJty9Bq%2F-LIkKu23D79bXIAVYf-x%2Fimage.png?alt=media&token=86726fb0-bb63-467b-bfdf-9cbca3721757)
 
 点击立即定义后，给标识符取一个变量名称，点击“确定”，即保存成了一个可用的页面级变量，并且在**全局生效**。
 
-全局生效的含义是：type同时会对有type这个标识的电影详情页生效，即在定义电影详情页时，页面级变量type会自动标记为被定义。![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LIjrnMeRJp_VAJty9Bq%2F-LIkQu0XIrmbN5-5QfEI%2Fimage.png?alt=media&token=7bab3e2a-aaf1-42f1-94d8-5aee46c37d74)
+全局生效的含义是：type同时会对有type这个标识的电影详情页生效，即在定义电影详情页时，页面级变量type会自动标记为被定义。
+
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LIjrnMeRJp_VAJty9Bq%2F-LIkQu0XIrmbN5-5QfEI%2Fimage.png?alt=media&token=7bab3e2a-aaf1-42f1-94d8-5aee46c37d74)
 
 ### **页面级变量使用的场景** {#page-dimensions-analysis-scene}
 
