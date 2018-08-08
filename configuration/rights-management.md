@@ -220,7 +220,7 @@
 
 Step1.点击项目下拉列表，进入到用户及权限管理界面
 
-![](../.gitbook/assets/image%20%2845%29.png)
+![](../.gitbook/assets/image%20%2846%29.png)
 
 Step2.点击左侧栏下方的新建「自定义角色」
 
