@@ -58,6 +58,7 @@
   //custom page code end here
 
   gio('send');
+  
 </script>
 <!-- End GrowingIO Analytics code version: 2.1 -->
 ```
