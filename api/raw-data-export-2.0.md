@@ -7,6 +7,16 @@
 * [3.原始数据导出版本和GrowingIO数据主版本（SDK 版本）关系](raw-data-export-2.0.md#sdk-explaination)
 * [4.原始数据导出 2.0 和原始数据导出 1.0 主要区别](raw-data-export-2.0.md#changelog)
 * [5.原始数据导出 2.0 导出数据字段说明](raw-data-export-2.0.md#metadata)
+  * [visit](raw-data-export-2.0.md#metadata_visit)
+  * [page](raw-data-export-2.0.md#metadata_page)
+  * [action](raw-data-export-2.0.md#metadata_action)
+  * [action\_tag](raw-data-export-2.0.md#metadata_action_tag) /  [rules](raw-data-export-2.0.md#metadata_rule)
+  * [custom\_event](raw-data-export-2.0.md#metadata_custom_event)
+  * [pvar](raw-data-export-2.0.md#metadata_pvar)
+  * [evar](raw-data-export-2.0.md#metadata_evar)
+  * [ads\_track\_click](raw-data-export-2.0.md#metadata_ads_click)
+  * [ads\_track\_activation](raw-data-export-2.0.md#metadata_ads_activation)
+* [6.关于接口版本1.0升级到2.0注意事项](raw-data-export-2.0.md#upgrade)
 
 原始数据导出为付费功能，且只能导出从开通之日起的原始数据，原始数据仅保留15天，请定期下载。数据导出一般延迟为 30 分钟，比如早上 8 点到 9 点之间的数据，一般 9:30 会准备好。每天凌晨因为需要运行天级别的统计任务，所以导出任务会延迟 1-2 小时，在导出数据时请判断  `status` 字段 。
 
@@ -90,7 +100,7 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
   "status": "",
   "downloadLinks": [],
@@ -99,7 +109,7 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
   "exportDate": "",
   "exportVersion": "",
   "requestTime": "",
-"errorMsg": ""
+  "errorMsg": ""
 }
 ```
 {% endapi-method-response-example %}
@@ -158,7 +168,7 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
     "status": "FINISHED",
     "downloadLinks": {
@@ -296,7 +306,7 @@ evar：新增类型
 
 ### 5.原始数据导出 2.0 导出数据字段说明 {#metadata}
 
-#### page请求导出字段 {#page请求导出字段}
+#### page请求导出字段 {#metadata_page}
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -337,9 +347,7 @@ evar：新增类型
 | pageRequestId | id | string\(23\) | 页面请求ID（page request id） | 1521010820647fa5a9314e6 | GrowingIO系统内部用于标识一个唯一的页面请求的ID |
 | vstRequestId | visit\_id | string\(16\) | 访问请求ID（visit request id） | c7db72a5841506bd | GrowingIO系统内部用于标识一个访问请求的ID |
 
-#### vst请求导出字段 {#vst请求导出字段}
-
-
+#### vst请求导出字段 {#metadata_visit}
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -373,7 +381,11 @@ evar：新增类型
 | androidId | （新加） | string\(16\) | androidId | 6284760c2926bcd5 | 安卓系统的一个ID |
 | IMEI | （新加） | string\(16\) | IMEI（International Mobile Equipment Identity） | 867459000000000 | 国际移动设备识别码 |
 
-#### action请求导出字段 {#action请求导出字段}
+> **visit数据注意事项**
+
+API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接口中已经删除。原因是这三个字段实际由GrowingIO内部库通过**`解析IP、地理位置`**得到的结果，可能与客户自己解析出来的结果存在差异，这样会造成客户识别的困扰。
+
+#### action请求导出字段 {#metadata_action}
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -391,7 +403,7 @@ evar：新增类型
 | pageRequestId | page\_id | string\(23\) | GrowingIO系统页面请求内部ID | 1521010820647fa5a9314e6 | 页面唯一的id，用于与page数据join |
 | actionRequestId | action\_id | string\(30\) | GrowingIO系统Action请求内部ID | web的action\_id以wa开头，mobile以ma开头 | 标签事件的唯一id |
 
-#### cstm请求导出字段 {#cstm请求导出字段}
+#### cstm请求导出字段 {#metadata_custom_event}
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -409,7 +421,7 @@ evar：新增类型
 | loginUserId | \_cs1（新旧不同） | string\(200\) | 登录用户ID（customer attributes 1） | user12345 | 登录用户ID，推荐使用那些不能定位到个人的ID信息，通常为企业内部使用的CRM ID |
 | pageRequestId | （新加） | string\(23\) | GrowingIO系统页面请求内部ID | 15208995970115f7e2c153f | 该自定义事件所归属的 page 事件 id |
 
-#### pvar请求导出字段 {#pvar请求导出字段}
+#### pvar请求导出字段 {#metadata_pvar}
 
 | 原始数据导出 2.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -423,7 +435,7 @@ evar：新增类型
 | pageVariable | map&lt;string, string&gt; | 页面级变量（page variable） | {"category": "funnel"} | 页面级变量键值对 |
 | pageRequestId | string\(23\) | GrowingIO系统页面请求内部ID | 15208995970115f7e2c153f | 该页面级变量所归属的 page 事件 id |
 
-#### evar请求导出字段 {#evar请求导出字段}
+#### evar请求导出字段 {#metadata_evar}
 
 | 原始数据导出 2.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -434,15 +446,31 @@ evar：新增类型
 | domain | string\(100\) | 域名（domain） | www.growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
 | conversionVariable | map&lt;string, string&gt; | 转化变量（conversion variable） | {"keyword":"retention"} |  |
 
-#### action\_tag导出字段 {#actiontag导出字段}
+#### action\_tag导出字段 {#metadata_action_tag}
 
 | 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| sendTime | sendtime | bigint | 发送时间（send time） | 1521331200412 | 请求在SDK发送的时间戳 |
-| actionRequestId | action\_id |  | GrowingIO系统Action内部ID | wa:0:24:1356477892:0 | GrowingIO系统内部用于标识一个action请求的ID |
-| ruleId | rule\_id |  | GrowingIO系统Rule内部ID | 99ae0dec | GrowingIO系统内部用于标识一个规则（Rule）的ID |
+| sendTime | sendtime | bigint | 数据发送时间（send time） | 1521331200412 | 请求在SDK发送的时间戳 |
+| actionRequestId | action\_id | string\(30\) | GrowingIO系统Action内部ID | wa:0:24:1356477892:0 | 用于标识一个action请求的ID，`web的以wa开头`，`mobile的以ma开头` |
+| ruleId | rule\_id | string\(8\) | GrowingIO系统Rule内部ID | 99ae0dec | 用于标识圈选标签的唯一ID，由字母和数字组成 |
 
-#### ads\_track\_activation 请求导出字段 {#adstrackactivation-请求导出字段}
+#### rules（从[统计数据的规则逻辑API](https://docs.growingio.com/docs/api/reporting-api#rule-api)获取） {#metadata_rule}
+
+| 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- |
+| rule\_id | string\(8\) | GrowingIO系统Rule内部ID | 99ae0dec | 用于标识圈选标签的唯一ID，有字母和数字组成 |
+| name | string\(200\) | Rule的名称 | xxx | 圈选标签的名称，该名称不可以作为区分Rule唯一的标识 |
+| ruleType | string\(10\) | Rule的类型，如按钮的点击或曝光 | clck | 值包括page、imp、clck、chng、sbmt |
+
+> 备注
+
+1. 在基础部分数据导出（visit，page，action）之外，提供圈选数据与action级别数据的映射部分。
+2.  **rules**表示客户在GrowingIO平台上圈选的标签，rule\_id是其唯一标识。
+3.  通过**action**中的`action_id`与**action\_tag**中的`action_id`聚合，然后绑定**action\_tag**中的`rule_id`到**rules**中对应的`rule_id、name`到action的数据上。这样就可以通过规则名称进行数据分析，识别导出数据中圈选部分的数据情况。
+4. 建议规则建立时保持名称的唯一性，GrowingIO平台不保证规则名称的唯一。
+5. 相同的名称下可能有多个规则类型，`规则名称+规则类型`才能区分开，此处类型与基础数据**action**中的`请求事件类型`保持一致。
+
+#### ads\_track\_activation 请求导出字段 {#metadata_ads_activation}
 
 | 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -462,9 +490,8 @@ evar：新增类型
 | linkName | link\_name | string\(60\) | 链接名称 | 测试链接 | 2018/5/8 开始生效 |
 | campaignName | campaign\_name | string\(60\) | 活动名称 | 双十一推广 | 2018/5/8 开始生效 |
 | channelName | channel\_name | string\(60\) | 渠道名称 | 今日头条 | 2018/5/8 开始生效 |
-| adsVariable | （新加） | map&lt;string, string&gt; | 自定义维度 | {"store\_id" -&gt; "abcd"} | 2018/8/8 开始生效 |
 
-#### ads\_track\_click 请求导出字段 {#adstrackclick-请求导出字段}
+#### ads\_track\_click 请求导出字段 {#metadata_ads_click}
 
 | 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -483,7 +510,13 @@ evar：新增类型
 | linkName | link\_name | string\(60\) | 链接名称 | 测试链接 | 2018/5/8 开始生效 |
 | campaignName | campaign\_name | string\(60\) | 活动名称 | 双十一推广 | 2018/5/8 开始生效 |
 | channelName | channel\_name | string\(60\) | 渠道名称 | 今日头条 | 2018/5/8 开始生效 |
-| adsVariable | （新加） | map&lt;string, string&gt; | 自定义维度 | {"store\_id" -&gt; "1234"} | 2018/8/8 开始生效 |
+
+### 6.关于接口版本1.0升级到2.0注意事项 {#upgrade}
+
+如果您目前使用的API版本是1.0，想要升级为2.0，请联系客户成功经理。如果您已经从1.0升级到了2.0，请注意如下事项：
+
+* 从API2.0接口开通那一刻起，API1.0接口依旧可以继续使用，但是**`一个月`**之后就会失效，请您在过渡期内尽快升级您的使用代码。
+* API2.0接口从开通的那一刻起就开始生效，比如您于`2018-08-01 10:30:00`升级到了API2.0接口，那么API2.0接口就可以下载`2018-08-01 11:00:00`之后的数据了，但是之前的数据还需要通过API1.0去获取。
 
 
 
