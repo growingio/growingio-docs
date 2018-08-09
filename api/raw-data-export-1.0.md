@@ -49,7 +49,7 @@ Status Code: 200 OK
 
 使用下载接口时，可以先检查 status 字段，为 FINISHED 时才拿 downlinks 进行下载。
 
-### 2.导出数据字段说明
+## 2.导出数据字段说明
 
 GrowingIO全量数据划分成三个级别，visit，page，action
 
@@ -140,7 +140,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 | index | 列表序号 | bigint | 列表类型标签的序号 | 用于标记列表内的第几项，分析列表中最常被点击的内容或者首项推广效果等等 |
 | info | 事件附加信息 | string\(200\) | 用户自定义事件信息 | 对应growingAttributesInfo设置的字段信息 |
 
-### 3.字段备注
+## 3.字段备注
 
 1. 三张数据表分别代表GIO定义的三种数据级别，访问级别（visit），页面级别（page）与标签级别（action）。visit代表访问级别的数据，按照session定义访问，page代表页面级别数据，打开的浏览页面就是一条记录，一条访问级别数据对应多条页面级别，action级别数据代表标签数据，定义页面元素标签的显示，点击，提交等事件，三者形成整个用户行为数据层级。目前导出的数据类型除了action下的imp\(impression\)类型因为数据量过大不可导出，其它数据都已经导出。
 2. sendTime与eventTime的区别在于前者相当于是GIO平台接收到的时间，而eventTime是事件在客户端真正发生的时间，客户可以根据eventTime重现用户操作时间线。
@@ -269,7 +269,7 @@ GET [https://www.growingio.com/projects/project\_id/activities.json](https://www
 | uv | 100 | 新用户，通过GIO广告链接访问广告，并在过去90天内首次使用您的App或网站的用户。用户首次使用后，数据有1小时左右的延迟。 |
 | tc | 120 | 链接访问，GIO广告链接的访问次数，通常通过点击广告位或者扫码访问。用户访问后，数据有1小时左右的延迟。 |
 
-### 附录 {#附录}
+## 附录
 
 #### 数据处理建议 {#数据处理建议}
 
