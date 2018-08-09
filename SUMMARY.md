@@ -92,6 +92,7 @@
   * [数据安全](faq/faq-privacy.md)
   * [基本问题](faq/untitled.md)
   * [产品使用](faq/chan-pin-shi-yong.md)
+  * [数据统计差异](faq/shu-ju-tong-ji-cha-yi.md)
 * [内容贡献者](contributor.md)
 * [我要反馈](https://growingio.jinshuju.com/f/YeeZy7)
 
