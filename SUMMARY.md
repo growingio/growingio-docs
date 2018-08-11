@@ -78,7 +78,7 @@
   * [爬虫规则](configuration/bot-rule.md)
 * [API](api/README.md)
   * [GrowingIO API 认证](api/authentication.md)
-  * [原始数据导出 2.0 API](api/raw-data-export-2.0.md)
+  * [原始数据导出 2.0 API](api/raw-data-export-new.md)
   * [广告监测链接创建服务 API](api/ads-tracking-api.md)
   * [统计数据导出 API](api/reporting-api.md)
   * [用户变量上传 API](api/user-property-upload.md)
