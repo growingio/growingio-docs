@@ -209,7 +209,7 @@ GIO 提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
 1 配置链接维度参数
 
-![](../.gitbook/assets/image%20%2882%29.png)
+![](../.gitbook/assets/image%20%2881%29.png)
 
 2 在GIO的短链后拼接定义的维度参数。在推广管理模块创建一条短链，形如：https://gio.ren/r3jEmQe 这样的链接，可以直接使用Query String方式拼接成：https://gio.ren/r3jEmQe?city=beijing 。则投放北京区域可以直接使用此链接。
 
