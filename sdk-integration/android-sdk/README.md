@@ -1025,6 +1025,8 @@ GrowingIO.getInstance().clearUserId();
 
 ### setVisitor
 
+**2.4.0以上版本支持**
+
 当用户未登录时，定义用户属性变量，也可用于A/B测试上传标签。
 
 ```java
@@ -1033,9 +1035,9 @@ GrowingIO.getInstance().setVisitor(JSONObject visitorVar)
 
 **参数说明：**
 
-| 参数名称 | 参数类型 | 必填 | 说明 |
+| 参数名称 | 参数类型 | 必填          | 说明 |
 | :--- | :--- | :--- | :--- |
-| visitorVariable | String | 是 |  |
+| visitorVar | JSONObject | 是 | 不可使用嵌套的`JSONObject`对象，即为JSONObject中不可以放入`JSONObject`或者`JSONArray` |
 
 **示例代码：**
 
