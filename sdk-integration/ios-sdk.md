@@ -13,7 +13,6 @@
   * [采集 HashTag数据](ios-sdk.md#cai-jih5-ye-mian-shu-ju)
   * [GDPR 数据采集开关](ios-sdk.md#gdpr-shu-ju-cai-ji-kai-guan)
   * [DeepLink回调参数获取](ios-sdk.md#deeplink-hui-tiao-can-shu-huo-qu)
-  * [Universal Link回调参数获取](ios-sdk.md#universal-link-hui-tiao-can-shu-huo-qu)
   * [设置界面元素 ID](ios-sdk.md#she-zhi-jie-mian-yuan-su-id)
   * [在 App Store 提交应用](ios-sdk.md#zai-app-store-ti-jiao-ying-yong)
 * [自定义事件和变量 API 说明](ios-sdk.md#zi-ding-yi-shi-jian-he-bian-liang-api)
@@ -231,7 +230,7 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 
 ### DeepLink 回调参数获取 {#deeplink-hui-tiao-can-shu-huo-qu}
 
-推广过程中，用户扫描二维码跳转到`APP`中指定的活动页面，并根据实际情况显示不同信息，`SDK 2.3.2`以上版本支持。
+推广过程中，您需要已经下载您`APP`的用户扫描二维码直接跳转您的`APP`中指定的活动页面，并根据实际情况显示不同信息，`SDK 2.3.2`以上版本支持。
 
 例如：扫码领取优惠券，已经安装`APP`的用户扫码后将直接进入领取优惠券页面，并且这个页面上还能够显示此用户头像等信息，这个时候您可以使用我们的`DeepLink`功能，通过此接口获得您的自定义参数信息。
 
@@ -249,46 +248,6 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
         XCTAssertEqualObjects(params[@"key1"], @"value1");
         XCTAssertEqualObjects(params[@"key2"], @"value2");
  }];
-```
-
-{% hint style="info" %}
-* params 参数为您在 DeepLink 页面设置的“直达落地页参数”
-* 请在 `+ (BOOL)handleUrl:(NSURL*)url`被调用前注册回调方法
-{% endhint %}
-
-### Universal Link 回调参数获取
-
-例如：跳转到指定商品： item\_id = 123，跳转到指定商店：store\_id = 123。当用户点击 GrowingIO 产生的 universal link 并唤起 app 时，GrowingIO SDK 会通过以下接口将参数返回给 app，app 再根据参数执行 UI 逻辑。
-
-#### 参数说明：
-
-| 参数名称 | 参数类型 | 是否必须 | 说明 |
-| :--- | :--- | :--- | :--- |
-| params | NSDictionary | 否 | 解析后参数以 key-value 的形式返回 |
-| error | NSError | 否 | 异常信息 |
-
-```objectivec
-// 注册Universal link参数解析回调方法
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    [Growing registerUniversallinkHandler:^(NSDictionary *params, NSError *error) {
-        NSLog(@"params ==> %@", params);
-        //弹出信息，方便查看自定义参数是否获取
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Universal Link回调信息"
-                                                        message:params.description
-                                                       delegate:self
-                                              cancelButtonTitle:@"确定"
-                                              otherButtonTitles:nil, nil];
-        [alert show];
-    }];
-    return YES;
-}
-
-// 处理Universal link链接
-- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler{
-    [Growing handleUrl:userActivity.webpageURL];
-	return YES;
-}
 ```
 
 ### 设置界面元素 ID

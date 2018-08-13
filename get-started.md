@@ -9,7 +9,7 @@ description: 欢迎使用 GrowingIO，这是一份新同学使用 GrowingIO 指�
 #### 第一步：与工程师一起接入 SDK {#第一步：与工程师一起接入sdk}
 
 1. [JS SDK 配置](sdk-integration/web-js-sdk.md)
-2. [Android SDK 配置](sdk-integration/android-sdk.md)
+2. [Android SDK 配置](sdk-integration/android-sdk/)
 3. [iOS SDK 配置](sdk-integration/ios-sdk.md)
 4. [**小程序 SDK 配置**](sdk-integration/mina-sdk.md)
 
