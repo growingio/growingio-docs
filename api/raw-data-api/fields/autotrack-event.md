@@ -1,4 +1,4 @@
-# 原始数据导出字段说明
+# 无埋点事件
 
 ## page——页面事件
 
@@ -83,6 +83,8 @@
 
 API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接口中已经删除。原因是这三个字段实际由GrowingIO内部库通过**`解析IP、地理位置`**得到的结果，可能与客户自己解析出来的结果存在差异，这样会造成客户识别的困扰。
 
+
+
 ## action——动作事件
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
@@ -97,52 +99,9 @@ API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接�
 | href | href | string\(1024\) | 标签内的跳转链接（如果没有则为null） | help.growingio.com | 标签内的跳转链接（如果没有则为null） |
 | requestValue | eventValue | string\(1024\) | 请求值（request value） | “确定” | 该消息的值，例如标签的value |
 | index | index | bigint | 标签序号（tag index） | 用于标记列表内的第几项，分析列表中最常被点击的内容或者首项推广效果等等 | 列表类型标签的序号 |
-| info | info | string\(200\) |  | 用户自定义事件信息 | 对应growingAttributesInfo设置的字段信息 |
+| info | info | string\(200\) | 用户自定义信息 | 自定义 | 对应growingAttributesInfo设置的字段信息 |
 | pageRequestId | page\_id | string\(23\) | GrowingIO系统页面请求内部ID | 1521010820647fa5a9314e6 | 页面唯一的id，用于与page数据join |
-| actionRequestId | action\_id | string\(30\) | GrowingIO系统Action请求内部ID | web的action\_id以wa开头，mobile以ma开头 | 标签事件的唯一id |
-
-## cstm——埋点事件
-
-| 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| visitUserId | \_userId（新旧不同） | string\(36\) | 访问用户ID（visituser id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 访问用户 ID 唯一标识 |
-| sessionId | \_sessionId（新旧不同） | string\(36\) | 访问ID（session id） | 6b5099c7-6006-422d-92ac-4f3bf4ddd37c | 当前访问唯一标识 |
-| time | \_eventTime（新旧不同） | bigint | 时间戳（time） | 1506069592985 | 请求在用户端发生的时间戳 |
-| sendTime | （新加） | bigint | 发送时间（send time） | 1507897826891 | 请求在SDK发送的时间戳 |
-| pageTime | （新加） | bigint | 页面时间（page time） | 1516349263375 | pvar对应的页面请求的产生时间 |
-| domain | （新加） | string\(100\) | 域名（domain） | www.growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
-| page | path（新旧不同） | string\(512\) | 页面（page） | pages/index | 用户访问的当前页面 |
-| queryParameters | （新加） | string\(512\) | 查询参数（query arameters） | [http://www](http://www/).[growingio.com?cid=1234567](http://growingio.com/?cid=1234567) | 当前网站页面URL中的查询参数 |
-| eventName | （新加） | string\(50\) | 事件名称（event name） | revenue | 自定义事件的标识符 |
-| eventNumber | （新加） | double | 事件数值（event number） | 99.99 | 自定义事件的值 |
-| eventVariable | （新加） | map&lt;string, string&gt; | 事件级变量（event variable） | {"price": "50.0", "item": "101"} | 自定义事件级变量 |
-| loginUserId | \_cs1（新旧不同） | string\(200\) | 登录用户ID（customer attributes 1） | user12345 | 登录用户ID，推荐使用那些不能定位到个人的ID信息，通常为企业内部使用的CRM ID |
-| pageRequestId | （新加） | string\(23\) | GrowingIO系统页面请求内部ID | 15208995970115f7e2c153f | 该自定义事件所归属的 page 事件 id |
-
-## pvar——自定义页面变量
-
-| 原始数据导出 2.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- |
-| visitUserId | string\(36\) | 访问用户ID（visit user id） | 1ba42333-87f2-3cc4-bb42-ac4176526796 | 访问用户 ID 唯一标识 |
-| sessionId | string\(36\) | 访问ID（session id） | c6575ef5-5c06-443e-bf6e-b12e1e37a3f8 | 当前访问唯一标识 |
-| time | bigint | 时间戳（time） | 1520899220665 | 请求在用户端发生的时间戳 |
-| sendTime | bigint | 发送时间（send time） | 1520899221211 | 请求在SDK发送的时间戳 |
-| pageTime | bigint | 页面时间（page time） | 1520899221209 | pvar对应的页面请求的产生时间 |
-| domain | string\(100\) | 域名（domain） | www.growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
-| page | string\(512\) | 页面（page） | /funnel | 用户访问的当前页面 |
-| pageVariable | map&lt;string, string&gt; | 页面级变量（page variable） | {"category": "funnel"} | 页面级变量键值对 |
-| pageRequestId | string\(23\) | GrowingIO系统页面请求内部ID | 15208995970115f7e2c153f | 该页面级变量所归属的 page 事件 id |
-
-## evar——转化变量
-
-| 原始数据导出 2.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- |
-| visitUserId | string\(36\) | 访问用户ID（visit user id） | c6dc7078-19a8-43c8-a728-d7f78f38bc7b | 访问用户 ID 唯一标识 |
-| sessionId | string\(36\) | 访问ID（session id） | 372f87d0-c743-4b6b-a4c3-3833b90ce5e2 | 当前访问唯一标识 |
-| time | bigint | 时间戳（time） | 1521331185777 | 请求在用户端发生的时间戳 |
-| sendTime | bigint | 发送时间（send time） | 1521331204282 | 请求在SDK发送的时间戳 |
-| domain | string\(100\) | 域名（domain） | www.growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
-| conversionVariable | map&lt;string, string&gt; | 转化变量（conversion variable） | {"keyword":"retention"} |  |
+| actionRequestId | action\_id | string\(30\) | GrowingIO系统Action请求内部ID | web的action\_id以wa开头，mobile以ma开头 | 事件的唯一id |
 
 
 
@@ -152,7 +111,7 @@ API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接�
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | sendTime | sendtime | bigint | 数据发送时间（send time） | 1521331200412 | 请求在SDK发送的时间戳 |
 | actionRequestId | action\_id | string\(30\) | GrowingIO系统Action内部ID | wa:0:24:1356477892:0 | 用于标识一个action请求的ID，`web的以wa开头`，`mobile的以ma开头` |
-| ruleId | rule\_id | string\(8\) | GrowingIO系统Rule内部ID | 99ae0dec | 用于标识圈选标签的唯一ID，由字母和数字组成 |
+| ruleId | rule\_id | string\(8\) | GrowingIO系统Rule内部ID | 99ae0dec | 用于标识圈选无埋点事件的唯一ID，由字母和数字组成 |
 
 ## rules——圈选规则
 
@@ -160,60 +119,15 @@ API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接�
 
 | 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
-| rule\_id | string\(8\) | GrowingIO系统Rule内部ID | 99ae0dec | 用于标识圈选标签的唯一ID，有字母和数字组成 |
-| name | string\(200\) | Rule的名称 | xxx | 圈选标签的名称，该名称不可以作为区分Rule唯一的标识 |
+| rule\_id | string\(8\) | GrowingIO系统Rule内部ID | 99ae0dec | 用于标识圈选事件的唯一ID，有字母和数字组成 |
+| name | string\(200\) | Rule的名称 | xxx | 圈选事件的名称，该名称不可以作为区分Rule唯一的标识 |
 | ruleType | string\(10\) | Rule的类型，如按钮的点击或曝光 | clck | 值包括page、imp、clck、chng、sbmt |
 
 > 备注
 
 1. 在基础部分数据导出（visit，page，action）之外，提供圈选数据与action级别数据的映射部分。
-2.  **rules**表示客户在GrowingIO平台上圈选的标签，rule\_id是其唯一标识。
+2.  **rules**表示客户在GrowingIO平台上圈选的事件，rule\_id是其唯一标识。
 3.  通过**action**中的`action_id`与**action\_tag**中的`action_id`聚合，然后绑定**action\_tag**中的`rule_id`到**rules**中对应的`rule_id、name`到action的数据上。这样就可以通过规则名称进行数据分析，识别导出数据中圈选部分的数据情况。
 4. 建议规则建立时保持名称的唯一性，GrowingIO平台不保证规则名称的唯一。
 5. 相同的名称下可能有多个规则类型，`规则名称+规则类型`才能区分开，此处类型与基础数据**action**中的`请求事件类型`保持一致。
-
-## ads\_track\_activation——广告激活事件
-
-
-
-| 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| visitUserId | userId | string\(36\) | 访问用户ID（visit user id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 匿名的访问用户ID，由GrowingIO自动生成。 |
-| idfa | idfa | string\(40\) | IDFA（id for advertiser） | F7A29C20-FD0D-4B68-BF4D-39EFC5C9A9C2 | iOS平台用于广告监测的ID：IDFA（id for advertiser） |
-| imei | imei | string\(40\) | IMEI | 100500636E9AA9 | Android平台用于广告监测的ID |
-| uuid | uuid | string\(40\) | UUID | 00000000-37fc-f5ob-1e8d-484b190312e1 | 用于广告监测的ID的UUID格式 |
-| androidId | androidid | string\(40\) | Android ID | 2cab90e2a3b489ed | SSAID，又称为Android ID |
-| ip | ip | string\(15\) | IP地址（ip address） | 127.0.0.1 | ​ |
-| userAgent | useragent | string\(512\) | User Agent，例如浏览器信息或者移动设备信息 | Mozilla/5.0 \(iPhone; CPU iPhone OS 11\_2\_6 like Mac OS X\) AppleWebKit/604.5.6 \(KHTML, like Gecko\) Mobile/15D100 | ​ |
-| platform | platform | string\(20\) | 平台（platform） | iOS | ​ |
-| operatingSystemVersion | osversion | string\(50\) | 操作系统版本（operating system version） | iOS 11.2.6 | ​ |
-| sendTime | sendtime | bigint | 发送时间（send time） | 1521315962327 | 请求在SDK发送的时间戳 |
-| linkId | link\_id | string\(20\) | 链接ID（link id） | Yo1KJXRl | 监测链接ID |
-| campaignId | campaign\_id | string\(20\) | 活动ID（campaign id） | GPndl79Y | 活动ID |
-| channelId | channel\_id | string\(20\) | 渠道ID（channel id） | inmobi | 渠道ID |
-| linkName | link\_name | string\(60\) | 链接名称 | 测试链接 | 2018/5/8 开始生效 |
-| campaignName | campaign\_name | string\(60\) | 活动名称 | 双十一推广 | 2018/5/8 开始生效 |
-| channelName | channel\_name | string\(60\) | 渠道名称 | 今日头条 | 2018/5/8 开始生效 |
-
-## ads\_track\_click——广告点击事件
-
-| 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| idfa | idfa | string\(40\) | IDFA（id for advertiser） | F9AFF106-3C41-4B78-B20B-D3BB166DA620 | iOS平台用于广告监测的ID：IDFA（id for advertiser） |
-| imei | imei | string\(40\) | IMEI | 100500636E9AA9 | Android平台用于广告监测的ID |
-| uuid | uuid | string\(40\) | UUID | 00000000-37fc-f5ob-1e8d-484b190312e1 | 用于广告监测的ID的UUID格式 |
-| androidId | androidId | string\(40\) | Android ID | 2cab90e2a3b489ed | SSAID，又称为Android ID |
-| ip | ip | string\(15\) | IP地址（ip address） | 127.0.0.1 | IP地址（ip address） |
-| userAgent | useragent | string\(512\) | User Agent，例如浏览器信息或者移动设备信息 | Mozilla/5.0 \(Linux; Android 4.0.4; A31 Build/A31\) AppleWebKit/537.36 \(KHTML, like Gecko\) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36 | ​ |
-| platform | platform | string\(20\) | 平台（platform） | iOS | 访问所属平台，可能值为 iOS / Android / Web 等 |
-| operatingSystemVersion | osversion | string\(50\) | 操作系统版本（operating system version） | iOS 11.2.6 | ​ |
-| eventTime | eventtime | bigint | 点击请求时间（click request time） | 1521315962320 | 请求在SDK发送的时间戳 |
-| linkId | link\_id | string | 链接ID（link id） | Yo1KJXRl | 监测链接ID |
-| campaignId | campaign\_id | string\(20\) | 活动ID（campaign id） | GPndl79Y | 活动ID |
-| channelId | channel\_id | string\(20\) | 渠道ID（channel id） | inmobi | 渠道ID |
-| linkName | link\_name | string\(60\) | 链接名称 | 测试链接 | 2018/5/8 开始生效 |
-| campaignName | campaign\_name | string\(60\) | 活动名称 | 双十一推广 | 2018/5/8 开始生效 |
-| channelName | channel\_name | string\(60\) | 渠道名称 | 今日头条 | 2018/5/8 开始生效 |
-
-
 
