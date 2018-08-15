@@ -89,6 +89,7 @@
     * [原始数据导出 2.0 API](api/raw-data-api/raw-data-export-2.0.md)
     * [原始数据导出 1.0 API（已废弃）](api/raw-data-api/raw-data-export-1.0.md)
     * [原始数据导出 API 的升级迁移](api/raw-data-api/yuan-shi-shu-ju-dao-chu-api-de-sheng-ji-qian-yi.md)
+    * [原始数据导出格式及处理建议](api/raw-data-api/format.md)
   * [统计数据导出 API](api/reporting-api.md)
   * [用户变量上传 API](api/user-property-upload.md)
   * [数据管理 API \(GDPR\)](api/delete-visitor-api.md)
