@@ -15,36 +15,11 @@
 
 ## 小程序SDK集成前工作
 
-### 确定集成SDK的项目
-
-![&#x96C6;&#x6210;SDK&#x7684;&#x9636;&#x6BB5;&#x548C;&#x6D41;&#x7A0B;](../.gitbook/assets/image%20%2862%29.png)
-
-如果您已经注册GrowingIO,并且已经有创建或者集成SDK的项目了，您可以进行如下选择：
-
-1. 使用已有项目的ID，添加新的应用，集成SDK。
-2. 创建一个新的项目，然后集成SDK。
-
-`*注：如果已有项目且集成了其他应用，新建的项目，数据不能和原有项目中的数据合并。例如：拥有小程序A，iOS端产品，如果各个应用集成在同一个项目ID中，且都上传登录用户ID，登录用户计算时会去重，并且在使用高级分析功能时，可以同时选择跨平台的行为和登录用户。但是如果小程序和APP不在同一个项目ID下，登录用户计算分别在两个项目中，不会去重计算；高级分析功能中，也不能跨平台选择登录用户ID和行为。`
-
-如果你还未注册 GrowingIO，请[点击链接访问注册页面](https://accounts.growingio.com/signup?utm_source=docs&utm_content=minp)，完成注册后你会看到使用引导，点击“**添加跟踪代码**“即可开始。
-
-### 在已有项目中添加小程序应用
-
-在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“应用管理“。在项目概览页面，点击“**新建应用**“来创建一个新应用。
-
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LH3J3bJm8y879FZ1E7G%2F-LH3Jrrg6GYh7ccjZGaG%2Fimage.png?alt=media&token=a8744aff-4d74-451b-9adf-ec773e5cbb5c)
-
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LH3J3bJm8y879FZ1E7G%2F-LH3KSslW7JKLy4bb98K%2Fimage.png?alt=media&token=04f949af-bbb1-49f5-98e2-c212022a9c1d)
-
-然后会到达SDK集成页面，填写小程序的应用名称，和小程序的AppID ,点击“下一步”，即可以到达小程序SDK接入的页面。
-
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LH3J3bJm8y879FZ1E7G%2F-LH3JTZYNHN07NUun-S6%2Fimage.png?alt=media&token=ea6a9dc2-5bc9-408d-b50f-f9c734f5cf0d)
-
 ### 创建新的GrowingIO项目
 
 如果你还未注册 GrowingIO，请[点击链接访问注册页面](https://accounts.growingio.com/signup?utm_source=docs&utm_content=minp)，完成注册后你会看到使用引导，点击“**添加跟踪代码**“即可开始。
 
-如果你已经注册 GrowingIO，使用小程序分析功能需要用一个全新的项目的话，在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“**项目概览**“。在项目概览页面，点击“**新建项目**“来创建一个新项目。在创建好的新项目里，你会看到使用引导，点击“**添加跟踪代码**“即可开始。
+如果你已经注册 GrowingIO，使用小程序分析功能需要用一个全新的项目，在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“**项目概览**“。在项目概览页面，点击“**新建项目**“来创建一个新项目。在创建好的新项目里，你会看到使用引导，点击“**添加跟踪代码**“即可开始。
 
 ![&#x9879;&#x76EE;&#x6982;&#x89C8;](../.gitbook/assets/image%20%2867%29.png)
 
@@ -94,7 +69,9 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue
 
 其中GrowingIO 项目ID、微信小程序的 AppID，即为**SDK安装页面** 第②部分 **代码框中生成的代码。**
 
-建议每次发布小程序新版本的时候，更新一下版本号 version，可以在 GrowingIO 分析不同版本的数据。除了 `version` 之外，还有以下额外参数可以使用。
+**每次发布小程序新版本的时候，需要更新一下版本号 version。**
+
+除了 `version` 之外，还有以下额外参数可以使用。
 
 | 参数 | 值 | 解释 |
 | :--- | :--- | :--- |
