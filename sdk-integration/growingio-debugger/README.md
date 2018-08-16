@@ -6,7 +6,7 @@
 * [GrowingIO Mobile Debugger](./#growingio-mobile-debugger)
   * [启动 Mobile Debugger](./#qi-dong-mobile-debugger)
   * [使用 Moible Debugger 测试数据](./#shi-yong-mobile-debugger-ce-shi-shu-ju)
-* [GrowingIO 小程序 Debugger](./#growingio-minidebugger)
+* [GrowingIO 小程序 数据验证](./#growingio-minidebugger)
 
 GrowingIO Debugger是GrowingIO推出的调试 SDK所发送数据的工具。在GrowingIO Debugger的帮助下，实施工程师可以看到在什么样的页面上，在什么时机向GrowingIO发送了什么样的服务器请求。
 
@@ -105,21 +105,21 @@ ppl：“用户变量” 数据
 
 imp（元素浏览数据）数据量级过大，影响Mobile Debugger性能，Mobile Debugger不展示这部分数据。
 
-### GrowingIO 小程序 Debugger {#growingio-minidebugger}
+### GrowingIO 小程序 Debugger -数据验证 {#growingio-minidebugger}
 
-数据校验Debugger功能，可以支持用户根据自己的交互体验，实时看到GrowingIO采集的数据，完成数据收集的校验。
+数据验证功能，可以支持用户根据自己的交互体验，实时看到GrowingIO采集的数据，完成数据收集的校验。
 
 在完成SDK集成，点击“去检测”后，会跳转进入小程序Debugger的页面。
 
-另：在圈选功能左上部，有“实时调试”的按钮，点击后会进入相应小程序的debugger功能。
+另：在圈选功能左上部，有“数据验证”的按钮，点击后会进入相应小程序的数据验证功能。
 
-进入Debugger页面后：
+进入数据验证页面后：
 
 1. 保证操作集成小程序SDK的手机和登录GrowingIO的电脑处在同一网路环境下。
 2. 打开微信，进入集成了小程序SDK的小程序中。
 3. 等待5秒左右，可以看到用户显示在页面中。
 
-在小程序Debugger页面，会展示目前接入Debugger实时传输数据的小程序用户，以及部分用户微信信息、设备、操作系统的信息。但是部分信息的展示，例如用户微信名称、头像、国家、省份、城市，需要在SDK中设置微信用户属性设置。详情请见SDK 微信用户属性设置。
+在功能页面上，会展示目前进入实时数据验证实时传输数据的小程序用户，以及部分用户微信信息、设备、操作系统的信息。但是部分信息的展示，例如用户微信名称、头像、国家、省份、城市，需要在SDK中设置微信用户属性设置。详情请见[SDK 微信用户属性设置](../mina-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)。
 
 ![](../../.gitbook/assets/fanfan1.png)
 
