@@ -1,10 +1,22 @@
 # 小程序圈选
 
-* [页面指标定义](minp.md#ye-mian-zhi-biao-ding-yi)
-* [圈选定义页面级变量](minp.md#define-page-dimensions)
-* [行为指标定义](minp.md#hang-wei-zhi-biao-ding-yi)
+推荐产品、市场、运营等非技术用户使用“交互式圈选”进行数据定义；推荐产品、技术用户，使用“按路径和函数名称进行数据定义”来定义数据。
 
-## 页面指标定义
+* [按路径和函数名称进行数据定义](minp.md#define-data-by-tagging-name)
+  * [页面指标定义](minp.md#ye-mian-zhi-biao-ding-yi)
+  * [行为指标定义](minp.md#hang-wei-zhi-biao-ding-yi)
+* [交互式数据定义](minp.md#interactive-auto-data-define)
+  * [交互式数据定义功能使用](minp.md#jiao-hu-shi-shu-ju-ding-yi-gong-neng-shi-yong)
+  * [圈选定义的指标的管理](minp.md#quan-xuan-ding-yi-de-zhi-biao-de-guan-li)
+  * [使用圈选定义的指标](minp.md#shi-yong-quan-xuan-ding-yi-de-zhi-biao)
+* [圈选定义页面级变量](minp.md#define-page-dimensions)
+  * [页面级变量使用的场景](minp.md#ye-mian-ji-bian-liang-shi-yong-de-chang-jing)
+
+## 按路径和函数名称进行数据定义 {#define-data-by-tagging-name}
+
+按路径和函数名称进行数据定义，主要方便产品、技术人员，来根据页面和元素代码名称定义页面浏览和元素点击事件。
+
+### 页面指标定义
 
 进入圈选页面后，显示的是所有自动采集到的页面。在这个页面，你可以看到以下信息：
 
@@ -25,7 +37,76 @@
 
 点击具体页面的容器区域，就会进入到该页面的行为指标定义页面，具体见下一节。
 
-## 圈选定义页面级变量 {#define-page-dimensions}
+### 行为指标定义
+
+进入页面的行为圈选页面后，显示的是该页面所有自动采集到的行为页面。在这个页面，你可以看到以下信息：
+
+1. 当前小程序页面的页面名称
+2. 当前小程序页面的页面路径
+3. 当前小程序页面的过去 7 天数据表现
+4. 当前小程序页面自动采集到的行为列表及其数据
+
+![&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x5185;&#x884C;&#x4E3A;&#x5708;&#x9009;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LFCqNxsL3IBFp-oAtuG%2F-LFD2JJj8RC0hIy797uZ%2F%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A1%8C%E4%B8%BA%E5%9C%88%E9%80%89.png?alt=media&token=ff416bc8-3192-40df-aabb-9599d663834b)
+
+ 从上图的样例可以看到，GrowingIO 小程序在榜单页面自动采集到 2 个行为，每个行为的具体点击趋势显示在列表内。如果要定义某个行为为指标用于后续分析，点击“**定义行为**“按钮，然后可以看到弹出框，如下图。
+
+![&#x5C0F;&#x7A0B;&#x5E8F;&#x5B9A;&#x4E49;&#x884C;&#x4E3A;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LFCqNxsL3IBFp-oAtuG%2F-LFD59ZE5It-ZMFZ3yJs%2F%E5%9C%88%E9%80%89%E8%A1%8C%E4%B8%BA%E7%BB%86%E8%8A%82.png?alt=media&token=b8b3dc50-6138-4ff7-8b93-96ff8d4b05cf)
+
+输入行为名称，点击保存，就定义好了一个行为指标。
+
+**这里值得注意**的是元素内容分布和元素位置分布，显示的数据是在这个页面，行为被点击/输入时，对应的内容和位置的交互热图分布。在[无埋点采集事件](./)里介绍了，如果在视图里使用了 data-title 和 data-index 这种声明式编程，就能在行为数据里看到这些数据。
+
+之后，就可以在分析工具里面使用这个指标了，同时可以在**数据管理-圈选指标**中管理这个指标。
+
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyovQeg-F1vyUV53N6%2F-LGyp73W8d2ZjpMXS8hJ%2Fimage.png?alt=media&token=ca5e17d1-fd60-42ba-ae96-0daa5c314f09)
+
+## 交互式数据定义 {#interactive-tagging-define-data}
+
+  
+交互式数据定义，主要帮助产品、运营、市场等非技术人员，来根据业务含义定义页面浏览和元素点击事件。
+
+### 交互式数据定义功能使用
+
+进入圈选功能后，点击“交互式圈选”入口按钮。​![](blob:https://growingio.gitbook.io/c3dc85de-a649-4504-8181-2cb654476e53)
+
+step1 进入交互式圈选页面，请扫码将手机IP加入后，打开微信小程序。就能看到微信头像出现在下方。（如果没有显示微信头像，是因为没有授权openid，请[查看SDK配置](../../sdk-integration/mina-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)）
+
+​![](blob:https://growingio.gitbook.io/90675444-94f3-4466-a985-4063ba97a3e4)​![](blob:https://growingio.gitbook.io/4106ad0c-db64-49e1-bb2c-7d6f89bf00c8)
+
+选择自己的头像（设备），点击“开始圈选”。
+
+在这个页面中，在微信小程序上实时操作，你的页面浏览或者元素点击事件的行为流会实时的显示在页面上。
+
+​![](blob:https://growingio.gitbook.io/8d54d6fe-e65c-4719-895a-267d16f5d10e)
+
+点击“定义元素”，会出现这个元素信息的弹窗。其中如果元素存在内容和位置的属性，就会展示“元素内容分布”和“元素内容分布”的信息，帮助你了解这个点击事件代表采集的具体数据。如下图，点击了“电影列表”，其中也采集到了这个元素后的内容属性和位置属性（为什么我没有看到元素的内容和属性数据？可能是元素代码信息标注不完全，详细请见[小程序SDK高级配置](../../sdk-integration/mina-sdk.md#sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi)）。
+
+在行为名称上给行为命名，然后点击保存。这个事件就被定义为指标了。​![](blob:https://growingio.gitbook.io/aee1e66b-39d4-4a9c-946c-4cf9c6778183)
+
+同理定义一个页面，点击“定义页面”，展示出定义页面的弹窗，“元素点击分布”tab上，展示这个页面上所有元素的点击分布，如果页面上没有可点击的元素，则显示为空。
+
+给页面定义一个名称，保存。
+
+​![](blob:https://growingio.gitbook.io/7a769d7f-2fab-4985-8c1e-f00b2abe509c)
+
+圈选页面上，定义的内容会自动变成“已定义”的标识，并展示这个指标的名称。
+
+​![](blob:https://growingio.gitbook.io/b5951cfb-f7cf-43e1-9879-8816629e5cff)
+
+### 圈选定义的指标的管理
+
+定义完后的指标，会出现在“数据管理-圈选指标“功能页面中。可以进行创建人等信息的查看。
+
+​![](blob:https://growingio.gitbook.io/1e304074-49d5-4b77-b52f-66b61141a84d)
+
+### 使用圈选定义的指标
+
+圈选指标，会自动出现在**”事件分析“、”漏斗分析”、“留存分析”** 的**“选择指标-我的指标分类”** 中，或者可以直接使用搜索进行查找。可以选择已圈选的指标，进行进一步的数据分析。
+
+​![](blob:https://growingio.gitbook.io/a7102194-f81c-4b4e-bf65-fa77eb5b0331)​![](blob:https://growingio.gitbook.io/e17cb273-43b6-418e-bd48-500c7a2f148d)  
+
+
+## 圈选定义页面级变量
 
 在定义页面事件时，会出现一个 "页面级变量"tab。 这个功能是专门针对小程序开放的功能，主要满足快速定义页面属性，并根据页面属性进行行为分析的需求。
 
@@ -51,7 +132,7 @@
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LIjrnMeRJp_VAJty9Bq%2F-LIkQu0XIrmbN5-5QfEI%2Fimage.png?alt=media&token=7bab3e2a-aaf1-42f1-94d8-5aee46c37d74)
 
-### **页面级变量使用的场景** {#page-dimensions-analysis-scene}
+### **页面级变量使用的场景**
 
 分析场景示例：快速分析商品的转化率：
 
@@ -59,32 +140,15 @@
 
 在按上图所示，为所有商品详情页定义上页面级变量ID的标签后，在GrowingIO中，ID这个页面级变量均会成为“维度”，可在各事件分析、漏斗分析、留存分析中选用。例如在单图中，即可按物品ID来分解页面浏览量。
 
-页面级变量同时可以拆分页面上的定义的点击事件：商品详情页上面常见会存在“加入购物车”、“确定购买”按钮，定义“加入购物车”&“确定购买”，这个行为指标同时可以使用这个点击元素所在页面的页面级变量做维度拆分。![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LIjrnMeRJp_VAJty9Bq%2F-LIkWGYi7nN443_56gai%2Fimage.png?alt=media&token=828f7faa-57f7-40bb-a3ea-843e48baef17)事件分析选择指标&维度![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LIjrnMeRJp_VAJty9Bq%2F-LIkWDbANkvuUm54VSMt%2Fimage.png?alt=media&token=f608bf79-4274-4c84-b715-f324f3097110)图表呈现结果
+页面级变量同时可以拆分页面上的定义的点击事件：商品详情页上面常见会存在“加入购物车”、“确定购买”按钮，定义“加入购物车”&“确定购买”，这个行为指标同时可以使用这个点击元素所在页面的页面级变量做维度拆分。
+
+事件分析选择指标&维度
+
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LIjrnMeRJp_VAJty9Bq%2F-LIkWGYi7nN443_56gai%2Fimage.png?alt=media&token=828f7faa-57f7-40bb-a3ea-843e48baef17)
+
+图表呈现结果
+
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LIjrnMeRJp_VAJty9Bq%2F-LIkWDbANkvuUm54VSMt%2Fimage.png?alt=media&token=f608bf79-4274-4c84-b715-f324f3097110)
 
 这样，就可以快速满足分析各种分类下的用户行为指标。
-
-## 行为指标定义
-
-进入页面的行为圈选页面后，显示的是该页面所有自动采集到的行为页面。在这个页面，你可以看到以下信息：
-
-1. 当前小程序页面的页面名称
-2. 当前小程序页面的页面路径
-3. 当前小程序页面的过去 7 天数据表现
-4. 当前小程序页面自动采集到的行为列表及其数据
-
-![&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x5185;&#x884C;&#x4E3A;&#x5708;&#x9009;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LFCqNxsL3IBFp-oAtuG%2F-LFD2JJj8RC0hIy797uZ%2F%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A1%8C%E4%B8%BA%E5%9C%88%E9%80%89.png?alt=media&token=ff416bc8-3192-40df-aabb-9599d663834b)
-
- 从上图的样例可以看到，GrowingIO 小程序在榜单页面自动采集到 2 个行为，每个行为的具体点击趋势显示在列表内。如果要定义某个行为为指标用于后续分析，点击“**定义行为**“按钮，然后可以看到弹出框，如下图。
-
-![&#x5C0F;&#x7A0B;&#x5E8F;&#x5B9A;&#x4E49;&#x884C;&#x4E3A;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LFCqNxsL3IBFp-oAtuG%2F-LFD59ZE5It-ZMFZ3yJs%2F%E5%9C%88%E9%80%89%E8%A1%8C%E4%B8%BA%E7%BB%86%E8%8A%82.png?alt=media&token=b8b3dc50-6138-4ff7-8b93-96ff8d4b05cf)
-
-输入行为名称，点击保存，就定义好了一个行为指标。
-
-**这里值得注意**的是元素内容分布和元素位置分布，显示的数据是在这个页面，行为被点击/输入时，对应的内容和位置的交互热图分布。在[无埋点采集事件](./)里介绍了，如果在视图里使用了 data-title 和 data-index 这种声明式编程，就能在行为数据里看到这些数据。
-
-之后，就可以在分析工具里面使用这个指标了，同时可以在**数据管理-圈选指标**中管理这个指标。
-
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyovQeg-F1vyUV53N6%2F-LGyp73W8d2ZjpMXS8hJ%2Fimage.png?alt=media&token=ca5e17d1-fd60-42ba-ae96-0daa5c314f09)
-
-## 
 
