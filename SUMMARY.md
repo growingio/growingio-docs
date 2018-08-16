@@ -94,6 +94,7 @@
   * [用户变量上传 API](api/user-property-upload.md)
   * [数据管理 API \(GDPR\)](api/delete-visitor-api.md)
   * [API 更新日志](api/changelog-api.md)
+  * [项目管理 API](api/xiang-mu-guan-li-api.md)
 * [常见问题](faq/README.md)
   * [SDK 集成](faq/faq-sdk.md)
   * [圈选常见问题](faq/faq-circle.md)
