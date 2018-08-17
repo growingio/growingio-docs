@@ -1,7 +1,7 @@
 # 项目管理
 
 * [1.简介](project-configuration.md#1)
-* 2.组织-项目-应用 关系
+* [2.组织-项目-应用的关系](project-configuration.md#zuzhi-xiangmu-yingyong)
 * [3.项目概览](project-configuration.md#2)
 * [4.应用管理](project-configuration.md#3)
 
@@ -9,7 +9,7 @@
 
 GrowingIO提供了强大而全面的管理功能，您可以根据您的具体需求来对您的组织和数据进行管理。让您的成员轻松的协作，并且充分保障数据的安全性和私密性。**您可以在任意界面点击右上角的头像，进入项目管理模块。**
 
-### 2.组织-项目-应用 关系 {#zuzhi-xiangmu-yingyong}
+### 2.组织-项目-应用的关系 {#zuzhi-xiangmu-yingyong}
 
 当您注册 GrowingIO 时，需要填写公司信息，注册完成时，我们会根据您填写的信息生成一个新的组织。后续您创建的所有项目，都会自动关联到这个组织。组织是您所在公司与 GrowingIO 对接的基本方式，包括对应的销售、技术支持、客户成功。我们的服务、合同和计费也会按照组织的方式。
 
