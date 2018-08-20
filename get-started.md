@@ -69,3 +69,5 @@ GrowingIO 所有分析能力都同样支持小程序，同时，还对小程序�
 
 6.通过配置[UTM广告参数](ads-tracking/utm-parameters.md#she-zhi-xiao-cheng-xu-luo-di-ye-de-utm)，来监测小程序投放的数据，计算投放的ROI。
 
+![](.gitbook/assets/wei-xin-tou-tu-10.1722.png)
+
