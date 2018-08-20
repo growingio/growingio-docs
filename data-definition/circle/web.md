@@ -54,7 +54,7 @@ _vds.push(['enableHT', true])
 
 a.「路径」最右侧的开关开启时，可以通过在「路径」中使用「\*」来做通配符，达到圈选多个类似页面的目的：
 
-例如，GrowingIO 博客文章内容的地址都是这样的 [https://blog.growingio.com/posts/123456](https://blog.growingio.com/posts/123456) 、 [https://blog.growingio.com/posts/14562、](https://blog.growingio.com/posts/14562%E3%80%81) [https://blog.growingio.com/posts/1264](https://blog.growingio.com/posts/1264)......
+例如，GrowingIO 博客文章内容的地址都是这样的 **https://blog.growingio.com/posts/123456** 、 **https://blog.growingio.com/posts/14562**、 **https://blog.growingio.com/posts/1264**......
 
 那么我们在路径中输入 /posts/\* 就会圈选出所有的博客单篇文章的页面。
 
@@ -112,13 +112,13 @@ b.「路径」右侧的开关关闭时，意味着要圈选出所有符合域名
 
 很多网站的页面都是有规律的，层级结构清晰：
 
-GrowingIO 解决方案首页 [**https://www.growingio.com/solution/**](https://www.growingio.com/solution/)​
+GrowingIO 解决方案首页 **https://www.growingio.com/solution/**​
 
-GrowingIO 在线旅游解决方案落地页 [**https://www.growingio.com/solution/**](https://www.growingio.com/solution/)online-travel
+GrowingIO 在线旅游解决方案落地页 **https://www.growingio.com/solution/online-travel**
 
-GrowingIO 互联网金融解决方案落地页 [**https://www.growingio.com**](https://www.growingio.com/)​[**/**](https://www.growingio.com/online-travel)**solution/**internet-finance
+GrowingIO 互联网金融解决方案落地页 **https://www.growingio.com**​**/solution/internet-finance**
 
-我们发现所有的解决方案落地页都是 [**https://www.growingio.com/solution/xxx**](https://www.growingio.com/solution/xxx) ，那么如果我想统计所有解决方案页的页面情况，就可以通过通配符「\*」来定义一组页面 [**https://www.growingio.com/solution\\*，即：**](https://www.growingio.com/solution/*%EF%BC%8C%E5%8D%B3%EF%BC%9A)​
+我们发现所有的解决方案落地页都是 **https://www.growingio.com/solution/xxx** ，那么如果我想统计所有解决方案页的页面情况，就可以通过通配符「\*」来定义一组页面 **https://www.growingio.com/solution/\***，即：​
 
 ![](https://docs.growingio.com/.gitbook/assets/20_59_35__04_25_2018.jpg)
 
