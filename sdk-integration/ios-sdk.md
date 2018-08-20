@@ -34,7 +34,7 @@
   * [迁移页面属性字段（PS字段）](ios-sdk.md#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)
   * [迁移自定义事件（埋点事件）](ios-sdk.md#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)
   * [数据校验](ios-sdk.md#5-shu-ju-xiao-yan)
-* [集成 1.  x 旧版本 SDK](ios-sdk.md#ji-cheng-sdk-1x-ban-ben)
+* [集成 1.x 旧版本 SDK](ios-sdk.md#ji-cheng-sdk-1x-ban-ben)
 
 ## 集成 SDK 
 
