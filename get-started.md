@@ -57,13 +57,15 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 
 GrowingIO 所有分析能力都同样支持小程序，同时，还对小程序提供了更有针对性的支持：
 
-1.集成[小程序 SDK ](sdk-integration/mina-sdk.md)，以进行数据采集；利用数据验证来实时查看采集数据的情况；
+1.集成[小程序 SDK ](sdk-integration/mina-sdk.md)，以进行数据采集；利用[数据验证](sdk-integration/growingio-debugger/#growingio-minidebugger)来实时查看采集数据的情况；
 
 2.通过[小程序圈选](data-definition/circle/minp.md)来进行数据定义，同时支持[埋点事件和变量](data-model/event-model/custom-event/)；
 
-3.通过[小程序概览](dashboard/mina-overview.md)了解数据情况；
+3.通过[小程序概览](dashboard/mina-overview.md)了解小程序的基本数据情况；
 
 4.通过 [事件分析](data-analytics/event-analysis.md)、[漏斗分析](data-analytics/funnel-analysis.md)、[留存分析](data-analytics/retention-analysis.md)等功能，来进行产品分析；
 
 5.通过[用户分群](data-analytics/user-segmentation.md)、[用户细查](data-analytics/individual-user-report.md)等来进行用户的分析。
+
+6.通过配置[UTM广告参数](ads-tracking/utm-parameters.md#she-zhi-xiao-cheng-xu-luo-di-ye-de-utm)，来监测小程序投放的数据，计算投放的ROI。
 
