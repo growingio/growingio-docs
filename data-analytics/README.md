@@ -1,6 +1,6 @@
 # 分析工具
 
-![](../.gitbook/assets/bang-zhu-wen-dang-banner1.jpg)
+![](../.gitbook/assets/analysis-banner.jpg)
 
 GrowingIO 提供了多种强大的分析工具，帮助你进行高效分析，轻松多维对比，制作清晰的汇报报表，快速验证数据洞察，不断增长。
 
