@@ -25,7 +25,7 @@
 
 ### 2.原始数据导出 2.0 API 接口定义 {#definition}
 
-{% api-method method="get" host="https://www.growingio.com /v2/insights/:export\_type/${data\_type}/${ai}/${export\_date}.json?expire=${minutes}" path="" %}
+{% api-method method="get" host="https://www.growingio.com" path="/v2/insights/:export\_type/${data\_type}/${ai}/${export\_date}.json?expire=${minutes}" %}
 {% api-method-summary %}
 按类型导出原始数据
 {% endapi-method-summary %}
@@ -108,7 +108,7 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://www.growingio.com /v2/insights/${export\_type}/${ai}/${export\_date}.json?expire=${minutes}" path="" %}
+{% api-method method="get" host="https://www.growingio.com" path="/v2/insights/${export\_type}/${ai}/${export\_date}.json?expire=${minutes}" %}
 {% api-method-summary %}
 导出全部类型原始数据
 {% endapi-method-summary %}
@@ -208,8 +208,4 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 ![](https://docs.growingio.com/.gitbook/assets/datafeed.png)
 
 在“原始数据导出 2.0 API” 上线之前，使用数据主版本2的客户也在使用“原始数据导出 1.0 API”。在“原始数据导出 1.0 API”版本中并没有包括如：页面级变量、转化变量这样的原始数据。在“原始数据导出 2.0 API”中提供了这部分原始数据的导出功能。
-
-###  {#metadata}
-
-
 
