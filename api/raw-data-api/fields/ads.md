@@ -20,6 +20,7 @@
 | linkName | link\_name | string\(60\) | 链接名称 | 测试链接 | 2018/5/8 开始生效 |
 | campaignName | campaign\_name | string\(60\) | 活动名称 | 双十一推广 | 2018/5/8 开始生效 |
 | channelName | channel\_name | string\(60\) | 渠道名称 | 今日头条 | 2018/5/8 开始生效 |
+| adsVariable | N/A | Map&lt;String, String&gt; | 链接维度参数 | {''city" -&gt; "beijing"} | 2018/8/7 开始生效 |
 
 ## ads\_track\_click——广告点击事件
 
@@ -40,4 +41,5 @@
 | linkName | link\_name | string\(60\) | 链接名称 | 测试链接 | 2018/5/8 开始生效 |
 | campaignName | campaign\_name | string\(60\) | 活动名称 | 双十一推广 | 2018/5/8 开始生效 |
 | channelName | channel\_name | string\(60\) | 渠道名称 | 今日头条 | 2018/5/8 开始生效 |
+| adsVariable | N/A | Map&lt;String, String&gt; | 链接维度参数 | {''city" -&gt; "beijing"} | 2018/8/7 开始生效 |
 
