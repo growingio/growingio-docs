@@ -85,10 +85,10 @@
 
 ####    2.1 获取 URL Scheme
 
-* 添加新产品：登录官网 -&gt; 点击项目选择框  -&gt; 点击“项目管理”  -&gt; 点击“应用管理” -&gt; 点击“新建应用”  -&gt; 选择添加 iOS 应用 -&gt; 填写“应用名称”，点击下一步 -&gt; 在第二段中标黄字体。
-* 现有产品：登录官网  -&gt;   点击“项目管理”icon  -&gt;  点击“应用管理”  -&gt;  找到对应产品的 URL Scheme
+* 添加新产品：登录官网 -&gt; 点击项目选择框  -&gt; 点击“设置”icon -&gt; 点击“新建应用”  -&gt; 选择添加 iOS 应用 -&gt; 填写“应用名称”，点击下一步 -&gt; 在第二段中标黄字体。
+* 现有产品：登录官网  -&gt;   点击“设置”icon  -&gt;  点击“应用管理”  -&gt;  找到对应产品的 URL Scheme
 
-![&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../.gitbook/assets/image%20%2888%29.png)
+![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../.gitbook/assets/image%20%2854%29.png)
 
 ####    2**.2  添加 URL Scheme（growing.xxxxxxxxxxxxxxxx）到项目中，以便唤醒您的程序进行圈选**
 
@@ -128,11 +128,17 @@
 
 在 AppDelegate 中引入`#import "Growing.h"`并添加初始化方法
 
+您的项目ID查看方式为：点击“设置”icon-&gt;点击“项目配置”
+
+![&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x9875;&#x9762;&#x5165;&#x53E3;](../.gitbook/assets/image%20%288%29.png)
+
+![&#x9879;&#x76EE;ID&#x67E5;&#x770B;](../.gitbook/assets/image%20%2837%29.png)
+
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     ...
     // 启动GrowingIO
-    [Growing startWithAccountId:@"xxxxxxxxxxxxxxxx"]; //替换为您的ID
+    [Growing startWithAccountId:@"xxxxxxxxxxxxxxxx"]; //替换为您的项目ID
     // 其他配置
     // 开启Growing调试日志 可以开启日志
     // [Growing setEnableLog:YES];
