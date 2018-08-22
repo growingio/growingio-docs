@@ -68,16 +68,16 @@
 1. 填写链接名称并选择您想要投放的应用。
 2. 为这条监测链接选择所属推广活动。
 3. 填写应用下载地址。
-4. 填写链接对应活动的直达落地页参数（_在App里我们使用URI Scheme来像定位一个网页一样，定位一个应用甚至应用里的某个具体的功能或页面。App中我们定位我的某个功能页面ID为1234的某个具体页面，通常是通过:myapp://com.gio.function?page=1234的URI Scheme来实现。其中，page=1234即为当前活动页的URI。填写前请与活动页的开发人员确认页面URI参数。_）
+4. 填写链接对应活动的直达落地页参数（_在App里我们使用URI Scheme来像定位一个网页一样，定位一个应用甚至应用里的某个具体的功能或页面。App中我们定位我的某个功能页面ID为1234的某个具体页面，通常是通过:myapp://com.gio.function?page=1234的URI Scheme来实现。其中，page=1234即为当前活动页的URI，其中key=page，value=1234。请与活动页的开发人员确认页面URI参数的Key/Value值，并填写到直达落地页参数输入框。_）
 5. 完成创建，投放应用 。
 
 Notice：为了不影响Deep—Link功能的完整体验，请您配置Universal Link/应用宝微链接。
 
                 配置过程将需要您公司的iOS工程师、具有管理员权限的成员协同进行， [查看配置方法](https://docs.growingio.com/docs/configuration/project-configuration#3)。
 
+![](../.gitbook/assets/ping-mu-kuai-zhao-20180822-xia-wu-5.19.12.png)
 
 
-![](../.gitbook/assets/chuang-jian-deeplink-ye-mian.jpg)
 
 1.1.3.2使用Deep-Link
 
