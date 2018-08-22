@@ -13,7 +13,7 @@
   * [采集 HashTag数据](ios-sdk.md#cai-jih5-ye-mian-shu-ju)
   * [GDPR 数据采集开关](ios-sdk.md#gdpr-shu-ju-cai-ji-kai-guan)
   * [DeepLink回调参数获取](ios-sdk.md#deeplink-hui-tiao-can-shu-huo-qu)
-  * [Universal Link 回调参数获取](ios-sdk.md#universal-link-hui-tiao-can-shu-huo-qu)
+  * [Universal Link 链接](ios-sdk.md#universal-link-lian-jie)
   * [设置界面元素 ID](ios-sdk.md#she-zhi-jie-mian-yuan-su-id)
   * [在 App Store 提交应用](ios-sdk.md#zai-app-store-ti-jiao-ying-yong)
 * [自定义事件和变量 API 说明](ios-sdk.md#zi-ding-yi-shi-jian-he-bian-liang-api)
@@ -44,13 +44,13 @@
 
 #### （1）使用 CocoaPods 快速集成
 
-* 添加`pod 'GrowingIO', '~>2.4.2'`到 Podfile 中
+* 添加`pod 'GrowingIO', '~>2.4.3'`到 Podfile 中
 * 执行`pod update`，不要用`--no-repo-update`选项
 * 直接进行第 2 步 [“设置 URL Scheme”](ios-sdk.md#2-she-zhi-url-scheme)
 
 #### （2）手动集成 SDK 
 
-* 下载 [2.4.2](https://assets.growingio.com/sdk/GrowingIO-iOS-SDK-2.4.2.zip) 版 iOS SDK
+* [下载 2.4.3 版 iOS SDK](https://assets.growingio.com/sdk/GrowingIO-iOS-SDK-2.4.3.zip)
 * 解压 iOS SDK 压缩文件
 * 将 Growing.h 和 libGrowing.a 添加到 iOS 工程
 
@@ -256,36 +256,14 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 * 请在 `+ (BOOL)handleUrl:(NSURL*)url`被调用前注册回调方法
 {% endhint %}
 
-### Universal Link 回调参数获取
+###  **Universal Link 链接**
 
-例如：跳转到指定商品： item\_id = 123，跳转到指定商店：store\_id = 123。当用户点击 GrowingIO 产生的 universal link 并唤起 app 时，GrowingIO SDK 会通过以下接口将参数返回给 app，app 再根据参数执行 UI 逻辑。
-
-#### 参数说明：
-
-| 参数名称 | 参数类型 | 是否必须 | 说明 |
-| :--- | :--- | :--- | :--- |
-| params | NSDictionary | 否 | 解析后参数以 key-value 的形式返回 |
-| error | NSError | 否 | 异常信息 |
+如果使用 Universal Link 唤醒APP， 请添加以下代码，注册 Universal Link 参数解析回调方法与DeepLink一致。
 
 ```objectivec
-// 注册Universal link参数解析回调方法
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-[Growing registerUniversallinkHandler:^(NSDictionary *params, NSError *error) {
-NSLog(@"params ==> %@", params);
-//弹出信息，方便查看自定义参数是否获取
-UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Universal Link回调信息"
-message:params.description
-delegate:self
-cancelButtonTitle:@"确定"
-otherButtonTitles:nil, nil];
-[alert show];
-}];
-return YES;
-}
-// 处理Universal link链接
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler{
-[Growing handleUrl:userActivity.webpageURL];
-return YES;
+    [Growing handleUrl:userActivity.webpageURL];
+	return YES;
 }
 ```
 
