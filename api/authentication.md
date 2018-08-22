@@ -31,11 +31,43 @@ GrowingIO 会给每个项目分配个公钥\(X-Client-Id\)和私钥。具体认�
 * 用户打开客户页面，会向 Client Server 发起一个请求
 * Client Server 在渲染页面时，会向 Growing Server 做认证请求，请求参数包括 ai, project 和 auth，头部参数包含 公钥（X-Client-Id ）。
 
+### 3.API定义
+
+#### Resource
+
+POST `https://www.growingio.com/auth/token`
+
+#### Authorization {#authorization}
+
+在 Header 里面添加一个属性：
+
+| 名字 | 类型 | 描述 | 示例 |
+| :--- | :--- | :--- | :--- |
+| X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
+
+#### Query Parameter {#query-parameter}
+
+| 名字 | 类型 | 描述 | 示例 |
+| :--- | :--- | :--- | :--- |
+| ai | String | 项目ID | 2a1b4018cd954ec2bcc69da5138bdb96 |
+| project | String | 项目UID | 123abc |
+| tm | Long | 申请时间戳 | 1465020309123 |
+| auth | String | 加密签名 | ab3i5dazoo58314l0qqrj1aslfj1ldfaqeroqi |
+
+{% hint style="info" %}
+Post body采用raw格式上传而不是key-value键值对方式上传。如：project=123abc&ai=2a1b4018cd954ec2bcc69da5138bdb96&tm=1465020309123&auth=ab3i5dazoo58314l0qqrj1aslfj1ldfaqeroqi
+{% endhint %}
+
+#### Response {#response}
+
 ```text
-POST https://www.growingio.com/auth/token -H "X-Client-Id: client-id" -d "project=123abc&ai=13411891aaffda&tm=1465020309123&auth=ab3i5dazoo58314l0qqrj1aslfj1ldfaqeroqi"
+   {
+     "status":"success",
+     "code":"2RhY0XZ9xyBfayAPm0aa5CoJhDJkEUcmRiBJBT6XyeIXhHrdz334Tf3I85Esm74Q"
+   }
 ```
 
-其中，auth 的计算方式是，
+#### Auth计算示例代码
 
 Java 版本示例代码
 
@@ -101,35 +133,5 @@ authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID
 1. Growing Server 收到数据后，会用请求的 body 和 key 做同样的加密，计算是不是匹配。如果匹配，返回认证码给 Client Server。
 2. Client Server 拿到认证码后，可以使用这个认证码去请求在 GrowingIO 中的数据，比如看板和单图。
 
-### 3.API 定义 {#api-definition}
 
-#### Resource {#resource}
-
-POST `https://www.growingio.com/auth/token`
-
-#### Authorization {#authorization}
-
-在 Header 里面添加一个属性：
-
-| 名字 | 类型 | 描述 | 示例 |
-| :--- | :--- | :--- | :--- |
-| X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
-
-#### Query Parameter {#query-parameter}
-
-| 名字 | 类型 | 描述 | 示例 |
-| :--- | :--- | :--- | :--- |
-| ai | String | 项目ID | 2a1b4018cd954ec2bcc69da5138bdb96 |
-| project | String | 项目UID | 123abc |
-| tm | Long | 申请时间戳 | 1465020309123 |
-| auth | String | 加密签名 | ab3i5dazoo58314l0qqrj1aslfj1ldfaqeroqi |
-
-#### Response {#response}
-
-```text
-   {
-     "status":"success",
-     "code":"2RhY0XZ9xyBfayAPm0aa5CoJhDJkEUcmRiBJBT6XyeIXhHrdz334Tf3I85Esm74Q"
-   }
-```
 

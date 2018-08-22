@@ -65,3 +65,44 @@ with open(FILE_NAME, "rb") as f:
         print(line)
 ```
 
+## 导入到数据仓库示例
+
+### 导入到Hive
+
+1. 使用Hive新建外部表，如下图所示。
+2. 使用hadoop fs -put /xx.csv /tmp/test\_export/ 将csv放到外部表目录下。
+
+```text
+CREATE EXTERNAL TABLE TEST_EXPORT
+(
+sessionId STRING,
+time BIGINT,
+sendTime BIGINT,
+pageTime BIGINT,
+domain STRING,
+page STRING,
+queryParameters STRING,
+eventName STRING,
+eventNumber DOUBLE,
+eventVariable map<string, string>,
+loginUserId STRING
+)
+ROW FORMAT SERDE EATE EXTE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+STORED AS TEXTFILE
+location '/tmp/test_export'
+tblproperties ("skip.header.line.count"="1", "quote.delim"="\"", "escape.delim"="\\")
+```
+
+### 利用Spark导入到其他数据仓库
+
+1. 获取DataFrame，代码如下。
+2. 使用databricks提供的函数Load到Hive数据库\(这里省去spark和hive的配置\)，如： df.select\("sessionId", "time", "sendTime", "pageTime", "domain", "page", "queryParameters", "eventName", "eventNumber", "eventVariable", "loginUserId"\).write.mode\("append"\).insertInto\("TEXT\_EXPORT"\)
+
+```text
+val df = spark.read
+	.option("header","true")
+	.option("escape", "\\")
+	.option("quote", "\"")
+	.csv("filePath")
+```
+
