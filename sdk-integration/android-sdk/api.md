@@ -111,7 +111,6 @@ GrowingIO 所有 API 都需要在主线程调用。
 
 | 运行时API | 说明 |
 | :--- | :--- |
-| setChannel | 设置渠道名称 |
 | setGeoLocation | 设置经纬度，并在 vst 事件中发送，Android SDK 暂时没办法自动获取`GPS`数据，如果您要采集`GPS`数据，需要在您的App每次获取完`GPS`数据之后，通过该`API`告知 SDK。如果您不设置，我们默认使用用户`IP`的`Location。` |
 | clearGeoLocation | 清空经纬度 |
 | setViewInfo | 配置 view 的 Tag，标记 View ，并在 GrowingIO 相关事件中发送 ，内容对应 `xPath` 中的 `obj`例如：在商品`ListView`添加购物车的场景中，每个商品`item`都含有一个加入购物车按钮，这时无法区分商品`item`与将它加入购物车按钮的一对一关系，此时调用此方法增加描述。注意：适用于原有`v`字段含义不大，只关注描述的场景，使用此接口后`v`字段将不采集 |
