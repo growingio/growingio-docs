@@ -48,8 +48,6 @@ URL Scheme的格式是growing.xxxxxxxxxxxxxxxx，它的获取方式有两种：
 
 您的项目ID获取方式是：点击“设置”icon-&gt;点击“项目配置”-&gt;即可看到您的项目ID
 
-![&#x9879;&#x76EE;ID&#x67E5;&#x770B;&#x65B9;&#x5F0F;](../../.gitbook/assets/image%20%283%29.png)
-
 ```groovy
 apply plugin: 'com.android.application'
 //添加插件
@@ -394,7 +392,7 @@ SDK发送对应采集数据：
     "d":"com.growingio.android.test::docs.growingio.com",
     //p 为页面，页面为 “/docs/sdk-integration/android-sdk#4-dai-ma-hun-xiao”
     "p":"StandardWebView::/docs/sdk-integration/android-sdk#4-dai-ma-hun-xiao",
-    "rf":"https://docs.growingio.com/docs/sdk-integration/android-sdk#ji-cheng",
+    "rp":"https://docs.growingio.com/docs/sdk-integration/android-sdk#ji-cheng",
     "cs1":"GrowingIO",
     "appId":"fakeAppID",
     "v":"Android SDK - 帮助文档",
@@ -686,7 +684,7 @@ gio.track(String eventId, JSONObject eventLevelVariables);
 | :--- | :--- |
 | eventId | 非空，长度限制小于等于50；`SDK 2.4.0`以下版本不支持中文，仅支持 0 到 9、a 到 z 以及下划线，并且不能以数字开头。 |
 |  number | 非空。 |
-| eventLevelVariable | 非空，长度限制小于等于100（`eventLevelVariable.length()<=100`）；`eventLevelVariable` 内部不允许含有`JSONObject`或者`JSONArray；key` 长度限制小于等于50，`value` 长度限制小等于1000。 |
+| eventLevelVariable | 非空，长度限制小于等于100（`eventLevelVariable.length()<=100`）；`eventLevelVariable` 内部不允许含有`JSONObject`或者`JSONArray；key` 长度限制小于等于50，`value` 长度限制小等于1000，值不能为空串，也就是""。 |
 
 **示例代码：**
 
@@ -792,7 +790,7 @@ gio.setPageVariable(Fragment fragment, JSONObject pageLevelVariables);
 | :--- | :--- |
 | key  | 非空，长度限制小于等于50。 |
 | value | 非空，长度限制小于等于1000。 |
-| pageLevelVariables | 非空，长度限制小于等于100（`pageLevelVariable.length()<=100`）；`pageLevelVariable` 内部不允许含有`JSONObject`或者`JSONArray`；`key` 长度限制小于等于50，`value`长度限制小等于1000。 |
+| pageLevelVariables | 非空，长度限制小于等于100（`pageLevelVariable.length()<=100`）；`pageLevelVariable` 内部不允许含有`JSONObject`或者`JSONArray`；`key` 长度限制小于等于50，`value`长度限制小等于1000，值不能为空串，也就是""。 |
 
 **示例代码：**
 
@@ -866,7 +864,7 @@ gio.setEvar(JSONObject conversionVariables);
 | :--- | :--- |
 | key | 非空，长度限制小于等于50。 |
 | value | 非空，长度限制小于等于1000。 |
-| conversionVariables | 非空，长度限制小于等于100（`conversionVariables.length()<=100`）；`conversionVariables` 内部不允许含有`JSONObject`或者`JSONArray`；`key` 长度限制小于等于50，`value`长度限制小等于1000。 |
+| conversionVariables | 非空，长度限制小于等于100（`conversionVariables.length()<=100`）；`conversionVariables` 内部不允许含有`JSONObject`或者`JSONArray`；`key` 长度限制小于等于50，`value`长度限制小等于1000，值不能为空串，也就是""。 |
 
 **示例代码：**
 
@@ -941,7 +939,7 @@ gio.setPeopleVariable(JSONObject peopleVariables);
 | :--- | :--- |
 | key | 非空，长度限制小于等于50。 |
 | value | 非空，长度限制小于等于1000。 |
-| peopleVariables | 非空，长度限制小于等于100（`peopleVariables.length()<=100`）；`peopleVariables` 内部不允许含有`JSONObject`或者`JSONArray`；`key`长度限制小于等于50，`value`长度限制小等于1000。 |
+| peopleVariables | 非空，长度限制小于等于100（`peopleVariables.length()<=100`）；`peopleVariables` 内部不允许含有`JSONObject`或者`JSONArray`；`key`长度限制小于等于50，`value`长度限制小等于1000，值不能为空串，也就是""。 |
 
 **示例代码：**
 
@@ -999,7 +997,7 @@ GrowingIO.getInstance().setUserId(String userId);
 
 | 参数名称 | 参数类型 | 必填 | 说明 |
 | :--- | :--- | :--- | :--- |
-| userId | String | 是 | 登录用户Id，长度限制小于等于1000 |
+| userId | String | 是 | 登录用户Id，长度限制小于等于1000；如果值为空则清空了登录用户变量，不建议这么用，请使用 clearUserId 清除登录用户变量。 |
 
 **示例代码：**
 
@@ -1041,7 +1039,7 @@ GrowingIO.getInstance().setVisitor(JSONObject visitorVar)
 
 | 参数名称 | 参数类型 | 必填          | 说明 |
 | :--- | :--- | :--- | :--- |
-| visitorVar | JSONObject | 是 | 不可使用嵌套的`JSONObject`对象，即为JSONObject中不可以放入`JSONObject`或者`JSONArray` |
+| visitorVar | JSONObject | 是 | 不可使用嵌套的`JSONObject`对象，即为JSONObject中不可以放入`JSONObject`或者`JSONArray`；key 长度限制小于等于50，value长度限制小等于1000，值不能为空串，也就是""。 |
 
 **示例代码：**
 
