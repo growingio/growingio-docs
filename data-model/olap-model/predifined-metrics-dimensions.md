@@ -176,15 +176,17 @@ App 和小程序 的版本号
 
 **案例：**在「事件分析」横向柱图中添加不同的「维度」，可以查看不同访问来源下的页面浏览量情况。
 
-​![](http://growing.cn-bj.ufileos.com/ccc10.png)此处输入图片的描述
+​![](http://growing.cn-bj.ufileos.com/ccc10.png)
 
 > **通过「广告监测」设置 App 推广的维度值**
 
-通过顶部导航栏进入「广告监测」功能，设置 App 推广的字段：![](http://growing.cn-bj.ufileos.com/ccc11.png)此处输入图片的描述
+通过顶部导航栏进入「广告监测」功能，设置 App 推广的字段：![](http://growing.cn-bj.ufileos.com/ccc11.png)
 
 > **通过「广告监测」设置网站推广的维度值**
 
-通过顶部导航栏进入「广告监测」功能，设置网站推广的字段：![](http://growing.cn-bj.ufileos.com/ccc12.png)此处输入图片的描述
+通过顶部导航栏进入「广告监测」功能，设置网站推广的字段：
+
+![](http://growing.cn-bj.ufileos.com/ccc12.png)
 
 > **支持自定义 UTM 参数**
 
@@ -198,7 +200,9 @@ App 和小程序 的版本号
 
 UTM 渠道归因模式为非直接访问的最后一次访问。
 
-**案例：**可以通过设置 utm 参数，选择相应的维度「广告来源」、「广告内容」、「广告名称」、「广告关键词」、「广告媒介」等，来监控投放的推广内容效果。![](http://growing.cn-bj.ufileos.com/ccc13.png)此处输入图片的描述
+**案例：**可以通过设置 utm 参数，选择相应的维度「广告来源」、「广告内容」、「广告名称」、「广告关键词」、「广告媒介」等，来监控投放的推广内容效果。
+
+![](http://growing.cn-bj.ufileos.com/ccc13.png)
 
 ### 第二部分：地域信息维度 {#02}
 
