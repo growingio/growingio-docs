@@ -63,6 +63,8 @@
 
 当你需要已安装用户站外点击链接可以直接打开 App 时，可以使用 Deep-Link 类型。
 
+[Deep-Link使用手册](https://s.growingio.com/xzAqPp)
+
 1.1.3.1创建Deep-Link
 
 1. 填写链接名称并选择您想要投放的应用。

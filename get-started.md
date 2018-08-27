@@ -42,6 +42,7 @@ GrowingIO 提供了两种数据采集定义方式「无埋点 - 圈选」和「�
 12. web 圈选 [文档](data-definition/circle/web.md) \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)
 13. App 端圈选 [文档](data-definition/circle/app.md) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)
 14. **小程序圈选** [文档](data-definition/circle/minp.md) 
+15. Deep-Link [文档](https://docs.growingio.com/docs/ads-tracking/app-marketing#113) \| [使用手册](https://s.growingio.com/xzAqPp)
 
 ### 第五步：开始进行分析
 
