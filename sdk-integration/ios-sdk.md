@@ -361,6 +361,14 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | number | Number |       否 | 事件的数值，没有number参数时，事件默认加1；当出现number参数时，事件自增number的数值。 |
 | eventLevelVariable | JSON Object |       否 | 事件发生时所伴随的维度信息。 |
 
+**参数限制条件：**
+
+| 参数名称 | 限制条件 |
+| :--- | :--- |
+| eventId | 英文数字组合的字符串，不能为 nil 或者""，长度小于等于50，且不能含有特殊字符 |
+| number | 正整数或浮点数 |
+| eventLevelVariable | 不能为 nil |
+
 ```objectivec
 // track API原型
 + (void)track:(NSString *)eventId;
@@ -396,6 +404,14 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | value | String | 否 | 页面级变量的值 |
 | pageLevelVariables | JSON Object | 否 | 页面级别的信息 |
 
+**参数限制条件：**
+
+| 参数名称 | 限制条件 |
+| :--- | :--- |
+| key | 不能为 nil 或者""，长度小于等于50 |
+| value | 不能为 nil 或者""，若为字符串则长度应大于 0 小于等于 1000 |
+| pageLevelVariable | 不能为 nil |
+
 ```objectivec
 // setPageVariable API原型
 + (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;
@@ -424,6 +440,14 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | key | String | 否 | 转化变量的标识符 |
 | Value | String | 否 | 转化变量的值 |
 | conversionVariables | JSON Object | 否 | 转化变量用于高级归因分析 |
+
+**参数限制条件：**
+
+| 参数名称 | 限制条件 |
+| :--- | :--- |
+| key | 不能为 nil 或者""，长度小于等于50 |
+| Value | 变量不为nil或者""，若为字符串则长度应大于 0 小于等于 1000 |
+| conversionLevelVariable | 不能为nil |
 
 ```objectivec
 // setEvar API原型
@@ -454,6 +478,14 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | value | String | 否 | 用户变量的值 |
 | customerVariables | JSON Object | 否 | 用户变量用于用户信息相关的分析 |
 
+**参数限制条件：**
+
+| 参数名称 | 限制条件 |
+| :--- | :--- |
+| key | 不能为nil或""，长度小于等于50 |
+| value | 变量不为nil或者""，若为字符串则长度应大于 0 小于等于 1000 |
+| customerVariables | 不能为nil |
+
 ```objectivec
 // setPeopleVariable API原型
 + (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
@@ -483,6 +515,12 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | :--- | :--- | :--- | :--- |
 | variable | JSON Object | 是 | 访问用户信息 |
 
+**参数限制条件：**
+
+| 参数名称 | 限制条件 |
+| :--- | :--- |
+| variable | 不能为`nil` |
+
 ```objectivec
 // setVisitor 访问用户变量 API原型
 + (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable;
@@ -502,6 +540,12 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
 | :--- | :--- | :--- | :--- |
 | userId | String | 是 | 用户的登录用户ID |
+
+**参数限制条件：**
+
+| 参数名称 | 限制条件 |
+| :--- | :--- |
+| userId | 英文数字组合的字符串，长度小于等于1000，且不能含有特殊字符，不允许传空、`""` 或者`nil`，如有清除操作，请调用 `clearUserId` 方法 |
 
 ```objectivec
 // setUserId API原型
