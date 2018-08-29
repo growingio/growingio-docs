@@ -80,11 +80,11 @@ GrowingIO 分配的公钥，见 API 认证文档
 
 
 
-### 2.单图数据下载 API {#chart-api}
+### 2.单图数据下载 API V2（2018-08-29更新） {#chart-api}
 
 获取单图数据（单图下载每秒限速 2 次）
 
-{% api-method method="get" host="https://www.growingio.com/projects/:project\_id/charts/:chart\_id.json" path="" %}
+{% api-method method="get" host="https://www.growingio.com/v2/projects/:project\_id/charts/:chart\_id.json" path="" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -138,37 +138,41 @@ GrowingIO 分配的公钥，见 API 认证文档
 
 ```
 {
-  id: "Chart Uid",
-  name: "Chart Name",
-  startTime: 1462118400000,
-  endTime: 1462118400000,
-  interval: 86400000,
-  meta: [
-    { name: '城市', dimension: true },
-    { name: '浏览器', dimension: true },
-    { name: 'Metric 1', metric: true },
-    { name: 'Metric 2', metric: true }
-  ],
-  data: [
-    // 线图
-    [timestamp, metric1, metric2],
-    [timestamp, metric1, metric2]
+    id:  "Chart  Uid",
+    name:  "Chart  Name",
+    startTime:  1462118400000,
+    endTime:  1462118400000,
+    interval:  86400000,
+    meta:  [
+        {  name:  '目标用户',  dimension:  true},
+        {  name:  '城市',  dimension:  true  },
+        {  name:  '浏览器',  dimension:  true  },
+        {  name:  'Metric  1',  metric:  true  },
+        {  name:  'Metric  2',  metric:  true  }
+    ],
+    data:  [
+        //  线图
+        [目标用户,  timestamp,  metric1,  metric2],
+        [目标用户,  timestamp,  metric1,  metric2]
+​
+        //  横向柱图
+        [目标用户,  dimension_v1,  metric1],
+        [目标用户,  dimension_v2,  metric1]
+​
+        //  纵向柱图
+        [目标用户,  timestamp,  metric1,  metrics2],
+        [目标用户,  timestamp,  metric1,  metrics2]
+​
+        //  表格
+        [目标用户,  dimension1_v1,  dimension2_v1,  metric1,  metric2],
+        [目标用户,  dimension1_v2,  dimension2_v1,  metric1,  metric2]
+​
+        //  大数字
+        [目标用户,  timestamp,  metric1]
 
-    // 横向柱图
-    [dimension_v1, metric1],
-    [dimension_v2, metric1]
-
-    // 纵向柱图
-    [timestamp, metric1, metrics2],
-    [timestamp, metric1, metrics2]
-
-    // 表格
-    [dimension1_v1, dimension2_v1, metric1, metric2],
-    [dimension1_v2, dimension2_v1, metric1, metric2]
-
-    // 大数字
-    [metric1]
-  ]
+        //  气泡图
+        [目标用户,  dimension1_v1,  dimension2_v1,  metric1,  metric2]
+    ]
 }
 ```
 {% endapi-method-response-example %}

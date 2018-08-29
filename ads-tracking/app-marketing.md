@@ -22,6 +22,7 @@
 * [6.数据下载与导出](app-marketing.md#6-shu-ju-xia-zai-yu-dao-chu)
   * [6.1 报表数据下载](app-marketing.md#81)
   * [6.2 日志导出](app-marketing.md#82)
+* [7.维度配置](https://docs.growingio.com/docs/ads-tracking/app-marketing#82-1)
 
 ### 1. 使用方法 {#1}
 
@@ -199,7 +200,7 @@ GIO 提供事件分析，留存分析，漏斗分析，分群分析。采取以�
 
 除了手动导出方式外，GIO 提供 API 方式导出点击&激活日志。
 
-### 7 维度配置 {#82}
+### 7. 维度配置 {#82}
 
 当您需要根据业务情况，希望投放链接可以统计到更多维度数据时，可以使用链接自定义维度配置。
 
