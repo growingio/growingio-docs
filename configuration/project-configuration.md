@@ -39,7 +39,7 @@ Notice：进入项目管理页面需要管理员权限，请您联系您公司�
 
 #### 
 
-#### 3.1配置Universal Link、应用宝微链接
+#### 4.1配置Universal Link、应用宝微链接
 
 * 在应用管理页面，配置Universal Link，应用宝微链接（可选项）。
 * 配置Universal Link将会需要您公司的iOS工程师协同配合，在Xcode客户端进行操作。
@@ -70,7 +70,7 @@ Notice：进入项目管理页面需要管理员权限，请您联系您公司�
 
 ![](https://lh4.googleusercontent.com/7YUukBuCgWU1GneNSNv7mB9mxZVh99dfFM2qzXmFDcod8bFy_JWWCsRdPMaIyCJuo4UYbk5R0NBpoEEiPsnloLPjwcuOB_AIdrKMOAQMMvJoilhp05MO4nDlc3l4LeUx6fjLQp37)
 
-
+注：添加至Domain的链接为：applinks：gio.ren
 
 3.复制您的teamID/bundle ID到Growing后台,并勾选“我已完成Xcode配置，开启Universal Link跳转”
 
