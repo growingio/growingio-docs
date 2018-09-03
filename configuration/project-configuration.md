@@ -46,9 +46,9 @@ Notice：进入项目管理页面需要管理员权限，请您联系您公司�
 
 ![&#x627E;&#x5230;&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x9875;&#x9762;](../.gitbook/assets/image%20%2819%29.png)
 
-![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x9875;&#x9762;](../.gitbook/assets/ying-yong-guan-li.jpg)
+![](../.gitbook/assets/ying-yong-guan-li.png)
 
-![](../.gitbook/assets/pei-zhi-universal-link.jpg)
+![](../.gitbook/assets/unilink.png)
 
 ![](../.gitbook/assets/pei-zhi-wei-lian-jie.jpg)
 
@@ -74,7 +74,7 @@ Notice：进入项目管理页面需要管理员权限，请您联系您公司�
 
 3.复制您的teamID/bundle ID到Growing后台,并勾选“我已完成Xcode配置，开启Universal Link跳转”
 
-![](https://lh4.googleusercontent.com/DfoaT2L-yKMEHoCKctZRuKsyCo1ghlCM7L_ylxpZ-HqmQnuEHE0uugA9ZEBkE_KmXTTVBZQRIa9DvjnTtHSOKJK3VuO_mTYEs3LiOZDP_Uqo_GQF6Bg6Tx11ijy_BmFpzhblTTS9)
+![](../.gitbook/assets/unilink.png)
 
 
 
