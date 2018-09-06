@@ -488,7 +488,7 @@ GrowingIO.startWithConfiguration(this, new Configuration()
 GrowingIO.startWithConfiguration(this, new Configuration()
     .setDeeplinkCallback(new DeeplinkCallback() {
                 @Override
-                public void onReceive(Map<String, String> params, int error) {
+                public void onReceive(Map<String, String> params, int status) {
                      if (status == DeeplinkCallback.SUCCESS) {
                         //获得您的自定义参数，处理您的相关逻辑
                         Log.d("TestApplication", "DeepLink 参数获取成功，params" + params.toString());
