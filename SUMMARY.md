@@ -66,7 +66,7 @@
   * [无埋点圈选](data-definition/circle/README.md)
     * [Web 圈选](data-definition/circle/web.md)
     * [App 圈选](data-definition/circle/app.md)
-    * [小程序圈选](data-definition/circle/minp.md)
+    * [小程序数据定义](data-definition/circle/minp.md)
     * [圈选指标管理](data-definition/circle/metric-management/README.md)
       * [合并简单指标](data-definition/circle/metric-management/combine.md)
       * [复合指标](data-definition/circle/metric-management/complex.md)

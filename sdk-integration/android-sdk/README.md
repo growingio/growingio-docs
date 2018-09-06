@@ -44,7 +44,7 @@ URL Scheme的格式是growing.xxxxxxxxxxxxxxxx，它的获取方式有两种：
 * 新产品的 URL Scheme ：登录官网 -&gt;点击“设置”icon -&gt; 点击“应用管理” -&gt; 点击“新建应用”-&gt; 选择添加Android应用 -&gt;  URL Scheme 为:growing.xxxxxxxxxxxxxxxx”中标黄字体。
 * 现有产品的 URL Scheme ：登录官网 -&gt; 点击“设置” icon -&gt; 点击“应用管理” -&gt; 找到对应产品的URL Scheme。
 
-![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%2832%29.png)
+![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%2834%29.png)
 
 您的项目ID获取方式是：点击“设置”icon-&gt;点击“项目配置”-&gt;即可看到您的项目ID
 
@@ -376,7 +376,7 @@ GrowingIO.startWithConfiguration(this, new Configuration().setHashTagEnable(true
 
 
 
-![&#x70B9;&#x51FB;WebView&#x4E2D;&#x7684;&#x951A;&#x70B9;&#x94FE;&#x63A5;](../../.gitbook/assets/image%20%2886%29.png)
+![&#x70B9;&#x51FB;WebView&#x4E2D;&#x7684;&#x951A;&#x70B9;&#x94FE;&#x63A5;](../../.gitbook/assets/image%20%2889%29.png)
 
 SDK发送对应采集数据：
 
@@ -1122,7 +1122,7 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 
 当显示高亮则证明可圈，如图所示：
 
-![&#x5143;&#x7D20;&#x9AD8;&#x4EAE;&#x8BC1;&#x660E;&#x53EF;&#x5708;](../../.gitbook/assets/image%20%28102%29.png)
+![&#x5143;&#x7D20;&#x9AD8;&#x4EAE;&#x8BC1;&#x660E;&#x53EF;&#x5708;](../../.gitbook/assets/image%20%28105%29.png)
 
 \*\*\*\*
 
