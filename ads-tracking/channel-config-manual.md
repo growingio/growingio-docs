@@ -60,7 +60,7 @@
 2. 在百度原生信息流平台创建一条“APP下载转化”。填写相应信息。
 3. 将GIO生成的监测链接填写到“监测地址”。
 
-![](https://docs.growingio.com/.gitbook/assets/14.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 1. 将百度原生信息流后台的akey复制并填写到GIO相应链接上。
 

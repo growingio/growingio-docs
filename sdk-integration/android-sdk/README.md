@@ -376,7 +376,7 @@ GrowingIO.startWithConfiguration(this, new Configuration().setHashTagEnable(true
 
 
 
-![&#x70B9;&#x51FB;WebView&#x4E2D;&#x7684;&#x951A;&#x70B9;&#x94FE;&#x63A5;](../../.gitbook/assets/image%20%2893%29.png)
+![&#x70B9;&#x51FB;WebView&#x4E2D;&#x7684;&#x951A;&#x70B9;&#x94FE;&#x63A5;](../../.gitbook/assets/image%20%2894%29.png)
 
 SDK发送对应采集数据：
 
@@ -1122,7 +1122,7 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 
 当显示高亮则证明可圈，如图所示：
 
-![&#x5143;&#x7D20;&#x9AD8;&#x4EAE;&#x8BC1;&#x660E;&#x53EF;&#x5708;](../../.gitbook/assets/image%20%28109%29.png)
+![&#x5143;&#x7D20;&#x9AD8;&#x4EAE;&#x8BC1;&#x660E;&#x53EF;&#x5708;](../../.gitbook/assets/image%20%28110%29.png)
 
 \*\*\*\*
 
