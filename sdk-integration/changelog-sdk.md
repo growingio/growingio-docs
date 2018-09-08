@@ -5,7 +5,7 @@
 Web 2.1.16
 
 1. 修复部分情况下 SDK 通信失效导致网站无法圈选的问题
-2. 支持Chrome圈选插件适配iframe嵌套的场景
+2. 支持Chrome圈选插件适配 iframe 嵌套的场景
 3. 采集数据实时回掉接口 addRealTimeCallback 支持默认上报所有事件类型
 4. 增加 ignoreClck 配置项，开启后不采集任何点击事件
 
