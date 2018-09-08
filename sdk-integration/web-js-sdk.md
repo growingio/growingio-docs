@@ -4,10 +4,11 @@
   * [1.集成 SDK](web-js-sdk.md#1-sdk)
   * [2.Web JS SDK 系统变量](web-js-sdk.md#12)
   * [3.Web JS SDK 高级设置](web-js-sdk.md#13)
-    * [3.1 设置数据采集黑名单 \(growing-ignore\)​](web-js-sdk.md#31-she-zhi-shu-ju-cai-ji-hei-ming-dan-growingignore)
-    * [​3.2 开启输入文本框内容采集 \(growing-track\)​](web-js-sdk.md#32-kai-qi-shu-ru-wen-ben-kuang-nei-rong-cai-ji-growingtrack)
-    * [3.3 手动设置采集文本信息 \(data-growing-title\)​](web-js-sdk.md#33-shou-dong-she-zhi-cai-ji-wen-ben-xin-xi-datagrowingtitle)
-    * [​3.4 手动设置采集位置信息 \(data-growing-idx\)​](web-js-sdk.md#34-shou-dong-she-zhi-cai-ji-wei-zhi-xin-xi-datagrowingidx)
+    * [3.1 设置采集容器 \(data-growing-container\)​](web-js-sdk.md#31container)
+    * [​3.2 设置采集文本信息 \(data-growing-title\)](web-js-sdk.md#32title)
+    * [3.3 设置采集位置信息 \(data-growing-idx\)​](web-js-sdk.md#33idx)
+    * [​3.4 设置数据采集黑名单 \(growing-ignore\)](web-js-sdk.md#34ignore)
+    * [3.5 开启输入文本框内容采集 \(growing-track\)](web-js-sdk.md#35track)
   * [4.Web JS SDK API](web-js-sdk.md#13-1)
     * [4.1 API 简介](web-js-sdk.md#131)
     * [4.2 初始化 \(init\)​](web-js-sdk.md#132)
@@ -45,7 +46,7 @@
 
 请将以下的页面代码放置到需要分析的页面中的 &lt;head&gt; 和 &lt;/head&gt; 标签之间，即可完成 Web JS SDK 2.1页面代码的安装。请注意使用**具体的项目 ID** 替换代码中的 **your projectId** 。
 
-```text
+```markup
 <!-- GrowingIO Analytics code version 2.1 -->
 <!-- Copyright 2015-2017 GrowingIO, Inc. More info available at http://www.growingio.com -->
 <script type='text/javascript'>
@@ -75,7 +76,7 @@
 
 GrowingIO默认不会把 hashtag 识别成页面 URL 的一部分。对于使用 hashtag 进行页面跳转的单页面网站应用来说，可以启用 hashtag 作为标识页面的一部分:
 
-```text
+```javascript
 gio('config', {'hashtag':true});
 ```
 
@@ -85,7 +86,7 @@ gio('config', {'hashtag':true});
 
 除点击、修改、提交等用户行为数据的采集，GrowingIO 还默认开启元素浏览量\(简称imp\)的无埋点采集。对于内容基本固定的网站，可以直接禁用元素浏览量采集。
 
-```text
+```javascript
 gio('config', {'imp':false});
 ```
 
@@ -93,50 +94,47 @@ gio('config', {'imp':false});
 
 高级设置可以帮助您更自如地进行圈选操作，请将高级设置插入您web应用的代码中。
 
-#### 3.1 **设置数据采集黑名单** \(growing-ignore\)​
+#### 3.1 设置采集容器 \(data-growing-container\) {#31container}
 
-如果您希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
+默认视button或a标签为可圈选容器。同时，默认可以圈选页面dom上所有叶子结点和叶子结点的上一级父节点。比如，
 
-```text
-    <div growing-ignore='true'>
-      …
-    </div>
+```markup
+<div id="1" data-growing-container>
+  <div id="2">
+    <h1 id="3">商品名称</h1>
+  </div>
+  <div id="4">
+    <div id="5">商品图片</div>
+  </div>
+  <div id="6">
+    <div id="7">商品描述</div>
+  </div>
+</div>
 ```
 
-#### 3.2 **开启输入文本框内容采集** \(growing-track\)​
+由于数据采集准确性的原因，默认不支持以id="1"的div为容器进行圈选。您可以为期望的容器元素添加data-growing-container 属性，圈选时即可圈到这个容器。
 
-由于输入文本框可能涉及一些隐私信息，比如账号、密码等，GrowingIO在采集数据的时候默认不采集输入文本框的数据。如果您希望采集某些文本框输入内容，比如搜索词，可以在input标签中设置growing-track属性，这样该文本框中的输入内容就会被采集到。如果input类型是password，即使开启内容采集，也不会采集该文本框的输入内容。
-
-```text
-    <input type='text' growing-track='true' />
-```
-
-JS代码请以售前人员提供的为主，进行正确添加。
-
-至此您的 SDK 整合已经完成，我们就可以接收您的数据，之后您可以登录 www.growingio.com 的网站即可开始进行圈选。
-
-#### 3.3 **手动设置采集文本信息** \(data-growing-title\)​
+#### 3.2 设置采集文本信息 \(data-growing-title\) {#32title}
 
 对于一些图片或者区块，可以通过设置 title 或者 data-growing-title 属性来设置采集点点文本。比如，
 
-```text
-<li data-growing-title="上一页" 
-                 class="ant-pagination-disabled ant-pagination-prev">
+```markup
+<li data-growing-title="上一页" class="ant-pagination-disabled ant-pagination-prev">
   <a></a>
 </li>
 ```
 
 这时，采集到的 li 结点的内容就是_"上一页"_。
 
-更多的文本信息规则，可以参考[第4节：What\(内容\)](https://sishen.gitbooks.io/gio-js-book/dom/4what.html)和[第1节：内容规则](https://sishen.gitbooks.io/gio-js-book/5/1.html)。
+更多的文本信息规则，可以参考[第4节：What\(内容\)](https://sishen.gitbooks.io/gio-js-book/dom/4what.html)和[第1节：内容规则](https://sishen.gitbooks.io/gio-js-book/5/1.html)
 
-#### 3.4 **手动设置采集位置信息** \(data-growing-idx\)​
+#### 3.3 设置采集位置信息 \(data-growing-idx\)​​ {#33idx}
 
 除了内容以外，元素在列表里所在位置在某些场景下也是非常重要的信息，比如对于推荐广告位而言，我们是希望知道哪个位置的点击率最高。GrowingIO SDK 会自动识别列表元素，并附带上元素在列表里的位置。
 
 LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表内所有元素结点都会附带上位置信息。其他标签默认并不会带有位置信息，比如一些用 DIV 标签做的平铺容器。对于这种情况，可以使用 data-growing-idx。当在容器 DOM 结点上设置 data-growing-idx 属性，容器内的所有 DOM 元素同样，都会继承该属性值。比如
 
-```text
+```markup
 <div data-growing-idx="1">
   <div class="left-container">
     <img src="" alt="图片1"/>
@@ -149,13 +147,35 @@ LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表�
 </div>
 ```
 
-更多的位置信息规则，可以参考[第2节：位置规则](https://sishen.gitbooks.io/gio-js-book/5/2.html)。
+更多的位置信息规则，可以参考[第2节：位置规则](https://sishen.gitbooks.io/gio-js-book/5/2.html)
+
+#### ​​3.4 设置数据采集黑名单 \(growing-ignore\) {#34ignore}
+
+如果您希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
+
+```markup
+<div growing-ignore='true'>
+ …
+</div>
+```
+
+#### 3.5 开启输入文本框内容采集 \(growing-track\) {#35track}
+
+由于输入文本框可能涉及一些隐私信息，比如账号、密码等，GrowingIO在采集数据的时候默认不采集输入文本框的数据。如果您希望采集某些文本框输入内容，比如搜索词，可以在input标签中设置growing-track属性，这样该文本框中的输入内容就会被采集到。如果input类型是password，即使开启内容采集，也不会采集该文本框的输入内容。
+
+```markup
+<input type='text' growing-track='true' />
+```
+
+JS代码请以售前人员提供的为主，进行正确添加。
+
+至此您的 SDK 整合已经完成，我们就可以接收您的数据，之后您可以登录 www.growingio.com 的网站即可开始进行圈选。
 
 ### 4.Web JS SDK API {#13}
 
 #### 4.1 API 简介 {#131}
 
-```text
+```javascript
 // 初始化参数
 gio('init', projectId, options); 
 
@@ -196,12 +216,12 @@ gio('clearUserId');
 | projectId | String | 是 | 项目ID |
 | options | JSON Object | 否 | 系统变量配置 |
 
-```text
+```javascript
 //init API原型
 gio('init', projectId, options);
 ```
 
-```text
+```javascript
 //init API调用示例
 //配置imp类型的数据关闭发送
 gio('init', '1234567890', {'imp':false});
@@ -215,12 +235,12 @@ gio('init', '1234567890', {'imp':false});
 | :--- | :--- | :--- | :--- |
 | userId | String | 是 | 用户的登录用户ID |
 
-```text
+```javascript
 //setUserId API原型
 gio('setUserId', userId);
 ```
 
-```text
+```javascript
 //setuserId API调用示例
 gio('setUserId', '1234567890');
 ```
@@ -229,7 +249,7 @@ gio('setUserId', '1234567890');
 
 当用户登出之后调用 clearUserId ，清除已经设置的登录用户 ID 。
 
-```text
+```javascript
 //clearUserId API原型和调用示例
 gio('clearUserId');
 ```
@@ -244,23 +264,23 @@ gio('clearUserId');
 | number | Number | 否 | 事件的数值，没有number参数时，事件默认加1；当出现number参数时，事件自增number的数值。 |
 | eventLevelVariables | JSON Object | 否 | 包含事件级变量的JSON对象，暨事件发生时所伴随的维度信息。 |
 
-```text
+```javascript
 // track API原型
 gio('track', eventId, eventLevelVariables);
 gio('track', eventId, number, eventLevelVariables);
 ```
 
-```text
+```javascript
 // track API调用示例一
 gio('track', 'registerSuccess');
 ```
 
-```text
+```javascript
 // track API调用示例二
 gio('track', 'registerSuccess', {'gender':'male', 'age':21});
 ```
 
-```text
+```javascript
 // track API调用示例三
 gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zhejiang'});
 ```
@@ -275,18 +295,18 @@ gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zheji
 | value | String | 否 | 页面级变量的值 |
 | pageLevelVariables | JSON Object | 否 | 包含页面级变量的JSON对象，暨页面级别的信息 |
 
-```text
+```javascript
 // page.set API原型
 gio('page.set', key, value);
 gio('page.set', pageLevelVariables);
 ```
 
-```text
+```javascript
 // page.set API调用示例一
 gio('page.set', {'pageName': 'Home Page', 'author': 'Zhang San'});
 ```
 
-```text
+```javascript
 // page.set API调用示例二
 gio('page.set', 'author', 'Zhang San');
 ```
@@ -301,18 +321,18 @@ gio('page.set', 'author', 'Zhang San');
 | Value | String | 否 | 转化变量的值 |
 | conversionVariables | JSON Object | 否 | 包含转化变量的JSON对象 |
 
-```text
+```javascript
 // evar.set API原型
 gio('evar.set', key, value);
 gio('evar.set', conversionVariables);
 ```
 
-```text
+```javascript
 // evar.set API调用示例一
 gio('evar.set', 'campaignId'，'1234567890');
 ```
 
-```text
+```javascript
 // evar.set API调用示例二
 gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
 ```
@@ -327,18 +347,18 @@ gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
 | value | String | 否 | 用户变量的值 |
 | customerVariables | JSON Object | 否 | 包含用户变量的JSON对象 |
 
-```text
+```javascript
 // people.set API原型
 gio('people.set', key, value);
 gio('people.set', customerVariables);
 ```
 
-```text
+```javascript
 // people.set API调用示例一
 gio('people.set', 'gender', 'male');
 ```
 
-```text
+```javascript
 //people.set API调用示例二
 gio('people.set', {'gender':'male', 'age':'25'});
 ```
@@ -349,7 +369,7 @@ gio('people.set', {'gender':'male', 'age':'25'});
 
 这时，可以调用GrowingIO提供的 sendPage 接口手动发送页面浏览事件。这个接口的调用将会发送出一条‘page’类型的数据，GIO 服务器在收到 page 类型的数据之后，页面浏览量这个预定义指标会加 1。
 
-```text
+```javascript
 //sendPage API原型和调用示例
 gio('sendPage');
 ```
@@ -370,13 +390,13 @@ gio('sendPage');
 
 如果您的网站使用https协议，需将配置修改成
 
-```text
+```javascript
 X-Frame-Options: Allow-From https://www.growingio.com
 ```
 
 如果您的网站使用http协议，需将配置修改成
 
-```text
+```javascript
 X-Frame-Options: Allow-From http://www.growingio.com
 ```
 
@@ -418,7 +438,7 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 
 * 1.x 版本方法格式：
 
-```text
+```javascript
 _vds.push(['setCS1', 'CS1的key', 'CS1的value']);
 _vds.push(['setCS2', 'CS2的key', 'CS2的value']);
 _vds.push(['setCS3', 'CS3的key', 'CS3的value']);
@@ -430,7 +450,7 @@ _vds.push(['setCS10', 'CS10的key', 'CS10的value']);
 
 对于 CS1 字段，也就是登陆用户ID，请使用以下方法：
 
-```text
+```javascript
 // 设置登录用户ID
 gio('setUserId', userId);
 
@@ -440,14 +460,14 @@ gio('clearUserId');
 
 对于应用级变量，也就是 1.x 版本中的 CS2 - CS10，请使用以下方法：
 
-```text
+```javascript
 gio(‘app.set’, key, value) // 单个变量
 gio('app.set', appLevelVariables) // 多个变量，可组合为一个JSON对象appLevelVariables传入
 ```
 
 对于用户变量，也就是 1.x 版本中的 CS11 - CS20，请使用以下方法：
 
-```text
+```javascript
 gio('people.set', key, value); // 单个变量
 gio('people.set', peopleVariables); // 多个变量，可组合为一个JSON对象peopleVariables传入
 ```
@@ -466,7 +486,7 @@ gio('people.set', peopleVariables); // 多个变量，可组合为一个JSON对�
 
 * 1.x 版本方法格式：
 
-```text
+```javascript
 _vds.push([’setPageGroup‘, ‘PageGroup 的名称’];
 _vds.push([‘setPS1’, ‘PS1 的值’]);
 _vds.push([‘setPS2’, ‘PS2 的值’]);
@@ -475,7 +495,7 @@ _vds.push([‘setPS3’, ‘PS1 的值’]);
 
 * 2.x 版本方法格式：
 
-```text
+```javascript
 gio('page.set', key, value);
 gio('page.set', pageLevelVariables); //多个变量，可组合为一个对象传入
 ```
@@ -496,13 +516,13 @@ gio('page.set', pageLevelVariables); //多个变量，可组合为一个对象�
 
 * 1.x 版本方法格式：
 
-```text
+```javascript
 window._vds.track(event_name, properties)
 ```
 
 * 2.x 版本方法格式：
 
-```text
+```javascript
 gio('track', eventId);
 gio('track', eventId, number);
 gio('track', eventId, eventLevelVariables);
@@ -559,7 +579,7 @@ debug 工具的工作界面如下图：
 
 将我们提供给您的 JS SDK 加入到您所需要分析的页面，请将我们给您提供的 JS SDK 复制到 `<head>` 和 `</head>` 标签之间即可, 例如：
 
-```text
+```markup
 <head>
 ...
 <script type='text/javascript'>
@@ -587,7 +607,7 @@ debug 工具的工作界面如下图：
 
 GrowingIO 的数据分析工具本身提供了例如 “访问来源”，“关键字”，“城市”,“操作系统"，”浏览器“等等这些维度。这些维度都可以和用户创建的指标进行多维的分析。但是往往不能满足用户对数据多维度分析的要求，因为每个公司的产品都有各自的用户维度，比如客户所服务的公司，用户正在使用的产品版本等等。GrowingIO 为了能够让数据分析变得更加的灵活，我们在 JS SDK 中提供了用户自定义维度的API接口:
 
-```text
+```javascript
 _vds.push(['setCS1', 'CS1的key', 'CS1的value']);
 _vds.push(['setCS2', 'CS2的key', 'CS2的value']);
 _vds.push(['setCS3', 'CS3的key', 'CS3的value']);
@@ -615,7 +635,7 @@ _vds.push(['setCS10', 'CS10的key', 'CS10的value']);
 **CS4:** company\_name:GrowingIO  
 **CS5:** sales\_name:销售员小王
 
-```text
+```javascript
     <script type='text/javascript'>
         var _vds = _vds || [];
         window._vds = _vds;
@@ -652,7 +672,7 @@ JS SDK 有一些高级功能，可以通过配置的方式开启，具体是在�
 
 比如按照 1/20 的比例采样。采样原则默认按照用户 ID 来采样。
 
-```text
+```javascript
     _vds.push(['setSampling', 20])
 ```
 
@@ -664,7 +684,7 @@ JS SDK 有一些高级功能，可以通过配置的方式开启，具体是在�
 
 GrowingIO 提供两种采集，元素浏览和元素点击/修改等交互行为。对于内容基本固定的网站来说，可以直接禁用元素浏览量采集。
 
-```text
+```javascript
     _vds.push(['setImp', false])
 ```
 
@@ -672,7 +692,7 @@ GrowingIO 提供两种采集，元素浏览和元素点击/修改等交互行为
 
 我们默认不会把 hashtag 识别成页面 URL 的一部分。对于使用 hashtag 作为单页应用页面切换的网站来说，您可以使用`enableHT`来监听 hashtag 的变化，并区分页面来收集页面数据，每次 hashtag 改变都会触发一次 PV，hashtag 的信息也会记录在页面URL中。
 
-```text
+```javascript
     _vds.push(['enableHT', true])
 ```
 
@@ -680,7 +700,7 @@ GrowingIO 提供两种采集，元素浏览和元素点击/修改等交互行为
 
 如果您希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
 
-```text
+```javascript
     <div growing-ignore='true'>
       …
     </div>
@@ -690,7 +710,7 @@ GrowingIO 提供两种采集，元素浏览和元素点击/修改等交互行为
 
 由于输入文本框可能涉及一些隐私信息，比如账号、密码等，GrowingIO在采集数据的时候默认不采集输入文本框的数据。如果您希望采集某些文本框输入内容，比如搜索词，可以在input标签中设置growing-track属性，这样该文本框中的输入内容就会被采集到。如果input类型是password，即使开启内容采集，也不会采集该文本框的输入内容。
 
-```text
+```javascript
     <input type='text' growing-track='true' />
 ```
 
@@ -702,7 +722,7 @@ JS代码请以售前人员提供的为主，进行正确添加。
 
 对于一些图片或者区块，可以通过设置 title 或者 data-growing-title 属性来设置采集点点文本。比如，
 
-```text
+```javascript
 <li data-growing-title="上一页" 
                  class="ant-pagination-disabled ant-pagination-prev">
   <a></a>
@@ -719,7 +739,7 @@ JS代码请以售前人员提供的为主，进行正确添加。
 
 LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表内所有元素结点都会附带上位置信息。其他标签默认并不会带有位置信息，比如一些用 DIV 标签做的平铺容器。对于这种情况，可以使用 data-growing-idx。当在容器 DOM 结点上设置 data-growing-idx 属性，容器内的所有 DOM 元素同样，都会继承该属性值。比如
 
-```text
+```javascript
 <div data-growing-idx="1">
   <div class="left-container">
     <img src="" alt="图片1"/>
@@ -743,7 +763,7 @@ LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表�
 
 当页面局部刷新，URL没有发生变化，GIO无法自动统计页面浏览量时，您可以手动发送页面浏览事件。
 
-```text
+```javascript
 _vds.trackPV();
 ```
 

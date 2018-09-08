@@ -58,15 +58,43 @@
 
 ### 4. 百度原生信息流 {#34}
 
-1. 创建一条“百度信息流”的监测链接。
-2. 在百度原生信息流平台创建一条“APP下载转化”。填写相应信息。
-3. 将GIO生成的监测链接填写到“监测地址”。
+1.在GIO后台生成百度原生信息流监测链接后，进入百度推广后台：[https://www2.baidu.com](https://www2.baidu.com)
 
-![](../.gitbook/assets/image%20%2838%29.png)
+ 2.进入后台后选择“数据中心”
 
-1. 将百度原生信息流后台的akey复制并填写到GIO相应链接上。
+![](https://lh3.googleusercontent.com/dsTdgXzFovIzhb04vFZ9rSeaelw9jg0r2YyY-MtsqyGgHeDsdwlibxRI93GxQwqZ83Wm8TNqsiVoo_JPSszLzv9DJV1Gz_385JsNxPfeyOTjJSslQmdchcVzr7nH7ilBDWUp7xAu)
 
-   ![](https://docs.growingio.com/.gitbook/assets/15.png)
+3.进入数据中心后选择“信息流推广”
+
+![](https://lh4.googleusercontent.com/5L1SLuNv_2_bPMvl-Y4Lg7GTci6ANhxI6B718creLjn1kiA04_iLTsrZvDyvn-C2fuGmU8fG12VTd5wz5eTPr_A18XZPC1i9wsogeHL5m9bkDHDwq99Y5WvdrtbHmNIHCpMzBCnw)
+
+4.在“工具中心”里面选择“转化追踪工具”，然后点击“新建转化”
+
+![](https://lh6.googleusercontent.com/wKAwoZHxzJhE8NfpHQUj56Q8dRoj37veZ2--0ocpyVyguHeqV5xuPpZ_lSrkMWxOKW4u6tE0LwjNLo1IH6uiCuowfv43SkvD8aDo3hDLXbfWYZ5ilL8BCIfy1lc6xleUq-QqQsTp)
+
+5.选择“应用下载”
+
+![](https://lh3.googleusercontent.com/_a3YZ2dJmlO0XF0mcNOQJbbuKHtnGR4O4A15hA4Ax9E20XlDx33vOmcT1-cdJJMdKkfh2cIWv2TTvcyUO1gJDOxBoZDgpnpDd7KXlrhvn9HYH_meWpEvEGzG3RFssO8jn4gDf9H-)
+
+6.进入该页面后把GIO生成的百度信息流的链接填写到“监测地址”，里面将该页面的“akey值“”填写到GIO后台
+
+![](https://lh4.googleusercontent.com/BPw7FK9ZncOKikNRx0LgGTIr8s47LajFyhJIz-1JFla0si7gkCnbQh5cI7IoMp77iFzk8lMZBezemMxHdFbuOYMja9XmOcr9Da7_HpdZweJTVNL_PWykTIxMH7bfmcOhxspGoNX_)
+
+  
+****7.点击提交后，手机下载“百度推广APP”，在手机上用百度推广APP扫描图片上的二维码下载您的APP进行联调  
+****
+
+![](https://lh4.googleusercontent.com/VeFB9NEP6JONFsYkKywu1jBS6KvezE6kicHNbypEg207y5vzm52hAmNtnKi0v2uwC55e_vYEwh9qH4p3bk77KGSCBiP9jmy9p9C6WIiQwTKct7AYc5zC5yKNsYE0QoXfo5iOU4iM)
+
+
+
+8.下载完，打开后APP点击下一步
+
+![](https://lh3.googleusercontent.com/HmHwrY9L7aEx7C2IpQpztIL_Kkx22x-lcmptJHSaCGq5EFetQm6tq6cx1n4LouzNxgUM_RkHiViEfFQxZbVwP1iVdT8SuuWwZzBRHYF-fOsdqAwKe4oIIxBMcbSJOkcg5HmHRO8q)
+
+9.联调成功
+
+![](https://lh6.googleusercontent.com/79d5flDHKw0Lswcc56fC2pyDfX2UNbc-k1PfRAHgr9NFVLQ3wazVkeWpebBAwCCVaRHUqJvnHj75KbtAmSXFuc35D2ao1q_CAHYvItmjhADu14lWouTfORjGQWvEIKZkaaeystCo)
 
 ### 5. Inmobi {#35}
 
