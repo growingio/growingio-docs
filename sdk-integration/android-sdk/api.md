@@ -132,7 +132,7 @@ GrowingIO 所有 API 都需要在主线程调用。
 | setImp |  `imp`事件开关，`true` 为打开 |  |
 | disableImpression | 不发送 `imp` |  |
 | ignoredView | 忽略配置的 View ，不采集用户数据。如果您需要忽略某些特殊内容，比如倒计时元素或涉及隐私的内容，可以使用该功能。 |  |
-| ignoreFragment | 忽略配置的 Fragment ，不采集用户数据。如果您需要忽略某些特殊内容，比如倒计时元素或涉及隐私的内容，可以使用该功能。 |  |
+| ignoreFragment | 不采集配置的 Fragment 页面浏览事件（`page`），不将`Fragment`视作一个页面，可以理解成当作为一个可点击的view。自动采集用户行为事件（`clck、chng`）和元素展示事件（`imp`）。 |  |
 | setPageName | 设置页面别名，有些时候，对于完成某个功能的页面，统计时可能需要进一步细分。 比如，对于展示商品列表的页面，需要区分衣物类商品，以及食品类商品的两种列表的访问量。注意 |  |
 | getSessionId | 得到 session id |  |
 | [trackBanner](./#cai-ji-guang-gao-banner-shu-ju) | [设置所有广告图对应的广告内容描述，内容描述需要跟广告的顺序相同。](./#cai-ji-guang-gao-banner-shu-ju) |  |
