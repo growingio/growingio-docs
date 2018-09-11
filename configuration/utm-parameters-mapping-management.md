@@ -28,18 +28,19 @@ description: 在复杂的跨部门/跨渠道/跨场景获客，渠道参数值�
 
 ![UTM&#x6620;&#x5C04;&#x529F;&#x80FD;&#x5165;&#x53E3;](../.gitbook/assets/image%20%28100%29.png)
 
-Step3：点击“新建 UTM 映射” 按钮，在弹框中，填写需要映射的渠道参数，例如 “ResourceID” ；然后选择需要映射的参数，默认提供5个统计参数，utm\_source, utm\_campaign, utm\_medium, utm\_content, utm\_term；UTM适用含义和参数值如下:
+Step3：点击“新建 UTM 映射” 按钮，在弹框中，填写需要映射的渠道参数，例如 “ResourceID” ；然后选择需要映射的参数，点击确定。
 
-![UTM&#x7C7B;&#x53C2;&#x6570;&#x91CA;&#x4E49;](../.gitbook/assets/image%20%2883%29.png)
+一次仅支持填写一个渠道参数值；如果需要创建多个映射关系，新增映射即可。
 
-  
-
-
-填写完后，点击确定。**数据会在映射创建成功后，才开始进行映射统计。**
+**数据会在映射创建成功后，才开始进行映射统计。**
 
 **注：会严格匹配映射参数，对大小写敏感，需要确保填写的映射参数是和投放时一样的。**
 
 ![&#x586B;&#x5199;&#x6620;&#x5C04;&#x53C2;&#x6570;](../.gitbook/assets/image%20%28105%29.png)
+
+默认提供5个统计参数，utm\_source, utm\_campaign, utm\_medium, utm\_content, utm\_term；UTM适用含义和参数值如下:
+
+![UTM&#x7C7B;&#x53C2;&#x6570;&#x91CA;&#x4E49;](../.gitbook/assets/image%20%2883%29.png)
 
 如图即可建立如下的映射关系；当映射关系不存在时，可以进行删除，如果有新的映射关系，则可以进行新增。
 
