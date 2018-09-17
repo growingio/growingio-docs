@@ -670,23 +670,72 @@ gio.track(String eventId, JSONObject eventLevelVariables);
 
 **参数说明：**
 
-| 参数名称 | 参数类型 | 必填 | 说明 |
-| :--- | :--- | :--- | :--- |
-| eventId | String | 是 | 事件标识符 |
-| number | Number | 否 | 事件的数值，没有number参数时，事件默认加一；当出现number参数时，事件自增number的数值 |
-| eventLevelVariable | JSONObject | 否 | 事件发生时所伴随的维度信息 |
-
-**参数限制条件：**
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">参数类型</th>
+      <th style="text-align:left">必填</th>
+      <th style="text-align:left">说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">eventId</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">是</td>
+      <td style="text-align:left">事件标识符</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">number</td>
+      <td style="text-align:left">Number</td>
+      <td style="text-align:left">否</td>
+      <td style="text-align:left">
+        <p>事件的数值，没有number参数时，事件默认加一；</p>
+        <p>当出现number参数时，事件自增number的数值</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">eventLevelVariable</td>
+      <td style="text-align:left">JSONObject</td>
+      <td style="text-align:left">否</td>
+      <td style="text-align:left">事件发生时所伴随的维度信息</td>
+    </tr>
+  </tbody>
+</table>**参数限制条件：**
 
 参数违反以下条件将不发送数据，`SDK 2.4.0` 以上能够在 Log 日志中查看对应报错，之下版本无提示信息。调用后请关注日志，查看数据发送是否成功，事件类型`t`为`cstm`。
 
-| 参数名称 | 限制条件 |
-| :--- | :--- |
-| eventId | 非空，长度限制小于等于50；`SDK 2.4.0`以下版本不支持中文，仅支持 0 到 9、a 到 z 以及下划线，并且不能以数字开头。 |
-|  number | 非空。 |
-| eventLevelVariable | 非空，长度限制小于等于100（`eventLevelVariable.length()<=100`）；`eventLevelVariable` 内部不允许含有`JSONObject`或者`JSONArray；key` 长度限制小于等于50，`value` 长度限制小等于1000，值不能为空串，也就是""。 |
-
-**示例代码：**
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">限制条件</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">eventId</td>
+      <td style="text-align:left">
+        <p>非空，长度限制小于等于50；</p>
+        <p><code>SDK 2.4.0</code>以下版本不支持中文，仅支持 0 到 9、a 到 z 以及下划线，并且不能以数字开头。</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">number</td>
+      <td style="text-align:left">非空。</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">eventLevelVariable</td>
+      <td style="text-align:left">
+        <p>非空，长度限制小于等于100（<code>eventLevelVariable.length()&lt;=100</code>）；</p>
+        <p><code>eventLevelVariable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        </p>
+        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>**示例代码：**
 
 ```java
 // track API调用示例一
@@ -786,13 +835,32 @@ gio.setPageVariable(Fragment fragment, JSONObject pageLevelVariables);
 
 参数违反以下条件将不发送数据，`SDK 2.4.0` 以上能够在 Log 日志中查看对应报错，之下版本无提示信息。调用后请关注日志，查看数据发送是否成功，事件类型`t`为`pvar`。
 
-| 参数名称 | 限制条件 |
-| :--- | :--- |
-| key  | 非空，长度限制小于等于50。 |
-| value | 非空，长度限制小于等于1000。 |
-| pageLevelVariables | 非空，长度限制小于等于100（`pageLevelVariable.length()<=100`）；`pageLevelVariable` 内部不允许含有`JSONObject`或者`JSONArray`；`key` 长度限制小于等于50，`value`长度限制小等于1000，值不能为空串，也就是""。 |
-
-**示例代码：**
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">限制条件</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">key</td>
+      <td style="text-align:left">非空，长度限制小于等于50。</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">value</td>
+      <td style="text-align:left">非空，长度限制小于等于1000。</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">pageLevelVariables</td>
+      <td style="text-align:left">
+        <p>非空，长度限制小于等于100（<code>pageLevelVariable.length()&lt;=100</code>）；</p>
+        <p><code>pageLevelVariable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray</code>；</p>
+        <p><code>key</code> 长度限制小于等于50，<code>value</code>长度限制小等于1000，值不能为空串，也就是""。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>**示例代码：**
 
 ```java
 // page.set API调用示例
@@ -860,13 +928,32 @@ gio.setEvar(JSONObject conversionVariables);
 
 **参数限制条件：**
 
-| 参数名称 | 限制条件 |
-| :--- | :--- |
-| key | 非空，长度限制小于等于50。 |
-| value | 非空，长度限制小于等于1000。 |
-| conversionVariables | 非空，长度限制小于等于100（`conversionVariables.length()<=100`）；`conversionVariables` 内部不允许含有`JSONObject`或者`JSONArray`；`key` 长度限制小于等于50，`value`长度限制小等于1000，值不能为空串，也就是""。 |
-
-**示例代码：**
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">限制条件</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">key</td>
+      <td style="text-align:left">非空，长度限制小于等于50。</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">value</td>
+      <td style="text-align:left">非空，长度限制小于等于1000。</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">conversionVariables</td>
+      <td style="text-align:left">
+        <p>非空，长度限制小于等于100（<code>conversionVariables.length()&lt;=100</code>）；</p>
+        <p><code>conversionVariables</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray</code>；</p>
+        <p><code>key</code> 长度限制小于等于50，<code>value</code>长度限制小等于1000，值不能为空串，也就是""。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>**示例代码：**
 
 ```java
 // setEvar API调用示例一
@@ -935,13 +1022,32 @@ gio.setPeopleVariable(JSONObject peopleVariables);
 
 **参数限制条件：**
 
-| 参数名称 | 限制条件 |
-| :--- | :--- |
-| key | 非空，长度限制小于等于50。 |
-| value | 非空，长度限制小于等于1000。 |
-| peopleVariables | 非空，长度限制小于等于100（`peopleVariables.length()<=100`）；`peopleVariables` 内部不允许含有`JSONObject`或者`JSONArray`；`key`长度限制小于等于50，`value`长度限制小等于1000，值不能为空串，也就是""。 |
-
-**示例代码：**
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">限制条件</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">key</td>
+      <td style="text-align:left">非空，长度限制小于等于50。</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">value</td>
+      <td style="text-align:left">非空，长度限制小于等于1000。</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">peopleVariables</td>
+      <td style="text-align:left">
+        <p>非空，长度限制小于等于100（<code>peopleVariables.length()&lt;=100</code>）；</p>
+        <p><code>peopleVariables</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray</code>；</p>
+        <p><code>key</code>长度限制小于等于50，<code>value</code>长度限制小等于1000，值不能为空串，也就是""。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>**示例代码：**
 
 ```java
 // people.set API调用示例一
@@ -995,11 +1101,28 @@ GrowingIO.getInstance().setUserId(String userId);
 
 **参数说明：**
 
-| 参数名称 | 参数类型 | 必填 | 说明 |
-| :--- | :--- | :--- | :--- |
-| userId | String | 是 | 登录用户Id，长度限制小于等于1000；如果值为空则清空了登录用户变量，不建议这么用，请使用 clearUserId 清除登录用户变量。 |
-
-**示例代码：**
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">参数类型</th>
+      <th style="text-align:left">必填</th>
+      <th style="text-align:left">说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">userId</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">是</td>
+      <td style="text-align:left">
+        <p>登录用户Id，长度限制小于等于1000；</p>
+        <p>如果值为空则清空了登录用户变量，不建议这么用，</p>
+        <p>请使用 clearUserId 清除登录用户变量。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>**示例代码：**
 
 ```java
 GrowingIO.getInstance().setUserId("1234567890");
@@ -1037,11 +1160,27 @@ GrowingIO.getInstance().setVisitor(JSONObject visitorVar)
 
 **参数说明：**
 
-| 参数名称 | 参数类型 | 必填          | 说明 |
-| :--- | :--- | :--- | :--- |
-| visitorVar | JSONObject | 是 | 不可使用嵌套的`JSONObject`对象，即为JSONObject中不可以放入`JSONObject`或者`JSONArray`；key 长度限制小于等于50，value长度限制小等于1000，值不能为空串，也就是""。 |
-
-**示例代码：**
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">参数类型</th>
+      <th style="text-align:left">必填</th>
+      <th style="text-align:left">说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">visitorVar</td>
+      <td style="text-align:left">JSONObject</td>
+      <td style="text-align:left">是</td>
+      <td style="text-align:left">
+        <p>不可使用嵌套的<code>JSONObject</code>对象，即为JSONObject中不可以放入<code>JSONObject</code>或者<code>JSONArray</code>；</p>
+        <p>key 长度限制小于等于50，value长度限制小等于1000，值不能为空串，也就是""。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>**示例代码：**
 
 ```java
 GrowingIO gio = GrowingIO.getInstance();
@@ -1086,17 +1225,57 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 
 #### 自动采集事件类型
 
-| 事件类型 | 含义 | 发送时机 |
-| :--- | :--- | :--- |
-| activate | 激活 | 当APP首次激活打开时 |
-| vst | 应用访问 | 1.冷启动发送2.切换用户发送3.默认APP进入后台30秒以后再次打开会发送 |
-| page | 页面浏览 | 每当进入一个页面时发送 |
-| imp | 元素展现 | 页面元素发生变动的时候触发，比如弹框或者`ListView`滑动 |
-| clck | 点击 | 点击实现了相关 click Listener 的元素控件，[常见问题中将详细列举](./#2-dian-ji-shi-jian-cai-ji-luo-ji) |
-| chng | 输入框内容变化 | 输入框`EditText`失去焦点，默认不采集输入内容 |
-| reengage | DeepLink唤醒事件 | 通过扫描 DeepLink 二维码唤醒 APP 后发送 |
-
-#### 自定义事件类型
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">事件类型</th>
+      <th style="text-align:left">含义</th>
+      <th style="text-align:left">发送时机</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">activate</td>
+      <td style="text-align:left">激活</td>
+      <td style="text-align:left">当APP首次激活打开时</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">vst</td>
+      <td style="text-align:left">应用访问</td>
+      <td style="text-align:left">
+        <p>1.冷启动发送</p>
+        <p>2.切换用户发送</p>
+        <p>3.默认APP进入后台30秒以后再次打开会发送</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">page</td>
+      <td style="text-align:left">页面浏览</td>
+      <td style="text-align:left">每当进入一个页面时发送</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">imp</td>
+      <td style="text-align:left">元素展现</td>
+      <td style="text-align:left">页面元素发生变动的时候触发，比如弹框或者<code>ListView</code>滑动</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">clck</td>
+      <td style="text-align:left">点击</td>
+      <td style="text-align:left">点击实现了相关 click Listener 的元素控件，<a href="./#2-dian-ji-shi-jian-cai-ji-luo-ji">常见问题中将详细列举</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">chng</td>
+      <td style="text-align:left">输入框内容变化</td>
+      <td style="text-align:left">输入框<code>EditText</code>失去焦点，默认不采集输入内容</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">reengage</td>
+      <td style="text-align:left">DeepLink唤醒事件</td>
+      <td style="text-align:left">通过扫描 DeepLink 二维码唤醒 APP 后发送</td>
+    </tr>
+  </tbody>
+</table>#### 自定义事件类型
 
 | 事件类型 | 含义 | 发送时机 |
 | :--- | :--- | :--- |

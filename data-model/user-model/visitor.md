@@ -37,7 +37,7 @@ GrowingIO会按照如下顺序获取访问用户ID：
 
 ### 小程序 SDK
 
-GrowingIO默认使用UUID来作为访问用户ID，您也可以通过 API 设置使用openid作为访问用户ID。
+GrowingIO默认使用UUID（随机UUID的方法生成访问用户ID，并将之记录在浏览器的Cookie中）来作为访问用户ID，您也可以通过 API 设置使用openid作为访问用户ID。
 
 访问用户ID将保存到微信浏览器的cookie中。
 
@@ -51,7 +51,7 @@ GrowingIO默认使用UUID来作为访问用户ID，您也可以通过 API 设置
 
    Android：用户删除了应用重新安装或者是清除了数据
 
-   微信小程序：无
+   微信小程序：用户长按小程序入口的小程序图标，删除了小程序；更换了手机设备；手动更新了微信的缓存等。
 
 
 
