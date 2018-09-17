@@ -1,8 +1,7 @@
 # 小程序 SDK
 
 * [小程序SDK集成前工作​](mina-sdk.md#xiao-cheng-xu-sdk-ji-cheng-qian-gong-zuo)
-  * ​[1. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#1-sdk-dai-ma-an-zhuang)[确定集成SDK的项目](mina-sdk.md#que-ding-ji-cheng-sdk-de-xiang-mu)
-  * ​[2. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#ios-sdk-api)[创建新的GrowingIO项目](mina-sdk.md#chuang-jian-xin-de-growingio-xiang-mu)
+  * [​创建新的GrowingIO项目 ](mina-sdk.md#chuang-jian-xin-de-growingio-xiang-mu)或 [在项目中集成一个新的小程序应用](mina-sdk.md#zai-tong-yi-xiang-mu-xia-jie-ru-yi-ge-xin-de-xiao-cheng-xu)
 * ​[小程序SDK标准接入指南](mina-sdk.md#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
   * [1. 下载小程序采集SDK](mina-sdk.md#xia-zai-xiao-cheng-xu-cai-ji-sdk)
   * ​[2. 添加跟踪代码​](mina-sdk.md#tian-jia-gen-zong-dai-ma)
@@ -28,6 +27,20 @@
 
 
 在代码集成页面，选择“**小程序**“平台，输入**应用名称**和**小程序 AppID**，点击下一步。
+
+### 在项目中接入一个新的小程序应用
+
+在你的 GrowingIO 项目页面点击右上角点击小齿轮，在弹出的列表中选择“应用管理“。在应用管理页面，点击“**新建应用**“来创建一个新应用。
+
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LH3J3bJm8y879FZ1E7G%2F-LH3KSslW7JKLy4bb98K%2Fimage.png?alt=media&token=04f949af-bbb1-49f5-98e2-c212022a9c1d)
+
+然后会到达SDK集成页面，填写小程序的应用名称，和小程序的AppID ,点击“下一步”，即可以到达小程序SDK接入的页面。
+
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LH3J3bJm8y879FZ1E7G%2F-LH3JTZYNHN07NUun-S6%2Fimage.png?alt=media&token=ea6a9dc2-5bc9-408d-b50f-f9c734f5cf0d)
+
+目前仅支持小程序应用集成在同一个项目下，暂不支持小程序产品和web\iOS\Android端产品集成在同一项目下。
+
+如果需要集成其他端产品，或者需要在已有web/iOS/Andoird产品集成的情况下，集成小程序产品，请创建新的项目。
 
 ## 小程序SDK标准接入指南
 
