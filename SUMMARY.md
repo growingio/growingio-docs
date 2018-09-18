@@ -2,6 +2,7 @@
 
 * [GrowingIO 帮助文档](README.md)
 * [快速上手](get-started.md)
+* [快速上手-小程序](kuai-su-shang-shou-xiao-cheng-xu.md)
 * [产品更新日志](product-changelog.md)
 * [分析工具](data-analytics/README.md)
   * [事件分析](data-analytics/event-analysis.md)
@@ -27,6 +28,7 @@
   * [推广 App](ads-tracking/app-marketing.md)
   * [渠道配置指南](ads-tracking/channel-config-manual.md)
   * [UTM 参数使用指南](ads-tracking/utm-parameters.md)
+  * [创建小程序的推广码](ads-tracking/miniprogram-qrcode.md)
   * [默认的渠道来源跟踪](ads-tracking/default-channel-tracking.md)
   * [广告监测FAQ](ads-tracking/guang-gao-jian-ce-faq.md)
 * [SDK 文档](sdk-integration/README.md)
