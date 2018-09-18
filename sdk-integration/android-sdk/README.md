@@ -1,6 +1,6 @@
 # Android SDK
 
-* [集成](./#ji-cheng)
+* [集成 SDK](./#ji-cheng-sdk)
   * [添加依赖](./#1-tian-jia-yi-lai)
   * [添加 URLScheme 和网络权限](./#2-tian-jia-urlscheme-he-wang-luo-quan-xian)
   * [初始化SDK](./#3-chu-shi-hua-sdk)
@@ -15,7 +15,7 @@
   * [迁移自定义事件（埋点事件）](./#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)
   * [数据校验](./#5-shu-ju-xiao-yan)
 
-## 集成
+## 集成 SDK
 
 ### 1. 添加依赖
 

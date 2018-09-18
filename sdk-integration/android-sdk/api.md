@@ -4,7 +4,7 @@ description: >-
   的采集，满足不同场景的定制采集。同一种含义的API，只需要调用一次即可，比如您关闭SDK的采集功能，可以在初始化中配置，也可以在运行时配置，只需调用一次相关API即可。
 ---
 
-# Android API
+# Android SDK API
 
 ## GrowingIO 初始化配置项 API
 

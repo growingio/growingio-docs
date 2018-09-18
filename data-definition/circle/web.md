@@ -22,13 +22,13 @@ URL**示意：**www.xxx.com **/** 12345/678/123 **?** id=1&ig=2
 
 如果页面中有 **\#**，请先设置后再进行数据采集和分析：我们默认不会把 hashtag 识别成页面 URL 的一部分。对于使用 hashtag 作为单页应用页面切换的网站来说，请在工程师的帮助下，添加下面的代码，使用`enableHT`来监听 hashtag 的变化，并区分页面来收集页面数据，每次 hashtag 改变都会触发一次PV，hashtag 的信息也会记录在页面 URL 中。
 
-如果你的[ SDK 是最新版本](../../sdk-integration/web-js-sdk.md)，请添加这段代码：
+如果你的[ SDK 是最新版本](../../sdk-integration/web-js-sdk/)，请添加这段代码：
 
 ```text
 gio('config', {'hashtag':true});
 ```
 
-如果你 [SDK 是旧版本](../../sdk-integration/web-js-sdk.md#2-1)，请添加：
+如果你 [SDK 是旧版本](../../sdk-integration/web-js-sdk/#2-1)，请添加：
 
 ```text
 _vds.push(['enableHT', true])
@@ -318,6 +318,8 @@ GrowingIO 可以统计原生应用中的 H5 页面和 H5 做成的应用。
 2. 可能是该网站禁止了 iframe 的加载，请联系工程师修改配置；
 3. 可能是工程师加载 js 代码时的项目 ID 填写有误（项目 ID 没有空格）；
 4. 有可能复写 window 对象：可视化圈选时候，必须要保证您的网站与 GrowingIO 平台之间的通信。如果 window.top, window.parent, window.name, window.location 被复写，将导致无法圈选。
+
+如果出于某些原因你不能改变 iframe 或 window 相关设置，建议[下载 GrowingIO Chrome 圈选插件](https://assets.growingio.com/webcircle/extension.zip)进行圈选。
 
 **9.能否在 iframe 中进行圈选？**
 
