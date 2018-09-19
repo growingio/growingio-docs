@@ -36,8 +36,6 @@ iframe 元素可以将一个页面嵌入到另一个页面里，iframe 元素会
 
 我们提供了一个全局变量 webViewRequestSend，在 web sdk 中会判断当用户设置 webViewRequestSend 为 false 并且 hybrid sdk 加载成功，则不进行 web sdk 数据的采集。
 
-考虑到 web sdk 执行时有可能 hybrid sdk 还未注入成功，这种情况可能会造成两个 sdk 都采集数据，所以在 web sdk 采集的数据发送时，也会判断是否注入了 hybrid sdk，如果注入了，则不发送 web sdk 采集的数据发送。
-
 ### 6. 同时集成了web sdk 1.x 和web sdk 2.x会怎么处理？
 
 同时集成两个web sdk，都会只有第一个先执行的生效，虽然我们做了容错，但是并不支持用户同时集成两个sdk，没有必要。
