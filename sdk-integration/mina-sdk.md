@@ -88,10 +88,10 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue
 
 | 参数 | 值 | 解释 |
 | :--- | :--- | :--- |
-| forceLogin | true \| false | 你的小程序是否强制要求用户登陆微信获取 openid，默认 false |
-| debug | true \| false | 是否开启调试模式，可以看到采集的数据，默认 false |
 | version | string | 你的小程序的版本号 |
 | followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认false |
+| forceLogin | true \| false | 你的小程序是否强制要求用户登陆微信获取 openid，默认 false |
+| debug | true \| false | 是否开启调试模式，可以看到采集的数据，默认 false |
 
 {% hint style="info" %}
 forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程序里面设置用户标识符，存储在微信 Storage 里面。这个用户标识符潜在可能会被`clearStorage` 清除掉，所以有可能不同的用户标识符对应同一个微信里的 `openid`。如果你的微信小程序在用户打开后会去做登录并且获取 `openid` 和/或 `unionid`，可以设置 `forceLogin` 为 true。当 forceLogin 为 true 的时候，用户标识符会使用 openid，潜在风险是如果用户没有登录，数据不会发送。具体集成示例：
@@ -123,6 +123,33 @@ gio("identify", openid, unionid);
 当集成成功后，需要回到 GrowingIO SDK 集成页面检测数据。请在添加了跟踪代码的小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。详情可见小程序Debugger。
 
 ## SDK高级设置&数据采集配置
+
+### SDK分享分析参数
+
+转发分享小程序是小程序获客的重要场景，想要详细的进行转发分享的统计，需要在SDK参数中，设置如下参数，值为true
+
+| 参数 | 值 | 解释 |
+| :--- | :--- | :--- |
+| followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认false |
+
+即微信小程序项目根目录的 app.js 文件设置参数如下：
+
+```javascript
+var gio = require("utils/gio-minp.js");
+// version 是你的小程序的版本号，发版时请调整
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' }, followShare:true);
+
+```
+
+对于 mpvue 用户，使用下面这种方式：
+
+```javascript
+import gio from './utils/gio-minp'
+import Vue from 'vue'
+import App from './App'
+​
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' },followShare:true);
+```
 
 ### SDK 微信用户属性设置
 
