@@ -41,7 +41,7 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 2. [集成小程序SDK](sdk-integration/mina-sdk.md#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)； 
 3. 进行小程序SDK配置；  
    1. [配置微信用户属性](sdk-integration/mina-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)
-   2. 打开SDK中分享跟踪参数
+   2. [打开SDK中分享跟踪参数](sdk-integration/mina-sdk.md#sdk-fen-xiang-fen-xi-can-shu)
 4. 配置完成进入[数据校验](sdk-integration/growingio-debugger/#growingio-minidebugger)，确认数据开始收取
 
 #### 第二步：开始查看系统提供的数据内容
