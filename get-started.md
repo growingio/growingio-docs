@@ -10,7 +10,7 @@ description: 欢迎使用 GrowingIO，这是一份新同学使用 GrowingIO 指�
 
 1. [JS SDK 配置](sdk-integration/web-js-sdk/)
 2. [Android SDK 配置](sdk-integration/android-sdk/)
-3. [iOS SDK 配置](sdk-integration/ios-sdk.md)
+3. [iOS SDK 配置](sdk-integration/ios-sdk/)
 4. [**小程序 SDK 配置**](sdk-integration/mina-sdk.md)
 
 ### 第二步：在工程师的协助下，进行重要配置

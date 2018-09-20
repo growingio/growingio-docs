@@ -49,7 +49,7 @@
 
 * [​JS 接口文档​](../../sdk-integration/web-js-sdk/#track)
 * [​Android 接口文档​](../../sdk-integration/android-sdk/#2-zi-ding-yi-shi-jian-he-bian-liang-api)
-* [​iOS 接口文档​](../../sdk-integration/ios-sdk.md#ios-sdk-api)
+* [​iOS 接口文档​](../../sdk-integration/ios-sdk/#ios-sdk-api)
 * ​[小程序接口文档​](../../sdk-integration/mina-sdk.md#zi-ding-yi-shi-jian-he-bian-liang)
 
 API 中给出了埋点事件和埋点事件变量的上传方式
