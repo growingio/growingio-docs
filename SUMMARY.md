@@ -1,7 +1,6 @@
 # Table of contents
 
 * [GrowingIO 帮助文档](README.md)
-* [快速上手](get-started.md)
 * [快速上手-Web](kuai-su-shang-shou-web.md)
 * [快速上手-移动端](kuai-su-shang-shou-yi-dong-duan.md)
 * [快速上手-小程序](kuai-su-shang-shou-xiao-cheng-xu.md)
@@ -19,6 +18,7 @@
     * [Web 端热图](data-analytics/heatmap/heatmap-web.md)
     * [App 热图](data-analytics/heatmap/heatmap-app.md)
   * [单图](data-analytics/charts.md)
+  * [小程序-分享分析](data-analytics/xiao-cheng-xu-fen-xiang-fen-xi.md)
 * [看板](dashboard/README.md)
   * [自定义首页](dashboard/homepage.md)
   * [概览看板](dashboard/overview.md)

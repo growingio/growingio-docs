@@ -52,7 +52,7 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 #### 第三步：开始探索使用数据定义和分析工具：  {#di-san-bu-kai-shi-tan-suo-shi-yong-shu-ju-ding-yi-he-fen-xi-gong-ju}
 
 * [了解预置维度和指标的定义](data-model/olap-model/predifined-metrics-dimensions.md)；
-* 了解“[App圈选](data-definition/circle/app.md)”；尝试定义几个核心的产品事件，例如“加入购物车”、“浏览详情页”等。
+* 了解“App圈选 （[文档](data-definition/circle/app.md) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)）”；尝试定义几个核心的产品事件，例如“加入购物车”、“浏览详情页”等。
 * 探索几个基础但强大的分析工具
   * [事件分析](data-analytics/event-analysis.md)
   * [漏斗分析](data-analytics/funnel-analysis.md)
@@ -63,18 +63,19 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 
 #### 第四步：进行获客推广管理配置 {#di-si-bu-jin-hang-huo-ke-tui-guang-guan-li-pei-zhi}
 
-* 推广App，[使用GrowingIO移动端广告监测功能](ads-tracking/app-marketing.md)，包括普通监测跳转链接，以及deeplink链接，精细化了解移动端推广，提升转化。
+* 推广App，[使用GrowingIO移动端广告监测功能](ads-tracking/app-marketing.md)，包括普通监测跳转链接，以及deeplink链接 （Deep-Link [文档](https://docs.growingio.com/docs/ads-tracking/app-marketing#113) \| [使用手册](https://s.growingio.com/xzAqPp)），精细化了解移动端推广，提升转化。
+* 具体介绍也可以观看[视频](https://s.growingio.com/jvoRdB)。
 
 ### 进阶使用
 
 * 使用分析手册，多来使用几个核心功能，并探索一些高级功能
-  * [事件分析](data-analytics/event-analysis.md)
-  * [漏斗分析](data-analytics/funnel-analysis.md)
-  * [留存分析](data-analytics/retention-analysis.md)
-  * [留存魔法师](data-analytics/magic-number.md)
-  * [智能路径](data-analytics/pathfinder.md)
+  * 事件分析 [文档](data-analytics/event-analysis.md) \| [使用手册](https://s.growingio.com/nvN9MB)
+  * 漏斗分析 [文档](data-analytics/funnel-analysis.md) \| [使用手册](https://s.growingio.com/9PXbR0) \| [视频](https://s.growingio.com/kKdDjv)
+  * 留存分析 [文档](data-analytics/retention-analysis.md) \| [使用手册](https://s.growingio.com/p8QD3x) \| [视频](https://s.growingio.com/4PpoAK)
+  * 智能路径 [文档](data-analytics/pathfinder.md)
+  * 留存魔法师 [文档](data-analytics/magic-number.md)
 * 探索用户分析几个功能
-  * [用户分群](data-analytics/user-segmentation.md)
+  * 用户分群 [文档](data-analytics/user-segmentation.md) \| [使用手册](https://s.growingio.com/9PaAZ8) \|  [视频](https://s.growingio.com/ambRb4)
   * [用户细查](data-analytics/individual-user-report.md)
   * [活跃用户分析](data-analytics/user-engagement-analysis.md)
 
@@ -92,5 +93,13 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 * **系统管理员**
   * [系统项目高级配置](configuration/)，包括权限管理，用户管理，映射管理，应用管理等等。   
 
+### 主要功能使用场景和手册
 
+我们提供了一些主要功能的产品使用手册，希望可以为你带来帮助：
+
+1. [指标和维度使用手册](https://s.growingio.com/NLdx0O)
+2. [事件分析使用手册](https://s.growingio.com/nvN9MB)
+3. [漏斗分析使用手册](https://s.growingio.com/9PXbR0)
+4. [留存分析使用手册](https://s.growingio.com/p8QD3x)
+5. [用户分群使用手册](https://s.growingio.com/9PaAZ8)
 

@@ -53,7 +53,7 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 #### 第三步：开始探索使用数据定义和分析工具：  {#di-san-bu-kai-shi-tan-suo-shi-yong-shu-ju-ding-yi-he-fen-xi-gong-ju}
 
 * [了解预置维度和指标的定义](data-model/olap-model/predifined-metrics-dimensions.md)；
-* 了解“[Web圈选](data-definition/circle/web.md)”；尝试定义几个核心的产品事件，例如“加入购物车”、“浏览详情页”等。
+* 了解“web 圈选 （[文档](data-definition/circle/web.md) \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)）”；尝试定义几个核心的产品事件，例如“加入购物车”、“浏览详情页”等。
 * 探索几个基础但强大的分析工具
   * [事件分析](data-analytics/event-analysis.md)
   * [漏斗分析](data-analytics/funnel-analysis.md)
@@ -69,22 +69,22 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 ### 进阶使用
 
 * 使用分析手册，多来使用几个核心功能，并探索一些高级功能
-  * [事件分析](data-analytics/event-analysis.md)
-  * [漏斗分析](data-analytics/funnel-analysis.md)
-  * [留存分析](data-analytics/retention-analysis.md)
-  * [留存魔法师](data-analytics/magic-number.md)
-  * [智能路径](data-analytics/pathfinder.md)
+  * 事件分析 [文档](data-analytics/event-analysis.md) \| [使用手册](https://s.growingio.com/nvN9MB)
+  * 漏斗分析 [文档](data-analytics/funnel-analysis.md) \| [使用手册](https://s.growingio.com/9PXbR0) \| [视频](https://s.growingio.com/kKdDjv)
+  * 留存分析 [文档](data-analytics/retention-analysis.md) \| [使用手册](https://s.growingio.com/p8QD3x) \| [视频](https://s.growingio.com/4PpoAK)
+  * 智能路径 [文档](data-analytics/pathfinder.md)
+  * 留存魔法师 [文档](data-analytics/magic-number.md)
 * 探索用户分析几个功能
-  * [用户分群](data-analytics/user-segmentation.md)
+  * 用户分群 [文档](data-analytics/user-segmentation.md) \| [使用手册](https://s.growingio.com/9PaAZ8) \|  [视频](https://s.growingio.com/ambRb4)
   * [用户细查](data-analytics/individual-user-report.md)
   * [活跃用户分析](data-analytics/user-engagement-analysis.md)
 
-### 其他需要进一步了解的功能    
+### 需要进一步了解的高级功能    
 
 * **分析人员（包括分析师、产品经理、运营等）**
+  * \*\*\*\*[用户变量](data-definition/user-variable/loginuserid.md)，进一步打通您的业务用户和访问用户。
   * [数据模型](data-model/)，帮助您进一步了解GrowingIO的数据采集口径，行为分析的数据逻辑。
   * 了解[埋点事件的使用场景](data-model/event-model/custom-event/)，明确哪些场景需要进一步上报业务属性数据，以及怎么使用。
-  * [用户变量](data-definition/user-variable/loginuserid.md)，进一步打通您的业务用户和访问用户。
   * 了解[Web端SDK的高级设置](sdk-integration/web-js-sdk/#13)，以便更好地在更多场景下使用圈选功能（例如按钮的内容，banner等）。
 * **开发者**
   * 了解[Web端SDK的高级设置](sdk-integration/web-js-sdk/#13)，根据需求进行配置。
@@ -92,4 +92,16 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
   * [API](api/)
 * **系统管理员**
   * [系统项目高级配置](configuration/)，包括权限管理，用户管理，映射管理，应用管理等等。   
+
+### 主要功能使用场景和手册
+
+我们提供了一些主要功能的产品使用手册，希望可以为你带来帮助：
+
+1. [指标和维度使用手册](https://s.growingio.com/NLdx0O)
+2. [事件分析使用手册](https://s.growingio.com/nvN9MB)
+3. [漏斗分析使用手册](https://s.growingio.com/9PXbR0)
+4. [留存分析使用手册](https://s.growingio.com/p8QD3x)
+5. [用户分群使用手册](https://s.growingio.com/9PaAZ8)
+
+
 
