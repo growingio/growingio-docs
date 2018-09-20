@@ -31,23 +31,41 @@
 
 ### 2. 广点通 {#32}
 
-1. 进入GIO后台，为广点通的投放生成一条监测链接。进入“渠道配置”模块，点击“广点通”，“是否回传激活”字段设置为“是”。
-2. 进入广点通后台，“工具箱”。创建移动应用转化
-3. 填写具体内容，转化类别选择“激活”，转化方案选择“API方案一”。
-4. FeedbackURL填写GIO后台分配的链接。
-5. 完成创建转化后，记录您的账户ID，转化里的encrypt\_key以及sign\_key。将信息填写到GIO后台相应链接上。
-6. 启用联调测试，按照流程进行联调。首先，点击“现在联调”。
+通过授权认证的方式配置您的腾讯社交广告平台投放监测
 
-![](https://docs.growingio.com/.gitbook/assets/11.png)
+1.填写广点通后台投放账号（qq号）
 
-1. 然后填写设备号并提交：
+![](https://lh6.googleusercontent.com/312MVunewEmtEUatmLR76HGph02_LIaBDdtLOA0iBes9qrBu2FNtPDRbGZTkkl7wChkhGizzFli808XrRC8BDrFDk0zA8I7la0nyVQOnSHqocI6vdlMteILChnqPv0KwKauuPN0X)
 
-![](https://docs.growingio.com/.gitbook/assets/12.png)
+2.填写投放账号id
 
-特别说明：  
-对于安卓手机，键盘依次输入："\*\#06\#"会出现本机IMEI号。对于iOS设备，以关键词“IDFA”搜索AppStore后，下载相关应用，从应用里获取当前设备IDFA。
+地址：e.qq.com
 
-1. 完成以上步骤后，需要将转化规则的状态改为：启用。
+![](https://lh5.googleusercontent.com/oL32LztcZoCk31uMuUlkdds_hZ0YUbSgw_KmZv34SXwmpjfKoEeITUwYRtKy9M7tBVCTS2VKpEtf3qBB1q9Zt1xDW5vnhYWEyWdV_TgUhWoPth7U6EV_O0BvRhjbO6nAAqJsvHb9)
+
+3.进行授权认证
+
+![](https://lh6.googleusercontent.com/S85gFId4JYGU9sjj0hZxbQfa1zXSnMB-heWUXTzEqPpLZV54XOdto2MuED6Z9EpTdlYoXcAi5q1zbaP-oEBysbrZdmnTvJ__qqO9G5rl007EKtWGID-XT_j-0aL_asPMbVaDy0VM)
+
+4.填写应用id（Android为应用宝应用id，iOS为苹果应用id）
+
+![](https://lh4.googleusercontent.com/Tl24U_It8aDyQXnQ7eed_acMzI8M0A-j53y1Gg9yWMVCEDet6PS9XLhqKNaUupmjHfM55nOT-kam-RCT3VnrTawF-CBFcqD7AhjYGxDS-D3A_NrrcepVqt8QoFq9SYClxTBfCz6z)
+
+5.保存并联调测试
+
+a.进入工具箱页面，点击转化跟踪
+
+b.点击“获取点击数据”按钮
+
+c.选择移动平台，输入移动应用ID
+
+d.将Ad Tracking后台生成的feedback URL填至此处
+
+e.点击提交
+
+f.输入联调设备进行联调
+
+g.联调成功后，启用转化状态
 
 ### 3. 爱奇艺 {#33}
 
