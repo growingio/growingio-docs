@@ -2,6 +2,7 @@
 
 * [GrowingIO 帮助文档](README.md)
 * [快速上手](get-started.md)
+* [快速上手-Web](kuai-su-shang-shou-web.md)
 * [快速上手-移动端](kuai-su-shang-shou-yi-dong-duan.md)
 * [快速上手-小程序](kuai-su-shang-shou-xiao-cheng-xu.md)
 * [产品更新日志](product-changelog.md)
