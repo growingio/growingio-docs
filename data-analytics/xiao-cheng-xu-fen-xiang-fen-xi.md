@@ -20,7 +20,7 @@ GrowingIO采集的是微信默认分享功能，即转发小程序到一个好�
 
 ## 分享分析功能使用 {#fen-xiang-fen-xi-gong-neng-shi-yong}
 
-点击“产品分析——&gt; 分享分析”，进入分享分析页面。
+点击“获客管理——&gt; 分享分析”，进入分享分析页面。
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LMpSdtEh4eMNiVNv7Y6%2F-LMpSfykZzx7IehHdxX6%2Fimage.png?alt=media&token=c618205f-7830-4afb-8267-23c0de74d540)
 
