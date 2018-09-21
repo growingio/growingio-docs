@@ -279,6 +279,12 @@ GrowingIO 所有 API 都需要在主线程调用。
       <td style="text-align:left"></td>
     </tr>
     <tr>
+      <td style="text-align:left">getDeviceId</td>
+      <td style="text-align:left">获取设备id，对应数据采集的<code>u</code>字段，又称为<code>&#x533F;&#x540D;&#x7528;&#x6237;id</code>，用来定义一台设备，SDK
+        自动生成。</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
       <td style="text-align:left"><a href="./#cai-ji-guang-gao-banner-shu-ju">trackBanner</a>
       </td>
       <td style="text-align:left"><a href="./#cai-ji-guang-gao-banner-shu-ju">设置所有广告图对应的广告内容描述，内容描述需要跟广告的顺序相同。</a>
