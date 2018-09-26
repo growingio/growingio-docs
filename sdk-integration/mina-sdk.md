@@ -5,6 +5,7 @@
 * ​[小程序SDK标准接入指南](mina-sdk.md#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
   * [1. 下载小程序采集SDK](mina-sdk.md#xia-zai-xiao-cheng-xu-cai-ji-sdk)
   * ​[2. 添加跟踪代码​](mina-sdk.md#tian-jia-gen-zong-dai-ma)
+    * [2.1 若有Webview，请在Webview中添加代码](mina-sdk.md#xiao-cheng-xu-zhong-you-webview)
   * ​[3. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)[添加请求服务器域名](mina-sdk.md#tian-jia-qing-qiu-fu-wu-qi-yu-ming)
   * ​[4. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)[检测数据](mina-sdk.md#jian-ce-shu-ju)
 * [SDK高级设置](mina-sdk.md#sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi)
@@ -107,6 +108,49 @@ gio("identify", openid, unionid);
 {% endhint %}
 
 **注意：**如果你的微信小程序在用户打开后不要求用户授权获取openid和/或 unionid，但是设置了forceLogin为True，那么GroiwngIO不能采集到用户的数据，所以请特别注意这个参数的设置。
+
+### \*\*小程序中有**Webview**
+
+采集数据需要额外添加如下代码。目前**Webview的数据采集**目前暂时仅支持采用‘'[**自定义事件和变量**](mina-sdk.md#zi-ding-yi-shi-jian-he-bian-liang)“的方式进行采集。
+
+**1、使用如上提供的最新版 SDK**
+
+#### 2、添加如下代码
+
+**在 WebView 内网站中集成 WebView SDK**
+
+```text
+<!-- GrowingIO Analytics code version 2.1 -->
+<!-- Copyright 2015-2017 GrowingIO, Inc. More info available at http://www.growingio.com -->
+<script type='text/javascript'>
+  !function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.growingio.com/gio-minp-h5.js","gio");
+  gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { });
+  gio('send');
+</script>
+```
+
+**在小程序里面 WebView 加载时 URL 添加额外属性**
+
+为了支持 WebView 和小程序用户打通，需要在 WebView 加载的时候额外在 url 里面添加 giou 和 giocs1 属性，giou 是用来标识访问用户的，giocs1 是用来标识登录用户的。
+
+1. gio\('getVisitorId'\) 获取访问用户ID
+2. gio\('getUserID'\) 获取登录用户ID
+
+举个例子，
+
+```text
+# webview.js
+
+Page({
+  data: {
+    webUrl: `https://example.org/demo.html?giou=${getApp().globalData.gio('getVisitorId')}&giocs1=${getApp().globalData.gio('getUserId')}`
+  } 
+});
+
+# webview.wxml
+
+<web-view src="{{ webUrl }}"></web-view>
+```
 
 ### 添加请求服务器域名
 
