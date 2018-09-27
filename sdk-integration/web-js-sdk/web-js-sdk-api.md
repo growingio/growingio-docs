@@ -211,7 +211,7 @@ gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zheji
 
 ```javascript
 //sendPage API原型和调用示例
-gio('sendPage');
+gio('sendPage'); // 放在send之后
 ```
 
 ### 1.10 GDPR 数据采集开关
@@ -224,7 +224,7 @@ GrowingIO 全面支持 [欧盟《一般数据保护条例》 \(GDPR\)](../privac
 // 开启gdpr，停止数据采集 
 gio('config',{"dataCollect":"false"}); 
 // 关闭gdpr，开始数据采集 
-gio('config',{"dataCollect":"true"}); // 放在send之前 
+gio('config',{"dataCollect":"true"}); // 放在init和send之间
 ```
 
 * 获取访问用户 ID

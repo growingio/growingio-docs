@@ -6,15 +6,15 @@ JS SDK 支持所有主流前端框架，包括但不限于React.js, Vue.js, Angu
 
 ### 2. 为什么我的网站要**允许 iframe 加载？**
 
-在 GrowingIO 平台上使用可视化圈选事件功能需要使用 iframe 技术来加载你的页面。如果您的网站禁止了 iframe 加载，就无法正常使用圈选功能定义事件，所以需要设置允许 iframe 加载。
+在 GrowingIO 平台上使用可视化圈选事件功能需要使用 iframe 技术来加载你的页面。如果你的网站禁止了 iframe 加载，就无法正常使用圈选功能定义事件，所以需要设置允许 iframe 加载。
 
-如果您的网站使用https协议，需将配置修改成
+如果你的网站使用https协议，需将配置修改成
 
 ```javascript
 X-Frame-Options: Allow-From https://www.growingio.com
 ```
 
-如果您的网站使用http协议，需将配置修改成
+如果你的网站使用http协议，需将配置修改成
 
 ```javascript
 X-Frame-Options: Allow-From http://www.growingio.com
@@ -42,7 +42,7 @@ iframe 元素可以将一个页面嵌入到另一个页面里，iframe 元素会
 
 ### 7.元素没有元素浏览量怎么处理？
 
-首先确认这个元素是不是通过display:none/其它 控制显隐的，对于 display 为 none 的元素，我们会只采集 A 和 Button 标签的浏览量，所以如果您想要一个 display 为 none 的元素&lt;或其子元素&gt;的浏览量，把元素改为 A 或 button 标签实现。并且还需要确认你的网站是否[关闭了元素浏览量的采集](./#22-imp-xi-tong-bian-liang)。
+首先确认这个元素是不是通过display:none/其它 控制显隐的，对于 display 为 none 的元素，我们会只采集 A 和 Button 标签的浏览量，所以如果你想要一个 display 为 none 的元素&lt;或其子元素&gt;的浏览量，把元素改为 A 或 button 标签实现。并且还需要确认你的网站是否[关闭了元素浏览量的采集](./#22-imp-xi-tong-bian-liang)。
 
 注意：对于IE8 及以下的 IE 浏览器版本，GrowingIO 无法统计元素浏览量 ，只会统计点击量。
 

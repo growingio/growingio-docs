@@ -141,7 +141,7 @@ JS:
 // 开启gdpr，停止数据采集 
 window.gio('config',{"dataCollect":"false"}); 
 // 关闭gdpr，开始数据采集 
-window.gio('config',{"dataCollect":"true"}); // 放在send之前 
+window.gio('config',{"dataCollect":"true"}); // 放在init和send之间 
 ```
 
 * 获取访问用户 ID

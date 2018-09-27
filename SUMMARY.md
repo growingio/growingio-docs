@@ -43,7 +43,7 @@
     * [Android SDK 常见问题](sdk-integration/android-sdk/android-chang-jian-wen-ti.md)
   * [iOS SDK](sdk-integration/ios-sdk/README.md)
     * [IOS SDK 1.X旧版本升级指导](sdk-integration/ios-sdk/ios-sdk-1.x-jiu-ban-ben-sheng-ji-zhi-dao.md)
-    * [IOS SDK常见问题](sdk-integration/ios-sdk/ios-sdk-chang-jian-wen-ti.md)
+    * [IOS SDK 常见问题](sdk-integration/ios-sdk/ios-sdk-chang-jian-wen-ti.md)
   * [小程序 SDK](sdk-integration/mina-sdk.md)
   * [GrowingIO Debugger](sdk-integration/growingio-debugger/README.md)
     * [验证打点事件](sdk-integration/growingio-debugger/best-practice.md)

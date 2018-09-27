@@ -56,7 +56,7 @@
 
 #### 1.2 GrowingIO Web Debugger
 
-完成页面代码安装并重新部署您的网站应用后，建议使用[ GrowingIO Web Debugger ](../growingio-debugger/#growingio-web-debugger)验证数据发送是否正常。Web Debugger可以通过可视化界面让您一睹 GrowingIO 强大的数据采集能力。
+完成页面代码安装并重新部署你的网站应用后，建议使用[ GrowingIO Web Debugger ](../growingio-debugger/#growingio-web-debugger)验证数据发送是否正常。Web Debugger可以通过可视化界面让你一睹 GrowingIO 强大的数据采集能力。
 
 ### 2.Web JS SDK 系统变量 {#12}
 
@@ -67,7 +67,7 @@
 GrowingIO默认不会把 hashtag 识别成页面 URL 的一部分。对于使用 hashtag 进行页面跳转的单页面网站应用来说，可以启用 hashtag 作为标识页面的一部分:
 
 ```javascript
-gio('config', {'hashtag':true});
+gio('config', {'hashtag':true}); //放在init和send之间
 ```
 
 以此监听 hashtag 的变化，并采集不同页面的数据。每次 hashtag 的改变都会触发一次PV，hashtag 的信息也会记录在页面URL中。
@@ -77,7 +77,7 @@ gio('config', {'hashtag':true});
 除点击、修改、提交等用户行为数据的采集，GrowingIO 还默认开启元素浏览量\(简称imp\)的无埋点采集。对于内容基本固定的网站，可以直接禁用元素浏览量采集。
 
 ```javascript
-gio('config', {'imp':false});
+gio('config', {'imp':false}); //放在init和send之间
 ```
 
 也可以直接在init进行配置，如下：
@@ -91,7 +91,7 @@ gio('init', 'your projectId', {
 
 ### 3.Web JS SDK 高级设置 {#13}
 
-高级设置可以帮助您更自如地进行圈选操作，请将高级设置插入您web应用的html代码中。
+高级设置可以帮助你更自如地进行圈选操作，请将高级设置插入你web应用的html代码中。
 
 #### 3.1 设置采集容器 \(data-growing-container\) {#31container}
 
@@ -111,7 +111,7 @@ gio('init', 'your projectId', {
 </div>
 ```
 
-由于数据采集准确性的原因，默认不支持以id="1"的div作为容器进行圈选。您可以为期望的容器元素添加data-growing-container 属性，圈选时即可圈到这个容器。
+由于数据采集准确性的原因，默认不支持以id="1"的div作为容器进行圈选。你可以为期望的容器元素添加data-growing-container 属性，圈选时即可圈到这个容器。
 
 #### 3.2 设置采集文本信息 \(data-growing-title\) {#32title}
 
@@ -150,7 +150,7 @@ LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表�
 
 #### ​​3.4 设置数据采集黑名单 \(growing-ignore\) {#34ignore}
 
-如果您希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
+如果你希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
 
 ```markup
 <div growing-ignore='true'>
@@ -160,7 +160,7 @@ LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表�
 
 #### 3.5 开启输入文本框内容采集 \(growing-track\) {#35track}
 
-由于输入文本框可能涉及一些隐私信息，比如账号、密码等，GrowingIO在采集数据的时候默认不采集输入文本框的数据。如果您希望采集某些文本框输入内容，比如搜索词，可以在input标签中设置growing-track属性，这样该文本框中的输入内容就会被采集到。如果input类型是password，即使开启内容采集，也不会采集该文本框的输入内容。
+由于输入文本框可能涉及一些隐私信息，比如账号、密码等，GrowingIO在采集数据的时候默认不采集输入文本框的数据。如果你希望采集某些文本框输入内容，比如搜索词，可以在input标签中设置growing-track属性，这样该文本框中的输入内容就会被采集到。如果input类型是password，即使开启内容采集，也不会采集该文本框的输入内容。
 
 ```markup
 <input type='text' growing-track='true' />
@@ -168,13 +168,13 @@ LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表�
 
 JS代码请以售前人员提供的为主，进行正确添加。
 
-至此您的 SDK 整合已经完成，我们就可以接收您的数据，之后您可以登录 www.growingio.com 的网站即可开始进行圈选。
+至此你的 SDK 整合已经完成，我们就可以接收你的数据，之后你可以登录 www.growingio.com 的网站即可开始进行圈选。
 
 ### 4.自定义数据上传
 
-您的 APP 或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。
+你的 APP 或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为你采集一系列用户行为数据，并在 GrowingIO 分析后台供你制成数据分析报表。
 
-除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您[上传一些自定义的数据指标及维度](web-js-sdk-api.md)。90% 以上的用户都会[上传登录用户 ID](web-js-sdk-api.md#137)，以便分析登录用户的数据情况。
+除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供你[上传一些自定义的数据指标及维度](web-js-sdk-api.md)。90% 以上的用户都会[上传登录用户 ID](web-js-sdk-api.md#137)，以便分析登录用户的数据情况。
 
 ### 5.[Web JS SDK 注意事项](js-sdk-zhu-yi-shi-xiang.md) {#35}
 
@@ -293,7 +293,7 @@ gio('track', eventId, number, eventLevelVariables);
 
 #### **4.2 GrowingIO 后台配置**
 
-自定义事件的配置，同 1.x 版本一样，也是在**“管理” - “自定义事件和变量”** 页面中的 **“自定义事件”** Tab 页。但您会发现，除了 “自定义事件” Tab 页外，现在还提供了 “事件级变量” Tab 页来专门管理事件级变量的配置。您只需在 “事件级变量” Tab 页完成事件级变量的配置，然后在新建自定义事件时，从已经建好的事件级变量中选择即可。
+自定义事件的配置，同 1.x 版本一样，也是在**“管理” - “自定义事件和变量”** 页面中的 **“自定义事件”** Tab 页。但你会发现，除了 “自定义事件” Tab 页外，现在还提供了 “事件级变量” Tab 页来专门管理事件级变量的配置。你只需在 “事件级变量” Tab 页完成事件级变量的配置，然后在新建自定义事件时，从已经建好的事件级变量中选择即可。
 
 ### 5. 数据校验 {#25}
 
@@ -393,7 +393,7 @@ GrowingIO 提供两种采集，元素浏览和元素点击/修改等交互行为
 
 #### 4.4 **启用 hashtag 作为页面收集**
 
-我们默认不会把 hashtag 识别成页面 URL 的一部分。对于使用 hashtag 作为单页应用页面切换的网站来说，您可以使用`enableHT`来监听 hashtag 的变化，并区分页面来收集页面数据，每次 hashtag 改变都会触发一次 PV，hashtag 的信息也会记录在页面URL中。
+我们默认不会把 hashtag 识别成页面 URL 的一部分。对于使用 hashtag 作为单页应用页面切换的网站来说，你可以使用`enableHT`来监听 hashtag 的变化，并区分页面来收集页面数据，每次 hashtag 改变都会触发一次 PV，hashtag 的信息也会记录在页面URL中。
 
 ```javascript
     _vds.push(['enableHT', true])
@@ -401,7 +401,7 @@ GrowingIO 提供两种采集，元素浏览和元素点击/修改等交互行为
 
 #### 4.5 **设置数据采集黑名单**
 
-如果您希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
+如果你希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
 
 ```javascript
     <div growing-ignore='true'>
@@ -411,7 +411,7 @@ GrowingIO 提供两种采集，元素浏览和元素点击/修改等交互行为
 
 #### 4.6 **开启输入文本框内容采集**
 
-由于输入文本框可能涉及一些隐私信息，比如账号、密码等，GrowingIO在采集数据的时候默认不采集输入文本框的数据。如果您希望采集某些文本框输入内容，比如搜索词，可以在input标签中设置growing-track属性，这样该文本框中的输入内容就会被采集到。如果input类型是password，即使开启内容采集，也不会采集该文本框的输入内容。
+由于输入文本框可能涉及一些隐私信息，比如账号、密码等，GrowingIO在采集数据的时候默认不采集输入文本框的数据。如果你希望采集某些文本框输入内容，比如搜索词，可以在input标签中设置growing-track属性，这样该文本框中的输入内容就会被采集到。如果input类型是password，即使开启内容采集，也不会采集该文本框的输入内容。
 
 ```javascript
     <input type='text' growing-track='true' />
@@ -419,7 +419,7 @@ GrowingIO 提供两种采集，元素浏览和元素点击/修改等交互行为
 
 JS代码请以售前人员提供的为主，进行正确添加。
 
-至此您的 SDK 整合已经完成，我们就可以接收您的数据，之后您可以登录 www.growingio.com 的网站即可开始进行圈选。
+至此你的 SDK 整合已经完成，我们就可以接收你的数据，之后你可以登录 www.growingio.com 的网站即可开始进行圈选。
 
 #### 4.7 **手动设置采集文本信息**
 
