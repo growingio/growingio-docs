@@ -42,6 +42,7 @@
     * [Android SDK API](sdk-integration/android-sdk/api.md)
     * [Android SDK 常见问题](sdk-integration/android-sdk/android-chang-jian-wen-ti.md)
   * [iOS SDK](sdk-integration/ios-sdk/README.md)
+    * [IOS SDK API](sdk-integration/ios-sdk/ios-sdk-api.md)
     * [IOS SDK 1.X旧版本升级指导](sdk-integration/ios-sdk/ios-sdk-1.x-jiu-ban-ben-sheng-ji-zhi-dao.md)
     * [IOS SDK 常见问题](sdk-integration/ios-sdk/ios-sdk-chang-jian-wen-ti.md)
   * [小程序 SDK](sdk-integration/mina-sdk.md)
