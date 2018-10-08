@@ -44,7 +44,7 @@ Notice：进入项目管理页面需要管理员权限，请您联系您公司�
 * 在应用管理页面，配置Universal Link，应用宝微链接（可选项）。
 * 配置Universal Link将会需要您公司的iOS工程师协同配合，在Xcode客户端进行操作。
 
-![&#x627E;&#x5230;&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x9875;&#x9762;](../.gitbook/assets/image%20%2820%29.png)
+![&#x627E;&#x5230;&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x9875;&#x9762;](../.gitbook/assets/image%20%2822%29.png)
 
 ![](../.gitbook/assets/ying-yong-guan-li.png)
 
@@ -54,21 +54,15 @@ Notice：进入项目管理页面需要管理员权限，请您联系您公司�
 
 * 您需要按照如下提示完成配置Universal Link的配置
 
-
-
 1. 在您的Xcode客户端中勾选如下功能
 
-![](https://lh3.googleusercontent.com/Ir0ND5HCreWCk2OojBZcFRylDnmheLcf7GyJBZu1Tj85sXoknRrRfjUXrUlnxLdaFeJ8UeSM5-MGNnSjLaBxLmnBC0ipvWBOsJRPz2oEJCDTA_3yUG9JQa1lh-4CqZ9g6dK8o3hk)
+![](../.gitbook/assets/image%20%2871%29.png)
 
+![](../.gitbook/assets/image%20%2852%29.png)
 
+2.添加GIO域名到xcode
 
-![](https://lh6.googleusercontent.com/CqwX-YCFCo3Ma2J6Nq8q7hJ-cMQrL-juUHselvoTryr6ELhKD6OISKURLP6hjFr3aPmsyykDZUF-hGVi3xyOKa-t2JpYb9LKLqvuXXlotvQ90L2VXIOFQ9szWqEaznUH93jB7BFH)
-
-  
-
- 2.添加GIO域名到xcode
-
-![](https://lh4.googleusercontent.com/7YUukBuCgWU1GneNSNv7mB9mxZVh99dfFM2qzXmFDcod8bFy_JWWCsRdPMaIyCJuo4UYbk5R0NBpoEEiPsnloLPjwcuOB_AIdrKMOAQMMvJoilhp05MO4nDlc3l4LeUx6fjLQp37)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 注：添加至Domain的链接为：applinks：gio.ren
 
