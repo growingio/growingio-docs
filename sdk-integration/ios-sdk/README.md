@@ -177,6 +177,8 @@ view3.growingAttributesValue = @"ad3";
 
 此外，当您想采集一些可能没有文字的控件（比如UIImageView，UIView）时，也可以给属性growingAttributesValue 赋值作为文字，用来在圈选的时候区分不同的内容。
 
+
+
 ### 采集输入框数据
 
 如果您需要采集应用内某个输入框内的文字（例如搜索框），请调用如下接口进行设置：
@@ -192,6 +194,8 @@ view代表要被采集的输入框。 当这个输入框失去焦点（包括应
 {% hint style="warning" %}
 #### 提醒：对于密码输入框，即便标记为需要采集，SDK也会忽略，不采集它的数据
 {% endhint %}
+
+
 
 ### Facebook广告SDK
 
@@ -230,11 +234,20 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 [Growing enableDataCollect];
 ```
 
-### DeepLink 回调参数获取 {#deeplink-hui-tiao-can-shu-huo-qu}
 
-推广过程中，您需要已经下载您`APP`的用户扫描二维码直接跳转您的`APP`中指定的活动页面，并根据实际情况显示不同信息，`SDK 2.3.2`以上版本支持。
 
-例如：扫码领取优惠券，已经安装`APP`的用户扫码后将直接进入领取优惠券页面，并且这个页面上还能够显示此用户头像等信息，这个时候您可以使用我们的`DeepLink`功能，通过此接口获得您的自定义参数信息。
+### Deep Link & Universal Link {#deeplink-hui-tiao-can-shu-huo-qu}
+
+| Deep Link 功能 | SDK版本 |
+| :--- | :--- |
+| 基础 Deep Link 功能（Scheme打开APP至首页） | 2.3.0 |
+| 直达落地页（Scheme打开至活动页） | 2.3.2 |
+| Universal Link 、应用宝微下载链接支持 | 2.4.1 |
+
+#### 一、 Deep Link 
+
+1. [确认 URL Scheme 添加正确](https://growingio.gitbook.io/docs/~/edit/drafts/-LOIW-mWXk4nUqRlFsYV/sdk-integration/ios-sdk#2-she-zhi-url-scheme)​。
+2. 添加自定义参数回调方法：
 
 ```objectivec
 // params 为解析正确时反回调的参数, error 为解析错误时返回的参数.
@@ -243,7 +256,7 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 ```
 
 ```objectivec
-//DeepLink 调用实例
+//DeepLink 调用示例
 [Growing registerDeeplinkHandler:^(NSDictionary *params, NSError *error) {
         NSLog(@"params : %@", params);
         XCTAssertNotNil(params);
@@ -257,9 +270,13 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 * 请在 `+ (BOOL)handleUrl:(NSURL*)url`被调用前注册回调方法
 {% endhint %}
 
-###  **Universal Link 链接**
+#### **二、  Universal Link**
 
-如果使用 Universal Link 唤醒APP， 请添加以下代码，注册 Universal Link 参数解析回调方法与DeepLink一致。
+使用 Universal Link 唤醒APP， 步骤如下：
+
+1.配置链接：[配置 Universal Link 、应用宝微链接（可选项）](../../configuration/project-configuration.md#4-1-pei-zhi-universal-link-ying-yong-bao-wei-lian-jie)。
+
+2.请在`AppDelegate.m`添加以下代码：
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler{
@@ -267,6 +284,14 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 	return YES;
 }
 ```
+
+3.[添加 Universal Link 参数解析回调方法，此方法与 Deep Link 方法一致。](./#yi-deep-link)
+
+{% hint style="info" %}
+更详细的配置说明，请查看[DeepLink使用手册](https://s.growingio.com/xzAqPp)。
+{% endhint %}
+
+
 
 ### 设置界面元素 ID
 
@@ -292,6 +317,8 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 * 对于已经集成过旧版SDK并圈选过的应用，对某个元素设置ID后再圈选它，指标数值会从零开始计算，类似初次集成SDK后发版的效果，但不影响之前圈选的其它指标数据。如果不希望出现这种情况，请不要使用这个方法
 {% endhint %}
 
+
+
 ### 在 App Store 提交应用
 
 集成了 GrowingIO SDK 以后，默认会启用 IDFA，所以在向 App Store 提交应用时，需要：
@@ -305,6 +332,8 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 
 GrowingIO 使用 IDFA 来做来源管理激活设备的精确匹配，让你更好的衡量广告效果。如果你不希望跟踪这个信息，可以选择不引入 AdSupport.framework 或者在用 Cocoapods 安装时使用 ‘GrowingIO/without-IDFA' subspec.
 {% endhint %}
+
+
 
 ## 自定义事件和变量 API 
 

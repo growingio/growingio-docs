@@ -456,7 +456,7 @@ GrowingIO.startWithConfiguration(this, new Configuration()
 
 
 
-### DeepLink 回调参数获取
+### Deep Link 回调参数获取
 
 #### setDeeplinkCallback  （`SDK 2.3.2`以上版本支持）
 
