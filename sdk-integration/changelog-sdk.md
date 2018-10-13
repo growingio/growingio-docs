@@ -1,5 +1,11 @@
 # SDK 更新日志
 
+### 2018年10月13日
+
+Android 2.4.5
+
+1. 适配 Android build gradle plugin 3.2.1
+
 ### 2018年9月21日
 
 Android，iOS  2.4.4  
