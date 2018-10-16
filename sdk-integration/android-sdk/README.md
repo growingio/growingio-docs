@@ -1001,7 +1001,7 @@ gio.setEvar(jsonObject);
 
 ### setPeopleVariable
 
-发送用户信息用于用户信息相关分析，在添加代码之前必须在打点管理界面上声明转化变量。
+发送用户信息用于用户信息相关分析，在添加代码之前必须在打点管理界面上声明用户变量。
 
 ```java
 // people.set API原型
