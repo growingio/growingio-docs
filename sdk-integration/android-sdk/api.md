@@ -95,12 +95,11 @@ public class MyApplication extends Application {
 | 初始化配置项API | 默认值                    | 说明 | 最低版本                    |
 | :--- | :--- | :--- | :--- |
 | setDeeplinkCallback | 无 | DeepLink 回调接口，获得自定义参数以便跳转对应 APP页 面 | 2.3.2 |
-| setTrackWebView | true | 设置为`false`时不采`WebView`数据 |  |
+| setTrackWebView | true | 是否采集全部的`WebView,`设置为`false`时不采所有`WebView`数据 |  |
 | supportMultiProcessCircle | false | 是否使用多进程圈选功能 |  |
 | setMutiprocess | false | 使用了多进程必须配置，自定义事件和变量值才会多进程共享 |  |
 | trackAllFragments | false | 是否采集所有Fragment |  |
 | setHashTagEnable | false | 在`WebView`中的页面访问，是否认为点击锚点链接是一个页面浏览 |  |
-| setTrackWebView | true | 是否采集全部的`WebView` |  |
 
 
 
