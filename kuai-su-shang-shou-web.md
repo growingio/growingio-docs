@@ -35,7 +35,7 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 
 ### 开始使用
 
-#### 第一步：集成SDK并进行配置  {#di-yi-bu-ji-cheng-sdk-bing-jin-hang-pei-zhi}
+#### 第一步：集成SDK并进行配置  <a id="di-yi-bu-ji-cheng-sdk-bing-jin-hang-pei-zhi"></a>
 
 1. 集成[Web JS SDK](sdk-integration/web-js-sdk/)； 开发者文档
 
@@ -43,14 +43,14 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 
 2. 配置完成进入[数据校验](sdk-integration/growingio-debugger/#growingio-web-debugger)，确认数据采集
 
-#### 第二步：开始查看系统提供的数据内容 {#di-er-bu-kai-shi-cha-kan-xi-tong-ti-gong-de-shu-ju-nei-rong}
+#### 第二步：开始查看系统提供的数据内容 <a id="di-er-bu-kai-shi-cha-kan-xi-tong-ti-gong-de-shu-ju-nei-rong"></a>
 
 系统提供了部分预置看板，包括“实时”，和“概览”。
 
 * [实时](dashboard/realtime.md)； 每5分钟更新一次数据，帮助您即时了解流量情况。
 * [概览](dashboard/overview.md)；整体描述你的移动端的访问、使用时长、留存、来源等数据情况。
 
-#### 第三步：开始探索使用数据定义和分析工具：  {#di-san-bu-kai-shi-tan-suo-shi-yong-shu-ju-ding-yi-he-fen-xi-gong-ju}
+#### 第三步：开始探索使用数据定义和分析工具：  <a id="di-san-bu-kai-shi-tan-suo-shi-yong-shu-ju-ding-yi-he-fen-xi-gong-ju"></a>
 
 * [了解预置维度和指标的定义](data-model/olap-model/predifined-metrics-dimensions.md)；
 * 了解“web 圈选 （[文档](data-definition/circle/web.md) \| [使用手册](http://growing.cn-bj.ufileos.com/web_circle.pdf)）”；尝试定义几个核心的产品事件，例如“加入购物车”、“浏览详情页”等。
@@ -62,7 +62,7 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 * 使用看板来组织你自己的内容
   * [看板](dashboard/)
 
-#### 第四步：进行获客推广管理配置 {#di-si-bu-jin-hang-huo-ke-tui-guang-guan-li-pei-zhi}
+#### 第四步：进行获客推广管理配置 <a id="di-si-bu-jin-hang-huo-ke-tui-guang-guan-li-pei-zhi"></a>
 
 * 进行网页推广监测，[使用GrowingIO网页端广告监测功能](ads-tracking/web-marketing.md)，包括长链、短链、二维码等，做到推广获客精细化管理。
 

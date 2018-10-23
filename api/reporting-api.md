@@ -11,7 +11,7 @@
 * 在进行导出之前，请务必参考[“GrowingIO接口认证”文档](authentication.md)，完成接口认证获取 token 。
 * 统计数据导出的延迟一般为 30 分钟，比如导出早上 8 点到 9 点之间的数据时，一般需要 9:30 才能统计完毕。另外，每天凌晨因为需要运行天级别的统计任务，此时前一天的统计数据大概有 3-4 小时的延迟，一般凌晨 4 点以后会统计完毕。
 
-### 1.看板数据信息 API {#dashboard-api}
+### 1.看板数据信息 API <a id="dashboard-api"></a>
 
 获取看板中的图表信息
 
@@ -80,7 +80,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 
 
 
-### 2.单图数据下载 API V2（2018-08-29更新） {#chart-api}
+### 2.单图数据下载 API V2（2018-08-29更新） <a id="chart-api"></a>
 
 获取单图数据（单图下载每秒限速 2 次）
 
@@ -182,9 +182,9 @@ GrowingIO 分配的公钥，见 API 认证文档
 
 
 
-### 3.分群下载 API {#segmentation-api}
+### 3.分群下载 API <a id="segmentation-api"></a>
 
-#### 3.1 获取分群列表 {#resource}
+#### 3.1 获取分群列表 <a id="resource"></a>
 
 {% api-method method="get" host="https://www.growingio.com/projects/:project\_id/segmentations.json" path="" %}
 {% api-method-summary %}
@@ -244,7 +244,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### 3.2 获取特定分群的用户列表 {#resource}
+#### 3.2 获取特定分群的用户列表 <a id="resource"></a>
 
 {% api-method method="get" host="https://www.growingio.com/projects/:project\_id/segmentations/:segmentation\_id/users.csv" path="" %}
 {% api-method-summary %}
@@ -295,7 +295,7 @@ cs1    name
 
 \*\*\*\*
 
-### 4.规则逻辑 API 接口 {#rule-api}
+### 4.规则逻辑 API 接口 <a id="rule-api"></a>
 
 获取圈选元素定义
 

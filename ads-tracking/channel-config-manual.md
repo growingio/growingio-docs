@@ -17,7 +17,7 @@
 
 （未出现在上述渠道名单的渠道可以在渠道管理功能中新增配置）
 
-### 1. 今日头条 {#31}
+### 1. 今日头条 <a id="31"></a>
 
 1. 进入GIO后台，为今日头条的投放生成一条监测链接。进入“渠道管理”模块，点击“今日头条”，“是否回传激活”字段设置为“是”。
 
@@ -29,7 +29,7 @@
 
 ![](https://docs.growingio.com/.gitbook/assets/10%20%281%29.png)
 
-### 2. 广点通 {#32}
+### 2. 广点通 <a id="32"></a>
 
 通过授权认证的方式配置您的腾讯社交广告平台投放监测
 
@@ -67,14 +67,14 @@ f.输入联调设备进行联调
 
 g.联调成功后，启用转化状态
 
-### 3. 爱奇艺 {#33}
+### 3. 爱奇艺 <a id="33"></a>
 
 1. 在GIO后台生成一条目标渠道为“爱奇艺”的监测链接。
 2. 将链接放置到爱奇艺广告后台，创意部分的“第三方点击监测”上。
 
    ![](https://docs.growingio.com/.gitbook/assets/13.png)
 
-### 4. 百度原生信息流 {#34}
+### 4. 百度原生信息流 <a id="34"></a>
 
 1.在GIO后台生成百度原生信息流监测链接后，进入百度推广后台：[https://www2.baidu.com](https://www2.baidu.com)
 
@@ -114,7 +114,7 @@ g.联调成功后，启用转化状态
 
 ![](https://lh6.googleusercontent.com/79d5flDHKw0Lswcc56fC2pyDfX2UNbc-k1PfRAHgr9NFVLQ3wazVkeWpebBAwCCVaRHUqJvnHj75KbtAmSXFuc35D2ao1q_CAHYvItmjhADu14lWouTfORjGQWvEIKZkaaeystCo)
 
-### 5. Inmobi {#35}
+### 5. Inmobi <a id="35"></a>
 
 1. 进入Growingio广告监测后台，进入推广管理，创建监测并选取Inmobi渠道，生成监测链接。
 2. 进入Inmobi后台，创建主张，选择GrowingIO渠道，创建成功后，将Inmobi生成的appID复制并填写到GrowingIO后台相应链接上。
@@ -123,7 +123,7 @@ g.联调成功后，启用转化状态
 
    ![](https://docs.growingio.com/.gitbook/assets/inmobi2.png)
 
-### 6. 微博超级粉丝通 {#36}
+### 6. 微博超级粉丝通 <a id="36"></a>
 
 1.在GIO后台生成一条目标渠道为“超级粉丝通”的监测链接。
 

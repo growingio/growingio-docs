@@ -12,7 +12,7 @@
 * [定义页面级变量](minp.md#define-page-dimensions)
   * [页面级变量使用的场景](minp.md#ye-mian-ji-bian-liang-shi-yong-de-chang-jing)
 
-## 按路径和函数名称进行数据定义 {#define-data-by-tagging-name}
+## 按路径和函数名称进行数据定义 <a id="define-data-by-tagging-name"></a>
 
 按路径和函数名称进行数据定义，主要方便产品、技术人员，来根据页面和元素代码名称定义页面浏览和元素点击事件。
 
@@ -60,7 +60,7 @@
 
 ![](../../.gitbook/assets/image%20%2862%29.png)
 
-## 交互式数据定义 {#interactive-tagging-define-data}
+## 交互式数据定义 <a id="interactive-tagging-define-data"></a>
 
   
 交互式数据定义，主要帮助产品、运营、市场等非技术人员，来根据业务含义定义页面浏览和元素点击事件。

@@ -1,6 +1,6 @@
 # 原始数据导出字段说明
 
-## 原始数据导出提供的数据类型 {#yuan-shi-shu-ju-dao-chu-ti-gong-de-shu-ju-lei-xing}
+## 原始数据导出提供的数据类型 <a id="yuan-shi-shu-ju-dao-chu-ti-gong-de-shu-ju-lei-xing"></a>
 
 ### 原始数据导出 1.0 提供的数据类型：
 

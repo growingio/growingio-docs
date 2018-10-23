@@ -153,7 +153,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 
 **在全量数据之外，提供 GrowingIO 平台圈选数据映射关系表，包括 action\_tag 与 rules 表\(接口将更新于2016年8月9日\)**
 
-#### 3.1 action\_tag {#actiontag}
+#### 3.1 action\_tag <a id="actiontag"></a>
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值\(example\) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -161,7 +161,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 | action\_id | 事件ID | string\(30\) | 标签事件的唯一id web的action\_id以wa开头，mobile以ma开头 |  |
 | rule\_id | 规则id | string\(8\) | 匹配事件的规则id，该id为growingio平台圈选的标签的唯一id | 该值由字母与数字组成，例如‘1ba052a9’ |
 
-#### 3.2 rules（从统计数据的规则逻辑API获取） {#rules（从统计数据的规则逻辑api获取）}
+#### 3.2 rules（从统计数据的规则逻辑API获取） <a id="rules&#xFF08;&#x4ECE;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x7684;&#x89C4;&#x5219;&#x903B;&#x8F91;api&#x83B7;&#x53D6;&#xFF09;"></a>
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值\(example\) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -169,7 +169,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 | name | 规则名称 | string\(200\) | 圈选的标签名称 | 该名称不可以作为唯一主键，只是便于使用区分 |
 | ruleType | 规则类型 | string\(10\) | 规则在定义时可能有不同的类型，例如按钮的imp或者clck | 值包括 page, imp, clck, chng, sbmt |
 
-#### 3.3 备注 {#备注}
+#### 3.3 备注 <a id="&#x5907;&#x6CE8;"></a>
 
 1. 在基础部分数据导出（visit, page, action\)之外，提供圈选数据与action级别数据的映射部分。
 2. 通过action数据中的action\_id与action\_tag中的action\_id聚合，绑定对应的rule\_id（映射的规则名称）到action数据上。
@@ -178,7 +178,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 5. action\_tag与rules表均是关联信息表，用于更进一步分析导出的部分数据，在导出数据中定位圈选数据。建议规则建立时保持名称的唯一性，GrowingIO平台不保证规则名称唯一性。
 6. 相同的规则名称下可能有多个规则类型，规则名称＋规则类型才能区分，此处的规则类型与基础数据action中的事件类型保持一致。
 
-#### 打点数据 custom\_attr {#打点数据-customattr}
+#### 打点数据 custom\_attr <a id="&#x6253;&#x70B9;&#x6570;&#x636E;-customattr"></a>
 
 | 列名 | 字段名称 | 字段格式 | 字段说明 | 值\(example\) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -199,7 +199,7 @@ GrowingIO全量数据划分成三个级别，visit，page，action
 | \_cs1 | 自定义用户信息字段1 | string\(200\) | 客户平台的登陆用户id：cs1，如果客户安装sdk时设置过cs1字段（上传用户属性字段集cs，cs1用于设置用户id） | cs1默认用于标记登陆用户ID， userid:12345 |
 | xxx | 用户打点字段 | string / double | 客户自定义的打点字段，这部分字段最多有30个字段 | 所有自定义的打点字段，不同的事件有不同的定义，需要客户根据eventName自定义解析处理 |
 
-#### 广告监测API数据 {#广告监测api数据}
+#### 广告监测API数据 <a id="&#x5E7F;&#x544A;&#x76D1;&#x6D4B;api&#x6570;&#x636E;"></a>
 
 **激活日志 ads\_track\_activation**
 
@@ -271,7 +271,7 @@ GET [https://www.growingio.com/projects/project\_id/activities.json](https://www
 
 ## 附录
 
-#### 数据处理建议 {#数据处理建议}
+#### 数据处理建议 <a id="&#x6570;&#x636E;&#x5904;&#x7406;&#x5EFA;&#x8BAE;"></a>
 
 数据处理建议采用Hive或者Spark平台工具，若是需要导入自有BI平台，可能需要进一步调整数据格式（csv转成其他符合数据处理需求的格式），针对以上的需求，给出相应的数据处理建议。
 

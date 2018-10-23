@@ -66,7 +66,7 @@
 
 ![&#x5F52;&#x56E0;&#x914D;&#x7F6E;](../../.gitbook/assets/image%20%2833%29.png)
 
-### **第二步：代码部署** {#di-er-bu-dai-ma-bu-shu}
+### **第二步：代码部署** <a id="di-er-bu-dai-ma-bu-shu"></a>
 
 完成了配置后，即可在代码中完成以上设计的 “自定义事件和变量” 的部署。具体的说，就是调用 GrowingIO 提供的API接口，上传数据。
 
@@ -77,15 +77,15 @@
 
 API中给出了登录用户变量的上传方式
 
-### 第三步：数据校验 {#di-san-bu-shu-ju-xiao-yan}
+### 第三步：数据校验 <a id="di-san-bu-shu-ju-xiao-yan"></a>
 
 在完成了【数据管理】-【事件与变量】-【用户变量】的配置，以及代码实施后，我们当然需要对数据是否成功上传进行校验。校验工作分为两步完成。
 
-#### **数据校验第一步：本地开发环境校验** {#shu-ju-xiao-yan-di-yi-bu-ben-di-kai-fa-huan-jing-xiao-yan}
+#### **数据校验第一步：本地开发环境校验** <a id="shu-ju-xiao-yan-di-yi-bu-ben-di-kai-fa-huan-jing-xiao-yan"></a>
 
 GrowingIO 提供了 SDK debug 模式以及 debug 工具，来帮助您完成数据的校验。具体请参考 [Debugger 最佳实践](../../sdk-integration/growingio-debugger/best-practice.md#ppl-yong-hu-bian-liang-shi-jian)。
 
-#### **数据校验第二步：GrowingIO 后台图表验证** {#shu-ju-xiao-yan-di-er-bu-growingio-hou-tai-tu-biao-yan-zheng}
+#### **数据校验第二步：GrowingIO 后台图表验证** <a id="shu-ju-xiao-yan-di-er-bu-growingio-hou-tai-tu-biao-yan-zheng"></a>
 
 在 GrowingIO 分析后台，找到 “分析” - “新建事件分析”，选择一个事件后，在 "维度" 中查看设置的用户变量是否有数据。当然，您需要首先确已经完成了用户变量的数据上传。
 

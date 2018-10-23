@@ -105,7 +105,7 @@ ppl：“用户变量” 数据
 
 imp（元素浏览数据）数据量级过大，影响Mobile Debugger性能，Mobile Debugger不展示这部分数据。
 
-### GrowingIO 小程序 Debugger -数据验证 {#growingio-minidebugger}
+### GrowingIO 小程序 Debugger -数据验证 <a id="growingio-minidebugger"></a>
 
 数据验证功能，可以支持用户根据自己的交互体验，实时看到GrowingIO采集的数据，完成数据收集的校验。
 

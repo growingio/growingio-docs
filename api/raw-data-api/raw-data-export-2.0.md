@@ -14,7 +14,7 @@
 
 在进行原始数据导出之前，请务必参考 [“GrowingIO接口认证”文档](https://docs.growingio.com/api/authentication.html)，完成接口认证获取 token 。
 
-### 1.原始数据导出 2.0 API 功能概要 {#summary}
+### 1.原始数据导出 2.0 API 功能概要 <a id="summary"></a>
 
 1. “2.0版”提供了小时级别的原始数据导出。
 
@@ -23,7 +23,7 @@
 2. “2.0版”在包含所有“1.0版”具有的数据表和字段的基础上添加了数据主版本2.0（SDK 2.x）版本具有的自定义事件和变量的数据表和字段，并对包括广告监测数据导出在内的所有数据导出表的字段做了统一处理。
 3. “2.0版”兼容并包含了"1.0版"的所有数据字段。
 
-### 2.原始数据导出 2.0 API 接口定义 {#definition}
+### 2.原始数据导出 2.0 API 接口定义 <a id="definition"></a>
 
 {% api-method method="get" host="https://www.growingio.com" path="/v2/insights/:export\_type/${data\_type}/${ai}/${export\_date}.json?expire=${minutes}" %}
 {% api-method-summary %}
@@ -203,7 +203,7 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 * requestTime 客户请求发生时服务器时间
 * errorMsg 当请求发生错误时，服务器返回的错误信息
 
-### 3.原始数据导出版本和GrowingIO数据主版本（SDK 版本）关系 {#sdk-explaination}
+### 3.原始数据导出版本和GrowingIO数据主版本（SDK 版本）关系 <a id="sdk-explaination"></a>
 
 ![](https://docs.growingio.com/.gitbook/assets/datafeed.png)
 

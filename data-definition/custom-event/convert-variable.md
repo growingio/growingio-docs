@@ -90,9 +90,9 @@
 * 如果失效是一周，保存在转化变量中的站内搜索词“手机”在下周一早上的七点十五分失效。
 * 如果失效是一月，保存在转化变量中的站内搜索词“手机”将在三十天之后的早上七点十五分失效。
 
-## 转化变量的配置和上传 {#zi-ding-yi-bian-liang-de-pei-zhi-he-shang-chuan}
+## 转化变量的配置和上传 <a id="zi-ding-yi-bian-liang-de-pei-zhi-he-shang-chuan"></a>
 
-### **第一步：配置 "归因方式" 和 "失效时间"** {#di-yi-bu-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi}
+### **第一步：配置 "归因方式" 和 "失效时间"** <a id="di-yi-bu-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi"></a>
 
 参考开始讲到的使用场景，配合梳理业务需求并完成“指标+维度”的设计，确认需要将哪些变量设置为页转化变量,请勿直接开始代码的部署,需要先到 GrowingIO 后台找到 【数据管理】-【事件和变量】-【转化变量】 功能，在其中完成对应的配置。
 
@@ -103,7 +103,7 @@
 
 ![&#x914D;&#x7F6E;&#x5931;&#x6548;&#x65F6;&#x95F4;](../../.gitbook/assets/image%20%288%29.png)
 
-### **第二步：代码部署** {#di-er-bu-dai-ma-bu-shu}
+### **第二步：代码部署** <a id="di-er-bu-dai-ma-bu-shu"></a>
 
 完成了配置后，即可在代码中完成以上设计的 “自定义事件和变量” 的部署。具体的说，就是调用 GrowingIO 提供的API接口，上传数据。
 
@@ -114,15 +114,15 @@
 
 API中给出了转化变量的上传方式
 
-### 第三步：数据校验 {#di-san-bu-shu-ju-xiao-yan}
+### 第三步：数据校验 <a id="di-san-bu-shu-ju-xiao-yan"></a>
 
 在完成了【数据管理】-【事件与变量】-【转化变量】的配置，以及代码实施后，我们当然需要对数据是否成功上传进行校验。校验工作分为两步完成。
 
-#### **数据校验第一步：本地开发环境校验** {#shu-ju-xiao-yan-di-yi-bu-ben-di-kai-fa-huan-jing-xiao-yan}
+#### **数据校验第一步：本地开发环境校验** <a id="shu-ju-xiao-yan-di-yi-bu-ben-di-kai-fa-huan-jing-xiao-yan"></a>
 
 GrowingIO 提供了 SDK debug 模式以及 debug 工具，来帮助您完成数据的校验。具体请参考[ Debugger 最佳实践](../../sdk-integration/growingio-debugger/best-practice.md#evar-zhuan-hua-bian-liang-shi-jian)。
 
-#### **数据校验第二步：GrowingIO 后台图表验证** {#shu-ju-xiao-yan-di-er-bu-growingio-hou-tai-tu-biao-yan-zheng}
+#### **数据校验第二步：GrowingIO 后台图表验证** <a id="shu-ju-xiao-yan-di-er-bu-growingio-hou-tai-tu-biao-yan-zheng"></a>
 
 在 GrowingIO 分析后台，找到 “分析” - “新建事件分析”，然后在图表中选择您设计好的 “指标+维度”，转化变量即对应的 "维度"，查看是否有数据。当然，您需要首先确保转化变量确实有被触发。
 

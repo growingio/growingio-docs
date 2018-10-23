@@ -6,27 +6,27 @@ description: 分析转发小程序分享整体的获客量、获客转化、拉�
 
 小程序处在微信生态下，分享功能是小程序拉新、获客的重要途径。GrowingIO推出了分享分析，帮助您一目了然看到您小程序的分享获客、拉新、转化等数据。
 
-## 分享场景 {#fen-xiang-chang-jing}
+## 分享场景 <a id="fen-xiang-chang-jing"></a>
 
 GrowingIO采集的是微信默认分享功能，即转发小程序到一个好友/群聊 对话中，如下图：
 
 ![&#x5206;&#x4EAB;&#x5206;&#x6790;&#x573A;&#x666F;](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LMN1pZmp4u8Iq2L30mx%2F-LMNAfs1hCbCFNP5U30x%2Fimage.png?alt=media&token=0590b92f-017f-45b3-a048-612a11178cca)
 
-## 分享分析SDK代码配置 {#fen-xiang-fen-xi-sdk-dai-ma-pei-zhi}
+## 分享分析SDK代码配置 <a id="fen-xiang-fen-xi-sdk-dai-ma-pei-zhi"></a>
 
 需要在集成SDK时，设置 followShare 为true，才可以自动采集分享分析的数据。
 
 配置代码请协同工程师一起，参见[SDK分享分析参数](../sdk-integration/mina-sdk.md#sdk-fen-xiang-fen-xi-can-shu)。
 
-## 分享分析功能使用 {#fen-xiang-fen-xi-gong-neng-shi-yong}
+## 分享分析功能使用 <a id="fen-xiang-fen-xi-gong-neng-shi-yong"></a>
 
 点击“获客管理——&gt; 分享分析”，进入分享分析页面。
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LMpSdtEh4eMNiVNv7Y6%2F-LMpSfykZzx7IehHdxX6%2Fimage.png?alt=media&token=c618205f-7830-4afb-8267-23c0de74d540)
 
-### 功能介绍&指标释义 {#gong-neng-jie-shao-zhi-biao-shi-yi}
+### 功能介绍&指标释义 <a id="gong-neng-jie-shao-zhi-biao-shi-yi"></a>
 
-#### 功能： {#gong-neng}
+#### 功能： <a id="gong-neng"></a>
 
 * **选择应用**：在集成多个小程序应用时，用来切换小程序应用。
 * **选择时间周期**：用来选择分析的时间范围,预置常用的时间范围；最近支持计算到昨天的情况。
@@ -35,14 +35,14 @@ GrowingIO采集的是微信默认分享功能，即转发小程序到一个好�
   * 选择访问用户，即功能中的“转发分享带来的用户量”，统计的是由分享带来的新访问用户量，“转化目标”统计的是由分享带来的全部访问用户中转化的用户量，KOL 分享带来的三度用户量，也在“全部访问用户”基础上计算。
 * **选择转化目标：**选则某个转化目标，会计算由分享带来的用户，在选择的时间周期内，触发转化目标事件的**用户量。**
 
-#### 指标解释： {#zhi-biao-jie-shi}
+#### 指标解释： <a id="zhi-biao-jie-shi"></a>
 
 * 分享用户数：触发转发分享事件的访问用户数量；
 * 分享次数：转发分享事件被触发的次数；
 * 转发分享带来的用户数：通过点击其他用户分享到 好友聊天/群聊天 中的小程序，进入小程序的用户量；
 * 选择相应的转化目标：通过点击其他用户分享到 好友聊天/群聊天 中的小程序进入小程序的用户中，在选择的时间周期中，完成相应转化目标事件的用户数;
 
-### 分享ROI分析 {#fen-xiang-roi-fen-xi}
+### 分享ROI分析 <a id="fen-xiang-roi-fen-xi"></a>
 
 **分享ROI总览**，主要是帮助您一目了然产生分享的用户数，次数，以及由转发分享带来的整体获客和拉新的用户量，以及其中转化的用户量。
 
@@ -55,13 +55,13 @@ GrowingIO采集的是微信默认分享功能，即转发小程序到一个好�
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LMpQWHXoAZUfApRCHHS%2F-LMpRSuPPOpEJwS_DG1X%2Fimage.png?alt=media&token=5181aa67-3310-46a3-9f8b-37b125671602)
 
-### 分享用户分析 {#fen-xiang-yong-hu-fen-xi}
+### 分享用户分析 <a id="fen-xiang-yong-hu-fen-xi"></a>
 
 对分享来说，我们最关键的，除了知道分享的ROI，针对用户颗粒度下，需要知道谁是产品中最能带来用户的“超级用户”。
 
 通常情况下，我们一般评估一个用户直接带来的用户量有多少，但是在微信体系下，就忽略了用户可能隐藏存在的巨大的社交关系。GrowingIO分享用户分析，帮助您定位直接一度分享和三度分享下的“分享超级用户”。
 
-#### 具体解释： {#ju-ti-jie-shi}
+#### 具体解释： <a id="ju-ti-jie-shi"></a>
 
 三度分享计算举例：用户A 分享带来了用户B， 用户B 的分享带来了用户C，用户C带来了用户D，在三度分享计算击结果如下： 用户A带来的三度分享用户总量是 3 （即用户B、用户C和用户D），其中一度、二度、三度分别是 1，1，1； 用户B带来的三度分享用户总量是2，其中一度、二度、三度分别是：1，1，0； 用户C带来的三度分享用户总量是1，其中一度，二度，三度分别是：1，0，0。
 

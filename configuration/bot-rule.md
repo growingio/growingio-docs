@@ -7,13 +7,13 @@
 
 在网站集成了GrowingIO Web JS SDK 之后，用户访问网站的行为数据会以服务器请求的方式发送给 GrowingIO 的服务器，每一条服务器请求都会经过爬虫规则的判断，判断该服务器请求是否是预定义爬虫产生的。
 
-### 1.处理预定义爬虫数据的规则 {#1}
+### 1.处理预定义爬虫数据的规则 <a id="1"></a>
 
 在下面表格中的爬虫为目前 GrowingIO 的预定义爬虫
 
 ![](https://docs.growingio.com/.gitbook/assets/bot-rule.png)
 
-### 2.对数据分析的影响 {#2}
+### 2.对数据分析的影响 <a id="2"></a>
 
 ![](https://docs.growingio.com/.gitbook/assets/botruleimpactondatavisualizationtools.png)
 

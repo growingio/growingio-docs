@@ -2,7 +2,7 @@
 
 ## 原始数据导出 2.0 和原始数据导出 1.0 主要区别
 
-#### 接口请求 URL {#接口请求-url}
+#### 接口请求 URL <a id="&#x63A5;&#x53E3;&#x8BF7;&#x6C42;-url"></a>
 
 原始数据导出 1.0 接口格式：
 
@@ -12,7 +12,7 @@
 
 `https://www.growingio.com/v2/insights/{export_type}/{data_type}/{ai}/{export_date}.json`
 
-#### 接口响应数据格式 {#接口响应数据格式}
+#### 接口响应数据格式 <a id="&#x63A5;&#x53E3;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x683C;&#x5F0F;"></a>
 
 原始数据导出 1.0 接口返回数据格式：
 
@@ -44,7 +44,7 @@
 }
 ```
 
-#### 数据文件的获取方式和组织 {#数据文件的获取方式和组织}
+#### 数据文件的获取方式和组织 <a id="&#x6570;&#x636E;&#x6587;&#x4EF6;&#x7684;&#x83B7;&#x53D6;&#x65B9;&#x5F0F;&#x548C;&#x7EC4;&#x7EC7;"></a>
 
 原始数据导出 1.0
 
@@ -68,7 +68,7 @@ visit、page、action、action\_tag、custom\_attr、ads\_track\_click、ads\_tr
 
 visit、page、action、action\_tag、custom\_event（原custom\_attr）、ads\_track\_click、ads\_track\_activation、pvar（新增）、evar（新增）一共9种类型的数据
 
-#### 数据格式变化 {#数据格式变化}
+#### 数据格式变化 <a id="&#x6570;&#x636E;&#x683C;&#x5F0F;&#x53D8;&#x5316;"></a>
 
 visit：新增字段，部分字段名称变化
 

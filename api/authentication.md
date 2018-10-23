@@ -4,7 +4,7 @@
 * [2.认证](authentication.md#authentication)
 * [3.API 定义](authentication.md#api-definition)
 
-### 1.术语 {#terminology}
+### 1.术语 <a id="terminology"></a>
 
 * **公钥（** **X-Client-Id）**: GrowingIO 分配的项目公钥，请求时用来做身份校验的一串字符码，请在项目配置页面获取
 * **私钥**: 双方所约定的加密算法的私钥
@@ -13,7 +13,7 @@
 * **auth**: 通过认证算法计算出来的签名，见第二部分示例代码
 * **tm**: 当前请求时间戳（unix 毫秒时间戳\)
 
-### 2.认证 {#authentication}
+### 2.认证 <a id="authentication"></a>
 
 ```text
 ____________                  ___________    (ai/project/auth)   _____________
@@ -37,7 +37,7 @@ GrowingIO 会给每个项目分配个公钥\(X-Client-Id\)和私钥。具体认�
 
 POST `https://www.growingio.com/auth/token`
 
-#### Authorization {#authorization}
+#### Authorization <a id="authorization"></a>
 
 在 Header 里面添加一个属性：
 
@@ -45,7 +45,7 @@ POST `https://www.growingio.com/auth/token`
 | :--- | :--- | :--- | :--- |
 | X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | X-Client-Id: 123abc |
 
-#### Query Parameter {#query-parameter}
+#### Query Parameter <a id="query-parameter"></a>
 
 | 名字 | 类型 | 描述 | 示例 |
 | :--- | :--- | :--- | :--- |
@@ -58,7 +58,7 @@ POST `https://www.growingio.com/auth/token`
 Post body采用raw格式上传而不是key-value键值对方式上传。如：project=123abc&ai=2a1b4018cd954ec2bcc69da5138bdb96&tm=1465020309123&auth=ab3i5dazoo58314l0qqrj1aslfj1ldfaqeroqi
 {% endhint %}
 
-#### Response {#response}
+#### Response <a id="response"></a>
 
 ```text
    {
