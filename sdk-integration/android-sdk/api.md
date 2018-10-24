@@ -337,7 +337,7 @@ GrowingIO 所有 API 都需要在主线程调用。
 | setPageVariable | 发送页面级变量，对应`pvar`事件 | 2.0.0 |
 | setEvar | 发送转化变量，对应`evar`事件 | 2.0.0 |
 | setPeopleVariable | 发送用户变量，对应`ppl`事件 | 2.0.0 |
-| setUserId | 置登录用户ID，对应cs1字段 | 2.0.0 |
+| setUserId | 设置登录用户ID，对应`cs1`字段 | 2.0.0 |
 | clearUserId | 清除登录用户ID | 2.0.0 |
 | setVisitor | 设置访问用户变量，对应`vstr`事件 | 2.4.0 |
 
