@@ -230,12 +230,12 @@ description: >-
     <tr>
       <td style="text-align:left">setDailyDataLimit</td>
       <td style="text-align:left">5M</td>
-      <td style="text-align:left">设置每天使用数据网络（2G、3G、4G）上传的数据量的上限（单位是 KB），默认值为 5 MB</td>
+      <td style="text-align:left">设置每天使用数据网络（2G、3G、4G）上传的数据量的上限（单位是 KB），默认值为 3 MB</td>
     </tr>
     <tr>
       <td style="text-align:left">getDailyDataLimit</td>
       <td style="text-align:left">无</td>
-      <td style="text-align:left">获取每天使用数据网络（2G、3G、4G）上传的数据量的上限（单位是 KB），默认值为5 MB</td>
+      <td style="text-align:left">获取每天使用数据网络（2G、3G、4G）上传的数据量的上限（单位是 KB），默认值为3 MB</td>
     </tr>
     <tr>
       <td style="text-align:left">disableDataCollect</td>

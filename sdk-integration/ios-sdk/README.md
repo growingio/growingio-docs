@@ -5,7 +5,7 @@
   * [设置 URL Scheme](./#2-she-zhi-url-scheme)
   * [初始化](./#3-chu-shi-hua)
 * [重要配置](./#zhong-yao-pei-zhi)
-  * [采集广告 Banner  数据](./#cai-ji-guang-gao-banner-shu-ju)
+  * [设置元素内容](./#she-zhi-yuan-su-nei-rong)
   * [采集输入框数据](./#cai-ji-shu-ru-kuang-shu-ju)
   * [Facebook 广告 SDK](./#facebook-guang-gao-sdk)
   * [采集 WebView 页面数据](./#cai-ji-webview-ye-mian-shu-ju)
@@ -151,9 +151,11 @@
 下列内容为常用配置，更多属性及接口详细信息见 Growing.h 
 {% endhint %}
 
-### 采集广告 Banner 数据
+### 设置元素内容
 
-如果您的 app 上方有横向滚动的 Banner 广告，若要收集 Banner 相关数据，请在响应点击的控件上添加如下代码：
+      当您想采集一些可能没有文字的控件（比如UIImageView，UIView）时，也可以给属性growingAttributesValue 赋值作为文字，用来在圈选的时候区分不同的内容。
+
+       如果您的 app 上方有横向滚动的 Banner 广告，若要收集 Banner 相关数据，请在响应点击的控件上添加如下代码：
 
 ```objectivec
 UIView *view;
@@ -174,7 +176,7 @@ view2.growingAttributesValue = @"ad2";
 view3.growingAttributesValue = @"ad3";
 ```
 
-此外，当您想采集一些可能没有文字的控件（比如UIImageView，UIView）时，也可以给属性growingAttributesValue 赋值作为文字，用来在圈选的时候区分不同的内容。
+
 
 
 

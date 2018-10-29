@@ -63,7 +63,9 @@ $ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
 
 ### 添加跟踪代码
 
-在微信小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，**请注意一定要放在 App\(\) 之前**：
+#### 原生小程序框架：
+
+对于**原生小程序框架**，在微信小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，**请注意一定要放在 App\(\) 之前**：
 
 ```javascript
 var gio = require("utils/gio-minp.js");
@@ -71,7 +73,23 @@ var gio = require("utils/gio-minp.js");
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' });
 ```
 
-对于 mpvue 用户，使用下面这种方式：
+#### **原生小程序框架引用了第三方插件**：
+
+如果您的小程序中使用了**第三方插件**，请添加如下代码：
+
+```javascript
+var gio = require ("utils/gio-minp.js");
+// version 是你的小程序的版本号，发版时请调整; usePlugin 设置是否使用插件
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', usePlugin: true });
+// app.js 文件，在文件顶部 （其他代码之前）添加如下代码： 
+const App = global.GioApp
+//在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入！！！）
+const Page = global.GioPage;
+```
+
+#### **mpvue小程序框架：**
+
+对于 **mpvue** **小程序框架**，使用下面这种方式：
 
 ```javascript
 import gio from './utils/gio-minp'
@@ -91,8 +109,9 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue
 | :--- | :--- | :--- |
 | version | string | 你的小程序的版本号 |
 | followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认false |
-| forceLogin | true \| false | 你的小程序是否强制要求用户登陆微信获取 openid，默认 false |
-| debug | true \| false | 是否开启调试模式，可以看到采集的数据，默认 false |
+| forceLogin | true \| false | 你的小程序是否强制要求用户登陆微信获取 openid。默认 false |
+| debug | true \| false | 是否开启调试模式，可以看到采集的数据。默认 false |
+| usePlugin | true \| false | 你的小程序中是否使用了第三方插件。默认false。 |
 
 {% hint style="info" %}
 forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程序里面设置用户标识符，存储在微信 Storage 里面。这个用户标识符潜在可能会被`clearStorage` 清除掉，所以有可能不同的用户标识符对应同一个微信里的 `openid`。如果你的微信小程序在用户打开后会去做登录并且获取 `openid` 和/或 `unionid`，可以设置 `forceLogin` 为 true。当 forceLogin 为 true 的时候，用户标识符会使用 openid，潜在风险是如果用户没有登录，数据不会发送。具体集成示例：
