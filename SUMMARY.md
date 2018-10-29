@@ -47,6 +47,7 @@
     * [IOS SDK 常见问题](sdk-integration/ios-sdk/ios-sdk-chang-jian-wen-ti.md)
   * [小程序 SDK](sdk-integration/mina-sdk.md)
   * [小游戏 SDK](sdk-integration/xiao-you-xi-sdk.md)
+  * [微信内嵌页 SDK \(beta\)](sdk-integration/wei-xin-nei-qian-ye-sdk.md)
   * [GrowingIO Debugger](sdk-integration/growingio-debugger/README.md)
     * [验证打点事件](sdk-integration/growingio-debugger/best-practice.md)
   * [SDK 更新日志](sdk-integration/changelog-sdk.md)
