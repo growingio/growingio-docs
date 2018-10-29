@@ -71,7 +71,7 @@
   * [小程序事件和变量](data-definition/mina.md)
   * [用户变量](data-definition/user-variable/README.md)
     * [登录用户变量](data-definition/user-variable/loginuserid.md)
-    * [访问用户变量（小程序）](data-definition/user-variable/visituserid.md)
+    * [访问用户变量](data-definition/user-variable/visituserid.md)
   * [页面级变量](data-definition/page-variable.md)
   * [无埋点圈选](data-definition/circle/README.md)
     * [Web 圈选](data-definition/circle/web.md)
