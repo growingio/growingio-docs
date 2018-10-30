@@ -35,30 +35,11 @@ description: 目前微信内嵌页 SDK 属于内测beta版本，如有需求，�
 将以下深色区域内的 JS 代码复制到您所需分析页面中的 **&lt;head&gt;** 和 **&lt;/head&gt;** 标签之间即可。安装成功后，除 localhost 和 IP 地址外，所有网址下的行为数据都将会被收集。
 
 ```text
-<!-- GrowingIO Analytics code version 1.0 -->
-<!-- Copyright 2015-2018 GrowingIO, Inc. More info available at http://www.growingio.com -->
-<script type='text/javascript'>
-!function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.growingio.com/1.0/gio.js","gio");
-//微信内嵌页AppID为选填项，如果您的微信内嵌页有AppID，请填写
-gio('init', '你的项目ID'[,'你的微信内嵌页AppID'], {'setImp':'false'});
-
-//custom page code begin here
-
-//custom page code end here
-
-gio('send');
-
+<script type="text/javascript">
+      !function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.growingio.com/gio-wxwv.js","gio");
+      gio('init', '你的项目ID', '你的 appid', { debug: false });
+      gio('send');
 </script>
-
-<script type='text/javascript' src='https://assets.growingio.com/sdk/wx/vds-wx-plugin.js'></script>
-
-<!-- End GrowingIO Analytics code version: 1.0 -->
-
-
-```
-
-```javascript
-<!-- GrowingIO Analytics code version 1.0 --><!-- Copyright 2015-2018 GrowingIO, Inc. More info available at http://www.growingio.com --><script type='text/javascript'>!function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.growingio.com/1.0/gio.js","gio");//如果内嵌页存在微信App_id，建议您填写相应的微信App_id,如果没有，就不用填写gio('init', '你的项目ID'[,'微信App_id'], {'setImp':'false'});​//custom page code begin here​//custom page code end here​gio('send');​</script>​<script type='text/javascript' src='https://assets.growingio.com/sdk/wx/vds-wx-plugin.js'></script>​<!-- End GrowingIO Analytics code version: 1.0 -->​​
 ```
 
 微信内嵌页 SDK 还有以下额外参数可以使用：
@@ -66,7 +47,7 @@ gio('send');
 | 参数 | 值 | 解释 |
 | :--- | :--- | :--- |
 | hashtag | true \| false | GrowingIO默认不会把 hashtag 识别成页面 URL 的一部分。对于使用 hashtag 进行页面跳转的单页面网站应用来说，可以启用 hashtag 作为标识页面的一部分，将hashtag设置为true，默认为false。 |
-| debug | true \| false | 开启debug可以进行数据的实时调试，默认为true，调试方式为打开开发者工具，在console中查看。 |
+| debug | true \| false | 开启debug可以进行数据的实时调试，默认为false，调试方式为打开开发者工具，在console中查看。 |
 | touch | true \| false | 设置是否支持touch事件，如果为true则会采集touch事件，否则采集click事件。sdk中会判断当前是否支持touch事件设置默认值。 |
 
 ## 微信内嵌页 SDK高级设置 <a id="wei-xin-nei-qian-ye-sdk-gao-ji-she-zhi"></a>
@@ -82,7 +63,8 @@ GrowingIO默认不会把 hashtag 识别成页面 URL 的一部分。对于使用
 即微信小程序项目根目录的 app.js 文件设置参数如下：
 
 ```text
-//如果内嵌页存在微信App_id，建议您填写相应的微信App_id,如果没有，就不用填写gio('init', '你的项目ID'[,'微信App_id'], {'setImp':'false', hashtag: true });
+//如果内嵌页存在微信App_id，建议您填写相应的微信App_id,如果没有，就不用填写
+gio('init', '你的项目ID'[,'微信App_id'], {'setImp':'false', hashtag: true });
 ```
 
 ### 登录用户ID <a id="deng-lu-yong-hu-id"></a>
