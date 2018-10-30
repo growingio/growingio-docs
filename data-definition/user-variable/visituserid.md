@@ -1,11 +1,11 @@
 # 访问用户变量
 
 * [访问用户简介](visituserid.md#fang-wen-yong-hu-jian-jie)
-* [配置和上传](https://growingio.gitbook.io/docs/~/edit/drafts/-LPyrvcsY8gb75CQCoOG/v/master/data-definition/user-variable/visituserid#pei-zhi-he-shang-chuan)
-  * [第一步：在 “事件和变量”中完成配置](https://growingio.gitbook.io/docs/~/edit/drafts/-LPyrvcsY8gb75CQCoOG/v/master/data-definition/user-variable/visituserid#di-yi-bu-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
-  * [第二步：代码部署](https://growingio.gitbook.io/docs/~/edit/drafts/-LPyrvcsY8gb75CQCoOG/v/master/data-definition/user-variable/visituserid#di-er-bu-dai-ma-bu-shu)
-  * [第三步：数据校验](https://growingio.gitbook.io/docs/~/edit/drafts/-LPyrvcsY8gb75CQCoOG/v/master/data-definition/user-variable/visituserid#di-san-bu-shu-ju-xiao-yan)
-* [用户变量的持久性范围](https://growingio.gitbook.io/docs/~/edit/drafts/-LPyrvcsY8gb75CQCoOG/v/master/data-definition/user-variable/visituserid#yong-hu-bian-liang-de-chi-jiu-xing-fan-wei)
+* [配置和上传](visituserid.md#pei-zhi-he-shang-chuan)
+  * [第一步：在 “事件和变量”中完成配置](visituserid.md#di-yi-bu-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
+  * [第二步：代码部署](visituserid.md#di-er-bu-dai-ma-bu-shu)
+  * [第三步：数据校验](visituserid.md#di-san-bu-shu-ju-xiao-yan)
+* [用户变量的持久性范围](visituserid.md#yong-hu-bian-liang-de-chi-jiu-xing-fan-wei)
 
 用户变量用来保存跟用户本身相关的信息，例如用户的姓名，性别，会员卡等级等等。不建议在用户变量中保存跟交互行为相关的信息，例如当前正在浏览的商品，当前正在查看的某一个 SaaS 项目。这些随着用户的交互行为会发生变化的信息 GrowingIO 建议使用页面变量和转化变量来保存。
 
@@ -51,7 +51,7 @@
 
 完成了配置后，即可在代码中完成以上设计的 “自定义事件和变量” 的部署。具体的说，就是调用 GrowingIO 提供的API接口，上传数据。
 
-* ​[JS 接口文档](https://growingio.gitbook.io/docs/~/drafts/-LPyrvcsY8gb75CQCoOG/primary/sdk-integration/web-js-sdk#3-web-js-sdk-2-1-api)​
+* [​JS 接口文档​](https://docs.growingio.com/docs/sdk-integration/web-js-sdk/web-js-sdk-api)
 * [​Android 接口文档​](https://docs.growingio.com/docs/sdk-integration/android-sdk/#setvisitor)
 * [​iOS 接口文档​](https://docs.growingio.com/docs/sdk-integration/ios-sdk/#setvisitor)
 * [​小程序接口文档​](https://docs.growingio.com/docs/sdk-integration/mina-sdk#fang-wen-yong-hu-bian-liang)
