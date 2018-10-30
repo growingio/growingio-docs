@@ -86,3 +86,7 @@ android {
 **上线时，一定要将 gradle.properties 文件中的 gioenable 改为 true 。否则我们将无法采集数据。**
 {% endhint %}
 
+{% hint style="info" %}
+SDK 暂时不支持 Instant Run , 请开发者开发期间配置 gioenable = false ，即可使用 Instant Run。
+{% endhint %}
+
