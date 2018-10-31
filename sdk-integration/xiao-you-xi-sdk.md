@@ -55,7 +55,6 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小游戏的 AppID', { ver
 | 参数 | 值 | 解释 |
 | :--- | :--- | :--- |
 | version | string | 你的小游戏的版本号 |
-| followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认false |
 | forceLogin | true \| false | 你的小游戏是否强制要求用户登陆微信获取 openid。默认 false |
 | debug | true \| false | 是否开启调试模式，可以看到采集的数据。默认 false |
 
@@ -88,35 +87,6 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 当集成成功后，需要回到 GrowingIO SDK 集成页面检测数据。请在添加了跟踪代码的小游戏重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
 
 ## 小游戏 SDK 高级设置&数据采集配置 <a id="sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi"></a>
-
-### SDK 分享分析参数 <a id="sdk-fen-xiang-fen-xi-can-shu"></a>
-
-转发分享小游戏是小游戏获客的重要场景，想要详细的进行转发分享的统计，需要在SDK参数中，设置如下参数，值为true
-
-| 参数 | 值 | 解释 |
-| :--- | :--- | :--- |
-| followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认false |
-
-即微信小游戏项目根目录的 game.js 文件设置参数如下：
-
-```javascript
-var gio = require("utils/gio-ming.js");
-// version 是你的小游戏的版本号，发版时请调整
-gio('init', '9c76fe4756c3404d', 'wx87c6f4a3a6cf31e7', { version: '1.0', followShare: true });
-//将微信的wx.OnShareAppMessage替换成gio("gioOnShareAppMessage", function(){})
-//分享，监听用户点击右上角菜单的“转发”按钮时触发的事件
-gio("gioOnShareAppMessage", function(){
-  return {
-    title: "试试我的小游戏"
-  }
-})
-//将微信的wx. shareAppMessage替换成gio("gioShareAppMessage", {})
-//分享，主动拉起转发，进入选择通讯录界面
-gio("gioShareAppMessage", {
-    title: "试试我的小游戏"
-  }
-)
-```
 
 ### SDK 微信用户属性设置 <a id="sdk-wei-xin-yong-hu-shu-xing-she-zhi"></a>
 
