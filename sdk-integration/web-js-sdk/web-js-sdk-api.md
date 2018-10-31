@@ -5,12 +5,13 @@
   * [1.2 初始化 \(init\)​​](web-js-sdk-api.md#12-chu-shi-hua-init)
   * [1.3 设置登录用户id \(setUserId\)​​](web-js-sdk-api.md#13-she-zhi-deng-lu-yong-hu-idsetuserid)
   * [1.4 清除登录用户id \(clearUserId\)​​](web-js-sdk-api.md#14-qing-chu-deng-lu-yong-hu-idclearuserid)
-  * [1.5 设置用户级变量（people.set）](web-js-sdk-api.md#15-she-zhi-yong-hu-ji-bian-liang-peopleset)​
-  * [1.6 设置页面级变量（page.set）​](web-js-sdk-api.md#16-she-zhi-ye-mian-ji-bian-liang-pageset)
-  * [1.7 设置转化变量（evar.set）​](web-js-sdk-api.md#17-she-zhi-zhuan-hua-bian-liang-evarset)
-  * [1.8 设置自定义事件和事件级变量（track）​](web-js-sdk-api.md#18-she-zhi-zi-ding-yi-shi-jian-he-shi-jian-ji-bian-liang-track)
-  * [1.9 手动发送页面浏览事件 \(sendPage\)​​](web-js-sdk-api.md#19-shou-dong-fa-song-ye-mian-lan-shi-jian-sendpage-sendpage)
-  * [1.10 GDPR 数据采集开关](web-js-sdk-api.md#110-gdpr-shu-ju-cai-ji-kai-guan)
+  * [1.5 设置登录用户级变量（people.set）](web-js-sdk-api.md#15-she-zhi-yong-hu-ji-bian-liang-peopleset)​
+  * [1.6 设置访问用户级变量（visitor.set）](web-js-sdk-api.md#16-she-zhi-fang-wen-yong-hu-ji-bian-liang-visitorset)
+  * [1.7 设置页面级变量（page.set）​](web-js-sdk-api.md#16-she-zhi-ye-mian-ji-bian-liang-pageset)
+  * [1.8 设置转化变量（evar.set）​](web-js-sdk-api.md#17-she-zhi-zhuan-hua-bian-liang-evarset)
+  * [1.9 设置自定义事件和事件级变量（track）​](web-js-sdk-api.md#18-she-zhi-zi-ding-yi-shi-jian-he-shi-jian-ji-bian-liang-track)
+  * [1.10 手动发送页面浏览事件 \(sendPage\)​​](web-js-sdk-api.md#19-shou-dong-fa-song-ye-mian-lan-shi-jian-sendpage-sendpage)
+  * [1.11 GDPR 数据采集开关](web-js-sdk-api.md#110-gdpr-shu-ju-cai-ji-kai-guan)
 * [旧版 Web JS SDK \(1.x\) API](web-js-sdk-api.md#2-jiu-ban-web-js-sdk-1-x-api)
 
 ### 1.1 API 简介
@@ -36,9 +37,13 @@ gio('page.set', pageLevelVariables);
 gio('evar.set', key, value);
 gio('evar.set', conversionVariables);
 
-// 发送用户变量API
+// 发送登录用户变量API
 gio('people.set', key, value);
 gio('people.set', customerVariables);
+
+// 发送访问用户变量API
+gio('visitor.set', key, value);
+gio('visitor.set', visitorVariables);
 
 // 设置登录用户ID
 gio('setUserId', userId); 
@@ -94,15 +99,15 @@ gio('setUserId', '1234567890');
 gio('clearUserId');
 ```
 
-### 1.5 设置用户级变量（people.set）
+### 1.5 设置登录用户级变量（people.set）
 
-发送用户信息用于用户信息相关分析，在添加代码之前必须在打点管理界面上声明用户变量。
+发送登录用户信息用于登录用户信息相关分析，在添加代码之前必须在打点管理界面上声明登录用户变量。
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
 | :--- | :--- | :--- | :--- |
-| key | String | 否 | 用户变量的标识符 |
-| value | String | 否 | 用户变量的值 |
-| customerVariables | JSON Object | 否 | 包含用户变量的JSON对象 |
+| key | String | 否 | 登录用户变量的标识符 |
+| value | String | 否 | 登录用户变量的值 |
+| customerVariables | JSON Object | 否 | 包含登录用户变量的JSON对象 |
 
 ```javascript
 // people.set API原型
@@ -120,7 +125,33 @@ gio('people.set', 'gender', 'male');
 gio('people.set', {'gender':'male', 'age':'25'});
 ```
 
-### 1.6 设置页面级变量（page.set）
+### 1.6  设置访问用户级变量（visitor.set）
+
+发送访问用户信息用于访问用户信息相关分析，在添加代码之前必须在打点管理界面上声明访问用户变量。
+
+| 参数名称 | 参数类型 | 是否必须 | 说明 |
+| :--- | :--- | :--- | :--- |
+| key | String | 否 | 访问用户变量的标识符 |
+| value | String | 否 | 访问用户变量的值 |
+| customerVariables | JSON Object | 否 | 包含访问用户变量的JSON对象 |
+
+```javascript
+// visitor.set API原型
+gio('visitor.set', key, value);
+gio('visitor.set', visitorVariables);
+```
+
+```javascript
+// visitor.set API调用示例一
+gio('visitor.set', 'gender', 'male');
+```
+
+```javascript
+//people.set API调用示例二
+gio('visitor.set', {'gender':'male', 'age':'25'});
+```
+
+### 1.7 设置页面级变量（page.set）
 
 发送页面级别的维度信息，在添加代码之前必须在打点管理界面上声明页面级变量。
 
@@ -146,7 +177,7 @@ gio('page.set', {'pageName': 'Home Page', 'author': 'Zhang San'});
 gio('page.set', 'author', 'Zhang San');
 ```
 
-### 1.7 设置转化变量（evar.set）
+### 1.8 设置转化变量（evar.set）
 
 发送一个转化信息用于高级归因分析，在添加代码之前必须在打点管理界面上声明转化变量。
 
@@ -172,7 +203,7 @@ gio('evar.set', 'campaignId'，'1234567890');
 gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
 ```
 
-### 1.8 设置自定义事件和事件级变量（track）
+### 1.9 设置自定义事件和事件级变量（track）
 
 在添加所需要发送的事件代码之前，需要在打点管理用户界面配置事件以及事件级变量。
 
@@ -203,7 +234,7 @@ gio('track', 'registerSuccess', {'gender':'male', 'age':21});
 gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zhejiang'});
 ```
 
-### 1.9 手动发送页面浏览事件 sendPage \(sendPage\)​
+### 1.10 手动发送页面浏览事件 sendPage \(sendPage\)​
 
 在默认情况下，由于用户浏览网站的交互行为导致当前页面的 URL 产生变化时，GrowingIO 的 Web JS SDK 会发送一个 page 类型的请求。在一些特殊的情况下，例如用户在访问单页应用（Single Page Application）类型的网站时，用户的操作会导致业务上面理解的页面产生了变化，但是当前的 URL 可能并没有改变。
 
@@ -214,7 +245,7 @@ gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zheji
 gio('sendPage'); // 放在send之后
 ```
 
-### 1.10 GDPR 数据采集开关
+### 1.11 GDPR 数据采集开关
 
 GrowingIO 全面支持 [欧盟《一般数据保护条例》 \(GDPR\)](../privacy.md#4)
 
