@@ -147,7 +147,7 @@ gio('visitor.set', 'gender', 'male');
 ```
 
 ```javascript
-//people.set API调用示例二
+// visitor.set API调用示例二
 gio('visitor.set', {'gender':'male', 'age':'25'});
 ```
 

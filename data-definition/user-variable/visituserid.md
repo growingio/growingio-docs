@@ -1,11 +1,11 @@
 # 访问用户变量
 
 * [访问用户简介](visituserid.md#fang-wen-yong-hu-jian-jie)
-* [配置和上传](https://docs.growingio.com/docs/data-definition/user-variable/visituserid#pei-zhi-he-shang-chuan)
-  * [第一步：在 “事件和变量”中完成配置](https://docs.growingio.com/docs/data-definition/user-variable/visituserid#di-yi-bu-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
-  * [第二步：代码部署](https://docs.growingio.com/docs/data-definition/user-variable/visituserid#di-er-bu-dai-ma-bu-shu)
-  * [第三步：数据校验](https://docs.growingio.com/docs/data-definition/user-variable/visituserid#di-san-bu-shu-ju-xiao-yan)
-* [用户变量的持久性范围](https://docs.growingio.com/docs/data-definition/user-variable/visituserid#yong-hu-bian-liang-de-chi-jiu-xing-fan-wei)
+* [配置和上传](visituserid.md#pei-zhi-he-shang-chuan)
+  * [第一步：在 “事件和变量”中完成配置](visituserid.md#di-yi-bu-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
+  * [第二步：代码部署](visituserid.md#di-er-bu-dai-ma-bu-shu)
+  * [第三步：数据校验](visituserid.md#di-er-bu-dai-ma-bu-shu)
+* [用户变量的持久性范围](visituserid.md#yong-hu-bian-liang-de-chi-jiu-xing-fan-wei)
 
 用户变量用来保存跟用户本身相关的信息，例如用户的姓名，性别，会员卡等级等等。不建议在用户变量中保存跟交互行为相关的信息，例如当前正在浏览的商品，当前正在查看的某一个 SaaS 项目。这些随着用户的交互行为会发生变化的信息 GrowingIO 建议使用页面变量和转化变量来保存。
 
