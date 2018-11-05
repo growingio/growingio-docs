@@ -4,13 +4,13 @@ description: >-
   的采集，满足不同场景的定制采集。同一种含义的API，只需要调用一次即可，比如您关闭SDK的采集功能，可以在初始化中配置，也可以在运行时配置，只需调用一次相关API即可。
 ---
 
-# Android SDK API
+# Android 无埋点 SDK API
 
-## GrowingIO 初始化配置项 API
+## 初始化配置项 API
 
-GrowingIO 初始化配置项均在`Application`的`onCreate`方法中 SDK 初始化代码块中设置，下面将分类并描述含义。
+初始化配置项均在`Application`的`onCreate`方法中 SDK 初始化代码块中设置，下面将分类并描述含义。
 
-### 示例代码
+#### 示例代码
 
 ```java
 public class MyApplication extends Application {
@@ -85,17 +85,17 @@ public class MyApplication extends Application {
       <td style="text-align:left">useID</td>
       <td style="text-align:left">true</td>
       <td style="text-align:left">是否在计算<code>xpath</code>时使用控件<code>id&#xFF0C;</code>默认使用</td>
-      <td style="text-align:left">2.5.0中删除</td>
+      <td style="text-align:left">2.6.0中删除</td>
     </tr>
   </tbody>
 </table>
 
 ### SDK 功能API
 
-| 初始化配置项API | 默认值                    | 说明 | 最低版本                    |
+| 初始化配置项API | 默认值                    | 说明 | 版本                           |
 | :--- | :--- | :--- | :--- |
-| setDeeplinkCallback | 无 | DeepLink 回调接口，获得自定义参数以便跳转对应 APP页 面 | 2.3.2 |
-| setTrackWebView | true | 是否采集全部的`WebView,`设置为`false`时不采所有`WebView`数据 |  |
+| setDeeplinkCallback | 无 | DeepLink 回调接口，获得自定义参数以便跳转对应 APP页 面 | 2.3.2 以上 |
+| setTrackWebView | true | 是否采集全部的`WebView,`设置为`false`时不采所有`WebView`数据 | 2.6.0 中删除 |
 | supportMultiProcessCircle | false | 是否使用多进程圈选功能 |  |
 | setMutiprocess | false | 使用了多进程必须配置，自定义事件和变量值才会多进程共享 |  |
 | trackAllFragments | false | 是否采集所有Fragment |  |
@@ -108,7 +108,7 @@ public class MyApplication extends Application {
 | 初始化配置项API | 默认值                                                        | 说明 |
 | :--- | :--- | :--- |
 | setDisabled | false | SDK 是否采集数据，设置为`true`时不采集数据 |
-| setSampling | 1 | 采样率\[0.01~1\],若设置sampling = 0.01，则 1% 的设备会被采集数据，每次启动会根据用户设置的采样率判断设备是否在采集的范围之内，使用**之前请咨询技术支持** |
+| setSampling | 1 | 采样率\[0.01~1\],若设置sampling = 0.01，则 1% 的设备会被采集数据，每次启动会根据用户设置的采样率判断设备是否在采集的范围之内，**使用之前请咨询技术支持** |
 | setSessionInterval | 30 \* 1000 | 在后台停留时长超过此值，则产生新的`sessionId`,发送`visit`事件。 |
 | setFlushInterval | 30 \* 1000 | 数据刷新的最长时间间隔，默认30 秒 。如果距离上次发送数据事件超过此时间则发送事件 |
 | setThrottle | false | 是否节流发送，节流发送时`imp`不发送，不发送但是采集，`imp`为元素展示事件 |
@@ -198,19 +198,19 @@ GrowingIO 所有 API 都需要在主线程调用。
     <tr>
       <th style="text-align:left">运行时API</th>
       <th style="text-align:left">说明</th>
-      <th style="text-align:left">最低版本</th>
+      <th style="text-align:left">版本</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">disableDataCollect</td>
       <td style="text-align:left">遵守欧洲联盟出台的通用数据保护条例，用户不授权，不采集用户数据</td>
-      <td style="text-align:left">2.3.2</td>
+      <td style="text-align:left">2.3.2 以上</td>
     </tr>
     <tr>
       <td style="text-align:left">enableDataCollect</td>
       <td style="text-align:left">遵守欧洲联盟出台的通用数据保护条例，用户授权，采集用户数据</td>
-      <td style="text-align:left">2.3.2</td>
+      <td style="text-align:left">2.3.2 以上</td>
     </tr>
     <tr>
       <td style="text-align:left">disable</td>
@@ -311,12 +311,12 @@ GrowingIO 所有 API 都需要在主线程调用。
       <td style="text-align:left">trackWebView</td>
       <td style="text-align:left">采集 <code>WebView</code> 事件，默认采集，您可以在不全量采集<code>WebView</code>的时候，定制采集某个<code>WebView</code>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">2.6.0 中删除</td>
     </tr>
     <tr>
       <td style="text-align:left">trackX5WebView</td>
       <td style="text-align:left">采集 X5WebView 事件，默认采集</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">2.6.0 中删除</td>
     </tr>
     <tr>
       <td style="text-align:left">setTabName</td>
