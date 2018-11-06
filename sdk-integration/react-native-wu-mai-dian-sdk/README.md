@@ -1,5 +1,5 @@
 ---
-description: 自动采集用户行为数据、页面元素信息和设备信息等数据，和原生 Android 无埋点 SDK 的采集内容和功能一致。
+description: 自动采集用户行为数据、页面元素信息和设备信息等数据，和原生无埋点 SDK 的采集内容和功能一致。
 ---
 
 # React Native 无埋点 SDK
@@ -23,12 +23,12 @@ RN无埋点的实现原理是修改用户`React Native`，`React-navigation`， 
 ```bash
 #二者选择其一即可
 npm install --save react-native-autotrack-growingio
-npm install --save https://github.com/growingio/GIORNHook.git#0.0.4
+npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 ```
 
 #### （2） 配置 `package.json` 文件
 
-考虑到了hook.js每次npm install之后都需要执行， 建议直接配在项目的package.json中，  
+考虑到了`hook.js`每次`npm install`之后都需要执行， 建议直接配在项目的`package.json`中，  
 在原有文件中，添加如下代码，保存后执行**`npm install`**。
 
 ```bash
@@ -39,13 +39,13 @@ npm install --save https://github.com/growingio/GIORNHook.git#0.0.4
 
 ### 3. 添加 Android 原生依赖
 
-React  Native 无埋点 SDK 是在 Android 原生 SDK 上的扩展，参照 [Android 无埋点 SDK](../android-sdk/#ji-cheng-wu-mai-dian-sdk)，集成步骤的 1~5，注意将 SDK 版本号`autotrack-2.6.0`替换成 RN 版本`RN-autotrack-2.6.0` 。
+React  Native 无埋点 SDK 是在 Android 原生 SDK 上的扩展，参照 [Android 无埋点 SDK](../android-sdk/#ji-cheng-wu-mai-dian-sdk)，集成步骤的 1~5，注意将 SDK 版本号替换成 RN 版本`RN-autotrack-2.6.0` 。
 
 集成步骤中，只有版本号不同，适配 RN 与原生混合开发场景。
 
 ### 4. Android 重要配置项
 
-由于 SDK 需要在`java`代码中进行初始化， 这里不在提供`npm link`方式的集成方法. 需要用户手动集成。
+由于 SDK 需要在`java`代码中进行初始化。
 
 在项目的Application中，添加`GrowingIOPackage`：
 
@@ -70,32 +70,31 @@ public class MainApplication extends Application implements ReactApplication {
 
 #### （1）使用 CocoaPods 快速集成
 
-* 添加`pod 'GrowingReactNativeKit'`到Podfile中
-* 执行`pod update`,不要用`--no-repo-update`选项
-* **\(可选\)** GrowingIO推荐您添加**AdSupport.framework**依赖库,用于来源管理激活匹配,有利于您更好的分析的数据
-* 添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
-* 集成react native打点`sdk` [见github readme](https://github.com/growingio/react-native-growingio/tree/develop)。
+1. 添加`pod 'GrowingReactNativeKit'`到Podfile中
+2. 执行`pod update`,不要用`--no-repo-update`选项
+3. **\(可选\)** GrowingIO推荐您添加**AdSupport.framework**依赖库,用于来源管理激活匹配,有利于您更好的分析的数据
+4. 添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
+5. 集成`react native`打点`sdk` 
 
-```bash
-npm install --save https://github.com/growingio/react-native-growingio.git
+```text
+npm install --save https://github.com/growingio/react-native-growingio.git#develop
 
-npm install
-
-react-native link react-native-growingio
+react-native link react-native-growingio 
 ```
 
-* 集成`js`脚本并执行命令（**如果 Android 做过这个步骤，可以省略**）
+   6. 集成`js`脚本并执行命令 ，二者任选其一即可
 
-```bash
-#二者任选其一即可
+```text
+# 通过npmjs
 npm install --save react-native-autotrack-growingio
-npm install --save https://github.com/growingio/GIORNHook.git#0.0.4
+
+# 直接使用git
+npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 ```
 
-* 如果`react-native link react-native-growingio`失败\(成功则忽略此步骤\)，即发现Libraries中没有`GrowingIORNPlugin.xcodeproj`，则可手动配置 ：
-  * 打开`XCode's`工程中, 右键点击Libraries文件夹 ➜ Add Files to &lt;...&gt; 
-  * 去node\_modules ➜ `react-native-growingio` ➜ `ios` ➜ 选择 `GrowingIORNPlugin.xcodeproj`
-  * 在工程Build Phases ➜ Link Binary With Libraries中添加libGrowingIORNPlugin.a
+{% hint style="danger" %}
+**如果 Android 执行过过这个步骤，可以省略**
+{% endhint %}
 
 #### （2）手动安装
 
@@ -127,19 +126,33 @@ npm install --save https://github.com/growingio/GIORNHook.git#0.0.4
 
  **提醒：**添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
 
-* 添加编译参数
-* 集成`js`脚本并执行命令（如果 Android 做过这个步骤，可以省略）
+1. 添加编译参数
+2. 集成`js`脚本并执行命令（如果 Android 做过这个步骤，可以省略）
+3. 集成`react native`打点`sdk` 
 
-```bash
-npm install --save react-native-autotrack-growingio
+```text
+npm install --save https://github.com/growingio/react-native-growingio.git#develop
 
-npm install --save https://github.com/growingio/GIORNHook.git#0.0.4
+react-native link react-native-growingio 
 ```
 
-* 如果`react-native link react-native-growingio`失败\(成功则忽略此步骤\)，即发现Libraries中没有`GrowingIORNPlugin.xcodeproj`，则可手动配置 ：
-  * 打开`XCode's`工程中, 右键点击Libraries文件夹 ➜ Add Files to &lt;...&gt; 
-  * 去node\_modules ➜ `react-native-growingio` ➜ `ios` ➜ 选择 `GrowingIORNPlugin.xcodeproj`
-  * 在工程Build Phases ➜ Link Binary With Libraries中添加libGrowingIORNPlugin.a
+   6. 集成`js`脚本并执行命令 ，二者任选其一即可
+
+```text
+# 通过npmjs
+npm install --save react-native-autotrack-growingio
+
+# 直接使用git
+npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
+```
+
+{% hint style="info" %}
+如果`react-native link react-native-growingio`失败\(成功则忽略此步骤\),即发现Libraries中没有GrowingIORNPlugin.xcodeproj,则可手动配置：
+
+1. 打开XCode's工程中, 右键点击Libraries文件夹 ➜ Add Files to &lt;...&gt; 
+2. 去node\_modules ➜ react-native-growingio ➜ ios ➜ 选择 GrowingIORNPlugin.xcodeproj 
+3. 在工程Build Phases ➜ Link Binary With Libraries中添加libGrowingIORNPlugin.a
+{% endhint %}
 
 ### 2. [**设置URL Scheme**](../ios-sdk/#2-she-zhi-url-scheme)\*\*\*\*
 
@@ -260,8 +273,27 @@ import {
     NativeModules
   } from 'react-native';
 
-// 在需要调用的地方, 例如调用 track 接口
+//track 设置自定义事件
 NativeModules.GrowingIO.track('testEventId', {'卖家Id': 'xxxxxx', '地点': '北京'});
+
+//trackWithNumber 设置自定义事件
+NativeModules.GrowingIO.trackWithNumber('addCart',97,{"book":"EnglishBook"});
+
+//setPeopleVariable 设置用户变量
+NativeModules.GrowingIO.setPeopleVariable({ "name": "Danny", "Age": 20 });
+
+//setEvar 设置转化变量
+NativeModules.GrowingIO.setEvar({ "registered": true, "fee": "200" });
+
+//setUserId 设置登录用户名称
+NativeModules.GrowingIO.setUserId("Gioer");
+
+//clearUserId 清除登录用户名称
+NativeModules.GrowingIO.clearUserId();
+
+//setVisitor 设置访问用户变量
+NativeModules.GrowingIO.setVisitor({ "age": 20, "gender": "male" });
+
 ```
 
 
@@ -290,7 +322,7 @@ NativeModules.GrowingIO.track('testEventId', {'卖家Id': 'xxxxxx', '地点': '�
 
 | 支持的组件 |
 | :--- |
-| iew |
+| View |
 | ScrollView |
 | ListView |
 | Picker |
@@ -302,14 +334,15 @@ NativeModules.GrowingIO.track('testEventId', {'卖家Id': 'xxxxxx', '地点': '�
 
 
 
-## 验证 SDK 是否正常工
+## 验证 SDK 是否正常工作
 
 #### 验证内容：
 
 1. 验证 点击事件是否发送 （clck）
 2. 验证 页面是否识别（page）
-3. [原生验证内容](../android-sdk/android-mai-dian-sdk.md#yan-zheng-gong-ju)（Android）
-4. 原生验证内容（iOS）
+3. 验证[热图](../../data-analytics/heatmap/heatmap-app.md)和[圈选](../../data-definition/circle/app.md)功能
+4. [原生验证内容](../android-sdk/android-mai-dian-sdk.md#yan-zheng-gong-ju)（Android）
+5. [原生验证内容](../ios-sdk/#3-quan-xuan-he-re-tu-gong-neng-yan-zheng)（iOS）
 
 #### 验证工具：
 
@@ -319,9 +352,9 @@ NativeModules.GrowingIO.track('testEventId', {'卖家Id': 'xxxxxx', '地点': '�
 
 ## 常见问题
 
-1.iOS 使用react native location功能时与growingio有冲突?
+1.iOS 使用react native location功能时与GrowingIO有冲突么?
 
-> 是的,但不属于growingio的原因,具体可以参考[issue](https://github.com/growingio/react-native-growingio/issues/4)中的解答,并且可以使用rn-patch.zip来解决这个问题
+> 是的,但不属于growingio的原因,具体可以参考[issue](https://github.com/growingio/react-native-growingio/issues/4)中的解答,并且可以使用[rn-patch.zip](https://github.com/growingio/react-native-growingio/files/2166299/rn-patch.zip)来解决这个问题
 
 2. 支持react native 版本?
 
