@@ -1,36 +1,24 @@
-# iOS SDK
+---
+description: GrowingIO 无埋点 SDK 会自动采集用户行为数据、页面元素信息、设备信息等数据。
+---
 
-*  [集成 SDK](./#ji-cheng-sdk)
-  * [选择集成方式](./#1-xuan-ze-ji-cheng-fang-shi)
-  * [设置 URL Scheme](./#2-she-zhi-url-scheme)
-  * [初始化](./#3-chu-shi-hua)
-* [重要配置](./#zhong-yao-pei-zhi)
-  * [设置元素内容](./#she-zhi-yuan-su-nei-rong)
-  * [采集输入框数据](./#cai-ji-shu-ru-kuang-shu-ju)
-  * [Facebook 广告 SDK](./#facebook-guang-gao-sdk)
-  * [采集 WebView 页面数据](./#cai-ji-webview-ye-mian-shu-ju)
-  * [采集 GPS 数据](./#cai-ji-gps-shu-ju)
-  * [采集 HashTag数据](./#cai-jih5-ye-mian-shu-ju)
-  * [GDPR 数据采集开关](./#gdpr-shu-ju-cai-ji-kai-guan)
-  * [Deep Link & Universal Link ](./#deeplink-hui-tiao-can-shu-huo-qu)
-  * [设置界面元素 ID](./#she-zhi-jie-mian-yuan-su-id)
-  * [在 App Store 提交应用](./#zai-app-store-ti-jiao-ying-yong)
-* [自定义事件和变量 API 说明](./#zi-ding-yi-shi-jian-he-bian-liang-api)
-  * [track](./#track)
-  * [setPageVariable](./#setpagevariable)
-  * [setEvar](./#setevar)
-  * [setPeopleVariable](./#setpeoplevariable)
-  * [setVisitor](./#setvisitor)
-  * [setUserId](./#setuserid)
-  * [clearUserId](./#clearuserid)
-* [验证 SDK 是否正常工作](./#yan-zheng-sdk-shi-fou-zheng-chang-gong-zuo)
-  * [Mobile Debugger](./#1-mobile-debugger)
-  * \*\*\*\*[无埋点事件和自定义事件验证](./#2-wu-mai-dian-shi-jian-he-zi-ding-yi-shi-jian-yan-zheng)
-  * [圈选和热图功能验证](./#3-quan-xuan-he-re-tu-gong-neng-yan-zheng)
+# iOS 无埋点SDK
 
+## **组件化SDK**
 
+GrowingIO iOS SDK2.6.0 包含以下2个组件SDK:
 
-## 集成 SDK 
+•  [GrowingCoreKit](mai-dian-sdk-ji-cheng.md) \(组件基础库,具备分析功能\)
+
+•  GrowingAutoTrackKit \(无埋点库\)
+
+**集成环境**
+
+•  Xcode9.0或更高版本
+
+•   iOS 8及以上
+
+## 无埋点 SDK集成 
 
 在您的 iOS  项目中集成 GrowingIO SDK，使用 GrowingIO 提供的多种工具来分析用户行为。
 
@@ -38,17 +26,15 @@
 
 #### （1）使用 CocoaPods 快速集成
 
-* 添加`pod 'GrowingIO', '~>2.4.5'`到 Podfile 中
+* 添加`pod '`GrowingAutoTrackKit`'`到 Podfile 中
 * 执行`pod update`，不要用`--no-repo-update`选项
 * 直接进行第 2 步 [“设置 URL Scheme”](./#2-she-zhi-url-scheme)
 
 #### （2）手动集成 SDK 
 
-* [下载 2.4.5 版 iOS SDK](https://assets.growingio.com/sdk/GrowingIO-iOS-SDK-2.4.5.zip)
+* 下载 2.6.0 版 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.0-20181106162738.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip)，[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip)
 * 解压 iOS SDK 压缩文件
-* 将 Growing.h 和 libGrowing.a 添加到 iOS 工程
-
-![](https://www.growingio.com/vassets/javascripts/img-3-VLO4K.png)
+*  将Growing.h,GrowingCoreKit.framework,GrowingAutoTrackKit.framework添加到iOS工程中。
 
 {% hint style="warning" %}
 #### **提醒:**  记得勾选 "Copy items if needed"
@@ -71,9 +57,9 @@
 #### 提醒：添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
 {% endhint %}
 
-* 添加编译参数
+* 添加编译参数，并注意大小写：
 
-![](https://www.growingio.com/vassets/javascripts/img-3e3i3Wq.png)
+![](../../.gitbook/assets/image%20%2888%29.png)
 
 ### 2. 设置 URL Scheme
 
@@ -82,7 +68,7 @@
 * 添加新产品：登录官网 -&gt; 点击项目选择框  -&gt; 点击“设置”icon -&gt; 点击“新建应用”  -&gt; 选择添加 iOS 应用 -&gt; 填写“应用名称”，点击下一步 -&gt; 在第二段中标黄字体。
 * 现有产品：登录官网  -&gt;   点击“设置”icon  -&gt;  点击“应用管理”  -&gt;  找到对应产品的 URL Scheme
 
-![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%2866%29.png)
+![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%2869%29.png)
 
 ####    2**.2  添加 URL Scheme（growing.xxxxxxxxxxxxxxxx）到项目中，以便唤醒您的程序进行圈选**
 
@@ -126,7 +112,7 @@
 
 ![&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x9875;&#x9762;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%2810%29.png)
 
-![&#x9879;&#x76EE;ID&#x67E5;&#x770B;](../../.gitbook/assets/image%20%2843%29.png)
+![&#x9879;&#x76EE;ID&#x67E5;&#x770B;](../../.gitbook/assets/image%20%2845%29.png)
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -434,7 +420,7 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | 参数名称 | 限制条件 |
 | :--- | :--- |
 | key | 不能为 nil 或者""，长度小于等于50 |
-| value | 不能为 nil 或者""，若为字符串则长度应大于 0 小于等于 1000 |
+| value | 不能为 nil 或者""，若为字符串则长度应小于等于 1000 |
 | pageLevelVariable | 不能为 nil |
 
 ```objectivec
@@ -471,7 +457,7 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | 参数名称 | 限制条件 |
 | :--- | :--- |
 | key | 不能为 nil 或者""，长度小于等于50 |
-| Value | 变量不为nil或者""，若为字符串则长度应大于 0 小于等于 1000 |
+| Value | 变量不为nil或者""，若为字符串则长度应小于等于 1000 |
 | conversionLevelVariable | 不能为nil |
 
 ```objectivec
@@ -508,7 +494,7 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | 参数名称 | 限制条件 |
 | :--- | :--- |
 | key | 不能为nil或""，长度小于等于50 |
-| value | 变量不为nil或者""，若为字符串则长度应大于 0 小于等于 1000 |
+| value | 变量不为nil或者""，若为字符串则长度应小于等于 1000 |
 | customerVariables | 不能为nil |
 
 ```objectivec
