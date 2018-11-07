@@ -98,9 +98,7 @@ npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 
 #### （2）手动安装
 
-* 获取sdk zip包
-* 解压iOS SDK压缩文件
-* 将`Growing.h` 、`module.modulemap`、`GrowingCoreKit`、`GrowingAutoTrackKit`、`GrowingReactNativeKit`添加到iOS工程
+* 下载 SDK zip包，解压iOS SDK压缩文件，将  `Growing.h` 、  `module.modulemap`、`GrowingCoreKit`、`GrowingAutoTrackKit`、`GrowingReactNativeKit`添加到iOS工程。
 
 | 库名称 | 描述 | 下载 |
 | :--- | :--- | :--- |
@@ -154,9 +152,13 @@ npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 3. 在工程Build Phases ➜ Link Binary With Libraries中添加libGrowingIORNPlugin.a
 {% endhint %}
 
-### 2. [**设置URL Scheme**](../ios-sdk/#2-she-zhi-url-scheme)\*\*\*\*
+### 2. **设置URL Scheme**
 
-### **3.**[**添加初始化函数**](../ios-sdk/#3-chu-shi-hua)\*\*\*\*
+操作步骤和 iOS 原生相同， [传送门](../ios-sdk/#2-she-zhi-url-scheme)。
+
+### **3.添加初始化函数**
+
+操作步骤和 iOS 原生相同，[传送门](../ios-sdk/#2-she-zhi-url-scheme)。
 
 ### **4.重要配置**
 
