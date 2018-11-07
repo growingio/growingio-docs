@@ -52,6 +52,7 @@
   * [微信内嵌页 SDK \(beta\)](sdk-integration/wei-xin-nei-qian-ye-sdk.md)
   * [React Native 无埋点 SDK](sdk-integration/react-native-wu-mai-dian-sdk/README.md)
     * [ReactNative 埋点 SDK](sdk-integration/react-native-wu-mai-dian-sdk/reactnative-mai-dian-sdk.md)
+  * [API Cloud埋点SDK](sdk-integration/api-cloud-mai-dian-sdk.md)
   * [GrowingIO Debugger](sdk-integration/growingio-debugger/README.md)
     * [验证打点事件](sdk-integration/growingio-debugger/best-practice.md)
   * [SDK 更新日志](sdk-integration/changelog-sdk.md)

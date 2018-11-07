@@ -59,7 +59,7 @@ GrowingIO iOS SDK2.6.0 包含以下2个组件SDK:
 
 * 添加编译参数，并注意大小写：
 
-![](../../.gitbook/assets/image%20%2888%29.png)
+![](../../.gitbook/assets/image%20%2889%29.png)
 
 ### 2. 设置 URL Scheme
 
