@@ -6,25 +6,27 @@ description: >-
 
 # IOS埋点SDK
 
-## **1.选择SDK集成方式**
+#### （1）使用CocoaPods 管理依赖
 
-### （1）.使用CocoaPods 管理依赖
+## 埋点 SDK集成 
 
-•   添加pod 'GrowingCoreKit'到Podfile中
+### **1.选择SDK集成方式**
+
+•   添加pod `GrowingCoreKit`到Podfile中
 
 •   执行pod update,不要用--no-repo-update选项
 
-•    **\(optional\)**GrowingIO推荐您添加**AdSupport.framework**依赖库,用于来源管理激活匹配,有利于您更好的分析的数据
+•    **\(可选\)**GrowingIO推荐您添加**`AdSupport.framework`**依赖库，用于来源管理激活匹配，有利于您更好的分析的数据
 
 •   直接进行第2步[“设置 URL Scheme”](./#2-she-zhi-url-scheme)
 
-### （2）手动安装
+#### （2）手动安装
 
 •      下载2.6.0版的IOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.0-20181106162738.zip)，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip)
 
 •      解压iOS SDK压缩文件
 
-•      将Growing.h和GrowingCoreKit.framework添加到iOS工程
+•      将`Growing.h`和`GrowingCoreKit.framework`添加到iOS工程
 
 {% hint style="warning" %}
 #### **提醒:**  记得勾选 "Copy items if needed"
@@ -51,7 +53,7 @@ description: >-
 
 ![](../../.gitbook/assets/image%20%28124%29.png)
 
-## **2.设置URL Scheme**
+### **2.设置URL Scheme**
 
 #### **\(1\) 获取URL Scheme**
 
@@ -96,7 +98,7 @@ description: >-
 * 实际情况可能很复杂，请在调试时确保函数`[Growing handleUrl:]`会被执行到
 {% endhint %}
 
-## **3.添加初始化函数**
+### **3.添加初始化函数**
 
 在AppDelegate 中引入\#import "Growing.h"并添加启动方法
 
@@ -117,7 +119,9 @@ description: >-
 
 至此，您的SDK安装就成功了。
 
-## 4,自定义事件和变量 API  <a id="zi-ding-yi-shi-jian-he-bian-liang-api"></a>
+## 自定义事件和变量 API  <a id="zi-ding-yi-shi-jian-he-bian-liang-api"></a>
+
+
 
       您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](https://docs.growingio.com/docs/~/drafts/-LI499co1_eo3lOYex8t/primary/data-defination/events-metrics/manual-metrics)和[变量](https://docs.growingio.com/docs/~/drafts/-LI499co1_eo3lOYex8t/primary/data-defination/dimensions/manual-dimensions)，下面介绍自定义事件和变量 API 使用方法。
 
@@ -381,7 +385,7 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 [Growing clearUserId];
 ```
 
-## 5,埋点SDK支持的其他接口
+## 埋点SDK支持的其他接口
 
 埋点SDK除了支持上面的打点事件，还支持以接口，接口详情请参考[IOS SDK API](ios-sdk-api.md)中的说明：
 

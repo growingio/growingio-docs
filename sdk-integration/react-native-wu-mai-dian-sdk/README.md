@@ -12,17 +12,19 @@ GitHub Demo ： [https://github.com/growingio/ReactNativeDemo](https://github.co
 * 兼容组件react-navigation 版本在2.6.2及以上
 * 兼容组件react-native-navigation 版本在1.1.486及以上
 
-## Android 
+## Android 集成
 
 ### 1. 预处理 JS 文件
 
 RN无埋点的实现原理是修改用户`React Native`，`React-navigation`， `React-Native-Navigation`的源码。所以需要预先处理`js`文件，[GitHub 开源 JS 脚本](https://github.com/growingio/GIORNHook)。
 
-#### （1）使用命令行进入项目根目录，执行下面操作： 
+#### （1）使用命令行进入项目根目录，执行下面操作（二者任选其一即可）： 
 
 ```bash
-#二者选择其一即可
 npm install --save react-native-autotrack-growingio
+```
+
+```bash
 npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 ```
 
@@ -37,7 +39,7 @@ npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 }
 ```
 
-### 3. 添加 Android 原生依赖
+### 3. 添加 Android 原生 SDK 依赖
 
 React  Native 无埋点 SDK 是在 Android 原生 SDK 上的扩展，参照 [Android 无埋点 SDK](../android-sdk/#ji-cheng-wu-mai-dian-sdk)，集成步骤的 1~5，注意将 SDK 版本号替换成 RN 版本`RN-autotrack-2.6.0` 。
 
@@ -64,7 +66,7 @@ public class MainApplication extends Application implements ReactApplication {
 
 
 
-## iOS
+## iOS 集成
 
 ### 1. 选择集成方式
 
@@ -76,19 +78,21 @@ public class MainApplication extends Application implements ReactApplication {
 4. 添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
 5. 集成`react native`打点`sdk` 
 
-```text
-npm install --save https://github.com/growingio/react-native-growingio.git#develop
+```bash
+npm install --save https://github.com/growingio/react-native-growingio.git#developreact-native link react-native-growingio 
+```
 
+```bash
 react-native link react-native-growingio 
 ```
 
-   6. 集成`js`脚本并执行命令 ，二者任选其一即可
+   6. 集成`js`脚本并执行命令 ，**二者任选其一即可**
 
-```text
-# 通过npmjs
+```bash
 npm install --save react-native-autotrack-growingio
+```
 
-# 直接使用git
+```bash
 npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 ```
 
@@ -98,13 +102,13 @@ npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 
 #### （2）手动安装
 
-* 下载 SDK zip包，解压iOS SDK压缩文件，将  `Growing.h` 、  `module.modulemap`、`GrowingCoreKit`、`GrowingAutoTrackKit`、`GrowingReactNativeKit`添加到iOS工程。
+下载 SDK zip包，解压iOS SDK压缩文件，将  `Growing.h` 、  `module.modulemap`、`GrowingCoreKit`、`GrowingAutoTrackKit`、`GrowingReactNativeKit`添加到iOS工程。
 
 | 库名称 | 描述 | 下载 |
 | :--- | :--- | :--- |
 | `Growing.h` 、`module.modulemap` | 公共头文件 | [下载](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.0-20181106162738.zip) |
 | `GrowingCoreKit` | 基础功能库 | [下载](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip) |
-| `GrowingAutoTrackKit` | 无埋点库 | [下载](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip) |
+| `GrowingAutoTrackKit` | 无埋点库 | [下载](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.6.0-20181106162738.zip) |
 | `GrowingReactNativeKit` | RN 库 | [下载](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-ReactNativeKit-2.6.0-20181106162738.zip) |
 
 * 添加依赖, 在项目中添加以下库文件
@@ -128,19 +132,21 @@ npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 2. 集成`js`脚本并执行命令（如果 Android 做过这个步骤，可以省略）
 3. 集成`react native`打点`sdk` 
 
-```text
+```bash
 npm install --save https://github.com/growingio/react-native-growingio.git#develop
+```
 
+```bash
 react-native link react-native-growingio 
 ```
 
-   6. 集成`js`脚本并执行命令 ，二者任选其一即可
+   6. 集成`js`脚本并执行命令 ，**二者任选其一即可**
 
-```text
-# 通过npmjs
+```bash
 npm install --save react-native-autotrack-growingio
+```
 
-# 直接使用git
+```bash
 npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 ```
 
@@ -271,9 +277,12 @@ NativeModules.GrowingIO.onPageShow("pageName");
 GrowingIOPackage 向 RN 提供了一个 NativeModule ， 所有打点接口都是由其实现，使用方法如下：
 
 ```javascript
+//在使用 GrowingIO 埋点功能的文件中导入 NativeModules
 import {
     NativeModules
   } from 'react-native';
+
+//埋点方法调用示例如下：
 
 //track 设置自定义事件
 NativeModules.GrowingIO.track('testEventId', {'卖家Id': 'xxxxxx', '地点': '北京'});

@@ -12,7 +12,7 @@ description: >-
 
 Gradle编译环境（AndroidStudio）
 
-**\(1\)在module级别的build.gradle文件中添加`vds-android-agent`依赖、项目ID和 URL Scheme**
+**在module级别的build.gradle文件中添加`vds-android-agent`依赖、项目ID和 URL Scheme**
 
 URL Scheme的格式是growing.xxxxxxxxxxxxxxxx，它的获取方式有两种：
 
@@ -24,8 +24,6 @@ URL Scheme的格式是growing.xxxxxxxxxxxxxxxx，它的获取方式有两种：
 您的项目ID获取方式是：点击“设置”icon-&gt;点击“项目配置”-&gt;即可看到您的项目ID
 
 ```groovy
-apply plugin: 'com.android.application'
-
 android {
     defaultConfig {
         resValue("string", "growingio_project_id", "您的项目ID")
@@ -34,7 +32,7 @@ android {
 }
 dependencies {
     //GrowingIO 埋点 SDK
-    compile 'com.growingio.android:vds-android-agent:track-2.6.0@aar'
+    implementation 'com.growingio.android:vds-android-agent:track-2.6.0@aar'
 }
 ```
 
@@ -498,6 +496,8 @@ gio.track("loanAmount", 80000, jsonObject);
 
 ### setEvar
 
+转化变量是一种非常强大的变量类型，主要是为了归因而用，比如访问渠道、站外搜索关键词、站内搜索关键词等等。在 GrowingIO 里面可以定制变量的归因方式和持久性范围。
+
 发送一个转化信息用于高级归因分析，在添加代码之前必须在打点管理界面上声明转化变量。
 
 ```java
@@ -540,7 +540,7 @@ gio.setEvar(JSONObject conversionVariables);
       <td style="text-align:left">
         <p>非空，长度限制小于等于100（<code>conversionVariables.length()&lt;=100</code>）；</p>
         <p><code>conversionVariables</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray</code>；</p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code>长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> 长度限制小于等于50，<code>value</code>长度限制小等于1000。</p>
       </td>
     </tr>
   </tbody>
