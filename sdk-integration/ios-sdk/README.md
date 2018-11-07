@@ -26,13 +26,13 @@ GrowingIO iOS SDK2.6.0 包含以下2个组件SDK:
 
 #### （1）使用 CocoaPods 快速集成
 
-* 添加`pod '`GrowingAutoTrackKit`'`到 Podfile 中
+* 添加`pod 'GrowingAutoTrackKit'`到 Podfile 中
 * 执行`pod update`，不要用`--no-repo-update`选项
 * 直接进行第 2 步 [“设置 URL Scheme”](./#2-she-zhi-url-scheme)
 
 #### （2）手动集成 SDK 
 
-* 下载 2.6.0 版 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.0-20181106162738.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip)，[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip)
+* 下载 2.6.0 版 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.0-20181106162738.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip)，[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.6.0-20181106162738.zip)
 * 解压 iOS SDK 压缩文件
 *  将Growing.h,GrowingCoreKit.framework,GrowingAutoTrackKit.framework添加到iOS工程中。
 
