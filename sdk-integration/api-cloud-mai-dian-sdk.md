@@ -14,7 +14,7 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 • 可选参数: trackerHost, reportHost, dataHost, gtaHost, wsHost, zone
 
-```text
+```markup
 <feature name="GrowingIO">
 <param name="android_accountId" value="xxxxx"/>
 <param name="ios_accountId" value="xxxx"/>
@@ -69,7 +69,7 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
        **此接口为Android初始化， 在require后调用，iOS不需要，iOS已自动初始化**建议在require GrowingIO时调用此接口
 
-```text
+```javascript
  vargio =null;
      apiready=function(){
          gio =api.require('GrowingIO');
@@ -111,7 +111,18 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
       </td>
     </tr>
   </tbody>
-</table>### （3）setEvar\(conversionVariables, callback\)
+</table>调用示例：
+
+```javascript
+var gio = api.require('GrowingIOAPICloudPlugin');  //引用模块
+gio.track({
+            eventId: 'GIOKey'
+        },function(ret, err){
+            //回调函数事件处理
+        });
+```
+
+### （3）setEvar\(conversionVariables, callback\)
 
 <table>
   <thead>
@@ -141,7 +152,18 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
       </td>
     </tr>
   </tbody>
-</table>### （4）setPeopleVariable\(peopleVariables, callback\)
+</table>调用示例：
+
+```javascript
+var gio = api.require('GrowingIOAPICloudPlugin');  //引用模块
+gio.setEvar({
+           "ekey":"evalue","Date":"2018-07-02"
+      },function(ret, err){
+           //回调函数事件处理
+        });
+```
+
+### （4）setPeopleVariable\(peopleVariables, callback\)
 
 <table>
   <thead>
@@ -171,7 +193,18 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
       </td>
     </tr>
   </tbody>
-</table>### （5）setUserId\(userIdObject, callback\)
+</table>调用示例：
+
+```javascript
+var gio = api.require('GrowingIOAPICloudPlugin');  //引用模块
+gio.setPeopleVariable({
+           "ekey":"evalue","Date":"2018-07-02"
+      },function(ret, err){
+            //回调函数事件处理
+        });
+```
+
+### （5）setUserId\(userIdObject, callback\)
 
 <table>
   <thead>
@@ -201,7 +234,18 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
       </td>
     </tr>
   </tbody>
-</table>### （6）clearUserId\(callback\)
+</table>调用示例：
+
+```javascript
+var gio = api.require('GrowingIOAPICloudPlugin');  //引用模块
+  gio.setUserId({
+             "userId":"GIO"
+        },function(ret, err){
+             //回调函数事件处理
+        });
+```
+
+### （6）clearUserId\(callback\)
 
 <table>
   <thead>
@@ -225,7 +269,16 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
       </td>
     </tr>
   </tbody>
-</table>## **6.常见问题**
+</table>调用示例：
+
+```javascript
+var gio = api.require('GrowingIOAPICloudPlugin');  //引用模块
+gio.clearUserId(function(ret, err){
+             //回调函数事件处理
+        });
+```
+
+## **6.常见问题**
 
 ### 1，提示无法检测到urlScheme?
 

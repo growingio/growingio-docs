@@ -78,11 +78,11 @@ GrowingIO 使用IDFA 来做来源管理激活设备的精确匹配，让你更�
 
 调用示例:
 
-```text
+```dart
 import 'package:growingioflutter/growingio_track.dart';
 ```
 
-```text
+```dart
 GrowingIO.track('eventId');
 GrowingIO.track('testEventId', num: 23.0, variable: {'testKey': 'testValue', 'testNumKey': 233});
 GrowingIO.track('eventId', num: 23.0);
@@ -96,11 +96,11 @@ GrowingIO.track('eventId', variable: {'testkey': 'testValue', 'testNumKey': 2333
 
    函数原型为: setEvar\(Map&lt;String, dynamic&gt; variable\), 调用示例:
 
-```text
+```dart
 import 'package:growingioflutter/growingio_track.dart';
 ```
 
-```text
+```dart
 GrowingIO.setEvar({
   'testKey': 'testValue', 'testNumKey': 2333.0
 });
@@ -115,11 +115,11 @@ GrowingIO.setEvar({
 
   调用示例:
 
-```text
+```dart
 import 'package:growingioflutter/growingio_track.dart';
 ```
 
-```text
+```dart
 GrowingIO.setPeopleVariable({
   'testKey': 'testValue', 'testNumKey': 2333.0
 });
@@ -138,11 +138,11 @@ GrowingIO.setPeopleVariable({
 
 调用示例:
 
-```text
+```dart
 import 'package:growingioflutter/growingio_track.dart';
 ```
 
-```text
+```dart
 GrowingIO.setUserId("testUserId");
 
 ```
@@ -155,11 +155,11 @@ GrowingIO.setUserId("testUserId");
 
 调用示例:
 
-```text
+```dart
 import 'package:growingioflutter/growingio_track.dart';
 ```
 
-```text
+```dart
 GrowingIO.clearUserId();
 
 ```
@@ -172,11 +172,11 @@ GrowingIO.clearUserId();
 
 调用示例:
 
-```text
+```dart
 import 'package:growingioflutter/growingio_track.dart';
 ```
 
-```text
+```dart
 GrowingIO.setVisitor({
 	  "visitorKey": 'key', "visitorValue": 34
 	});

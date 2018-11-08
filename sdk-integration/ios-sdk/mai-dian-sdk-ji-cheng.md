@@ -63,14 +63,14 @@ description: >-
 
 #### **\(3\) 在AppDelegate 中添加代码**
 
-```text
+```objectivec
 - (BOOL)application:(UIApplication*)application openURL:(NSURL*)url sourceApplication:(NSString*)sourceApplication annotation:(id)annotation
 {
     if([Growing handleUrl:url]){
-        returnYES;
+        return YES;
     }
     ...
-    returnNO;
+    return NO;
 }
 ```
 
@@ -98,7 +98,7 @@ description: >-
 
 在AppDelegate 中引入\#import "Growing.h"并添加启动方法
 
-```text
+```objectivec
 #import "Growing.h"
 - (BOOL)application:(UIApplication*)application
     didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
@@ -123,7 +123,7 @@ description: >-
 
 SDK 提供多种不同类型的API，请根据您的实际需要正确地调用。
 
-```text
+```objectivec
 // 发送自定义事件 API
 + (void)track:(NSString *)eventId;
 + (void)track:(NSString *)eventId withNumber:(NSNumber *)number;
@@ -175,7 +175,7 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | number | 正整数或浮点数 |
 | eventLevelVariable | 不能为nil |
 
-```text
+```objectivec
 // track API原型
 + (void)track:(NSString *)eventId;
 + (void)track:(NSString *)eventId withNumber:(NSNumber *)number;
@@ -183,17 +183,17 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 + (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
-```text
+```objectivec
 // track API调用示例一
 [Growing track:@"registerSuccess"];
 ```
 
-```text
+```objectivec
 // track API调用示例二
 [Growing track:@"registerSuccess" withVariable:@{@"gender":@"male", @"age":@"21"}];
 ```
 
-```text
+```objectivec
 // track API调用示例三
 [Growing track:@"loanAmount" withNumber:@800000 andVariable:@{@"loanType":@"houseMortgage", @"province":@"Zhejiang"}];
 ```
@@ -385,7 +385,7 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 
 埋点SDK除了支持上面的打点事件，还支持以接口，接口详情请参考[IOS SDK API](ios-sdk-api.md)中的说明：
 
-```text
+```objectivec
 1，如果需要采样设置一个采样值  0.01即1% 0.001即1‰  最多支持小数点后5位
 + (void)startWithAccountId:(NSString*)accountId withAppId:(NSString*)appId withSampling:(CGFloat)sampling;
 + (void)startWithAccountId:(NSString*)accountId withSampling:(CGFloat)sampling;
