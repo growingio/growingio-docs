@@ -614,7 +614,7 @@ GrowingIO 会采集发送两种类型的事件，在不做特殊设置的前提�
 
 ### 1. Mobile Debugger
 
-Mobile Debugger 详细介绍，请参考文档[《GrowingIO Debugger》](https://growingio.gitbook.io/docs/~/edit/drafts/-LI499co1_eo3lOYex8t/sdk-integration/growingio-debugger#growingio-mobile-debugger)，以下简要操作步骤主要用于验证SDK 是否正常工作。
+Mobile Debugger 详细介绍，请参考文档 [GrowingIO Debugger](../growingio-debugger/) ，以下简要操作步骤主要用于验证SDK 是否正常工作。
 
 1. 登录官网 ---&gt; 点击项目选择框 ---&gt; 点击 "项目管理" ---&gt; 选择 "Mobile Debugger"
 2. 按照官网说明，启动 Mobile Debugger
