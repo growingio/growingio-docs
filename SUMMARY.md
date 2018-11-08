@@ -56,6 +56,7 @@
   * [Flutter埋点SDK](sdk-integration/flutter-mai-dian-sdk.md)
   * [Cordova 埋点 SDK](sdk-integration/cordova-mai-dian-sdk.md)
   * [Weex 埋点 SDK](sdk-integration/weex-mai-dian-sdk.md)
+  * [Hybrid 用户集成文档](sdk-integration/hybrid-yong-hu-ji-cheng-wen-dang.md)
   * [GrowingIO Debugger](sdk-integration/growingio-debugger/README.md)
     * [验证打点事件](sdk-integration/growingio-debugger/best-practice.md)
   * [SDK 更新日志](sdk-integration/changelog-sdk.md)
