@@ -1,16 +1,23 @@
 # SDK 更新日志
 
+### 2018年11月8日
+
+Android，iOS 2.6.0
+
+1. 发布 React Native 无埋点 SDK
+2. 发布 API Cloud、Cordova、Flutter、React Native 、Weex、Hybrid 、AppCan 埋点 SDK
+
 ### 2018年10月23日
 
 IOS 2.4.5
 
-1,修复vstr发送地址错误
+修复vstr发送地址错误
 
 ### 2018年10月13日
 
 Android 2.4.5
 
-1. 适配 Android build gradle plugin 3.2.1
+适配 Android build gradle plugin 3.2.1
 
 ### 2018年9月21日
 

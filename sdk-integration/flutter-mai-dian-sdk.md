@@ -2,7 +2,7 @@
 description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容数据
 ---
 
-# Flutter埋点SDK
+# Flutter 埋点 SDK
 
 ## Flutter插件集成
 

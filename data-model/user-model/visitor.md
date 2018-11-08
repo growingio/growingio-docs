@@ -23,7 +23,7 @@ GrowingIO会按照下面的顺序获取访问用户ID：
 3. IDFV
 4. 随机GUID
 
-并将之存储至keychain中
+并将之存储至keychain中。
 
 ### Android SDK
 
@@ -33,7 +33,7 @@ GrowingIO会按照如下顺序获取访问用户ID：
 2. IMEI
 3. 随机UUID
 
-并将之存储至设备本地文件系统
+进行 MD5 加密后将之存储至设备本地文件系统。
 
 ### 小程序 SDK
 

@@ -47,7 +47,7 @@ description: >-
 
   添加编译参数，注意大小写:
 
-![](../../.gitbook/assets/image%20%28124%29.png)
+![](../../.gitbook/assets/image%20%28128%29.png)
 
 ### **2.设置URL Scheme**
 
@@ -57,7 +57,7 @@ description: >-
 
 •   现有产品：登录官网-&gt; 点击项目选择框-&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 找到对应产品的URL Scheme
 
-![](../../.gitbook/assets/image%20%28115%29.png)
+![](../../.gitbook/assets/image%20%28119%29.png)
 
 #### **\(2\) 添加URL Scheme（growing.xxxxxxxxxxxxxxxx）到项目中**
 

@@ -1,8 +1,8 @@
 ---
-description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容数据
+description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容。
 ---
 
-# API Cloud埋点SDK
+# API Cloud埋点 SDK
 
 ## **1.配置Config.xml文件** 
 
@@ -47,7 +47,7 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
   开发控制台-&gt; 选择应用-&gt; 模块-&gt; 自定义模块-&gt; 点击上传-&gt; 编写自定义模块信息\(注意:模块名称要和zip包名称一致\)-&gt; 点击添加模块"+" -&gt; 在已添加模块中确认是否成功添加。
 
-![](../.gitbook/assets/image%20%28109%29.png)
+![](../.gitbook/assets/image%20%28113%29.png)
 
 ## **4.Android的额外操作**
 
@@ -57,11 +57,11 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 （1）模块-自定义loader: 请勾选 **使用升级环境编译**
 
-![](../.gitbook/assets/image%20%28135%29.png)
+![](../.gitbook/assets/image%20%28139%29.png)
 
 （2）云编译时， 请勾选 **使用升级环境编译**
 
-![](../.gitbook/assets/image%20%28141%29.png)
+![](../.gitbook/assets/image%20%28145%29.png)
 
 ## **5.插件支持的方法**
 
