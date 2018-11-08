@@ -67,7 +67,7 @@ pod update
 
 ### **2.重要配置**
 
-与原生混合开发的开发者可详细查看[ iOS 无埋点 重要配置](ios-sdk/#zhong-yao-pei-zhi)文档，如果原生控件使用不多，只需关注如下配置即可：
+与原生混合开发的开发者可详细查看[ 重要配置](ios-sdk/#zhong-yao-pei-zhi)文档，如果原生控件使用不多，只需关注如下配置即可：
 
 * \*\*\*\*[**App Store 提交应用注意事项**](ios-sdk/#zai-app-store-ti-jiao-ying-yong)\*\*\*\*
 

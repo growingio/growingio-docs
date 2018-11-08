@@ -34,7 +34,7 @@ GrowingIO iOS SDK2.6.0 包含以下2个组件SDK:
 
 * 下载 2.6.0 版 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.0-20181106162738.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip)，[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.6.0-20181106162738.zip)
 * 解压 iOS SDK 压缩文件
-*  将Growing.h,GrowingCoreKit.framework,GrowingAutoTrackKit.framework添加到iOS工程中。
+*  将`Growing.h`，`GrowingCoreKit.framework`，`GrowingAutoTrackKit.framework`添加到iOS工程中。
 
 {% hint style="warning" %}
 #### **提醒:**  记得勾选 "Copy items if needed"
