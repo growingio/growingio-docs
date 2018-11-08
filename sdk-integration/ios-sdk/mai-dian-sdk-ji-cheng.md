@@ -10,23 +10,19 @@ description: >-
 
 ## 埋点 SDK集成 
 
-### **1.选择SDK集成方式**
+### 1. 选择集成方式
 
-•   添加pod `GrowingCoreKit`到Podfile中
+#### （1）使用 CocoaPods 快速集成
 
-•   执行pod update,不要用--no-repo-update选项
+* 添加`pod 'GrowingCoreKit'`到 Podfile 中
+* 执行`pod update`，不要用`--no-repo-update`选项
+* 直接进行第 2 步 “[设置 URL Scheme](mai-dian-sdk-ji-cheng.md#2-she-zhi-url-scheme)”
 
-•    **\(可选\)**GrowingIO推荐您添加**`AdSupport.framework`**依赖库，用于来源管理激活匹配，有利于您更好的分析的数据
+#### （2）手动集成 SDK 
 
-•   直接进行第2步[“设置 URL Scheme”](./#2-she-zhi-url-scheme)
-
-#### （2）手动安装
-
-•      下载2.6.0版的IOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.0-20181106162738.zip)，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip)
-
-•      解压iOS SDK压缩文件
-
-•      将`Growing.h`和`GrowingCoreKit.framework`添加到iOS工程
+* 下载 2.6.0 版 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.0-20181106162738.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip)
+* 解压 iOS SDK 压缩文件
+*  将Growing.h,GrowingCoreKit.framework添加到iOS工程中。
 
 {% hint style="warning" %}
 #### **提醒:**  记得勾选 "Copy items if needed"
