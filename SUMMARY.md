@@ -22,7 +22,7 @@
 * [看板](dashboard/README.md)
   * [自定义首页](dashboard/homepage.md)
   * [概览看板](dashboard/overview.md)
-  * [小程序概览](dashboard/mina-overview.md)
+  * [小程序预置看板](dashboard/mina-overview.md)
   * [实时看板](dashboard/realtime.md)
   * [业务场景](dashboard/templates.md)
 * [广告监测](ads-tracking/README.md)
