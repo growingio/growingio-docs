@@ -59,7 +59,27 @@ public class MainApplication extends Application implements ReactApplication {
 
 React  Native 埋点 SDK 是在 iOS 原生 SDK 上的扩展，请参照 [iOS 埋点 SDK 集成步骤 1~3 ](../ios-sdk/mai-dian-sdk-ji-cheng.md#mai-dian-sdk-ji-cheng)，操作完全一致。
 
-### **2.重要配置**
+### 2. 集成 React Native 打点 SDK
+
+```bash
+npm install --save https://github.com/growingio/react-native-growingio.git#0.0.5
+```
+
+```bash
+react-native link react-native-growingio 
+```
+
+{% hint style="info" %}
+如果`react-native link react-native-growingio`失败
+
+（成功则忽略此步骤），即发现`Libraries`中没有`GrowingIORNPlugin.xcodeproj`，则可手动配置：
+
+1. 打开 XCode 工程中, 右键点击 Libraries 文件夹 ➜ Add Files to &lt;...&gt; 
+2. 去 `node_modules`  ➜ `react-native-growingio` ➜ iOS ➜ 选择 `GrowingIORNPlugin.xcodeproj` 
+3. 在工程`Build Phases` ➜ `Link Binary With Libraries`中添加`libGrowingIORNPlugin.a`
+{% endhint %}
+
+### **3. 重要配置**
 
 与原生混合开发的开发者可详细查看[ iOS 无埋点 重要配置](../ios-sdk/#zhong-yao-pei-zhi)文档，如果原生控件使用不多，只需关注如下配置即可：
 

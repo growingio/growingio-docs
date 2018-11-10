@@ -120,14 +120,16 @@ gio('hybridClearUserId');
 
 ```javascript
 //调用示例
-gio.hybridSetVisitor({'testkey': 'testValue', 'testNumKey': 2333});
+gio('hybridSetVisitor',{'testkey': 'testValue', 'testNumKey': 2333});
 ```
 
 {% hint style="warning" %}
 注：如果无法进行H5页面与原生应用联调的情况下可手动在head标签中加入以下代码，上线时删除即可
-
- &lt;script src="https://assets.growingio.com/sdk/hybrid/2.0/gio\_hybrid.min.js"&gt;&lt;/script&gt; 
 {% endhint %}
 
-## 
+```markup
+ <script src="https://assets.growingio.com/sdk/hybrid/2.0/gio_hybrid.min.js"></script> 
+```
+
+
 
