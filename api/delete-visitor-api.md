@@ -29,7 +29,7 @@ application/json
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Access-Token" type="string" required=true %}
-Access Token
+public key，GrowingIO分配的公钥
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -59,6 +59,32 @@ user id
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+Body由多个visitUserId组成，一次性最多上传 100 条，大小最大限制为 2M。示例如下：
+
+```javascript
+{
+  "visitUserId":["abcdef","bcdefg",...]
+}
+```
+
+#### 认证
+
+为防止误传和恶意攻击， GrowingIO 服务器会对收到的每条数据做校验，因此需要在 query 参数中提供校验码 auth。校验码生成代码见下方示例，其中 keyArray 为 visitUserId，一次性上传多条时，使用逗号隔开，如上方示例中，keyArray为`abcdef,bcdefg` 。
+
+> Java
+
+```java
+public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {
+    String message = "projectId="+projectKeyId+"&visitUserId="+keyArray;
+    Mac hmac = Mac.getInstance("HmacSHA256");
+    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));
+    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
+    return Hex.encodeHexString(signature);
+}
+```
+
+> 其他语言可以参考[用户变量上传 API](user-property-upload.md#2-ren-zheng)
 
 #### 特别说明
 

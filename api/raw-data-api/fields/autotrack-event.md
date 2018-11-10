@@ -41,7 +41,10 @@
 | pageRequestId | id | string\(23\) | 页面请求ID（page request id） | 1521010820647fa5a9314e6 | GrowingIO系统内部用于标识一个唯一的页面请求的ID |
 | vstRequestId | visit\_id | string\(16\) | 访问请求ID（visit request id） | c7db72a5841506bd | GrowingIO系统内部用于标识一个访问请求的ID |
 
+> page数据注意事项
 
+`customerAttributes(cs)`和`pageAttributes(ps)` 只有当使用SDK1.0的时候才会有数据。  
+若您使用的是SDK2.0，需要使用导出API2.0接口才能下载[页面属性](custom.md#pvar-zi-ding-yi-ye-mian-bian-liang)，且用户属性不提供下载。
 
 ## vst——访问事件
 
