@@ -39,9 +39,9 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 ## **2.下载模块zip包**
 
-  iOS模块包：[下载](https://github.com/growingio/APICloud-growingio/blob/develop/iOS/iOS/GrowingIO_iOS.zip)
+  iOS模块包：[下载](https://github.com/growingio/APICloud-growingio/blob/master/iOS/iOS/GrowingIO_iOS.zip)
 
-  Android模块包：[下载](https://github.com/growingio/APICloud-growingio/blob/develop/android/GrowingIO.zip)
+  Android模块包：[下载](https://github.com/growingio/APICloud-growingio/blob/master/android/GrowingIO.zip)
 
 ## **3.添加模块**
 

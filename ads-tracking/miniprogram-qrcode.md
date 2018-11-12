@@ -55,7 +55,7 @@ description: 小程序利用二维码、小程序码进行推广时，可以在G
 
 
 
-**注意**：GrowingIO调用A和C接口生成小程序码和小程序二维码，腾讯支持调用A\C接口共生成10w个码。具体的生成接口、生成限制、以及开发者文档，请参考如下链接：[https://developers.weixin.qq.com/miniprogram/dev/api/qrcode.html](https://developers.weixin.qq.com/miniprogram/dev/api/qrcode.html)
+**注意**：GrowingIO调用A和C接口生成小程序码和小程序二维码，腾讯支持调用A\C接口共生成10w个码。具体的生成接口、生成限制、以及开发者文档，请参考如下链接：[https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/qr-code.html](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/qr-code.html)
 
 ## 其他功能说明
 
