@@ -22,6 +22,8 @@ GrowingIO采集的是微信默认分享功能，即转发小程序到一个好�
 
 点击“获客管理——&gt; 分享分析”，进入分享分析页面。
 
+GrowingIO会默认帮您统计转发事件，即分享用户量和分享次数，但是如果想要统计到“**转发分享带来的用户”**，则需要先配置SDK中的分享参数，具体信息可以[查看上一节内容。](xiao-cheng-xu-fen-xiang-fen-xi.md#fen-xiang-fen-xi-sdk-dai-ma-pei-zhi)
+
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LMpSdtEh4eMNiVNv7Y6%2F-LMpSfykZzx7IehHdxX6%2Fimage.png?alt=media&token=c618205f-7830-4afb-8267-23c0de74d540)
 
 ### 功能介绍&指标释义 <a id="gong-neng-jie-shao-zhi-biao-shi-yi"></a>
