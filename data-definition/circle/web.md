@@ -208,7 +208,7 @@ GrowingIO 互联网金融解决方案落地页 **https://www.growingio.com**​*
 
 ### 1.3 插件圈选
 
-GrowingIO 开发了支持 web 圈选的 Chrome 插件：
+GrowingIO 开发了支持 web 圈选的 Chrome 插件，最新版本为1.2.4，请使用最新版本：
 
 插件下载地址 [https://s.growingio.com/5EoKZl](https://s.growingio.com/5EoKZl)  
   

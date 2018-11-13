@@ -8,9 +8,9 @@ GitHub Demo ： [https://github.com/growingio/ReactNativeDemo](https://github.co
 
 ## 支持版本
 
-* 兼容react native版本:0.46-0.56
-* 兼容组件react-navigation 版本在2.6.2及以上
-* 兼容组件react-native-navigation 版本在1.1.486及以上
+* 兼容 react native 版本：0.46-0.56
+* 兼容组件 react-navigation 版本：2.6.2及以上
+* 兼容组件 react-native-navigation 版本：1.1.486及以上
 
 ## 集成
 
@@ -104,9 +104,7 @@ react-native link react-native-growingio
 
 
 
-
-
-## 手动采集页面
+## 页面识别
 
 由于RN应用的页面切换并不遵循原生的生命周期， 需要单独适配， 目前在 React Native 页面中我们只支持`react-navigation`， `react-native-navigation`作为导航器, 并且为了拓展性， 留下了手动的page接口， 开发者可自行适配（[直接更改 hook.js 脚本](https://github.com/growingio/GIORNHook)）。
 
@@ -114,9 +112,13 @@ react-native link react-native-growingio
 
 如果使用react-navigation， 我们的hook脚本进行了自动适配, 默认的page名称为其key值。 用户可以自行设置， 如下代码：
 
-```text
+```javascript
 this.props.navigation.setParams({growingPagePath: 'xx'});
 ```
+
+{% hint style="info" %}
+采集原理参照 [react-navigation 的 screen tracking](https://reactnavigation.org/docs/en/screen-tracking.html)，目前仅兼容 [`Listening to State Changes`](https://reactnavigation.org/docs/en/screen-tracking.html#listening-to-state-changes)方式，如果用户使用 Redux ，请结合官网的 [`Screen tracking with Redux` ](https://reactnavigation.org/docs/en/screen-tracking.html#screen-tracking-with-redux)和 [Page 设置 API](./#3-page-she-zhi-api) 采集页面。
+{% endhint %}
 
 ### 2.  **react-native-navigation**
 
@@ -125,7 +127,7 @@ this.props.navigation.setParams({growingPagePath: 'xx'});
 
 用户可以设置自定义`title`, 只需要设置`growingPagePath`字段， 该字段与`title`同级即可.
 
-### **3 其他**
+### **3. Page 设置 API**
 
 如果SDK目前支持的路由方案不能满足您的需求， SDK留下拓展接口， 您需要在您认为页面发生切换时， 将最新的page名称告诉我们。 调用方法如下：
 
