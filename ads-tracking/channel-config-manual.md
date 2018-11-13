@@ -35,21 +35,13 @@
 
 1.填写广点通后台投放账号（qq号）
 
-![](https://lh6.googleusercontent.com/312MVunewEmtEUatmLR76HGph02_LIaBDdtLOA0iBes9qrBu2FNtPDRbGZTkkl7wChkhGizzFli808XrRC8BDrFDk0zA8I7la0nyVQOnSHqocI6vdlMteILChnqPv0KwKauuPN0X)
-
 2.填写投放账号id
 
 地址：e.qq.com
 
-![](https://lh5.googleusercontent.com/oL32LztcZoCk31uMuUlkdds_hZ0YUbSgw_KmZv34SXwmpjfKoEeITUwYRtKy9M7tBVCTS2VKpEtf3qBB1q9Zt1xDW5vnhYWEyWdV_TgUhWoPth7U6EV_O0BvRhjbO6nAAqJsvHb9)
-
 3.进行授权认证
 
-![](https://lh6.googleusercontent.com/S85gFId4JYGU9sjj0hZxbQfa1zXSnMB-heWUXTzEqPpLZV54XOdto2MuED6Z9EpTdlYoXcAi5q1zbaP-oEBysbrZdmnTvJ__qqO9G5rl007EKtWGID-XT_j-0aL_asPMbVaDy0VM)
-
 4.填写应用id（Android为应用宝应用id，iOS为苹果应用id）
-
-![](https://lh4.googleusercontent.com/Tl24U_It8aDyQXnQ7eed_acMzI8M0A-j53y1Gg9yWMVCEDet6PS9XLhqKNaUupmjHfM55nOT-kam-RCT3VnrTawF-CBFcqD7AhjYGxDS-D3A_NrrcepVqt8QoFq9SYClxTBfCz6z)
 
 5.保存并联调测试
 
@@ -67,6 +59,10 @@ f.输入联调设备进行联调
 
 g.联调成功后，启用转化状态
 
+![](../.gitbook/assets/image%20%28151%29.png)
+
+![](../.gitbook/assets/image%20%2838%29.png)
+
 ### 3. 爱奇艺 <a id="33"></a>
 
 1. 在GIO后台生成一条目标渠道为“爱奇艺”的监测链接。
@@ -78,41 +74,25 @@ g.联调成功后，启用转化状态
 
 1.在GIO后台生成百度原生信息流监测链接后，进入百度推广后台：[https://www2.baidu.com](https://www2.baidu.com)
 
- 2.进入后台后选择“数据中心”
-
-![](https://lh3.googleusercontent.com/dsTdgXzFovIzhb04vFZ9rSeaelw9jg0r2YyY-MtsqyGgHeDsdwlibxRI93GxQwqZ83Wm8TNqsiVoo_JPSszLzv9DJV1Gz_385JsNxPfeyOTjJSslQmdchcVzr7nH7ilBDWUp7xAu)
+2.进入后台后选择“数据中心”
 
 3.进入数据中心后选择“信息流推广”
 
-![](https://lh4.googleusercontent.com/5L1SLuNv_2_bPMvl-Y4Lg7GTci6ANhxI6B718creLjn1kiA04_iLTsrZvDyvn-C2fuGmU8fG12VTd5wz5eTPr_A18XZPC1i9wsogeHL5m9bkDHDwq99Y5WvdrtbHmNIHCpMzBCnw)
-
 4.在“工具中心”里面选择“转化追踪工具”，然后点击“新建转化”
-
-![](https://lh6.googleusercontent.com/wKAwoZHxzJhE8NfpHQUj56Q8dRoj37veZ2--0ocpyVyguHeqV5xuPpZ_lSrkMWxOKW4u6tE0LwjNLo1IH6uiCuowfv43SkvD8aDo3hDLXbfWYZ5ilL8BCIfy1lc6xleUq-QqQsTp)
 
 5.选择“应用下载”
 
-![](https://lh3.googleusercontent.com/_a3YZ2dJmlO0XF0mcNOQJbbuKHtnGR4O4A15hA4Ax9E20XlDx33vOmcT1-cdJJMdKkfh2cIWv2TTvcyUO1gJDOxBoZDgpnpDd7KXlrhvn9HYH_meWpEvEGzG3RFssO8jn4gDf9H-)
+6.进入该页面后把GIO生成的百度信息流的链接填写到“监测地址”，里面将该页面的“akey值“”填写到GIO后
 
-6.进入该页面后把GIO生成的百度信息流的链接填写到“监测地址”，里面将该页面的“akey值“”填写到GIO后台
-
-![](https://lh4.googleusercontent.com/BPw7FK9ZncOKikNRx0LgGTIr8s47LajFyhJIz-1JFla0si7gkCnbQh5cI7IoMp77iFzk8lMZBezemMxHdFbuOYMja9XmOcr9Da7_HpdZweJTVNL_PWykTIxMH7bfmcOhxspGoNX_)
-
-  
-****7.点击提交后，手机下载“百度推广APP”，在手机上用百度推广APP扫描图片上的二维码下载您的APP进行联调  
-****
-
-![](https://lh4.googleusercontent.com/VeFB9NEP6JONFsYkKywu1jBS6KvezE6kicHNbypEg207y5vzm52hAmNtnKi0v2uwC55e_vYEwh9qH4p3bk77KGSCBiP9jmy9p9C6WIiQwTKct7AYc5zC5yKNsYE0QoXfo5iOU4iM)
-
-
+7.点击提交后，手机下载“百度推广APP”，在手机上用百度推广APP扫描图片上的二维码下载您的APP进行联调
 
 8.下载完，打开后APP点击下一步
 
-![](https://lh3.googleusercontent.com/HmHwrY9L7aEx7C2IpQpztIL_Kkx22x-lcmptJHSaCGq5EFetQm6tq6cx1n4LouzNxgUM_RkHiViEfFQxZbVwP1iVdT8SuuWwZzBRHYF-fOsdqAwKe4oIIxBMcbSJOkcg5HmHRO8q)
-
 9.联调成功
 
-![](https://lh6.googleusercontent.com/79d5flDHKw0Lswcc56fC2pyDfX2UNbc-k1PfRAHgr9NFVLQ3wazVkeWpebBAwCCVaRHUqJvnHj75KbtAmSXFuc35D2ao1q_CAHYvItmjhADu14lWouTfORjGQWvEIKZkaaeystCo)
+![](../.gitbook/assets/image%20%2856%29.png)
+
+![](../.gitbook/assets/image%20%2863%29.png)
 
 ### 5. Inmobi <a id="35"></a>
 
