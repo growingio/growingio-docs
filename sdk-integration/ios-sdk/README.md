@@ -374,13 +374,32 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 
 **参数限制条件：**
 
-| 参数名称 | 限制条件 |
-| :--- | :--- |
-| eventId | 英文数字组合的字符串，不能为 nil 或者""，长度小于等于50，且不能含有特殊字符 |
-| number | 正整数或浮点数 |
-| eventLevelVariable | 不能为 nil |
-
-```objectivec
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">限制条件</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">eventId</td>
+      <td style="text-align:left">英文数字组合的字符串，不能为 nil 或者""，长度小于等于50，且不能含有特殊字符</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">number</td>
+      <td style="text-align:left">正整数或浮点数</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">eventLevelVariable</td>
+      <td style="text-align:left">
+        <p>不能为 nil；<code>eventLevelVariable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        </p>
+        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>```objectivec
 // track API原型
 + (void)track:(NSString *)eventId;
 + (void)track:(NSString *)eventId withNumber:(NSNumber *)number;
@@ -417,13 +436,32 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 
 **参数限制条件：**
 
-| 参数名称 | 限制条件 |
-| :--- | :--- |
-| key | 不能为 nil 或者""，长度小于等于50 |
-| value | 不能为 nil 或者""，若为字符串则长度应小于等于 1000 |
-| pageLevelVariable | 不能为 nil |
-
-```objectivec
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">限制条件</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">key</td>
+      <td style="text-align:left">不能为 nil 或者""，长度小于等于50</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">value</td>
+      <td style="text-align:left">不能为 nil 或者""，若为字符串则长度应小于等于 1000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">pageLevelVariable</td>
+      <td style="text-align:left">
+        <p>不能为 nil；<code>pageLevelVariable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        </p>
+        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>```objectivec
 // setPageVariable API原型
 + (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;
 + (void)setPageVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue toViewController:(UIViewController *)viewController;
@@ -454,13 +492,32 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 
 **参数限制条件：**
 
-| 参数名称 | 限制条件 |
-| :--- | :--- |
-| key | 不能为 nil 或者""，长度小于等于50 |
-| Value | 变量不为nil或者""，若为字符串则长度应小于等于 1000 |
-| conversionLevelVariable | 不能为nil |
-
-```objectivec
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">限制条件</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">key</td>
+      <td style="text-align:left">不能为 nil 或者""，长度小于等于50</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Value</td>
+      <td style="text-align:left">变量不为nil或者""，若为字符串则长度应小于等于 1000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">conversionLevelVariable</td>
+      <td style="text-align:left">
+        <p>不能为nil；<code>conversinoLevelVariable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        </p>
+        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>```objectivec
 // setEvar API原型
 + (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
 + (void)setEvarWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
@@ -491,13 +548,32 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 
 **参数限制条件：**
 
-| 参数名称 | 限制条件 |
-| :--- | :--- |
-| key | 不能为nil或""，长度小于等于50 |
-| value | 变量不为nil或者""，若为字符串则长度应小于等于 1000 |
-| customerVariables | 不能为nil |
-
-```objectivec
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">限制条件</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">key</td>
+      <td style="text-align:left">不能为nil或""，长度小于等于50</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">value</td>
+      <td style="text-align:left">变量不为nil或者""，若为字符串则长度应小于等于 1000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">customerVariables</td>
+      <td style="text-align:left">
+        <p>不能为nil；<code>customerVariables</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        </p>
+        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>```objectivec
 // setPeopleVariable API原型
 + (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
 + (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
@@ -528,11 +604,24 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 
 **参数限制条件：**
 
-| 参数名称 | 限制条件 |
-| :--- | :--- |
-| variable | 不能为`nil` |
-
-```objectivec
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">参数名称</th>
+      <th style="text-align:left">限制条件</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">variable</td>
+      <td style="text-align:left">
+        <p>不能为<code>nil&#xFF1B;variable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        </p>
+        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>```objectivec
 // setVisitor 访问用户变量 API原型
 + (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
