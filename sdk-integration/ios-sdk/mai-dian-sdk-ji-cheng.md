@@ -96,7 +96,7 @@ description: >-
 
 ### **3.添加初始化函数**
 
-在AppDelegate 中引入\#import "Growing.h"并添加启动方法
+在AppDelegate 中引入`#import "Growing.h"`并添加启动方法
 
 ```objectivec
 #import "Growing.h"
