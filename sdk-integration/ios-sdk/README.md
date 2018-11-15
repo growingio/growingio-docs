@@ -324,7 +324,7 @@ GrowingIO 使用 IDFA 来做来源管理激活设备的精确匹配，让你更�
 
 ## 自定义事件和变量 API 
 
-您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](/docs/~/drafts/-LI499co1_eo3lOYex8t/primary/data-defination/events-metrics/manual-metrics)和[变量](/docs/~/drafts/-LI499co1_eo3lOYex8t/primary/data-defination/dimensions/manual-dimensions)，下面介绍自定义事件和变量 API 使用方法。
+您的APP或网页在集成了 GrowingIO 的 SDK 之后，它将会自动地为您采集一系列用户行为数据，并在 GrowingIO 分析后台供您制成数据分析报表。除上述的用户行为数据（或称为无埋点数据）之外，GrowingIO 还提供了多种 API 接口，供您上传一些[自定义事件](../../data-definition/custom-event/)和[变量](../../data-definition/custom-event/event-variable.md)，下面介绍自定义事件和变量 API 使用方法。
 
 SDK 提供多种不同类型的API，请根据您的实际需要正确地调用。
 

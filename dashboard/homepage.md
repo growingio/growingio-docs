@@ -5,7 +5,7 @@ description: 最重要的信息，打开首页就可以看到
 # 自定义首页
 
 * [1.简介](homepage.md#1)
-  * [1.1 首页](homepage.md#1-1-shou-ye-jian-jie)
+  * [1.1 首页](homepage.md#11-shou-ye)
   * [1.2 功能](homepage.md#1-2)
 * [2.常见问题](homepage.md#2-chang-jian-wen-ti)
 
