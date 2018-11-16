@@ -65,7 +65,7 @@
 | sendTime | sendTime | bigint | 发送时间（send time） | 1520899221211 | 请求在SDK发送的时间戳 |
 | ip | ip | string\(15\) | IP地址（ip address） | 127.0.0.1 | IP地址（ip address） |
 | userAgent | userAgent | string\(512\) | User Agent，例如浏览器信息或者移动设备信息 | Mozilla/5.0 \(Linux; Android 6.0; V9 Build/MRA58K; wv\) AppleWebKit/537.36 \(KHTML |  |
-| operatingSystem | （新加） | string\(3\) | 操作系统（operating system） | iOS / Android |  |
+| operatingSystem | （新加） | string\(30\) | 操作系统（operating system） | iOS / Android |  |
 | operatingSystemVersion | osVersion\(新旧不同\) | string\(50\) | 操作系统版本（operating system version） | iOS 11.0.1 /Android 6.0.1 |  |
 | clientVersion | appVersion\(新旧不同\) | string\(20\) | 客户的产品版本，仅限移动端 | 1.0 |  |
 | channel | channel | string\(40\) | app的下载渠道，仅限移动端 | App Store |  |
@@ -76,7 +76,7 @@
 | latitude | lat\(新旧不同\) | double | 地理位置维度（latitude） | 29.43982 | 精确到小数点后5位 |
 | longitude | lng\(新旧不同\) | double | 地理位置经度（longitude） | 29.43982 | 精确到小数点后5位 |
 | vstRequestId | visit\_id | string\(16\) | GrowingIO系统访问请求内部ID（internal visit id） | c7db72a5841506bd | GrowingIO系统内部用于标识一个访问请求的ID |
-| idfa | （新加） | string\(16\) | idfa\(identifier for advertising\) | A075A0F9-32D2-4671-A78D-144B6B7D2920 | 苹果系统用于监测广告的ID |
+| idfa | （新加） | string\(40\) | idfa\(identifier for advertising\) | A075A0F9-32D2-4671-A78D-144B6B7D2920 | 苹果系统用于监测广告的ID |
 | androidId | （新加） | string\(16\) | androidId | 6284760c2926bcd5 | 安卓系统的一个ID |
 | IMEI | （新加） | string\(16\) | IMEI（International Mobile Equipment Identity） | 867459000000000 | 国际移动设备识别码 |
 
