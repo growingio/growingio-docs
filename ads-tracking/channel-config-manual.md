@@ -60,9 +60,9 @@ f.输入联调设备进行联调
 
 g.联调成功后，启用转化状态
 
-![](../.gitbook/assets/image%20%28151%29.png)
+![](../.gitbook/assets/image%20%28161%29.png)
 
-![](../.gitbook/assets/image%20%2838%29.png)
+![](../.gitbook/assets/image%20%2841%29.png)
 
 ### 3. 爱奇艺 <a id="33"></a>
 
@@ -91,9 +91,9 @@ g.联调成功后，启用转化状态
 
 9.联调成功
 
-![](../.gitbook/assets/image%20%2856%29.png)
+![](../.gitbook/assets/image%20%2859%29.png)
 
-![](../.gitbook/assets/image%20%2863%29.png)
+![](../.gitbook/assets/image%20%2866%29.png)
 
 ### 5. Inmobi <a id="35"></a>
 
@@ -129,7 +129,7 @@ g.联调成功后，启用转化状态
 
 1、在GIO后台创建Normal—Link链接，目标渠道选择“腾讯社交广告”，然后点击保存
 
-![](https://lh5.googleusercontent.com/I0oCmGEqQ_0eqwj0rJUhgMgyp5jBkhAFeyZFwpWo1flpBs3-ryLOCiVZL6O3zFstApmOyvu1YLefeCOtvqtSSRfXBlsEqhFx8P57xC3JensPZ5SENvs_M-He3rhAoFPizFrl501P)
+![](../.gitbook/assets/image%20%28129%29.png)
 
 2、点击保存后进入绑定与授权，
 
@@ -140,42 +140,42 @@ g.联调成功后，启用转化状态
 3）应用ID：填写您选取应用的对应ID，示例：IOS填写Appstore地址上面的数字。  
 
 
-![](https://lh4.googleusercontent.com/7fcLyjr_AdMpVa0vWC81G24a37XorqWP1h3KigUGxFkdg5sqjHEpB9rwidwwI0Ok8t_7U29dPVNU-LvooQP1G8UoS_j1wnTgU_PHh44-JflPRmFODuxPab4VVtBPtMdz_ek08qbu)
+![](../.gitbook/assets/image%20%2884%29.png)
 
 其中，“投放账号”和“投放账号ID”，与广点通后台相对应。
 
 获取方式如下：
 
-![](https://lh6.googleusercontent.com/Ba2_Vc8w-eQeqSEmzqM0bST5PX-FfrsZ3iHYXT0KuLFcwGQtTZIGpczT-Rt7e0gb1OQHS9lAPun7p3501TaJOieD90EZD4gkbGFGmUIUlijtIQIHYV5Rs-dvaRFZKsFdtTrpDhw9)
+![](../.gitbook/assets/image%20%28150%29.png)
 
 应用标识，请与广点通后台填写的“应用宝ID”或“苹果商店ID”保持一致。
 
 * 图示为苹果商店ID获取方式。
 
-![](https://lh6.googleusercontent.com/hRWXOEiPQ65Ucf4lCKyg2WMedcNmaf-r8l5d8BQQbM9pnRJBtnZKJcKM2TldTBNx6fuVqw5OJI3UmLhDPRQ5pA67-b2yI2ABQVdIW43CqaG5YB0HUjQ4ggzj9SKlfBtlSorlUklU)
+![](../.gitbook/assets/image%20%2823%29.png)
 
 3、点击授权之后再这里进行同意授权，同事返回GIO后台获取监测链接  
 
 
-![](https://lh4.googleusercontent.com/UUBDECbpmQK9nWqXIl4xe5Qjlb93nGtEMUsU0CGcbiutgeQMr9NuHHyNEjZWPQcWhyO-3p2V6MlD9J2yOYISNrRy9sBEbw_NYQHzN2ib5tXH6mMWpGNDs9_eD76ZYB7VL92W5c7K)
+![](../.gitbook/assets/image%20%28120%29.png)
 
 4、进入腾讯社交广告后台开始联调，在工具箱里面选择“转化跟踪”。
 
-![](https://lh3.googleusercontent.com/tRmS9y7u8m71TVnVetgzr5FooQpwawQ-FQhjgkmHG6Aj68Cuw0ptGWB2_U9f9Et_oPLefiTmLPV7OBQzVyI734cJC8rn7wAcubTm07O6WfWpMQxNp4zfE5sIHVF7C38CJ7coZ5JB)
+![](../.gitbook/assets/image%20%2880%29.png)
 
 5、点击“获取点击数据”，按照图示在移动应用上填写应用ID，在feedback URL上填写GIO生成的监测链接。
 
-![](https://lh4.googleusercontent.com/ehLYWZ1ooEAromThqCHdK4eSr7CdsjRZPETiEmwoFen66CGSo4Yjd_VQR9AufGudDBelV2SscwlZcnKQn6utaVotAG0F75EKfSXPneVKSmsGfgLa6asrEYZ8WKhRua3DXKUimYty)
+![](../.gitbook/assets/image%20%2818%29.png)
 
 6、开始联调。
 
-![](https://lh4.googleusercontent.com/i355SVQZ2eKfbj2qrR9W0aMfg_SlrK_6q1iNwfNXwm1waCv17WSABw4tX4EZX_DQHqjU_PU7I4MiwsvE5LW9EpmkSJXleyYbP1z9JEHDS-aLloIG1e7OCsASisN6lXiMqJVK60Dv)
+![](../.gitbook/assets/image%20%2817%29.png)
 
 7、填写对应的设备号。
 
-![](https://lh4.googleusercontent.com/wRBza5eAus6W1WbFrgB0xDssbh9qNaU-t-seFExhlG4wylutJCHwEpNnQFpGb2LPPCHLqid_Xtv5DFE7z6SP9sZBZ_BPIEr6XCjqOCJPw9angnxYYQ9Qg-xtTRwKpIsODiFgLpbu)
+![](../.gitbook/assets/image%20%2878%29.png)
 
 8、联调成功，去Appstore或者应用宝下载您的APP。
 
-![](https://lh3.googleusercontent.com/XNNheXsZDlMaTlXszGC7MR8tIkZBFI8WLNnC-AhwT19BmUuHIkUS6fmGCrzUPmIVW9QIThgvJrHVl3iHnQgBWboE6rBo347l40fG9vnfdUhLX3kar75LEfYQlMrLi0uH7B5pSUSm)
+![](../.gitbook/assets/image%20%2881%29.png)
 

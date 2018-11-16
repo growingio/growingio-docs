@@ -59,7 +59,7 @@ GrowingIO iOS SDK2.6.0 包含以下2个组件SDK:
 
 * 添加编译参数，并注意大小写：
 
-![](../../.gitbook/assets/image%20%2896%29.png)
+![](../../.gitbook/assets/image%20%28103%29.png)
 
 ### 2. 设置 URL Scheme
 
@@ -68,7 +68,7 @@ GrowingIO iOS SDK2.6.0 包含以下2个组件SDK:
 * 添加新产品：登录官网 -&gt; 点击项目选择框  -&gt; 点击“设置”icon -&gt; 点击“新建应用”  -&gt; 选择添加 iOS 应用 -&gt; 填写“应用名称”，点击下一步 -&gt; 在第二段中标黄字体。
 * 现有产品：登录官网  -&gt;   点击“设置”icon  -&gt;  点击“应用管理”  -&gt;  找到对应产品的 URL Scheme
 
-![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%2876%29.png)
+![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%2882%29.png)
 
 ####    2**.2  添加 URL Scheme（growing.xxxxxxxxxxxxxxxx）到项目中，以便唤醒您的程序进行圈选**
 
@@ -112,7 +112,7 @@ GrowingIO iOS SDK2.6.0 包含以下2个组件SDK:
 
 ![&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x9875;&#x9762;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%2810%29.png)
 
-![&#x9879;&#x76EE;ID&#x67E5;&#x770B;](../../.gitbook/assets/image%20%2847%29.png)
+![&#x9879;&#x76EE;ID&#x67E5;&#x770B;](../../.gitbook/assets/image%20%2850%29.png)
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
