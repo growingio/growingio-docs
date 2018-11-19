@@ -62,7 +62,7 @@ React  Native 埋点 SDK 是在 iOS 原生 SDK 上的扩展，请参照 [iOS 埋
 ### 2. 集成 React Native 打点 SDK
 
 ```bash
-npm install --save https://github.com/growingio/react-native-growingio.git#0.0.5
+npm install --save https://github.com/growingio/react-native-growingio.git#0.0.6
 ```
 
 ```bash

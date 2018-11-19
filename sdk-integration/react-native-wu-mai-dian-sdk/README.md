@@ -79,7 +79,7 @@ public class MainApplication extends Application implements ReactApplication {
 ### 2. 集成 React Native 打点 SDK
 
 ```bash
-npm install --save https://github.com/growingio/react-native-growingio.git#0.0.5
+npm install --save https://github.com/growingio/react-native-growingio.git#0.0.6
 ```
 
 ```bash
