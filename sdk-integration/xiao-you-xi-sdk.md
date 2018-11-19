@@ -35,7 +35,7 @@
 下载 gio-ming.js 文件
 
 ```text
-$ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
+curl --compressed https://assets.growingio.com/gio-ming.js -o gio-ming.js
 ```
 
 当下载到 gio-ming.js 文件以后，把文件放在微信小游戏项目里，比如 utils 目录下。下面会假设 SDK 文件放在 utils 目录下。
