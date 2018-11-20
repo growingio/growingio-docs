@@ -13,6 +13,15 @@
 
 当前 GrowingIO 访问用户变量支持 Web、APP、微信小程序等平台；
 
+* [​](../../sdk-integration/web-js-sdk/web-js-sdk-api.md#16-she-zhi-fang-wen-yong-hu-ji-bian-liang-visitorset)JS SDK：v2.1.17及以上版本（web debugger需要升级到v1.1.1）
+* Android Native SDK：v2.4.0及以上版本
+* iOS Native SDK：v2.4.0及以上版本
+* 小程序SDK：始终支持
+
+
+
+
+
 ## 访问用户简介
 
 访问用户是 GrowingIO 对访问您的应用（包括网页、App、微信小程序等，下同）的用户的一种识别机制。每一个访问您的应用的用户都会在对应的设备中生成并记录一个唯一的ID，我们称之为访问用户ID。
