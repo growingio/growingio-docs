@@ -92,7 +92,7 @@
       * [合并简单指标](data-definition/circle/metric-management/combine.md)
       * [复合指标](data-definition/circle/metric-management/complex.md)
   * [埋点事件](data-definition/custom-event/README.md)
-    * [埋点事件变量](data-definition/custom-event/event-variable.md)
+    * [埋点事件级变量](data-definition/custom-event/event-variable.md)
     * [转化变量](data-definition/custom-event/convert-variable.md)
 * [系统配置](configuration/README.md)
   * [项目管理](configuration/project-configuration.md)

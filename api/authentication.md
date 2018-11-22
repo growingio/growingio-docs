@@ -4,16 +4,16 @@
 * [2.认证](authentication.md#authentication)
 * [3.API 定义](authentication.md#api-definition)
 
-### 1.术语 <a id="terminology"></a>
+### 1. 术语 <a id="terminology"></a>
 
-* **公钥（** **X-Client-Id）**: GrowingIO 分配的项目公钥，请求时用来做身份校验的一串字符码，请在项目配置页面获取
-* **私钥**: 双方所约定的加密算法的私钥
-* **ai**: 项目ID，可在项目配置中获得，也是集成 SDK 时 setAccountId 所用的部分。
-* **project**: 项目UID，访问项目的时候，页面 URL 以 `/projects/:project_uid` 开头，例如 `https://www.growingio.com/admin/projects/nxog09md/dashboard`中的`nxog09md`。
+* **公钥（** **X-Client-Id）：**GrowingIO 分配的项目公钥，请求时用来做身份校验的一串字符码，您可以在 GrowingIO 后台点击右上角齿轮处进入【项目配置】页面中获取。
+* **私钥：**双方所约定的加密算法的私钥，您可以在 GrowingIO 后台点击右上角齿轮处进入【项目配置】页面中获取。
+* **ai：**项目 ID，您可以在 GrowingIO 后台点击右上角齿轮处进入【项目配置】页面中获取。项目 ID 也是集成 SDK 时 setAccountId 所用的部分。
+* **project**: 项目 UID，访问项目的时候，页面 URL 以 `/projects/:project_uid` 开头，例如 `https://www.growingio.com/admin/projects/nxog09md/dashboard`中的`nxog09md`。
 * **auth**: 通过认证算法计算出来的签名，见第二部分示例代码
 * **tm**: 当前请求时间戳（unix 毫秒时间戳\)
 
-### 2.认证 <a id="authentication"></a>
+### 2. 认证 <a id="authentication"></a>
 
 ```text
 ____________                  ___________    (ai/project/auth)   _____________
@@ -31,7 +31,7 @@ GrowingIO 会给每个项目分配个公钥\(X-Client-Id\)和私钥。具体认�
 * 用户打开客户页面，会向 Client Server 发起一个请求
 * Client Server 在渲染页面时，会向 Growing Server 做认证请求，请求参数包括 ai, project 和 auth，头部参数包含 公钥（X-Client-Id ）。
 
-### 3.API定义
+### 3. API 定义
 
 #### Resource
 
@@ -49,13 +49,13 @@ POST `https://www.growingio.com/auth/token`
 
 | 名字 | 类型 | 描述 | 示例 |
 | :--- | :--- | :--- | :--- |
-| ai | String | 项目ID | 2a1b4018cd954ec2bcc69da5138bdb96 |
-| project | String | 项目UID | 123abc |
+| ai | String | 项目 ID | 2a1b4018cd954ec2bcc69da5138bdb96 |
+| project | String | 项目 UID | 123abc |
 | tm | Long | 申请时间戳 | 1465020309123 |
 | auth | String | 加密签名 | ab3i5dazoo58314l0qqrj1aslfj1ldfaqeroqi |
 
 {% hint style="info" %}
-Post body采用raw格式上传而不是key-value键值对方式上传。如：project=123abc&ai=2a1b4018cd954ec2bcc69da5138bdb96&tm=1465020309123&auth=ab3i5dazoo58314l0qqrj1aslfj1ldfaqeroqi
+Post body 采用 raw 格式上传而不是 key-value 键值对方式上传。如：project=123abc&ai=2a1b4018cd954ec2bcc69da5138bdb96&tm=1465020309123&auth=ab3i5dazoo58314l0qqrj1aslfj1ldfaqeroqi
 {% endhint %}
 
 #### Response <a id="response"></a>
@@ -67,7 +67,7 @@ Post body采用raw格式上传而不是key-value键值对方式上传。如：pr
    }
 ```
 
-#### Auth计算示例代码
+#### Auth 计算示例代码
 
 Java 版本示例代码
 
@@ -101,7 +101,7 @@ def authToken(secret: String, project: String, ai: String, tm: Long) = {
 authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
 ```
 
-PHP版本示例代码
+PHP 版本示例代码
 
 ```text
 <?php
