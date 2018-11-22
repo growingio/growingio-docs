@@ -344,6 +344,18 @@ confirm 事件是对于 input 和 textarea 控件，当输入完成后触发的�
 
 当用户输入完成后，因为这里指定了 `data-growing-track` 属性，所以会采集到输入的内容。
 
+#### 使用了navigator组件
+
+如果您的小程序使用了navigator组件，需要您手动绑定一个空的点击事GrowingIO才能实现跳转点击的采集。
+
+```text
+<navigator ...>
+  <view bindtap="nameForThisClickButton">
+     ...
+  </view>
+</navigator>
+```
+
 ## 自定义事件和变量
 
 ### 预置自定义事件
