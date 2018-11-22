@@ -120,7 +120,7 @@ gio('hybridClearUserId');
 
 ```javascript
 //调用示例
-gio.hybridSetVisitor({'testkey': 'testValue', 'testNumKey': 2333});
+gio('hybridSetVisitor',{'testkey': 'testValue', 'testNumKey': 2333});
 ```
 
 {% hint style="warning" %}
