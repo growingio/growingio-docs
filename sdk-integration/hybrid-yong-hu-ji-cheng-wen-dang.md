@@ -6,6 +6,8 @@
 Hybrid JS SDK
 2.如果h5页面已经集成过 Web JS SDK ，但不想进行Web JS SDK 的采集时，
 请将window.webViewRequestSend的值为 false。 
+3. hybrid 已经支持 tap 等基于touch事件 实现的点击的采集, SDK默认不采集tap ,
+如果用户需要采集需要在初始化时配置 window.hybridEnableTouch的值为true
 ```
 {% endhint %}
 

@@ -12,6 +12,10 @@ GitHub Demo ： [https://github.com/growingio/ReactNativeDemo](https://github.co
 * 兼容组件 react-navigation 版本：2.6.2及以上
 * 兼容组件 react-native-navigation 版本：1.1.486及以上
 
+{% hint style="info" %}
+如果没有使用react-navigation或者react-native-navigation作为导航,请仔细阅读 [Page设置API](./#3-page-she-zhi-api)。
+{% endhint %}
+
 ## 集成
 
 ### 预处理 JS 文件
@@ -72,9 +76,25 @@ public class MainApplication extends Application implements ReactApplication {
 
 ## iOS 集成
 
-### 1. 添加 iOS 无埋点 SDK 依赖
+### **1. 选择SDK集成方式**
 
-参照[ iOS 无埋点 SDK ](../ios-sdk/#wu-mai-dian-sdk-ji-cheng)集成， 操作步骤一致。
+一.使用 CocoaPods 管理依赖
+
+1. 添加`pod 'GrowingReactNativeKit'`到Podfile中
+2. 执行`pod update`,不要用`--no-repo-update`选项
+3. **\(optional\)** GrowingIO推荐您添加**AdSupport.framework**依赖库,用于来源管理激活匹配,有利于您更好的分析的数据
+
+* 添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
+
+二.手动安装
+
+1. 获取 [GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0.zip)、[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0.zip)、[GrowingReactNativeKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-ReactNativeKit-2.6.0.zip)、[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.0.zip)包
+2. 解压上述 iOS SDK 压缩文件
+3. 将 Growing.h 、module.modulemap 和 GrowingCoreKit.framework、GrowingAutoTrackKit.framework、GrowingReactNativeKit.framework
+
+   添加到iOS工程
+
+其余参照[ iOS 无埋点 SDK ](../ios-sdk/#wu-mai-dian-sdk-ji-cheng)集成，操作步骤一致。
 
 ### 2. 集成 React Native 打点 SDK
 
