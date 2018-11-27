@@ -34,9 +34,10 @@ description: 目前微信内嵌页 SDK 属于内测beta版本，如有需求，�
 
 将以下深色区域内的 JS 代码复制到您所需分析页面中的 **&lt;head&gt;** 和 **&lt;/head&gt;** 标签之间即可。安装成功后，除 localhost 和 IP 地址外，所有网址下的行为数据都将会被收集。
 
-```text
+```javascript
 <script type="text/javascript">
       !function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.growingio.com/gio-wxwv.js","gio");
+      // ‘你的appid’为选填项，如果你的微信内嵌页应用有微信分配的appid，建议填写；如果没有，可以留空。
       gio('init', '你的项目ID', '你的 appid', { debug: false });
       gio('send');
 </script>
@@ -66,6 +67,45 @@ GrowingIO默认不会把 hashtag 识别成页面 URL 的一部分。对于使用
 //如果内嵌页存在微信App_id，建议您填写相应的微信App_id,如果没有，就不用填写
 gio('init', '你的项目ID'[,'微信App_id'], {'setImp':'false', hashtag: true });
 ```
+
+### SDK 微信用户ID 和 用户属性 <a id="sdk-wei-xin-yong-hu-shu-xing-she-zhi"></a>
+
+作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在小程序中，微信用户属性是非常重要的设置，只有完善了微信用户属性信息，微信的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用户微信相关的信息（微信姓名和头像）定位用户。
+
+下面是专门针对用户的两个个接口。
+
+#### 绑定微信用户ID <a id="bang-ding-wei-xin-yong-hu-id"></a>
+
+当用户在你的微信内嵌页上授权获取到 openid 后，可以用过 `identify` 接口绑定微信用户ID，后续在 GrowingIO 中使用微信ID创建用户分群。示例代码如下，
+
+```text
+wx.request({ 
+  url: 'https://YOUR_HOST_NAME/wechat/code2key',
+  method: 'GET',
+  data: { code: res.code }
+  success: res => 
+    var openid = res.data.openid;
+    var unionid = res.data.unionid;
+    ...
+    gio('identify', res.data.openid, res.data.unionid)
+})
+```
+
+#### 设置微信用户信息 <a id="she-zhi-wei-xin-yong-hu-xin-xi"></a>
+
+当用户在你的微信内嵌页上绑定微信信息后，可以通过 `setVisitor` 接口设置微信用户信息，后续在 GrowingIO 中，使用访问用户变量分析这个数据。示例代码如下，
+
+```text
+wx.getUserInfo({ 
+  success: res => 
+    ...
+    gio('setVisitor', res.userInfo);
+})
+```
+
+微信信息包含**微信昵称**、**微信头像**、**性别、微信所填国家、微信所填省份、微信所填城市**。
+
+![](../.gitbook/assets/image%20%28119%29.png)
 
 ### 登录用户ID <a id="deng-lu-yong-hu-id"></a>
 
