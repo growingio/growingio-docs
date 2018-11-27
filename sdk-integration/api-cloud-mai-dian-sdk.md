@@ -47,6 +47,10 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
   开发控制台-&gt; 选择应用-&gt; 模块-&gt; 自定义模块-&gt; 点击上传-&gt; 编写自定义模块信息\(注意:模块名称要和zip包名称一致\)-&gt; 点击添加模块"+" -&gt; 在已添加模块中确认是否成功添加。
 
+{% hint style="warning" %}
+注意：在自动定义模块中上传了压缩包，保存成功后。一定要点击添加模块后面的“+”，否则不是真正添加成功。添加成功后，去已添加模块中能看到刚刚添加的模块。
+{% endhint %}
+
 ![](../.gitbook/assets/image%20%28127%29.png)
 
 ## **4.Android的额外操作**
@@ -114,7 +118,7 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 </table>调用示例：
 
 ```javascript
-var gio = api.require('GrowingIOAPICloudPlugin');  //引用模块
+var gio = api.require('GrowingIO');  //引用模块
 gio.track({
             eventId: 'GIOKey'
         },function(ret, err){
@@ -155,7 +159,7 @@ gio.track({
 </table>调用示例：
 
 ```javascript
-var gio = api.require('GrowingIOAPICloudPlugin');  //引用模块
+var gio = api.require('GrowingIO');  //引用模块
 gio.setEvar({
            "ekey":"evalue","Date":"2018-07-02"
       },function(ret, err){
@@ -196,7 +200,7 @@ gio.setEvar({
 </table>调用示例：
 
 ```javascript
-var gio = api.require('GrowingIOAPICloudPlugin');  //引用模块
+var gio = api.require('GrowingIO');  //引用模块
 gio.setPeopleVariable({
            "ekey":"evalue","Date":"2018-07-02"
       },function(ret, err){
@@ -237,7 +241,7 @@ gio.setPeopleVariable({
 </table>调用示例：
 
 ```javascript
-var gio = api.require('GrowingIOAPICloudPlugin');  //引用模块
+var gio = api.require('GrowingIO');  //引用模块
   gio.setUserId({
              "userId":"GIO"
         },function(ret, err){
@@ -272,7 +276,7 @@ var gio = api.require('GrowingIOAPICloudPlugin');  //引用模块
 </table>调用示例：
 
 ```javascript
-var gio = api.require('GrowingIOAPICloudPlugin');  //引用模块
+var gio = api.require('GrowingIO');  //引用模块
 gio.clearUserId(function(ret, err){
              //回调函数事件处理
         });
