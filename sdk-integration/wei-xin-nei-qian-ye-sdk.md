@@ -10,11 +10,9 @@ description: 目前微信内嵌页 SDK 属于内测beta版本，如有需求，�
 
 如果你还未注册 GrowingIO，请[点击链接访问注册页面](https://accounts.growingio.com/signup?utm_source=docs&utm_content=minp)，完成注册后你会看到使用引导，点击“**添加跟踪代码**“即可开始。
 
-如果你已经注册 GrowingIO，使用小程序分析功能需要用一个全新的项目，在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“**项目概览**“。在项目概览页面，点击“**新建项目**“来创建一个新项目。在创建好的新项目里，你会看到使用引导，点击“**添加跟踪代码**“即可开始。项目概览![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyRLnN1UW6BL8O3mEr%2F-LGySTNxnseL1EsH7kN8%2Fimage.png?alt=media&token=91d05ea5-95d4-4104-b228-0f1837d5201b)
+如果你已有在使用的项目，要在一个新项目中集成微信内嵌页应用，在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“**项目概览**“。在项目概览页面，点击“**新建项目**“来创建一个新项目。在创建好的新项目里，你会看到使用引导，点击“**添加跟踪代码**“即可开始。
 
-​
-
-在代码集成页面，选择“**小程序**“平台，输入**应用名称**和**小程序 AppID**，点击下一步。
+​在代码集成页面，选择“微信内嵌页“平台，输入**应用名称**，点击下一步。
 
 ### 在项目中接入一个新的微信内嵌页应用 <a id="zai-xiang-mu-zhong-jie-ru-yi-ge-xin-de-wei-xin-nei-qian-ye-ying-yong"></a>
 
@@ -22,13 +20,13 @@ description: 目前微信内嵌页 SDK 属于内测beta版本，如有需求，�
 
 ​![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LH3J3bJm8y879FZ1E7G%2F-LH3KSslW7JKLy4bb98K%2Fimage.png?alt=media&token=04f949af-bbb1-49f5-98e2-c212022a9c1d)​
 
-然后会到达SDK集成页面，填写小程序的应用名称，点击“下一步”，即可以到达微信内嵌页SDK接入的页面。
+然后会到达SDK集成页面，填写微信内嵌页的应用名称，点击“下一步”，即可以到达微信内嵌页SDK接入的页面。
 
 目前暂不支持微信内嵌页产品和web\iOS\Android端产品集成在同一项目下，微信端的产品可以集成在同一项目下。
 
-如果需要集成其他端产品，或者需要在已有web/iOS/Andoird产品集成的情况下，集成小程序产品，请创建新的项目。
+如果需要集成其他端产品，或者需要在已有web/iOS/Andoird产品集成的情况下，集成微信内嵌页产品，请创建新的项目。
 
-请按照以下步骤进行 WeChat SDK 安装
+请按照以下步骤进行 WeChat SDK 安装。
 
 ## 微信内嵌页 SDK标准接入 <a id="wei-xin-nei-qian-ye-sdk-biao-zhun-jie-ru"></a>
 
@@ -70,7 +68,7 @@ gio('init', '你的项目ID'[,'微信App_id'], {'setImp':'false', hashtag: true 
 
 ### SDK 微信用户ID 和 用户属性 <a id="sdk-wei-xin-yong-hu-shu-xing-she-zhi"></a>
 
-作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在小程序中，微信用户属性是非常重要的设置，只有完善了微信用户属性信息，微信的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用户微信相关的信息（微信姓名和头像）定位用户。
+作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在微信内嵌页中，微信用户属性是非常重要的设置，只有完善了微信用户属性信息，微信的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用户微信相关的信息（微信姓名和头像）定位用户。
 
 下面是专门针对用户的两个个接口。
 
