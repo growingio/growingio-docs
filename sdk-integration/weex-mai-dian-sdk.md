@@ -10,6 +10,16 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 
 
+## 注意
+
+{% hint style="danger" %}
+**不建议圈选 Weex 实现的界面，请使用**[**自定义事件和变量**](weex-mai-dian-sdk.md#zi-ding-yi-shi-jian-he-bian-liang-api)**发送您需要的数据。**
+
+在同时集成原生无埋点 SDK 和 Weex 埋点 SDK 时， Weex 实现的界面可以圈选， 但是因为本身获取不到元素点击和页面访问事件，所以圈选结果不准确， 只有元素浏览量是真实的，如果想统计相关数据，请使用[自定义事件和变量](weex-mai-dian-sdk.md#zi-ding-yi-shi-jian-he-bian-liang-api)发送您需要的数据。
+{% endhint %}
+
+
+
 ## Android 集成
 
 ###  1.添加 Android 原生 SDK 依赖
