@@ -2,9 +2,11 @@
 
 {% hint style="info" %}
 ```
-1.Hybrid项目只需集成原生SDK即可，原生SDK会自动在webview加载的页面中注入Hybrid JS SDK。
-2.如果h5页面已经集成过Web JS SDK ，但不想进行Web JS SDK 的采集时，请将window.webViewRequestSend的值为false。 
-3.hybrid支持基于touch事件实现的点击的数据采集,如果用户使用了类似Zepto等三方框架，需要采集tap事件时，请在初始化时配置window.hybridEnableTouch的值为true。
+Hybrid项目只需集成原生SDK即可，原生SDK会自动在WebView加载的页面中注入Hybrid JS SDK。
+如果h5页面已经集成过Web JS SDK，但不想进行Web JS SDK 的采集时，请将
+window.webViewRequestSend的值为false。Hybrid支持基于touch事件实现的点击数据采集,
+如果用户使用了类似Zepto等三方框架，需要采集tap事件时，请在初始化时配置
+window.hybridEnableTouch的值为true。
 ```
 {% endhint %}
 
