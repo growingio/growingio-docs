@@ -1,12 +1,11 @@
 ---
 description: >-
-  GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容数据，对比无埋点 SDK ，埋点 SDK 会少很多 API， 请勿在埋点 SDK
-  中调用无埋点 SDK 接口。
+  埋点 SDK 的目标用户是使用第三方插件开发的 APP， 比如使用 Weex、APICloud
+  等。在这些平台中，我们无法自动采集用户的点击事件和页面浏览事件等，需要依赖调用自定义事件和变量 API来进行数据采集。 如果您的 APP 使用
+  Android 原生开发，并且希望自动采集用户的点击事件、页面浏览事件等无埋点事件， 请集成 iOS 无埋点SDK 。
 ---
 
 # IOS埋点SDK
-
-#### （1）使用CocoaPods 管理依赖
 
 ## 埋点 SDK集成 
 
@@ -471,6 +470,10 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 ```
 
 ## 埋点SDK支持的其他接口
+
+{% hint style="danger" %}
+**GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容数据，对比无埋点 SDK ，埋点 SDK 少很多 API， 请勿在埋点 SDK 中调用无埋点 SDK 接口。**
+{% endhint %}
 
 埋点SDK除了支持上面的打点事件，还支持以接口，接口详情请参考[IOS SDK API](ios-sdk-api.md)中的说明：
 

@@ -1,5 +1,7 @@
 ---
-description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容数据。
+description: >-
+  GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容数据，如果想自动采集用户点击事件或者页面访问事件等， 请集成 ReactNative 无埋点
+  SDK。
 ---
 
 # ReactNative 埋点 SDK
