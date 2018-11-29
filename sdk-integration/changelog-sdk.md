@@ -1,5 +1,17 @@
 # SDK 更新日志
 
+### 2018年11月29日
+
+Android 2.6.3
+
+1. 修复客户调用`WebView`的`setWebChromeClient`， 传参为`new WebChromeClient()` 时导致内嵌 H5 页面无法圈选。
+2. 支持采集通知的点击与展现。
+
+iOS 2.6.3
+
+1. 修复多个`ViewController` 滑动切换时，没有识别导致用户页面访问事件数据错误。
+2. 支持采集通知的点击。
+
 ### 2018年11月24日
 
 Android 2.6.2
