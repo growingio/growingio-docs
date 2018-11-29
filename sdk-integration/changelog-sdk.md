@@ -5,7 +5,7 @@
 Android 2.6.3
 
 1. 修复客户调用`WebView`的`setWebChromeClient`， 传参为`new WebChromeClient()` 时导致内嵌 H5 页面无法圈选。
-2. 支持采集通知的点击与展现。
+2. 支持[采集通知 Notification](android-sdk/#cai-ji-tong-zhi-notification)的点击与展现。
 
 iOS 2.6.3
 

@@ -247,6 +247,11 @@ description: >-
       <td style="text-align:left">无</td>
       <td style="text-align:left">设置 GDPR 失效</td>
     </tr>
+    <tr>
+      <td style="text-align:left">disablePushTrack</td>
+      <td style="text-align:left">Yes</td>
+      <td style="text-align:left">设置是否采集push推送点击，默认不采集</td>
+    </tr>
   </tbody>
 </table>### ​ 自定义事件和变量API 
 
