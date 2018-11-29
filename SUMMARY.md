@@ -10,7 +10,7 @@
   * [用户分群](data-analytics/user-segmentation.md)
   * [用户细查](data-analytics/individual-user-report.md)
   * [漏斗分析](data-analytics/funnel-analysis.md)
-  * [活动分析](data-analytics/huo-dong-fen-xi.md)
+  * [活动分析](data-analytics/activity-analysis.md)
   * [智能路径](data-analytics/pathfinder.md)
   * [留存分析](data-analytics/retention-analysis.md)
   * [留存魔法师](data-analytics/magic-number.md)
