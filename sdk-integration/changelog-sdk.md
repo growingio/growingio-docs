@@ -10,7 +10,7 @@ Android 2.6.3
 iOS 2.6.3
 
 1. 修复多个`ViewController` 滑动切换时，没有识别导致用户页面访问事件数据错误。
-2. 支持采集通知的点击。
+2. 支持[采集通知](ios-sdk/#push-tui-song-dian-ji-cai-ji)的点击。
 
 ### 2018年11月24日
 
