@@ -119,6 +119,29 @@ title: "试试我的小游戏"
 )
 ```
 
+#### \*\*如果您希望采用微信的原生接口，那么需要在分享触发事件上做这样的配置操作，这样GrowingIO才能采集到分享的数据。
+
+```javascript
+//设置follwShare
+gio('init', '', '', { version: '1.0', debug: true, followShare: true});
+
+//分享，监听用户点击右上角菜单的“转发”按钮时触发的事件
+//调用 pageShareInfo 发送分享事件以及处理分享追踪信息
+wx.onShareAppMessage(function () {
+  var obj = {
+    title: "试试我的小游戏"
+  }
+  obj = gio('pageShareInfo', obj);
+  return obj;
+})
+
+//分享，主动拉起转发，进入选择通讯录界面
+//调用 pageShareInfo 发送分享事件以及处理分享追踪信息
+obj = gio('pageShareInfo', obj);
+wx.shareAppMessage(obj)
+
+```
+
 ### SDK 微信用户属性设置 <a id="sdk-wei-xin-yong-hu-shu-xing-she-zhi"></a>
 
 作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在小程序中，微信用户属性是非常重要的设置，只有完善了微信用户属性信息，微信的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用户微信相关的信息（微信姓名和头像）定位用户。
