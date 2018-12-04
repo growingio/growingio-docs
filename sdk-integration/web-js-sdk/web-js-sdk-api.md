@@ -5,13 +5,13 @@
   * [1.2 初始化 \(init\)​​](web-js-sdk-api.md#12-chu-shi-hua-init)
   * [1.3 设置登录用户id \(setUserId\)​​](web-js-sdk-api.md#13-she-zhi-deng-lu-yong-hu-idsetuserid)
   * [1.4 清除登录用户id \(clearUserId\)​​](web-js-sdk-api.md#14-qing-chu-deng-lu-yong-hu-idclearuserid)
-  * [1.5 设置登录用户级变量（people.set）](web-js-sdk-api.md#15-she-zhi-yong-hu-ji-bian-liang-peopleset)​
+  * [1.5 设置登录用户级变量（people.set）​](web-js-sdk-api.md#15-she-zhi-deng-lu-yong-hu-ji-bian-liang-peopleset)
   * [1.6 设置访问用户级变量（visitor.set）](web-js-sdk-api.md#16-she-zhi-fang-wen-yong-hu-ji-bian-liang-visitorset)
-  * [1.7 设置页面级变量（page.set）​](web-js-sdk-api.md#16-she-zhi-ye-mian-ji-bian-liang-pageset)
-  * [1.8 设置转化变量（evar.set）​](web-js-sdk-api.md#17-she-zhi-zhuan-hua-bian-liang-evarset)
-  * [1.9 设置自定义事件和事件级变量（track）​](web-js-sdk-api.md#18-she-zhi-zi-ding-yi-shi-jian-he-shi-jian-ji-bian-liang-track)
-  * [1.10 手动发送页面浏览事件 \(sendPage\)​​](web-js-sdk-api.md#19-shou-dong-fa-song-ye-mian-lan-shi-jian-sendpage-sendpage)
-  * [1.11 GDPR 数据采集开关](web-js-sdk-api.md#110-gdpr-shu-ju-cai-ji-kai-guan)
+  * [1.7 设置页面级变量（page.set）​](web-js-sdk-api.md#17-she-zhi-ye-mian-ji-bian-liang-pageset)
+  * [1.8 设置转化变量（evar.set）​](web-js-sdk-api.md#18-she-zhi-zhuan-hua-bian-liang-evarset)
+  * [1.9 设置自定义事件和事件级变量（track）](web-js-sdk-api.md#19-she-zhi-zi-ding-yi-shi-jian-he-shi-jian-ji-bian-liang-track)​
+  * [1.10 手动发送页面浏览事件 \(sendPage\)​​](web-js-sdk-api.md#110-shou-dong-fa-song-ye-mian-lan-shi-jian-sendpage-sendpage)
+  * [1.11 GDPR 数据采集开关](web-js-sdk-api.md#111-gdpr-shu-ju-cai-ji-kai-guan)
 * [旧版 Web JS SDK \(1.x\) API](web-js-sdk-api.md#2-jiu-ban-web-js-sdk-1-x-api)
 
 ### 1.1 API 简介
