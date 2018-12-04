@@ -1,8 +1,10 @@
 ---
-description: 目前微信内嵌页 SDK 属于内测beta版本，如有需求，请联系相应的客户成功经理。
+description: 目前微信内嵌页 SDK 属于内测beta版本，如有需求，请联系GrowingIO和您对接的客户成功经理或销售，申请灰度试用。
 ---
 
 # 微信内嵌页 SDK \(beta\)
+
+如果您的H5应用是应用在公众号、微信环境的H5应用、或者小程序中，但是希望能够独立统计数据的话，可以使用微信内嵌页的SDK。
 
 ## 微信内嵌页SDK集成前工作 <a id="wei-xin-nei-qian-ye-sdk-ji-cheng-qian-gong-zuo"></a>
 
@@ -103,7 +105,7 @@ wx.getUserInfo({
 
 微信信息包含**微信昵称**、**微信头像**、**性别、微信所填国家、微信所填省份、微信所填城市**。
 
-![](../.gitbook/assets/image%20%28128%29.png)
+![](../.gitbook/assets/image%20%28133%29.png)
 
 ### 登录用户ID <a id="deng-lu-yong-hu-id"></a>
 

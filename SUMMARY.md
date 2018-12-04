@@ -90,6 +90,7 @@
     * [Web 圈选](data-definition/circle/web.md)
     * [App 圈选](data-definition/circle/app.md)
     * [小程序数据定义](data-definition/circle/minp.md)
+    * [微信内嵌页数据定义（beta）](data-definition/circle/wei-xin-nei-qian-ye-shu-ju-ding-yi-beta.md)
     * [圈选指标管理](data-definition/circle/metric-management/README.md)
       * [合并简单指标](data-definition/circle/metric-management/combine.md)
       * [复合指标](data-definition/circle/metric-management/complex.md)
