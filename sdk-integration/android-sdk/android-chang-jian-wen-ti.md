@@ -53,6 +53,10 @@ public void onCustomClick(View view){
 
 ```
 
+{% hint style="danger" %}
+如果您还未采集到点击事件， 并且使用了 lambda 表达式，请看 [lambda 配置](./#5-lambda-biao-da-shi-zhi-chi-pei-zhi-xiang)。
+{% endhint %}
+
 
 
 ## SDK 编译时性能和消耗时间
