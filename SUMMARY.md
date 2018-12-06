@@ -112,6 +112,7 @@
       * [无埋点事件](api/raw-data-api/fields/autotrack-event.md)
       * [埋点事件与变量](api/raw-data-api/fields/custom.md)
       * [广告相关数据](api/raw-data-api/fields/ads.md)
+      * [通用字段说明](api/raw-data-api/fields/tong-yong-zi-duan-shuo-ming.md)
     * [原始数据导出 2.0 API](api/raw-data-api/raw-data-export-2.0.md)
     * [原始数据导出 1.0 API（已废弃）](api/raw-data-api/raw-data-export-1.0.md)
     * [原始数据导出 API 的升级迁移](api/raw-data-api/yuan-shi-shu-ju-dao-chu-api-de-sheng-ji-qian-yi.md)
