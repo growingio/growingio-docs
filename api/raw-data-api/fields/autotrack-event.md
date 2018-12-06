@@ -4,14 +4,14 @@
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| visitUserId | userId | string\(36\) | 访问用户ID（visit user id） | 2f94c582-bd29-427d-8e4d-ae2cd0287ae1 | 匿名的访问用户ID，由GrowingIO自动生成。 |
-| sessionId | sessionId | string\(36\) | 访问ID（session id） | 45bcb40d-2963-4ef9-85d6-6583cd69d7b4 | 访问ID |
-| platform | platform | string\(10\) | 平台（platform） | web | 访问所属平台，可能值为 iOS / Android / Web 等 |
+| visitUserId | userId | string\(64\) | 访问用户ID（visit user id） | 2f94c582-bd29-427d-8e4d-ae2cd0287ae1 | 匿名的访问用户ID，由GrowingIO自动生成。 |
+| sessionId | sessionId | string\(50\) | 访问ID（session id） | 45bcb40d-2963-4ef9-85d6-6583cd69d7b4 | 访问ID |
+| platform | platform | string\(20\) | 平台（platform） | web | 访问所属平台，可能值为 iOS / Android / Web 等 |
 | domain | domain | string\(100\) | 域名（domain） | growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
-| page | path | string\(512\) | 页面（page） | pages/index | 用户访问的当前页面 |
-| queryParameters | query | string\(512\) | 查询参数（query arameters） | cid=1234567 | 当前网站页面URL中的查询参数 |
+| page | path | string\(1024\) | 页面（page） | pages/index | 用户访问的当前页面 |
+| queryParameters | query | string\(1024\) | 查询参数（query arameters） | cid=1234567 | 当前网站页面URL中的查询参数 |
 | referrer | refer | string\(1024\) | 页面来源（referrer） | [http://www.growingio.com?cid=1234567](http://www.growingio.com/?cid=1234567) | 当前页面浏览的引荐来源 |
-| referrerPage | （新加） | string\(512\) | 页面来源页面（referrer page） | myViewController | 移动应用的来源页面 |
+| referrerPage | （新加） | string\(1024\) | 页面来源页面（referrer page） | myViewController | 移动应用的来源页面 |
 | title | title | string\(1024\) | 页面Title（title） | GrowingIO | 页面的Title |
 | time | eventTime | bigint | 时间戳（time） | 1506069592985 | 请求在用户端发生的时间戳 |
 | sendTime | sendTime | bigint | 发送时间（send time） | 1507897826891 | 请求在SDK发送的时间戳 |
@@ -38,7 +38,7 @@
 | pageAttributes8 | ps8（新旧不同） | string\(200\) | 页面属性8（pageattributes8） |  | SDK 1.x版本的PS8字段（Deprecated） |
 | pageAttributes9 | ps9（新旧不同） | string\(200\) | 页面属性9（pageattributes9） |  | SDK 1.x版本的PS9字段（Deprecated） |
 | pageAttributes10 | ps10（新旧不同） | string\(200\) | 页面属性10（pageattributes10） |  | SDK 1.x版本的PS10字段（Deprecated） |
-| pageRequestId | id | string\(23\) | 页面请求ID（page request id） | 1521010820647fa5a9314e6 | GrowingIO系统内部用于标识一个唯一的页面请求的ID |
+| pageRequestId | page\_id | string\(23\) | 页面请求ID（page request id） | 1521010820647fa5a9314e6 | GrowingIO系统内部用于标识一个唯一的页面请求的ID |
 | vstRequestId | visit\_id | string\(16\) | 访问请求ID（visit request id） | c7db72a5841506bd | GrowingIO系统内部用于标识一个访问请求的ID |
 
 > page数据注意事项
@@ -50,13 +50,13 @@
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| visitUserId | userId | string\(36\) | 访问用户ID（visit user id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 匿名的访问用户ID，由GrowingIO自动生成。 |
-| sessionId | sessionId | string\(36\) | 访问ID（session id） | 6b5099c7-6006-422d-92ac-4f3bf4ddd37c | 访问ID |
+| visitUserId | userId | string\(64\) | 访问用户ID（visit user id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 匿名的访问用户ID，由GrowingIO自动生成。 |
+| sessionId | sessionId | string\(50\) | 访问ID（session id） | 6b5099c7-6006-422d-92ac-4f3bf4ddd37c | 访问ID |
 | accountVersion | （新加） | string\(20\) | SDK版本（account version） | 2.3.0 | SDK版本信息 |
 | platform | platform | string\(20\) | 平台（platform） | Web | 访问所属平台，可能值为 iOS / Android / Web 等 |
 | domain | domain | string\(100\) | 域名（domain） | growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
-| page | path（新旧不同） | string\(512\) | 页面（page） | pages/index | 用户访问的当前页面 |
-| queryParameters | query（新旧不同） | string\(512\) | 查询参数（query arameters） | cid=1234567 | 当前网站页面URL中的查询参数 |
+| page | path（新旧不同） | string\(1024\) | 页面（page） | pages/index | 用户访问的当前页面 |
+| queryParameters | query（新旧不同） | string\(1024\) | 查询参数（query arameters） | cid=1234567 | 当前网站页面URL中的查询参数 |
 | referrer | refer（新旧不同） | string\(1024\) | 页面来源（referrer） | [http://www.growingio.com?cid=1234567](http://www.growingio.com/?cid=1234567) | 当前页面浏览的引荐来源 |
 | language | language | string\(10\) | 语言（language） | zh-cn | 系统使用的语言 |
 | screenHeight | （新加） | string\(10\) | 屏幕高度（screen height） | 1242 | 屏幕高度 |
@@ -67,7 +67,7 @@
 | userAgent | userAgent | string\(512\) | User Agent，例如浏览器信息或者移动设备信息 | Mozilla/5.0 \(Linux; Android 6.0; V9 Build/MRA58K; wv\) AppleWebKit/537.36 \(KHTML |  |
 | operatingSystem | （新加） | string\(30\) | 操作系统（operating system） | iOS / Android |  |
 | operatingSystemVersion | osVersion\(新旧不同\) | string\(50\) | 操作系统版本（operating system version） | iOS 11.0.1 /Android 6.0.1 |  |
-| clientVersion | appVersion\(新旧不同\) | string\(20\) | 客户的产品版本，仅限移动端 | 1.0 |  |
+| clientVersion | appVersion\(新旧不同\) | string\(50\) | 客户的产品版本，仅限移动端 | 1.0 |  |
 | channel | channel | string\(40\) | app的下载渠道，仅限移动端 | App Store |  |
 | deviceBrand | manufacturer\(新旧不同\) | string\(20\) | 设备品牌（device brand） | google |  |
 | deviceModel | model\(新旧不同\) | string\(50\) | 设备型号（device model） | Nexus 5 |  |
@@ -92,11 +92,11 @@ API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接�
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| visitUserId | userId | string\(36\) | 访问用户ID（visit user id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 匿名的访问用户ID，由GrowingIO自动生成。 |
-| sessionId | sessionId | string\(36\) | 访问ID（session id） | 6b5099c7-6006-422d-92ac-4f3bf4ddd37c | 访问ID |
+| visitUserId | userId | string\(64\) | 访问用户ID（visit user id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 匿名的访问用户ID，由GrowingIO自动生成。 |
+| sessionId | sessionId | string\(50\) | 访问ID（session id） | 6b5099c7-6006-422d-92ac-4f3bf4ddd37c | 访问ID |
 | requestType | eventType | string\(10\) | 请求类型（request type） | clck | 根据请求的类型不同，可能值为：clck\(click\), chng\(change\)，sbmt\(submit\)以及imp\(impression\)，change |
 | domain | domain | string\(100\) | 域名（domain） | www.growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
-| page | path | string\(512\) | 页面（page） | /login | 网站页面 |
+| page | path | string\(1024\) | 页面（page） | /login | 网站页面 |
 | sendTime | sendTime | bigint | 发送时间（send time） | 1507897826891 | 请求在SDK发送的时间戳戳 |
 | time | eventTime | bigint | 时间戳（time） | 1506069592985 | 请求在用户端发生的时间戳 |
 | href | href | string\(1024\) | 标签内的跳转链接（如果没有则为null） | help.growingio.com | 标签内的跳转链接（如果没有则为null） |
