@@ -34,9 +34,7 @@ GrowingIO 微信内嵌页SDK采集用户的行为数据，你可以通过「无�
 
 进入圈选页面后，页面中会实时展示您在微信内嵌页中的操作，如下图。
 
-
-
-![](blob:https://growingio.gitbook.io/863db756-e5cd-4b62-ac6f-ffa1a8ad81d8)
+![](../../.gitbook/assets/image%20%28162%29.png)
 
 可以看到几个内容：
 
@@ -69,8 +67,6 @@ URL**示意：**m.xxx.com **/** details **?** id=1&ig=2
 
 ![](../../.gitbook/assets/image%20%28107%29.png)
 
-![](blob:https://growingio.gitbook.io/1fc19899-4828-4105-a178-748040e2a623)
-
 按照页面结构，我们把一个完整的 url 拆解成了：**域名、路径、查询条件**（如有查询条件则显示，如果没有查询条件就不会显示），可以分别编辑。默认展示的是当前页面浏览事件的所在页面的域名、路径和查询条件（如有）。
 
 如果集成SDK超过7日，则会显示这个页面事件过去7天的每日的PV回溯数据。
@@ -94,8 +90,6 @@ a.「路径」最右侧的开关开启时，可以通过在「路径」中使用
 定义页面组示例如下：
 
 ![](../../.gitbook/assets/image%20%281%29.png)
-
-![](blob:https://growingio.gitbook.io/d3f263cf-b6f0-4801-acae-36cf630056e5)
 
 您也可以
 
