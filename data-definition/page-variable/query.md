@@ -6,7 +6,7 @@ description: 适用于 SDK 2.x 以上，12 月 11 日上线。
 
 打开你的网址，看一看你的链接，是不是经常有这样的部分：
 
-[https://www.growingio.com/projects/1/homepage/overview?platform=ios](https://www.growingio.com/projects/nxog09md/homepage/overview?platform=ios)&channel=banner
+https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=banner
 
 红色“?”后面的部分我们通常叫做查询条件（Query），在这个 URL 中标记了这个页面是在哪个平台（platform）打开的，以及通过哪个渠道（channel）访问的等重要信息，不同的公司有不同的应用，这种应用非常常见，那么，我们如何把这些重要的信息利用起来呢？
 
