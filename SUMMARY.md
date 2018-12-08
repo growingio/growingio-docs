@@ -131,5 +131,5 @@
   * [产品使用](faq/chan-pin-shi-yong.md)
   * [数据统计差异](faq/shu-ju-tong-ji-cha-yi.md)
 * [内容贡献者](contributor.md)
-* [我要反馈](https://growingio.jinshuju.com/f/YeeZy7)
+* [帮助文档问题反馈](https://growingio.jinshuju.com/f/YeeZy7)
 
