@@ -51,7 +51,7 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 注意：在自动定义模块中上传了压缩包，保存成功后。一定要点击添加模块后面的“+”，否则不是真正添加成功。添加成功后，去已添加模块中能看到刚刚添加的模块。
 {% endhint %}
 
-![](../.gitbook/assets/image%20%28145%29.png)
+![](../.gitbook/assets/image%20%28146%29.png)
 
 ## **4.Android的额外操作**
 
@@ -61,11 +61,11 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 （1）模块-自定义loader: 请勾选 **使用升级环境编译**
 
-![](../.gitbook/assets/image%20%28175%29.png)
+![](../.gitbook/assets/image%20%28177%29.png)
 
 （2）云编译时， 请勾选 **使用升级环境编译**
 
-![](../.gitbook/assets/image%20%28183%29.png)
+![](../.gitbook/assets/image%20%28185%29.png)
 
 ## **5.插件支持的方法**
 

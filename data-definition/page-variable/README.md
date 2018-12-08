@@ -2,14 +2,14 @@
 
 **定义：页面级变量继承自原页面属性（ PS 字段），此变量与页面绑定，可作为维度分解页面浏览量及页面上发生的无埋点事件。**
 
-* [页面级变量的持久性范围](page-variable.md#ye-mian-ji-bian-liang-de-chi-jiu-xing-fan-wei)
-* [页面级变量使用的场景](page-variable.md#ye-mian-ji-bian-liang-shi-yong-de-chang-jing)
-  * [分析场景示例一](page-variable.md#fen-xi-chang-jing-shi-li-yi)
-  * [分析场景示例二](page-variable.md#fen-xi-chang-jing-shi-li-er)
-* [页面变量的配置和上传](page-variable.md#zi-ding-yi-bian-liang-de-pei-zhi-he-shang-chuan)
-  * [第一步：在 “事件和变量”中完成配置](page-variable.md#di-yi-bu-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
-  * [第二步：代码部署](page-variable.md#di-er-bu-dai-ma-bu-shu)
-  * [第三步：数据校验](page-variable.md#di-san-bu-shu-ju-xiao-yan)
+* [页面级变量的持久性范围](./#ye-mian-ji-bian-liang-de-chi-jiu-xing-fan-wei)
+* [页面级变量使用的场景](./#ye-mian-ji-bian-liang-shi-yong-de-chang-jing)
+  * [分析场景示例一](./#fen-xi-chang-jing-shi-li-yi)
+  * [分析场景示例二](./#fen-xi-chang-jing-shi-li-er)
+* [页面变量的配置和上传](./#zi-ding-yi-bian-liang-de-pei-zhi-he-shang-chuan)
+  * [第一步：在 “事件和变量”中完成配置](./#di-yi-bu-zai-shi-jian-he-bian-liang-zhong-wan-cheng-pei-zhi)
+  * [第二步：代码部署](./#di-er-bu-dai-ma-bu-shu)
+  * [第三步：数据校验](./#di-san-bu-shu-ju-xiao-yan)
 
 在 GrowingIO 的一个项目中，页面级变量的个数上限为 50 个，暂时不支持扩展。如果您所创建的页面级变量已达上限，请您删除无用的变量后再尝试创建。
 
@@ -83,10 +83,10 @@ GrowingIO.setPageVariable\(Activity activity, ”channel”, “新闻”\);
 
 完成了配置后，即可在代码中完成以上设计的 “自定义事件和变量” 的部署。具体的说，就是调用 GrowingIO 提供的 API 接口，上传数据。
 
-* [JS 接口文档](../sdk-integration/web-js-sdk/#3-web-js-sdk-2-1-api)
-* [Android 接口文档](../sdk-integration/android-sdk/#2-android-sdk-api)
-* [iOS 接口文档](../sdk-integration/ios-sdk/#ios-sdk-api)
-* [小程序接口文档](../sdk-integration/mina-sdk.md#zi-ding-yi-shi-jian-he-bian-liang)
+* [JS 接口文档](../../sdk-integration/web-js-sdk/#3-web-js-sdk-2-1-api)
+* [Android 接口文档](../../sdk-integration/android-sdk/#2-android-sdk-api)
+* [iOS 接口文档](../../sdk-integration/ios-sdk/#ios-sdk-api)
+* [小程序接口文档](../../sdk-integration/mina-sdk.md#zi-ding-yi-shi-jian-he-bian-liang)
 
 API中给出了页面级变量的上传方式
 
@@ -96,7 +96,7 @@ API中给出了页面级变量的上传方式
 
 #### **数据校验第一步：本地开发环境校验** <a id="shu-ju-xiao-yan-di-yi-bu-ben-di-kai-fa-huan-jing-xiao-yan"></a>
 
-GrowingIO 提供了 SDK debug 模式以及 debug 工具，来帮助您完成数据的校验。具体请参考[ Debugger 最佳实践](../sdk-integration/growingio-debugger/best-practice.md#pvar-ye-mian-ji-bian-liang-shi-jian)。
+GrowingIO 提供了 SDK debug 模式以及 debug 工具，来帮助您完成数据的校验。具体请参考[ Debugger 最佳实践](../../sdk-integration/growingio-debugger/best-practice.md#pvar-ye-mian-ji-bian-liang-shi-jian)。
 
 #### **数据校验第二步：GrowingIO 后台图表验证** <a id="shu-ju-xiao-yan-di-er-bu-growingio-hou-tai-tu-biao-yan-zheng"></a>
 

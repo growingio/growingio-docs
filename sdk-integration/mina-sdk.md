@@ -21,7 +21,7 @@
 
 如果你已经注册 GrowingIO，使用小程序分析功能需要用一个全新的项目，在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“**项目概览**“。在项目概览页面，点击“**新建项目**“来创建一个新项目。在创建好的新项目里，你会看到使用引导，点击“**添加跟踪代码**“即可开始。
 
-![&#x9879;&#x76EE;&#x6982;&#x89C8;](../.gitbook/assets/image%20%28151%29.png)
+![&#x9879;&#x76EE;&#x6982;&#x89C8;](../.gitbook/assets/image%20%28153%29.png)
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyRLnN1UW6BL8O3mEr%2F-LGySTNxnseL1EsH7kN8%2Fimage.png?alt=media&token=91d05ea5-95d4-4104-b228-0f1837d5201b)
 
@@ -179,7 +179,7 @@ Page({
 2. 打开开发设置，到服务器域名配置部分
 3. 在`request合法域名`中添加：https://wxapi.growingio.com
 
-![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../.gitbook/assets/image%20%28169%29.png)
+![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../.gitbook/assets/image%20%28171%29.png)
 
 ### 检测数据
 
@@ -218,7 +218,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue
 
 作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在小程序中，微信用户属性是非常重要的设置，只有完善了微信用户属性信息，微信的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用户微信相关的信息（微信姓名和头像）定位用户。
 
-![&#x5FAE;&#x4FE1;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;](../.gitbook/assets/image%20%2882%29.png)
+![&#x5FAE;&#x4FE1;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;](../.gitbook/assets/image%20%2883%29.png)
 
 下面是专门针对用户的三个接口。
 
@@ -364,11 +364,11 @@ GrowingIO 预置了两个小程序的标准自定义事件：分享到群聊或�
 
 **微信小程序分享到好友或群聊信息**
 
-![](../.gitbook/assets/image%20%2873%29.png)
+![](../.gitbook/assets/image%20%2874%29.png)
 
 **程序错误**
 
-![](../.gitbook/assets/image%20%2815%29.png)
+![](../.gitbook/assets/image%20%2816%29.png)
 
 ### 自定义事件配置
 

@@ -1,10 +1,10 @@
 ---
-description: 目前是灰度状态，部分用户可见。可以与 GrowingIO 对接人联系申请试用。
+description: 如果你是微信内嵌页 H5 和 hybrid H5 ，暂时不支持活动分析功能，请将你的需求告知 GrowingIO 对接人，我们会不断迭代。
 ---
 
 # 活动分析
 
-{% hint style="info" %}
+{% hint style="success" %}
 活动分析功能需要H5页面集成JS SDK
 {% endhint %}
 
@@ -28,7 +28,7 @@ description: 目前是灰度状态，部分用户可见。可以与 GrowingIO �
 
 时间的口径：整5分钟，比如现在是15:48，那么实时的数据是15:40-15:45。
 
-![](../.gitbook/assets/image%20%2879%29.png)
+![](../.gitbook/assets/image%20%2880%29.png)
 
 **功能2：可以满足用户对于 H5 活动基本数据的查看需求**
 

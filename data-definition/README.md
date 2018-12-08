@@ -8,7 +8,7 @@ GrowingIO 提供了如下自定义数据。
 
 {% page-ref page="user-variable/" %}
 
-{% page-ref page="page-variable.md" %}
+{% page-ref page="page-variable/" %}
 
 {% page-ref page="circle/" %}
 
