@@ -68,7 +68,7 @@ $ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
 对于**原生小程序框架**，在微信小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，**请注意一定要放在 App\(\) 之前**：
 
 ```javascript
-var gio = require("utils/gio-minp.js");
+var gio = require ("utils/gio-minp.js").default;
 // version 是你的小程序的版本号，发版时请调整
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' });
 ```
@@ -78,7 +78,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 如果您的小程序中使用了**第三方插件**，请添加如下代码：
 
 ```javascript
-var gio = require ("utils/gio-minp.js");
+var gio = require ("utils/gio-minp.js").default;
 // version 是你的小程序的版本号，发版时请调整; usePlugin 设置是否使用插件
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', usePlugin: true });
 // app.js 文件，在文件顶部 （其他代码之前）添加如下代码： 
