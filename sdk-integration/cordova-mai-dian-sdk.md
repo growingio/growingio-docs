@@ -4,6 +4,8 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 # Cordova 埋点 SDK
 
+GitHub Demo ：[https://github.com/growingio/Cordova-Demo](https://github.com/growingio/Cordova-Demo) 。
+
 ## 支持版本
 
 支持 Cordova 5.0.0 以上，暂不支持低版本。

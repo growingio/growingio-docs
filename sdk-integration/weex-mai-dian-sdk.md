@@ -25,7 +25,7 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 ###  1.添加 Android 原生 SDK 依赖
 
 * 建议使用 Android Studio 打开项目中， `platforms`文件夹中的`android` 文件夹
-* Cordova 埋点 SDK 是在 Android 原生 SDK 上的扩展，参照[ Android 埋点 SDK](android-sdk/android-mai-dian-sdk.md#ji-cheng-mai-dian-sdk)，集成步骤的 1~4，操作步骤完全一致。
+* Weex 埋点 SDK 是在 Android 原生 SDK 上的扩展，参照[ Android 埋点 SDK](android-sdk/android-mai-dian-sdk.md#ji-cheng-mai-dian-sdk)，集成步骤的 1~4，操作步骤完全一致。
 
 ### 2. 添加 SDK
 
