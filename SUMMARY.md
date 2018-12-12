@@ -25,7 +25,7 @@
   * [概览看板](dashboard/overview.md)
   * [小程序预置看板](dashboard/mina-overview.md)
   * [微信内嵌页预置看板](dashboard/wei-xin-nei-qian-ye-yu-zhi-kan-ban.md)
-  * [实时看板](dashboard/realtime.md)
+  * [实时监控模板](dashboard/realtime.md)
   * [业务场景](dashboard/templates.md)
 * [广告监测](ads-tracking/README.md)
   * [推广网站](ads-tracking/web-marketing.md)

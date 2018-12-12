@@ -17,7 +17,7 @@
 
 ![](https://docs.growingio.com/.gitbook/assets/botruleimpactondatavisualizationtools.png)
 
-GrowingIO 爬虫规则会过滤单图，漏斗流程，分群，细查等数据工具中的数据。 
+GrowingIO 爬虫规则会过滤单图，漏斗流程，分群，细查，实时等数据工具中的数据。 
 
-**但是出于实时性和性能等方面的考虑，目前爬虫规则并没有过滤实时模块和回溯功能中的数据。**
+**但是出于性能等方面的考虑，目前爬虫规则并没有过回溯功能中的数据。**
 
