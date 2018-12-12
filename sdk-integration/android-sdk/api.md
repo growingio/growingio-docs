@@ -188,6 +188,16 @@ GrowingIO 所有 API 都需要在主线程调用。
         </ul>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left">setChannel</td>
+      <td style="text-align:left"><b>2.6.5 之前版本</b>：
+        <br />先设置渠道信息，再发送数据
+        <br />能够保证所有数据都一定会带上渠道信息
+        <br />
+        <br /><b>2.6.5 及之后版本</b>：
+        <br />保留原有设置渠道信息的方法，新增在运行时设置渠道信息
+        <br />新增的接口无法保证所有数据都一定会带上渠道信息（虽然我们会通过重发机制进行保证，但是无法做到100%）</td>
+    </tr>
   </tbody>
 </table>
 

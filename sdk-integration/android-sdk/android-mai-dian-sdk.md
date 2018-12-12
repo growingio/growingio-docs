@@ -33,7 +33,7 @@ android {
 }
 dependencies {
     //GrowingIO 埋点 SDK
-    implementation 'com.growingio.android:vds-android-agent:track-2.6.3@aar'
+    implementation 'com.growingio.android:vds-android-agent:track-2.6.5@aar'
 }
 ```
 
@@ -50,6 +50,7 @@ dependencies {
     <!--非危险权限，不需要运行时请求，Manifest文件中添加即可-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <!--请注意<application/>标签中的name属性值（这里为android:name=".MyApplication"）必须为您的Application类-->
     <application
@@ -109,23 +110,24 @@ public class MyApplication extends Application {
 如果你启用了混淆，请在你的proguard-rules.pro中加入如下代码：
 
 ```text
--keep class com.growingio.android.sdk.** {
+-keep class com.growingio.** {
     *;
 }
--dontwarn com.growingio.android.sdk.**
+-dontwarn com.growingio.**
+​
 -keepnames class * extends android.view.View
--dontwarn android.support.**
--keep class android.support.**{
-    *;
-}
-
--keep class com.growingio.android.sdk.collection.GrowingIOInstrumentation {
-    public *;
-    static <fields>;
-}
-
 -keepnames class * extends android.app.Fragment
 -keepnames class * extends android.support.v4.app.Fragment
+-keepnames class * extends androidx.fragment.app.Fragment
+​
+-keep class android.support.v4.view.ViewPager
+-keep class android.support.v4.view.ViewPager$**{
+  *;
+}
+-keep class androidx.viewpager.widget.ViewPager
+-keep class androidx.viewpager.widget.ViewPager$**{
+  *;
+}
 ```
 
 如果您使用了AndResGuard,请在白名单里添加GrowingIO,如下：
