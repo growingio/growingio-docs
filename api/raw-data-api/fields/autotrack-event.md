@@ -97,7 +97,7 @@ API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接�
 | requestType | eventType | string\(10\) | 请求类型（request type） | clck | 根据请求的类型不同，可能值为：clck\(click\), chng\(change\)，sbmt\(submit\)以及imp\(impression\)，change |
 | domain | domain | string\(100\) | 域名（domain） | www.growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
 | page | path | string\(1024\) | 页面（page） | /login | 网站页面 |
-| sendTime | sendTime | bigint | 发送时间（send time） | 1507897826891 | 请求在SDK发送的时间戳戳 |
+| sendTime | sendTime | bigint | 发送时间（send time） | 1507897826891 | 请求在SDK发送的时间戳 |
 | time | eventTime | bigint | 时间戳（time） | 1506069592985 | 请求在用户端发生的时间戳 |
 | href | href | string\(1024\) | 标签内的跳转链接（如果没有则为null） | help.growingio.com | 标签内的跳转链接（如果没有则为null） |
 | requestValue | eventValue | string\(1024\) | 请求值（request value） | “确定” | 该消息的值，例如标签的value |
