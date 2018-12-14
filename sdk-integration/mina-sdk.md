@@ -198,7 +198,7 @@ Page({
 即微信小程序项目根目录的 app.js 文件设置参数如下：
 
 ```javascript
-var gio = require("utils/gio-minp.js");
+var gio = require("utils/gio-minp.js").default;
 // version 是你的小程序的版本号，发版时请调整
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', followShare: true });
 
