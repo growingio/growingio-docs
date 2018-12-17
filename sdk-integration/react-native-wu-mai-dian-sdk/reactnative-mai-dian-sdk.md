@@ -64,7 +64,7 @@ React  Native 埋点 SDK 是在 iOS 原生 SDK 上的扩展，请参照 [iOS 埋
 ### 2. 集成 React Native 打点 SDK
 
 ```bash
-npm install --save https://github.com/growingio/react-native-growingio.git#0.0.6
+npm install --save https://github.com/growingio/react-native-growingio.git#0.0.7
 ```
 
 ```bash
@@ -80,6 +80,14 @@ react-native link react-native-growingio
 2. 去 `node_modules`  ➜ `react-native-growingio` ➜ iOS ➜ 选择 `GrowingIORNPlugin.xcodeproj` 
 3. 在工程`Build Phases` ➜ `Link Binary With Libraries`中添加`libGrowingIORNPlugin.a`
 {% endhint %}
+
+{% hint style="warning" %}
+如果您使用的是pod 的方式集成React 
+{% endhint %}
+
+添加`pod 'GrowingReactNativeTrackKit', :path => '../node_modules/react-native-growingio'`到Podfile中
+
+执行`pod updat`
 
 ### **3. 重要配置**
 
