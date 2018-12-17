@@ -248,8 +248,6 @@ gio('setEvar', properties: object)
 // 假设初始化后把 gio 对象放在 App 的 globalData 里面getApp().globalData.gio('setEvar', {   campaign: '活动A'});
 ```
 
-​
-
-​[Previous小游戏SDK集成](/miniprogram/~/drafts/-LPPXEEXPcZK4IUTEDQ1/primary/tag-management/xiao-you-xi-sdk-ji-cheng)[Next小程序数据校验Debugger](/miniprogram/~/drafts/-LPPXEEXPcZK4IUTEDQ1/primary/tag-management/xiao-cheng-xu-shu-ju-xiao-yan-debugger)  
+​  
 
 
