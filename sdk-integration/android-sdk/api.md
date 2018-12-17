@@ -269,6 +269,11 @@ GrowingIO 所有 API 都需要在主线程调用。
       style="text-align:left"></td>
     </tr>
     <tr>
+      <td style="text-align:left">ignoreFragmentX</td>
+      <td style="text-align:left">支持 AndroidX ， 功能同 ignoreFragment。</td>
+      <td style="text-align:left">2.6.6 以上</td>
+    </tr>
+    <tr>
       <td style="text-align:left">setPageName</td>
       <td style="text-align:left">
         <p>设置页面别名，有些时候，对于完成某个功能的页面，统计时可能需要进一步细分。 比如，对于展示商品列表的页面，需要区分衣物类商品，以及食品类商品的两种列表的访问量。</p>
@@ -281,6 +286,11 @@ GrowingIO 所有 API 都需要在主线程调用。
         </ol>
       </td>
       <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">setPageNameX</td>
+      <td style="text-align:left">支持 AndroidX ， 功能同 setPageName。</td>
+      <td style="text-align:left">2.6.6 以上</td>
     </tr>
     <tr>
       <td style="text-align:left">getSessionId</td>
@@ -318,6 +328,11 @@ GrowingIO 所有 API 都需要在主线程调用。
       <td style="text-align:left"></td>
     </tr>
     <tr>
+      <td style="text-align:left">trackFragmentX</td>
+      <td style="text-align:left">支持 AndroidX ， 功能同 trackFragment。</td>
+      <td style="text-align:left">2.6.6 以上</td>
+    </tr>
+    <tr>
       <td style="text-align:left">trackWebView</td>
       <td style="text-align:left">采集 <code>WebView</code> 事件，默认采集，您可以在不全量采集<code>WebView</code>的时候，定制采集某个<code>WebView</code>
       </td>
@@ -345,6 +360,7 @@ GrowingIO 所有 API 都需要在主线程调用。
 | :--- | :--- | :--- |
 | track | 发送自定义事件，对应`cstm`事件 | 2.0.0 |
 | setPageVariable | 发送页面级变量，对应`pvar`事件 | 2.0.0 |
+| setPageVariableX | 支持 AndroidX ， 功能同 setPageVariable | 2.6.6 以上 |
 | setEvar | 发送转化变量，对应`evar`事件 | 2.0.0 |
 | setPeopleVariable | 发送用户变量，对应`ppl`事件 | 2.0.0 |
 | setUserId | 设置登录用户ID，对应`cs1`字段 | 2.0.0 |
