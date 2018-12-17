@@ -1,49 +1,55 @@
 # SDK 更新日志
 
+### 2018年12月14日
+
+Android 2.6.6
+
+1. 修复Android 4.4系统的手机上,由于`Davlik`虚拟机对`class`校验机制与`art`不同，导致的 APP 初始化 SDK 时出现 VerifyError crash。
+
 ### 2018年12月12日
 
 Android 2.6.5
 
-1. 支持运行时异步设置渠道信息 \(接口地址\)
-2. 兼容 AndroidX
-3. 增加app close事件上报,将最后一个页面的浏览时长计算入用户进入总时长
-4. 修复 Activity的背景是透明时,下边的Activity的ViewTree 变化无限回调GlobalLayout监听,导致page事件发送失败问题
+1. 支持运行时异步设置渠道信息 \(接口地址\)；
+2. 兼容 AndroidX；
+3. 增加app close事件上报,将最后一个页面的浏览时长计算入用户进入总时长；
+4. 修复 Activity的背景是透明时,下边的Activity的ViewTree 变化无限回调GlobalLayout监听,导致page事件发送失败问题。
 
 iOS 2.6.5
 
-1. 增加app close事件上报,将最后一个页面的浏览时长计算入用户进入总时长
+1. 增加app close事件上报,将最后一个页面的浏览时长计算入用户进入总时长。
 
 ### 2018年11月29日
 
 Android 2.6.3
 
-1. 修复客户调用`WebView`的`setWebChromeClient`， 传参为`new WebChromeClient()` 时导致内嵌 H5 页面无法圈选。
+1. 修复客户调用`WebView`的`setWebChromeClient`， 传参为`new WebChromeClient()` 时导致内嵌 H5 页面无法圈选；
 2. 支持[采集通知 Notification](android-sdk/#cai-ji-tong-zhi-notification)的点击与展现。
 
 iOS 2.6.3
 
-1. 修复多个`ViewController` 滑动切换时，没有识别导致用户页面访问事件数据错误。
+1. 修复多个`ViewController` 滑动切换时，没有识别导致用户页面访问事件数据错误；
 2. 支持[采集通知](ios-sdk/#push-tui-song-dian-ji-cai-ji)的点击。
 
 ### 2018年11月24日
 
 Android 2.6.2
 
-1. 修复在 WIFI 情况下， 数据发送时间间隔过长
-2. 华为手机 8.0 以上系统圈选时， 授权弹窗增加“已设置”按钮，使弹窗消失
+1. 修复在 WIFI 情况下， 数据发送时间间隔过长；
+2. 华为手机 8.0 以上系统圈选时， 授权弹窗增加“已设置”按钮，使弹窗消失。
 
 ### 2018年11月14日
 
 Android 2.6.1
 
-1. 修复 SDK 2.6.0 用户 app 首次安装启动并且手机没有网络的情况下，`activate`事件发不出去，造成后续事件都不能发送，并且有可能导致 app 内存溢出
+1. 修复 SDK 2.6.0 用户 app 首次安装启动并且手机没有网络的情况下，`activate`事件发不出去，造成后续事件都不能发送，并且有可能导致 app 内存溢出。
 
 ### 2018年11月8日
 
 Android，iOS 2.6.0
 
-1. 发布 React Native 无埋点 SDK
-2. 发布 API Cloud、Cordova、Flutter、React Native 、Weex、Hybrid 、AppCan 埋点 SDK
+1. 发布 React Native 无埋点 SDK；
+2. 发布 API Cloud、Cordova、Flutter、React Native 、Weex、Hybrid 、AppCan 埋点 SDK。
 
 ### 2018年10月23日
 
