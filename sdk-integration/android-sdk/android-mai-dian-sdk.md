@@ -244,7 +244,6 @@ setMutiprocess(boolean setMutiprocess);
 | 参数名 | 类型 | 必填 | 默认值 | 说明 |
 | :--- | :--- | :--- | :--- | :--- |
 | isMultiprocess | boolean |   是 |  false | 开启多进程数据采集 |
-| smpc | boolean |   是 |  false | 开启多进程圈选 |
 
 **示例代码：**
 
