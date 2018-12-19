@@ -4,12 +4,17 @@
   * [​创建新的GrowingIO项目 ](mina-sdk.md#chuang-jian-xin-de-growingio-xiang-mu)或 [在项目中集成一个新的小程序应用](mina-sdk.md#zai-tong-yi-xiang-mu-xia-jie-ru-yi-ge-xin-de-xiao-cheng-xu)
 * ​[小程序SDK标准接入指南](mina-sdk.md#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
   * [1. 下载小程序采集SDK](mina-sdk.md#xia-zai-xiao-cheng-xu-cai-ji-sdk)
-  * ​[2. 添加跟踪代码​](mina-sdk.md#tian-jia-gen-zong-dai-ma)
+    * 微信小程序原生框架
+    * 微信小程序原生 + 第三方插件
+    * 微信小程序mpvue框架
+    * 微信小程序mpvue + 第三方插件
+    * taro框架
+    * wepy框架
     * [2.1 若有Webview，请在Webview中添加代码](mina-sdk.md#xiao-cheng-xu-zhong-you-webview)
+  * ​[2. 添加跟踪代码​](mina-sdk.md#tian-jia-gen-zong-dai-ma)和微信用户信息
   * ​[3. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)[添加请求服务器域名](mina-sdk.md#tian-jia-qing-qiu-fu-wu-qi-yu-ming)
   * ​[4. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)[检测数据](mina-sdk.md#jian-ce-shu-ju)
 * [SDK高级设置](mina-sdk.md#sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi)
-  * ​[小程序SDK 微信用户属性设置](mina-sdk.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)
   * [无埋点采集事件逻辑和高级配置](mina-sdk.md#wu-mai-dian-cai-ji-shi-jian-luo-ji-he-gao-ji-pei-zhi)
   * [自定义事件和变量](mina-sdk.md#zi-ding-yi-shi-jian-he-bian-liang)
 
@@ -45,7 +50,18 @@
 
 ## 微信小程序SDK标准接入指南
 
-### 下载小程序采集 SDK
+### 1、下载小程序采集 SDK
+
+目前微信小程序支持以下框架的集成,请选择相应的框架下载SDK，并参照相应框架，添加跟踪代码。
+
+* 微信小程序原生框架
+* 微信小程序原生 + 第三方插件
+* 微信小程序mpvue框架
+* 微信小程序mpvue + 第三方插件
+* taro框架
+* wepy框架
+
+#### 微信小程序原生框架
 
 下载 gio-minp.js 文件
 
@@ -53,7 +69,9 @@
 $ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
 ```
 
-对于 mpvue 用户，下载 gio-minp.esm.js 文件
+#### mpvue、taro、wepy框架
+
+如果小程序使用以上框架，下载 gio-minp.esm.js 文件
 
 ```text
 $ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
@@ -61,21 +79,23 @@ $ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
 
 当下载到 gio-minp.js 文件以后，把文件放在微信小程序项目里，比如 utils 目录下。下面会假设 SDK 文件放在 utils 目录下。
 
-### 添加跟踪代码
+### 2、添加跟踪代码
 
-#### 原生小程序框架：
+在微信小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，**请注意一定要放在 App\(\) 之前**：
 
-对于**原生小程序框架**，在微信小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，**请注意一定要放在 App\(\) 之前**：
+{% tabs %}
+{% tab title="微信原生框架" %}
+对于**原生小程序框架**，请使用以下方式：
 
 ```javascript
 var gio = require ("utils/gio-minp.js").default;
 // version 是你的小程序的版本号，发版时请调整
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' });
 ```
+{% endtab %}
 
-#### **原生小程序框架引用了第三方插件**：
-
-如果您的小程序中使用了**第三方插件**，请添加如下代码：
+{% tab title="微信原生框架+第三方插件" %}
+如果您的原生框架的小程序中使用了**第三方插件**，请添加如下代码：
 
 ```javascript
 var gio = require ("utils/gio-minp.js").default;
@@ -86,9 +106,9 @@ const App = global.GioApp
 //在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入！！！）
 const Page = global.GioPage;
 ```
+{% endtab %}
 
-#### **mpvue小程序框架：**
-
+{% tab title="mpvue" %}
 对于 **mpvue** **小程序框架**，使用下面这种方式：
 
 ```javascript
@@ -99,11 +119,170 @@ import App from './App'
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
 ```
 
-其中GrowingIO 项目ID、微信小程序的 AppID，即为**SDK安装页面** 第②部分 **代码框中生成的代码。**
+\*\*\*\*
+{% endtab %}
 
-**每次发布小程序新版本的时候，需要更新一下版本号 version, 与线上发布小程序保持一致。**
+{% tab title="mpvue + 第三方插件" %}
+如果您的mpvue框架的小程序中使用了**第三方插件**，使用下面这种方式：
 
-除了 `version` 之外，还有以下额外参数可以使用。
+* **第一步：更新 gio-minp.esm.js 到最新版**
+* **第二步：添加 npm 包**
+
+```javascript
+npm install  imports-loader --save-dev
+```
+
+* **第三步：创建一个新文件 /src/utils/vue.js 文件，内容如下：**
+
+```javascript
+mport Vue from 'imports-loader?global=>undefined,Page=>GioPage,App=>GioApp,Component=>GioComponent!mpvue'
+export default Vue
+```
+
+* **第四步 修改 /build/webpack.base.conf.js 配置**
+
+```javascript
+var path = require('path')
+var fs = require('fs')
+var utils = require('./utils')
+var config = require('../config')
+var vueLoaderConfig = require('./vue-loader.conf')
+var webpack = require('webpack')
+var MpvuePlugin = require('webpack-mpvue-asset-plugin')
+var glob = require('glob')
+
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
+
+function getEntry (rootSrc, pattern) {
+  var files = glob.sync(path.resolve(rootSrc, pattern))
+  return files.reduce((res, file) => {
+    var info = path.parse(file)
+    var key = info.dir.slice(rootSrc.length + 1) + '/' + info.name
+    res[key] = path.resolve(file)
+    return res
+  }, {})
+}
+
+const appEntry = { app: resolve('./src/main.js') }
+const pagesEntry = getEntry(resolve('./src'), 'pages/**/main.js')
+const entry = Object.assign({}, appEntry, pagesEntry)
+
+module.exports = {
+  // 如果要自定义生成的 dist 目录里面的文件路径，
+  // 可以将 entry 写成 {'toPath': 'fromPath'} 的形式，
+  // toPath 为相对于 dist 的路径, 例：index/demo，则生成的文件地址为 dist/index/demo.js
+  entry,
+  target: require('mpvue-webpack-target'),
+  output: {
+    path: config.build.assetsRoot,
+    filename: '[name].js',
+    publicPath: process.env.NODE_ENV === 'production'
+      ? config.build.assetsPublicPath
+      : config.dev.assetsPublicPath
+  },
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      'vue': resolve('src/utils/vue'),
+      '@': resolve('src'),
+      'flyio': 'flyio/dist/npm/wx',
+      'wx': resolve('src/utils/wx')
+    },
+    symlinks: false
+  },
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'mpvue-loader',
+        options: vueLoaderConfig
+      },
+      {
+        test: /\.js$/,
+        include: [resolve('src'), resolve('test')],
+        use: [
+          'babel-loader',
+          {
+            loader: 'mpvue-loader',
+            options: {
+              checkMPEntry: true
+            }
+          },
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: utils.assetsPath('img/[name].[ext]')
+        }
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: utils.assetsPath('media/[name]].[ext]')
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: utils.assetsPath('fonts/[name].[ext]')
+        }
+      }
+    ]
+  },
+  plugins: [
+    new MpvuePlugin(),
+    new webpack.ProvidePlugin({
+      GioPage: [resolve('src/utils/gio-minp.js'), 'GioPage'],
+      GioApp: [resolve('src/utils/gio-minp.js'), 'GioApp'],
+      GioComponent: [resolve('src/utils/gio-minp.js'), 'GioComponent']
+    }),
+  ]
+}
+```
+
+* **第五步：gio sdk 初始化配置设置 usePlugin 为 true**
+
+```javascript
+gio("init", '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', vue: Vue, usePlugin: true })
+```
+{% endtab %}
+
+{% tab title="Taro框架" %}
+对于 **Taro 小程序框架**，使用下面这种方式：
+
+```javascript
+import Taro from '@tarojs/taro'
+import gio from './utils/gio-minp'
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', {
+  version: '1.0',
+  forceLogin: true,
+  taro: Taro
+});
+```
+{% endtab %}
+
+{% tab title="Wepy框架" %}
+对于 **Wepy小程序框架**，使用下面这种方式，且注意在微信小程序项目根目录的 app.wpy 文件的顶部添加以下 JS 代码，**请注意一定要放在 App\(\) 之前:**
+
+```javascript
+import gio from './utils/gio-minp';
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', debug: true });
+```
+{% endtab %}
+{% endtabs %}
+
+### **3、进行SDK的配置设置**
+
+**SDK中提供了以下几个参数可以用来进行配置**
 
 | 参数 | 值 | 解释 |
 | :--- | :--- | :--- |
@@ -112,6 +291,39 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue
 | forceLogin | true \| false | 你的小程序是否强制要求用户登陆微信获取 openid。默认 false |
 | debug | true \| false | 是否开启调试模式，可以看到采集的数据。默认 false |
 | usePlugin | true \| false | 你的小程序中是否使用了第三方插件。默认false。 |
+
+#### Version 参数
+
+每次发布小程序新版本的时候，需要更新一下版本号 version, 与线上发布小程序保持一致; 在使用使，可以用来分析不同版本的数据。
+
+#### followShare 分享分析参数
+
+转发分享小程序是小程序获客的重要场景，想要详细的进行转发分享的统计，需要在SDK参数中，设置如下参数，值为true
+
+| 参数 | 值 | 解释 |
+| :--- | :--- | :--- |
+| followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认false |
+
+即微信小程序项目根目录的 app.js 文件设置参数如下：
+
+```javascript
+var gio = require("utils/gio-minp.js").default;
+// version 是你的小程序的版本号，发版时请调整
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', followShare: true });
+
+```
+
+对于 mpvue 用户，使用下面这种方式：
+
+```javascript
+import gio from './utils/gio-minp'
+import Vue from 'vue'
+import App from './App'
+​
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0', followShare: true });
+```
+
+#### forceLogin 用户标识参数
 
 {% hint style="info" %}
 forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程序里面设置用户标识符，存储在微信 Storage 里面。这个用户标识符潜在可能会被`clearStorage` 清除掉，所以有可能不同的用户标识符对应同一个微信里的 `openid`。如果你的微信小程序在用户打开后会去做登录并且获取 `openid` 和/或 `unionid`，可以设置 `forceLogin` 为 true。当 forceLogin 为 true 的时候，用户标识符会使用 openid，潜在风险是如果用户没有登录，数据不会发送。具体集成示例：
@@ -126,7 +338,52 @@ gio("identify", openid, unionid);
 ```
 {% endhint %}
 
-**注意：**如果你的微信小程序在用户打开后不要求用户授权获取openid和/或 unionid，但是设置了forceLogin为True，那么GroiwngIO不能采集到用户的数据，所以请特别注意这个参数的设置。
+**注意：如果你的微信小程序在用户打开后不要求用户授权获取openid和/或 unionid，但是设置了forceLogin为True，那么GroiwngIO不能采集到用户的数据，采集到的用户会偏少，所以请特别注意这个参数的设置。如果您不能确定是否要设置这个参数，请先咨询我们。**
+
+\*\*\*\*
+
+#### SDK 微信用户属性设置
+
+作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在小程序中，微信用户属性是非常重要的设置，只有完善了微信用户属性信息，微信的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用户微信相关的信息（微信姓名和头像）定位用户。
+
+![&#x5FAE;&#x4FE1;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;](../.gitbook/assets/image%20%2895%29.png)
+
+下面是专门针对用户的三个接口。
+
+#### 绑定微信用户ID
+
+当用户在你的小程序上登陆获取到 openid 后，可以用过 `identify` 接口绑定微信用户ID，后续在 GrowingIO 中获取更准确的微信访问用户量。示例代码如下，
+
+```text
+wx.request({ 
+  url: 'https://YOUR_HOST_NAME/wechat/code2key',
+  method: 'GET',
+  data: { code: res.code }
+  success: res => 
+    var openid = res.data.openid;
+    var unionid = res.data.unionid;
+    ...
+    gio('identify', res.data.openid, res.data.unionid)
+})
+```
+
+#### 设置微信用户信息
+
+当用户在你的小程序上绑定微信信息后，可以通过 `setVisitor` 接口设置微信用户信息，后续在 GrowingIO 中分析这个数据。示例代码如下，
+
+```text
+wx.getUserInfo({ 
+  success: res => 
+    ...
+    gio('setVisitor', res.userInfo);
+})
+```
+
+微信信息包含**微信昵称**、**微信头像**、**性别、微信所填国家、微信所填省份、微信所填城市**。
+
+\*注：用户画像中的部分数据，只有在设置微信用户信息后，才可以统计。
+
+
 
 ### \*\*小程序中有**Webview**
 
@@ -171,7 +428,9 @@ Page({
 <web-view src="{{ webUrl }}"></web-view>
 ```
 
-### 添加请求服务器域名
+
+
+### 3、添加请求服务器域名
 
 要正常采集微信小程序的数据并发送给 GrowingIO，需要在微信小程序里事先设置一个通讯域名，允许跟 GrowingIO API 服务器进行网络通信。具体步骤如下：
 
@@ -181,81 +440,13 @@ Page({
 
 ![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../.gitbook/assets/image%20%28194%29.png)
 
-### 检测数据
+### 4、检测数据
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面检测数据。请在添加了跟踪代码的小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。详情可见小程序Debugger。
 
 ## 微信小程序SDK高级设置&数据采集配置
 
-### SDK分享分析参数
-
-转发分享小程序是小程序获客的重要场景，想要详细的进行转发分享的统计，需要在SDK参数中，设置如下参数，值为true
-
-| 参数 | 值 | 解释 |
-| :--- | :--- | :--- |
-| followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认false |
-
-即微信小程序项目根目录的 app.js 文件设置参数如下：
-
-```javascript
-var gio = require("utils/gio-minp.js").default;
-// version 是你的小程序的版本号，发版时请调整
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', followShare: true });
-
-```
-
-对于 mpvue 用户，使用下面这种方式：
-
-```javascript
-import gio from './utils/gio-minp'
-import Vue from 'vue'
-import App from './App'
-​
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0', followShare: true });
-```
-
-### SDK 微信用户属性设置
-
-作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在小程序中，微信用户属性是非常重要的设置，只有完善了微信用户属性信息，微信的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用户微信相关的信息（微信姓名和头像）定位用户。
-
-![&#x5FAE;&#x4FE1;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;](../.gitbook/assets/image%20%2895%29.png)
-
-下面是专门针对用户的三个接口。
-
-#### 绑定微信用户ID
-
-当用户在你的小程序上登陆获取到 openid 后，可以用过 `identify` 接口绑定微信用户ID，后续在 GrowingIO 中获取更准确的微信访问用户量。示例代码如下，
-
-```text
-wx.request({ 
-  url: 'https://YOUR_HOST_NAME/wechat/code2key',
-  method: 'GET',
-  data: { code: res.code }
-  success: res => 
-    var openid = res.data.openid;
-    var unionid = res.data.unionid;
-    ...
-    gio('identify', res.data.openid, res.data.unionid)
-})
-```
-
-#### 设置微信用户信息
-
-当用户在你的小程序上绑定微信信息后，可以通过 `setVisitor` 接口设置微信用户信息，后续在 GrowingIO 中分析这个数据。示例代码如下，
-
-```text
-wx.getUserInfo({ 
-  success: res => 
-    ...
-    gio('setVisitor', res.userInfo);
-})
-```
-
-微信信息包含**微信昵称**、**微信头像**、**性别、微信所填国家、微信所填省份、微信所填城市**。
-
-\*注：用户画像中的部分数据，只有在设置微信用户信息后，才可以统计。
-
-#### 设置注册用户ID
+### 设置**CRM 用户**ID
 
 当用户在你的小程序上注册以后，你的产品应用服务端会在用户数据库里添加一条记录并且分配一个 ID，可以通过 setUserId 接口设置注册用户ID，后续在 GrowingIO 中分析登录用户这个数据。示例代码如下，
 
@@ -432,9 +623,7 @@ getApp().globalData.gio('setVisitor', {
 
 ### 注册用户变量
 
-
-
-给注册用户附上额外的信息，便于后续做用户信息相关分析。在添加所需要设置的注册用户变量的代码之前，需要在 GrowingIO 产品的`自定义事件和变量`管理页面配置注册用户级变量。
+给注册用户（crm 用户ID）附上额外的信息，便于后续做用户信息相关分析。在添加所需要设置的注册用户变量的代码之前，需要在 GrowingIO 产品的`自定义事件和变量`管理页面配置注册用户级变量。
 
 接口定义：
 
