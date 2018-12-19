@@ -87,7 +87,7 @@ react-native link react-native-growingio
 
 添加`pod 'GrowingReactNativeTrackKit', :path => '../node_modules/react-native-growingio'`到Podfile中
 
-执行`pod updat`
+执行`pod update`
 
 ### **3. 重要配置**
 
