@@ -91,7 +91,9 @@ UTM 做好了之后，可以做哪些分析呢？我们就可以进行日常的�
 我们提供utm参数和自定义参数的方式跟踪您网站的自主投放渠道  
 具体请参照：[自主投放URL构建工具](https://assets.growingio.com/help/doc/%E8%AF%A5%E6%96%87%E6%A1%A3%E7%94%A8%E6%9D%A5%E7%94%9F%E6%88%90%E6%8A%95%E6%94%BEURL_V2.0.xlsm)
 
-如果你有自定义的参数没办法进行调整，你可以点击上面『自主投放URL构建工具』里面选择自定义参数名称，填写自定义参数与 UTM 参数的对应关系表，将其发送给在线客服后，我们将会给您配置。在我们配置后，你便可以按照自定义参数来构建 UTM。
+如果你有自定义的参数没办法进行调整，你可以使用UTM映射功能进行参数映射和配置。
+
+{% page-ref page="../configuration/utm-parameters-mapping-management.md" %}
 
 ### 4.小程序投放UTM使用 <a id="set-utm-parameters"></a>
 
