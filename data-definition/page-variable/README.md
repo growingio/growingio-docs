@@ -86,7 +86,7 @@ GrowingIO.setPageVariable\(Activity activity, ”channel”, “新闻”\);
 * [JS 接口文档](../../sdk-integration/web-js-sdk/#3-web-js-sdk-2-1-api)
 * [Android 接口文档](../../sdk-integration/android-sdk/#2-android-sdk-api)
 * [iOS 接口文档](../../sdk-integration/ios-sdk/#ios-sdk-api)
-* [小程序接口文档](../../sdk-integration/mina-sdk.md#zi-ding-yi-shi-jian-he-bian-liang)
+* [小程序接口文档](../../sdk-integration/mina-sdk/#zi-ding-yi-shi-jian-he-bian-liang)
 
 API中给出了页面级变量的上传方式
 

@@ -1,22 +1,11 @@
 # 微信小程序 SDK
 
-* [小程序SDK集成前工作​](mina-sdk.md#xiao-cheng-xu-sdk-ji-cheng-qian-gong-zuo)
-  * [​创建新的GrowingIO项目 ](mina-sdk.md#chuang-jian-xin-de-growingio-xiang-mu)或 [在项目中集成一个新的小程序应用](mina-sdk.md#zai-tong-yi-xiang-mu-xia-jie-ru-yi-ge-xin-de-xiao-cheng-xu)
-* ​[小程序SDK标准接入指南](mina-sdk.md#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
-  * [1. 下载小程序采集SDK](mina-sdk.md#xia-zai-xiao-cheng-xu-cai-ji-sdk)
-    * 微信小程序原生框架
-    * 微信小程序原生 + 第三方插件
-    * 微信小程序mpvue框架
-    * 微信小程序mpvue + 第三方插件
-    * taro框架
-    * wepy框架
-    * [2.1 若有Webview，请在Webview中添加代码](mina-sdk.md#xiao-cheng-xu-zhong-you-webview)
-  * ​[2. 添加跟踪代码​](mina-sdk.md#tian-jia-gen-zong-dai-ma)和微信用户信息
-  * ​[3. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#3-qian-yi-ye-mian-shu-xing-zi-duan-ps-zi-duan)[添加请求服务器域名](mina-sdk.md#tian-jia-qing-qiu-fu-wu-qi-yu-ming)
-  * ​[4. ](/docs/~/drafts/-LH8-yUMU-sgLDUogqkP/primary/sdk-integration/ios-sdk#4-qian-yi-zi-ding-yi-shi-jian-mai-dian-shi-jian)[检测数据](mina-sdk.md#jian-ce-shu-ju)
-* [SDK高级设置](mina-sdk.md#sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi)
-  * [无埋点采集事件逻辑和高级配置](mina-sdk.md#wu-mai-dian-cai-ji-shi-jian-luo-ji-he-gao-ji-pei-zhi)
-  * [自定义事件和变量](mina-sdk.md#zi-ding-yi-shi-jian-he-bian-liang)
+* [小程序SDK集成前工作​](./#xiao-cheng-xu-sdk-ji-cheng-qian-gong-zuo)
+  * [​创建新的GrowingIO项目 ](./#chuang-jian-xin-de-growingio-xiang-mu)或 [在项目中集成一个新的小程序应用](./#zai-tong-yi-xiang-mu-xia-jie-ru-yi-ge-xin-de-xiao-cheng-xu)
+* [小程序SDK标准接入指南](./#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)
+* [SDK高级设置](./#sdk-gao-ji-she-zhi-shu-ju-cai-ji-pei-zhi)
+  * [无埋点采集事件逻辑和高级配置](./#wu-mai-dian-cai-ji-shi-jian-luo-ji-he-gao-ji-pei-zhi)
+  * [自定义事件和变量](./#zi-ding-yi-shi-jian-he-bian-liang)
 
 ## 小程序SDK集成前工作
 
@@ -26,7 +15,7 @@
 
 如果你已经注册 GrowingIO，使用小程序分析功能需要用一个全新的项目，在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“**项目概览**“。在项目概览页面，点击“**新建项目**“来创建一个新项目。在创建好的新项目里，你会看到使用引导，点击“**添加跟踪代码**“即可开始。
 
-![&#x9879;&#x76EE;&#x6982;&#x89C8;](../.gitbook/assets/image%20%28175%29.png)
+![&#x9879;&#x76EE;&#x6982;&#x89C8;](../../.gitbook/assets/image%20%28175%29.png)
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyRLnN1UW6BL8O3mEr%2F-LGySTNxnseL1EsH7kN8%2Fimage.png?alt=media&token=91d05ea5-95d4-4104-b228-0f1837d5201b)
 
@@ -52,7 +41,7 @@
 
 ### 1、下载小程序采集 SDK
 
-目前微信小程序支持以下框架的集成,请选择相应的框架下载SDK，并参照相应框架，添加跟踪代码。
+目前微信小程序支持以下框架的集成,请选择相应的框架下载SDK文件：
 
 * 微信小程序原生框架
 * 微信小程序原生 + 第三方插件
@@ -61,7 +50,7 @@
 * taro框架
 * wepy框架
 
-#### 微信小程序原生框架
+#### 微信小程序原生框架 \| 微信小程序原生 + 第三方插件
 
 下载 gio-minp.js 文件
 
@@ -69,7 +58,7 @@
 $ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
 ```
 
-#### mpvue、taro、wepy框架
+#### mpvue \| mpvue + 第三方插件 \| taro \| wepy
 
 如果小程序使用以上框架，下载 gio-minp.esm.js 文件
 
@@ -81,21 +70,28 @@ $ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
 
 ### 2、添加跟踪代码
 
-在微信小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，**请注意一定要放在 App\(\) 之前**：
+参照相应框架，点击下方链接，添加跟踪代码。
 
-{% tabs %}
-{% tab title="微信原生框架" %}
-对于**原生小程序框架**，请使用以下方式：
+* [微信小程序原生框架](./#wei-xin-yuan-sheng-kuang-jia)
+* [微信小程序原生 + 第三方插件](./#wei-xin-yuan-sheng-kuang-jia-di-san-fang-cha-jian)
+* [taro框架](./#taro-kuang-jia)
+* [Wepy框架](./#wepy-kuang-jia)
+* [mpvue框架](./#mpvue-kuang-jia)
+* [mpvue + 第三方插件](./#mpvue-di-san-fang-cha-jian)
+
+{% hint style="danger" %}
+**在微信小程序项目根目录的 app.js  （app.wpy\) 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前, 否则可能导致采集的数据不完整。**
+{% endhint %}
+
+#### **微信原生框架：**
 
 ```javascript
 var gio = require ("utils/gio-minp.js").default;
 // version 是你的小程序的版本号，发版时请调整
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' });
 ```
-{% endtab %}
 
-{% tab title="微信原生框架+第三方插件" %}
-如果您的原生框架的小程序中使用了**第三方插件**，请添加如下代码：
+#### **微信原生框架+第三方插件**
 
 ```javascript
 var gio = require ("utils/gio-minp.js").default;
@@ -106,158 +102,8 @@ const App = global.GioApp
 //在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入！！！）
 const Page = global.GioPage;
 ```
-{% endtab %}
 
-{% tab title="mpvue" %}
-对于 **mpvue** **小程序框架**，使用下面这种方式：
-
-```javascript
-import gio from './utils/gio-minp'
-import Vue from 'vue'
-import App from './App'
-​
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
-```
-
-\*\*\*\*
-{% endtab %}
-
-{% tab title="mpvue + 第三方插件" %}
-如果您的mpvue框架的小程序中使用了**第三方插件**，使用下面这种方式：
-
-* **第一步：更新 gio-minp.esm.js 到最新版**
-* **第二步：添加 npm 包**
-
-```javascript
-npm install  imports-loader --save-dev
-```
-
-* **第三步：创建一个新文件 /src/utils/vue.js 文件，内容如下：**
-
-```javascript
-mport Vue from 'imports-loader?global=>undefined,Page=>GioPage,App=>GioApp,Component=>GioComponent!mpvue'
-export default Vue
-```
-
-* **第四步 修改 /build/webpack.base.conf.js 配置**
-
-```javascript
-var path = require('path')
-var fs = require('fs')
-var utils = require('./utils')
-var config = require('../config')
-var vueLoaderConfig = require('./vue-loader.conf')
-var webpack = require('webpack')
-var MpvuePlugin = require('webpack-mpvue-asset-plugin')
-var glob = require('glob')
-
-function resolve (dir) {
-  return path.join(__dirname, '..', dir)
-}
-
-function getEntry (rootSrc, pattern) {
-  var files = glob.sync(path.resolve(rootSrc, pattern))
-  return files.reduce((res, file) => {
-    var info = path.parse(file)
-    var key = info.dir.slice(rootSrc.length + 1) + '/' + info.name
-    res[key] = path.resolve(file)
-    return res
-  }, {})
-}
-
-const appEntry = { app: resolve('./src/main.js') }
-const pagesEntry = getEntry(resolve('./src'), 'pages/**/main.js')
-const entry = Object.assign({}, appEntry, pagesEntry)
-
-module.exports = {
-  // 如果要自定义生成的 dist 目录里面的文件路径，
-  // 可以将 entry 写成 {'toPath': 'fromPath'} 的形式，
-  // toPath 为相对于 dist 的路径, 例：index/demo，则生成的文件地址为 dist/index/demo.js
-  entry,
-  target: require('mpvue-webpack-target'),
-  output: {
-    path: config.build.assetsRoot,
-    filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
-  },
-  resolve: {
-    extensions: ['.js', '.vue', '.json'],
-    alias: {
-      'vue': resolve('src/utils/vue'),
-      '@': resolve('src'),
-      'flyio': 'flyio/dist/npm/wx',
-      'wx': resolve('src/utils/wx')
-    },
-    symlinks: false
-  },
-  module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        loader: 'mpvue-loader',
-        options: vueLoaderConfig
-      },
-      {
-        test: /\.js$/,
-        include: [resolve('src'), resolve('test')],
-        use: [
-          'babel-loader',
-          {
-            loader: 'mpvue-loader',
-            options: {
-              checkMPEntry: true
-            }
-          },
-        ]
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: utils.assetsPath('img/[name].[ext]')
-        }
-      },
-      {
-        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: utils.assetsPath('media/[name]].[ext]')
-        }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: utils.assetsPath('fonts/[name].[ext]')
-        }
-      }
-    ]
-  },
-  plugins: [
-    new MpvuePlugin(),
-    new webpack.ProvidePlugin({
-      GioPage: [resolve('src/utils/gio-minp.js'), 'GioPage'],
-      GioApp: [resolve('src/utils/gio-minp.js'), 'GioApp'],
-      GioComponent: [resolve('src/utils/gio-minp.js'), 'GioComponent']
-    }),
-  ]
-}
-```
-
-* **第五步：gio sdk 初始化配置设置 usePlugin 为 true**
-
-```javascript
-gio("init", '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', vue: Vue, usePlugin: true })
-```
-{% endtab %}
-
-{% tab title="Taro框架" %}
-对于 **Taro 小程序框架**，使用下面这种方式：
+#### **Taro 框架**
 
 ```javascript
 import Taro from '@tarojs/taro'
@@ -268,17 +114,32 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', {
   taro: Taro
 });
 ```
-{% endtab %}
 
-{% tab title="Wepy框架" %}
-对于 **Wepy小程序框架**，使用下面这种方式，且注意在微信小程序项目根目录的 app.wpy 文件的顶部添加以下 JS 代码，**请注意一定要放在 App\(\) 之前:**
+#### **Wepy 框架**
 
 ```javascript
 import gio from './utils/gio-minp';
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', debug: true });
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', debug: true })
 ```
-{% endtab %}
-{% endtabs %}
+
+#### **mpvue 框架**
+
+```javascript
+import gio from './utils/gio-minp'
+import Vue from 'vue'
+import App from './App'
+​
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
+
+```
+
+#### mpvue + 第三方插件
+
+mpvue + 第三方插件 设置代码较为复杂，请点击如下链接进行查看。
+
+{% page-ref page="mpvue+-di-san-fang-cha-jian-tian-jia-dai-ma.md" %}
+
+### \*\*\*\*
 
 ### **3、进行SDK的配置设置**
 
@@ -346,7 +207,7 @@ gio("identify", openid, unionid);
 
 作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在小程序中，微信用户属性是非常重要的设置，只有完善了微信用户属性信息，微信的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用户微信相关的信息（微信姓名和头像）定位用户。
 
-![&#x5FAE;&#x4FE1;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;](../.gitbook/assets/image%20%2895%29.png)
+![&#x5FAE;&#x4FE1;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;](../../.gitbook/assets/image%20%2895%29.png)
 
 下面是专门针对用户的三个接口。
 
@@ -387,7 +248,7 @@ wx.getUserInfo({
 
 ### \*\*小程序中有**Webview**
 
-采集数据需要额外添加如下代码。目前**Webview的数据采集**目前暂时仅支持采用‘'[**自定义事件和变量**](mina-sdk.md#zi-ding-yi-shi-jian-he-bian-liang)“的方式进行采集。
+采集数据需要额外添加如下代码。目前**Webview的数据采集**目前暂时仅支持采用‘'[**自定义事件和变量**](./#zi-ding-yi-shi-jian-he-bian-liang)“的方式进行采集。
 
 **1、使用如上提供的最新版 SDK**
 
@@ -430,7 +291,7 @@ Page({
 
 
 
-### 3、添加请求服务器域名
+### 4、添加请求服务器域名
 
 要正常采集微信小程序的数据并发送给 GrowingIO，需要在微信小程序里事先设置一个通讯域名，允许跟 GrowingIO API 服务器进行网络通信。具体步骤如下：
 
@@ -438,9 +299,9 @@ Page({
 2. 打开开发设置，到服务器域名配置部分
 3. 在`request合法域名`中添加：https://wxapi.growingio.com
 
-![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../.gitbook/assets/image%20%28196%29.png)
+![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../../.gitbook/assets/image%20%28196%29.png)
 
-### 4、检测数据
+### 5、检测数据
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面检测数据。请在添加了跟踪代码的小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。详情可见小程序Debugger。
 
@@ -555,11 +416,11 @@ GrowingIO 预置了两个小程序的标准自定义事件：分享到群聊或�
 
 **微信小程序分享到好友或群聊信息**
 
-![](../.gitbook/assets/image%20%2885%29.png)
+![](../../.gitbook/assets/image%20%2885%29.png)
 
 **程序错误**
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../../.gitbook/assets/image%20%2819%29.png)
 
 ### 自定义事件配置
 

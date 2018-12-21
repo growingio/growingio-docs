@@ -12,7 +12,7 @@ GrowingIO 使用自主研发的 SDK 实现数据采集功能。添加 GrowingIO 
 
 {% page-ref page="ios-sdk/" %}
 
-{% page-ref page="mina-sdk.md" %}
+{% page-ref page="mina-sdk/" %}
 
 {% page-ref page="xiao-you-xi-sdk.md" %}
 
