@@ -146,6 +146,13 @@ LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表�
 </div>
 ```
 
+注意: 由于 index 必须是数字类型，Web JS SDK 在采集数据时，只会截取 data-growing-idx 中的数字部分，自动忽略其他字符串。例如
+
+```javascript
+<div data-growing-idx="123abc">test</div>
+// SDK 采集的index是 123
+```
+
 更多的位置信息规则，可以参考[第2节：位置规则](https://sishen.gitbooks.io/gio-js-book/5/2.html)
 
 #### ​​3.4 设置数据采集黑名单 \(growing-ignore\) <a id="34ignore"></a>
