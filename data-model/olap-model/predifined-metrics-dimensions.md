@@ -150,7 +150,7 @@
 
 为了便于分析，我们将访问来源进行了归类：直接访问，搜索引擎，社交媒体，外部链接四大部分。
 
-**直接访问：** 可能是用户直接在浏览器中输入了一个域名或使用书签进行访问； 也有可能是 a.从邮件中点击链接访问网站取决于电子邮件的提供商/程序）； b.从 Microsoft Office 或 PDF 文件中点击链接访问网站； c.通过点击由原 url 生成的短链接访问网站； d.通过 App 点击链接访问网站（比如今日头条、微博、微信中的链接）； e.通过点击一个 https 类型的 url 访问一个 http 类型的 url（比如如果点击 https://example.com/1 转到 http://example.com/2, 对于 example.com/2 的分析会认为是直接访问）； f.部分浏览器（特别是移动端浏览器）会把搜索跳转当成直接访问；
+**直接访问：** 可能是用户直接在浏览器中输入了一个域名或使用书签进行访问； 也有可能是 a.从邮件中点击链接访问网站取决于电子邮件的提供商/程序）； b.从 Microsoft Office 或 PDF 文件中点击链接访问网站； c.通过点击由原 url 生成的短链接访问网站； d.通过 App 点击链接访问网站（比如今日头条、微博中的链接）（对微信做过识别，故此场景不适用微信）； e.通过点击一个 https 类型的 url 访问一个 http 类型的 url（比如如果点击 https://example.com/1 转到 http://example.com/2, 对于 example.com/2 的分析会认为是直接访问）； f.部分浏览器（特别是移动端浏览器）会把搜索跳转当成直接访问；
 
 **搜索引擎：** www.baidu.com，m.baidu.com，bzclk.baidu.com，so.com, sogou.com, bing.com, youdao.com，zhongsou.com，google.xx.xx，sm.cn，yahoo.com。
 
