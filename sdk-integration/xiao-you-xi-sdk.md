@@ -71,7 +71,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 ```
 {% endhint %}
 
-**注意：**如果你的微信小游戏在用户打开后不要求用户授权获取openid和/或 unionid，但是设置了forceLogin为True，那么GroiwngIO不能采集到用户的数据，所以请特别注意这个参数的设置。
+**注意：如果你的微信小游戏在用户打开后不及时要求用户授权获取openid和/或 unionid，但是设置了forceLogin为True，那么GroiwngIO不能采集到用户的数据，采集到的用户会偏少，所以请特别注意这个参数的设置。如果您不能确定是否要设置这个参数，请先咨询我们。**
 
 ### 添加请求服务器域名 <a id="tian-jia-qing-qiu-fu-wu-qi-yu-ming"></a>
 
