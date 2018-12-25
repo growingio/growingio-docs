@@ -48,7 +48,7 @@ description: 最多用户使用的、强大而灵活的数据分析工具
 
 ## 2.事件分析界面介绍
 
-![](https://lh6.googleusercontent.com/ay6y0Yq8gzk3SPKsAH1mybPRRFlOoi4aCzyUzFYZ4m-NaCz8T3goIuLBPPm4RzM-qX9nd_z6JbApUbeJP8-cLdQB1mznzQZaXML3nNWuH6DEovf5z3J0aPg6jbWw7k5I-usKoQSh)
+![](../.gitbook/assets/image%20%28117%29.png)
 
 ### 2.1 事件选择
 
@@ -56,7 +56,7 @@ description: 最多用户使用的、强大而灵活的数据分析工具
 
 而事件的度量方式就是我们常提到的指标，比如我们对 “用户量” 这一事件进行分析，我们可以直接利用预定义指标来度量。
 
-![](https://lh6.googleusercontent.com/JgcP5nBaCzsgghd1st16k-DfRwo1o9N4aujpeITtnkOvLI7LM3s49Xg0beeBNVQk0AnByU01N21WfFcrXY3s_lOQRgwDLpxlnm77D0L_einXgVlDV82d53AXd2te7mgsjbDIKtql)
+![](../.gitbook/assets/image%20%2895%29.png)
 
 对于日常使用，我们提供了自定义指标以及预定义指标两大部分，一次事件分析可添加20个事件指标。下边对几个主要概念进行说明：
 
@@ -82,7 +82,7 @@ description: 最多用户使用的、强大而灵活的数据分析工具
 
 完成事件指标的选择后，您可按维度拆分对事件指标进行更加精细化的分析。可选的拆分维度会随着事件指标的选择而产生变化。维度拆分支持添加10个维度对事件指标进行拆解。
 
-![](https://lh3.googleusercontent.com/t_4DJmA7acv4I9pIA7rvMlAUqc9Hv2KGkeNfTtDQkudHhn8KkxR_lmMnZ6ws3x4yKUT1RVdMEupev3qdbW-LpEVA4Go29k4TkbNhpiSPrkMocHbGCqQQxtZ1SJPsIaZiuPy4BG5t)
+![](../.gitbook/assets/image%20%28125%29.png)
 
 其中可选择的包括：
 
@@ -101,7 +101,7 @@ description: 最多用户使用的、强大而灵活的数据分析工具
 
 我们提供4种默认分群用户，包括全部访问用户、新访问用户、全部登录用户和新登录用户。也可通过用户分群功能建立特定分群用户，对特定分群用户进行分析。
 
-![](https://lh3.googleusercontent.com/kfrhLvdmbxgZCIiUS0ZRdaFagYWUX8k74rq6rgrJosvhjHLLSQXpjSbvdT9bDJ0R0voZl2RNUEm_kr8ldMebQfr5cxP73vEkaa-P3s1NjOwB1b5lS6WTuOXQa7DLL7roQ9Zk8ziv)
+![](../.gitbook/assets/image%20%28159%29.png)
 
 特别提示，在选择不同分群用户后，不再支持进行不同维度的拆解，仅能进行二选一。
 
@@ -111,11 +111,11 @@ description: 最多用户使用的、强大而灵活的数据分析工具
 
 **1.时间过滤：**包括今日、昨天、过去7天、14天、30天、180天以及365天等常用用户活动周期。颗粒度选择可选小时、天、周以及月，确保分析精细程度。
 
-![](https://lh5.googleusercontent.com/dc5XSPElMxYq46k6UvUnoSEa9mzZ4XTziiup31E-QMrjRk0cIh9lKpW4os2LFdgq-mGBFCzowHP367CLTWzabNAReJaA1KVK3_IKg3X_zTrsCMtwoNCMnNzAGSKAm8JUH6Seos2c)
+![](../.gitbook/assets/image%20%2856%29.png)
 
 **2.条件过滤：**过滤条件可选择不同维度的特定数值或文本，从而实现模糊或精确匹配，最多可叠加5种不同过滤条件。
 
-![](https://lh3.googleusercontent.com/cRQgoKlEZyR5UprrT6a-ULzynE-dTXQWzYr48-klmvFdgKZzejkuDaMjZi-yQ8cAb-_GoBpNwqSx4dPZCPJhFT97pS8am6d2H0Ef5iNhxMJXwHuhSbFYgxg644QUvH3dakG7s6Z9)
+![](../.gitbook/assets/image%20%2830%29.png)
 
 ### 2.5 图表选择
 
@@ -127,17 +127,19 @@ description: 最多用户使用的、强大而灵活的数据分析工具
 
 我们点击显示环比，即在图表中通过灰线展现上一周期的数据情况。系统默认对比上一周期，若改变当前周期的时间，则将重置对比周期为相应的“上一周期”。
 
-![](https://lh5.googleusercontent.com/FonL_xU_Wd_hcgWSjzqetzSuL1m5J5qhgh2jUBNjG2pG6NdveBTQEyCOjXknQp30yo6g2-Fu8wSc13wq9ith7QFSL8QIlquhZQyc0nIfcG7SQZIELsbNDbwhhfQ7ESiNdWJ7BHgv)
+![](../.gitbook/assets/image%20%2835%29.png)
 
 ### 2.7 事件保存
 
 点击保存后，我们可以自定义事件分析名称，也可通过共享设置来决定可见的人群以及是否可以对该事件分析进行编辑等具体权限。
 
+![](../.gitbook/assets/image%20%282%29.png)
+
 ![](https://lh4.googleusercontent.com/iluc9-m-t4hnYCBQFYE3GlANm0pZT7eleT2YKaVfUKYCf0DFnN1XB3--uRr-new1OG6OCtaYYAKiTOfiH2LzQlrhe0OHUoW8_ninnifqqlm1VAa4CextXppaCP89Wj-GfbrK049n)
 
 在完成保存后，建议将该图表添加到特定看板。特定看板可以是你创建的、你收藏的，或者项目内的其他指定看板。
 
-![](https://lh5.googleusercontent.com/XYOer9SdyU1Js_-GbCgcRR3CnqZ3nqudz_5OB1jRxqKu7H9kazCeZGbCBJBPJwoNIa5hEN56yTW86zxZSVJyRCplDSZcqJRhczEet7IO5MWeSsD7u2xB20-bcgfGj0Ma67a8aczo)
+![](../.gitbook/assets/image%20%28164%29.png)
 
 ## 3.**单图列表**
 
@@ -165,7 +167,7 @@ description: 最多用户使用的、强大而灵活的数据分析工具
 
 纵向柱图主要用于分析和对比各类别之间的数值大小 ，其中横轴表示需要对比的分类维度，纵轴表示相应的指标数值。您可以通过纵向柱图分析一个或多个指标在特定维度的分类表现。例如，产品经理和运营人员可以使用纵向柱图分析过去一段时间内不同访问来源过来的流量表现。
 
-![](../.gitbook/assets/image%20%28128%29.png)
+![](../.gitbook/assets/image%20%28136%29.png)
 
 上图展示的是用户量、访问量、页面浏览量等流量指标从不同一级访问来源过来的数据表现。您可以通过纵向柱图对比不同访问来源过来的数据，进而判断哪些是高质量的渠道。
 
@@ -173,7 +175,7 @@ description: 最多用户使用的、强大而灵活的数据分析工具
 
 表格是信息最密集的呈现方式，可以同时分析多指标和多维度的数据，您可以选择指标和维度，然后设置时间范围和展示粒度，可以进行维度过滤。
 
-![](../.gitbook/assets/image%20%28214%29.png)
+![](../.gitbook/assets/image%20%28224%29.png)
 
 相较图表的形式，表格不那么容易看出变化趋势, 但是能更快地得到具体数值。对于核心 KPI 或您关心的指标，快速进行多维度拆解，灵活性高。图表中最多展示 100 条信息，表格进行多维度拆解时往往无法完整展示所有数据，您也可以下载表格以观测完整数据。注：下载受到权限控制。
 
@@ -195,7 +197,7 @@ description: 最多用户使用的、强大而灵活的数据分析工具
 
 上图展示的是页面浏览量在不同浏览器下的分布。可以发现，横向柱图清晰展示了用户在不同类别上的频数，并且按照数量从大到小进行排序。在资源有限的情况下产品可以先适配 Chrome 浏览器以提升绝大部分用户的体验。 常用来细分的维度，如浏览器，操作系统，城市，App 版本，设备型号，广告来源等。 应用：您做了渠道推广后，希望查看不同访问来源的访问用户量，可以选择指标为“用户量”，维度选择为“访问来源”。
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../.gitbook/assets/image%20%2826%29.png)
 
 可以看到上图显示的是：在过去 7 天内访问用户数总量前 10 名的访问来源按照降序显示出来，您可以判断哪些是高质量的渠道。
 

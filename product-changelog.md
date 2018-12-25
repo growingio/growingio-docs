@@ -8,13 +8,13 @@ description: 我们一直在迭代！
 
 #### **关键词：预置看板权限 \| 历史用户上传**
 
-![](.gitbook/assets/image%20%28120%29.png)
+![](.gitbook/assets/image%20%28128%29.png)
 
 * **预置看板权限**
 
 我们为**企业权限管理用户**优化了预置看板的权限设置功能。超级管理员可以设置首页侧边预置看板的可见用户的范围。
 
-![](.gitbook/assets/image%20%28174%29.png)
+![](.gitbook/assets/image%20%28184%29.png)
 
 * **历史注册用户ID以及注册日期支持上传**
 
@@ -24,7 +24,7 @@ description: 我们一直在迭代！
 
 #### **关键词：H5活动分析 \| 实时 \| 小程序分享 \|微信内嵌页 \|用户分群**
 
-![](.gitbook/assets/image%20%2878%29.png)
+![](.gitbook/assets/image%20%2882%29.png)
 
 * **H5活动分析**
 
@@ -34,7 +34,7 @@ description: 我们一直在迭代！
 
 我们为**数据定义人员**设计了更为方便的分析页面属性的功能。在 web 圈选或自定义事件和变量中，可以直接将某个页面的查询条件定义为页面级变量，在分析页面时作为维度属性分析。[点击详情查看更多](data-definition/page-variable/query.md)
 
-![](.gitbook/assets/image%20%286%29.png)
+![](.gitbook/assets/image%20%287%29.png)
 
 * **实时**
 
@@ -44,7 +44,7 @@ description: 我们一直在迭代！
 
 我们为**运营和产品**优化了用户分群详情的用户群对比功能，更新后，可以支持对比任意两个分群的核心行为差异，例如：对比购买转化和未转化用户群。[点击详情查看更多](data-analytics/user-segmentation.md#2-4)
 
-![](.gitbook/assets/image%20%28110%29.png)
+![](.gitbook/assets/image%20%28116%29.png)
 
 * **小程序分享分析**
 
