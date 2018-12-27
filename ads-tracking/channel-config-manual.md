@@ -70,7 +70,7 @@ f.输入联调设备进行联调
 
 g.联调成功后，启用转化状态
 
-![](../.gitbook/assets/image%20%28223%29.png)
+![](../.gitbook/assets/image%20%28224%29.png)
 
 ![](../.gitbook/assets/image%20%2855%29.png)
 
@@ -139,7 +139,7 @@ g.联调成功后，启用转化状态
 
 1、在GIO后台创建Normal—Link链接，目标渠道选择“腾讯社交广告”，然后点击保存
 
-![](../.gitbook/assets/image%20%28182%29.png)
+![](../.gitbook/assets/image%20%28183%29.png)
 
 2、点击保存后进入绑定与授权，
 
@@ -150,13 +150,13 @@ g.联调成功后，启用转化状态
 3）应用ID：填写您选取应用的对应ID，示例：IOS填写Appstore地址上面的数字。  
 
 
-![](../.gitbook/assets/image%20%28119%29.png)
+![](../.gitbook/assets/image%20%28120%29.png)
 
 其中，“投放账号”和“投放账号ID”，与广点通后台相对应。
 
 获取方式如下：
 
-![](../.gitbook/assets/image%20%28210%29.png)
+![](../.gitbook/assets/image%20%28211%29.png)
 
 应用标识，请与广点通后台填写的“应用宝ID”或“苹果商店ID”保持一致。
 
@@ -167,7 +167,7 @@ g.联调成功后，启用转化状态
 3、点击授权之后再这里进行同意授权，同事返回GIO后台获取监测链接  
 
 
-![](../.gitbook/assets/image%20%28170%29.png)
+![](../.gitbook/assets/image%20%28171%29.png)
 
 4、进入腾讯社交广告后台开始联调，在工具箱里面选择“转化跟踪”。
 
