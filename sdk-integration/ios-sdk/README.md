@@ -320,7 +320,7 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 GrowingIO 使用 IDFA 来做来源管理激活设备的精确匹配，让你更好的衡量广告效果。如果你不希望跟踪这个信息，可以选择不引入 AdSupport.framework 或者在用 Cocoapods 安装时使用 ‘GrowingIO/without-IDFA' subspec.
 {% endhint %}
 
-### Push推送点击采集
+### 推送采集
 
 在**IOS  SDK 2.6.3** 版本， 支持采集通知的标题和内容，此功能默认关闭，如需开启，请在 Application 初始化 GrowingIO 中设置，例如：
 
