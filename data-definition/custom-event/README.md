@@ -58,8 +58,8 @@
 在完成了配置后，即可在代码中完成以上设计的 “自定义事件和变量” 的部署。具体的说，就是调用 GrowingIO 提供的 API 接口，上传数据。
 
 * [​JS 接口文档​](../../sdk-integration/web-js-sdk/#track)
-* [​Android 接口文档​](../../sdk-integration/android-sdk/#2-zi-ding-yi-shi-jian-he-bian-liang-api)
-* [​iOS 接口文档​](../../sdk-integration/ios-sdk/#ios-sdk-api)
+* [​Android 接口文档​](../../sdk-integration/android-sdk/android-sdk.md#2-zi-ding-yi-shi-jian-he-bian-liang-api)
+* [​iOS 接口文档​](../../sdk-integration/ios-sdk-1/ios-sdk.md#ios-sdk-api)
 * ​[小程序接口文档​](../../sdk-integration/mina-sdk/#zi-ding-yi-shi-jian-he-bian-liang)
 
 API 中给出了埋点事件的上传方式。

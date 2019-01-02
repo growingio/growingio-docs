@@ -49,7 +49,7 @@ npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 
 ### 1. 添加 Android 无埋点 SDK 依赖
 
-React  Native 无埋点 SDK 是在 Android 原生 SDK 上的扩展，参照 [Android 无埋点 SDK](../android-sdk/#ji-cheng-wu-mai-dian-sdk)，集成步骤的 1~5，注意将 SDK 版本号替换成 RN 版本`RN-autotrack-2.6.6` 
+React  Native 无埋点 SDK 是在 Android 原生 SDK 上的扩展，参照 [Android 无埋点 SDK](../android-sdk/android-sdk.md#ji-cheng-wu-mai-dian-sdk)，集成步骤的 1~5，注意将 SDK 版本号替换成 RN 版本`RN-autotrack-2.6.6` 
 
 集成步骤中，只有版本号不同，适配 RN 与原生混合开发场景。
 
@@ -94,7 +94,7 @@ public class MainApplication extends Application implements ReactApplication {
 
    添加到iOS工程
 
-其余参照[ iOS 无埋点 SDK ](../ios-sdk/#wu-mai-dian-sdk-ji-cheng)集成，操作步骤一致。
+其余参照[ iOS 无埋点 SDK ](../ios-sdk-1/ios-sdk.md#wu-mai-dian-sdk-ji-cheng)集成，操作步骤一致。
 
 ### 2. 集成 React Native 打点 SDK
 
@@ -126,9 +126,9 @@ react-native link react-native-growingio
 
 ### 3. 重要配置项
 
-与原生混合开发的开发者可详细查看[ iOS 无埋点 重要配置](../ios-sdk/#zhong-yao-pei-zhi)文档，如果原生控件使用不多，只需关注如下配置即可：
+与原生混合开发的开发者可详细查看[ iOS 无埋点 重要配置](../ios-sdk-1/ios-sdk.md#zhong-yao-pei-zhi)文档，如果原生控件使用不多，只需关注如下配置即可：
 
-* \*\*\*\*[**App Store 提交应用注意事项**](../ios-sdk/#zai-app-store-ti-jiao-ying-yong)\*\*\*\*
+* \*\*\*\*[**App Store 提交应用注意事项**](../ios-sdk-1/ios-sdk.md#zai-app-store-ti-jiao-ying-yong)\*\*\*\*
 
 
 
@@ -285,11 +285,11 @@ NativeModules.GrowingIO.setVisitor({ "age": 20, "gender": "male" });
 
 | 属性名称         | 参数限制                         | 描述 | 功能对应于原生接口       |
 | :--- | :--- | :--- | :--- |
-| ignore | 仅接受`"true"` | 忽略对应的元素，不采集点击事件和浏览事件 | [Android](../android-sdk/#hu-lve-yuan-su) 文档解释，iOS 意义相同 |
-| track | 仅接受`"true"` | 采集输入框内容，默认采集输入框内容变化次数，不采集内容 | [Android](../android-sdk/#cai-ji-shu-ru-kuang-shu-ju) 文档解释，iOS 意义相同 |
-| id |  | 设置界面元素ID | [Android](../android-sdk/#she-zhi-jie-mian-yuan-su-id) 文档解释，iOS 意义相同 |
-| content |  | 设置界面元素内容 | [Android](../android-sdk/#she-zhi-jie-mian-yuan-su-nei-rong) 文档解释，iOS 意义相同 |
-| info |  | 设置元素对象 | [Android](../android-sdk/#she-zhi-yuan-su-dui-xiang) 文档解释，iOS 意义相同 |
+| ignore | 仅接受`"true"` | 忽略对应的元素，不采集点击事件和浏览事件 | [Android](../android-sdk/android-sdk.md#hu-lve-yuan-su) 文档解释，iOS 意义相同 |
+| track | 仅接受`"true"` | 采集输入框内容，默认采集输入框内容变化次数，不采集内容 | [Android](../android-sdk/android-sdk.md#cai-ji-shu-ru-kuang-shu-ju) 文档解释，iOS 意义相同 |
+| id |  | 设置界面元素ID | [Android](../android-sdk/android-sdk.md#she-zhi-jie-mian-yuan-su-id) 文档解释，iOS 意义相同 |
+| content |  | 设置界面元素内容 | [Android](../android-sdk/android-sdk.md#she-zhi-jie-mian-yuan-su-nei-rong) 文档解释，iOS 意义相同 |
+| info |  | 设置元素对象 | [Android](../android-sdk/android-sdk.md#she-zhi-yuan-su-dui-xiang) 文档解释，iOS 意义相同 |
 
 #### 支持设置组件（Component）列表（包括但不限于）
 
@@ -315,12 +315,12 @@ NativeModules.GrowingIO.setVisitor({ "age": 20, "gender": "male" });
 2. 验证 页面是否识别（page）
 3. 验证[热图](../../data-analytics/heatmap/heatmap-app.md)和[圈选](../../data-definition/circle/app.md)功能
 4. [原生验证内容](../android-sdk/android-mai-dian-sdk.md#yan-zheng-gong-ju)（Android）
-5. [原生验证内容](../ios-sdk/#3-quan-xuan-he-re-tu-gong-neng-yan-zheng)（iOS）
+5. [原生验证内容](../ios-sdk-1/ios-sdk.md#3-quan-xuan-he-re-tu-gong-neng-yan-zheng)（iOS）
 
 #### 验证工具：
 
 1. [Mobile Debugger](../growingio-debugger/)
-2. [查看日志： ](../android-sdk/#she-zhi-debug-mo-shi)Android 打开 TestMode  和 Debug Mode
+2. [查看日志： ](../android-sdk/android-sdk.md#she-zhi-debug-mo-shi)Android 打开 TestMode  和 Debug Mode
 3. 查看日志：iOS
 
 ## 常见问题

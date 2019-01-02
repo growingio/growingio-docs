@@ -529,7 +529,7 @@ uexGrowingIO.setVisitor({"gender":"male","age":21});
 #### 验证工具：
 
 1. [Mobile Debugger](growingio-debugger/)
-2. Android [查看日志：](android-sdk/#she-zhi-debug-mo-shi)初始化GrowingIO时打开测试模式
+2. Android [查看日志：](android-sdk/android-sdk.md#she-zhi-debug-mo-shi)初始化GrowingIO时打开测试模式
 
 ```java
 var options = {

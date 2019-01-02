@@ -304,17 +304,17 @@ GrowingIO 所有 API 都需要在主线程调用。
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left"><a href="./#cai-ji-guang-gao-banner-shu-ju">trackBanner</a>
+      <td style="text-align:left"><a href="android-sdk.md#cai-ji-guang-gao-banner-shu-ju">trackBanner</a>
       </td>
-      <td style="text-align:left"><a href="./#cai-ji-guang-gao-banner-shu-ju">设置所有广告图对应的广告内容描述，内容描述需要跟广告的顺序相同。</a>
+      <td style="text-align:left"><a href="android-sdk.md#cai-ji-guang-gao-banner-shu-ju">设置所有广告图对应的广告内容描述，内容描述需要跟广告的顺序相同。</a>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">​<a href="./#cai-ji-shu-ru-kuang-shu-ju">trackEditText</a>
+      <td style="text-align:left">​<a href="android-sdk.md#cai-ji-shu-ru-kuang-shu-ju">trackEditText</a>
       </td>
       <td style="text-align:left">
-        <p>​<a href="./#cai-ji-shu-ru-kuang-shu-ju">SDK 默认不采集用户输入框的内容，设置以后，采集除了密码以外的输入框文本内容。​</a>
+        <p>​<a href="android-sdk.md#cai-ji-shu-ru-kuang-shu-ju">SDK 默认不采集用户输入框的内容，设置以后，采集除了密码以外的输入框文本内容。​</a>
         </p>
         <p>当这个输入框失去焦点（包括应用退到后台），且输入框内容跟获取焦点前相比发生变化时，输入框内文字会被发送回GrowingIO。</p>
         <p>注意：对于密码输入框，即便标记为需要采集，SDK也会忽略，不采集它的数据。</p>

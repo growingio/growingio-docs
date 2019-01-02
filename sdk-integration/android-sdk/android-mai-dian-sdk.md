@@ -7,6 +7,12 @@ description: >-
 
 # Android 埋点 SDK
 
+
+
+{% hint style="danger" %}
+埋点 SDK 
+{% endhint %}
+
 ## 集成埋点 SDK
 
 ### 1.添加依赖
@@ -849,10 +855,10 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 
 | 事件类型 | 含义 | 发送时机 |
 | :--- | :--- | :--- |
-| cstm | 自定义事件触发 | 调用[`track`](./#track)后发送 |
-| evar | 转化变量触发 | 调用[`setEvar`](./#setevar)后发送 |
-| ppl | 设置用户变量 | 调用[`setPeopleVariable`](./#setpeoplevariable)后发送 |
-| vstr | 设置访问用户变量 | 调用[`setVisitor`](./#setvisitor)后发送 |
+| cstm | 自定义事件触发 | 调用[`track`](android-sdk.md#track)后发送 |
+| evar | 转化变量触发 | 调用[`setEvar`](android-sdk.md#setevar)后发送 |
+| ppl | 设置用户变量 | 调用[`setPeopleVariable`](android-sdk.md#setpeoplevariable)后发送 |
+| vstr | 设置访问用户变量 | 调用[`setVisitor`](android-sdk.md#setvisitor)后发送 |
 
 
 
@@ -860,7 +866,7 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 
 #### [1. MobileDebugger](../growingio-debugger/#qi-dong-mobile-debugger)
 
-#### [2.查看日志](./#setdebugmode)
+#### [2.查看日志](android-sdk.md#setdebugmode)
 
 
 

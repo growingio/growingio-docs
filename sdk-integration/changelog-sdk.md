@@ -24,12 +24,12 @@ iOS 2.6.5
 Android 2.6.3
 
 1. 修复客户调用`WebView`的`setWebChromeClient`， 传参为`new WebChromeClient()` 时导致内嵌 H5 页面无法圈选；
-2. 支持[采集通知 Notification](android-sdk/#cai-ji-tong-zhi-notification)的点击与展现。
+2. 支持[采集通知 Notification](android-sdk/android-sdk.md#cai-ji-tong-zhi-notification)的点击与展现。
 
 iOS 2.6.3
 
 1. 修复多个`ViewController` 滑动切换时，没有识别导致用户页面访问事件数据错误；
-2. 支持[采集通知](ios-sdk/#push-tui-song-dian-ji-cai-ji)的点击。
+2. 支持[采集通知](ios-sdk-1/ios-sdk.md#push-tui-song-dian-ji-cai-ji)的点击。
 
 ### 2018年11月24日
 

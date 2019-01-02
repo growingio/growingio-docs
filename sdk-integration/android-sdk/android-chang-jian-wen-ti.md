@@ -10,7 +10,7 @@ APP进入一个页面之后，无论其中有多少层`Fragment`嵌套，200ms �
 
 1.[圈选](../../data-definition/circle/app.md)，查看圈选页面为当前页面![](https://docs.growingio.com/.gitbook/assets/-LGNxeGABUADKiTWTaEM-LI58sGTg1USJzrnTVZD-LI5KdIC78J2Y7tfdBp2image.png)
 
-2.[查看日志](./#setdebugmode)，进入页面发送的`page`的`p`为当前的页面
+2.[查看日志](android-sdk.md#setdebugmode)，进入页面发送的`page`的`p`为当前的页面
 
 3.使用[`Mobile Debugger`](../growingio-debugger/#growingio-mobile-debugger)查看`page`事件的`p`
 
@@ -54,7 +54,7 @@ public void onCustomClick(View view){
 ```
 
 {% hint style="danger" %}
-如果您还未采集到点击事件， 并且使用了 lambda 表达式，请看 [lambda 配置](./#5-lambda-biao-da-shi-zhi-chi-pei-zhi-xiang)。
+如果您还未采集到点击事件， 并且使用了 lambda 表达式，请看 [lambda 配置](android-sdk.md#5-lambda-biao-da-shi-zhi-chi-pei-zhi-xiang)。
 {% endhint %}
 
 

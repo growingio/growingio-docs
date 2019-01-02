@@ -39,7 +39,7 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 #### 2，设置URL Scheme与初始化SDK（必选）
 
-参考官网文档：设置[URL Scheme](ios-sdk/#2-she-zhi-url-scheme)和[初始化](ios-sdk/#3-chu-shi-hua)
+参考官网文档：设置[URL Scheme](ios-sdk-1/ios-sdk.md#2-she-zhi-url-scheme)和[初始化](ios-sdk-1/ios-sdk.md#3-chu-shi-hua)
 
 ### 4. 常见问题
 
