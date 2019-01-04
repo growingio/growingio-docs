@@ -49,7 +49,7 @@ npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 
 ### 1. 添加 Android 无埋点 SDK 依赖
 
-React  Native 无埋点 SDK 是在 Android 原生 SDK 上的扩展，参照 [Android 无埋点 SDK](../android-sdk/android-sdk.md#ji-cheng-wu-mai-dian-sdk)，集成步骤的 1~5，注意将 SDK 版本号替换成 RN 版本`RN-autotrack-2.6.6` 
+React  Native 无埋点 SDK 是在 Android 原生 SDK 上的扩展，参照 [Android 无埋点 SDK](../android-sdk/android-sdk.md#ji-cheng-wu-mai-dian-sdk)，集成步骤的 1~5，注意将 SDK 版本号替换成 RN 版本`RN-autotrack-2.6.7` 
 
 集成步骤中，只有版本号不同，适配 RN 与原生混合开发场景。
 

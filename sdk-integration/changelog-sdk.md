@@ -1,5 +1,21 @@
 # SDK 更新日志
 
+### 2019年1月6日
+
+Android 2.6.7
+
+1. 修复 `View` 的 `Context` 是 `Application` 时，无法采集点击事件；
+2. 修复 `Fragment` 元素不可见发送 `imp` 事件；
+3. 优化元素展现事件和性能；
+4. 修复在 vivo x20 plus 机型上，多进程圈选问题；
+5. 自定义页面事件（`pvar`）优化，之前 `setPageVariable` 接口需要用户每次进入页面的时候设置， 现更新为`pvar`只需要设置一次，在页面销毁之前每次展示都会补发`pvar`，如果用户设置`null`则清空 `pvar`事件；
+6. 提供关闭单独元素展现事件接口 —— [`ignoreViewImp`](android-sdk/api.md#growingio-yun-hang-shi-api)。
+
+iOS 2.6.7
+
+1. 提供关闭单独元素展现事件接口—— [`growingAttributesDonotTrackImp`](ios-sdk-1/ios-sdk-api.md#shu-ju-cai-ji-fa-song-api)\`\`
+2. 自定义页面事件（`pvar`）优化，之前 `setPageVariable` 接口需要用户每次进入页面的时候设置， 现更新为`pvar`只需要设置一次，在页面销毁之前每次展示都会补发`pvar`，如果用户设置`null`则清空 `pvar`事件；
+
 ### 2018年12月14日
 
 Android 2.6.6

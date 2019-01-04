@@ -258,7 +258,7 @@ GrowingIO 所有 API 都需要在主线程调用。
       <td style="text-align:left">ignoredView</td>
       <td style="text-align:left">
         <p>忽略配置的 View ，不采集用户数据。</p>
-        <p>如果您需要忽略某些特殊内容，比如倒计时元素或涉及隐私的内容，可以使用该功能。</p>
+        <p>如果您需要忽略某些特殊内容，比如倒计时元素或涉及隐私的内容，可以使用此接口。</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
@@ -272,6 +272,14 @@ GrowingIO 所有 API 都需要在主线程调用。
       <td style="text-align:left">ignoreFragmentX</td>
       <td style="text-align:left">支持 AndroidX ， 功能同 ignoreFragment。</td>
       <td style="text-align:left">2.6.6 以上</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ignoreViewImp</td>
+      <td style="text-align:left">
+        <p>忽略配置的 View ，不采集用户元素浏览数据。</p>
+        <p>如果您需要忽略某些大量的 数据，比如弹幕，可以使用此接口。</p>
+      </td>
+      <td style="text-align:left">2.6.7 以上</td>
     </tr>
     <tr>
       <td style="text-align:left">setPageName</td>

@@ -7,12 +7,6 @@ description: >-
 
 # Android 埋点 SDK
 
-
-
-{% hint style="danger" %}
-埋点 SDK 
-{% endhint %}
-
 ## 集成埋点 SDK
 
 ### 1.添加依赖
@@ -39,7 +33,7 @@ android {
 }
 dependencies {
     //GrowingIO 埋点 SDK
-    implementation 'com.growingio.android:vds-android-agent:track-2.6.6@aar'
+    implementation 'com.growingio.android:vds-android-agent:track-2.6.7@aar'
 }
 ```
 
