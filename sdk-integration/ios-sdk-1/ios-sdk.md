@@ -6,9 +6,9 @@ description: GrowingIO 无埋点 SDK 会自动采集用户行为数据、页面�
 
 ## **组件化SDK**
 
-GrowingIO iOS SDK2.6.5 包含以下2个组件SDK:
+GrowingIO iOS SDK2.6.7 包含以下2个组件SDK:
 
-•  [GrowingCoreKit](mai-dian-sdk-ji-cheng.md) \(组件基础库,具备分析功能\)
+•  GrowingCoreKit \(组件基础库,具备分析功能\)
 
 •  GrowingAutoTrackKit \(无埋点库\)
 
@@ -32,7 +32,7 @@ GrowingIO iOS SDK2.6.5 包含以下2个组件SDK:
 
 #### （2）手动集成 SDK 
 
-* 下载 2.6.3 版 iOS SDK以下包：[GrowingHeader ](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.5.zip)，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.5.zip)，[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.6.5.zip)
+* 下载 2.6.7 版 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.7.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.7.zip)，[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.6.7.zip)
 * 解压 iOS SDK 压缩文件
 *  将`Growing.h`，`GrowingCoreKit.framework`，`GrowingAutoTrackKit.framework`添加到iOS工程中。
 
@@ -452,6 +452,10 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 ### setPageVariable
 
 发送页面级别的信息，在添加代码之前必须在打点管理界面上声明页面级变量。
+
+{% hint style="danger" %}
+**SDK 2.6.7** 将页面级变量**`pageLevelVariables`**与该页面对象绑定，设置不同的值将会合并，如果想要清空，需要传 null 。
+{% endhint %}
 
 #### 参数说明：
 

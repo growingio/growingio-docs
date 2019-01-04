@@ -169,6 +169,12 @@ description: >-
       <td style="text-align:left">获取当前访问 id</td>
       <td style="text-align:left"></td>
     </tr>
+    <tr>
+      <td style="text-align:left">growingAttributesDonotTrackImp</td>
+      <td style="text-align:center">False</td>
+      <td style="text-align:left">设置是否采集view及页面元素的imp事件</td>
+      <td style="text-align:left">2.6.7</td>
+    </tr>
   </tbody>
 </table>### 
 
