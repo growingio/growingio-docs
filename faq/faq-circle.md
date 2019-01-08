@@ -156,7 +156,7 @@ X-Frame-Options: Allow-From http://www.growingio.com
 
          i.  是否将`<intent-filter/>` 代码块配置在了 “闪屏页面”，并且在短时间内`finish`了这个 Activity ？ 
 
-解答： 请将闪屏页面停留时间稍微延长，Gio 会在幻想页面中检测是否登录了圈选，这时被 finish 将无法正常唤醒圈选。或者如果您不需要圈选闪屏页面， 请将`<intent-filter/>` 代码块放在主页的 `Activity` 中。
+解答： 请将闪屏页面停留时间稍微延长，Gio 会在唤醒页面中检测是否登录了圈选，这时被 finish 将无法正常唤醒圈选。或者如果您不需要圈选闪屏页面， 请将`<intent-filter/>` 代码块放在主页的 `Activity` 中。
 
         ii. 是否在配置 `<intent-filter/>` 代码块中的 Activity 中使用了 `getIntent` 呢？
 
