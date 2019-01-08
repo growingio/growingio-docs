@@ -8,7 +8,7 @@ description: 我们一直在迭代！
 
 #### **关键词：小程序用户分群 \| 实时**
 
-![](.gitbook/assets/image%20%28115%29.png)
+![](.gitbook/assets/image%20%28116%29.png)
 
 * **小程序-用户列表**
 
@@ -28,13 +28,13 @@ description: 我们一直在迭代！
 
 #### **关键词：预置看板权限 \| 历史用户上传**
 
-![](.gitbook/assets/image%20%28129%29.png)
+![](.gitbook/assets/image%20%28130%29.png)
 
 * **预置看板权限**
 
 我们为**企业权限管理用户**优化了预置看板的权限设置功能。超级管理员可以设置首页侧边预置看板的可见用户的范围。
 
-![](.gitbook/assets/image%20%28185%29.png)
+![](.gitbook/assets/image%20%28187%29.png)
 
 * **历史注册用户ID以及注册日期支持上传**
 
@@ -44,7 +44,7 @@ description: 我们一直在迭代！
 
 #### **关键词：H5活动分析 \| 实时 \| 小程序分享 \|微信内嵌页 \|用户分群**
 
-![](.gitbook/assets/image%20%2882%29.png)
+![](.gitbook/assets/image%20%2883%29.png)
 
 * **H5活动分析**
 
@@ -64,7 +64,7 @@ description: 我们一直在迭代！
 
 我们为**运营和产品**优化了用户分群详情的用户群对比功能，更新后，可以支持对比任意两个分群的核心行为差异，例如：对比购买转化和未转化用户群。[点击详情查看更多](data-analytics/user-segmentation.md#2-4)
 
-![](.gitbook/assets/image%20%28117%29.png)
+![](.gitbook/assets/image%20%28118%29.png)
 
 * **小程序分享分析**
 

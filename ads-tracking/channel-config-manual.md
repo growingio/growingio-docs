@@ -70,9 +70,9 @@ f.输入联调设备进行联调
 
 g.联调成功后，启用转化状态
 
-![](../.gitbook/assets/image%20%28224%29.png)
+![](../.gitbook/assets/image%20%28226%29.png)
 
-![](../.gitbook/assets/image%20%2855%29.png)
+![](../.gitbook/assets/image%20%2856%29.png)
 
 ### 3. 爱奇艺 <a id="33"></a>
 
@@ -101,9 +101,9 @@ g.联调成功后，启用转化状态
 
 9.联调成功
 
-![](../.gitbook/assets/image%20%2883%29.png)
+![](../.gitbook/assets/image%20%2884%29.png)
 
-![](../.gitbook/assets/image%20%2893%29.png)
+![](../.gitbook/assets/image%20%2894%29.png)
 
 ### 5. Inmobi <a id="35"></a>
 
@@ -139,7 +139,7 @@ g.联调成功后，启用转化状态
 
 1、在GIO后台创建Normal—Link链接，目标渠道选择“腾讯社交广告”，然后点击保存
 
-![](../.gitbook/assets/image%20%28183%29.png)
+![](../.gitbook/assets/image%20%28185%29.png)
 
 2、点击保存后进入绑定与授权，
 
@@ -150,42 +150,42 @@ g.联调成功后，启用转化状态
 3）应用ID：填写您选取应用的对应ID，示例：IOS填写Appstore地址上面的数字。  
 
 
-![](../.gitbook/assets/image%20%28120%29.png)
+![](../.gitbook/assets/image%20%28121%29.png)
 
 其中，“投放账号”和“投放账号ID”，与广点通后台相对应。
 
 获取方式如下：
 
-![](../.gitbook/assets/image%20%28211%29.png)
+![](../.gitbook/assets/image%20%28213%29.png)
 
 应用标识，请与广点通后台填写的“应用宝ID”或“苹果商店ID”保持一致。
 
 * 图示为苹果商店ID获取方式。
 
-![](../.gitbook/assets/image%20%2831%29.png)
+![](../.gitbook/assets/image%20%2832%29.png)
 
 3、点击授权之后再这里进行同意授权，同事返回GIO后台获取监测链接  
 
 
-![](../.gitbook/assets/image%20%28171%29.png)
+![](../.gitbook/assets/image%20%28172%29.png)
 
 4、进入腾讯社交广告后台开始联调，在工具箱里面选择“转化跟踪”。
 
-![](../.gitbook/assets/image%20%28113%29.png)
+![](../.gitbook/assets/image%20%28114%29.png)
 
 5、点击“获取点击数据”，按照图示在移动应用上填写应用ID，在feedback URL上填写GIO生成的监测链接。
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../.gitbook/assets/image%20%2826%29.png)
 
 6、开始联调。
 
-![](../.gitbook/assets/image%20%2824%29.png)
+![](../.gitbook/assets/image%20%2825%29.png)
 
 7、填写对应的设备号。
 
-![](../.gitbook/assets/image%20%28111%29.png)
+![](../.gitbook/assets/image%20%28112%29.png)
 
 8、联调成功，去Appstore或者应用宝下载您的APP。
 
-![](../.gitbook/assets/image%20%28114%29.png)
+![](../.gitbook/assets/image%20%28115%29.png)
 
