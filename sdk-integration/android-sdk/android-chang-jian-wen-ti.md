@@ -53,6 +53,8 @@ public void onCustomClick(View view){
 
 ```
 
+最后，如果您是在布局文件中在`view`上使用 `onClick` 属性的点击事件，不会被采集，不支持。
+
 {% hint style="danger" %}
 如果您还未采集到点击事件， 并且使用了 lambda 表达式，请看 [lambda 配置](android-sdk.md#5-lambda-biao-da-shi-zhi-chi-pei-zhi-xiang)。
 {% endhint %}
