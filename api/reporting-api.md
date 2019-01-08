@@ -1,7 +1,7 @@
 # 统计数据导出 API
 
 * [1.看板数据信息 API](reporting-api.md#dashboard-api)
-* [2.单图数据下载 API](reporting-api.md#chart-api)
+* [2.事件分析下载 API](reporting-api.md#chart-api)
 * [3.分群下载 API](reporting-api.md#segmentation-api)
 * [4.规则逻辑 API 接口](reporting-api.md#rule-api)
 
@@ -80,9 +80,9 @@ GrowingIO 分配的公钥，见 API 认证文档
 
 
 
-### 2.单图数据下载 API V2（2018-08-29更新） <a id="chart-api"></a>
+### 2.事件分析下载 API V2（2018-08-29更新） <a id="chart-api"></a>
 
-获取单图数据（单图下载每秒限速 2 次）
+获取事件分析数据（单图下载每秒限速 2 次）
 
 {% api-method method="get" host="https://www.growingio.com/v2/projects/:project\_id/charts/:chart\_id.json" path="" %}
 {% api-method-summary %}
@@ -97,7 +97,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="chart\_id" type="string" required=true %}
-单图 id
+事件分析（单图 ID）
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="project\_id" type="string" required=true %}
