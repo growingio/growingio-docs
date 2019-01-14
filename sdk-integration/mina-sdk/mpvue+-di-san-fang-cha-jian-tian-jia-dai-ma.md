@@ -6,7 +6,15 @@
 {% tab title="mpvue + 第三方插件" %}
 如果您的mpvue框架的小程序中使用了**第三方插件**，使用下面这种方式：
 
-* **第一步：更新 gio-minp.esm.js 到最新版**
+1.下载 **gio-minp.esm.js** 文件，把文件放在微信小程序项目里，比如 utils 目录下。
+
+```text
+$ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
+```
+
+2. 添加跟踪代码
+
+* **第一步：更新 gio-minp.js 到最新版**
 * **第二步：添加 npm 包**
 
 ```javascript

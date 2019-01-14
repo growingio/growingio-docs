@@ -39,38 +39,9 @@
 
 ## 微信小程序SDK标准接入指南
 
-### 1、下载小程序采集 SDK
+### 1、根据小程序框架选择SDK文件并添加跟踪代码
 
-目前微信小程序支持以下框架的集成,请选择相应的框架下载SDK文件：
-
-* 微信小程序原生框架
-* 微信小程序原生 + 第三方插件
-* 微信小程序mpvue框架
-* 微信小程序mpvue + 第三方插件
-* taro框架
-* wepy框架
-
-#### 微信小程序原生框架 \| 微信小程序原生 + 第三方插件
-
-下载 gio-minp.js 文件
-
-```text
-$ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
-```
-
-#### mpvue \| mpvue + 第三方插件 \| taro \| wepy
-
-如果小程序使用以上框架，下载 gio-minp.esm.js 文件
-
-```text
-$ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
-```
-
-当下载到 gio-minp.js 文件以后，把文件放在微信小程序项目里，比如 utils 目录下。下面会假设 SDK 文件放在 utils 目录下。
-
-### 2、添加跟踪代码
-
-参照相应框架，点击下方链接，添加跟踪代码。
+参照小程序的开发框架，下载相应的SDK，并添加跟踪代码。
 
 * [微信小程序原生框架](./#wei-xin-yuan-sheng-kuang-jia)
 * [微信小程序原生 + 第三方插件](./#wei-xin-yuan-sheng-kuang-jia-di-san-fang-cha-jian)
@@ -80,10 +51,18 @@ $ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
 * [mpvue + 第三方插件](./#mpvue-di-san-fang-cha-jian)
 
 {% hint style="danger" %}
-**在微信小程序项目根目录的 app.js  （app.wpy\) 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前, 否则可能导致采集的数据不完整。**
+**在微信小程序项目根目录的 app.js  文件的顶部添加代码，请注意一定要放在 App\(\) 之前, 否则可能导致采集的数据不完整。**
 {% endhint %}
 
 #### **微信原生框架：**
+
+1.下载 gio-minp.js 文件，把文件放在微信小程序项目里，比如 utils 目录下。
+
+```text
+$ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
+```
+
+2.在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
 var gio = require ("utils/gio-minp.js").default;
@@ -93,36 +72,73 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 
 #### **微信原生框架+第三方插件**
 
+1.下载 gio-minp.js 文件，把文件放在微信小程序项目里，比如 utils 目录下。
+
+```text
+$ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
+```
+
+2.在根目录 app.js文件的顶部添加跟踪代码
+
 ```javascript
 var gio = require ("utils/gio-minp.js").default;
 // version 是你的小程序的版本号，发版时请调整; usePlugin 设置是否使用插件
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', usePlugin: true });
 // app.js 文件，在文件顶部 （其他代码之前）添加如下代码： 
 const App = global.GioApp
-//在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入！！！）
+
+```
+
+3.在**每个page**页面**（新增页面也需要添加）**的 .js 文件顶部添加如下代码
+
+```javascript
+//在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入）
 const Page = global.GioPage;
 ```
 
-#### **Taro 框架**
+#### **taro 框架**
+
+1.下载 gio-minp.js 文件，把文件放在微信小程序项目里，比如 utils 目录下。
+
+```text
+$ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
+```
+
+2.在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
 import Taro from '@tarojs/taro'
 import gio from './utils/gio-minp'
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', {
   version: '1.0',
-  forceLogin: true,
   taro: Taro
 });
 ```
 
-#### **Wepy 框架**
+#### **wepy 框架**
+
+1.下载 gio-minp.js 文件，把文件放在微信小程序项目里，比如 utils 目录下。
+
+```text
+$ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
+```
+
+2.在根目录 app.wpy文件的顶部添加跟踪代码
 
 ```javascript
 import gio from './utils/gio-minp';
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', debug: true })
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' })
 ```
 
-#### **mpvue 框架**
+#### mpvue框架
+
+1.如果小程序使用以上框架，下载 **gio-minp.esm.js** 文件，把文件放在微信小程序项目里，比如 utils 目录下。
+
+```text
+$ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
+```
+
+2.在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
 import gio from './utils/gio-minp'
@@ -133,7 +149,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue
 
 ```
 
-#### mpvue + 第三方插件
+####  mpvue + 第三方插件
 
 mpvue + 第三方插件 设置代码较为复杂，请点击如下链接进行查看。
 
@@ -141,13 +157,20 @@ mpvue + 第三方插件 设置代码较为复杂，请点击如下链接进行�
 
 ### \*\*\*\*
 
-### **3、进行SDK的配置设置**
+### **2、进行SDK的配置设置**
+
+SDK参数配置
+
+微信用户信息配置
+
+用户访问的地理坐标信息
 
 **SDK中提供了以下几个参数可以用来进行配置**
 
 | 参数 | 值 | 解释 |
 | :--- | :--- | :--- |
 | version | string | 你的小程序的版本号 |
+| getLocation | true \| false | 是否自动获取用户的地理位置信息。默认false |
 | followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认false |
 | forceLogin | true \| false | 你的小程序是否强制要求用户登陆微信获取 openid。默认 false |
 | debug | true \| false | 是否开启调试模式，可以看到采集的数据。默认 false |
@@ -165,7 +188,7 @@ mpvue + 第三方插件 设置代码较为复杂，请点击如下链接进行�
 | :--- | :--- | :--- |
 | followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认false |
 
-即微信小程序项目根目录的 app.js 文件设置参数如下：
+小程序项目根目录的 app.js 文件设置参数示例如下：
 
 ```javascript
 var gio = require("utils/gio-minp.js").default;
@@ -184,6 +207,21 @@ import App from './App'
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0', followShare: true });
 ```
 
+#### 
+
+#### getLocation 参数
+
+根据微信最新的用户地理位置获取的规则，GrowingIO 小程序SDK 默认不会在小程序启动时获取用户的坐标信息。 
+
+* 如果您的小程序在打开时就需要获取用户地理信息，就可以将这个参数配置为true。
+* 如果您的小程序在用户点击某些按钮时，才触发获取位置，则可以按照配置方式，进行[用户位置的补发](./#huo-qu-yong-hu-de-di-li-xin-xi)，从而增强用户地理位置的分析能力。
+
+| 参数 | 值 | 解释 |
+| :--- | :--- | :--- |
+| getLocation | true \| false | 是否自动获取用户的地理位置信息。默认false |
+
+
+
 #### forceLogin 用户标识参数
 
 {% hint style="info" %}
@@ -200,8 +238,6 @@ gio("identify", openid, unionid);
 {% endhint %}
 
 **注意：如果你的微信小程序在用户打开后不要求用户授权获取openid和/或 unionid，但是设置了forceLogin为True，那么GroiwngIO不能采集到用户的数据，采集到的用户会偏少，所以请特别注意这个参数的设置。如果您不能确定是否要设置这个参数，请先咨询我们。**
-
-\*\*\*\*
 
 #### SDK 微信用户属性设置
 
@@ -244,7 +280,13 @@ wx.getUserInfo({
 
 \*注：用户画像中的部分数据，只有在设置微信用户信息后，才可以统计。
 
+#### 获取用户的地理信息
 
+GrowingIO SDK 默认不会在小程序启动时获取用户的坐标信息。当用户访问到某一功能时需要位置信息时，可以调用以下位置接口，补发vst，采集位置信息，提升用户地域分布的分析准确性。
+
+```text
+gio('getLocation')
+```
 
 ### \*\*小程序中有**Webview**
 
@@ -291,7 +333,7 @@ Page({
 
 
 
-### 4、添加请求服务器域名
+### 3、添加请求服务器域名
 
 要正常采集微信小程序的数据并发送给 GrowingIO，需要在微信小程序里事先设置一个通讯域名，允许跟 GrowingIO API 服务器进行网络通信。具体步骤如下：
 
@@ -301,7 +343,7 @@ Page({
 
 ![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../../.gitbook/assets/image%20%28209%29.png)
 
-### 5、检测数据
+### 4、检测数据
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面检测数据。请在添加了跟踪代码的小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。详情可见小程序Debugger。
 
