@@ -96,3 +96,31 @@ android {
 SDK 暂时不支持 Instant Run , 请开发者开发期间配置 `gioenable = false` ，即可使用 Instant Run。
 {% endhint %}
 
+
+
+## 使用 Jack 注意
+
+依据[官网说明](https://developer.android.com/studio/write/java8-support#migrate)，SDK不支持 Jack 编译器，请确认移除 jackOptions 代码块。
+
+```groovy
+android {
+    ...
+    defaultConfig {
+        ...
+        // Remove this block. 删掉这里！！！
+        jackOptions {
+            enabled true
+            ...
+        }
+    }
+
+    // Keep the following configuration in order to target Java 8.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+```
+
+如果您未移除，集成 SDK 后 App 将 Crash 。
+
