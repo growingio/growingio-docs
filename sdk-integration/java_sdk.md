@@ -110,7 +110,7 @@ Java SDK会优先读取gio.properties中的配置
 ```text
 //事件行为消息体
 GIOEventMessage eventMessage = new GIOEventMessage.Builder()
-    .eventTime(System.currentTimeMillis())            // 事件事件，默认为系统时间（选填）
+    .eventTime(System.currentTimeMillis())            // 事件时间，默认为系统时间（选填）
     .eventKey("BuyProduct")                           // 事件标识 (必填)
     .loginUserId("417abcabcabcbac")                   // 登录用户ID (必填)
     .addEventVariable("product_name", "苹果")          // 事件级变量 (选填)
