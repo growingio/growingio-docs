@@ -1,12 +1,4 @@
----
-description: 如果你是微信内嵌页 H5 和 hybrid H5 ，暂时不支持活动分析功能，请将你的需求告知 GrowingIO 对接人，我们会不断迭代。
----
-
 # 活动分析
-
-{% hint style="success" %}
-活动分析功能需要H5页面集成JS SDK
-{% endhint %}
 
 ### **一、介绍**
 
