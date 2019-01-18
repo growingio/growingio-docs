@@ -106,6 +106,7 @@
     * [埋点事件级变量](data-definition/custom-event/event-variable.md)
     * [转化变量](data-definition/custom-event/convert-variable.md)
 * [系统配置](configuration/README.md)
+  * [组织管理（beta）](configuration/zu-zhi-guan-li.md)
   * [项目管理](configuration/project-configuration.md)
   * [用户管理](configuration/user-configuration.md)
   * [权限管理](configuration/rights-management.md)
