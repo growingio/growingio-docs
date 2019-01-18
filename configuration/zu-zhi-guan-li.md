@@ -1,12 +1,12 @@
 ---
-description: GrowingIO 强大而全面的组织管理功能，帮助企业在接入GrowingIO后对组织、项目和组织成员进行系统性的管理。
+description: 强大而全面的组织管理功能，帮助企业在接入 GrowingIO 后对组织、项目和组织成员进行系统性的管理。
 ---
 
 # 组织管理（beta）
 
 ## **1. 简介**
 
-GrowingIO 提供了强大而全面的组织管理功能，帮助企业在接入GrowingIO后以组织为单位对组织、项目和组织成员进行系统性的管理。企业可以为组织成员分配组织成员角色，拥有组织管理权限的用户可以在任意界面点击右上角的齿轮按钮，进入组织管理界面。
+GrowingIO 提供了强大而全面的组织管理功能，帮助企业在接入 GrowingIO 后以组织为单位对组织、项目和组织成员进行系统性的管理。企业可以为组织成员分配组织成员角色，拥有组织管理权限的用户可以在任意界面点击右上角的齿轮按钮，进入组织管理界面。
 
 ![](https://lh4.googleusercontent.com/iozDX4uIbEDXSK9dEvyC_JAlpna7T30RCESTLzMAxg_Gu_IYDhszxFC6oPO2_dTUmf3E4NbFp-rYyI4-sAsAU8RWe5T4ikH_CgUsEAutpjUuiTHpmTkx8vcUfEgOQ-n4lr90mP2m)
 
