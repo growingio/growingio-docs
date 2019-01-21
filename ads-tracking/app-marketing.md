@@ -64,7 +64,9 @@
 
 当你需要已安装用户站外点击链接可以直接打开 App 时，可以使用 Deep-Link 类型。
 
-[Deep-Link使用手册](https://s.growingio.com/xzAqPp)
+iOS：[配置方法](https://docs.growingio.com/docs/sdk-integration/ios-sdk-1/ios-sdk#deeplink-hui-tiao-can-shu-huo-qu)
+
+Android：[配置方法](https://docs.growingio.com/docs/sdk-integration/android-sdk/android-sdk#deep-link-hui-tiao-can-shu-huo-qu)
 
 1.1.3.1创建Deep-Link
 
@@ -215,15 +217,15 @@ GrowingIO 对广告监测数据提供深度分析，按照以下步骤可以对�
 
 1 配置链接维度参数
 
-![](../.gitbook/assets/image%20%28223%29.png)
+![](../.gitbook/assets/wechatfb5d7d6f862565236153d6fe65d1357c.png)
 
 2 在GIO的短链后拼接定义的维度参数。在推广管理模块创建一条短链，形如：https://gio.ren/r3jEmQe 这样的链接，可以直接使用Query String方式拼接成：https://gio.ren/r3jEmQe?city=beijing 。则投放北京区域可以直接使用此链接。
 
 3 数据查看
 
-在事件分析/分群/漏斗分析等模块中，引用维度“推广城市”查看不同推广城市带来的效果：
+在事件分析/分群/漏斗分析等模块中，引用维度“城市”查看不同推广城市带来的效果：
 
-![](../.gitbook/assets/image%20%2871%29.png)
+![](../.gitbook/assets/wechat071b06ea77621edc0a375dbb24acab68.png)
 
 {% hint style="warning" %}
 维度值建议使用英文或数字。如果使用中文，请使用 url encode 编码

@@ -274,12 +274,6 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 
 3.[添加 Universal Link 参数解析回调方法，此方法与 Deep Link 方法一致。](ios-sdk.md#yi-deep-link)
 
-{% hint style="info" %}
-更详细的配置说明，请查看[DeepLink使用手册](https://s.growingio.com/xzAqPp)。
-{% endhint %}
-
-
-
 ### 设置界面元素 ID
 
 当您的应用界面改版时，可能会导致无法准确地统计已经圈选的元素。因此，对于应用中的主要流程涉及到的界面元素，建议您为它们设置固定的唯一ID，以保证数据的一致性。

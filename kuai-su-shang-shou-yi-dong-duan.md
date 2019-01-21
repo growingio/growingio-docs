@@ -63,7 +63,7 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 
 #### 第四步：进行获客推广管理配置 <a id="di-si-bu-jin-hang-huo-ke-tui-guang-guan-li-pei-zhi"></a>
 
-* 推广App，[使用GrowingIO移动端广告监测功能](ads-tracking/app-marketing.md)，包括普通监测跳转链接，以及deeplink链接 （Deep-Link [文档](https://docs.growingio.com/docs/ads-tracking/app-marketing#113) \| [使用手册](https://s.growingio.com/xzAqPp)），精细化了解移动端推广，提升转化。
+* 推广App，[使用GrowingIO移动端广告监测功能](ads-tracking/app-marketing.md)，包括普通监测跳转链接，以及deeplink链接 （Deep-Link [文档](https://docs.growingio.com/docs/ads-tracking/app-marketing#113)），精细化了解移动端推广，提升转化。
 * 具体介绍也可以观看[视频](https://s.growingio.com/jvoRdB)。
 
 ### 进阶使用
