@@ -64,10 +64,51 @@ $global.GioPage({
 
 | 参数 | 值 | 解释 |
 | :--- | :--- | :--- |
+| getLocation | true \| false | 是否自动获取用户的地理位置信息。默认false |
 | forceLogin | true \| false | 是否要用用户登陆支付宝获取 userid作为访问用户ID标识采集，建议你的小程序在打开强制要求用户登陆支付宝获取 userid时，才进行开启。默认 false |
 | debug | true \| false | 是否开启调试模式，可以在调试体验版时看到采集的数据，默认 false |
 | version | string | 你的小程序的版本号 |
 | followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能统计分享带来的用户量。默认 false |
+
+#### followShare参数
+
+转发分享小程序是小程序获客的重要场景，想要详细的进行转发分享的统计，需要在SDK参数中，设置如下参数，值为true
+
+| 参数 | 值 | 解释 |
+| :--- | :--- | :--- |
+| followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能统计分享带来的用户量。默认 false |
+
+即支付宝小程序项目根目录的 app.js 文件设置参数如下：
+
+```text
+var gio = require("utils/gio-alip.js");
+// version 是你的小程序的版本号，发版时请调整
+gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '1.0', followShare: true });
+
+
+
+```
+
+#### getLocation 参数
+
+根据微信最新的用户地理位置获取的规则，GrowingIO 小程序SDK 默认不会在小程序启动时获取用户的坐标信息。 
+
+* 如果您的小程序在打开时就需要获取用户地理信息，就可以将这个参数配置为true。
+* 如果您的小程序在用户点击某些按钮时，才触发获取位置，则可以按照配置方式，进行[用户位置的补发](mina-sdk/#huo-qu-yong-hu-de-di-li-xin-xi)，从而增强用户地理位置的分析能力。
+
+| 参数 | 值 | 解释 |
+| :--- | :--- | :--- |
+| getLocation | true \| false | 是否自动获取用户的地理位置信息。默认false |
+
+GrowingIO SDK 默认不会在小程序启动时获取用户的坐标信息。当用户访问到某一功能时需要位置信息时，可以调用以下位置接口，补发vst，采集位置信息，提升用户地域分布的分析准确性。
+
+```text
+gio('getLocation')
+```
+
+#### forceLogin 参数
+
+设置forceLogin参数后，访问用户ID会被支付宝userid替换，但是风险是，如果小程序打开时并不要求立即授权上报支付宝userid，则在上报支付宝userid前的操作数据不会发送；如果在上报支付宝userid前，用户就退出了小程序，用户数据不会上报。
 
 {% hint style="warning" %}
 forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程序里面设置用户标识符，存储在 Storage 里面。这个用户标识符潜在可能会被 `clearStorage`清除掉，所以有可能不同的用户标识符对应同一个支付宝用户的 userid。如果你的支付宝小程序在用户打开后会去做登陆并且获取 `userid` ，可以设置 `forceLogin` 为 true。当 forceLogin 为 true 的时候，用户标识符会使用 userid，潜在风险是如果用户没有授权，数据不会发送，**所以请特别注意这个参数的设置**，具体集成示例：
@@ -92,26 +133,7 @@ gio("identify", userid);
 
 ![](../.gitbook/assets/image%20%28141%29.png)
 
-### 4 添加分享参数
-
-转发分享小程序是小程序获客的重要场景，想要详细的进行转发分享的统计，需要在SDK参数中，设置如下参数，值为true
-
-| 参数 | 值 | 解释 |
-| :--- | :--- | :--- |
-| followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能统计分享带来的用户量。默认 false |
-
-即支付宝小程序项目根目录的 app.js 文件设置参数如下：
-
-```text
-var gio = require("utils/gio-alip.js");
-// version 是你的小程序的版本号，发版时请调整
-gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '1.0', followShare: true });
-
-
-
-```
-
-### 5 SDK支付宝用户属性设置
+### 4 SDK支付宝用户属性设置
 
 作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在小程序中，支付宝用户属性是非常重要的设置，只有完善了支付宝用户属性信息，支付宝的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用支付宝相关的信息（支付宝姓名和头像）定位用户。
 
@@ -172,7 +194,7 @@ gio('setUserId', YOUR_USER_ID);
 
 ```
 
-### 6 检测数据 <a id="jian-ce-shu-ju"></a>
+### 5 检测数据 <a id="jian-ce-shu-ju"></a>
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面，点击右下角“**检测数据”**。请在添加了跟踪代码的支付宝小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
 
@@ -182,7 +204,158 @@ gio('setUserId', YOUR_USER_ID);
 
 
 
-### 7 进入数据校验模块，查看数据发送情况
+### 6 进入数据校验模块，查看数据发送情况
 
 检测成功后，可以使用[数据验证功能](growingio-debugger/#growingio-minidebugger)，实时查看数据发送情况。
+
+## 自定义事件和变量
+
+### 自定义事件配置
+
+手动发送一个自定义事件。在添加所需要发送的事件代码之前，需要在 GrowingIO 产品的`自定义事件和变量`管理页面配置事件以及事件级变量。
+
+接口定义：
+
+```text
+gio('track', eventName: string, properties: object)
+```
+
+参数说明：
+
+| 参数名称 | 参数类型 | 是否必须 | 说明 |
+| :--- | :--- | :--- | :--- |
+| eventName | string | 是 | 事件标识符 |
+| properties | object | 否 | 事件级变量，即事件发生时所伴随的维度信息参数 |
+
+示例：
+
+```text
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+// 在 Page 的 clickBanner 函数里添加以下代码
+Page({
+  clickBanner(e) {
+    getApp().globalData.gio('track', 'clickBanner', { 
+      id: movie.id, 
+      title: movie.title, 
+      index: e.currentTarget.dataset.index 
+    });
+  }
+})
+```
+
+### 访问用户变量
+
+给访问用户\(未注册你的服务的账号的用户\)附上额外的信息，便于后续做用户信息相关分析。在添加所需要设置的访问用户变量的代码之前，需要在 GrowingIO 产品的`自定义事件和变量`管理页面配置访问用户级变量。
+
+接口定义：
+
+```text
+gio('setVisitor', properties: object)
+```
+
+参数说明：
+
+| 参数名称 | 参数类型 | 是否必须 | 说明 |
+| :--- | :--- | :--- | :--- |
+| properties | object | 是 | 用户级变量，用户额外的信息参数 |
+
+示例：
+
+```text
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+// 比如在针对不同的用户做某个 Campaign 的 A/B 测试
+getApp().globalData.gio('setVisitor', { 
+  campaign_id: 3, 
+  campaign_group: 'A 组用户'
+});
+```
+
+### 注册用户变量
+
+给注册用户（crm 用户ID）附上额外的信息，便于后续做用户信息相关分析。在添加所需要设置的注册用户变量的代码之前，需要在 GrowingIO 产品的`自定义事件和变量`管理页面配置注册用户级变量。
+
+接口定义：
+
+```text
+gio('setUser', properties: object)
+```
+
+参数说明：
+
+| 参数名称 | 参数类型 | 是否必须 | 说明 |
+| :--- | :--- | :--- | :--- |
+| properties | object | 是 | 用户级变量，用户额外的信息参数 |
+
+示例：
+
+```text
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+getApp().globalData.gio('setUser', { 
+  age: 30, 
+  level: '高级用户', 
+  company: 'GrowingIO', 
+  title: '工程师'
+});
+```
+
+### 页面级变量
+
+给当前页面附上更多的页面信息，可以作为维度拆分数据做分析。设置了页面级变量以后，这个页面的指标以及这个页面的行为指标，都可以继承使用这些维度信息做分析。在添加所需要设置的页面变量的代码之前，需要在 GrowingIO 产品的`自定义事件和变量`管理页面配置页面级变量。
+
+接口定义：
+
+```text
+gio('setPage', properties: object)
+```
+
+参数说明：
+
+| 参数名称 | 参数类型 | 是否必须 | 说明 |
+| :--- | :--- | :--- | :--- |
+| properties | object | 是 | 页面级变量，页面额外的信息参数 |
+
+示例：
+
+```text
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+// 推荐在 Page#onShow 处理这个事件
+// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 type
+Page({
+  onShow() {
+    getApp().globalData.gio('setPage', { 
+      pageName: '电影列表页', 
+      type: this.data.type
+    });
+  }
+}
+```
+
+###  转化变量
+
+高级功能，设置一个转化信息用于高级归因分析，目前支持归因方式有最初归因、最终归因和线下归因。举个例子，如果一个用户是先后通过`活动A`、`活动B`、`活动C`来访问小程序，最后在某次后续几天后的访问购买了某个商品。如果把活动A/B/C分别设置为转化变量`campaign`的值，那么如果采用了最初归因，那么这个购买行为是由 A 贡献的；如果是最终归因，那么这次购买行为是 C 贡献的；如果是线性归因，那么这次购买行为是 A/B/C 各占 1/3 贡献。在添加所需要设置的转化变量的代码之前，需要在 GrowingIO 产品的`自定义事件和变量`管理页面配置转化级变量。
+
+接口定义：
+
+```text
+gio('setEvar', properties: object)
+```
+
+参数说明：
+
+| 参数名称 | 参数类型 | 是否必须 | 说明 |
+| :--- | :--- | :--- | :--- |
+| properties | object | 是 | 转化级变量，转化信息 |
+
+示例：
+
+```text
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+getApp().globalData.gio('setEvar', { 
+  campaign: '活动A'
+});
+```
+
+
+
+
 
