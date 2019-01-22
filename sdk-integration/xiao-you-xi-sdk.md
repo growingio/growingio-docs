@@ -57,7 +57,33 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小游戏的 AppID', { ver
 | version | string | 你的小游戏的版本号 |
 | forceLogin | true \| false | 你的小游戏是否强制要求用户登陆微信获取 openid。默认 false |
 | followShare | true \| false | 详细跟踪微信组件中的wx. shareAppMessage事件的转发分享数据，开启后可使用分享分析功能。默认false |
+| getLocation | true \| false | 是否自动获取用户的地理位置信息。默认false |
 | debug | true \| false | 是否开启调试模式，可以看到采集的数据。默认 false |
+
+#### Version 参数
+
+每次发布小游戏新版本的时候，需要更新一下版本号 version, 与线上发布小游戏保持一致; 在使用使，可以用来分析不同版本的数据。
+
+#### followShare 分享分析参数
+
+转发分享小游戏是小游戏获客的重要场景，想要详细的进行转发分享的统计，需要在SDK参数中，设置如下参数，值为true；获客可以参考更具体的设置方式。
+
+| 参数 | 值 | 解释 |
+| :--- | :--- | :--- |
+| followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认false |
+
+#### getLocation 参数
+
+根据微信最新的用户地理位置获取的规则，GrowingIO 小游戏SDK 默认不会在小游戏启动时获取用户的坐标信息。 
+
+* 如果您的小游戏在打开时就需要获取用户地理信息，就可以将这个参数配置为true。
+* 如果您的小游戏在用户点击某些按钮时，才触发获取位置，则可以按照配置方式，进行[用户位置的补发](mina-sdk/#huo-qu-yong-hu-de-di-li-xin-xi)，从而增强用户地理位置的分析能力。
+
+| 参数 | 值 | 解释 |
+| :--- | :--- | :--- |
+| getLocation | true \| false | 是否自动获取用户的地理位置信息。默认false |
+
+#### forceLogin 用户标识参数
 
 {% hint style="info" %}
 forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小游戏里面设置用户标识符，存储在微信 Storage 里面。这个用户标识符潜在可能会被 `clearStorage` 清除掉，所以有可能不同的用户标识符对应同一个微信里的 openid。如果你的微信小游戏在用户打开后会去做登陆并且获取 `openid` 和/或 `unionid`，可以设置 `forceLogin` 为 true。当 forceLogin 为 true 的时候，用户标识符会使用 openid，潜在风险是如果用户没有授权，数据不会发送，**所以请特别注意这个参数的设置**，具体集成示例：
