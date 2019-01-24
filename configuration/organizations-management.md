@@ -4,6 +4,16 @@ description: 强大而全面的组织管理功能，帮助企业的管理人员�
 
 # 组织管理（beta）
 
+* [1.简介](organizations-management.md#1-jian-jie)
+* [2. 组织-项目-应用的关系](organizations-management.md#2-zu-zhi-xiang-mu-ying-yong-de-guan-xi)
+* [3. 组织管理权限说明](organizations-management.md#3-zu-zhi-guan-li-quan-xian-shuo-ming)
+* [4. 组织管理功能使用](organizations-management.md#4-zu-zhi-guan-li-gong-neng-shi-yong)
+  * [4.1 组织概览](organizations-management.md#41-zu-zhi-gai-lan)
+  * [4.2 组织项目](organizations-management.md#42-zu-zhi-xiang-mu)
+  * [4.3 组织成员](organizations-management.md#43-zu-zhi-cheng-yuan)
+  * [4.4 计费方案](organizations-management.md#44-ji-fei-fang-an)
+  * [4.5 成员使用看板](organizations-management.md#45-cheng-yuan-shi-yong-kan-ban)
+
 ## **1. 简介**
 
 GrowingIO 提供了强大而全面的组织管理功能，帮助企业的管理人员在接入 GrowingIO 后以组织为单位对组织、项目和组织成员进行系统性的管理。企业可以为组织成员分配组织成员角色，拥有组织管理权限的用户可以在任意界面点击右上角的齿轮按钮，进入组织管理界面。
