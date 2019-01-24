@@ -40,7 +40,7 @@ description: 实时监控您的业务进程。
 
 作为一名产品负责人，在做版本升级后，您可以实时查看新版本的表现。
 
-![](../.gitbook/assets/image%20%28221%29.png)
+![](../.gitbook/assets/image%20%28222%29.png)
 
 ## 3.功能QA
 
