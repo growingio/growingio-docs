@@ -8,7 +8,7 @@ description: 我们一直在迭代！
 
 **关键词：官网 \| 实时\| 用户分群 \| 小游戏demo \| 小程序交互式圈选 \| 活动分析**
 
-![](.gitbook/assets/image%20%2856%29.png)
+![](.gitbook/assets/image%20%2857%29.png)
 
 * **官网**
 
@@ -24,7 +24,7 @@ description: 我们一直在迭代！
 
 我们为**运营**和**产品**优化了用户分群的维度筛选功能，支持按照 like（包含），not like\(不包含）来进行维度值条件的筛选，提高筛选效率。
 
-![](.gitbook/assets/image%20%28122%29.png)
+![](.gitbook/assets/image%20%28123%29.png)
 
 * **小游戏demo**
 
@@ -34,7 +34,7 @@ description: 我们一直在迭代！
 
 **关键词：组织管理 \| 实时**
 
-![](.gitbook/assets/image%20%2856%29.png)
+![](.gitbook/assets/image%20%2857%29.png)
 
 * **组织管理**
 
@@ -50,7 +50,7 @@ description: 我们一直在迭代！
 
 **关键词：留存魔法师 \| 官网 \| 小程序demo** 
 
-![](.gitbook/assets/image%20%2880%29.png)
+![](.gitbook/assets/image%20%2881%29.png)
 
 * **留存魔法师-支持自定义事件相关性统计**
 
@@ -60,7 +60,7 @@ description: 我们一直在迭代！
 
 加入**“关于我们”**导航菜单，让用户更了解清楚我们。
 
-![](.gitbook/assets/image%20%28122%29.png)
+![](.gitbook/assets/image%20%28123%29.png)
 
 * **小程序demo**
 
@@ -70,7 +70,7 @@ description: 我们一直在迭代！
 
 #### **关键词：小程序用户分群 \| 实时**
 
-![](.gitbook/assets/image%20%28118%29.png)
+![](.gitbook/assets/image%20%28119%29.png)
 
 * **小程序-用户列表**
 
@@ -90,13 +90,13 @@ description: 我们一直在迭代！
 
 #### **关键词：预置看板权限 \| 历史用户上传**
 
-![](.gitbook/assets/image%20%28133%29.png)
+![](.gitbook/assets/image%20%28134%29.png)
 
 * **预置看板权限**
 
 我们为**企业权限管理用户**优化了预置看板的权限设置功能。超级管理员可以设置首页侧边预置看板的可见用户的范围。
 
-![](.gitbook/assets/image%20%28190%29.png)
+![](.gitbook/assets/image%20%28191%29.png)
 
 * **历史注册用户ID以及注册日期支持上传**
 
@@ -106,7 +106,7 @@ description: 我们一直在迭代！
 
 #### **关键词：H5活动分析 \| 实时 \| 小程序分享 \|微信内嵌页 \|用户分群**
 
-![](.gitbook/assets/image%20%2885%29.png)
+![](.gitbook/assets/image%20%2886%29.png)
 
 * **H5活动分析**
 
@@ -126,7 +126,7 @@ description: 我们一直在迭代！
 
 我们为**运营和产品**优化了用户分群详情的用户群对比功能，更新后，可以支持对比任意两个分群的核心行为差异，例如：对比购买转化和未转化用户群。[点击详情查看更多](data-analytics/user-segmentation.md#2-4)
 
-![](.gitbook/assets/image%20%28120%29.png)
+![](.gitbook/assets/image%20%28121%29.png)
 
 * **小程序分享分析**
 
