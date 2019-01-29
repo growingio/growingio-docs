@@ -108,7 +108,7 @@ g.联调成功后，启用转化状态
 ### 5. Inmobi <a id="35"></a>
 
 1. 进入Growingio广告监测后台，进入推广管理，创建监测并选取Inmobi渠道，生成监测链接。
-2. 进入Inmobi后台，创建主张，选择GrowingIO渠道，创建成功后，将Inmobi生成的appID复制并填写到GrowingIO后台相应链接上。
+2. 进入Inmobi后台，创建主张，选择GrowingIO渠道，创建成功后，将Inmobi生成的appID复制并填写到GrowingIO后台 。
 
    ![](https://docs.growingio.com/.gitbook/assets/inmobi1.png)
 
@@ -134,8 +134,7 @@ g.联调成功后，启用转化状态
 
 2\)GroiwngIO实时将激活数据发送给广点通，广点通返回激活信息，点击时间，广告名称等信息；
 
-3\)GroiwngIO根据广点通返回的归因结果，按照广告主在热云后台的“推广参数”进行二次归因，并展示在GroiwngIO后台。  
-
+3\)GrowingIO会根据用户的广告点击数据与激活数据做归因匹配，并将归因的结果展示在GrowingIO后台数据中。
 
 1、在GIO后台创建Normal—Link链接，目标渠道选择“腾讯社交广告”，然后点击保存
 
@@ -147,7 +146,7 @@ g.联调成功后，启用转化状态
 
 2）投放账号ID：填写对应的腾讯社交广后台的账户ID，然后点击授权。
 
-3）应用ID：填写您选取应用的对应ID，示例：IOS填写Appstore地址上面的数字。  
+3）应用ID：填写您选取应用的对应ID，示例：iOS填写Appstore地址上面的数字。  
 
 
 ![](../.gitbook/assets/image%20%28125%29.png)
@@ -164,7 +163,7 @@ g.联调成功后，启用转化状态
 
 ![](../.gitbook/assets/image%20%2832%29.png)
 
-3、点击授权之后再这里进行同意授权，同事返回GIO后台获取监测链接  
+3、点击授权之后再这里进行同意授权，授权成功后，在GIO后台获取监测链接  
 
 
 ![](../.gitbook/assets/image%20%28176%29.png)
