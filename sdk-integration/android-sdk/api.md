@@ -331,13 +331,19 @@ GrowingIO 所有 API 都需要在主线程调用。
     </tr>
     <tr>
       <td style="text-align:left">trackFragment</td>
-      <td style="text-align:left">如果APP初始化时候，没有设置 <code>trackAllFragment</code> 即不采集全部 <code>Fragment</code>，可以选择性采集指定 <code>Fragment</code>，设置之后
-        sdk 将监听 <code>Fragment</code> 的各个生命周期， 采集相关用户行为数据。</td>
+      <td style="text-align:left">
+        <p>如果APP初始化时候，没有设置 <code>trackAllFragment</code> 即不采集全部 <code>Fragment</code>，可以选择性采集指定 <code>Fragment</code>，设置之后
+          sdk 将监听 <code>Fragment</code> 的各个生命周期， 采集相关用户行为数据。</p>
+        <p>请在 <code>new Fragment </code>的时候调用此方法。</p>
+      </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">trackFragmentX</td>
-      <td style="text-align:left">支持 AndroidX ， 功能同 trackFragment。</td>
+      <td style="text-align:left">
+        <p>支持 AndroidX ， 功能同 trackFragment。</p>
+        <p>请在 <code>new Fragment </code>的时候调用此方法。</p>
+      </td>
       <td style="text-align:left">2.6.6 以上</td>
     </tr>
     <tr>
