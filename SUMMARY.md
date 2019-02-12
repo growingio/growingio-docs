@@ -133,7 +133,7 @@
   * [数据管理 API \(GDPR\)](api/delete-visitor-api.md)
   * [API 更新日志](api/changelog-api.md)
 * [常见问题](faq/README.md)
-  * [基本问题](faq/untitled.md)
+  * [基本问题](faq/faq-basic.md)
   * [SDK 集成](faq/faq-sdk.md)
   * [圈选常见问题](faq/faq-circle.md)
   * [指标和维度](faq/faq-metrics-dimensions.md)

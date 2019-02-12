@@ -1,6 +1,6 @@
 # 常见问题
 
-* [基本问题](untitled.md)
+* [基本问题](faq-basic.md)
 * [SDK 集成](faq-sdk.md)
 * [圈选常见问题](faq-circle.md)
 * [指标和维度](faq-metrics-dimensions.md)
