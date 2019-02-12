@@ -107,7 +107,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 2. 打开开发设置，到服务器域名配置部分
 3. 在request合法域名中添加：https://wxapi.growingio.com
 
-![](../.gitbook/assets/image%20%28129%29.png)
+![](../.gitbook/assets/image%20%28137%29.png)
 
 ### 检测数据 <a id="jian-ce-shu-ju"></a>
 
