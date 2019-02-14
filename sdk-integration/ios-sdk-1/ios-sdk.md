@@ -272,7 +272,7 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 }
 ```
 
-3.[添加 Universal Link 参数解析回调方法，此方法与 Deep Link 方法一致。](ios-sdk.md#yi-deep-link)
+3.添加 Universal Link 参数解析回调方法，此方法与 Deep Link 方法一致。
 
 ### 设置界面元素 ID
 
