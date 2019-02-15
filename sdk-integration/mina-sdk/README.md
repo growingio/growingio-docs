@@ -144,9 +144,8 @@ $ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
 import gio from './utils/gio-minp'
 import Vue from 'vue'
 import App from './App'
-​
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
 
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
 ```
 
 ####  mpvue + 第三方插件
@@ -203,7 +202,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 import gio from './utils/gio-minp'
 import Vue from 'vue'
 import App from './App'
-​
+
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0', followShare: true });
 ```
 
