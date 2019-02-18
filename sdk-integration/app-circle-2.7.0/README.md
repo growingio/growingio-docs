@@ -20,8 +20,7 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 升级指导文档详见：
 
-iOS SDK 升级文档
+{% page-ref page="ios-2.7.0.md" %}
 
-Android SDK 升级文档  
-
+{% page-ref page="android-2.7.0.md" %}
 
