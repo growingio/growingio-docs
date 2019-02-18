@@ -70,7 +70,7 @@
   * [支付宝小程序 SDK （beta\)](sdk-integration/zhi-fu-bao-xiao-cheng-xu-sdk-beta.md)
   * [Java 埋点 SDK（Beta）](sdk-integration/java_sdk.md)
   * [PHP 埋点 SDK（Beta）](sdk-integration/php_sdk.md)
-  * [电脑端圈选 app SDK](sdk-integration/app-circle-2.7.0/README.md)
+  * [电脑端圈选 app SDK（灰度功能）](sdk-integration/app-circle-2.7.0/README.md)
     * [电脑端圈选 App - iOS SDK 接入文档](sdk-integration/app-circle-2.7.0/ios-2.7.0.md)
     * [电脑端圈选 App - Android SDK 接入文档](sdk-integration/app-circle-2.7.0/android-2.7.0.md)
 * [SDK 更新日志](changelog-sdk.md)
