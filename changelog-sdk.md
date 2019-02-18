@@ -15,11 +15,11 @@ Android 2.6.7
 3. 优化元素展现事件和性能；
 4. 修复在 vivo x20 plus 机型上，多进程圈选问题；
 5. 自定义页面事件（`pvar`）优化，之前 `setPageVariable` 接口需要用户每次进入页面的时候设置， 现更新为`pvar`只需要设置一次，在页面销毁之前每次展示都会补发`pvar`，如果用户设置`null`则清空 `pvar`事件；
-6. 提供关闭单独元素展现事件接口 —— [`ignoreViewImp`](android-sdk/api.md#growingio-yun-hang-shi-api)。
+6. 提供关闭单独元素展现事件接口 —— [`ignoreViewImp`](sdk-integration/android-sdk/api.md#growingio-yun-hang-shi-api)。
 
 iOS 2.6.7
 
-1. 提供关闭单独元素展现事件接口—— [`growingAttributesDonotTrackImp`](ios-sdk-1/ios-sdk-api.md#shu-ju-cai-ji-fa-song-api)\`\`
+1. 提供关闭单独元素展现事件接口—— [`growingAttributesDonotTrackImp`](sdk-integration/ios-sdk-1/ios-sdk-api.md#shu-ju-cai-ji-fa-song-api)\`\`
 2. 自定义页面事件（`pvar`）优化，之前 `setPageVariable` 接口需要用户每次进入页面的时候设置， 现更新为`pvar`只需要设置一次，在页面销毁之前每次展示都会补发`pvar`，如果用户设置`null`则清空 `pvar`事件；
 
 ### 2018年12月14日
@@ -46,12 +46,12 @@ iOS 2.6.5
 Android 2.6.3
 
 1. 修复客户调用`WebView`的`setWebChromeClient`， 传参为`new WebChromeClient()` 时导致内嵌 H5 页面无法圈选；
-2. 支持[采集通知 Notification](android-sdk/android-sdk.md#cai-ji-tong-zhi-notification)的点击与展现。
+2. 支持[采集通知 Notification](sdk-integration/android-sdk/android-sdk.md#cai-ji-tong-zhi-notification)的点击与展现。
 
 iOS 2.6.3
 
 1. 修复多个`ViewController` 滑动切换时，没有识别导致用户页面访问事件数据错误；
-2. 支持[采集通知](ios-sdk-1/ios-sdk.md#push-tui-song-dian-ji-cai-ji)的点击。
+2. 支持[采集通知](sdk-integration/ios-sdk-1/ios-sdk.md#push-tui-song-dian-ji-cai-ji)的点击。
 
 ### 2018年11月24日
 
