@@ -1,5 +1,5 @@
 ---
-description: 帮助您快速了解使用GrowingIO Web分析产品的上手步骤，快速了解相应功能
+description: 帮助您快速了解使用GrowingIO Web 分析产品的上手步骤，快速了解相应功能
 ---
 
 # 快速上手-Web
@@ -13,17 +13,17 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 * 帮助客户管理用户生命周期，精细化用户运营
 * 沉淀数据资产，放心专享数据所有权
 
-针对Web产品，GrowingIO 提供了以下功能：
+针对 Web 产品，GrowingIO 提供了以下功能：
 
 ​**数据采集​**
 
-1. 注册GrowingIO账号，进行应用管理。
-2. 快速2分钟接入SDK，即可以通过无埋点采集，快速获得页面浏览、事件点击等行为数据。
-3. 高级配置&自定义事件（埋点），进一步精细化满足自定义化数据采集需求。
+1. 注册 GrowingIO 账号，进行应用管理。
+2. 快速 2 分钟接入 SDK，即可以通过无埋点采集，快速获得页面浏览、事件点击等行为数据。
+3. 高级配置 & 自定义事件（埋点），进一步精细化满足自定义化数据采集需求。
 
 ​**预置分析内容-​概览​**
 
-**2分钟接入SDK**，无需更多操作，**5分钟**即可获得实时**流量数据**；**1小时**即可**获得流量、页面访问、页面时长等数据洞察。**
+**2 分钟接入 SDK**，无需更多操作，**5 分钟**即可获得实时**流量数据**；**1 小时**即可**获得流量、页面访问、页面时长等数据洞察。**
 
 ​**事件快速定义​**
 
@@ -37,9 +37,9 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 
 #### 第一步：集成SDK并进行配置  <a id="di-yi-bu-ji-cheng-sdk-bing-jin-hang-pei-zhi"></a>
 
-1. 集成[Web JS SDK](sdk-integration/web-js-sdk/)； 开发者文档
+1. 集成 [Web JS SDK](sdk-integration/web-js-sdk/)； 开发者文档
 
-   进行[web SDK 系统变量](sdk-integration/web-js-sdk/#12)的设置，其中如果你是使用了 \#hashtag 的单页面应用，请进行[配置](sdk-integration/web-js-sdk/#12)​
+   进行 [web SDK 系统变量](sdk-integration/web-js-sdk/#12)的设置，其中如果你是使用了 \#hashtag 的单页面应用，请进行[配置](sdk-integration/web-js-sdk/#12)​
 
 2. 配置完成进入[数据校验](sdk-integration/growingio-debugger/#growingio-web-debugger)，确认数据采集
 
@@ -83,11 +83,11 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 
 * **分析人员（包括分析师、产品经理、运营等）**
   * \*\*\*\*[用户变量](data-definition/user-variable/loginuserid.md)，进一步打通您的业务用户和访问用户。
-  * [数据模型](data-model/)，帮助您进一步了解GrowingIO的数据采集口径，行为分析的数据逻辑。
+  * [数据模型](data-model/)，帮助您进一步了解 GrowingIO 的数据采集口径，行为分析的数据逻辑。
   * 了解[埋点事件的使用场景](data-model/event-model/custom-event/)，明确哪些场景需要进一步上报业务属性数据，以及怎么使用。
-  * 了解[Web端SDK的高级设置](sdk-integration/web-js-sdk/#13)，以便更好地在更多场景下使用圈选功能（例如按钮的内容，banner等）。
+  * 了解 [Web端SDK的高级设置](sdk-integration/web-js-sdk/#13)，以便更好地在更多场景下使用圈选功能（例如按钮的内容，banner 等）。
 * **开发者**
-  * 了解[Web端SDK的高级设置](sdk-integration/web-js-sdk/#13)，根据需求进行配置。
+  * 了解 [Web端SDK的高级设置](sdk-integration/web-js-sdk/#13)，根据需求进行配置。
   * 了解埋点事件，[设置上报自定义事件和变量（埋点）](data-definition/mina.md)
   * [API](api/)
 * **系统管理员**
