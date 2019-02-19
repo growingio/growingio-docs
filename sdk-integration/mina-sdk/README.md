@@ -117,10 +117,10 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', {
 
 #### **wepy 框架**
 
-1.下载 gio-minp.js 文件，把文件放在微信小程序项目里，比如 utils 目录下。
+1.下载 **gio-minp.esm.js** 文件，把文件放在微信小程序项目里，比如 utils 目录下。
 
 ```text
-$ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
+$ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
 ```
 
 2.在根目录 app.wpy文件的顶部添加跟踪代码
