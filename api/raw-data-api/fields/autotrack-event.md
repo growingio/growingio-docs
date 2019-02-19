@@ -108,13 +108,13 @@ API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接�
 
 
 
-## action\_tag——圈选动作事件
+## action\_tag——元素圈选动作事件
 
 | 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | sendTime | sendtime | bigint | 数据发送时间（send time） | 1521331200412 | 请求在SDK发送的时间戳 |
 | actionRequestId | action\_id | string\(30\) | GrowingIO系统Action内部ID | wa:0:24:1356477892:0 | 用于标识一个action请求的ID，`web的以wa开头`，`mobile的以ma开头` |
-| ruleId | rule\_id | string\(8\) | GrowingIO系统Rule内部ID | 99ae0dec | 用于标识圈选无埋点事件的唯一ID，由字母和数字组成 |
+| ruleId | rule\_id | string\(8\) | GrowingIO系统Rule内部ID | 99ae0dec | 用于标识`元素圈选`无埋点事件的唯一ID，由字母和数字组成 |
 
 ## rules——圈选规则
 
