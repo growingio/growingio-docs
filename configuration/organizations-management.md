@@ -2,7 +2,7 @@
 description: 强大而全面的组织管理功能，帮助企业的管理人员在接入 GrowingIO 后对组织、项目和组织成员进行系统性的管理。
 ---
 
-# 组织管理（beta）
+# 组织管理
 
 * [1. 简介](organizations-management.md#1-jian-jie)
 * [2. 组织-项目-应用的关系](organizations-management.md#2-zu-zhi-xiang-mu-ying-yong-de-guan-xi)
