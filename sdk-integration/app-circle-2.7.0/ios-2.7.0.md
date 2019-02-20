@@ -6,6 +6,12 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 请确保你在之前已经安装了 GrowingIO 无埋点 SDK。
 
+{% hint style="info" %}
+为了使用Web圈app功能，请在原来的依赖系统库文件增加下面的包：
+
+JavaScriptCore.framework
+{% endhint %}
+
 接下来，在将用来圈选的 app 上进行如下操作，安装 2.7.0 beta 版本的 SDK，**不需要也不建议进行发版。**
 
 ### **第一步 下载 SDK 2.7.0 beta 版本的 3 个包：**
@@ -21,4 +27,6 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 ### **第三步 更新**
 
 用上面的包更新 **`Growing.h`，`GrowingCoreKit.framework`，`GrowingAutoTrackKit.framework`** 。
+
+
 
