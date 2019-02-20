@@ -1,5 +1,19 @@
 # SDK 更新日志
 
+### 2019年2月20日
+
+Android 2.6.9
+
+**Bug fix：**
+
+1. 修复了多进程调用 `setVisitor` 时会出现空指针的 bug（只在极端情况下出现，crash 率预计在千分之一以内）。
+2. 修复了 `AndroidRuntimeException: requestFeature() must be called before adding content`错误，该错误会出现在 Android 5.x 和 Android6.x 机型上，触发条件为：在 `onCreate` 中的 `super.onCreate(saveInstanceState)` 代码之后调用 `requestWindowFeature` 接口。
+
+**Feature：**
+
+1. 增加了错误提示，告知用户 GrowingIO Android SDK 不支持 Jack 编译器（详情：[https://developer.android.com/studio/write/java8-support\#disable\_jack](https://developer.android.com/studio/write/java8-support#disable_jack)）。
+2. 加强了对 Android 水滴屏 Android P 型号的圈选的支持。
+
 ### 2019年1月8日
 
 Android 2.6.8
