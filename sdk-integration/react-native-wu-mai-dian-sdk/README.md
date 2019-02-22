@@ -313,7 +313,7 @@ NativeModules.GrowingIO.setVisitor({ "age": 20, "gender": "male" });
 
 1. 验证 点击事件是否发送 （clck）
 2. 验证 页面是否识别（page）
-3. 验证[热图](../../data-analytics/heatmap/heatmap-app.md)和[圈选](../../data-definition/circle/app.md)功能
+3. 验证[热图](../../data-analytics/heatmap/heatmap-app.md)和[圈选](../../data-definition/circle/app/)功能
 4. [原生验证内容](../android-sdk/android-mai-dian-sdk.md#yan-zheng-gong-ju)（Android）
 5. [原生验证内容](../ios-sdk-1/ios-sdk.md#3-quan-xuan-he-re-tu-gong-neng-yan-zheng)（iOS）
 

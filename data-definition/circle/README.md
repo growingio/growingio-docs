@@ -12,7 +12,7 @@ web 圈选，对加载了 JS SDK 的产品进行数据定义：
 
 app 圈选，对 app 进行数据定义：
 
-{% page-ref page="app.md" %}
+{% page-ref page="app/" %}
 
 app 圈选，对小程序进行数据定义：
 
