@@ -19,7 +19,7 @@ description: >-
 
 #### （2）手动集成 SDK 
 
-* 下载 2.6.7 版 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.7.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.7.zip)
+* 下载 2.7.0 版 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.7.0.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.7.0.zip)
 * 解压 iOS SDK 压缩文件
 *  将Growing.h,GrowingCoreKit.framework添加到iOS工程中。
 
@@ -39,6 +39,7 @@ description: >-
 | libicucore.tbd | 用于WebSocket |
 | libsqlite3.tbd | 存储日志 |
 | CoreLocation.framework | 用于读取地理位置信息（如果您的app有权限） |
+| JavaScriptCore.framework | Web圈选 |
 
 {% hint style="warning" %}
 #### 提醒：添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
