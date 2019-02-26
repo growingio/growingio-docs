@@ -52,7 +52,8 @@ GrowingIO iOS SDK2.7.0 包含以下2个组件SDK:
 | libicucore.tbd | 用于APP连接圈选页面解析 |
 | libsqlite3.tbd | 存储日志 |
 | CoreLocation.framework | 用于读取地理位置信息（如果您的app有权限） |
-| JavaScriptCore.framework | Web圈选 |
+| JavaScriptCore.framework | Web圈App交互 |
+| WebKit.framework | Web圈选 |
 
 {% hint style="warning" %}
 #### 提醒：添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
