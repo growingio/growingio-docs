@@ -13,9 +13,66 @@
 
 ### 1.看板数据信息 API <a id="dashboard-api"></a>
 
-获取看板中的图表信息
+#### 1.1 获取看板列表
 
-{% api-method method="get" host="https://www.growingio.com/projects/:project\_id/dashboards/:dashboard\_id.json" path="" %}
+{% api-method method="get" host="https://www.growingio.com" path="/projects/:project\_id/dashboards.json" %}
+{% api-method-summary %}
+ 获取当前项目列表
+{% endapi-method-summary %}
+
+{% api-method-description %}
+  获取当前项目下全部看板列表，按更新时间由近到远排序
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="project\_id" type="string" required=true %}
+项目 uid
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="X-Client-Id" type="string" required=true %}
+GrowingIO 分配的公钥，见 API 认证文档
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Authorization" type="string" required=true %}
+认证 Token，见 API 认证文档
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+[
+  {
+    id: "Dashboard Uid",
+    name: "我的看板",
+    type: "Dashboard Type",
+    createdAt: "2019-01-01",
+    updatedAt: "2019-01-02",
+    scope: "",
+    updater: "Dashboard Last Updator",
+    creator: "Dashboard Creator",
+    status: ""
+  },
+  ...
+]
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### 1.2 获取看板中的图表信息
+
+{% api-method method="get" host="https://www.growingio.com" path="/projects/:project\_id/dashboards/:dashboard\_id.json" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -38,7 +95,7 @@
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
- 认证 Token，见 API 认证文档
+认证 Token，见 API 认证文档
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="X-Client-Id" type="string" required=true %}
@@ -84,7 +141,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 
 获取事件分析数据（单图下载每秒限速 2 次）
 
-{% api-method method="get" host="https://www.growingio.com/v2/projects/:project\_id/charts/:chart\_id.json" path="" %}
+{% api-method method="get" host="https://www.growingio.com" path="/v2/projects/:project\_id/charts/:chart\_id.json" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -186,7 +243,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 
 #### 3.1 获取分群列表 <a id="resource"></a>
 
-{% api-method method="get" host="https://www.growingio.com/projects/:project\_id/segmentations.json" path="" %}
+{% api-method method="get" host="https://www.growingio.com" path="/projects/:project\_id/segmentations.json" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -246,7 +303,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 
 #### 3.2 获取特定分群的用户列表 <a id="resource"></a>
 
-{% api-method method="get" host="https://www.growingio.com/projects/:project\_id/segmentations/:segmentation\_id/users.csv" path="" %}
+{% api-method method="get" host="https://www.growingio.com" path="/projects/:project\_id/segmentations/:segmentation\_id/users.csv" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -299,7 +356,7 @@ cs1    name
 
 获取圈选元素定义
 
-{% api-method method="get" host="https://www.growingio.com/projects/:project\_id/rules.csv" path="" %}
+{% api-method method="get" host="https://www.growingio.com" path="/projects/:project\_id/rules.csv" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
