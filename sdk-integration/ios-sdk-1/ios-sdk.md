@@ -6,7 +6,7 @@ description: GrowingIO 无埋点 SDK 会自动采集用户行为数据、页面�
 
 ## **组件化SDK**
 
-GrowingIO iOS SDK2.6.7 包含以下2个组件SDK:
+GrowingIO iOS SDK2.7.0 包含以下2个组件SDK:
 
 •  GrowingCoreKit \(组件基础库,具备分析功能\)
 
@@ -32,7 +32,7 @@ GrowingIO iOS SDK2.6.7 包含以下2个组件SDK:
 
 #### （2）手动集成 SDK 
 
-* 下载 2.6.7 版 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.7.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.7.zip)，[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.6.7.zip)
+* 下载 2.7.0 版 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.7.0.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.7.0.zip)，[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.7.0.zip)
 * 解压 iOS SDK 压缩文件
 *  将`Growing.h`，`GrowingCoreKit.framework`，`GrowingAutoTrackKit.framework`添加到iOS工程中。
 
@@ -52,6 +52,7 @@ GrowingIO iOS SDK2.6.7 包含以下2个组件SDK:
 | libicucore.tbd | 用于APP连接圈选页面解析 |
 | libsqlite3.tbd | 存储日志 |
 | CoreLocation.framework | 用于读取地理位置信息（如果您的app有权限） |
+| JavaScriptCore.framework | Web圈选 |
 
 {% hint style="warning" %}
 #### 提醒：添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
