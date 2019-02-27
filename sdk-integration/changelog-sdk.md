@@ -1,5 +1,27 @@
 # SDK 更新日志
 
+### 2019年2月27日
+
+#### **Android 2.7.0**
+
+**Bug fix：**
+
+1. 修复异常 `NullPointerException:Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference` getPageName 中 fragment 为空的情况，崩溃率很低，预计在十万分之五。
+
+**Feature：**
+
+1. 增加打点验证功能 ；
+2. 增加 web 圈选 APP 功能，圈选中可以查看热图 ；
+3. 更改 APP 端圈选过程中提示条可拖拽提示。
+
+#### **iOS 2.7.0**
+
+**Feature：**
+
+1. 增加打点验证功能 ；
+2. 增加 web 圈选 APP 功能，圈选中可以查看热图 ；
+3. 更改 APP 端圈选过程中提示条可拖拽提示。
+
 ### 2019年2月20日
 
 Android 2.6.9
