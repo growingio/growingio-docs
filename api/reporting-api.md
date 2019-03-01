@@ -17,7 +17,7 @@
 
 {% api-method method="get" host="https://www.growingio.com" path="/projects/:project\_id/dashboards.json" %}
 {% api-method-summary %}
- 获取当前项目列表
+
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -54,13 +54,12 @@ GrowingIO 分配的公钥，见 API 认证文档
   {
     id: "Dashboard Uid",
     name: "我的看板",
-    type: "Dashboard Type",
+    type: "看板类型", // normal: 普通看板, realtimeV2: 实时看板
     createdAt: "2019-01-01",
     updatedAt: "2019-01-02",
-    scope: "",
+    scope: "看板所属", // global: 全局, project: 项目, user: 个人
     updater: "Dashboard Last Updator",
-    creator: "Dashboard Creator",
-    status: ""
+    creator: "Dashboard Creator"
   },
   ...
 ]

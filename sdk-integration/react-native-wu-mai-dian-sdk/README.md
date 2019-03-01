@@ -193,44 +193,44 @@ NativeModules.GrowingIO.onPageShow("pageName");
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">eventId</td>
-      <td style="text-align:left">非空，长度限制小于等于50；</td>
+      <td style="text-align:left">&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF1B;</td>
     </tr>
     <tr>
       <td style="text-align:left">number</td>
-      <td style="text-align:left">非空。</td>
+      <td style="text-align:left">&#x975E;&#x7A7A;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">eventLevelVariable</td>
       <td style="text-align:left">
-        <p>不可使用嵌套的<code>JSONObject</code>对象，即为JSONObject中不可以放入<code>JSONObject</code>或者<code>JSONArray</code>；</p>
-        <p>key 长度限制小于等于50，value长度限制小等于1000。</p>
+        <p>&#x4E0D;&#x53EF;&#x4F7F;&#x7528;&#x5D4C;&#x5957;&#x7684;<code>JSONObject</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5373;&#x4E3A;JSONObject&#x4E2D;&#x4E0D;&#x53EF;&#x4EE5;&#x653E;&#x5165;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray</code>&#xFF1B;</p>
+        <p>key &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;value&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#x3002;</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">conversionVariables</td>
-      <td style="text-align:left">同上</td>
+      <td style="text-align:left">&#x540C;&#x4E0A;</td>
     </tr>
     <tr>
       <td style="text-align:left">peopleVariables</td>
-      <td style="text-align:left">同上</td>
+      <td style="text-align:left">&#x540C;&#x4E0A;</td>
     </tr>
     <tr>
       <td style="text-align:left">visitor</td>
-      <td style="text-align:left">同上</td>
+      <td style="text-align:left">&#x540C;&#x4E0A;</td>
     </tr>
     <tr>
       <td style="text-align:left">userId</td>
       <td style="text-align:left">
-        <p>长度限制小于等于1000；</p>
-        <p>如果值为空则清空了登录用户变量，不建议这么用，</p>
-        <p>请使用 clearUserId 清除登录用户变量。</p>
+        <p>&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;1000&#xFF1B;</p>
+        <p>&#x5982;&#x679C;&#x503C;&#x4E3A;&#x7A7A;&#x5219;&#x6E05;&#x7A7A;&#x4E86;&#x767B;&#x5F55;&#x7528;&#x6237;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x8FD9;&#x4E48;&#x7528;&#xFF0C;</p>
+        <p>&#x8BF7;&#x4F7F;&#x7528; clearUserId &#x6E05;&#x9664;&#x767B;&#x5F55;&#x7528;&#x6237;&#x53D8;&#x91CF;&#x3002;</p>
       </td>
     </tr>
   </tbody>

@@ -53,39 +53,42 @@ public class MyApplication extends Application {
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">初始化配置项API</th>
-      <th style="text-align:left">默认值</th>
-      <th style="text-align:left">说明</th>
-      <th style="text-align:left">最低版本</th>
+      <th style="text-align:left">&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x9879;API</th>
+      <th style="text-align:left">&#x9ED8;&#x8BA4;&#x503C;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
+      <th style="text-align:left">&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">setTestMode</td>
       <td style="text-align:left">false</td>
-      <td style="text-align:left">在Logcat中输出采集日志</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">&#x5728;Logcat&#x4E2D;&#x8F93;&#x51FA;&#x91C7;&#x96C6;&#x65E5;&#x5FD7;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">setDebugMode</td>
       <td style="text-align:left">false</td>
       <td style="text-align:left">
-        <p>实时发送数据，开启则不遵循移动网络状态下数据发送大小默认 3M 限制以及采集数据缓存30秒发送策略。</p>
-        <p>为了方便开发者查看日志，一般和<code>setTestMode</code>一起使用。</p>
+        <p>&#x5B9E;&#x65F6;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x5F00;&#x542F;&#x5219;&#x4E0D;&#x9075;&#x5FAA;&#x79FB;&#x52A8;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x4E0B;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5927;&#x5C0F;&#x9ED8;&#x8BA4;
+          3M &#x9650;&#x5236;&#x4EE5;&#x53CA;&#x91C7;&#x96C6;&#x6570;&#x636E;&#x7F13;&#x5B58;30&#x79D2;&#x53D1;&#x9001;&#x7B56;&#x7565;&#x3002;</p>
+        <p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x8005;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#xFF0C;&#x4E00;&#x822C;&#x548C;<code>setTestMode</code>&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">setChannel</td>
-      <td style="text-align:left">无</td>
-      <td style="text-align:left">设置渠道</td>
+      <td style="text-align:left">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x6E20;&#x9053;</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">useID</td>
       <td style="text-align:left">true</td>
-      <td style="text-align:left">是否在计算<code>xpath</code>时使用控件<code>id&#xFF0C;</code>默认使用</td>
-      <td style="text-align:left">2.6.0中删除</td>
+      <td style="text-align:left">&#x662F;&#x5426;&#x5728;&#x8BA1;&#x7B97;<code>xpath</code>&#x65F6;&#x4F7F;&#x7528;&#x63A7;&#x4EF6;<code>id&#xFF0C;</code>&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;</td>
+      <td
+      style="text-align:left">2.6.0&#x4E2D;&#x5220;&#x9664;</td>
     </tr>
   </tbody>
 </table>
@@ -142,61 +145,68 @@ GrowingIO 所有 API 都需要在主线程调用。
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">运行时API</th>
-      <th style="text-align:left">说明</th>
+      <th style="text-align:left">&#x8FD0;&#x884C;&#x65F6;API</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">setGeoLocation</td>
-      <td style="text-align:left">设置经纬度，并在 vst 事件中发送，Android SDK 暂时没办法自动获取<code>GPS</code>数据，如果您要采集<code>GPS</code>数据，需要在您的App每次获取完<code>GPS</code>数据之后，通过该<code>API</code>告知
-        SDK。如果您不设置，我们默认使用用户<code>IP</code>的<code>Location&#x3002;</code>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x7ECF;&#x7EAC;&#x5EA6;&#xFF0C;&#x5E76;&#x5728; vst &#x4E8B;&#x4EF6;&#x4E2D;&#x53D1;&#x9001;&#xFF0C;Android
+        SDK &#x6682;&#x65F6;&#x6CA1;&#x529E;&#x6CD5;&#x81EA;&#x52A8;&#x83B7;&#x53D6;<code>GPS</code>&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x8981;&#x91C7;&#x96C6;<code>GPS</code>&#x6570;&#x636E;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x60A8;&#x7684;App&#x6BCF;&#x6B21;&#x83B7;&#x53D6;&#x5B8C;<code>GPS</code>&#x6570;&#x636E;&#x4E4B;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x8BE5;<code>API</code>&#x544A;&#x77E5;
+        SDK&#x3002;&#x5982;&#x679C;&#x60A8;&#x4E0D;&#x8BBE;&#x7F6E;&#xFF0C;&#x6211;&#x4EEC;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7528;&#x6237;<code>IP</code>&#x7684;<code>Location&#x3002;</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">clearGeoLocation</td>
-      <td style="text-align:left">清空经纬度</td>
+      <td style="text-align:left">&#x6E05;&#x7A7A;&#x7ECF;&#x7EAC;&#x5EA6;</td>
     </tr>
     <tr>
       <td style="text-align:left">setViewInfo</td>
       <td style="text-align:left">
-        <p>配置 view 的 Tag，标记 View ，并在 GrowingIO 相关事件中发送 ，内容对应 <code>xPath</code> 中的 <code>obj</code>
+        <p>&#x914D;&#x7F6E; view &#x7684; Tag&#xFF0C;&#x6807;&#x8BB0; View &#xFF0C;&#x5E76;&#x5728;
+          GrowingIO &#x76F8;&#x5173;&#x4E8B;&#x4EF6;&#x4E2D;&#x53D1;&#x9001; &#xFF0C;&#x5185;&#x5BB9;&#x5BF9;&#x5E94; <code>xPath</code> &#x4E2D;&#x7684; <code>obj</code>
         </p>
-        <p>例如：在商品<code>ListView</code>添加购物车的场景中，每个商品<code>item</code>都含有一个加入购物车按钮，这时无法区分商品<code>item</code>与将它加入购物车按钮的一对一关系，此时调用此方法增加描述。</p>
-        <p>注意：适用于原有<code>v</code>字段含义不大，只关注描述的场景，使用此接口后<code>v</code>字段将不采集</p>
+        <p>&#x4F8B;&#x5982;&#xFF1A;&#x5728;&#x5546;&#x54C1;<code>ListView</code>&#x6DFB;&#x52A0;&#x8D2D;&#x7269;&#x8F66;&#x7684;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5546;&#x54C1;<code>item</code>&#x90FD;&#x542B;&#x6709;&#x4E00;&#x4E2A;&#x52A0;&#x5165;&#x8D2D;&#x7269;&#x8F66;&#x6309;&#x94AE;&#xFF0C;&#x8FD9;&#x65F6;&#x65E0;&#x6CD5;&#x533A;&#x5206;&#x5546;&#x54C1;<code>item</code>&#x4E0E;&#x5C06;&#x5B83;&#x52A0;&#x5165;&#x8D2D;&#x7269;&#x8F66;&#x6309;&#x94AE;&#x7684;&#x4E00;&#x5BF9;&#x4E00;&#x5173;&#x7CFB;&#xFF0C;&#x6B64;&#x65F6;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x589E;&#x52A0;&#x63CF;&#x8FF0;&#x3002;</p>
+        <p>&#x6CE8;&#x610F;&#xFF1A;&#x9002;&#x7528;&#x4E8E;&#x539F;&#x6709;<code>v</code>&#x5B57;&#x6BB5;&#x542B;&#x4E49;&#x4E0D;&#x5927;&#xFF0C;&#x53EA;&#x5173;&#x6CE8;&#x63CF;&#x8FF0;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x4F7F;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x540E;<code>v</code>&#x5B57;&#x6BB5;&#x5C06;&#x4E0D;&#x91C7;&#x96C6;</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">setViewContent</td>
       <td style="text-align:left">
-        <p>配置 view 的 Tag，标记 View ，并在 GrowingIO相关事件中发送，内容对应 <code>xPath</code> 中的 <code>v</code>
+        <p>&#x914D;&#x7F6E; view &#x7684; Tag&#xFF0C;&#x6807;&#x8BB0; View &#xFF0C;&#x5E76;&#x5728;
+          GrowingIO&#x76F8;&#x5173;&#x4E8B;&#x4EF6;&#x4E2D;&#x53D1;&#x9001;&#xFF0C;&#x5185;&#x5BB9;&#x5BF9;&#x5E94; <code>xPath</code> &#x4E2D;&#x7684; <code>v</code>
         </p>
-        <p>SDK默认不会采集ImageView的内容，为了能对不同的图片元素（ImageView）区分统计，需要对每个具有分析意义的图片元素（ImageView）添加描述。</p>
+        <p>SDK&#x9ED8;&#x8BA4;&#x4E0D;&#x4F1A;&#x91C7;&#x96C6;ImageView&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4E3A;&#x4E86;&#x80FD;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x56FE;&#x7247;&#x5143;&#x7D20;&#xFF08;ImageView&#xFF09;&#x533A;&#x5206;&#x7EDF;&#x8BA1;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x6BCF;&#x4E2A;&#x5177;&#x6709;&#x5206;&#x6790;&#x610F;&#x4E49;&#x7684;&#x56FE;&#x7247;&#x5143;&#x7D20;&#xFF08;ImageView&#xFF09;&#x6DFB;&#x52A0;&#x63CF;&#x8FF0;&#x3002;</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">setViewID</td>
       <td style="text-align:left">
-        <p>设置 View id ，配置之后对应 xPath 中的 view id，SDK将会使用Layout文件中的ID来识别一个元素。</p>
-        <p>如果部分元素在Layout文件中没有ID，建议在Layout文件中添加。</p>
-        <p>对于动态生成的元素，可以使用如下方法对它设置唯一的ID。</p>
-        <p>当您的应用界面改版时，可能会导致无法准确地统计已经圈选的元素。因此，对于应用中的主要流程涉及到的界面元素，建议您为它们设置固定的唯一ID，以保证数据的一致性。</p>
+        <p>&#x8BBE;&#x7F6E; View id &#xFF0C;&#x914D;&#x7F6E;&#x4E4B;&#x540E;&#x5BF9;&#x5E94;
+          xPath &#x4E2D;&#x7684; view id&#xFF0C;SDK&#x5C06;&#x4F1A;&#x4F7F;&#x7528;Layout&#x6587;&#x4EF6;&#x4E2D;&#x7684;ID&#x6765;&#x8BC6;&#x522B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;</p>
+        <p>&#x5982;&#x679C;&#x90E8;&#x5206;&#x5143;&#x7D20;&#x5728;Layout&#x6587;&#x4EF6;&#x4E2D;&#x6CA1;&#x6709;ID&#xFF0C;&#x5EFA;&#x8BAE;&#x5728;Layout&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x3002;</p>
+        <p>&#x5BF9;&#x4E8E;&#x52A8;&#x6001;&#x751F;&#x6210;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x65B9;&#x6CD5;&#x5BF9;&#x5B83;&#x8BBE;&#x7F6E;&#x552F;&#x4E00;&#x7684;ID&#x3002;</p>
+        <p>&#x5F53;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x754C;&#x9762;&#x6539;&#x7248;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;&#x51C6;&#x786E;&#x5730;&#x7EDF;&#x8BA1;&#x5DF2;&#x7ECF;&#x5708;&#x9009;&#x7684;&#x5143;&#x7D20;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5BF9;&#x4E8E;&#x5E94;&#x7528;&#x4E2D;&#x7684;&#x4E3B;&#x8981;&#x6D41;&#x7A0B;&#x6D89;&#x53CA;&#x5230;&#x7684;&#x754C;&#x9762;&#x5143;&#x7D20;&#xFF0C;&#x5EFA;&#x8BAE;&#x60A8;&#x4E3A;&#x5B83;&#x4EEC;&#x8BBE;&#x7F6E;&#x56FA;&#x5B9A;&#x7684;&#x552F;&#x4E00;ID&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x3002;</p>
         <ul>
-          <li>ID 只能设置为字母、数字和下划线的组合</li>
-          <li>如果在ViewGroup上设置ID的话，SDK会忽略他所有子元素的默认ID（就是写在xml文件里的）只会使用GrowingIO.setViewID设置的ID。</li>
-          <li>对于已经集成过旧版SDK并圈选过的应用，对某个元素设置ID后再圈选它，指标数值会从零开始计算，类似初次集成SDK后发版的效果，但不影响之前圈选的其它指标数据。如果不希望出现这种情况，请不要使用这个方法</li>
+          <li>ID &#x53EA;&#x80FD;&#x8BBE;&#x7F6E;&#x4E3A;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x7684;&#x7EC4;&#x5408;</li>
+          <li>&#x5982;&#x679C;&#x5728;ViewGroup&#x4E0A;&#x8BBE;&#x7F6E;ID&#x7684;&#x8BDD;&#xFF0C;SDK&#x4F1A;&#x5FFD;&#x7565;&#x4ED6;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x7684;&#x9ED8;&#x8BA4;ID&#xFF08;&#x5C31;&#x662F;&#x5199;&#x5728;xml&#x6587;&#x4EF6;&#x91CC;&#x7684;&#xFF09;&#x53EA;&#x4F1A;&#x4F7F;&#x7528;GrowingIO.setViewID&#x8BBE;&#x7F6E;&#x7684;ID&#x3002;</li>
+          <li>&#x5BF9;&#x4E8E;&#x5DF2;&#x7ECF;&#x96C6;&#x6210;&#x8FC7;&#x65E7;&#x7248;SDK&#x5E76;&#x5708;&#x9009;&#x8FC7;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x5BF9;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;ID&#x540E;&#x518D;&#x5708;&#x9009;&#x5B83;&#xFF0C;&#x6307;&#x6807;&#x6570;&#x503C;&#x4F1A;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x8BA1;&#x7B97;&#xFF0C;&#x7C7B;&#x4F3C;&#x521D;&#x6B21;&#x96C6;&#x6210;SDK&#x540E;&#x53D1;&#x7248;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4F46;&#x4E0D;&#x5F71;&#x54CD;&#x4E4B;&#x524D;&#x5708;&#x9009;&#x7684;&#x5176;&#x5B83;&#x6307;&#x6807;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x5E0C;&#x671B;&#x51FA;&#x73B0;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x8BF7;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;</li>
         </ul>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">setChannel</td>
-      <td style="text-align:left"><b>2.6.5 之前版本</b>：
-        <br />先设置渠道信息，再发送数据
-        <br />能够保证所有数据都一定会带上渠道信息
-        <br />
-        <br /><b>2.6.5 及之后版本</b>：
-        <br />保留原有设置渠道信息的方法，新增在运行时设置渠道信息
-        <br />新增的接口无法保证所有数据都一定会带上渠道信息（虽然我们会通过重发机制进行保证，但是无法做到100%）</td>
+      <td style="text-align:left"><b>2.6.5 &#x4E4B;&#x524D;&#x7248;&#x672C;</b>&#xFF1A;
+        <br />&#x5148;&#x8BBE;&#x7F6E;&#x6E20;&#x9053;&#x4FE1;&#x606F;&#xFF0C;&#x518D;&#x53D1;&#x9001;&#x6570;&#x636E;
+        <br
+        />&#x80FD;&#x591F;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x4E00;&#x5B9A;&#x4F1A;&#x5E26;&#x4E0A;&#x6E20;&#x9053;&#x4FE1;&#x606F;
+        <br
+        />
+        <br /><b>2.6.5 &#x53CA;&#x4E4B;&#x540E;&#x7248;&#x672C;</b>&#xFF1A;
+        <br />&#x4FDD;&#x7559;&#x539F;&#x6709;&#x8BBE;&#x7F6E;&#x6E20;&#x9053;&#x4FE1;&#x606F;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x65B0;&#x589E;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x8BBE;&#x7F6E;&#x6E20;&#x9053;&#x4FE1;&#x606F;
+        <br
+        />&#x65B0;&#x589E;&#x7684;&#x63A5;&#x53E3;&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x4E00;&#x5B9A;&#x4F1A;&#x5E26;&#x4E0A;&#x6E20;&#x9053;&#x4FE1;&#x606F;&#xFF08;&#x867D;&#x7136;&#x6211;&#x4EEC;&#x4F1A;&#x901A;&#x8FC7;&#x91CD;&#x53D1;&#x673A;&#x5236;&#x8FDB;&#x884C;&#x4FDD;&#x8BC1;&#xFF0C;&#x4F46;&#x662F;&#x65E0;&#x6CD5;&#x505A;&#x5230;100%&#xFF09;</td>
     </tr>
   </tbody>
 </table>
@@ -206,160 +216,171 @@ GrowingIO 所有 API 都需要在主线程调用。
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">运行时API</th>
-      <th style="text-align:left">说明</th>
-      <th style="text-align:left">版本</th>
+      <th style="text-align:left">&#x8FD0;&#x884C;&#x65F6;API</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
+      <th style="text-align:left">&#x7248;&#x672C;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">disableDataCollect</td>
-      <td style="text-align:left">遵守欧洲联盟出台的通用数据保护条例，用户不授权，不采集用户数据</td>
-      <td style="text-align:left">2.3.2 以上</td>
+      <td style="text-align:left">&#x9075;&#x5B88;&#x6B27;&#x6D32;&#x8054;&#x76DF;&#x51FA;&#x53F0;&#x7684;&#x901A;&#x7528;&#x6570;&#x636E;&#x4FDD;&#x62A4;&#x6761;&#x4F8B;&#xFF0C;&#x7528;&#x6237;&#x4E0D;&#x6388;&#x6743;&#xFF0C;&#x4E0D;&#x91C7;&#x96C6;&#x7528;&#x6237;&#x6570;&#x636E;</td>
+      <td
+      style="text-align:left">2.3.2 &#x4EE5;&#x4E0A;</td>
     </tr>
     <tr>
       <td style="text-align:left">enableDataCollect</td>
-      <td style="text-align:left">遵守欧洲联盟出台的通用数据保护条例，用户授权，采集用户数据</td>
-      <td style="text-align:left">2.3.2 以上</td>
+      <td style="text-align:left">&#x9075;&#x5B88;&#x6B27;&#x6D32;&#x8054;&#x76DF;&#x51FA;&#x53F0;&#x7684;&#x901A;&#x7528;&#x6570;&#x636E;&#x4FDD;&#x62A4;&#x6761;&#x4F8B;&#xFF0C;&#x7528;&#x6237;&#x6388;&#x6743;&#xFF0C;&#x91C7;&#x96C6;&#x7528;&#x6237;&#x6570;&#x636E;</td>
+      <td
+      style="text-align:left">2.3.2 &#x4EE5;&#x4E0A;</td>
     </tr>
     <tr>
       <td style="text-align:left">disable</td>
-      <td style="text-align:left">GrowingIO 停止采集</td>
+      <td style="text-align:left">GrowingIO &#x505C;&#x6B62;&#x91C7;&#x96C6;</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">resume</td>
-      <td style="text-align:left">GrowingIO 恢复采集</td>
+      <td style="text-align:left">GrowingIO &#x6062;&#x590D;&#x91C7;&#x96C6;</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">stop</td>
-      <td style="text-align:left">GrowingIO 停止采集，可以不在主线程调用</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">GrowingIO &#x505C;&#x6B62;&#x91C7;&#x96C6;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">setThrottle</td>
-      <td style="text-align:left">是否节流发送（节流发送时imp不发送），内部实际调用 Configuration 中的同名方法，所以在初始化时候配置和运行时动态配置，效果一样。</td>
+      <td style="text-align:left">&#x662F;&#x5426;&#x8282;&#x6D41;&#x53D1;&#x9001;&#xFF08;&#x8282;&#x6D41;&#x53D1;&#x9001;&#x65F6;imp&#x4E0D;&#x53D1;&#x9001;&#xFF09;&#xFF0C;&#x5185;&#x90E8;&#x5B9E;&#x9645;&#x8C03;&#x7528;
+        Configuration &#x4E2D;&#x7684;&#x540C;&#x540D;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x5019;&#x914D;&#x7F6E;&#x548C;&#x8FD0;&#x884C;&#x65F6;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#xFF0C;&#x6548;&#x679C;&#x4E00;&#x6837;&#x3002;</td>
       <td
       style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">setImp</td>
-      <td style="text-align:left"> <code>imp</code>事件开关，<code>true</code> 为打开</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"> <code>imp</code>&#x4E8B;&#x4EF6;&#x5F00;&#x5173;&#xFF0C;<code>true</code> &#x4E3A;&#x6253;&#x5F00;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">disableImpression</td>
-      <td style="text-align:left">不发送 <code>imp</code>
+      <td style="text-align:left">&#x4E0D;&#x53D1;&#x9001; <code>imp</code>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">ignoredView</td>
       <td style="text-align:left">
-        <p>忽略配置的 View ，不采集用户数据。</p>
-        <p>如果您需要忽略某些特殊内容，比如倒计时元素或涉及隐私的内容，可以使用此接口。</p>
+        <p>&#x5FFD;&#x7565;&#x914D;&#x7F6E;&#x7684; View &#xFF0C;&#x4E0D;&#x91C7;&#x96C6;&#x7528;&#x6237;&#x6570;&#x636E;&#x3002;</p>
+        <p>&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x5FFD;&#x7565;&#x67D0;&#x4E9B;&#x7279;&#x6B8A;&#x5185;&#x5BB9;&#xFF0C;&#x6BD4;&#x5982;&#x5012;&#x8BA1;&#x65F6;&#x5143;&#x7D20;&#x6216;&#x6D89;&#x53CA;&#x9690;&#x79C1;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x3002;</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">ignoreFragment</td>
-      <td style="text-align:left">不采集配置的 Fragment 页面浏览事件（<code>page</code>），不将<code>Fragment</code>视作一个页面，可以理解成当作为一个可点击的view。自动采集用户行为事件（<code>clck&#x3001;chng</code>）和元素展示事件（<code>imp</code>）。</td>
+      <td style="text-align:left">&#x4E0D;&#x91C7;&#x96C6;&#x914D;&#x7F6E;&#x7684; Fragment &#x9875;&#x9762;&#x6D4F;&#x89C8;&#x4E8B;&#x4EF6;&#xFF08;<code>page</code>&#xFF09;&#xFF0C;&#x4E0D;&#x5C06;<code>Fragment</code>&#x89C6;&#x4F5C;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x6210;&#x5F53;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x53EF;&#x70B9;&#x51FB;&#x7684;view&#x3002;&#x81EA;&#x52A8;&#x91C7;&#x96C6;&#x7528;&#x6237;&#x884C;&#x4E3A;&#x4E8B;&#x4EF6;&#xFF08;<code>clck&#x3001;chng</code>&#xFF09;&#x548C;&#x5143;&#x7D20;&#x5C55;&#x793A;&#x4E8B;&#x4EF6;&#xFF08;<code>imp</code>&#xFF09;&#x3002;</td>
       <td
       style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">ignoreFragmentX</td>
-      <td style="text-align:left">支持 AndroidX ， 功能同 ignoreFragment。</td>
-      <td style="text-align:left">2.6.6 以上</td>
+      <td style="text-align:left">&#x652F;&#x6301; AndroidX &#xFF0C; &#x529F;&#x80FD;&#x540C; ignoreFragment&#x3002;</td>
+      <td
+      style="text-align:left">2.6.6 &#x4EE5;&#x4E0A;</td>
     </tr>
     <tr>
       <td style="text-align:left">ignoreViewImp</td>
       <td style="text-align:left">
-        <p>忽略配置的 View ，不采集用户元素浏览数据。</p>
-        <p>如果您需要忽略某些大量的 数据，比如弹幕，可以使用此接口。</p>
+        <p>&#x5FFD;&#x7565;&#x914D;&#x7F6E;&#x7684; View &#xFF0C;&#x4E0D;&#x91C7;&#x96C6;&#x7528;&#x6237;&#x5143;&#x7D20;&#x6D4F;&#x89C8;&#x6570;&#x636E;&#x3002;</p>
+        <p>&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x5FFD;&#x7565;&#x67D0;&#x4E9B;&#x5927;&#x91CF;&#x7684;
+          &#x6570;&#x636E;&#xFF0C;&#x6BD4;&#x5982;&#x5F39;&#x5E55;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x3002;</p>
       </td>
-      <td style="text-align:left">2.6.7 以上</td>
+      <td style="text-align:left">2.6.7 &#x4EE5;&#x4E0A;</td>
     </tr>
     <tr>
       <td style="text-align:left">setPageName</td>
       <td style="text-align:left">
-        <p>设置页面别名，有些时候，对于完成某个功能的页面，统计时可能需要进一步细分。 比如，对于展示商品列表的页面，需要区分衣物类商品，以及食品类商品的两种列表的访问量。</p>
+        <p>&#x8BBE;&#x7F6E;&#x9875;&#x9762;&#x522B;&#x540D;&#xFF0C;&#x6709;&#x4E9B;&#x65F6;&#x5019;&#xFF0C;&#x5BF9;&#x4E8E;&#x5B8C;&#x6210;&#x67D0;&#x4E2A;&#x529F;&#x80FD;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x7EDF;&#x8BA1;&#x65F6;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x8FDB;&#x4E00;&#x6B65;&#x7EC6;&#x5206;&#x3002;
+          &#x6BD4;&#x5982;&#xFF0C;&#x5BF9;&#x4E8E;&#x5C55;&#x793A;&#x5546;&#x54C1;&#x5217;&#x8868;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x9700;&#x8981;&#x533A;&#x5206;&#x8863;&#x7269;&#x7C7B;&#x5546;&#x54C1;&#xFF0C;&#x4EE5;&#x53CA;&#x98DF;&#x54C1;&#x7C7B;&#x5546;&#x54C1;&#x7684;&#x4E24;&#x79CD;&#x5217;&#x8868;&#x7684;&#x8BBF;&#x95EE;&#x91CF;&#x3002;</p>
         <p></p>
-        <p>注意</p>
+        <p>&#x6CE8;&#x610F;</p>
         <ol>
-          <li>必须在该<code>Activity</code>的<code>onCreate</code>方法中完成该属性的赋值操作。</li>
-          <li>页面别名只能设置为字母、数字和下划线的组合。</li>
-          <li>为查看数据方便，请尽量对iOS和安卓的同功能页面取不同的名称。</li>
+          <li>&#x5FC5;&#x987B;&#x5728;&#x8BE5;<code>Activity</code>&#x7684;<code>onCreate</code>&#x65B9;&#x6CD5;&#x4E2D;&#x5B8C;&#x6210;&#x8BE5;&#x5C5E;&#x6027;&#x7684;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x3002;</li>
+          <li>&#x9875;&#x9762;&#x522B;&#x540D;&#x53EA;&#x80FD;&#x8BBE;&#x7F6E;&#x4E3A;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x7684;&#x7EC4;&#x5408;&#x3002;</li>
+          <li>&#x4E3A;&#x67E5;&#x770B;&#x6570;&#x636E;&#x65B9;&#x4FBF;&#xFF0C;&#x8BF7;&#x5C3D;&#x91CF;&#x5BF9;iOS&#x548C;&#x5B89;&#x5353;&#x7684;&#x540C;&#x529F;&#x80FD;&#x9875;&#x9762;&#x53D6;&#x4E0D;&#x540C;&#x7684;&#x540D;&#x79F0;&#x3002;</li>
         </ol>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">setPageNameX</td>
-      <td style="text-align:left">支持 AndroidX ， 功能同 setPageName。</td>
-      <td style="text-align:left">2.6.6 以上</td>
+      <td style="text-align:left">&#x652F;&#x6301; AndroidX &#xFF0C; &#x529F;&#x80FD;&#x540C; setPageName&#x3002;</td>
+      <td
+      style="text-align:left">2.6.6 &#x4EE5;&#x4E0A;</td>
     </tr>
     <tr>
       <td style="text-align:left">getSessionId</td>
-      <td style="text-align:left">得到 session id</td>
+      <td style="text-align:left">&#x5F97;&#x5230; session id</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">getDeviceId</td>
-      <td style="text-align:left">获取设备id，对应数据采集的<code>u</code>字段，又称为<code>&#x533F;&#x540D;&#x7528;&#x6237;id</code>，用来定义一台设备，SDK
-        自动生成。</td>
+      <td style="text-align:left">&#x83B7;&#x53D6;&#x8BBE;&#x5907;id&#xFF0C;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x7684;<code>u</code>&#x5B57;&#x6BB5;&#xFF0C;&#x53C8;&#x79F0;&#x4E3A;<code>&#x533F;&#x540D;&#x7528;&#x6237;id</code>&#xFF0C;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x53F0;&#x8BBE;&#x5907;&#xFF0C;SDK
+        &#x81EA;&#x52A8;&#x751F;&#x6210;&#x3002;</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left"><a href="android-sdk.md#cai-ji-guang-gao-banner-shu-ju">trackBanner</a>
       </td>
-      <td style="text-align:left"><a href="android-sdk.md#cai-ji-guang-gao-banner-shu-ju">设置所有广告图对应的广告内容描述，内容描述需要跟广告的顺序相同。</a>
+      <td style="text-align:left"><a href="android-sdk.md#cai-ji-guang-gao-banner-shu-ju">&#x8BBE;&#x7F6E;&#x6240;&#x6709;&#x5E7F;&#x544A;&#x56FE;&#x5BF9;&#x5E94;&#x7684;&#x5E7F;&#x544A;&#x5185;&#x5BB9;&#x63CF;&#x8FF0;&#xFF0C;&#x5185;&#x5BB9;&#x63CF;&#x8FF0;&#x9700;&#x8981;&#x8DDF;&#x5E7F;&#x544A;&#x7684;&#x987A;&#x5E8F;&#x76F8;&#x540C;&#x3002;</a>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">​<a href="android-sdk.md#cai-ji-shu-ru-kuang-shu-ju">trackEditText</a>
+      <td style="text-align:left">&#x200B;<a href="android-sdk.md#cai-ji-shu-ru-kuang-shu-ju">trackEditText</a>
       </td>
       <td style="text-align:left">
-        <p>​<a href="android-sdk.md#cai-ji-shu-ru-kuang-shu-ju">SDK 默认不采集用户输入框的内容，设置以后，采集除了密码以外的输入框文本内容。​</a>
+        <p>&#x200B;<a href="android-sdk.md#cai-ji-shu-ru-kuang-shu-ju">SDK &#x9ED8;&#x8BA4;&#x4E0D;&#x91C7;&#x96C6;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6846;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8BBE;&#x7F6E;&#x4EE5;&#x540E;&#xFF0C;&#x91C7;&#x96C6;&#x9664;&#x4E86;&#x5BC6;&#x7801;&#x4EE5;&#x5916;&#x7684;&#x8F93;&#x5165;&#x6846;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x3002;&#x200B;</a>
         </p>
-        <p>当这个输入框失去焦点（包括应用退到后台），且输入框内容跟获取焦点前相比发生变化时，输入框内文字会被发送回GrowingIO。</p>
-        <p>注意：对于密码输入框，即便标记为需要采集，SDK也会忽略，不采集它的数据。</p>
+        <p>&#x5F53;&#x8FD9;&#x4E2A;&#x8F93;&#x5165;&#x6846;&#x5931;&#x53BB;&#x7126;&#x70B9;&#xFF08;&#x5305;&#x62EC;&#x5E94;&#x7528;&#x9000;&#x5230;&#x540E;&#x53F0;&#xFF09;&#xFF0C;&#x4E14;&#x8F93;&#x5165;&#x6846;&#x5185;&#x5BB9;&#x8DDF;&#x83B7;&#x53D6;&#x7126;&#x70B9;&#x524D;&#x76F8;&#x6BD4;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x8F93;&#x5165;&#x6846;&#x5185;&#x6587;&#x5B57;&#x4F1A;&#x88AB;&#x53D1;&#x9001;&#x56DE;GrowingIO&#x3002;</p>
+        <p>&#x6CE8;&#x610F;&#xFF1A;&#x5BF9;&#x4E8E;&#x5BC6;&#x7801;&#x8F93;&#x5165;&#x6846;&#xFF0C;&#x5373;&#x4FBF;&#x6807;&#x8BB0;&#x4E3A;&#x9700;&#x8981;&#x91C7;&#x96C6;&#xFF0C;SDK&#x4E5F;&#x4F1A;&#x5FFD;&#x7565;&#xFF0C;&#x4E0D;&#x91C7;&#x96C6;&#x5B83;&#x7684;&#x6570;&#x636E;&#x3002;</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">trackFragment</td>
       <td style="text-align:left">
-        <p>如果APP初始化时候，没有设置 <code>trackAllFragment</code> 即不采集全部 <code>Fragment</code>，可以选择性采集指定 <code>Fragment</code>，设置之后
-          sdk 将监听 <code>Fragment</code> 的各个生命周期， 采集相关用户行为数据。</p>
-        <p>请在 <code>new Fragment </code>的时候调用此方法。</p>
+        <p>&#x5982;&#x679C;APP&#x521D;&#x59CB;&#x5316;&#x65F6;&#x5019;&#xFF0C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E; <code>trackAllFragment</code> &#x5373;&#x4E0D;&#x91C7;&#x96C6;&#x5168;&#x90E8; <code>Fragment</code>&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x6027;&#x91C7;&#x96C6;&#x6307;&#x5B9A; <code>Fragment</code>&#xFF0C;&#x8BBE;&#x7F6E;&#x4E4B;&#x540E;
+          sdk &#x5C06;&#x76D1;&#x542C; <code>Fragment</code> &#x7684;&#x5404;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;
+          &#x91C7;&#x96C6;&#x76F8;&#x5173;&#x7528;&#x6237;&#x884C;&#x4E3A;&#x6570;&#x636E;&#x3002;</p>
+        <p>&#x8BF7;&#x5728; <code>new Fragment </code>&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x3002;</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">trackFragmentX</td>
       <td style="text-align:left">
-        <p>支持 AndroidX ， 功能同 trackFragment。</p>
-        <p>请在 <code>new Fragment </code>的时候调用此方法。</p>
+        <p>&#x652F;&#x6301; AndroidX &#xFF0C; &#x529F;&#x80FD;&#x540C; trackFragment&#x3002;</p>
+        <p>&#x8BF7;&#x5728; <code>new Fragment </code>&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x3002;</p>
       </td>
-      <td style="text-align:left">2.6.6 以上</td>
+      <td style="text-align:left">2.6.6 &#x4EE5;&#x4E0A;</td>
     </tr>
     <tr>
       <td style="text-align:left">trackWebView</td>
-      <td style="text-align:left">采集 <code>WebView</code> 事件，默认采集，您可以在不全量采集<code>WebView</code>的时候，定制采集某个<code>WebView</code>
+      <td style="text-align:left">&#x91C7;&#x96C6; <code>WebView</code> &#x4E8B;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x91C7;&#x96C6;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x5168;&#x91CF;&#x91C7;&#x96C6;<code>WebView</code>&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B9A;&#x5236;&#x91C7;&#x96C6;&#x67D0;&#x4E2A;<code>WebView</code>
       </td>
-      <td style="text-align:left">2.6.0 中删除</td>
+      <td style="text-align:left">2.6.0 &#x4E2D;&#x5220;&#x9664;</td>
     </tr>
     <tr>
       <td style="text-align:left">trackX5WebView</td>
-      <td style="text-align:left">采集 X5WebView 事件，默认采集</td>
-      <td style="text-align:left">2.6.0 中删除</td>
+      <td style="text-align:left">&#x91C7;&#x96C6; X5WebView &#x4E8B;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x91C7;&#x96C6;</td>
+      <td
+      style="text-align:left">2.6.0 &#x4E2D;&#x5220;&#x9664;</td>
     </tr>
     <tr>
       <td style="text-align:left">setTabName</td>
-      <td style="text-align:left">如果您有某些View动态添加到ViewTree中并且在父容器中的位置不固定（例如常见的多Fragment实现的Tab切换），请给每个View设置ID来辅助统计</td>
+      <td style="text-align:left">&#x5982;&#x679C;&#x60A8;&#x6709;&#x67D0;&#x4E9B;View&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x5230;ViewTree&#x4E2D;&#x5E76;&#x4E14;&#x5728;&#x7236;&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x4E0D;&#x56FA;&#x5B9A;&#xFF08;&#x4F8B;&#x5982;&#x5E38;&#x89C1;&#x7684;&#x591A;Fragment&#x5B9E;&#x73B0;&#x7684;Tab&#x5207;&#x6362;&#xFF09;&#xFF0C;&#x8BF7;&#x7ED9;&#x6BCF;&#x4E2A;View&#x8BBE;&#x7F6E;ID&#x6765;&#x8F85;&#x52A9;&#x7EDF;&#x8BA1;</td>
       <td
       style="text-align:left"></td>
     </tr>

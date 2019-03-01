@@ -83,61 +83,63 @@ https://api.growingio.com/v3/${ai}/s2s/cstm?stm=${sendingTime}
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">字段名称</th>
-      <th style="text-align:left">是否必填</th>
-      <th style="text-align:left">字段格式</th>
-      <th style="text-align:left">字段说明</th>
-      <th style="text-align:left">字段值示例</th>
+      <th style="text-align:left">&#x5B57;&#x6BB5;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x5B57;&#x6BB5;&#x683C;&#x5F0F;</th>
+      <th style="text-align:left">&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</th>
+      <th style="text-align:left">&#x5B57;&#x6BB5;&#x503C;&#x793A;&#x4F8B;</th>
       <th style="text-align:left"></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">cs1</td>
-      <td style="text-align:left">是</td>
-      <td style="text-align:left">字符串</td>
-      <td style="text-align:left">用户登录ID</td>
+      <td style="text-align:left">&#x662F;</td>
+      <td style="text-align:left">&#x5B57;&#x7B26;&#x4E32;</td>
+      <td style="text-align:left">&#x7528;&#x6237;&#x767B;&#x5F55;ID</td>
       <td style="text-align:left">9128391</td>
       <td style="text-align:left">
-        <p>长度限制255,且字符串中不能包含":"</p>
-        <p>invalidCS1: ["0", "1", "-1", "{<a href="http://user.id/">user.id</a>}",null]</p>
+        <p>&#x957F;&#x5EA6;&#x9650;&#x5236;255,&#x4E14;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x4E0D;&#x80FD;&#x5305;&#x542B;&quot;:&quot;</p>
+        <p>invalidCS1: [&quot;0&quot;, &quot;1&quot;, &quot;-1&quot;, &quot;{<a href="http://user.id/">user.id</a>}&quot;,null]</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">tm</td>
-      <td style="text-align:left">是</td>
-      <td style="text-align:left">数值</td>
-      <td style="text-align:left">事件发生时间时间戳（毫秒）</td>
-      <td style="text-align:left">1506069592985</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">&#x662F;</td>
+      <td style="text-align:left">&#x6570;&#x503C;</td>
+      <td style="text-align:left">&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x65F6;&#x95F4;&#x65F6;&#x95F4;&#x6233;&#xFF08;&#x6BEB;&#x79D2;&#xFF09;</td>
+      <td
+      style="text-align:left">1506069592985</td>
+        <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">n</td>
-      <td style="text-align:left">是</td>
-      <td style="text-align:left">字符串</td>
-      <td style="text-align:left">事件标识</td>
+      <td style="text-align:left">&#x662F;</td>
+      <td style="text-align:left">&#x5B57;&#x7B26;&#x4E32;</td>
+      <td style="text-align:left">&#x4E8B;&#x4EF6;&#x6807;&#x8BC6;</td>
       <td style="text-align:left">intcmpEntry</td>
-      <td style="text-align:left">长度限制255</td>
+      <td style="text-align:left">&#x957F;&#x5EA6;&#x9650;&#x5236;255</td>
     </tr>
     <tr>
       <td style="text-align:left">var</td>
-      <td style="text-align:left">否</td>
-      <td style="text-align:left">对象</td>
-      <td style="text-align:left">所有的自定义事件变量</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
-        <p>key：value</p>
-        <p>value：若为字符串，长度限制255</p>
-        <p>value：若为数值，可以为整数，小数（支持多个小数位）</p>
-      </td>
+      <td style="text-align:left">&#x5426;</td>
+      <td style="text-align:left">&#x5BF9;&#x8C61;</td>
+      <td style="text-align:left">&#x6240;&#x6709;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x53D8;&#x91CF;</td>
+      <td
+      style="text-align:left"></td>
+        <td style="text-align:left">
+          <p>key&#xFF1A;value</p>
+          <p>value&#xFF1A;&#x82E5;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;255</p>
+          <p>value&#xFF1A;&#x82E5;&#x4E3A;&#x6570;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x6574;&#x6570;&#xFF0C;&#x5C0F;&#x6570;&#xFF08;&#x652F;&#x6301;&#x591A;&#x4E2A;&#x5C0F;&#x6570;&#x4F4D;&#xFF09;</p>
+        </td>
     </tr>
     <tr>
       <td style="text-align:left">t</td>
-      <td style="text-align:left">是</td>
-      <td style="text-align:left">字符串</td>
-      <td style="text-align:left">固定cstm</td>
+      <td style="text-align:left">&#x662F;</td>
+      <td style="text-align:left">&#x5B57;&#x7B26;&#x4E32;</td>
+      <td style="text-align:left">&#x56FA;&#x5B9A;cstm</td>
       <td style="text-align:left">cstm</td>
-      <td style="text-align:left">固定</td>
+      <td style="text-align:left">&#x56FA;&#x5B9A;</td>
     </tr>
   </tbody>
 </table>

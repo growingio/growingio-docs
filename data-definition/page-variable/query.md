@@ -53,11 +53,11 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
     <tr>
       <th style="text-align:left">#</th>
       <th style="text-align:left"></th>
-      <th style="text-align:left">变化</th>
-      <th style="text-align:left">埋点取的值</th>
-      <th style="text-align:left">URL 取的值</th>
-      <th style="text-align:left">之前</th>
-      <th style="text-align:left">之后</th>
+      <th style="text-align:left">&#x53D8;&#x5316;</th>
+      <th style="text-align:left">&#x57CB;&#x70B9;&#x53D6;&#x7684;&#x503C;</th>
+      <th style="text-align:left">URL &#x53D6;&#x7684;&#x503C;</th>
+      <th style="text-align:left">&#x4E4B;&#x524D;</th>
+      <th style="text-align:left">&#x4E4B;&#x540E;</th>
     </tr>
   </thead>
   <tbody>
@@ -71,16 +71,16 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">第 1 个情况</td>
+      <td style="text-align:left">&#x7B2C; 1 &#x4E2A;&#x60C5;&#x51B5;</td>
       <td style="text-align:left">
-        <p>商品详情页1</p>
+        <p>&#x5546;&#x54C1;&#x8BE6;&#x60C5;&#x9875;1</p>
         <ul>
-          <li>商品页内容中的值 342817</li>
-          <li><a href="http://www.s.com/pro?id=342817&amp;city=bj">ww.s.com/pro?id=342817&city=bj</a>
+          <li>&#x5546;&#x54C1;&#x9875;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x503C; 342817</li>
+          <li><a href="http://www.s.com/pro?id=342817&amp;city=bj">ww.s.com/pro?id=342817&amp;city=bj</a>
           </li>
         </ul>
       </td>
-      <td style="text-align:left">无变化</td>
+      <td style="text-align:left">&#x65E0;&#x53D8;&#x5316;</td>
       <td style="text-align:left"><b>342817</b>
       </td>
       <td style="text-align:left">342817</td>
@@ -89,16 +89,16 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">第 2 个情况</td>
+      <td style="text-align:left">&#x7B2C; 2 &#x4E2A;&#x60C5;&#x51B5;</td>
       <td style="text-align:left">
-        <p>商品详情页1</p>
+        <p>&#x5546;&#x54C1;&#x8BE6;&#x60C5;&#x9875;1</p>
         <ul>
-          <li>商品页内容中的值 ac487</li>
-          <li><a href="http://www.s.com/pro?id=342817&amp;city=bj">ww.s.com/pro?id=342816&city=bj</a>
+          <li>&#x5546;&#x54C1;&#x9875;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x503C; ac487</li>
+          <li><a href="http://www.s.com/pro?id=342817&amp;city=bj">ww.s.com/pro?id=342816&amp;city=bj</a>
           </li>
         </ul>
       </td>
-      <td style="text-align:left">无变化</td>
+      <td style="text-align:left">&#x65E0;&#x53D8;&#x5316;</td>
       <td style="text-align:left"><b>ac487</b>
       </td>
       <td style="text-align:left">342816</td>
@@ -107,16 +107,17 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">第 3 个情况</td>
+      <td style="text-align:left">&#x7B2C; 3 &#x4E2A;&#x60C5;&#x51B5;</td>
       <td style="text-align:left">
-        <p>商品详情页2</p>
+        <p>&#x5546;&#x54C1;&#x8BE6;&#x60C5;&#x9875;2</p>
         <ul>
-          <li>商品页内容中的值 342815 ，但是因为时间的缘故，没有发出来这个值</li>
-          <li><a href="http://www.s.com/pro?id=342817&amp;city=bj">ww.s.com/pro?id=342815&city=bj</a>
+          <li>&#x5546;&#x54C1;&#x9875;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x503C; 342815
+            &#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x65F6;&#x95F4;&#x7684;&#x7F18;&#x6545;&#xFF0C;&#x6CA1;&#x6709;&#x53D1;&#x51FA;&#x6765;&#x8FD9;&#x4E2A;&#x503C;</li>
+          <li><a href="http://www.s.com/pro?id=342817&amp;city=bj">ww.s.com/pro?id=342815&amp;city=bj</a>
           </li>
         </ul>
       </td>
-      <td style="text-align:left">补了值</td>
+      <td style="text-align:left">&#x8865;&#x4E86;&#x503C;</td>
       <td style="text-align:left">NA</td>
       <td style="text-align:left"><b>342815</b>
       </td>
@@ -125,24 +126,24 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">第 4 个情况</td>
+      <td style="text-align:left">&#x7B2C; 4 &#x4E2A;&#x60C5;&#x51B5;</td>
       <td style="text-align:left">
-        <p>商品订单页1</p>
+        <p>&#x5546;&#x54C1;&#x8BA2;&#x5355;&#x9875;1</p>
         <ul>
-          <li>订单页没有打点，所以这里没有打点的值</li>
+          <li>&#x8BA2;&#x5355;&#x9875;&#x6CA1;&#x6709;&#x6253;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x6253;&#x70B9;&#x7684;&#x503C;</li>
           <li><a href="http://www.s.com/pro?id=342817&amp;city=bj">ww.s.com/orderform</a>
             <a
-            href="http://www.s.com/pro?id=342817&amp;city=bj">?id=53462&city=bj</a>
+            href="http://www.s.com/pro?id=342817&amp;city=bj">?id=53462&amp;city=bj</a>
           </li>
         </ul>
       </td>
-      <td style="text-align:left">补了值</td>
+      <td style="text-align:left">&#x8865;&#x4E86;&#x503C;</td>
       <td style="text-align:left">NA</td>
       <td style="text-align:left">NA</td>
       <td style="text-align:left">
         <p><b>53462</b>
         </p>
-        <p>⚠️：本来用户没有打点，拿不到数据，现在有了订单编号业务意义的数据。这个业务意义与前面的商品编号不同。</p>
+        <p>&#x26A0;&#xFE0F;&#xFF1A;&#x672C;&#x6765;&#x7528;&#x6237;&#x6CA1;&#x6709;&#x6253;&#x70B9;&#xFF0C;&#x62FF;&#x4E0D;&#x5230;&#x6570;&#x636E;&#xFF0C;&#x73B0;&#x5728;&#x6709;&#x4E86;&#x8BA2;&#x5355;&#x7F16;&#x53F7;&#x4E1A;&#x52A1;&#x610F;&#x4E49;&#x7684;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x4E2A;&#x4E1A;&#x52A1;&#x610F;&#x4E49;&#x4E0E;&#x524D;&#x9762;&#x7684;&#x5546;&#x54C1;&#x7F16;&#x53F7;&#x4E0D;&#x540C;&#x3002;</p>
       </td>
       <td style="text-align:left"><b>53462</b>
       </td>

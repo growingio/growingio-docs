@@ -400,25 +400,26 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">eventId</td>
-      <td style="text-align:left">英文数字组合的字符串，不能为 nil 或者""，长度小于等于50，且不能含有特殊字符</td>
+      <td style="text-align:left">&#x82F1;&#x6587;&#x6570;&#x5B57;&#x7EC4;&#x5408;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E0D;&#x80FD;&#x4E3A;
+        nil &#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;&#x4E14;&#x4E0D;&#x80FD;&#x542B;&#x6709;&#x7279;&#x6B8A;&#x5B57;&#x7B26;</td>
     </tr>
     <tr>
       <td style="text-align:left">number</td>
-      <td style="text-align:left">正整数或浮点数</td>
+      <td style="text-align:left">&#x6B63;&#x6574;&#x6570;&#x6216;&#x6D6E;&#x70B9;&#x6570;</td>
     </tr>
     <tr>
       <td style="text-align:left">eventLevelVariable</td>
       <td style="text-align:left">
-        <p>不能为 nil；<code>eventLevelVariable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        <p>&#x4E0D;&#x80FD;&#x4E3A; nil&#xFF1B;<code>eventLevelVariable</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
         </p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -466,25 +467,26 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">key</td>
-      <td style="text-align:left">不能为 nil 或者""，长度小于等于50</td>
+      <td style="text-align:left">&#x4E0D;&#x80FD;&#x4E3A; nil &#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50</td>
     </tr>
     <tr>
       <td style="text-align:left">value</td>
-      <td style="text-align:left">不能为 nil 或者""，若为字符串则长度应小于等于 1000</td>
+      <td style="text-align:left">&#x4E0D;&#x80FD;&#x4E3A; nil &#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x82E5;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5219;&#x957F;&#x5EA6;&#x5E94;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;
+        1000</td>
     </tr>
     <tr>
       <td style="text-align:left">pageLevelVariable</td>
       <td style="text-align:left">
-        <p>不能为 nil；<code>pageLevelVariable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        <p>&#x4E0D;&#x80FD;&#x4E3A; nil&#xFF1B;<code>pageLevelVariable</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
         </p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -522,25 +524,26 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">key</td>
-      <td style="text-align:left">不能为 nil 或者""，长度小于等于50</td>
+      <td style="text-align:left">&#x4E0D;&#x80FD;&#x4E3A; nil &#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50</td>
     </tr>
     <tr>
       <td style="text-align:left">Value</td>
-      <td style="text-align:left">变量不为nil或者""，若为字符串则长度应小于等于 1000</td>
+      <td style="text-align:left">&#x53D8;&#x91CF;&#x4E0D;&#x4E3A;nil&#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x82E5;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5219;&#x957F;&#x5EA6;&#x5E94;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;
+        1000</td>
     </tr>
     <tr>
       <td style="text-align:left">conversionLevelVariable</td>
       <td style="text-align:left">
-        <p>不能为nil；<code>conversinoLevelVariable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        <p>&#x4E0D;&#x80FD;&#x4E3A;nil&#xFF1B;<code>conversinoLevelVariable</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
         </p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -578,25 +581,26 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">key</td>
-      <td style="text-align:left">不能为nil或""，长度小于等于50</td>
+      <td style="text-align:left">&#x4E0D;&#x80FD;&#x4E3A;nil&#x6216;&quot;&quot;&#xFF0C;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50</td>
     </tr>
     <tr>
       <td style="text-align:left">value</td>
-      <td style="text-align:left">变量不为nil或者""，若为字符串则长度应小于等于 1000</td>
+      <td style="text-align:left">&#x53D8;&#x91CF;&#x4E0D;&#x4E3A;nil&#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x82E5;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5219;&#x957F;&#x5EA6;&#x5E94;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;
+        1000</td>
     </tr>
     <tr>
       <td style="text-align:left">customerVariables</td>
       <td style="text-align:left">
-        <p>不能为nil；<code>customerVariables</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        <p>&#x4E0D;&#x80FD;&#x4E3A;nil&#xFF1B;<code>customerVariables</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
         </p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -634,17 +638,17 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">variable</td>
       <td style="text-align:left">
-        <p>不能为<code>nil&#xFF1B;variable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        <p>&#x4E0D;&#x80FD;&#x4E3A;<code>nil&#xFF1B;variable</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
         </p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>

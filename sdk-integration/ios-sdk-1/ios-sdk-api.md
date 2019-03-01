@@ -66,114 +66,126 @@ description: >-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">配置API</th>
-      <th style="text-align:center">默认值</th>
-      <th style="text-align:left">说明</th>
+      <th style="text-align:left">&#x914D;&#x7F6E;API</th>
+      <th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
       <th style="text-align:left">
-        <p>最低</p>
-        <p>版本</p>
+        <p>&#x6700;&#x4F4E;</p>
+        <p>&#x7248;&#x672C;</p>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">sdkVersion</td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">获取当前GrowingIO SDK 版本号</td>
-      <td style="text-align:left">2.0.0</td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x83B7;&#x53D6;&#x5F53;&#x524D;GrowingIO SDK &#x7248;&#x672C;&#x53F7;</td>
+      <td
+      style="text-align:left">2.0.0</td>
     </tr>
     <tr>
       <td style="text-align:left">setEnableLog</td>
       <td style="text-align:center">YES</td>
-      <td style="text-align:left">调试日志开关，enableLog == YES 时，会输出调试日志</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">&#x8C03;&#x8BD5;&#x65E5;&#x5FD7;&#x5F00;&#x5173;&#xFF0C;enableLog == YES
+        &#x65F6;&#xFF0C;&#x4F1A;&#x8F93;&#x51FA;&#x8C03;&#x8BD5;&#x65E5;&#x5FD7;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">getEnableLog</td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">获取调试日志开关的当前状态</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x83B7;&#x53D6;&#x8C03;&#x8BD5;&#x65E5;&#x5FD7;&#x5F00;&#x5173;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">
         <p>setDeviceIDModeTo</p>
         <p>CustomBlock</p>
       </td>
-      <td style="text-align:center">无</td>
+      <td style="text-align:center">&#x65E0;</td>
       <td style="text-align:left">
-        <p>用户自定义ID（即 u 值）,会覆盖原来</p>
-        <p>的 u 值</p>
+        <p>&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;ID&#xFF08;&#x5373; u &#x503C;&#xFF09;,&#x4F1A;&#x8986;&#x76D6;&#x539F;&#x6765;</p>
+        <p>&#x7684; u &#x503C;</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">setTrackerHost</td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">设置数据收集平台服务器地址</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x6536;&#x96C6;&#x5E73;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">setReportHost</td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">设置设备报活服务器地址</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x8BBE;&#x5907;&#x62A5;&#x6D3B;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">setDataHost</td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">设置数据查看平台服务器地址</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x67E5;&#x770B;&#x5E73;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">setGtaHost</td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">设置数据后台服务器地址</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x540E;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">setWsHost</td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">设置数据后台服务器地址</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x540E;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">
         <p>setHybridJSSDK</p>
         <p>UrlPrefix</p>
       </td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">设置数据后台服务器地址</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x540E;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">setZone</td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">设置 zone 信息，即时区信息</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E; zone &#x4FE1;&#x606F;&#xFF0C;&#x5373;&#x65F6;&#x533A;&#x4FE1;&#x606F;</td>
+      <td
+      style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">getDeviceId</td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">获取当前设备 id</td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8BBE;&#x5907; id</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">getVisitUserId</td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">获取当前 uid</td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x83B7;&#x53D6;&#x5F53;&#x524D; uid</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">getSessionId</td>
-      <td style="text-align:center">无</td>
-      <td style="text-align:left">获取当前访问 id</td>
+      <td style="text-align:center">&#x65E0;</td>
+      <td style="text-align:left">&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8BBF;&#x95EE; id</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">growingAttributesDonotTrackImp</td>
       <td style="text-align:center">False</td>
-      <td style="text-align:left">设置是否采集view及页面元素的imp事件</td>
-      <td style="text-align:left">2.6.7</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x91C7;&#x96C6;view&#x53CA;&#x9875;&#x9762;&#x5143;&#x7D20;&#x7684;imp&#x4E8B;&#x4EF6;</td>
+      <td
+      style="text-align:left">2.6.7</td>
     </tr>
   </tbody>
 </table>### 
@@ -183,80 +195,83 @@ description: >-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">数据相关API</th>
-      <th style="text-align:left">默认值</th>
-      <th style="text-align:left">说明</th>
+      <th style="text-align:left">&#x6570;&#x636E;&#x76F8;&#x5173;API</th>
+      <th style="text-align:left">&#x9ED8;&#x8BA4;&#x503C;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">setAspectMode</td>
-      <td style="text-align:left">无</td>
-      <td style="text-align:left">设置数据采集模式，有 GrowingAspectModeSubClass 和 GrowingAspectModeDynamicSwizzling
-        两种</td>
+      <td style="text-align:left">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x6A21;&#x5F0F;&#xFF0C;&#x6709;
+        GrowingAspectModeSubClass &#x548C; GrowingAspectModeDynamicSwizzling &#x4E24;&#x79CD;</td>
     </tr>
     <tr>
       <td style="text-align:left">setEnableDiagnose</td>
       <td style="text-align:left">enable</td>
       <td style="text-align:left">
-        <p>是否允许发送基本性能诊断信息，默认为开。</p>
-        <p>基本性能指发送成功、失败、timeout等信息</p>
+        <p>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x53D1;&#x9001;&#x57FA;&#x672C;&#x6027;&#x80FD;&#x8BCA;&#x65AD;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x5F00;&#x3002;</p>
+        <p>&#x57FA;&#x672C;&#x6027;&#x80FD;&#x6307;&#x53D1;&#x9001;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x3001;timeout&#x7B49;&#x4FE1;&#x606F;</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">disable</td>
-      <td style="text-align:left">无</td>
-      <td style="text-align:left">全局不发送统计信息</td>
+      <td style="text-align:left">&#x65E0;</td>
+      <td style="text-align:left">&#x5168;&#x5C40;&#x4E0D;&#x53D1;&#x9001;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;</td>
     </tr>
     <tr>
       <td style="text-align:left">enableAllWebViews</td>
       <td style="text-align:left">enable</td>
-      <td style="text-align:left">设置是否采集 UIWebView / WKWebView 信息</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x91C7;&#x96C6; UIWebView / WKWebView
+        &#x4FE1;&#x606F;</td>
     </tr>
     <tr>
       <td style="text-align:left">enableHybridHashTag</td>
       <td style="text-align:left">enable</td>
-      <td style="text-align:left">是否启用 HashTag</td>
+      <td style="text-align:left">&#x662F;&#x5426;&#x542F;&#x7528; HashTag</td>
     </tr>
     <tr>
       <td style="text-align:left">isTrackingWebView</td>
       <td style="text-align:left">true</td>
-      <td style="text-align:left">是否启用 trackingWebView</td>
+      <td style="text-align:left">&#x662F;&#x5426;&#x542F;&#x7528; trackingWebView</td>
     </tr>
     <tr>
       <td style="text-align:left">setImp</td>
       <td style="text-align:left">true</td>
-      <td style="text-align:left">设置是否发送元素的展现次数（浏览量、曝光量）</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x53D1;&#x9001;&#x5143;&#x7D20;&#x7684;&#x5C55;&#x73B0;&#x6B21;&#x6570;&#xFF08;&#x6D4F;&#x89C8;&#x91CF;&#x3001;&#x66DD;&#x5149;&#x91CF;&#xFF09;</td>
     </tr>
     <tr>
       <td style="text-align:left">setFlushInterval</td>
       <td style="text-align:left">10s</td>
-      <td style="text-align:left">设置、获取发送数据的时间间隔，默认值为10秒</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x3001;&#x83B7;&#x53D6;&#x53D1;&#x9001;&#x6570;&#x636E;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;10&#x79D2;</td>
     </tr>
     <tr>
       <td style="text-align:left">setDailyDataLimit</td>
       <td style="text-align:left">5M</td>
-      <td style="text-align:left">设置每天使用数据网络（2G、3G、4G）上传的数据量的上限（单位是 KB），默认值为 3 MB</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x6BCF;&#x5929;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x7F51;&#x7EDC;&#xFF08;2G&#x3001;3G&#x3001;4G&#xFF09;&#x4E0A;&#x4F20;&#x7684;&#x6570;&#x636E;&#x91CF;&#x7684;&#x4E0A;&#x9650;&#xFF08;&#x5355;&#x4F4D;&#x662F;
+        KB&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 3 MB</td>
     </tr>
     <tr>
       <td style="text-align:left">getDailyDataLimit</td>
-      <td style="text-align:left">无</td>
-      <td style="text-align:left">获取每天使用数据网络（2G、3G、4G）上传的数据量的上限（单位是 KB），默认值为3 MB</td>
+      <td style="text-align:left">&#x65E0;</td>
+      <td style="text-align:left">&#x83B7;&#x53D6;&#x6BCF;&#x5929;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x7F51;&#x7EDC;&#xFF08;2G&#x3001;3G&#x3001;4G&#xFF09;&#x4E0A;&#x4F20;&#x7684;&#x6570;&#x636E;&#x91CF;&#x7684;&#x4E0A;&#x9650;&#xFF08;&#x5355;&#x4F4D;&#x662F;
+        KB&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;3 MB</td>
     </tr>
     <tr>
       <td style="text-align:left">disableDataCollect</td>
-      <td style="text-align:left">无</td>
-      <td style="text-align:left">设置 GDPR 生效</td>
+      <td style="text-align:left">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E; GDPR &#x751F;&#x6548;</td>
     </tr>
     <tr>
       <td style="text-align:left">enableDataCollect</td>
-      <td style="text-align:left">无</td>
-      <td style="text-align:left">设置 GDPR 失效</td>
+      <td style="text-align:left">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E; GDPR &#x5931;&#x6548;</td>
     </tr>
     <tr>
       <td style="text-align:left">disablePushTrack</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">设置是否采集push推送点击，默认不采集</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x91C7;&#x96C6;push&#x63A8;&#x9001;&#x70B9;&#x51FB;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x91C7;&#x96C6;</td>
     </tr>
   </tbody>
 </table>### ​ 自定义事件和变量API 

@@ -198,28 +198,30 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">平台</th>
-      <th style="text-align:left">方法原型</th>
-      <th style="text-align:left">代码示例</th>
+      <th style="text-align:left">&#x5E73;&#x53F0;</th>
+      <th style="text-align:left">&#x65B9;&#x6CD5;&#x539F;&#x578B;</th>
+      <th style="text-align:left">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">JS SDK</td>
-      <td style="text-align:left">gio('page.set', key, value);或gio('page.set', pageLevelVariables);</td>
-      <td
-      style="text-align:left">gio('page.set', {'skuName_pvar': '女士中跟凉鞋', 'skuCategory_pvar': '鞋靴'});</td>
+      <td style="text-align:left">gio(&apos;page.set&apos;, key, value);&#x6216;gio(&apos;page.set&apos;,
+        pageLevelVariables);</td>
+      <td style="text-align:left">gio(&apos;page.set&apos;, {&apos;skuName_pvar&apos;: &apos;&#x5973;&#x58EB;&#x4E2D;&#x8DDF;&#x51C9;&#x978B;&apos;,
+        &apos;skuCategory_pvar&apos;: &apos;&#x978B;&#x9774;&apos;});</td>
     </tr>
     <tr>
       <td style="text-align:left">Android SDK</td>
       <td style="text-align:left">
         <p>GrowingIO.getInstance().setPageVariable(<code>Activity</code> activity, <code>String</code>key, <code>String</code> value);</p>
-        <p>或</p>
+        <p>&#x6216;</p>
         <p>GrowingIO.getInstance().setPageVariable(<code>Activity</code> activity, <code>JSONObject </code>pageLevelVariables);</p>
       </td>
       <td style="text-align:left">
-        <p>JSONObject jsonObject = new JSONObject(); jsonObject.put("skuName_pvar",
-          "女士中跟凉鞋"); jsonObject.put("skuCategory_pvar", "鞋靴");</p>
+        <p>JSONObject jsonObject = new JSONObject(); jsonObject.put(&quot;skuName_pvar&quot;,
+          &quot;&#x5973;&#x58EB;&#x4E2D;&#x8DDF;&#x51C9;&#x978B;&quot;); jsonObject.put(&quot;skuCategory_pvar&quot;,
+          &quot;&#x978B;&#x9774;&quot;);</p>
         <p>GrowingIO.getInstance().setPageVariable(GoodsDetailActivity, jsonObject);</p>
       </td>
     </tr>
@@ -229,13 +231,13 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
         <p>+ (void)setPageVariableWithKey:(NSString *)key
           <br />andStringValue:(NSString *)stringValue
           <br />toViewController:(UIViewController*)viewController;</p>
-        <p>或</p>
-        <p>+ (void)setPageVariable:(NSDictionary
-          <NSString *,<br />NSObject *> *)variable toViewController:
+        <p>&#x6216;</p>
+        <p>+ (void)setPageVariable:(NSDictionary&lt;NSString *,
+          <br />NSObject *&gt; *)variable toViewController:
           <br />(UIViewController *)viewController;</p>
       </td>
-      <td style="text-align:left">[Growing setPageVariable:@{@"skuName_pvar":@"女士中跟凉鞋", @"skuCategory_pvar":@"鞋靴"}
-        toViewController:GoodsDetailViewController];</td>
+      <td style="text-align:left">[Growing setPageVariable:@{@&quot;skuName_pvar&quot;:@&quot;&#x5973;&#x58EB;&#x4E2D;&#x8DDF;&#x51C9;&#x978B;&quot;,
+        @&quot;skuCategory_pvar&quot;:@&quot;&#x978B;&#x9774;&quot;} toViewController:GoodsDetailViewController];</td>
     </tr>
   </tbody>
 </table>### **数据验证方法**
@@ -271,31 +273,31 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">平台</th>
-      <th style="text-align:left">方法原型</th>
-      <th style="text-align:left">代码示例</th>
+      <th style="text-align:left">&#x5E73;&#x53F0;</th>
+      <th style="text-align:left">&#x65B9;&#x6CD5;&#x539F;&#x578B;</th>
+      <th style="text-align:left">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">JS SDK</td>
-      <td style="text-align:left">gio('evar.set', key, value);或gio('evar.set', conversionVariables);</td>
-      <td
-      style="text-align:left">gio('evar.set', 'enterSource_evar', '首页Banner');或gio('evar.set', {'enterSource_evar':
-        '首页Banner'});</td>
+      <td style="text-align:left">gio(&apos;evar.set&apos;, key, value);&#x6216;gio(&apos;evar.set&apos;,
+        conversionVariables);</td>
+      <td style="text-align:left">gio(&apos;evar.set&apos;, &apos;enterSource_evar&apos;, &apos;&#x9996;&#x9875;Banner&apos;);&#x6216;gio(&apos;evar.set&apos;,
+        {&apos;enterSource_evar&apos;: &apos;&#x9996;&#x9875;Banner&apos;});</td>
     </tr>
     <tr>
       <td style="text-align:left">Android SDK</td>
       <td style="text-align:left">
         <p>GrowingIO.getInstance().setEvar(String key, String value);</p>
-        <p>或</p>
+        <p>&#x6216;</p>
         <p>GrowingIO.getInstance().setEvar(JSONObject conversionVariables);</p>
       </td>
       <td style="text-align:left">
-        <p>GrowingIO.getInstance().setEvar("enterSource_evar", "首页Banner");</p>
-        <p>或</p>
+        <p>GrowingIO.getInstance().setEvar(&quot;enterSource_evar&quot;, &quot;&#x9996;&#x9875;Banner&quot;);</p>
+        <p>&#x6216;</p>
         <p>JSONObject jsonObject = new JSONObject();</p>
-        <p>jsonObject.put("enterSource_evar", "首页Banner");</p>
+        <p>jsonObject.put(&quot;enterSource_evar&quot;, &quot;&#x9996;&#x9875;Banner&quot;);</p>
         <p>GrowingIO.getInstance().setEvar(jsonObject);</p>
       </td>
     </tr>
@@ -304,15 +306,14 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
       <td style="text-align:left">
         <p>+ (void)setEvarWithKey:(NSString *)key
           <br />andStringValue:(NSString *)stringValue;</p>
-        <p>或</p>
-        <p>+ (void)setEvar:(NSDictionary
-          <NSString *, NSObject *>*)variable;</p>
+        <p>&#x6216;</p>
+        <p>+ (void)setEvar:(NSDictionary&lt;NSString *, NSObject *&gt; *)variable;</p>
       </td>
       <td style="text-align:left">
-        <p>[Growing setEvarWithKey:@"enterSource_evar"
-          <br />andStringValue:@"首页Banner"];</p>
-        <p>或</p>
-        <p>[Growing setEvar:@{@"enterSource_evar":@"首页Banner"}];</p>
+        <p>[Growing setEvarWithKey:@&quot;enterSource_evar&quot;
+          <br />andStringValue:@&quot;&#x9996;&#x9875;Banner&quot;];</p>
+        <p>&#x6216;</p>
+        <p>[Growing setEvar:@{@&quot;enterSource_evar&quot;:@&quot;&#x9996;&#x9875;Banner&quot;}];</p>
       </td>
     </tr>
   </tbody>
@@ -347,54 +348,54 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">平台</th>
-      <th style="text-align:left">方法原型</th>
-      <th style="text-align:left">代码示例</th>
+      <th style="text-align:left">&#x5E73;&#x53F0;</th>
+      <th style="text-align:left">&#x65B9;&#x6CD5;&#x539F;&#x578B;</th>
+      <th style="text-align:left">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">JS SDK</td>
       <td style="text-align:left">
-        <p>// 用户登录时，设置登录用户ID</p>
-        <p>gio('setUserId', userId);</p>
-        <p>// 用户退出登录时，清除登录用户ID</p>
-        <p>gio('clearUserId');</p>
+        <p>// &#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
+        <p>gio(&apos;setUserId&apos;, userId);</p>
+        <p>// &#x7528;&#x6237;&#x9000;&#x51FA;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x6E05;&#x9664;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
+        <p>gio(&apos;clearUserId&apos;);</p>
       </td>
       <td style="text-align:left">
-        <p>// 用户登录时，设置登录用户ID</p>
-        <p>gio('setUserId', '123456');</p>
-        <p>// 用户退出登录时，清除登录用户ID</p>
-        <p>gio('clearUserId');</p>
+        <p>// &#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
+        <p>gio(&apos;setUserId&apos;, &apos;123456&apos;);</p>
+        <p>// &#x7528;&#x6237;&#x9000;&#x51FA;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x6E05;&#x9664;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
+        <p>gio(&apos;clearUserId&apos;);</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">Android SDK</td>
       <td style="text-align:left">
-        <p>//用户登录时，设置登录用户ID</p>
+        <p>//&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
         <p>GrowingIO.getInstance().setUserId(String userId);</p>
-        <p>//用户退出登录时，清除登录用户ID</p>
+        <p>//&#x7528;&#x6237;&#x9000;&#x51FA;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x6E05;&#x9664;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
         <p>GrowingIO.getInstance().clearUserId();</p>
       </td>
       <td style="text-align:left">
-        <p>//用户登录时，设置登录用户ID</p>
-        <p>GrowingIO.getInstance().setUserId("123456");</p>
-        <p>//用户退出登录时，清除登录用户ID</p>
+        <p>//&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
+        <p>GrowingIO.getInstance().setUserId(&quot;123456&quot;);</p>
+        <p>//&#x7528;&#x6237;&#x9000;&#x51FA;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x6E05;&#x9664;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
         <p>GrowingIO.getInstance().clearUserId();</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">iOS SDK</td>
       <td style="text-align:left">
-        <p>//用户登录时，设置登录用户ID</p>
+        <p>//&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
         <p>+ (void)setUserId:(NSString *)userId;</p>
-        <p>//用户退出登录时，清除登录用户ID</p>
+        <p>//&#x7528;&#x6237;&#x9000;&#x51FA;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x6E05;&#x9664;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
         <p>+ (void)clearUserId;</p>
       </td>
       <td style="text-align:left">
-        <p>//用户登录时，设置登录用户ID</p>
-        <p>[Growing setUserId:@"123456"];</p>
-        <p>//用户退出登录时，清除登录用户ID</p>
+        <p>//&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
+        <p>[Growing setUserId:@&quot;123456&quot;];</p>
+        <p>//&#x7528;&#x6237;&#x9000;&#x51FA;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x6E05;&#x9664;&#x767B;&#x5F55;&#x7528;&#x6237;ID</p>
         <p>[Growing clearUserId];</p>
       </td>
     </tr>
@@ -433,29 +434,30 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">平台</th>
-      <th style="text-align:left">方法原型</th>
-      <th style="text-align:left">代码示例</th>
+      <th style="text-align:left">&#x5E73;&#x53F0;</th>
+      <th style="text-align:left">&#x65B9;&#x6CD5;&#x539F;&#x578B;</th>
+      <th style="text-align:left">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">JS SDK</td>
-      <td style="text-align:left">gio('people.set', key, value);或gio('people.set', customerVariables);</td>
-      <td
-      style="text-align:left">gio('people.set', {'gender_ppl': '男', 'age_ppl': 25});</td>
+      <td style="text-align:left">gio(&apos;people.set&apos;, key, value);&#x6216;gio(&apos;people.set&apos;,
+        customerVariables);</td>
+      <td style="text-align:left">gio(&apos;people.set&apos;, {&apos;gender_ppl&apos;: &apos;&#x7537;&apos;,
+        &apos;age_ppl&apos;: 25});</td>
     </tr>
     <tr>
       <td style="text-align:left">Android SDK</td>
       <td style="text-align:left">
         <p>GrowingIO.getInstance().setPeopleVariable(String key, String value);</p>
-        <p>或</p>
+        <p>&#x6216;</p>
         <p>GrowingIO.getInstance().setPeopleVariable(JSONObject peopleVariables);</p>
       </td>
       <td style="text-align:left">
         <p>JSONObject jsonObject = new JSONObject();</p>
-        <p>jsonObject.put("gender_ppl", "男");</p>
-        <p>jsonObject.put("age_ppl", 25);</p>
+        <p>jsonObject.put(&quot;gender_ppl&quot;, &quot;&#x7537;&quot;);</p>
+        <p>jsonObject.put(&quot;age_ppl&quot;, 25);</p>
         <p>GrowingIO.getInstance().setPeopleVariable(jsonObject);</p>
       </td>
     </tr>
@@ -464,11 +466,12 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
       <td style="text-align:left">
         <p>+ (void)setPeopleVariableWithKey:(NSString *)key
           <br />andStringValue:(NSString *)stringValue;</p>
-        <p>或</p>
-        <p>+ (void)setPeopleVariable:(NSDictionary
-          <NSString *, NSObject *>*)variable;</p>
+        <p>&#x6216;</p>
+        <p>+ (void)setPeopleVariable:(NSDictionary&lt;NSString *, NSObject *&gt;
+          *)variable;</p>
       </td>
-      <td style="text-align:left">[Growing setPeopleVariable:@{@"gender_ppl":@"男", @"age_ppl":@25}];</td>
+      <td style="text-align:left">[Growing setPeopleVariable:@{@&quot;gender_ppl&quot;:@&quot;&#x7537;&quot;,
+        @&quot;age_ppl&quot;:@25}];</td>
     </tr>
   </tbody>
 </table>#### **数据验证方法**

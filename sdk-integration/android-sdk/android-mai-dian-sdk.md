@@ -374,33 +374,33 @@ gio.track(String eventId, JSONObject eventLevelVariables);
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">参数类型</th>
-      <th style="text-align:left">必填</th>
-      <th style="text-align:left">说明</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">eventId</td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left">是</td>
-      <td style="text-align:left">事件标识符</td>
+      <td style="text-align:left">&#x662F;</td>
+      <td style="text-align:left">&#x4E8B;&#x4EF6;&#x6807;&#x8BC6;&#x7B26;</td>
     </tr>
     <tr>
       <td style="text-align:left">number</td>
       <td style="text-align:left">Number</td>
-      <td style="text-align:left">否</td>
+      <td style="text-align:left">&#x5426;</td>
       <td style="text-align:left">
-        <p>事件的数值，没有number参数时，事件默认加一；</p>
-        <p>当出现number参数时，事件自增number的数值</p>
+        <p>&#x4E8B;&#x4EF6;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x6CA1;&#x6709;number&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x4E8B;&#x4EF6;&#x9ED8;&#x8BA4;&#x52A0;&#x4E00;&#xFF1B;</p>
+        <p>&#x5F53;&#x51FA;&#x73B0;number&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x4E8B;&#x4EF6;&#x81EA;&#x589E;number&#x7684;&#x6570;&#x503C;</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">eventLevelVariable</td>
       <td style="text-align:left">JSONObject</td>
-      <td style="text-align:left">否</td>
-      <td style="text-align:left">事件发生时所伴随的维度信息</td>
+      <td style="text-align:left">&#x5426;</td>
+      <td style="text-align:left">&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x65F6;&#x6240;&#x4F34;&#x968F;&#x7684;&#x7EF4;&#x5EA6;&#x4FE1;&#x606F;</td>
     </tr>
   </tbody>
 </table>**参数限制条件：**
@@ -410,29 +410,30 @@ gio.track(String eventId, JSONObject eventLevelVariables);
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">eventId</td>
       <td style="text-align:left">
-        <p>非空，长度限制小于等于50；</p>
-        <p><code>SDK 2.4.0</code>以下版本不支持中文，仅支持 0 到 9、a 到 z 以及下划线，并且不能以数字开头。</p>
+        <p>&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF1B;</p>
+        <p><code>SDK 2.4.0</code>&#x4EE5;&#x4E0B;&#x7248;&#x672C;&#x4E0D;&#x652F;&#x6301;&#x4E2D;&#x6587;&#xFF0C;&#x4EC5;&#x652F;&#x6301;
+          0 &#x5230; 9&#x3001;a &#x5230; z &#x4EE5;&#x53CA;&#x4E0B;&#x5212;&#x7EBF;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x80FD;&#x4EE5;&#x6570;&#x5B57;&#x5F00;&#x5934;&#x3002;</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">number</td>
-      <td style="text-align:left">非空。</td>
+      <td style="text-align:left">&#x975E;&#x7A7A;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">eventLevelVariable</td>
       <td style="text-align:left">
-        <p>非空，长度限制小于等于100（<code>eventLevelVariable.length()&lt;=100</code>）；</p>
-        <p><code>eventLevelVariable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        <p>&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;100&#xFF08;<code>eventLevelVariable.length()&lt;=100</code>&#xFF09;&#xFF1B;</p>
+        <p><code>eventLevelVariable</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
         </p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -524,25 +525,25 @@ gio.setEvar(JSONObject conversionVariables);
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">key</td>
-      <td style="text-align:left">非空，长度限制小于等于50。</td>
+      <td style="text-align:left">&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">value</td>
-      <td style="text-align:left">非空，长度限制小于等于1000。</td>
+      <td style="text-align:left">&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;1000&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">conversionVariables</td>
       <td style="text-align:left">
-        <p>非空，长度限制小于等于100（<code>conversionVariables.length()&lt;=100</code>）；</p>
-        <p><code>conversionVariables</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray</code>；</p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code>长度限制小等于1000。</p>
+        <p>&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;100&#xFF08;<code>conversionVariables.length()&lt;=100</code>&#xFF09;&#xFF1B;</p>
+        <p><code>conversionVariables</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray</code>&#xFF1B;</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code>&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -616,25 +617,25 @@ gio.setPeopleVariable(JSONObject peopleVariables);
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">key</td>
-      <td style="text-align:left">非空，长度限制小于等于50。</td>
+      <td style="text-align:left">&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">value</td>
-      <td style="text-align:left">非空，长度限制小于等于1000。</td>
+      <td style="text-align:left">&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;1000&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">peopleVariables</td>
       <td style="text-align:left">
-        <p>非空，长度限制小于等于100（<code>peopleVariables.length()&lt;=100</code>）；</p>
-        <p><code>peopleVariables</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray</code>；</p>
-        <p><code>key</code>长度限制小于等于50，<code>value</code>长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p>&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;100&#xFF08;<code>peopleVariables.length()&lt;=100</code>&#xFF09;&#xFF1B;</p>
+        <p><code>peopleVariables</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray</code>&#xFF1B;</p>
+        <p><code>key</code>&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code>&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -695,21 +696,21 @@ GrowingIO.getInstance().setUserId(String userId);
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">参数类型</th>
-      <th style="text-align:left">必填</th>
-      <th style="text-align:left">说明</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">userId</td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left">是</td>
+      <td style="text-align:left">&#x662F;</td>
       <td style="text-align:left">
-        <p>登录用户Id，长度限制小于等于1000；</p>
-        <p>如果值为空则清空了登录用户变量，不建议这么用，</p>
-        <p>请使用 clearUserId 清除登录用户变量。</p>
+        <p>&#x767B;&#x5F55;&#x7528;&#x6237;Id&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;1000&#xFF1B;</p>
+        <p>&#x5982;&#x679C;&#x503C;&#x4E3A;&#x7A7A;&#x5219;&#x6E05;&#x7A7A;&#x4E86;&#x767B;&#x5F55;&#x7528;&#x6237;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x8FD9;&#x4E48;&#x7528;&#xFF0C;</p>
+        <p>&#x8BF7;&#x4F7F;&#x7528; clearUserId &#x6E05;&#x9664;&#x767B;&#x5F55;&#x7528;&#x6237;&#x53D8;&#x91CF;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -756,20 +757,20 @@ GrowingIO.getInstance().setVisitor(JSONObject visitorVar)
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">参数类型</th>
-      <th style="text-align:left">必填</th>
-      <th style="text-align:left">说明</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">visitorVar</td>
       <td style="text-align:left">JSONObject</td>
-      <td style="text-align:left">是</td>
+      <td style="text-align:left">&#x662F;</td>
       <td style="text-align:left">
-        <p>不可使用嵌套的<code>JSONObject</code>对象，即为JSONObject中不可以放入<code>JSONObject</code>或者<code>JSONArray</code>；</p>
-        <p>key 长度限制小于等于50，value长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p>&#x4E0D;&#x53EF;&#x4F7F;&#x7528;&#x5D4C;&#x5957;&#x7684;<code>JSONObject</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5373;&#x4E3A;JSONObject&#x4E2D;&#x4E0D;&#x53EF;&#x4EE5;&#x653E;&#x5165;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray</code>&#xFF1B;</p>
+        <p>key &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;value&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -819,30 +820,31 @@ GrowingIO 的数据采集分为自动采集和用户自定义事件和变量两�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">事件类型</th>
-      <th style="text-align:left">含义</th>
-      <th style="text-align:left">发送时机</th>
+      <th style="text-align:left">&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x542B;&#x4E49;</th>
+      <th style="text-align:left">&#x53D1;&#x9001;&#x65F6;&#x673A;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">activate</td>
-      <td style="text-align:left">激活</td>
-      <td style="text-align:left">当APP首次激活打开时</td>
+      <td style="text-align:left">&#x6FC0;&#x6D3B;</td>
+      <td style="text-align:left">&#x5F53;APP&#x9996;&#x6B21;&#x6FC0;&#x6D3B;&#x6253;&#x5F00;&#x65F6;</td>
     </tr>
     <tr>
       <td style="text-align:left">vst</td>
-      <td style="text-align:left">应用访问</td>
+      <td style="text-align:left">&#x5E94;&#x7528;&#x8BBF;&#x95EE;</td>
       <td style="text-align:left">
-        <p>1.冷启动发送</p>
-        <p>2.切换用户发送</p>
-        <p>3.默认APP进入后台30秒以后再次打开会发送</p>
+        <p>1.&#x51B7;&#x542F;&#x52A8;&#x53D1;&#x9001;</p>
+        <p>2.&#x5207;&#x6362;&#x7528;&#x6237;&#x53D1;&#x9001;</p>
+        <p>3.&#x9ED8;&#x8BA4;APP&#x8FDB;&#x5165;&#x540E;&#x53F0;30&#x79D2;&#x4EE5;&#x540E;&#x518D;&#x6B21;&#x6253;&#x5F00;&#x4F1A;&#x53D1;&#x9001;</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">reengage</td>
-      <td style="text-align:left">DeepLink唤醒事件</td>
-      <td style="text-align:left">通过扫描 DeepLink 二维码唤醒 APP 后发送</td>
+      <td style="text-align:left">DeepLink&#x5524;&#x9192;&#x4E8B;&#x4EF6;</td>
+      <td style="text-align:left">&#x901A;&#x8FC7;&#x626B;&#x63CF; DeepLink &#x4E8C;&#x7EF4;&#x7801;&#x5524;&#x9192;
+        APP &#x540E;&#x53D1;&#x9001;</td>
     </tr>
   </tbody>
 </table>#### 自定义事件类型
@@ -912,29 +914,30 @@ public class MyApplication extends Application {
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">初始化配置项API</th>
-      <th style="text-align:left">默认值</th>
-      <th style="text-align:left">说明</th>
+      <th style="text-align:left">&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x9879;API</th>
+      <th style="text-align:left">&#x9ED8;&#x8BA4;&#x503C;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">setTestMode</td>
       <td style="text-align:left">false</td>
-      <td style="text-align:left">在Logcat中输出采集日志</td>
+      <td style="text-align:left">&#x5728;Logcat&#x4E2D;&#x8F93;&#x51FA;&#x91C7;&#x96C6;&#x65E5;&#x5FD7;</td>
     </tr>
     <tr>
       <td style="text-align:left">setDebugMode</td>
       <td style="text-align:left">false</td>
       <td style="text-align:left">
-        <p>实时发送数据，开启则不遵循移动网络状态下数据发送大小默认 3M 限制以及采集数据缓存30秒发送策略。</p>
-        <p>为了方便开发者查看日志，一般和<code>setTestMode</code>一起使用。</p>
+        <p>&#x5B9E;&#x65F6;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x5F00;&#x542F;&#x5219;&#x4E0D;&#x9075;&#x5FAA;&#x79FB;&#x52A8;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x4E0B;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5927;&#x5C0F;&#x9ED8;&#x8BA4;
+          3M &#x9650;&#x5236;&#x4EE5;&#x53CA;&#x91C7;&#x96C6;&#x6570;&#x636E;&#x7F13;&#x5B58;30&#x79D2;&#x53D1;&#x9001;&#x7B56;&#x7565;&#x3002;</p>
+        <p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x8005;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#xFF0C;&#x4E00;&#x822C;&#x548C;<code>setTestMode</code>&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">setChannel</td>
-      <td style="text-align:left">无</td>
-      <td style="text-align:left">设置渠道</td>
+      <td style="text-align:left">&#x65E0;</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x6E20;&#x9053;</td>
     </tr>
   </tbody>
 </table>

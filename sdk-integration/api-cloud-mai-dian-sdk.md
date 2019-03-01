@@ -86,32 +86,33 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名</th>
-      <th style="text-align:left">类型</th>
-      <th style="text-align:left">是否必填</th>
-      <th style="text-align:left">参数描述</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;</th>
+      <th style="text-align:left">&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x63CF;&#x8FF0;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">event</td>
       <td style="text-align:left">object</td>
-      <td style="text-align:left">是</td>
+      <td style="text-align:left">&#x662F;</td>
       <td style="text-align:left">
-        <p>key:eventId(string类型,必要key) value:(string类型)</p>
-        <p>key:eventLevelVariable(string类型,非必要key) value:(object类型)</p>
-        <p>key:number(string类型, 非必要key) value(number类型)</p>
+        <p>key:eventId(string&#x7C7B;&#x578B;,&#x5FC5;&#x8981;key) value:(string&#x7C7B;&#x578B;)</p>
+        <p>key:eventLevelVariable(string&#x7C7B;&#x578B;,&#x975E;&#x5FC5;&#x8981;key)
+          value:(object&#x7C7B;&#x578B;)</p>
+        <p>key:number(string&#x7C7B;&#x578B;, &#x975E;&#x5FC5;&#x8981;key) value(number&#x7C7B;&#x578B;)</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">callback</td>
-      <td style="text-align:left">函数</td>
-      <td style="text-align:left">否</td>
+      <td style="text-align:left">&#x51FD;&#x6570;</td>
+      <td style="text-align:left">&#x5426;</td>
       <td style="text-align:left">
-        <p>allback {function (ret)}：执行完读取操作后的回调函数。</p>
-        <p>ret 为 callback 函数的参数，有两个属性:</p>
-        <p>status:结果2种 true, false 都为布尔类型</p>
-        <p>msg:结果string类型</p>
+        <p>allback {function (ret)}&#xFF1A;&#x6267;&#x884C;&#x5B8C;&#x8BFB;&#x53D6;&#x64CD;&#x4F5C;&#x540E;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+        <p>ret &#x4E3A; callback &#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;:</p>
+        <p>status:&#x7ED3;&#x679C;2&#x79CD; true, false &#x90FD;&#x4E3A;&#x5E03;&#x5C14;&#x7C7B;&#x578B;</p>
+        <p>msg:&#x7ED3;&#x679C;string&#x7C7B;&#x578B;</p>
       </td>
     </tr>
   </tbody>
@@ -131,28 +132,28 @@ gio.track({
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名</th>
-      <th style="text-align:left">类型</th>
-      <th style="text-align:left">是否必填</th>
-      <th style="text-align:left">参数描述</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;</th>
+      <th style="text-align:left">&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x63CF;&#x8FF0;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">conversionVariables</td>
       <td style="text-align:left">object</td>
-      <td style="text-align:left">是</td>
+      <td style="text-align:left">&#x662F;</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">callback</td>
-      <td style="text-align:left">函数</td>
-      <td style="text-align:left">否</td>
+      <td style="text-align:left">&#x51FD;&#x6570;</td>
+      <td style="text-align:left">&#x5426;</td>
       <td style="text-align:left">
-        <p>callback {function (ret)}：执行完读取操作后的回调函数。</p>
-        <p>ret 为callback 函数的参数，有两个属性:</p>
-        <p>status:结果2种true, false 都为布尔类型</p>
-        <p>msg:结果string类型</p>
+        <p>callback {function (ret)}&#xFF1A;&#x6267;&#x884C;&#x5B8C;&#x8BFB;&#x53D6;&#x64CD;&#x4F5C;&#x540E;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+        <p>ret &#x4E3A;callback &#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;:</p>
+        <p>status:&#x7ED3;&#x679C;2&#x79CD;true, false &#x90FD;&#x4E3A;&#x5E03;&#x5C14;&#x7C7B;&#x578B;</p>
+        <p>msg:&#x7ED3;&#x679C;string&#x7C7B;&#x578B;</p>
       </td>
     </tr>
   </tbody>
@@ -172,28 +173,28 @@ gio.setEvar({
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名</th>
-      <th style="text-align:left">类型</th>
-      <th style="text-align:left">是否必填</th>
-      <th style="text-align:left">参数描述</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;</th>
+      <th style="text-align:left">&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x63CF;&#x8FF0;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">peopleVariables</td>
       <td style="text-align:left">object</td>
-      <td style="text-align:left">是</td>
+      <td style="text-align:left">&#x662F;</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">callback</td>
-      <td style="text-align:left">函数</td>
-      <td style="text-align:left">否</td>
+      <td style="text-align:left">&#x51FD;&#x6570;</td>
+      <td style="text-align:left">&#x5426;</td>
       <td style="text-align:left">
-        <p>callback {function (ret)}：执行完读取操作后的回调函数。</p>
-        <p>ret 为callback 函数的参数，有两个属性:</p>
-        <p>status:结果2种true, false 都为布尔类型</p>
-        <p>msg:结果string类型</p>
+        <p>callback {function (ret)}&#xFF1A;&#x6267;&#x884C;&#x5B8C;&#x8BFB;&#x53D6;&#x64CD;&#x4F5C;&#x540E;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+        <p>ret &#x4E3A;callback &#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;:</p>
+        <p>status:&#x7ED3;&#x679C;2&#x79CD;true, false &#x90FD;&#x4E3A;&#x5E03;&#x5C14;&#x7C7B;&#x578B;</p>
+        <p>msg:&#x7ED3;&#x679C;string&#x7C7B;&#x578B;</p>
       </td>
     </tr>
   </tbody>
@@ -213,28 +214,28 @@ gio.setPeopleVariable({
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名</th>
-      <th style="text-align:left">类型</th>
-      <th style="text-align:left">是否必填</th>
-      <th style="text-align:left">参数描述</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;</th>
+      <th style="text-align:left">&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x63CF;&#x8FF0;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">userIdObject</td>
       <td style="text-align:left">object</td>
-      <td style="text-align:left">是</td>
-      <td style="text-align:left">key:userId(string类型,必要key) value:(string或者number类型)</td>
+      <td style="text-align:left">&#x662F;</td>
+      <td style="text-align:left">key:userId(string&#x7C7B;&#x578B;,&#x5FC5;&#x8981;key) value:(string&#x6216;&#x8005;number&#x7C7B;&#x578B;)</td>
     </tr>
     <tr>
       <td style="text-align:left">callback</td>
-      <td style="text-align:left">函数</td>
-      <td style="text-align:left">否</td>
+      <td style="text-align:left">&#x51FD;&#x6570;</td>
+      <td style="text-align:left">&#x5426;</td>
       <td style="text-align:left">
-        <p>callback {function (ret)}：执行完读取操作后的回调函数。</p>
-        <p>ret 为 callback 函数的参数，有两个属性:</p>
-        <p>status:结果2种true, false 都为布尔类型</p>
-        <p>msg:结果string类型</p>
+        <p>callback {function (ret)}&#xFF1A;&#x6267;&#x884C;&#x5B8C;&#x8BFB;&#x53D6;&#x64CD;&#x4F5C;&#x540E;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+        <p>ret &#x4E3A; callback &#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;:</p>
+        <p>status:&#x7ED3;&#x679C;2&#x79CD;true, false &#x90FD;&#x4E3A;&#x5E03;&#x5C14;&#x7C7B;&#x578B;</p>
+        <p>msg:&#x7ED3;&#x679C;string&#x7C7B;&#x578B;</p>
       </td>
     </tr>
   </tbody>
@@ -254,22 +255,22 @@ var gio = api.require('GrowingIO');  //引用模块
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名</th>
-      <th style="text-align:left">类型</th>
-      <th style="text-align:left">是否必填</th>
-      <th style="text-align:left">参数描述</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;</th>
+      <th style="text-align:left">&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x63CF;&#x8FF0;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">callback</td>
-      <td style="text-align:left">函数</td>
-      <td style="text-align:left">否</td>
+      <td style="text-align:left">&#x51FD;&#x6570;</td>
+      <td style="text-align:left">&#x5426;</td>
       <td style="text-align:left">
-        <p>callback {function (ret)}：执行完读取操作后的回调函数。</p>
-        <p>ret 为callback 函数的参数，有两个属性:</p>
-        <p>status:结果2种true, false 都为布尔类型</p>
-        <p>msg:结果string类型</p>
+        <p>callback {function (ret)}&#xFF1A;&#x6267;&#x884C;&#x5B8C;&#x8BFB;&#x53D6;&#x64CD;&#x4F5C;&#x540E;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+        <p>ret &#x4E3A;callback &#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;:</p>
+        <p>status:&#x7ED3;&#x679C;2&#x79CD;true, false &#x90FD;&#x4E3A;&#x5E03;&#x5C14;&#x7C7B;&#x578B;</p>
+        <p>msg:&#x7ED3;&#x679C;string&#x7C7B;&#x578B;</p>
       </td>
     </tr>
   </tbody>

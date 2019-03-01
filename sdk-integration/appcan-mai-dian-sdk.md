@@ -150,10 +150,10 @@ uexGrowingIO.track(eventId, number, eventLevelVariable)
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">参数类型</th>
-      <th style="text-align:left">必填</th>
-      <th style="text-align:left">说明</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
     </tr>
   </thead>
   <tbody>
@@ -161,25 +161,25 @@ uexGrowingIO.track(eventId, number, eventLevelVariable)
       <td style="text-align:left"><code>eventId</code>
       </td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left">是</td>
-      <td style="text-align:left">事件标识符</td>
+      <td style="text-align:left">&#x662F;</td>
+      <td style="text-align:left">&#x4E8B;&#x4EF6;&#x6807;&#x8BC6;&#x7B26;</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>number</code>
       </td>
       <td style="text-align:left">Number</td>
-      <td style="text-align:left">否</td>
+      <td style="text-align:left">&#x5426;</td>
       <td style="text-align:left">
-        <p>事件的数值，没有number参数时，事件默认加一；</p>
-        <p>当出现number参数时，事件自增number的数值</p>
+        <p>&#x4E8B;&#x4EF6;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x6CA1;&#x6709;number&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x4E8B;&#x4EF6;&#x9ED8;&#x8BA4;&#x52A0;&#x4E00;&#xFF1B;</p>
+        <p>&#x5F53;&#x51FA;&#x73B0;number&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x4E8B;&#x4EF6;&#x81EA;&#x589E;number&#x7684;&#x6570;&#x503C;</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>eventLevelVariable</code>
       </td>
       <td style="text-align:left">Object</td>
-      <td style="text-align:left">否</td>
-      <td style="text-align:left">事件发生时所伴随的维度信息</td>
+      <td style="text-align:left">&#x5426;</td>
+      <td style="text-align:left">&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x65F6;&#x6240;&#x4F34;&#x968F;&#x7684;&#x7EF4;&#x5EA6;&#x4FE1;&#x606F;</td>
     </tr>
   </tbody>
 </table>**参数限制条件：**
@@ -189,28 +189,29 @@ uexGrowingIO.track(eventId, number, eventLevelVariable)
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left"><code>eventId</code>
       </td>
-      <td style="text-align:left">非空，长度限制小于等于50；</td>
+      <td style="text-align:left">&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF1B;</td>
     </tr>
     <tr>
       <td style="text-align:left"> <code>number</code>
       </td>
-      <td style="text-align:left">非空。</td>
+      <td style="text-align:left">&#x975E;&#x7A7A;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>eventLevelVariable</code>
       </td>
       <td style="text-align:left">
-        <p>非空，长度限制小于等于100（<code>eventLevelVariable.length()&lt;=100</code>）；</p>
-        <p><code>eventLevelVariable</code> 内部不允许嵌套 Object；</p>
-        <p><code>eventLevelVariable</code>Object 中的 <code>key</code>长度限制小于等于50，<code>value</code>长度限制小等于1000。</p>
+        <p>&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;100&#xFF08;<code>eventLevelVariable.length()&lt;=100</code>&#xFF09;&#xFF1B;</p>
+        <p><code>eventLevelVariable</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x5D4C;&#x5957;
+          Object&#xFF1B;</p>
+        <p><code>eventLevelVariable</code>Object &#x4E2D;&#x7684; <code>key</code>&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code>&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -280,17 +281,17 @@ uexGrowingIO.setEvar(conversionVariables)
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">conversionVariables</td>
       <td style="text-align:left">
-        <p>非空，键值对个数小于等于100；</p>
-        <p><code>conversionVariables</code> 内部不允许含有<code>Object</code><b> </b>嵌套；</p>
-        <p><code>conversionVariables</code>Object 中的 <code>key</code>长度限制小于等于50，<code>value</code>长度限制小等于1000。</p>
+        <p>&#x975E;&#x7A7A;&#xFF0C;&#x952E;&#x503C;&#x5BF9;&#x4E2A;&#x6570;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;100&#xFF1B;</p>
+        <p><code>conversionVariables</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>Object</code><b> </b>&#x5D4C;&#x5957;&#xFF1B;</p>
+        <p><code>conversionVariables</code>Object &#x4E2D;&#x7684; <code>key</code>&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code>&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -350,17 +351,17 @@ uexGrowingIO.setPeopleVariable(peopleVariables)
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">peopleVariables</td>
       <td style="text-align:left">
-        <p>非空，长度限制小于等于100（<code>peopleVariables.length()&lt;=100</code>）；</p>
-        <p><code>peopleVariables</code> 内部不允许含有<code>JSONObject</code>或者；</p>
-        <p><code>peopleVariables</code>Object 中的 <code>key</code>长度限制小于等于50，<code>value</code>长度限制小等于1000。</p>
+        <p>&#x975E;&#x7A7A;&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;100&#xFF08;<code>peopleVariables.length()&lt;=100</code>&#xFF09;&#xFF1B;</p>
+        <p><code>peopleVariables</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;&#xFF1B;</p>
+        <p><code>peopleVariables</code>Object &#x4E2D;&#x7684; <code>key</code>&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code>&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -411,21 +412,21 @@ uexGrowingIO.setUserId(userId);
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">参数类型</th>
-      <th style="text-align:left">必填</th>
-      <th style="text-align:left">说明</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">userId</td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left">是</td>
+      <td style="text-align:left">&#x662F;</td>
       <td style="text-align:left">
-        <p>登录用户Id，长度限制小于等于1000；</p>
-        <p>如果值为空则清空了登录用户变量，不建议这么用，</p>
-        <p>请使用 clearUserId 清除登录用户变量。</p>
+        <p>&#x767B;&#x5F55;&#x7528;&#x6237;Id&#xFF0C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;1000&#xFF1B;</p>
+        <p>&#x5982;&#x679C;&#x503C;&#x4E3A;&#x7A7A;&#x5219;&#x6E05;&#x7A7A;&#x4E86;&#x767B;&#x5F55;&#x7528;&#x6237;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x8FD9;&#x4E48;&#x7528;&#xFF0C;</p>
+        <p>&#x8BF7;&#x4F7F;&#x7528; clearUserId &#x6E05;&#x9664;&#x767B;&#x5F55;&#x7528;&#x6237;&#x53D8;&#x91CF;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -472,10 +473,10 @@ uexGrowingIO.setVisitor(visitorVar)
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">参数类型</th>
-      <th style="text-align:left">必填</th>
-      <th style="text-align:left">说明</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
     </tr>
   </thead>
   <tbody>
@@ -483,10 +484,10 @@ uexGrowingIO.setVisitor(visitorVar)
       <td style="text-align:left"><code>visitorVar</code>
       </td>
       <td style="text-align:left">Object</td>
-      <td style="text-align:left">是</td>
+      <td style="text-align:left">&#x662F;</td>
       <td style="text-align:left">
-        <p>不可使用嵌套的<code>JSONObject</code>对象，即为JSONObject中不可以放入<code>JSONObject</code>或者<code>JSONArray</code>；</p>
-        <p>key 长度限制小于等于50，value长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p>&#x4E0D;&#x53EF;&#x4F7F;&#x7528;&#x5D4C;&#x5957;&#x7684;<code>JSONObject</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5373;&#x4E3A;JSONObject&#x4E2D;&#x4E0D;&#x53EF;&#x4EE5;&#x653E;&#x5165;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray</code>&#xFF1B;</p>
+        <p>key &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;value&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
