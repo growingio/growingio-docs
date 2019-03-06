@@ -4,17 +4,15 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 # 电脑端圈选 App - Android SDK 接入文档
 
-请确保你在之前已经安装了 GrowingIO 无埋点 SDK。
-
-接下来，在将用来圈选的 app 上进行如下操作，安装 2.7.0-beta 版本的 SDK，**不需要也不建议进行发版。**
+**2.7.0 已经正式发布，想要试用 web 圈 app ，申请灰度权限后，只需要将想要用来圈选的 App 的 SDK 升级到 2.7.0 就可以。**
 
 ### 第一步 修改依赖中的版本号 
 
 Gradle 编译环境（AndroidStudio）
 
-（1）在 project 级别的 build.gradle 文件中将 **`vds-gradle-plugin`** 依赖的版本号改为 **autotrack-2.7.0-beta** 
+（1）在 project 级别的 build.gradle 文件中将 **`vds-gradle-plugin`** 依赖的版本号改为 **autotrack-2.7.0** 
 
-（2）在 module 级别的 build.gradle 文件中**的** **`com.growingio.android`** 插件的版本号改为 **autotrack-2.7.0-beta** 
+（2）在 module 级别的 build.gradle 文件中**的** **`com.growingio.android`** 插件的版本号改为 **autotrack-2.7.0**
 
 ### **第二步 代码混淆**
 

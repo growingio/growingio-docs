@@ -4,7 +4,7 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 # 电脑端圈选 App （灰度功能）
 
-在使用电脑端圈选后，请确保已经接入「电脑端圈选 SDK」，见下面：
+在使用电脑端圈选后，请确保已经接入 SDK 2.7.0 及以上，见下面：
 
 {% page-ref page="../../../sdk-integration/app-circle-2.7.0/" %}
 
@@ -31,6 +31,10 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 ### **2.使用方法**
 
 通过 GrowingIO 圈选入口，在下拉列表中找到需要定义的 App，进入圈选扫码页面，使用手机扫码，选择手机中右边的按钮「 web 端圈选」即可进入电脑圈选，唤醒手机上相对应的 App （加载了 2.7.0 版本的 SDK ），操作手机进入到想要定义的页面进行圈选。
+
+{% hint style="info" %}
+请确保手机和电脑在同一个 wifi 局域网下。
+{% endhint %}
 
 ![](../../../.gitbook/assets/image-6.png)
 
