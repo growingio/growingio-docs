@@ -1,5 +1,13 @@
 # SDK 更新日志
 
+### 2019年3月8日
+
+#### IOS 2.7.1
+
+#### Bug fix:
+
+1，修复 DDAbstractLogger，DDExtractFileNameWithoutExtension 文件冲突 ，解决KVO移除异常问题。
+
 ### 2019年2月27日
 
 #### **Android 2.7.0**
