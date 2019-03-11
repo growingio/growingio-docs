@@ -6,9 +6,9 @@
 
 ### 1. 术语 <a id="terminology"></a>
 
-* **公钥（** **X-Client-Id）：**GrowingIO 分配的项目公钥，请求时用来做身份校验的一串字符码，您可以在 GrowingIO 后台点击右上角齿轮处进入【项目配置】页面中获取。
-* **私钥：**双方所约定的加密算法的私钥，您可以在 GrowingIO 后台点击右上角齿轮处进入【项目配置】页面中获取。
-* **ai：**项目 ID，您可以在 GrowingIO 后台点击右上角齿轮处进入【项目配置】页面中获取。项目 ID 也是集成 SDK 时 setAccountId 所用的部分。
+* **公钥（** **X-Client-Id）：**GrowingIO 分配的项目公钥，请求时用来做身份校验的一串字符码，您可以在 GrowingIO 后台点击右上角齿轮处进入【项目概览】页面中获取。
+* **私钥：**双方所约定的加密算法的私钥，您可以在 GrowingIO 后台点击右上角齿轮处进入【项目概览】页面中获取。
+* **ai：**项目 ID，您可以在 GrowingIO 后台点击右上角齿轮处进入【项目概览】页面中获取。项目 ID 也是集成 SDK 时 setAccountId 所用的部分。
 * **project**: 项目 UID，访问项目的时候，页面 URL 以 `/projects/:project_uid` 开头，例如 `https://www.growingio.com/admin/projects/nxog09md/dashboard`中的`nxog09md`。
 * **auth**: 通过认证算法计算出来的签名，见第二部分示例代码
 * **tm**: 当前请求时间戳（unix 毫秒时间戳\)
@@ -26,7 +26,7 @@ ____________                  ___________    (ai/project/auth)   _____________
 |__________|                                                    |_____________|
 ```
 
-GrowingIO 会给每个项目分配个公钥\(X-Client-Id\)和私钥。具体认证步骤如下。
+GrowingIO 会给每个项目分配个公钥 \(X-Client-Id\) 和私钥。具体认证步骤如下。
 
 * 用户打开客户页面，会向 Client Server 发起一个请求
 * Client Server 在渲染页面时，会向 Growing Server 做认证请求，请求参数包括 ai, project 和 auth，头部参数包含 公钥（X-Client-Id ）。

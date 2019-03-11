@@ -2,7 +2,7 @@
 
 ![](../.gitbook/assets/bang-zhu-wen-dang-banner4.jpg)
 
-GrowingIO目前提供统计数据导出、原始数据导出和数据管理等 API，所有的 API 均使用同一种认证方式，在使用前请仔细阅读 API 认证说明 。
+GrowingIO 目前提供统计数据导出、原始数据导出和数据管理等 API，所有的 API 均使用同一种认证方式，在使用前请仔细阅读 API 认证说明 。
 
 * [GrowingIO API 认证](authentication.md)
 * [原始数据导出 2.0 API](raw-data-api/raw-data-export-2.0.md)
