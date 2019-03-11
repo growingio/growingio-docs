@@ -4,7 +4,7 @@
 
 #### IOS 2.7.1
 
-#### Bug fix:
+Bug fix:
 
 1. 修复 `DDAbstractLogger`，`DDExtractFileNameWithoutExtension` 文件冲突 ，解决KVO移除异常问题。
 
@@ -12,11 +12,11 @@
 
 #### **Android 2.7.0**
 
-**Bug fix：**
+Bug fix：
 
 1. 修复异常 `NullPointerException:Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference` getPageName 中 fragment 为空的情况，崩溃率很低，预计在十万分之五。
 
-**Feature：**
+Feature：
 
 1. 增加打点验证功能 ；
 2. 增加 web 圈选 APP 功能，圈选中可以查看热图 ；
@@ -24,7 +24,7 @@
 
 #### **iOS 2.7.0**
 
-**Feature：**
+Feature：
 
 1. 增加打点验证功能 ；
 2. 增加 web 圈选 APP 功能，圈选中可以查看热图 ；
@@ -32,27 +32,27 @@
 
 ### 2019年2月20日
 
-Android 2.6.9
+#### Android 2.6.9
 
-**Bug fix：**
+Bug fix：
 
 1. 修复了多进程调用 `setVisitor` 时会出现空指针的 bug（只在极端情况下出现，crash 率预计在千分之一以内）。
 2. 修复了 `AndroidRuntimeException: requestFeature() must be called before adding content`错误，该错误会出现在 Android 5.x 和 Android6.x 机型上，触发条件为：在 `onCreate` 中的 `super.onCreate(saveInstanceState)` 代码之后调用 `requestWindowFeature` 接口。
 
-**Feature：**
+Feature：
 
 1. 增加了错误提示，告知用户 GrowingIO Android SDK 不支持 Jack 编译器（详情：[https://developer.android.com/studio/write/java8-support\#disable\_jack](https://developer.android.com/studio/write/java8-support#disable_jack)）。
 2. 加强了对 Android 水滴屏 Android P 型号的圈选的支持。
 
 ### 2019年1月8日
 
-Android 2.6.8
+#### Android 2.6.8
 
 1. 修复 Android 2.6.7 版本中圈选结果中 XPath 保存错误， 造成圈选没有数据，此问题数据采集正常，不影响用户数据的收集和统计。
 
 ### 2019年1月4日
 
-Android 2.6.7
+#### Android 2.6.7
 
 1. 修复 `View` 的 `Context` 是 `Application` 时，无法采集点击事件；
 2. 修复 `Fragment` 元素不可见发送 `imp` 事件；
@@ -61,38 +61,38 @@ Android 2.6.7
 5. 自定义页面事件（`pvar`）优化，之前 `setPageVariable` 接口需要用户每次进入页面的时候设置， 现更新为`pvar`只需要设置一次，在页面销毁之前每次展示都会补发`pvar`，如果用户设置`null`则清空 `pvar`事件；
 6. 提供关闭单独元素展现事件接口 —— [`ignoreViewImp`](android-sdk/api.md#growingio-yun-hang-shi-api)。
 
-iOS 2.6.7
+#### iOS 2.6.7
 
 1. 提供关闭单独元素展现事件接口—— [`growingAttributesDonotTrackImp`](ios-sdk-1/ios-sdk-api.md#shu-ju-cai-ji-fa-song-api)\`\`
 2. 自定义页面事件（`pvar`）优化，之前 `setPageVariable` 接口需要用户每次进入页面的时候设置， 现更新为`pvar`只需要设置一次，在页面销毁之前每次展示都会补发`pvar`，如果用户设置`null`则清空 `pvar`事件；
 
 ### 2018年12月14日
 
-Android 2.6.6
+#### Android 2.6.6
 
 1. 修复Android 4.4系统的手机上,由于`Davlik`虚拟机对`class`校验机制与`art`不同，导致的 APP 初始化 SDK 时出现 VerifyError crash。
 
 ### 2018年12月12日
 
-Android 2.6.5
+#### Android 2.6.5
 
 1. 支持运行时异步设置渠道信息 \(接口地址\)；
 2. 兼容 AndroidX；
 3. 增加app close事件上报,将最后一个页面的浏览时长计算入用户进入总时长；
 4. 修复 Activity的背景是透明时,下边的Activity的ViewTree 变化无限回调GlobalLayout监听,导致page事件发送失败问题。
 
-iOS 2.6.5
+#### iOS 2.6.5
 
 1. 增加app close事件上报,将最后一个页面的浏览时长计算入用户进入总时长。
 
 ### 2018年11月29日
 
-Android 2.6.3
+#### Android 2.6.3
 
 1. 修复客户调用`WebView`的`setWebChromeClient`， 传参为`new WebChromeClient()` 时导致内嵌 H5 页面无法圈选；
 2. 支持[采集通知 Notification](android-sdk/android-sdk.md#cai-ji-tong-zhi-notification)的点击与展现。
 
-iOS 2.6.3
+#### iOS 2.6.3
 
 1. 修复多个`ViewController` 滑动切换时，没有识别导致用户页面访问事件数据错误；
 2. 支持[采集通知](ios-sdk-1/ios-sdk.md#push-tui-song-dian-ji-cai-ji)的点击。
@@ -106,26 +106,26 @@ Android 2.6.2
 
 ### 2018年11月14日
 
-Android 2.6.1
+#### Android 2.6.1
 
 1. 修复 SDK 2.6.0 用户 app 首次安装启动并且手机没有网络的情况下，`activate`事件发不出去，造成后续事件都不能发送，并且有可能导致 app 内存溢出。
 
 ### 2018年11月8日
 
-Android，iOS 2.6.0
+#### Android，iOS 2.6.0
 
 1. 发布 React Native 无埋点 SDK；
 2. 发布 API Cloud、Cordova、Flutter、React Native 、Weex、Hybrid 、AppCan 埋点 SDK。
 
 ### 2018年10月23日
 
-IOS 2.4.5
+#### IOS 2.4.5
 
 修复vstr发送地址错误
 
 ### 2018年10月13日
 
-Android 2.4.5
+#### Android 2.4.5
 
 适配 Android build gradle plugin 3.2.1
 
