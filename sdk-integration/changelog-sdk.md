@@ -6,7 +6,7 @@
 
 #### Bug fix:
 
-1，修复 DDAbstractLogger，DDExtractFileNameWithoutExtension 文件冲突 ，解决KVO移除异常问题。
+1. 修复 `DDAbstractLogger`，`DDExtractFileNameWithoutExtension` 文件冲突 ，解决KVO移除异常问题。
 
 ### 2019年2月27日
 
