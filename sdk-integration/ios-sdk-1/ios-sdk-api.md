@@ -6,7 +6,7 @@ description: >-
 
 # IOS SDK API
 
-{% hint style="success" %}
+{% hint style="warning" %}
 注意：以下所有API说明为相应接口的使用方法和基本功能，具体的函数定义及详细说明请参考Growing.h。
 {% endhint %}
 
@@ -248,7 +248,7 @@ description: >-
     </tr>
     <tr>
       <td style="text-align:left">setDailyDataLimit</td>
-      <td style="text-align:left">5M</td>
+      <td style="text-align:left">3M</td>
       <td style="text-align:left">&#x8BBE;&#x7F6E;&#x6BCF;&#x5929;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x7F51;&#x7EDC;&#xFF08;2G&#x3001;3G&#x3001;4G&#xFF09;&#x4E0A;&#x4F20;&#x7684;&#x6570;&#x636E;&#x91CF;&#x7684;&#x4E0A;&#x9650;&#xFF08;&#x5355;&#x4F4D;&#x662F;
         KB&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 3 MB</td>
     </tr>
