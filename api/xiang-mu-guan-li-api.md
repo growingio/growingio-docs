@@ -445,7 +445,7 @@ GrowingIO 分配的公钥
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://www.growingio.com" path="/v1/api/projects/:project\_id/vars/people" %}
+{% api-method method="get" host="https://www.growingio.com" path="/v1/api/projects/:project\_id/vars/peoples" %}
 {% api-method-summary %}
 获取登录用户变量
 {% endapi-method-summary %}
@@ -498,7 +498,7 @@ GrowingIO 分配的公钥
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://www.growingio.com" path="/v1/api/projects/:project\_id/vars/people" %}
+{% api-method method="post" host="https://www.growingio.com" path="/v1/api/projects/:project\_id/vars/peoples" %}
 {% api-method-summary %}
 创建登录用户变量
 {% endapi-method-summary %}
