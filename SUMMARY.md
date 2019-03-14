@@ -11,7 +11,7 @@
   * [用户细查](data-analytics/individual-user-report.md)
   * [漏斗分析](data-analytics/funnel-analysis.md)
   * [活动分析](data-analytics/activity-analysis.md)
-  * [分布分析（beta\)](data-analytics/fen-bu-fen-xi.md)
+  * [分布分析](data-analytics/fen-bu-fen-xi.md)
   * [智能路径](data-analytics/pathfinder.md)
   * [留存分析](data-analytics/retention-analysis.md)
   * [留存魔法师](data-analytics/magic-number.md)
