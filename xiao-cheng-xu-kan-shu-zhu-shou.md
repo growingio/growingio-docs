@@ -17,13 +17,11 @@ GIO 小程序看数助手，在 GrowingIO 网页端产品的基础上，提供�
 
 ## 绑定账号
 
-第一步：点击“个人信息”
+第一步：点击导航看数助手图标
 
-![](https://growingio.atlassian.net/wiki/download/thumbnails/676626445/image2018-12-7_11-20-7.png?version=1&modificationDate=1544152823645&cacheVersion=1&api=v2&width=461&height=250)
+![](.gitbook/assets/image%20%2877%29.png)
 
-第二步：选择“小程序二维码”，打开微信，扫码，打开GIO看数助手后。
-
-![](https://growingio.atlassian.net/wiki/download/thumbnails/676626445/image2018-12-7_11-21-33.png?version=1&modificationDate=1544152897455&cacheVersion=1&api=v2&width=459&height=250)
+第二步：打开微信，扫描小程序码，打开GIO看数助手。
 
 第三步：点击“绑定”，登录账号。
 
@@ -35,21 +33,21 @@ GIO 小程序看数助手，在 GrowingIO 网页端产品的基础上，提供�
 
 实时展示的是网页端 “**首页** - **实时监控模板**“ 中的**今日的**数据图表，数据同网页端一样，“**此时此刻**” 图表每**20秒**更新一次数据，**其他图表**每 **5 分钟**更新一次数据。
 
-![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x5B9E;&#x65F6;&#x529F;&#x80FD;&#x622A;&#x56FE;](.gitbook/assets/image%20%28209%29.png)
+![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x5B9E;&#x65F6;&#x529F;&#x80FD;&#x622A;&#x56FE;](.gitbook/assets/image%20%28212%29.png)
 
 点击 GIO 看数助手的 图表，可以进入**图表详情页**，触屏到相应的数据点时，可以显示相应的数据坐标的具体值。
 
-![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x5B9E;&#x65F6;&#x56FE;&#x8868;&#x8BE6;&#x60C5;&#x9875;](.gitbook/assets/image%20%2877%29.png)
+![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x5B9E;&#x65F6;&#x56FE;&#x8868;&#x8BE6;&#x60C5;&#x9875;](.gitbook/assets/image%20%2878%29.png)
 
 ### 概览
 
 Web 和移动端 App（iOS和安卓）产品，概览功能显示的是 GrowingIO 网页 “**首页**-**概览**” 的图表内容，支持切换不同的平台端应用查看。
 
-![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x7F51;&#x9875;&#x548C;&#x79FB;&#x52A8; App &#x4EA7;&#x54C1;&#x6982;&#x89C8;&#x9875;&#x9762;](.gitbook/assets/image%20%28226%29.png)
+![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x7F51;&#x9875;&#x548C;&#x79FB;&#x52A8; App &#x4EA7;&#x54C1;&#x6982;&#x89C8;&#x9875;&#x9762;](.gitbook/assets/image%20%28229%29.png)
 
 集成小程序端产品的项目，概览功能显示的是 GrowingIO 网页 “**首页**-**小程序预置看板**” 的看板图表内容；如果集成了多个应用，支持切换不同的应用，以及可以点击查看某应用下不同的看板内容。
 
-![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x5C0F;&#x7A0B;&#x5E8F;&#x9879;&#x76EE; &#x6982;&#x89C8;&#x9875;&#x9762;](.gitbook/assets/image%20%28104%29.png)
+![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x5C0F;&#x7A0B;&#x5E8F;&#x9879;&#x76EE; &#x6982;&#x89C8;&#x9875;&#x9762;](.gitbook/assets/image%20%28105%29.png)
 
 ​**注**：概览中**仅展示被添加到首页预置看板边栏中的看板；**如果在 GrowingIO 网页端的首页移除某个预置的看板，在 GIO 看数助手的概览功能中，也不会看到这个看板。
 
@@ -57,11 +55,11 @@ Web 和移动端 App（iOS和安卓）产品，概览功能显示的是 GrowingI
 
 “GIO 看数助手 - 看板” 功能中，展示的是 GrowingIO 网页端**被添加到首页预置看板边栏中的看板。**如果在这个页面没有看到任何数据，请先登录 GrowingIO 网页端，将关注的看板添加到“首页侧边栏-自定义看板”，然后重新刷新小程序看数助手。
 
-![GrowingIO &#x6D4B;&#x8BD5;&#x9879;&#x76EE;&#x9996;&#x9875;&#x793A;&#x4F8B;&#x9875;&#x9762;](.gitbook/assets/image%20%28184%29.png)
+![GrowingIO &#x6D4B;&#x8BD5;&#x9879;&#x76EE;&#x9996;&#x9875;&#x793A;&#x4F8B;&#x9875;&#x9762;](.gitbook/assets/image%20%28187%29.png)
 
 点击“添加常用看板”。
 
-![](.gitbook/assets/image%20%2896%29.png)
+![](.gitbook/assets/image%20%2897%29.png)
 
 GIO 看数助手，显示看板中的前 20 张数据图。
 
@@ -69,15 +67,15 @@ GIO 看数助手，显示看板中的前 20 张数据图。
 
 除了实时中的几个小图和”此时此刻“图外，其他的小数据图点击，都可以进入图表详情页，触屏到相应的数据点时，可以显示相应的数据坐标的具体值。
 
-![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x770B;&#x677F;&#x56FE;](.gitbook/assets/image%20%28160%29.png)
+![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x770B;&#x677F;&#x56FE;](.gitbook/assets/image%20%28162%29.png)
 
-![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x56FE;&#x8868;&#x8BE6;&#x60C5;&#x9875;](.gitbook/assets/image%20%28105%29.png)
+![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x56FE;&#x8868;&#x8BE6;&#x60C5;&#x9875;](.gitbook/assets/image%20%28106%29.png)
 
 ### 设置
 
 在“设置” 功能页中切换您所在的项目。
 
-![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x8BBE;&#x7F6E;&#x529F;&#x80FD;&#x9875;](.gitbook/assets/image%20%2887%29.png)
+![GIO &#x770B;&#x6570;&#x52A9;&#x624B; &#x8BBE;&#x7F6E;&#x529F;&#x80FD;&#x9875;](.gitbook/assets/image%20%2888%29.png)
 
 ## “GIO 看数助手” 常见问题
 
