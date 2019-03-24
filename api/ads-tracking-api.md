@@ -60,7 +60,7 @@ Token获取详见：`https://docs.growingio.com/api/authentication.html`
 
 ### 5.认证说明 <a id="authentication"></a>
 
-详细的认证过程请参考：[认证说明](https://docs.growingio.com/api/ji-suan-jie-guo-shu-ju-api.html#authorization)
+详细的认证过程请参考：[认证说明](authentication.md#authorization)
 
 | 名字 | 类型 | 描述 | 示例 |
 | :--- | :--- | :--- | :--- |
