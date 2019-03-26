@@ -26,7 +26,7 @@ public class MyApplication extends Application {
             .setDeeplinkCallback(new DeeplinkCallback() {
                 @Override
                 public void onReceive(Map<String, String> params, int error) {
-        ​
+        
                 }
             })
             .setDiagnose(false)

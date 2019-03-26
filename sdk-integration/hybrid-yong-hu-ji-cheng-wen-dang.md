@@ -32,7 +32,6 @@ gio('track', 'registerSuccess');
 gio('track', 'registerSuccess', {'gender':'male', 'age':21});
 // track API调用示例三
 gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zhejiang'})
-
 ```
 
 ### 2，设置页面级变量（page.set）
@@ -106,7 +105,6 @@ gio('people.set', {'gender':'male', 'age':'25'});
 ```javascript
 //调用示例
 gio('hybridSetUserId', '1234567890');
-
 ```
 
 ### 6，清除用户id（hybridClearUserId）
@@ -114,7 +112,6 @@ gio('hybridSetUserId', '1234567890');
 ```javascript
 //调用示例
 gio('hybridClearUserId');
-
 ```
 
 ### 7，设置访问用户变量

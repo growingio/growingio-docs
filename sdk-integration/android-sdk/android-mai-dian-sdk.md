@@ -88,7 +88,6 @@ dependencies {
 
 ```java
 public class MyApplication extends Application {
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -114,19 +113,21 @@ public class MyApplication extends Application {
     *;
 }
 -dontwarn com.growingio.**
-​
 -keepnames class * extends android.view.View
 -keepnames class * extends android.app.Fragment
 -keepnames class * extends android.support.v4.app.Fragment
 -keepnames class * extends androidx.fragment.app.Fragment
-​
--keep class android.support.v4.view.ViewPager
--keep class android.support.v4.view.ViewPager$**{
-  *;
+-keep class android.support.v4.view.ViewPager{
+    *;
 }
--keep class androidx.viewpager.widget.ViewPager
+-keep class android.support.v4.view.ViewPager$**{
+	*;
+}
+-keep class androidx.viewpager.widget.ViewPager{
+    *;
+}
 -keep class androidx.viewpager.widget.ViewPager$**{
-  *;
+	*;
 }
 ```
 
@@ -287,7 +288,7 @@ GrowingIO.startWithConfiguration(this, new Configuration()
                 .setDeeplinkCallback(new DeeplinkCallback() {
                             @Override
                             public void onReceive(Map<String, String> params, int status) {
-        
+                                // 接收并匹配参数，跳转 APP 内对应页面    
                             }
                         })
             );
@@ -892,7 +893,7 @@ public class MyApplication extends Application {
             .setDeeplinkCallback(new DeeplinkCallback() {
                 @Override
                 public void onReceive(Map<String, String> params, int error) {
-        ​
+                ​    //接收参数，跳转 APP 内指定页面
                 }
             })
             .setDiagnose(false)

@@ -330,7 +330,6 @@ setPeopleVariable(peopleVariables);
 ```java
 //获取 gio
 var gio = weex.requireModule('GrowingIO');
-
 gio.setPeopleVariable({ 'name': '玎玎', 'email': 'dingding@growingio.com' })
 ```
 
@@ -398,7 +397,6 @@ setUserId(userId);
 ```java
 //获取 gio
 var gio = weex.requireModule('GrowingIO');
-
 gio.setUserId('xiaoming');
 ```
 
@@ -423,7 +421,6 @@ clearUserId();
 ```javascript
 //获取 gio
 var gio = weex.requireModule('GrowingIO');
-
 gio.clearUserId();
 ```
 
@@ -465,7 +462,6 @@ setVisitor(visitorVar);
 ```java
 //获取 gio
 var gio = weex.requireModule('GrowingIO');
-
 gio.setVisitor({"gender":"male","age":21});
 ```
 

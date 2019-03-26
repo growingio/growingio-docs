@@ -42,15 +42,13 @@ onChildClick(android/widget/ExpandableListView;android/view/View)
 ```java
 public void onCustomClick(View view){
 	// 您的业务
-	...
-	
+	...	
 	// 为了 GrowingIO 能够采集自定义点击事件，调用 android.view.OnClickListener
     new View.OnClickListener() {
         @Override
         public void onClick(View v) {}
     }.onClick(view);
 }
-
 ```
 
 最后，如果您是在布局文件中在`view`上使用 `onClick` 属性的点击事件，不会被采集，不支持。
@@ -113,7 +111,6 @@ android {
             ...
         }
     }
-
     // Keep the following configuration in order to target Java 8.
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

@@ -155,14 +155,12 @@ track(eventId, number, eventLevelVariable, onSuccess, onFail)
 
 ```java
 var gio = window.cordova.require('cordova-plugin-growingio.GrowingIO');
-
 var onSucc = function(msg) {
     alert(msg);
 };
 var onFail = function(msg) {
     alert(msg);
 };
-
 // track API调用示例一
 gio.track("registerSuccess",onSucc,onFail);
 // track API调用示例二

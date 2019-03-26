@@ -39,13 +39,11 @@ Android AppCan 集成方式与官网默认的无埋点集成方式不一样， �
     package="org.zywx.wbpalmstar.widgetone.uexDemo"
     android:versionCode="1"
     android:versionName="3.0"
-    tools:overrideLibrary="org.zywx.wbpalmstar.widgetone.uex">
-    
+    tools:overrideLibrary="org.zywx.wbpalmstar.widgetone.uex">    
     <!-- GrowingIO 需要的权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-
     <application
         android:label="Plugin Demo">
         <activity
@@ -56,7 +54,6 @@ Android AppCan 集成方式与官网默认的无埋点集成方式不一样， �
             android:theme="@style/browser_loading_theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <!--GrowingIO 请添加这里的整个 intent-filter 区块，并确保其中只有一个 data 字段-->
@@ -71,7 +68,6 @@ Android AppCan 集成方式与官网默认的无埋点集成方式不一样， �
         </activity>
         <activity android:name="com.test.HelloAppCanNativeActivity" />
     </application>
-
 </manifest>
 ```
 

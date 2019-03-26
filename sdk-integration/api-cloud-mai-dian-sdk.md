@@ -75,10 +75,10 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 ```javascript
  vargio =null;
-     apiready=function(){
-         gio =api.require('GrowingIO');
-         gio.init();
-     }
+ apiready=function(){
+     gio =api.require('GrowingIO');
+     gio.init();
+ }
 ```
 
 ### （2）track\(event, callback\)
@@ -121,10 +121,10 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 ```javascript
 var gio = api.require('GrowingIO');  //引用模块
 gio.track({
-            eventId: 'GIOKey'
-        },function(ret, err){
-            //回调函数事件处理
-        });
+        eventId: 'GIOKey'
+    },function(ret, err){
+        //回调函数事件处理
+});
 ```
 
 ### （3）setEvar\(conversionVariables, callback\)
@@ -165,7 +165,7 @@ gio.setEvar({
            "ekey":"evalue","Date":"2018-07-02"
       },function(ret, err){
            //回调函数事件处理
-        });
+});
 ```
 
 ### （4）setPeopleVariable\(peopleVariables, callback\)
@@ -206,7 +206,7 @@ gio.setPeopleVariable({
            "ekey":"evalue","Date":"2018-07-02"
       },function(ret, err){
             //回调函数事件处理
-        });
+  });
 ```
 
 ### （5）setUserId\(userIdObject, callback\)
@@ -247,7 +247,7 @@ var gio = api.require('GrowingIO');  //引用模块
              "userId":"GIO"
         },function(ret, err){
              //回调函数事件处理
-        });
+   });
 ```
 
 ### （6）clearUserId\(callback\)
@@ -280,7 +280,7 @@ var gio = api.require('GrowingIO');  //引用模块
 var gio = api.require('GrowingIO');  //引用模块
 gio.clearUserId(function(ret, err){
              //回调函数事件处理
-        });
+});
 ```
 
 ## **6.常见问题**

@@ -66,7 +66,7 @@ GrowingIO 使用IDFA 来做来源管理激活设备的精确匹配，让你更�
 
 ## API说明
 
-### 1，track
+### 1. track
 
 #### 说明：发送自定义事件, 对应于cstm事件
 
@@ -90,7 +90,7 @@ GrowingIO.track('eventId', variable: {'testkey': 'testValue', 'testNumKey': 2333
 
 ```
 
-### 2，setEvar
+### 2. setEvar
 
 #### 说明：发送转化变量, 对应于evar事件
 
@@ -107,7 +107,7 @@ GrowingIO.setEvar({
 
 ```
 
-### 3，setPeopleVariable
+### 3. setPeopleVariable
 
 #### 说明：发送用户变量, 对应于ppl事件
 
@@ -126,7 +126,7 @@ GrowingIO.setPeopleVariable({
 
 ```
 
-### 4，setUserId
+### 4. setUserId
 
 #### 说明：设置登录用户Id, 对应于cs1字段
 
@@ -144,10 +144,9 @@ import 'package:growingioflutter/growingio_track.dart';
 
 ```dart
 GrowingIO.setUserId("testUserId");
-
 ```
 
-### 5，clearUserId
+### 5. clearUserId
 
 #### 说明：清除登录用户Id
 
@@ -161,10 +160,9 @@ import 'package:growingioflutter/growingio_track.dart';
 
 ```dart
 GrowingIO.clearUserId();
-
 ```
 
-### 6，setVisitor
+### 6. setVisitor
 
 #### 说明：设置访问用户变量, 对应于vstr事件
 
@@ -179,8 +177,7 @@ import 'package:growingioflutter/growingio_track.dart';
 ```dart
 GrowingIO.setVisitor({
 	  "visitorKey": 'key', "visitorValue": 34
-	});
-
+});
 ```
 
 

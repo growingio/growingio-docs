@@ -116,13 +116,15 @@ react-native link react-native-growingio
 3. 在工程`Build Phases` ➜ `Link Binary With Libraries`中添加`libGrowingIORNPlugin.a`
 {% endhint %}
 
-{% hint style="warning" %}
-如果您使用的是pod 的方式集成React 
+{% hint style="danger" %}
+如果您使用的是pod 的方式集成 ：
+
+请添加以下内容到Podfile中，并在添加之后执行**`pod update`**：
+
+`pod 'GrowingReactNativeTrackKit', :path => '../node_modules/react-native-growingio'`
 {% endhint %}
 
-添加`pod 'GrowingReactNativeTrackKit', :path => '../node_modules/react-native-growingio'`到Podfile中
 
-执行`pod update`
 
 ### 3. 重要配置项
 
