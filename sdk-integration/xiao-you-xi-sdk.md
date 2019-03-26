@@ -30,7 +30,16 @@
 
 ## 小游戏SDK标准接入指南 <a id="xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan"></a>
 
-### 下载小游戏采集 SDK <a id="xia-zai-xiao-you-xi-cai-ji-sdk"></a>
+### 1、根据小游戏框架选择SDK文件并添加跟踪代码
+
+目前支持微信原生小游戏以及所有游戏引擎构建的小游戏，请参照小游戏的开发框架，下载相应的SDK，并添加跟踪代码。
+
+* [微信原生小游戏框架](xiao-you-xi-sdk.md#wei-xin-yuan-sheng-xiao-you-xi-kuang-jia)
+* [游戏引擎构建的小游戏](xiao-you-xi-sdk.md#shi-yong-you-xi-yin-qing-gou-jian-wei-xin-xiao-you-xi)
+
+#### 微信原生小游戏框架
+
+1.下载小游戏采集 SDK
 
 下载 gio-ming.js 文件
 
@@ -40,7 +49,7 @@ curl --compressed https://assets.growingio.com/gio-ming.js -o gio-ming.js
 
 当下载到 gio-ming.js 文件以后，把文件放在微信小游戏项目里，比如 utils 目录下。下面会假设 SDK 文件放在 utils 目录下。
 
-### 添加跟踪代码 <a id="tian-jia-gen-zong-dai-ma"></a>
+2.添加跟踪代码
 
 在微信小游戏项目根目录的 game.js 文件的顶部添加以下 JS 代码：
 
@@ -49,6 +58,39 @@ var gio = require("utils/gio-ming.js");
 // version 是你的小游戏的版本号
 gio('init', '你的 GrowingIO 项目ID', '你的微信小游戏的 AppID', { version: '1.0' });
 ```
+
+#### 使用游戏引擎构建微信小游戏
+
+1.下载小游戏SDK
+
+下载 gio-ming.js 文件
+
+```text
+curl --compressed https://assets.growingio.com/gio-ming.js -o gio-ming.js
+```
+
+当下载到 gio-ming.js 文件以后，把文件放在微信小游戏项目目录中（一般为 assets 目录）；
+
+2.添加跟踪代码
+
+在初始场景文件最上面引入sdk
+
+```javascript
+var gio = require("utils/gio-ming.js");
+```
+
+在初始场景文件 start 方法中 init ；
+
+```javascript
+// version 是你的小游戏的版本号
+gio('init', '你的 GrowingIO 项目ID', '你的微信小游戏的 AppID', { version: '1.0' });
+```
+
+![&#x521D;&#x59CB;&#x573A;&#x666F;&#x6587;&#x4EF6;&#x793A;&#x4F8B;](../.gitbook/assets/image%20%2823%29.png)
+
+### **2、进行SDK的配置设置**
+
+**SDK中提供了以下几个参数可以用来进行配置**
 
 建议每次发布小游戏新版本的时候，更新一下版本号 version，可以在 GrowingIO 分析不同版本的数据。除了 version 之外，还有以下额外参数可以使用。
 
@@ -99,7 +141,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 
 **注意：如果你的微信小游戏在用户打开后不及时要求用户授权获取openid和/或 unionid，但是设置了forceLogin为True，那么GroiwngIO不能采集到用户的数据，采集到的用户会偏少，所以请特别注意这个参数的设置。如果您不能确定是否要设置这个参数，请先咨询我们。**
 
-### 添加请求服务器域名 <a id="tian-jia-qing-qiu-fu-wu-qi-yu-ming"></a>
+### 3、添加请求服务器域名 <a id="tian-jia-qing-qiu-fu-wu-qi-yu-ming"></a>
 
 要正常采集微信小游戏的数据并发送给 GrowingIO，需要在微信小游戏里事先设置一个通讯域名，允许跟 GrowingIO API 服务器进行网络通信。具体步骤如下：
 
@@ -107,9 +149,9 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 2. 打开开发设置，到服务器域名配置部分
 3. 在request合法域名中添加：https://wxapi.growingio.com
 
-![](../.gitbook/assets/image%20%28142%29.png)
+![](../.gitbook/assets/image%20%28144%29.png)
 
-### 检测数据 <a id="jian-ce-shu-ju"></a>
+### 4、检测数据 <a id="jian-ce-shu-ju"></a>
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面检测数据。请在添加了跟踪代码的小游戏重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
 
@@ -150,7 +192,6 @@ title: "试试我的小游戏"
 ```javascript
 //设置follwShare
 gio('init', '', '', { version: '1.0', debug: true, followShare: true});
-
 //分享，监听用户点击右上角菜单的“转发”按钮时触发的事件
 //调用 pageShareInfo 发送分享事件以及处理分享追踪信息
 wx.onShareAppMessage(function () {
@@ -160,12 +201,10 @@ wx.onShareAppMessage(function () {
   obj = gio('pageShareInfo', obj);
   return obj;
 })
-
 //分享，主动拉起转发，进入选择通讯录界面
 //调用 pageShareInfo 发送分享事件以及处理分享追踪信息
 obj = gio('pageShareInfo', obj);
 wx.shareAppMessage(obj)
-
 ```
 
 ### SDK 微信用户属性设置 <a id="sdk-wei-xin-yong-hu-shu-xing-she-zhi"></a>

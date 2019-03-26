@@ -15,7 +15,7 @@
 
 如果你已经注册 GrowingIO，使用小程序分析功能需要用一个全新的项目，在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“**项目概览**“。在项目概览页面，点击“**新建项目**“来创建一个新项目。在创建好的新项目里，你会看到使用引导，点击“**添加跟踪代码**“即可开始。
 
-![&#x9879;&#x76EE;&#x6982;&#x89C8;](../../.gitbook/assets/image%20%28210%29.png)
+![&#x9879;&#x76EE;&#x6982;&#x89C8;](../../.gitbook/assets/image%20%28213%29.png)
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyRLnN1UW6BL8O3mEr%2F-LGySTNxnseL1EsH7kN8%2Fimage.png?alt=media&token=91d05ea5-95d4-4104-b228-0f1837d5201b)
 
@@ -47,8 +47,9 @@
 * [微信小程序原生 + 第三方插件](./#wei-xin-yuan-sheng-kuang-jia-di-san-fang-cha-jian)
 * [taro框架](./#taro-kuang-jia)
 * [Wepy框架](./#wepy-kuang-jia)
-* [mpvue框架](./#mpvue-kuang-jia)
+* [mpvue框架/ uni-app框架](./#mpvue-kuang-jia)
 * [mpvue + 第三方插件](./#mpvue-di-san-fang-cha-jian)
+* [Chameleon框架](./#chameleon-kuang-jia)
 
 {% hint style="danger" %}
 **在微信小程序项目根目录的 app.js  文件的顶部添加代码，请注意一定要放在 App\(\) 之前, 否则可能导致采集的数据不完整。**
@@ -86,7 +87,6 @@ var gio = require ("utils/gio-minp.js").default;
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', usePlugin: true });
 // app.js 文件，在文件顶部 （其他代码之前）添加如下代码： 
 const App = global.GioApp
-
 ```
 
 3.在**每个page**页面**（新增页面也需要添加）**的 .js 文件顶部添加如下代码
@@ -130,7 +130,7 @@ import gio from './utils/gio-minp';
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0' })
 ```
 
-#### mpvue框架
+#### mpvue框架 / uni-app 框架
 
 1.如果小程序使用以上框架，下载 **gio-minp.esm.js** 文件，把文件放在微信小程序项目里，比如 utils 目录下。
 
@@ -144,7 +144,6 @@ $ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
 import gio from './utils/gio-minp'
 import Vue from 'vue'
 import App from './App'
-
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0' });
 ```
 
@@ -154,7 +153,21 @@ mpvue + 第三方插件 设置代码较为复杂，请点击如下链接进行�
 
 {% page-ref page="mpvue+-di-san-fang-cha-jian-tian-jia-dai-ma.md" %}
 
-### \*\*\*\*
+#### Chameleon框架
+
+1.下载 gio-minp.js 文件，把文件放在微信小程序项目里，比如 utils 目录下。
+
+```text
+$ curl --compressed https://assets.growingio.com/gio-minp.js -o gio-minp.js
+```
+
+2.在根目录 app.js文件的顶部添加跟踪代码
+
+```javascript
+import Cml from 'chameleon-runtime'
+import gio from '../utils/gio-minp'
+gio("init","9c76fe4756c3404d", "wx51cba5e78d4ef4d8", { debug: true, version: "0.7.0", cml: Cml})
+```
 
 ### **2、进行SDK的配置设置**
 
@@ -193,7 +206,6 @@ SDK参数配置
 var gio = require("utils/gio-minp.js").default;
 // version 是你的小程序的版本号，发版时请调整
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', followShare: true });
-
 ```
 
 对于 mpvue 用户，使用下面这种方式：
@@ -202,7 +214,6 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 import gio from './utils/gio-minp'
 import Vue from 'vue'
 import App from './App'
-
 gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0', followShare: true });
 ```
 
@@ -242,7 +253,7 @@ gio("identify", openid, unionid);
 
 作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在小程序中，微信用户属性是非常重要的设置，只有完善了微信用户属性信息，微信的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用户微信相关的信息（微信姓名和头像）定位用户。
 
-![&#x5FAE;&#x4FE1;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;](../../.gitbook/assets/image%20%28112%29.png)
+![&#x5FAE;&#x4FE1;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;](../../.gitbook/assets/image%20%28114%29.png)
 
 下面是专门针对用户的三个接口。
 
@@ -318,15 +329,12 @@ gio('getLocation')
 
 ```text
 # webview.js
-
 Page({
   data: {
     webUrl: `https://example.org/demo.html?giou=${getApp().globalData.gio('getVisitorId')}&giocs1=${getApp().globalData.gio('getUserId')}`
   } 
 });
-
 # webview.wxml
-
 <web-view src="{{ webUrl }}"></web-view>
 ```
 
@@ -340,7 +348,7 @@ Page({
 2. 打开开发设置，到服务器域名配置部分
 3. 在`request合法域名`中添加：https://wxapi.growingio.com
 
-![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../../.gitbook/assets/image%20%28235%29.png)
+![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../../.gitbook/assets/image%20%28238%29.png)
 
 ### 4、检测数据
 
@@ -457,7 +465,7 @@ GrowingIO 预置了两个小程序的标准自定义事件：分享到群聊或�
 
 **微信小程序分享到好友或群聊信息**
 
-![](../../.gitbook/assets/image%20%2899%29.png)
+![](../../.gitbook/assets/image%20%28101%29.png)
 
 **程序错误**
 
