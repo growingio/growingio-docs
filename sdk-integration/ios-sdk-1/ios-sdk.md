@@ -318,7 +318,7 @@ GrowingIO 使用 IDFA 来做来源管理激活设备的精确匹配，让你更�
 
 ### 采集推送
 
-在**IOS  SDK 2.6.3** 版本， 支持采集通知的标题和内容，此功能默认关闭，如需开启，请在 Application 初始化 GrowingIO 中设置，例如：
+在**IOS  SDK 2.6.3** 版本， 支持采集用户**点击**本应用的通知的题和内容，和 Android SDK 不同，**不支持通知展现事件的采集**。此功能默认关闭，如需开启，请在 Application 初始化 GrowingIO 中设置，例如：
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application
@@ -334,6 +334,10 @@ GrowingIO 使用 IDFA 来做来源管理激活设备的精确匹配，让你更�
 **查看通知采集数据**
 
 支持对于通知的展现和点击事件的采集，GrowingIO 并未增加新的采集事件类型，而是使用了自定义事件发送，所以需要您创建自定义事件和事件级变量，事件级变量标识符为**`notification_title`**，**`notification_content`**，自定义事件的标识符为**`notification_show`**，**`notification_click`**如图：
+
+{% hint style="info" %}
+iOS SDK 不支持通知展现的事件采集，但是 Android SDK 支持，这里为了满足大部分客户都有 Android 和 iOS 两个应用的情况，演示创建 `notificaion_show` 。
+{% endhint %}
 
 ![&#x521B;&#x5EFA;&#x901A;&#x77E5;&#x7684;&#x4E8B;&#x4EF6;&#x7EA7;&#x53D8;&#x91CF;](../../.gitbook/assets/image%20%2866%29.png)
 
