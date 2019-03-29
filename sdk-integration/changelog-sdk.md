@@ -1,5 +1,35 @@
 # SDK 更新日志
 
+## 2019年3月29日
+
+### Android 2.7.4
+
+新特性：
+
+* 支持采集 Lambda 表达式书写的点击事件。
+
+优化：
+
+* Web 圈选 app 中截屏速度限制；
+* Mobile Debugger 下不发送 imp 事件，降低卡顿的可能性；
+* 优化用户的混淆文件未更新最新版，导致的异常；
+* 去除掉 EventBus 打印的 No Subscriber 日志。
+
+修复bug：
+
+* 用户使用 IdleHandler 更新 UI， 导致的 Mobile debugger 、 web 圈选 app 白屏。
+
+### iOS 2.7.4
+
+优化：
+
+* web 圈 app 连接流畅度优化
+* 优化了 mobile debugger 的流畅度
+
+修复bug：
+
+* 修复了`GrowingAspectModeDynamicSwizzling Mode` 下`WKWebView` crash 
+
 ### 2019年3月18日
 
 #### IOS2.7.3

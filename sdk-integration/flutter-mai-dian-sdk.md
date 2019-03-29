@@ -12,7 +12,7 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 ### 2. Android集成\(Native部分\)
 
-此Flutter插件运行在Android手机上时依赖于GrowingIO Android SDK\(可以是无埋 点SDK也可以是埋点SDK\)2.6.0及以上, 原生部分请参考：
+此Flutter插件运行在Android手机上时依赖于GrowingIO Android SDK \(可以是无埋 点SDK也可以是埋点SDK\)2.6.0及以上, 原生部分请参考：
 
     [Android官方文档集成SDK部分\(无埋点\)](https://docs.growingio.com/docs/sdk-integration/android-sdk/#ji-cheng-sdk) 或[Android官方文档集成SDK部分\(埋点\)](https://docs.growingio.com/docs/sdk-integration/android-sdk/android-maidian-sdk)
 
