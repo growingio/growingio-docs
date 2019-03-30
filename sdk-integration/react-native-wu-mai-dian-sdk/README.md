@@ -9,7 +9,7 @@ GitHub Demo ： [https://github.com/growingio/ReactNativeDemo](https://github.co
 ## 支持版本
 
 * 兼容 react native 版本：0.46-0.56
-* 兼容组件 react-navigation 版本：2.6.2及以上
+* 兼容组件 react-navigation 版本：2.7.4及以上
 * 兼容组件 react-native-navigation 版本：1.1.486及以上
 
 {% hint style="info" %}
@@ -92,7 +92,7 @@ public class MainApplication extends Application implements ReactApplication {
 
 二.手动安装
 
-1. 获取 [GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.7.zip)、[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.6.7.zip)、[GrowingReactNativeKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-ReactNativeKit-2.6.7.zip)、[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.7.zip)包
+1. 获取 [GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.7.4.zip)、[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.7.4.zip)、[GrowingReactNativeKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-ReactNativeKit-2.7.4.zip)、[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-publicHeader-2.7.4.zip)包
 2. 解压上述 iOS SDK 压缩文件
 3. 将 Growing.h 、module.modulemap 和 GrowingCoreKit.framework、GrowingAutoTrackKit.framework、GrowingReactNativeKit.framework
 
