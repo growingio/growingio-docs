@@ -20,26 +20,9 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 ### 3. iOS集成\(Native部分\)
 
-#### 1, 选择SDK集成方式
+#### 添加iOS埋点SDK依赖
 
-\(1\).使用CocoaPods 快速集成
-
-* 添加 `pod 'GrowingCoreKit'` 到Podfile中 
-* 执行`pod update`,不要用--no-repo-update选项
-
-\(2\).手动集成方式
-
-* 获取sdk zip包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.0-20181106162738.zip)，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.0-20181106162738.zip)
-* 解压iOS SDK压缩文件​
-* 将Growing.h 和GrowingCoreKit.framework添加到iOS工程
-
-{% hint style="warning" %}
-提醒:  记得勾选 "Copy items if needed"
-{% endhint %}
-
-#### 2，设置URL Scheme与初始化SDK（必选）
-
-参考官网文档：设置[URL Scheme](ios-sdk-1/ios-sdk.md#2-she-zhi-url-scheme)和[初始化](ios-sdk-1/ios-sdk.md#3-chu-shi-hua)
+Flutter埋点插件是在 iOS 原生 SDK 上的扩展，请参照 [iOS 埋点 SDK 集成步骤 1~3 ](ios-sdk-1/mai-dian-sdk-ji-cheng.md#mai-dian-sdk-ji-cheng)，操作完全一致
 
 ### 4. 常见问题
 
