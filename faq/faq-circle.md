@@ -138,13 +138,56 @@ X-Frame-Options: Allow-From http://www.growingio.com
 
 **请参考我们的 APP SDK 接入部分。**
 
-注意安卓在添加 URL Scheme 时要加一整个 intent-filter 区块,并确保其中只有一个 data 字段。
+注意安卓在添加 URL Scheme 时要加一整个 intent-filter 区块，并确保其中只有一个 data 字段。
 
-### **3. 扫描二维码启动圈选，但是没有看到圈选小红点？**
+### **3. 扫描圈选二维码，但是无法正常圈选**
 
-有三种情况：
+#### 扫描二维码完毕后，点击落地页按钮是否正常唤起了APP呢？如果没有唤起APP， 有以下两种情况：
 
-（1）安卓移动端圈选在小米开发者版本和 MIUI8 稳定版下调不起小红点，是因为这两个系统版本禁止了悬浮框权限，您可以尝试授予 App 的悬浮框权限。
+Android：
+
+URL Scheme 填写错误， 请检查您的 manifest.xml 文件中 Url Scheme 是否和您官网的应用管理中的一致，示例代码如下：
+
+{% code-tabs %}
+{% code-tabs-item title="AndroidManifest.xml" %}
+```markup
+<activity
+    android:name=".LauncherActivity"
+    android:theme="@style/AppTheme"
+    tools:replace="screenOrientation">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+
+    </intent-filter>
+    <!-- GrowingIO Url Scheme 配置，请从官网的应用管理中获取，正确填写 -->
+    <intent-filter>
+        <data android:scheme="growing.您的 URL Scheme" /> 
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+    </intent-filter>
+    <!-- 即使含有自定义 scheme 也能正常唤醒，不互斥，不相互影响 -->
+    <intent-filter>
+        <data
+            android:host="share"
+            android:scheme="will" />
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+    </intent-filter>
+</activity>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+iOS：
+
+[请参照文档正确配置 URL Scheme](../sdk-integration/ios-sdk-1/ios-sdk.md#2-she-zhi-url-scheme)，并检查确认和官网中的应用管理中的一致。
+
+#### **如果能够唤起APP，但是看不到小红点，此时可能有以下有三种情况：**
+
+（1）安卓移动端圈选在小米开发者版本和 MIUI8 稳定版下调不起小红点，是因为这两个系统版本禁止了悬浮框权限，您可以尝试授予 App 的悬浮框权限，或者换台手机圈选。
 
 步骤：安全中心 - 授权管理 - 应用权限管理 - 找到您要设置权限的 App - 找到悬浮框权限 - 进行授权信任。当然也可以换用其他安卓手机进行圈选。
 
