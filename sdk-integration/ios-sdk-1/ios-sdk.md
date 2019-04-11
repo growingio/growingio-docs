@@ -757,5 +757,7 @@ Mobile Debugger 详细介绍，请参考文档 [GrowingIO Debugger](../growingio
 3. 打开 "显示热图" 开关后，如果相应页面有热图数据，则会显示热图
 4. 拖动小红点，查看元素是否能被圈选，同时查看圈选相关数据是否被准确设置
 
+如果发现不能正常圈选， [请先根据这篇文档自行排查](../../faq/faq-circle.md#3-sao-miao-quan-xuan-er-wei-ma-dan-shi-wu-fa-zheng-chang-quan-xuan)，如仍有问题，请联系技术支持。
+
 
 
