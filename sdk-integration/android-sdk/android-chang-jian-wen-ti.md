@@ -150,5 +150,27 @@ android {
 
 
 
+## APP 内嵌 H5 页面常见问题
+
+### H5 页面需要集成 SDK 么？
+
+如果您集成原生无埋点 SDK ， 则不需要单独集成 hybrid sdk ，无埋点 sdk 会将 hybrid sdk 自动注入，并且采集点击、浏览、文本输入等事件。
+
+### H5 页面什么情况需要集成 web js sdk ？
+
+如果您的页面，在移动端和网站同时投放，不考虑平台只关注这个页面的数据时，集成 web js sdk 。
+
+此时，由于您集成了 web js sdk ，并且移动端无埋点 sdk 会自动注入 hybrid sdk ，则会发两份数据采集信息，web js sdk 发送一份， hybrid sdk  发送一份。 
+
+如果您单独期望关闭 web js sdk 的数据采集，请将`window.webViewRequestSend`的值为`false`。
+
+### H5 怎么增加自定义事件和变量 ？
+
+[Hybrid SDK 埋点文档。](../hybrid-yong-hu-ji-cheng-wen-dang.md#da-dian-shi-jian-yuan-sheng-sdk-22-kai-shi-zhi-chi)
+
+[Web JS SDK 埋点文档。](../web-js-sdk/web-js-sdk-api.md)
+
+
+
 
 

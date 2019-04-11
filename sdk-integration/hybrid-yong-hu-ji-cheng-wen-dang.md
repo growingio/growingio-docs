@@ -2,17 +2,23 @@
 
 {% hint style="info" %}
 ```
-Hybrid项目只需集成原生SDK即可，原生SDK会自动在WebView加载的页面中注入Hybrid JS SDK。
-如果h5页面已经集成过Web JS SDK，但不想进行Web JS SDK 的采集时，请将
-window.webViewRequestSend的值为false。Hybrid支持基于touch事件实现的点击数据采集,
-如果用户使用了类似Zepto等三方框架，需要采集tap事件时，请在初始化时配置
-window.hybridEnableTouch的值为true。
+Hybrid 项目只需集成原生无埋点 SDK 即可，原生 SDK 会自动在 WebView 加载的页面中注入 Hybrid JS SDK。
+如果 h5 页面已经集成过 Web JS SDK，但不想进行 Web JS SDK 的采集时，请将
+window.webViewRequestSend 的值为 false。Hybrid 支持基于 touch 事件实现的点击数据采集,
+如果用户使用了类似 Zepto 等三方框架，需要采集 tap 事件时，请在初始化时配置
+window.hybridEnableTouch 的值为 true。
 ```
 {% endhint %}
 
 ##  **打点事件（原生 SDK 2.2 开始支持）**
 
-### 1，设置自定义事件和事件级变量（track）
+{% hint style="warning" %}
+注：如果无法进行H5页面与原生应用联调的情况下可手动在head标签中加入以下代码，上线时删除即可
+
+ &lt;script src="https://assets.growingio.com/sdk/hybrid/2.0/gio\_hybrid.min.js"/&gt;
+{% endhint %}
+
+### 1. 设置自定义事件和事件级变量（track）
 
 在添加所需要发送的事件代码之前，需要在打点管理用户界面配置事件以及事件级变量。
 
@@ -34,7 +40,7 @@ gio('track', 'registerSuccess', {'gender':'male', 'age':21});
 gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zhejiang'})
 ```
 
-### 2，设置页面级变量（page.set）
+### 2. 设置页面级变量（page.set）
 
 发送页面级别的维度信息，在添加代码之前必须在打点管理界面上声明页面级变量。
 
@@ -54,7 +60,7 @@ gio('page.set', {'pageName': 'Home Page', 'author': 'Zhang San'});
 gio('page.set', 'author', 'Zhang San');
 ```
 
-### 3,设置转化变量（evar.set）
+### 3. 设置转化变量（evar.set）
 
 发送一个转化信息用于高级归因分析，在添加代码之前必须在打点管理界面上声明转化变量。
 
@@ -74,7 +80,7 @@ gio('evar.set', 'campaignId'，'1234567890');
 gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
 ```
 
-### 4,设置用户级变量（people.set）
+### 4. 设置用户级变量（people.set）
 
 发送用户信息用于用户信息相关分析，在添加代码之前必须在打点管理界面上声明转化变量。
 
@@ -94,7 +100,7 @@ gio('people.set', 'gender', 'male');
 gio('people.set', {'gender':'male', 'age':'25'});
 ```
 
-### 5,设置用户id（hybridSetUserId）
+### 5. 设置用户id（hybridSetUserId）
 
 设置用户id 。
 
@@ -107,25 +113,19 @@ gio('people.set', {'gender':'male', 'age':'25'});
 gio('hybridSetUserId', '1234567890');
 ```
 
-### 6，清除用户id（hybridClearUserId）
+### 6. 清除用户id（hybridClearUserId）
 
 ```javascript
 //调用示例
 gio('hybridClearUserId');
 ```
 
-### 7，设置访问用户变量
+### 7. 设置访问用户变量
 
 ```javascript
 //调用示例
 gio('hybridSetVisitor',{'testkey': 'testValue', 'testNumKey': 2333});
 ```
-
-{% hint style="warning" %}
-注：如果无法进行H5页面与原生应用联调的情况下可手动在head标签中加入以下代码，上线时删除即可
-
- &lt;script src="https://assets.growingio.com/sdk/hybrid/2.0/gio\_hybrid.min.js"&gt;&lt;/script&gt; 
-{% endhint %}
 
 ## 
 
