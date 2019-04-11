@@ -144,7 +144,7 @@ X-Frame-Options: Allow-From http://www.growingio.com
 
 #### 扫描二维码完毕后，点击落地页按钮是否正常唤起了APP呢？如果没有唤起APP， 有以下两种情况：
 
-Android：
+**Android：**
 
 URL Scheme 填写错误， 请检查您的 manifest.xml 文件中 Url Scheme 是否和您官网的应用管理中的一致，示例代码如下：
 
@@ -181,21 +181,19 @@ URL Scheme 填写错误， 请检查您的 manifest.xml 文件中 Url Scheme 是
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-iOS：
+**iOS：**
 
 [请参照文档正确配置 URL Scheme](../sdk-integration/ios-sdk-1/ios-sdk.md#2-she-zhi-url-scheme)，并检查确认和官网中的应用管理中的一致。
 
-#### **如果能够唤起APP，但是看不到小红点，此时可能有以下有三种情况：**
+#### **如果能够唤起APP，但是看不到小红点：**
+
+**Android：**
 
 （1）安卓移动端圈选在小米开发者版本和 MIUI8 稳定版下调不起小红点，是因为这两个系统版本禁止了悬浮框权限，您可以尝试授予 App 的悬浮框权限，或者换台手机圈选。
 
 步骤：安全中心 - 授权管理 - 应用权限管理 - 找到您要设置权限的 App - 找到悬浮框权限 - 进行授权信任。当然也可以换用其他安卓手机进行圈选。
 
-（2）如果您不符合上述情况，请再次检查您的 URL Scheme 是否填写正确。
-
-您的 URL Scheme 查看在官网的 设置 -&gt; 应用管理 中查看。
-
-（3）如果您是使用 Android 应用圈选， 请找开发确认以下事项：
+（2）请找开发确认以下事项：
 
          i.  是否将`<intent-filter/>` 代码块配置在了 “闪屏页面”，并且在短时间内`finish`了这个 Activity ？ 
 
@@ -217,5 +215,7 @@ if (data.getScheme().startsWith("growing.")){
 }
 ```
 
-### 
+**iOS：**
+
+[是否添加了圈选激活代码](../sdk-integration/ios-sdk-1/ios-sdk.md#23-zai-appdelegate-zhong-tian-jia-ji-huo-quan-xuan-de-dai-ma)。
 
