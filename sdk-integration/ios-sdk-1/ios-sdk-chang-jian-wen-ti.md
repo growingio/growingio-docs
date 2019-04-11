@@ -56,7 +56,7 @@
 
     答：如果您的 iOS 项目中集成了 Firebase SDK，请确保使用的 Firebase SDK 版本在 4.8.1 及以上，否则会造成数据采集不到的情况。
 
-13.**关于苹果隐私政策相关事宜的公告**
+**13.关于苹果隐私政策相关事宜的公告**
 
 亲爱的客户：
 
@@ -67,6 +67,14 @@
 【苹果通知：As a reminder, in June the App Store Review Guidelines were updated to require a privacy policy for all new apps and app updates as part of the app review process. Starting October 3, 2018, App Store Connect will require a privacy policy for all new apps and app updates before they can be submitted for distribution on the App Store or through TestFlight external testing. In addition, your app’s privacy policy link or text will only be editable when you submit a new version of your app.（详情可参见：[https://developer.apple.com/news/?id=08312018a）。](https://developer.apple.com/news/?id=08312018a%EF%BC%89%E3%80%82) 】
 
 所以，在此提醒各位开发者：**提交App Store 审核前一定要准备自己的隐私权政策，并在app SafariViewContoller中弹出，否则会无法通过审核哦！如需要专业的法律意见，还请各位开发者小伙伴咨询您的律师或法律顾问哦！**
+
+**13.无法圈选**
+
+请根据[这篇文档](../../faq/faq-circle.md#3-sao-miao-quan-xuan-er-wei-ma-dan-shi-wu-fa-zheng-chang-quan-xuan)自行排查，如果仍有问题，可以联系技术支持。
+
+**14.**[**如何查看当前 APP SDK 版本**](../android-sdk/android-chang-jian-wen-ti.md#ru-he-cha-kan-dang-qian-app-sdk-ban-ben)\*\*\*\*
+
+\*\*\*\*
 
 
 

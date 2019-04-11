@@ -121,3 +121,23 @@ android {
 
 如果您未移除，集成 SDK 后 App 将 Crash 。
 
+
+
+## 无法圈选
+
+请根据[这篇文档](../../faq/faq-circle.md#3-sao-miao-quan-xuan-er-wei-ma-dan-shi-wu-fa-zheng-chang-quan-xuan)自行排查，如果仍有问题，可以联系技术支持。
+
+
+
+## 如何查看当前 APP SDK 版本
+
+有以下多种方式，任选其一。
+
+1. 唤起圈选，点击小红点，能够看到版本号；
+2. 使用 Mobile Debugger ， 点击左侧截图区域的 `i` 图标，能够看到版本号；
+3. 翻阅代码，app 目录层中的 build.gradle 文件中查找；
+4. 查看日志，每条 vst 事件中 `av` 字段描述版本号；
+5. 抓包查看，网络请求中包含。
+
+
+
