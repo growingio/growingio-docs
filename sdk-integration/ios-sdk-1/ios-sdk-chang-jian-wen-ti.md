@@ -74,6 +74,8 @@
 
 **14.**[**如何查看当前 APP SDK 版本**](../android-sdk/android-chang-jian-wen-ti.md#ru-he-cha-kan-dang-qian-app-sdk-ban-ben)\*\*\*\*
 
+**15.**[**为何不建议自定义设备ID**](../android-sdk/android-chang-jian-wen-ti.md#wei-he-bu-jian-yi-zi-ding-yi-she-bei-id)\*\*\*\*
+
 \*\*\*\*
 
 
