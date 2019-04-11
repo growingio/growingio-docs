@@ -215,7 +215,7 @@ if (data.getScheme().startsWith("growing.")){
 }
 ```
 
-**iOS：**
+### iOS：
 
 [是否添加了圈选激活代码](../sdk-integration/ios-sdk-1/ios-sdk.md#23-zai-appdelegate-zhong-tian-jia-ji-huo-quan-xuan-de-dai-ma)。
 
