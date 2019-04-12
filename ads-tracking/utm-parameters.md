@@ -5,7 +5,7 @@
   * [1.2 添加自定义的参数](utm-parameters.md#12)
 * [2. UTM 使用案例](utm-parameters.md#2)
 * [3. 开始构建 UTM](utm-parameters.md#3)
-* [4.小程序投放 UTM 使用](https://growingio.gitbook.io/docs/~/edit/drafts/-LH8-yUMU-sgLDUogqkP/data-analytics/ads-tracking/utm-parameters#set-utm-parameters)
+* [4.小程序投放 UTM 使用](utm-parameters.md#set-utm-parameters)
 
 **注：您在自己的投放链接上添加GrowingIO格式的UTM参数时，请注意保证查询条件格式合法。查询条件格式应该为：**
 

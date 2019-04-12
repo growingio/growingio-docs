@@ -6,8 +6,8 @@
 * [4. 百度原生信息流](channel-config-manual.md#34)
 * [5. Inmobi](channel-config-manual.md#35)
 * [6. 微博超级粉丝通](channel-config-manual.md#36)
-* [7. 腾讯社交广告](https://docs.growingio.com/ads-tracking/channel-config-manual#7-teng-xun-she-jiao-guang-gao-marketing-api)
-
+* [7. 腾讯社交广告](channel-config-manual.md#7-teng-xun-she-jiao-guang-gao-marketing-api)
+* 
 当前已对接精准匹配渠道有：
 
 个推、今日头条、百度原生信息流、多盟、360点睛广告平台、uc（阿里汇川）、优酷、广点通、微信广告平台、爱奇艺、InMobi、小米、网易有道智选、巨掌积分墙、知乎广告平台、美图、陌陌、微博粉丝通、作业帮
