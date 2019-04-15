@@ -8,6 +8,9 @@
   * [2.1 接口](user-property-upload.md#21-jie-kou)
   * [2.2 认证](user-property-upload.md#22-ren-zheng)
   * [2.3 旧版本上传接口](user-property-upload.md#23-jiu-ban-ben-shang-chuan-jie-kou)
+* [既有登录用户ID上传](user-property-upload.md#ji-you-deng-lu-yong-hu-id-shang-chuan)
+  * [3.1 接口](user-property-upload.md#31-jie-kou)
+  * [3.2 认证](user-property-upload.md#32-ren-zheng)
 
 GrowingIO 支持通过离线的方式批量上传**登录用户变量**和**维度分类变量**，配合 SDK 中上传的登录用户 id，可以在不发版的情况下更新用户变量规则。
 
@@ -394,6 +397,98 @@ application/json
 ```java
 public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {
     String message = "ai="+projectKeyId+"&cs="+keyArray;
+    Mac hmac = Mac.getInstance("HmacSHA256");
+    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));
+    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
+    return Hex.encodeHexString(signature);
+}
+```
+
+## 既有登录用户ID上传
+
+含义：客户从登录用户ID的视角认为有一些用户是既有用户，而不是新用户。所有GrowingIO暴露了一个接口来定义某一些登录用户ID为既有用户，并不是新用户。同时，还提供上传登录用户的注册时间，来告诉GrowingIO该用户成为新用户的时间。
+
+### 3.1 接口
+
+{% api-method method="post" host="https://data.growingio.com/{ai}/user/exist" path="" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="ai" type="string" required=true %}
+ 项目 ID
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+ application/json
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Access-Token" type="string" required=true %}
+ 项目公钥 public key
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="auth" type="string" required=true %}
+ 针对数据生成的认证，计算方式与上述类似
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="loginUserId" type="array" required=true %}
+ 登录用户ID字符串数组
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="registerTime" type="number" required=false %}
+ 上传用户注册的时间戳, 可选
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+上传Body的限制规则与上述其他接口一致，内容示例如下：
+
+```javascript
+{
+  "loginUserId": ["abcdef", "bcdefg", ...],
+  "registerTime": 1514764800000
+}
+```
+
+### 3.2 认证
+
+auth的计算需要将`loginUserId`的值拼接成`keyArray，`多条使用`逗号`分隔，如上述示例中的keyArray为`abcdef,bcdefg`。Java代码示例如下：
+
+```java
+/**
+ * projectKeyId: 项目ID
+ * secretKey: 项目私钥
+ * keyArray: loginUserId用逗号拼接的字符串
+*/ 
+public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {
+    String message = "projectId="+projectKeyId+"&loginUserId="+keyArray;
     Mac hmac = Mac.getInstance("HmacSHA256");
     hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));
     byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
