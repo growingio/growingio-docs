@@ -146,6 +146,7 @@
   * [数据安全](faq/faq-privacy.md)
   * [产品使用](faq/chan-pin-shi-yong.md)
   * [数据统计差异](faq/shu-ju-tong-ji-cha-yi.md)
+  * [无效指标清理说明](faq/wu-xiao-zhi-biao-qing-li-shuo-ming.md)
 * [内容贡献者](contributor.md)
 * [帮助文档问题反馈](https://growingio.jinshuju.com/f/YeeZy7)
 
