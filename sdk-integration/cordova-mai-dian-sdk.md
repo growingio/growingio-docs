@@ -520,5 +520,13 @@ GrowingIO.startWithConfiguration(this,new Configuration()
 
 
 
+## 说明
 
+### 1. 不支持 [cordova-plugin-crosswalk-webview](https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview) 插件 
+
+原因：
+
+1. 目前此仓库已经停止维护；
+2. 此插件在安卓高版本手机上兼容不好；
+3. 内部不是 webview 实现，而是 SurfaceView 。
 
