@@ -1,4 +1,4 @@
-# SDK 更新日志
+# SDK 更新日志 - Android, iOS, Web JS
 
 ## 2019年3月29日
 
