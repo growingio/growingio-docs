@@ -52,7 +52,9 @@ GIO广告监测链接信息架构
 
 为保证数据安全，GrowingIO所有的API服务，请求Head中需要携带Token。
 
-Token获取详见：`https://docs.growingio.com/api/authentication.html` 
+Token获取详见：[“GrowingIO接口认证”文档](authentication.md)
+
+
 
 完整的监测链接创建流程见下图： 
 
