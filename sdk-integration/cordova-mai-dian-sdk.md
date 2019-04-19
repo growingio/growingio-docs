@@ -522,7 +522,7 @@ GrowingIO.startWithConfiguration(this,new Configuration()
 
 ## 说明
 
-### 1. 不支持 [cordova-plugin-crosswalk-webview](https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview) 插件 
+### 1. 不支持 cordova-plugin-crosswalk-webview 插件 
 
 原因：
 
