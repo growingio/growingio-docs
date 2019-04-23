@@ -33,6 +33,7 @@
 * [广告监测](ads-tracking/README.md)
   * [推广网站](ads-tracking/web-marketing.md)
   * [推广 App](ads-tracking/app-marketing.md)
+  * [推广微信小程序](ads-tracking/promote-wechat-miniprogram.md)
   * [渠道配置指南](ads-tracking/channel-config-manual.md)
   * [UTM 参数使用指南](ads-tracking/utm-parameters.md)
   * [创建小程序的推广码](ads-tracking/miniprogram-qrcode.md)

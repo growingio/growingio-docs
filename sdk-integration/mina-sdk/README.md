@@ -579,10 +579,10 @@ gio('setPage', properties: object)
 
 ```text
 // 假设初始化后把 gio 对象放在 App 的 globalData 里面
-// 推荐在 Page#onShow 处理这个事件
+// 推荐在 Page#onReady 处理这个事件
 // 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 type
 Page({
-  onShow() {
+  onReady() {
     getApp().globalData.gio('setPage', { 
       pageName: '电影列表页', 
       type: this.data.type
@@ -590,6 +590,10 @@ Page({
   }
 }
 ```
+
+{% hint style="warning" %}
+页面级变量建议不要设在onLoad 和 onShow中 ，否在会在部分情况下不能发送，可能会导致统计有一定的不准确性。
+{% endhint %}
 
 ###  转化变量
 
