@@ -1,5 +1,27 @@
 # SDK 更新日志 - Android, iOS, Web JS
 
+## 2019年4月23日
+
+### Android 2.7.5
+
+新特性：
+
+* 支持 instant run , 方便开发期间提升应用编译速度。
+
+修复bug：
+
+* 修复 Application onCreat 中 new WebView 可能造成的 crash ；
+* 修复 setPageVariable 引起的 fragment 内存泄漏。
+
+### iOS 2.7.5
+
+修复bug：
+
+* 数据库优化；
+* 打点参数规则修；
+* 对信鸽兼容；
+* 修复对于特殊情况下react native page event发不出来的问题。
+
 ## 2019年3月29日
 
 ### Android 2.7.4
