@@ -8,7 +8,7 @@
 
 如果你已经注册 GrowingIO，使用小程序分析功能需要用一个全新的项目，在你的 GrowingIO 项目页面点击右上角项目切换控件，在下拉框点击“**项目管理”**，在弹出的列表中选择“**项目概览**“。在项目概览页面，点击“**新建项目**“来创建一个新项目。在创建好的新项目里，你会看到使用引导，点击“**添加跟踪代码**“即可开始。
 
-![&#x9879;&#x76EE;&#x6982;&#x89C8;](../.gitbook/assets/image%20%28213%29.png)
+![&#x9879;&#x76EE;&#x6982;&#x89C8;](../../.gitbook/assets/image%20%28213%29.png)
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LD4kKkCTHNxUGbu1QWO%2F-LGyRLnN1UW6BL8O3mEr%2F-LGySTNxnseL1EsH7kN8%2Fimage.png?alt=media&token=91d05ea5-95d4-4104-b228-0f1837d5201b)
 
@@ -40,17 +40,17 @@
 
 参照小程序的开发框架，下载相应的SDK，并添加跟踪代码。
 
-* [微信小程序原生框架](wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben.md#wei-xin-xiao-cheng-xu-yuan-sheng-kuang-jia)
-* [微信小程序原生 + 第三方插件](wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben.md#wei-xin-xiao-cheng-xu-yuan-sheng-kuang-jia-di-san-fang-cha-jian)
-* [taro框架](wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben.md#taro-kuang-jia)
-* [Wepy框架](wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben.md#wepy-kuang-jia)
-* [mpvue框架/ uni-app框架](wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben.md#mpvue-kuang-jia-uniapp-kuang-jia)
-* [mpvue + 第三方插件](wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben.md#mpvue-di-san-fang-cha-jian)
-* [Chameleon框架](wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben.md#chameleon-kuang-jia)
+* [微信小程序原生框架](./#wei-xin-xiao-cheng-xu-yuan-sheng-kuang-jia)
+* [微信小程序原生 + 第三方插件](./#wei-xin-xiao-cheng-xu-yuan-sheng-kuang-jia-di-san-fang-cha-jian)
+* [taro框架](./#taro-kuang-jia)
+* [Wepy框架](./#wepy-kuang-jia)
+* [mpvue框架/ uni-app框架](./#mpvue-kuang-jia-uniapp-kuang-jia)
+* [mpvue + 第三方插件](./#mpvue-di-san-fang-cha-jian)
+* [Chameleon框架](./#chameleon-kuang-jia)
 
 #### 微信小程序原生框架
 
-1.下载 gio-minp.js 和配置文件文，把 gio-minp.js 和 gioConfig.js 文件放在 utils 目录下
+1.下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
 
 ```text
 https://assets.growingio.com/sdk/gio-minp.zip
@@ -59,13 +59,13 @@ https://assets.growingio.com/sdk/gio-minp.zip
 2、在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require ("utils/gio-minp.js").default;
+var gio = require ("utils/index.js").default;
 ```
 
 3.在 gioConfig.js 文件中修改配置参数
 
 ```javascript
-module.exports = {
+export default {
 projectId: '你的 GrowingIO 项目ID',//growingio的项目ID，在 sdk 集成页查看
 version: '1.0.0',//小程序版本号，每次发版前请修改
 debug: true, //是否开启调试模式，可以看到采集的数据。默认 false
@@ -86,7 +86,7 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 
 #### 微信小程序原生框架+第三方插件
 
-1.下载 gio-minp.js 和配置文件文，把 gio-minp.js 和 gioConfig.js 文件放在 utils 目录下
+1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
 
 ```text
 https://assets.growingio.com/sdk/gio-minp.zip
@@ -95,14 +95,15 @@ https://assets.growingio.com/sdk/gio-minp.zip
 2、在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require ("utils/gio-minp.js").default;
-// app.js 文件，在文件顶部 （其他代码之前）添加如下代码： const App = global.GioApp
+var gio = require ("utils/index.js").default;
+// app.js 文件，在文件顶部 （其他代码之前）添加如下代码： 
+const App = global.GioApp
 ```
 
 3.在 gioConfig.js 文件中修改配置参数
 
 ```javascript
-module.exports = {
+export default {
 projectId: '你的 GrowingIO 项目ID',//growingio的项目ID，在 sdk 集成页查看
 version: '1.2.3',//小程序版本号，每次发版前请修改
 debug: true, //是否开启调试模式，可以看到采集的数据。默认 false
@@ -128,24 +129,24 @@ const Page = global.GioPage;
 
 #### taro框架
 
-1.下载 gio-minp.js 和配置文件文，把 gio-minp.js 和 gioConfig.js 文件放在 utils 目录下
+1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
 
 ```text
 https://assets.growingio.com/sdk/gio-minp.zip
 ```
 
-2.在根目录 app.tsx 文件的顶部添加跟踪代码
+  2. 在根目录 app.tsx 文件的顶部添加跟踪代码
 
 ```text
 import Taro from '@tarojs/taro'
-const gio = require('./utils/gio-minp.js').default
+const gio = require('./utils/index.js').default
 ```
 
 3.在 gioConfig.js 文件中修改配置参数
 
 ```javascript
 import Taro from '@tarojs/taro';
-module.exports = {
+export default {
 projectId: '你的 GrowingIO 项目ID',//growingio的项目ID，在 sdk 集成页查看
 version: '1.0.0',//小程序版本号，每次发版前请修改
 debug: true, //是否开启调试模式，可以看到采集的数据。默认 false
@@ -164,20 +165,24 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 
 #### wepy框架
 
-1.下载 gio-minp.esm.js和配置文件，把 gio-minp.js 和 gioConfig.js 文件放在微信小程序项目的src -&gt; utils 目录下。（gio-minp.esm.js的代码）
+1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
 
-2.在根目录 app.wpy 文件的顶部添加跟踪代码
+```text
+https://assets.growingio.com/sdk/gio-minp.esm.zip
+```
+
+2. 在根目录 app.wpy 文件的顶部添加跟踪代码
 
 ```text
 import wepy from 'wepy'
 import 'wepy-async-function'
-import gio from './utils/gio-minp'
+import gio from './utils/index'
 ```
 
 3.在 gioConfig.js 文件中修改配置参数
 
 ```javascript
-module.exports = {
+export default {
 projectId: '你的 GrowingIO 项目ID',//growingio的项目ID，在 sdk 集成页查看
 version: '1.2.3',//小程序版本号，每次发版前请修改
 debug: true, //是否开启调试模式，可以看到采集的数据。默认 false
@@ -196,16 +201,16 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 
 #### mpvue框架 / uni-app 框架
 
-1.下载 gio-minp.esm.js和配置文件，把 gio-minp.js 和 gioConfig.js 文件放在微信小程序项目的src -&gt; utils 目录下。（gio-minp.esm.js的代码）
+1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
 
 ```text
-
+https://assets.growingio.com/sdk/gio-minp.esm.zip
 ```
 
 2.在根目录 main.js 文件的顶部添加跟踪代码
 
 ```text
-import gio from './utils/gio-minp'
+import gio from './utils/index'
 import Vue from 'vue'
 import App from './App'
 App.mpType = 'app' 
@@ -215,7 +220,7 @@ App.mpType = 'app'
 
 ```javascript
 import Vue from 'vue';
-module.exports = {
+export default {
 projectId: '你的 GrowingIO 项目ID',//growingio的项目ID，在 sdk 集成页查看
 version: '1.0.0',//小程序版本号，每次发版前请修改
 debug: true, //是否开启调试模式，可以看到采集的数据。默认 false
@@ -237,30 +242,30 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 
 mpvue + 第三方插件 设置代码较为复杂，请点击如下链接进行查看。
 
-{% page-ref page="mina-sdk/mpvue+-di-san-fang-cha-jian-tian-jia-dai-ma.md" %}
+{% page-ref page="../mina-sdk/mpvue+-di-san-fang-cha-jian-tian-jia-dai-ma.md" %}
 
 #### Chameleon框架
 
-1.下载 gio-minp.js 和配置文件文，把 gio-minp.js 和 gioConfig.js 文件放在 utils 目录下
+1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
 
 ```text
 https://assets.growingio.com/sdk/gio-minp.zip
 ```
 
-2.在app目录下 app.cml 文件顶部添加跟踪代码
+2. 在app目录下 app.cml 文件顶部添加跟踪代码
 
 ```text
 import store from '../store/index.js'
 import routerConfig from '../router.config.json';
 import Cml from 'chameleon-runtime'
-import gio from '../utils/gio-minp'
+import gio from '../utils/index'
 ```
 
-3.在 gioConfig.js 文件中修改配置参数
+3. 在 gioConfig.js 文件中修改配置参数
 
 ```text
 import Cml from 'chameleon-runtime';
-module.exports = {
+export default {
 projectId: '你的 GrowingIO 项目ID',//growingio的项目ID，在 sdk 集成页查看
 version: '1.2.3',//小程序版本号
 debug: true, //是否开启调试模式，可以看到采集的数据。默认 false --正常
@@ -281,10 +286,10 @@ cml: Cml //是否使用了chameleon框架, 取值: false | Cml
 
 ### **2、进行SDK的配置设置**
 
-[SDK参数配置，和采集数据相关，示例代码如下](wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben.md#2-jin-hang-sdk-de-pei-zhi-she-zhi)
+[SDK参数配置，和采集数据相关，示例代码如下](./#2-jin-hang-sdk-de-pei-zhi-she-zhi)
 
 ```javascript
-module.exports = {
+export default {
 projectId: '你的 GrowingIO 项目ID',//growingio的项目ID，在 sdk 集成页查看
 version: '1.0.0',//小程序版本号，每次发版前请修改
 debug: true, //是否开启调试模式，可以看到采集的数据。默认 false
@@ -301,7 +306,7 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 }
 ```
 
-[微信用户信息配置](wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben.md#sdk-wei-xin-yong-hu-shu-xing-she-zhi)
+[微信用户信息配置](./#sdk-wei-xin-yong-hu-shu-xing-she-zhi)
 
 **SDK中提供了以下几个参数可以用来进行配置**
 
@@ -327,24 +332,13 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 | :--- | :--- | :--- |
 | followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认false |
 
-小程序项目根目录的 app.js 文件设置参数示例如下：
+在 gioConfig.js 文件中将 followShare 配置如下:
 
-```javascript
-var gio = require("utils/gio-minp.js").default;
-// version 是你的小程序的版本号，发版时请调整
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', followShare: true });
+```text
 ```
-
-对于 mpvue 用户，使用下面这种方式：
-
-```javascript
-import gio from './utils/gio-minp'
-import Vue from 'vue'
-import App from './App'
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue: Vue, version: '1.0', followShare: true });
+followShare: true,     //是否详细跟踪分享数据，开启后可使用分享分析功能。默认false
 ```
-
-#### 
+```
 
 #### getLocation 参数
 
@@ -352,7 +346,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { vue
 
 * 如果您的小程序在打开时就需要获取用户地理信息，就可以将这个参数配置为true。
 * 
-在config文件中将getLocation配置如下
+在 gioConfig.js 文件中将 getLocation 配置如下:
 
 ```text
 ```
@@ -363,7 +357,7 @@ getLocation: {          //是否自动获取用户的地理位置信息, 并设�
 ```
 ```
 
-* 如果您的小程序在用户点击某些按钮时，才触发获取位置，则可以按照配置方式，在触发地理位置上报时，进行[用户位置的补发](mina-sdk/#huo-qu-yong-hu-de-di-li-xin-xi)，从而增强用户地理位置的分析能力。
+* 如果您的小程序在用户点击某些按钮时，才触发获取位置，则可以按照配置方式，在触发地理位置上报时，进行[用户位置的补发](../mina-sdk/#huo-qu-yong-hu-de-di-li-xin-xi)，从而增强用户地理位置的分析能力。
 
 ```javascript
 // 获取用户的地理信息
@@ -386,8 +380,15 @@ forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程�
 
 
 
+在 gioConfig.js 文件中将 forceLogin 配置如下:
+
 ```text
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', forceLogin: true });
+```
+forceLogin: true,      //是否强制要求用户登陆微信获取 openid。默认 false
+```
+```
+
+```text
 ...
 // 当获取到 openid 后，调用以下方法
 gio("identify", openid, unionid);
@@ -400,7 +401,7 @@ gio("identify", openid, unionid);
 
 作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在小程序中，微信用户属性是非常重要的设置，只有完善了微信用户属性信息，微信的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用户微信相关的信息（微信姓名和头像）定位用户。
 
-![&#x5FAE;&#x4FE1;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;](../.gitbook/assets/image%20%28114%29.png)
+![&#x5FAE;&#x4FE1;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;](../../.gitbook/assets/image%20%28114%29.png)
 
 下面是专门针对用户的三个接口。
 
@@ -439,7 +440,7 @@ wx.getUserInfo({
 
 ### \*\*小程序中有**Webview**
 
-采集数据需要额外添加如下代码。目前**Webview的数据采集**目前暂时仅支持采用‘'[**自定义事件和变量**](mina-sdk/#zi-ding-yi-shi-jian-he-bian-liang)“的方式进行采集。
+采集数据需要额外添加如下代码。目前**Webview的数据采集**目前暂时仅支持采用‘'[**自定义事件和变量**](../mina-sdk/#zi-ding-yi-shi-jian-he-bian-liang)“的方式进行采集。
 
 **1、使用如上提供的最新版 SDK**
 
@@ -487,7 +488,7 @@ Page({
 2. 打开开发设置，到服务器域名配置部分
 3. 在`request合法域名`中添加：https://wxapi.growingio.com
 
-![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../.gitbook/assets/image%20%28238%29.png)
+![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../../.gitbook/assets/image%20%28238%29.png)
 
 ### 4、检测数据
 
@@ -608,11 +609,11 @@ GrowingIO 预置了两个小程序的标准自定义事件：分享到群聊或�
 
 **微信小程序分享到好友或群聊信息**
 
-![](../.gitbook/assets/image%20%28101%29.png)
+![](../../.gitbook/assets/image%20%28101%29.png)
 
 **程序错误**
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2821%29.png)
 
 ### 自定义事件配置
 
