@@ -61,6 +61,10 @@ public void onCustomClick(View view){
 
 ## SDK 编译时性能和消耗时间
 
+{% hint style="success" %}
+**SDK 2.7.5** **正式支持 instant Run， 不需要配置 gioenable 变量，请升级 SDK。**
+{% endhint %}
+
 GrowingIO Android SDK 的编译时耗时取决于您的项目大小，我们的原理是字节码插桩\(使用Transform API\)。  
 从clean项目， 执行assembleDebug， 如果添加了GrowingIO的SDK， 会大约增加50%的时间， 如果执行assembleRelease， 添加GrowingIO SDK 大约会增加30%的时间。   
 可以看出GrowingIO确实会影响您的编译时长，尤其是在项目比较大的情况。  
@@ -90,8 +94,8 @@ android {
 **上线时，一定要将 gradle.properties 文件中的 gioenable 改为 true 。否则我们将无法采集数据。**
 {% endhint %}
 
-{% hint style="info" %}
-SDK 暂时不支持 Instant Run , 请开发者开发期间配置 `gioenable = false` ，即可使用 Instant Run。
+{% hint style="danger" %}
+SDK 2.7.4 以下版本不支持 Instant Run , 请开发者开发期间配置 `gioenable = false` ，即可使用 Instant Run。
 {% endhint %}
 
 
