@@ -24,7 +24,7 @@ npm install  imports-loader --save-dev
 * **第三步：创建一个新文件 /src/utils/vue.js 文件，内容如下：**
 
 ```javascript
-mport Vue from 'imports-loader?global=>undefined,Page=>GioPage,App=>GioApp,Component=>GioComponent!mpvue'
+import Vue from 'imports-loader?global=>undefined,Page=>GioPage,App=>GioApp,Component=>GioComponent!mpvue'
 export default Vue
 ```
 
