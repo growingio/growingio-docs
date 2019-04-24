@@ -6,7 +6,7 @@
 {% tab title="mpvue + 第三方插件" %}
 如果您的mpvue框架的小程序中使用了**第三方插件**，使用下面这种方式：
 
-1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
+1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
 https://assets.growingio.com/sdk/gio-minp.esm.zip

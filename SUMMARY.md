@@ -58,7 +58,6 @@
     * [IOS SDK 常见问题](sdk-integration/ios-sdk-1/ios-sdk-chang-jian-wen-ti.md)
   * [微信小程序 SDK \(SDK 2.0版本）](sdk-integration/wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben/README.md)
     * [mpvue+第三方插件 添加代码 for 2.0 SDK](sdk-integration/wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben/mpvue+-di-san-fang-cha-jian-tian-jia-dai-ma-for-2.0-sdk.md)
-    * [mpvue+第三方插件 添加代码 for SDK 2.0](sdk-integration/wei-xin-xiao-cheng-xu-sdk-sdk-2.0-ban-ben/mpvue+-di-san-fang-cha-jian-tian-jia-dai-ma-for-sdk-2.0.md)
   * [SDK 更新日志 - 小程序](sdk-integration/sdk-geng-xin-ri-zhi-xiao-cheng-xu.md)
   * [微信小游戏 SDK](sdk-integration/xiao-you-xi-sdk.md)
   * [微信内嵌页 SDK \(beta\)](sdk-integration/wei-xin-nei-qian-ye-sdk.md)

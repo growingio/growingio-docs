@@ -50,7 +50,7 @@
 
 #### 微信小程序原生框架
 
-1.下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
+1.下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
 https://assets.growingio.com/sdk/gio-minp.zip
@@ -86,13 +86,13 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 
 #### 微信小程序原生框架+第三方插件
 
-1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
+1.下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
 https://assets.growingio.com/sdk/gio-minp.zip
 ```
 
-2、在根目录 app.js文件的顶部添加跟踪代码
+2.在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
 var gio = require ("utils/index.js").default;
@@ -129,7 +129,7 @@ const Page = global.GioPage;
 
 #### taro框架
 
-1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
+1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
 https://assets.growingio.com/sdk/gio-minp.zip
@@ -165,7 +165,7 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 
 #### wepy框架
 
-1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
+1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
 https://assets.growingio.com/sdk/gio-minp.esm.zip
@@ -201,7 +201,7 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 
 #### mpvue框架 / uni-app 框架
 
-1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
+1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
 https://assets.growingio.com/sdk/gio-minp.esm.zip
@@ -246,7 +246,7 @@ mpvue + 第三方插件 设置代码较为复杂，请点击如下链接进行�
 
 #### Chameleon框架
 
-1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: src &gt; utils 目录\)
+1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
 https://assets.growingio.com/sdk/gio-minp.zip
