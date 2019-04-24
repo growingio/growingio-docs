@@ -158,13 +158,112 @@
 
 为了便于分析，我们将访问来源进行了归类：直接访问，搜索引擎，社交媒体，外部链接四大部分。
 
-**直接访问：** 可能是用户直接在浏览器中输入了一个域名或使用书签进行访问； 也有可能是 a.从邮件中点击链接访问网站取决于电子邮件的提供商/程序）； b.从 Microsoft Office 或 PDF 文件中点击链接访问网站； c.通过点击由原 url 生成的短链接访问网站； d.通过 App 点击链接访问网站（比如今日头条、微博中的链接）（对微信做过识别，故此场景不适用微信）； e.通过点击一个 https 类型的 url 访问一个 http 类型的 url（比如如果点击 https://example.com/1 转到 http://example.com/2, 对于 example.com/2 的分析会认为是直接访问）； f.部分浏览器（特别是移动端浏览器）会把搜索跳转当成直接访问；
+为便于分析使用，我们将访问来源进行了以下归类：直接访问、搜索引擎、社交媒体、视频媒体、新闻媒体、外部链接，六大分类。
 
-**搜索引擎：** www.baidu.com，m.baidu.com，bzclk.baidu.com，so.com, sogou.com, bing.com, youdao.com，zhongsou.com，google.xx.xx，sm.cn，yahoo.com。
+**直接访问**
 
-**社交媒体：** weibo.com，t.cn, weibo.cn，zhihu.com，linkedin.com，renren.com，facebook.com，twitter.com，mp.weixin.qq.com 等。 由于目前微信已经作为一个较重要的访问来源，所以 GrowingIO 目前专门针对微信环境做了判定：如果 PC 网页或 H5 的访问是发生在 wechat 环境中，也会被归入社交媒体，而根据不同的微信后置参数，进一步区分访问来源，详情请看访问来源中微信来源的维度解释。
+a.用户直接在浏览器中输入了一个域名或使用书签进行访问;
 
-**外部链接：** 除了社交媒体，搜索引擎和直接访问之外的来源。
+b.从邮件中点击链接访问网站取决于电子邮件的提供商/程序）；
+
+c.从 Microsoft Office 或 PDF 文件中点击链接访问网站；
+
+d.通过点击由原 url 生成的短链接访问网站； 
+
+e.通过 App 点击链接访问网站（比如今日头条、微博中的链接）（对微信做过识别，故此场景不适用微信）； 
+
+f.通过点击一个 https 类型的 url 访问一个 http 类型的 url（比如如果点击 https://example.com/1 转到 http://example.com/2, 对于 example.com/2 的分析会认为是直接访问）；
+
+ g.部分浏览器（特别是移动端浏览器）会把搜索跳转当成直接访问。
+
+**搜索引擎**
+
+| **域名** | 来源方 |
+| :--- | :--- |
+| google.xx.xx | Google |
+| yahoo.com | 雅虎 |
+| bing.com | 必应 |
+|  www.baidu.com、m.baidu.com、bzclk.baidu.com | 百度 |
+| so.com | 360 搜索 |
+| sogou.com | 搜狗 |
+| sm.cn | 神马 |
+| youdao.com | 有道 |
+| zhongsou.com | 中搜 |
+
+**社交媒体** 
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x57DF;&#x540D;</th>
+      <th style="text-align:left">&#x6765;&#x6E90;&#x65B9;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">facebook.com</td>
+      <td style="text-align:left">Facebook</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">twitter.com&#x3001;t.co</td>
+      <td style="text-align:left">Twitter</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p>web.telegram.org&#x3001;org.telegram.plus&#x3001;org.telegram.multi&#x3001;</p>
+        <p>org.telegram.messenger</p>
+      </td>
+      <td style="text-align:left">Telegram</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">linkedin.com</td>
+      <td style="text-align:left">Linkedin</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">instagram.com</td>
+      <td style="text-align:left">Instagram</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">weibo.com&#x3001;t.cn&#x3001;weibo.cn</td>
+      <td style="text-align:left">&#x5FAE;&#x535A;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">zhihu.com</td>
+      <td style="text-align:left">&#x77E5;&#x4E4E;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">renren.com</td>
+      <td style="text-align:left">&#x4EBA;&#x4EBA;&#x7F51;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">mp.weixin.qq.com</td>
+      <td style="text-align:left">&#x5FAE;&#x4FE1;</td>
+    </tr>
+  </tbody>
+</table>由于目前微信已经作为一个较重要的访问来源，所以 GrowingIO 目前专门针对微信环境做了判定：如果 PC 网页或 H5 的访问是发生在 wechat 环境中，也会被归入社交媒体，而根据不同的微信后置参数，进一步区分访问来源，详情请看访问来源中微信来源的维度解释。
+
+**视频媒体**
+
+| **域名** | 来源方 |
+| :--- | :--- |
+| www.youtube.com、m.youtube.com | Youtube |
+| www.iqiyi.com | 爱奇艺 |
+| v.qq.com | 腾讯视频 |
+| v.youku.com | 优酷 |
+| www.douyu.com | 斗鱼TV |
+| www.bilibili.com | Bilibili |
+
+**新闻媒体**
+
+| **域名** | 来源方 |
+| :--- | :--- |
+| open.toutiao.com、ad.toutiao.com | 今日头条 |
+| xw.qq.com | 腾讯新闻 |
+| news.sohu.com | 搜狐新闻 |
+
+**外部链接**
+
+除直接访问及以上来源分类之外，其余全部算做外部链接。
 
 #### 3.搜索词（web） <a id="13"></a>
 
