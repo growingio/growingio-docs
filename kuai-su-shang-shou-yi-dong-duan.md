@@ -52,7 +52,7 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 #### 第三步：开始探索使用数据定义和分析工具：  <a id="di-san-bu-kai-shi-tan-suo-shi-yong-shu-ju-ding-yi-he-fen-xi-gong-ju"></a>
 
 * [了解预置维度和指标的定义](data-model/olap-model/predifined-metrics-dimensions.md)；
-* 了解“App圈选 （[文档](data-definition/circle/app/) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)）”；尝试定义几个核心的产品事件，例如“加入购物车”、“浏览详情页”等。
+* 了解“App圈选 （[文档](data-definition/circle/app.md) \| [使用手册](http://growing.cn-bj.ufileos.com/app_circle.pdf)）”；尝试定义几个核心的产品事件，例如“加入购物车”、“浏览详情页”等。
 * 探索几个基础但强大的分析工具
   * [事件分析](data-analytics/event-analysis.md)
   * [漏斗分析](data-analytics/funnel-analysis.md)

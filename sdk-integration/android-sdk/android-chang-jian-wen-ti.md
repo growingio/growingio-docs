@@ -8,7 +8,7 @@ APP进入一个页面之后，无论其中有多少层`Fragment`嵌套，200ms �
 
 确认当前页面方法有三种：
 
-1.[圈选](../../data-definition/circle/app/)，查看圈选页面为当前页面![](https://docs.growingio.com/.gitbook/assets/-LGNxeGABUADKiTWTaEM-LI58sGTg1USJzrnTVZD-LI5KdIC78J2Y7tfdBp2image.png)
+1.[圈选](../../data-definition/circle/app.md)，查看圈选页面为当前页面![](https://docs.growingio.com/.gitbook/assets/-LGNxeGABUADKiTWTaEM-LI58sGTg1USJzrnTVZD-LI5KdIC78J2Y7tfdBp2image.png)
 
 2.[查看日志](android-sdk.md#setdebugmode)，进入页面发送的`page`的`p`为当前的页面
 

@@ -6,7 +6,7 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 在使用电脑端圈选后，请确保已经接入 SDK 2.7.0 及以上，见下面：
 
-{% page-ref page="../../../sdk-integration/app-circle-2.7.0/" %}
+{% page-ref page="../../sdk-integration/app-circle-2.7.0/" %}
 
 ## 一、介绍
 
@@ -36,7 +36,7 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 请确保手机和电脑在同一个 wifi 局域网下。
 {% endhint %}
 
-![](../../../.gitbook/assets/image-6.png)
+![](../../.gitbook/assets/image-6.png)
 
 ### **3.查看基本信息**
 
@@ -46,7 +46,7 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 在这里查找 App 版本信息和 SDK 版本
 
-![](../../../.gitbook/assets/1.png)
+![](../../.gitbook/assets/1.png)
 
 **示意2 :** 
 
@@ -54,17 +54,17 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 【连接正常】
 
-![](../../../.gitbook/assets/2.png)
+![](../../.gitbook/assets/2.png)
 
 【界面停止同步】
 
-![](../../../.gitbook/assets/3-jie-mian-ting-zhi-tong-bu.png)
+![](../../.gitbook/assets/3-jie-mian-ting-zhi-tong-bu.png)
 
 这个情况出现是因为电脑端正处于定义的过程中，此时手机端界面若发生变化，为保证定义内容准确性，会暂停界面的同步。当结束定义后会将手机端的界面再次同步至电脑端。
 
 【设备断开连接】
 
-![](../../../.gitbook/assets/4-she-bei-duan-kai-lian-jie.png)
+![](../../.gitbook/assets/4-she-bei-duan-kai-lian-jie.png)
 
 当手机端退出正在圈选的应用或无线网断开等情况出现时，可能会导致两端设备连接断开，中断圈选。如要继续圈选可重新扫码进行连接。如要结束圈选，可点击右上角“退出圈选”。
 
@@ -86,11 +86,11 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 #### 情况1：多个元素共用一个“点击”动作，常见于商品列表和商品详情等
 
-![](../../../.gitbook/assets/5-qing-kuang-1.png)
+![](../../.gitbook/assets/5-qing-kuang-1.png)
 
 这种情况是因为在这个 app 开发的时候，就把这些元素“绑定”在了一起。你会在右侧的文案中看到“区域”的字样，可以将鼠标移到“所有元素”上面，你将会看到左侧高亮的元素，他们的点击都是一样的，圈哪个元素的数据都是一样的。
 
-![](../../../.gitbook/assets/6-qing-kuang-1.png)
+![](../../.gitbook/assets/6-qing-kuang-1.png)
 
 我们建议你按照分析的需求来定义这样的元素。
 
@@ -98,7 +98,7 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 你想要知道不同咖啡的点击情况，这里的元素有很多种“拿铁咖啡”、“23元”、“图片名称”，因为他们共用一个点击的动作，不管点到哪个元素，点击的数据都是一样的，所以你其实只需要定义任意一个元素都可以拿到这个区域的数据；
 
-![](../../../.gitbook/assets/7-qing-kuang-1-an-li-1.png)
+![](../../.gitbook/assets/7-qing-kuang-1-an-li-1.png)
 
 **案例 2:**
 
@@ -106,27 +106,27 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 接下来在「事件分析」中选择这个指标，通过“元素内容”维度来区分，就像定义元素时右侧下面展示的柱图一样。
 
-![](../../../.gitbook/assets/123456.png)
+![](../../.gitbook/assets/123456.png)
 
 **案例 3:**
 
 你想要知道这个列表不同位置的商品点击情况，也可以用与案例 2 相似的做法，选择这个区域的元素中，带有顺序标示的元素，在这里是外面的框，「不限定顺序」，统计所有位置的总数，然后也是定义“同类元素”，然后在「事件分析」中通过“元素位置”维度来区分。
 
-![](../../../.gitbook/assets/23456.png)
+![](../../.gitbook/assets/23456.png)
 
 #### 情况2：一个元素有独立的“点击”动作，常见于菜单按钮等 ****
 
 这种情况是因为在这个 app 开发的时候，给每个元素单独设置了“点击”的动作，需要单独圈选。
 
-![](../../../.gitbook/assets/10-qing-kuang-2.png)
+![](../../.gitbook/assets/10-qing-kuang-2.png)
 
 如果一个列表里既有区域圈选的元素也有单个圈选的元素，需要单独圈选单个圈选的元素，因为他们的数据是单独统计的。
 
-![](../../../.gitbook/assets/11-qing-kuang-2.png)
+![](../../.gitbook/assets/11-qing-kuang-2.png)
 
 单个元素的圈选也可以像区域圈选一样定义同类元素，统计多个元素之和，在「事件分析」中通过“元素内容”和“元素位置”维度来区分。
 
-![](../../../.gitbook/assets/12-qing-kuang-2.png)
+![](../../.gitbook/assets/12-qing-kuang-2.png)
 
 【对于 H5 元素的圈选方法详见 [https://docs.growingio.com/docs/data-definition/circle/web](https://docs.growingio.com/docs/data-definition/circle/web) 】
 
@@ -144,17 +144,17 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 在这个例子中，「加入购物车」元素在当前商品详情页的点击数据：
 
-![](../../../.gitbook/assets/13-suo-shu-ye-mian.png)
+![](../../.gitbook/assets/13-suo-shu-ye-mian.png)
 
 但是更多情况下，你其实是想统计所有页面中，不管这个按钮在哪些商品详情页，都要统计为「加入购物车」按钮的点击次数，这时就需要把元素所属页面改为所有页面。
 
-![](../../../.gitbook/assets/14-suo-shu-ye-mian-suo-you-ye-mian.png)
+![](../../.gitbook/assets/14-suo-shu-ye-mian-suo-you-ye-mian.png)
 
 ### **3.在热图模式下圈选元素**
 
 可以在圈选时开启热图模式，来查看点击热度：
 
-![](../../../.gitbook/assets/15-re-tu.png)
+![](../../.gitbook/assets/15-re-tu.png)
 
 ## 四、圈选页面
 
@@ -164,7 +164,7 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 你可以定义你关心的元素页面，以此来统计这些页面被浏览的次数。
 
-![](../../../.gitbook/assets/19-yuan-sheng-ye-mian.png)
+![](../../.gitbook/assets/19-yuan-sheng-ye-mian.png)
 
 ### **2.H5 页面**
 

@@ -290,7 +290,7 @@ GrowingIO 可以统计原生应用中的 H5 页面和 H5 做成的应用。
 
 * 原生应用中的 H5 页面，以及嵌在应用中的 H5，
 
-  请参考 [iOS/Android圈选指南](app/)​
+  请参考 [iOS/Android圈选指南](app.md)​
 
 * 用 H5 做的应用请参考 [web圈选指南](web.md)​
 
