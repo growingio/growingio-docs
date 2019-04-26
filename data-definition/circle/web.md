@@ -210,7 +210,7 @@ GrowingIO 互联网金融解决方案落地页 **https://www.growingio.com**​*
 
 GrowingIO 提供支持 web 圈选的 Chrome 扩展程序，点击以下链接下载最新版扩展程序：
 
-插件下载地址 [https://s.growingio.com/5EoKZl](https://s.growingio.com/5EoKZl)  
+插件（最新版）下载地址 [https://s.growingio.com/5EoKZl](https://s.growingio.com/5EoKZl)  
   
 插件安装使用文档 [https://s.growingio.com/2Z4mBB](https://s.growingio.com/2Z4mBB)
 
