@@ -56,9 +56,9 @@ Notice：进入项目管理页面需要管理员权限，请您联系您公司�
 
 1. 在您的Xcode客户端中勾选如下功能
 
-![](../.gitbook/assets/image%20%28145%29.png)
+![](../.gitbook/assets/image%20%28149%29.png)
 
-![](../.gitbook/assets/image%20%28100%29.png)
+![](../.gitbook/assets/image%20%28104%29.png)
 
 2.添加GIO域名到xcode
 

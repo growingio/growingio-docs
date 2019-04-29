@@ -19,7 +19,7 @@
 2. 按照上述建议在GrowingIO生成相应的推广链接；
 3. 将生成的连接直接填入下图的 _**小程序路径**_ 中，然后选择好展示方式，点击“确定”。
 
-![&#x516C;&#x4F17;&#x53F7;&#x56FE;&#x6587;&#x7D20;&#x6750;&#x63D2;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;](https://growingio.atlassian.net/wiki/download/thumbnails/755992175/image2019-2-11_9-7-8.png?version=1&modificationDate=1549847231603&cacheVersion=1&api=v2&width=371&height=250)
+![&#x516C;&#x4F17;&#x53F7;&#x56FE;&#x6587;&#x7D20;&#x6750;&#x63D2;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;](../.gitbook/assets/image%20%2861%29.png)
 
 常见问题：
 
@@ -49,17 +49,17 @@
 
 1.在微信广告计划页面，**推广目标**中，选择 “推广品牌活动” 或者 “推广我的门店”；**广告位**中，选择 “朋友圈信息流”
 
-![](https://growingio.atlassian.net/wiki/download/thumbnails/833847345/image2019-2-20_15-57-22.png?version=1&modificationDate=1550649444659&cacheVersion=1&api=v2&width=840&height=400)
+![](../.gitbook/assets/image%20%2880%29.png)
 
 2.在微信广告页面，新功能模块，选择 “小程序落地页”
 
-![](https://growingio.atlassian.net/wiki/download/thumbnails/833847345/image2019-2-20_15-57-40.png?version=1&modificationDate=1550649463142&cacheVersion=1&api=v2&width=784&height=400)
+![](../.gitbook/assets/image%20%28164%29.png)
 
 3.进入创意设置，选择 "常规广告" 样式或 “卡片广告” 样式；当选用 “卡片广告” 样式时，卡片类型选择 “基础式卡片” ，点击跳转选择 “微信小程序” ； 当选用 “常规广告” 样式时，文字链跳转选择 “微信小程序” 。
 
-![](https://growingio.atlassian.net/wiki/download/thumbnails/833847345/image2019-2-20_15-57-59.png?version=1&modificationDate=1550649482439&cacheVersion=1&api=v2&width=886&height=400)
+![](../.gitbook/assets/image%20%2877%29.png)
 
-![](https://growingio.atlassian.net/wiki/download/thumbnails/833847345/image2019-2-20_16-2-28.png?version=1&modificationDate=1550649751555&cacheVersion=1&api=v2&width=952&height=400)
+![](../.gitbook/assets/image%20%2841%29.png)
 
 4.绑定广告投放的小程序及具体页面
 
@@ -67,11 +67,11 @@
 
 4.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](https://growingio.atlassian.net/wiki/download/thumbnails/833847345/image2019-2-20_16-3-14.png?version=1&modificationDate=1550649797313&cacheVersion=1&api=v2&width=880&height=400)
+![](../.gitbook/assets/image%20%28211%29.png)
 
 5.完成小程序设置，点击下一步，进入预览
 
-![](https://growingio.atlassian.net/wiki/download/thumbnails/833847345/image2019-2-20_16-6-8.png?version=1&modificationDate=1550649971269&cacheVersion=1&api=v2&width=803&height=400)
+![](../.gitbook/assets/image%20%28262%29.png)
 
 6.确认无误后，即可以提交审核了。
 
