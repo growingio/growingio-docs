@@ -53,7 +53,7 @@
 
 2.在微信广告页面，新功能模块，选择 “小程序落地页”
 
-![](../.gitbook/assets/image%20%28164%29.png)
+![](../.gitbook/assets/image%20%28165%29.png)
 
 3.进入创意设置，选择 "常规广告" 样式或 “卡片广告” 样式；当选用 “卡片广告” 样式时，卡片类型选择 “基础式卡片” ，点击跳转选择 “微信小程序” ； 当选用 “常规广告” 样式时，文字链跳转选择 “微信小程序” 。
 
@@ -67,11 +67,11 @@
 
 4.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](../.gitbook/assets/image%20%28211%29.png)
+![](../.gitbook/assets/image%20%28213%29.png)
 
 5.完成小程序设置，点击下一步，进入预览
 
-![](../.gitbook/assets/image%20%28262%29.png)
+![](../.gitbook/assets/image%20%28266%29.png)
 
 6.确认无误后，即可以提交审核了。
 
@@ -92,9 +92,9 @@
 
 投放填写操作：
 
-步骤1.在微信广告计划页面，**推广目标**中，必须选择 “推广品牌活动” 或者 “推广我的商品”；**广告位**中，必须选择 “公众号文章底部” ”
+步骤1.在微信广告计划页面，**推广目标**中，必须选择 “推广品牌活动” 或者 “推广我的商品”；**广告位**中，必须选择 “公众号文章底部” 
 
-![](https://growingio.atlassian.net/wiki/download/thumbnails/833847345/image2019-2-20_15-57-22.png?version=1&modificationDate=1550649444659&cacheVersion=1&api=v2&width=840&height=400)
+![](../.gitbook/assets/image%20%28209%29.png)
 
 步骤2.在创意页面，绑定广告投放的小程序及具体页面
 
@@ -102,7 +102,7 @@
 
 步骤2.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](https://growingio.atlassian.net/wiki/download/thumbnails/833847345/image2019-2-20_16-32-2.png?version=1&modificationDate=1550651526862&cacheVersion=1&api=v2&width=583&height=400)
+![](../.gitbook/assets/image%20%28255%29.png)
 
 #### 2.3 小程序广告 <a id="wechat-ads-other-miniprograms"></a>
 
@@ -123,7 +123,7 @@
 
 步骤1.在微信广告计划页面，**推广目标**中，必须选择 “推广品牌活动” 或者 “推广我的商品”；**广告位**中，选择 “小程序广告” ；
 
-![](https://growingio.atlassian.net/wiki/download/thumbnails/833847345/image2019-2-20_15-57-22.png?version=1&modificationDate=1550649444659&cacheVersion=1&api=v2&width=840&height=400)
+![](../.gitbook/assets/image%20%28254%29.png)
 
 步骤2.在创意页面，绑定广告投放的小程序及具体页面
 
@@ -131,7 +131,7 @@
 
 步骤2.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](https://growingio.atlassian.net/wiki/download/thumbnails/833847345/image2019-2-20_16-48-17.png?version=1&modificationDate=1550652501622&cacheVersion=1&api=v2&width=519&height=400)
+![](../.gitbook/assets/image%20%28139%29.png)
 
 ### 三、小程序换量 <a id="exchange-from-other-miniprograms"></a>
 

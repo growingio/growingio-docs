@@ -119,7 +119,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小游戏的 AppID', { ver
 根据微信最新的用户地理位置获取的规则，GrowingIO 小游戏SDK 默认不会在小游戏启动时获取用户的坐标信息。 
 
 * 如果您的小游戏在打开时就需要获取用户地理信息，就可以将这个参数配置为true。
-* 如果您的小游戏在用户点击某些按钮时，才触发获取位置，则可以按照配置方式，进行[用户位置的补发](mina-sdk/#huo-qu-yong-hu-de-di-li-xin-xi)，从而增强用户地理位置的分析能力。
+* 如果您的小游戏在用户点击某些按钮时，才触发获取位置，则可以按照配置方式，进行[用户位置的补发](wei-xin-xiao-cheng-xu-sdk/mina-sdk/#huo-qu-yong-hu-de-di-li-xin-xi)，从而增强用户地理位置的分析能力。
 
 | 参数 | 值 | 解释 |
 | :--- | :--- | :--- |
@@ -149,7 +149,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 2. 打开开发设置，到服务器域名配置部分
 3. 在request合法域名中添加：https://wxapi.growingio.com
 
-![](../.gitbook/assets/image%20%28148%29.png)
+![](../.gitbook/assets/image%20%28149%29.png)
 
 ### 4、检测数据 <a id="jian-ce-shu-ju"></a>
 

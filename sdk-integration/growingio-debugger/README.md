@@ -120,7 +120,7 @@ imp（元素浏览数据）数据量级过大，影响Mobile Debugger性能，Mo
 3. 打开微信，进入集成了小程序SDK的小程序或内嵌页SDK的内嵌页应用中。
 4. 等待5秒左右，可以看到用户显示在页面中。
 
-在功能页面上，会展示目前进入实时数据验证实时传输数据的微信应用用户，以及部分用户微信信息、设备、操作系统的信息。但是部分信息的展示，例如用户微信名称、头像、国家、省份、城市，需要在SDK中设置微信用户属性设置。详情请见[小程序SDK 微信用户属性设置](../mina-sdk/#sdk-wei-xin-yong-hu-shu-xing-she-zhi)或者[微信内嵌页微信用户信息设置](../wei-xin-nei-qian-ye-sdk.md#she-zhi-wei-xin-yong-hu-xin-xi)。
+在功能页面上，会展示目前进入实时数据验证实时传输数据的微信应用用户，以及部分用户微信信息、设备、操作系统的信息。但是部分信息的展示，例如用户微信名称、头像、国家、省份、城市，需要在SDK中设置微信用户属性设置。详情请见[小程序SDK 微信用户属性设置](../wei-xin-xiao-cheng-xu-sdk/mina-sdk/#sdk-wei-xin-yong-hu-shu-xing-she-zhi)或者[微信内嵌页微信用户信息设置](../wei-xin-nei-qian-ye-sdk.md#she-zhi-wei-xin-yong-hu-xin-xi)。
 
 ![](../../.gitbook/assets/fanfan1.png)
 
