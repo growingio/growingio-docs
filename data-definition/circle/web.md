@@ -208,11 +208,13 @@ GrowingIO 互联网金融解决方案落地页 **https://www.growingio.com**​*
 
 ### 1.3 插件圈选
 
-GrowingIO 提供支持 web 圈选的 Chrome 扩展程序，点击以下链接下载最新版扩展程序：
+GrowingIO 提供支持 web 圈选的 Chrome 扩展程序，推荐使用 Chrome网上应用店 一键安装，点击以下链接下载最新版扩展程序：
 
-插件（最新版）下载地址 [https://s.growingio.com/5EoKZl](https://s.growingio.com/5EoKZl)  
+Chrome网上应用店一键安装（自动更新）：[https://chrome.google.com/webstore/detail/growingio-web%E5%9C%88%E9%80%89/iapmppbkobkiijkhndbnkncfaklmbhck](https://chrome.google.com/webstore/detail/growingio-web%E5%9C%88%E9%80%89/iapmppbkobkiijkhndbnkncfaklmbhck?authuser=3)
+
+插件（最新版）手动下载地址： [https://s.growingio.com/5EoKZl](https://s.growingio.com/5EoKZl)  
   
-插件安装使用文档 [https://s.growingio.com/2Z4mBB](https://s.growingio.com/2Z4mBB)
+插件手动安装和使用文档： [https://s.growingio.com/2Z4mBB](https://s.growingio.com/2Z4mBB)
 
 安装成功后，直接在 Chrome 浏览器中打开网站 url ，登录你的账号，圈选页面和元素的方式与上面相同。
 

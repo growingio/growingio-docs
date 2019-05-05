@@ -20,6 +20,10 @@ GrowingIO Debugger是GrowingIO推出的调试 SDK所发送数据的工具。在G
 
 GrowingIO Web Debugger 是基于Chrome浏览器的一个插件，用户需要按照标准Chrome浏览器插件的步骤和方式来按照。具体的步骤如下：
 
+Chrome网上应用店一键安装（自动更新）：[https://chrome.google.com/webstore/detail/growingio-web-debugger/dppgbjgcmniofikknglpdinggofoiddj](https://chrome.google.com/webstore/detail/growingio-web-debugger/dppgbjgcmniofikknglpdinggofoiddj)
+
+推荐使用一键安装，可以跳过以下第1至第3步，直接进入第4步。
+
 1、下载 [growingio\_web\_debugger.zip](http://assets.growingio.com/growingio_web_debugger.zip) 到本地磁盘，并完成解压缩到一个目录下。
 
 ![](https://docs.growingio.com/.gitbook/assets/webdebuggerinstall2.png)
