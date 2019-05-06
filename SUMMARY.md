@@ -56,7 +56,6 @@
     * [IOS SDK 1.X旧版本升级指导](sdk-integration/ios-sdk-1/ios-sdk-1.x-jiu-ban-ben-sheng-ji-zhi-dao.md)
     * [IOS埋点SDK](sdk-integration/ios-sdk-1/mai-dian-sdk-ji-cheng.md)
     * [IOS SDK 常见问题](sdk-integration/ios-sdk-1/ios-sdk-chang-jian-wen-ti.md)
-  * [SDK 更新日志 - 小程序](sdk-integration/wei-xin-xiao-cheng-xu-sdk/sdk-geng-xin-ri-zhi-xiao-cheng-xu.md)
   * [微信小游戏 SDK](sdk-integration/xiao-you-xi-sdk.md)
   * [微信内嵌页 SDK \(beta\)](sdk-integration/wei-xin-nei-qian-ye-sdk.md)
   * [微信小程序 SDK](sdk-integration/wei-xin-xiao-cheng-xu-sdk/README.md)
