@@ -71,7 +71,7 @@
 
 5.完成小程序设置，点击下一步，进入预览
 
-![](../.gitbook/assets/image%20%28266%29.png)
+![](../.gitbook/assets/image%20%28268%29.png)
 
 6.确认无误后，即可以提交审核了。
 
@@ -102,7 +102,7 @@
 
 步骤2.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](../.gitbook/assets/image%20%28255%29.png)
+![](../.gitbook/assets/image%20%28257%29.png)
 
 #### 2.3 小程序广告 <a id="wechat-ads-other-miniprograms"></a>
 
@@ -123,7 +123,7 @@
 
 步骤1.在微信广告计划页面，**推广目标**中，必须选择 “推广品牌活动” 或者 “推广我的商品”；**广告位**中，选择 “小程序广告” ；
 
-![](../.gitbook/assets/image%20%28254%29.png)
+![](../.gitbook/assets/image%20%28256%29.png)
 
 步骤2.在创意页面，绑定广告投放的小程序及具体页面
 

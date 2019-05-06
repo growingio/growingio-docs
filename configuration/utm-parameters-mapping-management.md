@@ -36,7 +36,7 @@ Step3：点击“新建 UTM 映射” 按钮，在弹框中，填写需要映射
 
 **注：会严格匹配映射参数，对大小写敏感，需要确保填写的映射参数是和投放时一样的。**
 
-![&#x586B;&#x5199;&#x6620;&#x5C04;&#x53C2;&#x6570;](../.gitbook/assets/image%20%28227%29.png)
+![&#x586B;&#x5199;&#x6620;&#x5C04;&#x53C2;&#x6570;](../.gitbook/assets/image%20%28228%29.png)
 
 默认提供5个统计参数，utm\_source, utm\_campaign, utm\_medium, utm\_content, utm\_term；UTM适用含义和参数值如下:
 

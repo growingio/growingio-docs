@@ -70,7 +70,7 @@ f.输入联调设备进行联调
 
 g.联调成功后，启用转化状态
 
-![](../.gitbook/assets/image%20%28265%29.png)
+![](../.gitbook/assets/image%20%28267%29.png)
 
 ![](../.gitbook/assets/image%20%2862%29.png)
 
@@ -155,7 +155,7 @@ g.联调成功后，启用转化状态
 
 获取方式如下：
 
-![](../.gitbook/assets/image%20%28250%29.png)
+![](../.gitbook/assets/image%20%28252%29.png)
 
 应用标识，请与广点通后台填写的“应用宝ID”或“苹果商店ID”保持一致。
 
