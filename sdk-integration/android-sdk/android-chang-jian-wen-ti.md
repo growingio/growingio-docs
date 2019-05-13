@@ -51,6 +51,20 @@ public void onCustomClick(View view){
 }
 ```
 
+例： `TabHost` 的点击事件采集增加 onClickListener 后可以采集到点击事件
+
+```java
+TabHost.OnTabChangeListener listener = new TabHost.OnTabChangeListener() {
+    public void onTabChanged(String tabId) {
+        // GrowingIO 点击事件采集适配 TabHost 添加代码
+        new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {}
+        }.onClick(mTabHost.getCurrentTabView());
+    }
+}
+```
+
 最后，如果您是在布局文件中在`view`上使用 `onClick` 属性的点击事件，不会被采集，不支持。
 
 {% hint style="danger" %}

@@ -253,7 +253,7 @@ Request:
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | 0523信息流推广 |
-| projectId | String | 项目 id | "GQPDxPNm" |
+| projectId | String | project 项目 UID | "GQPDxPNm" |
 | productIdAndroid | String | 选填,\(iOS Android 至少填一个\),每个移动应用的唯一说明 | com.growingio.package |
 | productIdIos | String | 选填,\(iOS Android 至少填一个\),仅当链接创建类型为Deeplink及Onelink需要填写 | com.growingio.package |
 | channelId | String | 渠道 id，必填 | gnPNkoWA |

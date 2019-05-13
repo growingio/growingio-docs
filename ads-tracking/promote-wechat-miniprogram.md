@@ -19,7 +19,7 @@
 2. 按照上述建议在GrowingIO生成相应的推广链接；
 3. 将生成的连接直接填入下图的 _**小程序路径**_ 中，然后选择好展示方式，点击“确定”。
 
-![&#x516C;&#x4F17;&#x53F7;&#x56FE;&#x6587;&#x7D20;&#x6750;&#x63D2;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;](../.gitbook/assets/image%20%2861%29.png)
+![&#x516C;&#x4F17;&#x53F7;&#x56FE;&#x6587;&#x7D20;&#x6750;&#x63D2;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;](../.gitbook/assets/image%20%2866%29.png)
 
 常见问题：
 
@@ -49,17 +49,17 @@
 
 1.在微信广告计划页面，**推广目标**中，选择 “推广品牌活动” 或者 “推广我的门店”；**广告位**中，选择 “朋友圈信息流”
 
-![](../.gitbook/assets/image%20%2880%29.png)
+![](../.gitbook/assets/image%20%2886%29.png)
 
 2.在微信广告页面，新功能模块，选择 “小程序落地页”
 
-![](../.gitbook/assets/image%20%28165%29.png)
+![](../.gitbook/assets/image%20%28174%29.png)
 
 3.进入创意设置，选择 "常规广告" 样式或 “卡片广告” 样式；当选用 “卡片广告” 样式时，卡片类型选择 “基础式卡片” ，点击跳转选择 “微信小程序” ； 当选用 “常规广告” 样式时，文字链跳转选择 “微信小程序” 。
 
-![](../.gitbook/assets/image%20%2877%29.png)
+![](../.gitbook/assets/image%20%2883%29.png)
 
-![](../.gitbook/assets/image%20%2841%29.png)
+![](../.gitbook/assets/image%20%2845%29.png)
 
 4.绑定广告投放的小程序及具体页面
 
@@ -67,11 +67,11 @@
 
 4.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](../.gitbook/assets/image%20%28213%29.png)
+![](../.gitbook/assets/image%20%28223%29.png)
 
 5.完成小程序设置，点击下一步，进入预览
 
-![](../.gitbook/assets/image%20%28268%29.png)
+![](../.gitbook/assets/image%20%28282%29.png)
 
 6.确认无误后，即可以提交审核了。
 
@@ -94,7 +94,7 @@
 
 步骤1.在微信广告计划页面，**推广目标**中，必须选择 “推广品牌活动” 或者 “推广我的商品”；**广告位**中，必须选择 “公众号文章底部” 
 
-![](../.gitbook/assets/image%20%28209%29.png)
+![](../.gitbook/assets/image%20%28219%29.png)
 
 步骤2.在创意页面，绑定广告投放的小程序及具体页面
 
@@ -102,7 +102,7 @@
 
 步骤2.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](../.gitbook/assets/image%20%28257%29.png)
+![](../.gitbook/assets/image%20%28270%29.png)
 
 #### 2.3 小程序广告 <a id="wechat-ads-other-miniprograms"></a>
 
@@ -123,7 +123,7 @@
 
 步骤1.在微信广告计划页面，**推广目标**中，必须选择 “推广品牌活动” 或者 “推广我的商品”；**广告位**中，选择 “小程序广告” ；
 
-![](../.gitbook/assets/image%20%28256%29.png)
+![](../.gitbook/assets/image%20%28269%29.png)
 
 步骤2.在创意页面，绑定广告投放的小程序及具体页面
 
@@ -131,7 +131,7 @@
 
 步骤2.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](../.gitbook/assets/image%20%28139%29.png)
+![](../.gitbook/assets/image%20%28147%29.png)
 
 ### 三、小程序换量 <a id="exchange-from-other-miniprograms"></a>
 
