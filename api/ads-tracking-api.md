@@ -258,7 +258,7 @@ Request:
 | productIdIos | String | 选填,\(iOS Android 至少填一个\),仅当链接创建类型为Deeplink及Onelink需要填写 | com.growingio.package |
 | channelId | String | 渠道 id，必填 | gnPNkoWA |
 | campaignIdIos | String | iOS 活动 id 选填 \(iOS Android 必填至少一个\) | gnPNkoWA |
-| campaignIdAndroid | String | ios下载链接 选填 \(iOS Android 必填至少一个\) | La9BwRne |
+| campaignIdAndroid | String | Android活动id 选填 \(iOS Android 必填至少一个\) | La9BwRne |
 | downloadUrlIos | String | ios下载链接 选填 | [http://www.download.com](http://www.download.com/) |
 | downloadUrlAndroid | String | Android下载链接 选填 | [http://www.download.com](http://www.download.com/) |
 | iosParams | String | iOS 唤醒参数 | {"uri":"key1:value1&key2:value2"} |
@@ -356,12 +356,12 @@ Request:
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | 0523信息流推广 |
-| projectId | String | 项目 id | "GQPDxPNm" |
-| productIdAndroid | String | 选填,\(iOS Android 至少填一个\),每个移动应用的唯一说明 | com.growingio.package |
-| productIdIos | String | 选填,\(iOS Android 至少填一个\),仅当链接创建类型为Deeplink及Onelink需要填写 | com.growingio.package |
+| projectId | String | project 项目 UID | "GQPDxPNm" |
+| productIdAndroid | String | 每个移动应用的唯一说明，必填 | com.growingio.package |
+| productIdIos | String | 仅当链接创建类型为Deeplink及Onelink需要填写，必填 | com.growingio.package |
 | channelId | String | 渠道 id，必填 | gnPNkoWA |
-| campaignIdIos | String | iOS 活动 id 选填 \(iOS Android 必填至少一个\) | gnPNkoWA |
-| campaignIdAndroid | String | ios下载链接 选填 \(iOS Android 必填至少一个\) | La9BwRne |
+| campaignIdIos | String | iOS 活动 id 必填 | gnPNkoWA |
+| campaignIdAndroid | String | Android活动id 必填 | La9BwRne |
 | redirectUrl | String | 跳转链接 选填 | [http://www.download.com](http://www.download.com/) |
 
 示例：
@@ -385,7 +385,7 @@ Response: Status Code: 200 OK
 | linkId | String | 监测链接ID | GQPDxPNm |
 | id | String | 资源id | GQPDxPNm |
 | name | String | 链接名称 | 0523信息流推广 |
-| projectId | String | 项目 id | "GQPDxPNm" |
+| projectId | String | project 项目 UID | "GQPDxPNm" |
 | productIdAndroid | String | 每个移动应用的唯一说明 | GQPDxPNm |
 | productNameAndroid | String | Android 产品名称 | Growingio 测试产品 |
 | productIdIos | String | 每个移动应用的唯一说明 | GQPDxPNm |
@@ -473,7 +473,7 @@ Response: Status Code: 200 OK
 | linkId | String | 监测链接ID | GQPDxPNm |
 | id | String | 资源id | GQPDxPNm |
 | name | String | 链接名称 | 0523信息流推广 |
-| projectId | String | 项目 id | "GQPDxPNm" |
+| projectId | String | project 项目 UID | "GQPDxPNm" |
 | productId | String | 每个移动应用的唯一说明 | GQPDxPNm |
 | appId | String | 产品的包名 | "www.gioee.com\_ios |
 | trackingUrl | String | GrowingIO 分配的追踪链接 | [https://gio.ren/o2VQjBL](https://gio.ren/o2VQjBL) |
