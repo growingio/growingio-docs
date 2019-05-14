@@ -6,13 +6,17 @@
 * [2. UTM 使用案例](utm-parameters.md#2)
 * [3. 开始构建 UTM](utm-parameters.md#3)
 * [4.小程序投放 UTM 使用](utm-parameters.md#set-utm-parameters)
+* [5.UTM 参数使用 FAQ](utm-parameters.md#set-utm-parameters-1)
 
 **注：您在自己的投放链接上添加GrowingIO格式的UTM参数时，请注意保证查询条件格式合法。查询条件格式应该为：**
 
 **www.xxxx.com/path?utm\_source=a&utm\_medium=b**
 
-常见的错误的格式有：  
-\* www.xxx.com/path?utm\\_source=a?utm\\_medium=b \* www.xxx.com/path&utm\\_source=a&utm\\_medium=b \* www.xxx.com/path?otherconfig="utm\\_source=a&utm\\_medium=b"
+常见的错误的格式有：
+
+* 使用多个问号：www.xxx.com/path?utm\_source=a?utm\_medium=b 
+* 缺少问号：www.xxx.com/path&utm\_source=a&utm\_medium=b 
+* 使用其他符号：www.xxx.com/path?otherconfig="utm\_source=a&utm\_medium=b"
 
 对于运营人员来说，UTM 是个非常熟悉的东西。例如，通过 UTM 码就可以知道每一篇文章带来的流量和用户。
 
@@ -126,4 +130,18 @@ pages/index/index?utm_source=wechat_articel&utm_content=618Growth
 ```
 
 小程序可监测的UTM参数维度，和网站监测产品是一致的，采用的是目前市面上最常用的定义方式。
+
+### 5.UTM 参数使用 FAQ <a id="set-utm-parameters"></a>
+
+#### UTM 参数中存在多个问号会遇到什么问题？
+
+问号在 HTTP 协议中作为特殊字符，GrowingIO 会根据 "?" 符号来获取查询条件参数，用 “&” 符号分隔查询条件中的参数，用 “=” 分隔参数与具体值。
+
+当网页地址中有多个问号时，默认处理逻辑会从第一个问号开始做参数识别，后续再次出现的问号会作为参数中的信息被识别，影响后续参数信息的识别，从而影响 UTM 各维度的信息统计。在广告投放时需要对网页地址做规范化处理。
+
+#### 
+
+
+
+
 
