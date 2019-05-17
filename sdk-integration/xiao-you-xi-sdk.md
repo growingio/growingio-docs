@@ -86,7 +86,7 @@ var gio = require("utils/gio-ming.js");
 gio('init', '你的 GrowingIO 项目ID', '你的微信小游戏的 AppID', { version: '1.0' });
 ```
 
-![&#x521D;&#x59CB;&#x573A;&#x666F;&#x6587;&#x4EF6;&#x793A;&#x4F8B;](../.gitbook/assets/image%20%2826%29.png)
+![&#x521D;&#x59CB;&#x573A;&#x666F;&#x6587;&#x4EF6;&#x793A;&#x4F8B;](../.gitbook/assets/image%20%2827%29.png)
 
 ### **2、进行SDK的配置设置**
 
@@ -149,7 +149,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 2. 打开开发设置，到服务器域名配置部分
 3. 在request合法域名中添加：https://wxapi.growingio.com
 
-![](../.gitbook/assets/image%20%28158%29.png)
+![](../.gitbook/assets/image%20%28165%29.png)
 
 ### 4、检测数据 <a id="jian-ce-shu-ju"></a>
 
