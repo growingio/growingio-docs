@@ -9,8 +9,8 @@ GitHub Demo ： [https://github.com/growingio/ReactNativeDemo](https://github.co
 ## 支持版本
 
 * 兼容 react native 版本：0.46-0.56
-* 兼容组件 react-navigation 版本：2.7.4及以上
-* 兼容组件 react-native-navigation 版本：1.1.486及以上
+* 兼容组件 react-navigation 版本：^2.7.4
+* 兼容组件 react-native-navigation 版本：^1.1.486
 
 {% hint style="info" %}
 如果没有使用react-navigation或者react-native-navigation作为导航,请仔细阅读 [Page设置API](./#3-page-she-zhi-api)。
