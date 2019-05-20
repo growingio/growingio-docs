@@ -52,7 +52,7 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 填写完成后，GrowingIO 即会根据填写的内容生成一条链接，按照[投放配置指南](promote-wechat-miniprogram.md#growingio-sheng-cheng-de-lian-jie-de-tou-fang-he-she-zhi-zhi-nan)，在微信做相应的配置即可。
 
-![&#x793A;&#x4F8B;&#x5185;&#x5BB9;](../.gitbook/assets/image%20%28294%29.png)
+![&#x793A;&#x4F8B;&#x5185;&#x5BB9;](../.gitbook/assets/image%20%28295%29.png)
 
 #### 管理链接、广告活动和推广渠道
 
@@ -129,11 +129,11 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 4.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](../.gitbook/assets/image%20%28234%29.png)
+![](../.gitbook/assets/image%20%28235%29.png)
 
 5.完成小程序设置，点击下一步，进入预览
 
-![](../.gitbook/assets/image%20%28295%29.png)
+![](../.gitbook/assets/image%20%28296%29.png)
 
 6.确认无误后，即可以提交审核了。
 
@@ -164,7 +164,7 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 步骤2.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](../.gitbook/assets/image%20%28282%29.png)
+![](../.gitbook/assets/image%20%28283%29.png)
 
 #### 2.3 小程序广告 <a id="wechat-ads-other-miniprograms"></a>
 
@@ -185,7 +185,7 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 步骤1.在微信广告计划页面，**推广目标**中，必须选择 “推广品牌活动” 或者 “推广我的商品”；**广告位**中，选择 “小程序广告” ；
 
-![](../.gitbook/assets/image%20%28281%29.png)
+![](../.gitbook/assets/image%20%28282%29.png)
 
 步骤2.在创意页面，绑定广告投放的小程序及具体页面
 

@@ -70,7 +70,7 @@ f.输入联调设备进行联调
 
 g.联调成功后，启用转化状态
 
-![](../.gitbook/assets/image%20%28293%29.png)
+![](../.gitbook/assets/image%20%28294%29.png)
 
 ![](../.gitbook/assets/image%20%2870%29.png)
 
@@ -138,7 +138,7 @@ g.联调成功后，启用转化状态
 
 1、在GIO后台创建Normal—Link链接，目标渠道选择“腾讯社交广告”，然后点击保存
 
-![](../.gitbook/assets/image%20%28239%29.png)
+![](../.gitbook/assets/image%20%28240%29.png)
 
 2、点击保存后进入绑定与授权，
 
@@ -155,7 +155,7 @@ g.联调成功后，启用转化状态
 
 获取方式如下：
 
-![](../.gitbook/assets/image%20%28277%29.png)
+![](../.gitbook/assets/image%20%28278%29.png)
 
 应用标识，请与广点通后台填写的“应用宝ID”或“苹果商店ID”保持一致。
 
