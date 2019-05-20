@@ -1,12 +1,10 @@
 # Android SDK 常见问题
 
-## GrowingIO 对于页面的定义
+## 无埋点数据采集问题
 
-**Android 常见的应用场景是一个`Activity`中嵌套多个`Fragment`，那么我们是怎么定义页面的呢？**
+### 1. GrowingIO 对于页面的定义
 
-APP进入一个页面之后，无论其中有多少层`Fragment`嵌套，200ms 内最后一个初始化完成的`Fragment`即认为当前的页面。在用户可见的界面上，有事件操作的归因都会这个`Fragment`上。您在埋点的时候一定要确认当前的页面，并在当前的页面埋点是最稳定可靠的。
-
-确认当前页面方法有三种：
+**确认当前页面方法有三种：**
 
 1.[圈选](../../data-definition/circle/app.md)，查看圈选页面为当前页面![](https://docs.growingio.com/.gitbook/assets/-LGNxeGABUADKiTWTaEM-LI58sGTg1USJzrnTVZD-LI5KdIC78J2Y7tfdBp2image.png)
 
@@ -16,7 +14,7 @@ APP进入一个页面之后，无论其中有多少层`Fragment`嵌套，200ms �
 
 
 
-## 点击事件采集逻辑
+### 2. 点击事件采集逻辑
 
 设置以下点击事件的控件会被采集点击事件，如果您自定义了点击事件，不在下方列举之内，将无法采集点击事件，影响数据分析。
 
@@ -73,7 +71,42 @@ TabHost.OnTabChangeListener listener = new TabHost.OnTabChangeListener() {
 
 
 
-## SDK 编译时性能和消耗时间
+### 3. 如何查看当前 APP SDK 版本
+
+有以下多种方式，任选其一。
+
+1. 唤起圈选，点击小红点，能够看到版本号；
+2. 使用 Mobile Debugger ， 点击左侧截图区域的 `i` 图标，能够看到版本号；
+3. 翻阅代码，app 目录层中的 build.gradle 文件中查找；
+4. 查看日志，每条 vst 事件中 `av` 字段描述版本号；
+5. 抓包查看，网络请求中包含。
+
+
+
+### 4. 为何不建议自定义设备ID
+
+我们强烈不建议您自行定义设备ID有以下几个方面：
+
+1. 我们采集的设备 ID 为了能够唯一标识一台设备信息，如果您进行自定义，有可能用户卸载重新安装应用，设备 ID 会不一致，造成老用户被识别成新用户；
+2. 如果您未曾定义过设备ID，并且已经集成SDK并且发版过，则新旧设备 ID 不兼容，老用户被认为成新用户，导致新用户数量暴增；
+
+
+
+## 埋点 API 使用问题
+
+### 1. 自定义页面变量事件发送失败
+
+此问题常发生在 `Activity` 中包含多个 `Fragment` 的页面中。
+
+* 首先需要确认当前页面发送的页面浏览事件是哪个 `Fragment` ，您可以[参照这三种方式确认当前的页面浏览事件](android-chang-jian-wen-ti.md#1-growingio-dui-yu-ye-mian-de-ding-yi)。
+* 如果此 `Fragment` 不是您业务上认为的页面，可以使用 `ignoreFragment` 不认为此 Fragment 可以作为页面浏览事件发送。
+* 注意：`setPageVariable` 接口参数中的 Activity 或者 Fragment **必须为当前页面浏览事件页面**，即可成功发送自定义页面事件。
+
+
+
+## SDK 性能问题
+
+### 1. SDK 编译时性能和消耗时间
 
 {% hint style="success" %}
 **SDK 2.7.5** **正式支持 instant Run， 不需要配置 gioenable 变量，请升级 SDK。**
@@ -114,6 +147,12 @@ SDK 2.7.4 以下版本不支持 Instant Run , 请开发者开发期间配置 `gi
 
 
 
+## 圈选问题
+
+### 1. 无法圈选
+
+请根据[这篇文档](../../faq/faq-circle.md#3-sao-miao-quan-xuan-er-wei-ma-dan-shi-wu-fa-zheng-chang-quan-xuan)自行排查，如果仍有问题，可以联系技术支持。
+
 ## 使用 Jack 注意
 
 依据[官网说明](https://developer.android.com/studio/write/java8-support#migrate)，SDK不支持 Jack 编译器，请确认移除 jackOptions 代码块。
@@ -138,33 +177,6 @@ android {
 ```
 
 如果您未移除，集成 SDK 后 App 将 Crash 。
-
-
-
-## 无法圈选
-
-请根据[这篇文档](../../faq/faq-circle.md#3-sao-miao-quan-xuan-er-wei-ma-dan-shi-wu-fa-zheng-chang-quan-xuan)自行排查，如果仍有问题，可以联系技术支持。
-
-
-
-## 如何查看当前 APP SDK 版本
-
-有以下多种方式，任选其一。
-
-1. 唤起圈选，点击小红点，能够看到版本号；
-2. 使用 Mobile Debugger ， 点击左侧截图区域的 `i` 图标，能够看到版本号；
-3. 翻阅代码，app 目录层中的 build.gradle 文件中查找；
-4. 查看日志，每条 vst 事件中 `av` 字段描述版本号；
-5. 抓包查看，网络请求中包含。
-
-
-
-## 为何不建议自定义设备ID
-
-我们强烈不建议您自行定义设备ID有以下几个方面：
-
-1. 我们采集的设备 ID 为了能够唯一标识一台设备信息，如果您进行自定义，有可能用户卸载重新安装应用，设备 ID 会不一致，造成老用户被识别成新用户；
-2. 如果您未曾定义过设备ID，并且已经集成SDK并且发版过，则新旧设备 ID 不兼容，老用户被认为成新用户，导致新用户数量暴增；
 
 
 
