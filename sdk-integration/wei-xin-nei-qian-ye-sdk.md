@@ -65,7 +65,7 @@ GrowingIO默认不会把 hashtag 识别成页面 URL 的一部分。对于使用
 
 ```text
 //如果内嵌页存在微信App_id，建议您填写相应的微信App_id,如果没有，就不用填写
-gio('init', '你的项目ID'[,'微信App_id'], {'setImp':'false', hashtag: true });
+gio('init', '你的项目ID'[,'微信App_id'], { setImp:false, hashtag: true });
 ```
 
 ### SDK 微信用户ID 和 用户属性 <a id="sdk-wei-xin-yong-hu-shu-xing-she-zhi"></a>
