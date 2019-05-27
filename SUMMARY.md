@@ -34,7 +34,7 @@
 * [广告监测](ads-tracking/README.md)
   * [推广网站](ads-tracking/web-marketing.md)
   * [推广 App](ads-tracking/app-marketing.md)
-  * [推广微信小程序](ads-tracking/promote-wechat-miniprogram.md)
+  * [推广微信小程序 （beta）](ads-tracking/promote-wechat-miniprogram.md)
   * [渠道配置指南](ads-tracking/channel-config-manual.md)
   * [创建小程序的推广码](ads-tracking/miniprogram-qrcode.md)
   * [默认的渠道来源跟踪](ads-tracking/default-channel-tracking.md)
