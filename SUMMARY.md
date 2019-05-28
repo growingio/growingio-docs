@@ -119,6 +119,7 @@
   * [小程序事件和变量](data-definition/mina.md)
   * [数据管理\(beta\)](data-definition/shu-ju-guan-li-beta/README.md)
     * [新版数据管理功能灰度说明](data-definition/shu-ju-guan-li-beta/xin-ban-shu-ju-guan-li-gong-neng-hui-du-shuo-ming.md)
+    * [无埋点事件管理\(beta\)](data-definition/shu-ju-guan-li-beta/wu-mai-dian-shi-jian-guan-li-beta.md)
 * [系统配置](configuration/README.md)
   * [组织管理](configuration/organizations-management.md)
   * [项目管理](configuration/project-configuration.md)
