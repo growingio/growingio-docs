@@ -117,6 +117,8 @@
     * [埋点事件级变量](data-definition/custom-event/event-variable.md)
     * [转化变量](data-definition/custom-event/convert-variable.md)
   * [小程序事件和变量](data-definition/mina.md)
+  * [数据管理\(beta\)](data-definition/shu-ju-guan-li-beta/README.md)
+    * [新版数据管理功能灰度说明](data-definition/shu-ju-guan-li-beta/xin-ban-shu-ju-guan-li-gong-neng-hui-du-shuo-ming.md)
 * [系统配置](configuration/README.md)
   * [组织管理](configuration/organizations-management.md)
   * [项目管理](configuration/project-configuration.md)
