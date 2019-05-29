@@ -32,7 +32,6 @@
   * [业务场景](dashboard/templates.md)
 * [GIO 小程序看数助手](xiao-cheng-xu-kan-shu-zhu-shou.md)
 * [广告监测](ads-tracking/README.md)
-  * [推广小程序（微信）](ads-tracking/untitled/promote-wechat-miniprogram.md)
   * [创建监测链接](ads-tracking/untitled/README.md)
     * [推广 App](ads-tracking/untitled/tui-guang-app.md)
     * [推广网页](ads-tracking/untitled/tui-guang-wang-ye.md)
