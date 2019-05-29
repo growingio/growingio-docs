@@ -66,8 +66,8 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 
 #### 第四步：进行获客推广管理配置
 
-* [配置推广参数](ads-tracking/utm-parameters.md#set-utm-parameters)
-* [使用创建二维码功能](ads-tracking/miniprogram-qrcode.md)
+* [配置推广参数](ads-tracking/xiang-guan-zhi-shi/utm-parameters.md#set-utm-parameters)
+* [使用创建二维码功能](ads-tracking/xiang-guan-zhi-shi/miniprogram-qrcode.md)
 
 ### 进阶使用
 

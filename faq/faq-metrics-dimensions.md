@@ -100,7 +100,7 @@ GrowingIO 使用 IP 地址来判断用户来自的城市或者地区。城市或
 #### 2.4 监控付费推广（渠道来源）的 UTM，对应到维度这里是哪些，怎样使用？ <a id="4&#x76D1;&#x63A7;&#x4ED8;&#x8D39;&#x63A8;&#x5E7F;&#xFF08;&#x6E20;&#x9053;&#x6765;&#x6E90;&#xFF09;&#x7684;utm&#xFF0C;&#x5BF9;&#x5E94;&#x5230;&#x7EF4;&#x5EA6;&#x8FD9;&#x91CC;&#x662F;&#x54EA;&#x4E9B;&#xFF0C;&#x600E;&#x6837;&#x4F7F;&#x7528;&#xFF1F;"></a>
 
 **相关维度：**  
-UTM 参数现在有，广告来源（utm\_source），广告媒介（utm\_medium ），广告关键字（utm\_term ），广告内容（utm\_content ）。您可以参考[如下文章](../ads-tracking/utm-parameters.md)去配置 UTM 渠道追踪。我们建议你可以使用[广告监测](../ads-tracking/)功能。
+UTM 参数现在有，广告来源（utm\_source），广告媒介（utm\_medium ），广告关键字（utm\_term ），广告内容（utm\_content ）。您可以参考[如下文章](../ads-tracking/xiang-guan-zhi-shi/utm-parameters.md)去配置 UTM 渠道追踪。我们建议你可以使用[广告监测](../ads-tracking/)功能。
 
 **使用场景：**  
 UTM 广告系列参数对着陆页面的 URL 进行标注，可以区别衡量各种营销渠道所带来的访客价值。在这里渠道归因采取的是非直接访问的最后点击模型。 比如，访客于 9:30 访问网站。我们进行渠道归因时，会统计在 10:00 点开始，回溯 30 天时间，其最后一次通过外站（非直接流量）进来时的 UTM 参数，关键词和 refer URL。举个例子，访客 A 通过百度推广进入网站，然后通过新浪的 banner 再次进入网站，最后一次通过直接输入 URL 进入网站完成购买，我们会认为这次转化由新浪 banner 贡献。

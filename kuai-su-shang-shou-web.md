@@ -64,7 +64,7 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 
 #### 第四步：进行获客推广管理配置 <a id="di-si-bu-jin-hang-huo-ke-tui-guang-guan-li-pei-zhi"></a>
 
-* 进行网页推广监测，[使用GrowingIO网页端广告监测功能](ads-tracking/web-marketing.md)，包括长链、短链、二维码等，做到推广获客精细化管理。
+* 进行网页推广监测，[使用GrowingIO网页端广告监测功能]()，包括长链、短链、二维码等，做到推广获客精细化管理。
 
 ### 进阶使用
 

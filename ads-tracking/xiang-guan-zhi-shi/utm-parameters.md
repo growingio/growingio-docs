@@ -97,7 +97,7 @@ UTM 做好了之后，可以做哪些分析呢？我们就可以进行日常的�
 
 如果你有自定义的参数没办法进行调整，你可以使用UTM映射功能进行参数映射和配置。
 
-{% page-ref page="../configuration/utm-parameters-mapping-management.md" %}
+{% page-ref page="../../configuration/utm-parameters-mapping-management.md" %}
 
 ### 4.小程序投放UTM使用 <a id="set-utm-parameters"></a>
 
