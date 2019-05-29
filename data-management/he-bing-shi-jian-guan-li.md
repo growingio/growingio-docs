@@ -4,6 +4,13 @@ description: 使用 GrowiongIO 的「合并事件」功能将多个事件合并�
 
 # 合并事件管理\(bata\)
 
+* [1. 简介](he-bing-shi-jian-guan-li.md#1-jian-jie)
+* [2. 合并事件功能使用](he-bing-shi-jian-guan-li.md#2-he-bing-shi-jian-gong-neng-shi-yong)
+  * [2.1 创建合并事件](he-bing-shi-jian-guan-li.md#21-chuang-jian-he-bing-shi-jian)
+  * [2.2 管理合并事件](he-bing-shi-jian-guan-li.md#22-guan-li-he-bing-shi-jian)
+* [3. 合并事件计算口径说明](he-bing-shi-jian-guan-li.md#3-he-bing-shi-jian-ji-suan-kou-jing-shuo-ming)
+* [4. 常见问题](he-bing-shi-jian-guan-li.md#4-chang-jian-wen-ti)
+
 ## **1. 简介**
 
 在现实场景中，我们时常会有将多个事件合并成一个事件的需求，如进行跨平台转化分析、多入口转化分析，或是将改版前后的事件合并为一个等，这时我们可以使用 GrowiongIO 的「合并事件」功能将多个事件合并成为一个。常见的使用场景如下：
