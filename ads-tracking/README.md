@@ -6,9 +6,9 @@ GrowingIO 提供一系列功能帮助客户跟踪不同场景推广产品的投�
 
 链接创建及相关数据：
 
-{% page-ref page="untitled/" %}
+{% page-ref page="tracking-create/" %}
 
-{% page-ref page="shu-ju-bao-biao/" %}
+{% page-ref page="data-report/" %}
 
 了解广告监测的相关知识：
 
@@ -16,7 +16,7 @@ GrowingIO 提供一系列功能帮助客户跟踪不同场景推广产品的投�
 
 {% page-ref page="xiang-guan-zhi-shi/miniprogram-qrcode.md" %}
 
-{% page-ref page="xiang-guan-zhi-shi/yi-dong-duan-zhuan-hua-gui-yin.md" %}
+{% page-ref page="xiang-guan-zhi-shi/mobile-conversion-attribution.md" %}
 
 {% page-ref page="xiang-guan-zhi-shi/default-channel-tracking.md" %}
 
