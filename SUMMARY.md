@@ -142,7 +142,7 @@
 * [数据管理\(beta\)](data-management/README.md)
   * [新版数据管理功能灰度说明](data-management/data-management-gray-release.md)
   * [无埋点事件管理\(beta\)](data-management/data-management-elements.md)
-  * [合并事件管理\(bata\)](data-management/he-bing-shi-jian-guan-li.md)
+  * [合并事件管理\(beta\)](data-management/data-management-merged-events.md)
   * [计算指标\(beta\)](data-management/data-management-complex-metrics.md)
 * [系统配置](configuration/README.md)
   * [组织管理](configuration/organizations-management.md)

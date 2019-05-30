@@ -10,7 +10,7 @@
 
 管理合并事件：
 
-{% page-ref page="he-bing-shi-jian-guan-li.md" %}
+{% page-ref page="data-management-merged-events.md" %}
 
 管理计算指标：
 

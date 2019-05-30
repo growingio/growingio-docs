@@ -2,14 +2,14 @@
 description: 使用 GrowiongIO 的「合并事件」功能将多个事件合并成为一个，进行跨平台转化分析与多入口转化分析
 ---
 
-# 合并事件管理\(bata\)
+# 合并事件管理\(beta\)
 
-* [1. 简介](he-bing-shi-jian-guan-li.md#1-jian-jie)
-* [2. 合并事件功能使用](he-bing-shi-jian-guan-li.md#2-he-bing-shi-jian-gong-neng-shi-yong)
-  * [2.1 创建合并事件](he-bing-shi-jian-guan-li.md#21-chuang-jian-he-bing-shi-jian)
-  * [2.2 管理合并事件](he-bing-shi-jian-guan-li.md#22-guan-li-he-bing-shi-jian)
-* [3. 合并事件计算口径说明](he-bing-shi-jian-guan-li.md#3-he-bing-shi-jian-ji-suan-kou-jing-shuo-ming)
-* [4. 常见问题](he-bing-shi-jian-guan-li.md#4-chang-jian-wen-ti)
+* [1. 简介](data-management-merged-events.md#1-jian-jie)
+* [2. 合并事件功能使用](data-management-merged-events.md#2-he-bing-shi-jian-gong-neng-shi-yong)
+  * [2.1 创建合并事件](data-management-merged-events.md#21-chuang-jian-he-bing-shi-jian)
+  * [2.2 管理合并事件](data-management-merged-events.md#22-guan-li-he-bing-shi-jian)
+* [3. 合并事件计算口径说明](data-management-merged-events.md#3-he-bing-shi-jian-ji-suan-kou-jing-shuo-ming)
+* [4. 常见问题](data-management-merged-events.md#4-chang-jian-wen-ti)
 
 ## **1. 简介**
 
