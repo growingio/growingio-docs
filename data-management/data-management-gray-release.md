@@ -51,9 +51,15 @@ GrowingIO 全新「数据管理」功能，在原基础上进行了功能和体�
 
 ## **3. 数据管理功能使用**
 
-数据管理界面功能的完整使用操作说明可以参考数据管理帮助文档。
+数据管理界面功能的完整使用操作说明可以参考[数据管理帮助文档](https://docs.growingio.com/docs/data-management/)。
 
-## **4. 特别说明**
+{% page-ref page="data-management-elements.md" %}
+
+{% page-ref page="data-management-merged-events.md" %}
+
+{% page-ref page="data-management-complex-metrics.md" %}
+
+## **4. 特别说明（重要！）**
 
 本次灰度为完全独立的灰度环境，目标是给用户抢先体验我们全新的产品功能，因此在灰度期间，**您在灰度环境中创建的事件、指标与图表在我们产品正式上线后并不会被保留到我们的正式环境当中，在灰度期间于灰度环境中进行的操作也不会影响您项目内的指标和数据**，您可以放心使用。
 
