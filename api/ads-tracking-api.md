@@ -26,16 +26,16 @@
 
 GIO广告监测链接信息架构
 
+因此，GIO中生成一条监测链接至少需要涵盖以下信息： 
+
 ![](../.gitbook/assets/image%20%28157%29.png)
 
-因此，GIO中生成一条监测链接至少需要涵盖以下信息： 
+### 3.系统校验规则说明 <a id="explaination"></a>
 
 * 项目：项目ID ，即 AI 可在项目管理的项目概览里获得这串ID，也是集成 SDK 时 setAccountId 所用的部分。 
 * 应用：应用ID，推广应用在GIO后台的分配的唯一应用ID。 
 * 推广活动：自定义的一个维度。示例：百度信息流推广，湖南区域推广等。
 * 监测链接：一条链接（或二维码），可跟踪后续的点击，激活等时间。
-
-### 3.系统校验规则说明 <a id="explaination"></a>
 
 #### 3.1 AI 与应用相关： <a id="ai-product"></a>
 
@@ -80,17 +80,19 @@ Token获取详见：[“GrowingIO接口认证”文档](authentication.md)
 
 新建应用请在GIO后台操作，此接口仅提供应用ID的查询。 
 
-GET `https://www.growingio.com/api/v1/projects/{项目编号}/meta/products` 
+GET `https://www.growingio.com/api/v1/projects/:project_id/meta/products` 
+
+
 
 Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | id | String | 产品编号 | gnPNkoWA |
-| name | String | 名字 | 双十一推广 |
-| displayName | String | 对应 app 的 id | LPdgKARN |
+| name | String | 名字 | GrowingIO 测试产品 |
+| displayName | String | 产品显示名称，展示在deeplink页面 | gio |
 | activated | Bool | 是否有效 | true |
-| spn | String | spn | com.hecom.Guanghua |
+| spn | String | spn | www.gioee.com |
 | urlSchema | String | 产品的url schema | 8137d31f4e7b819f |
 | platform | String | 平台 | ios |
 | createdAt | Long | 创建时间 | 1480635903152 |
@@ -126,20 +128,18 @@ Response 示例：
 
 此部分相关接口可以查询已有活动的活动ID或者创建新的活动。 
 
-POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns` 
+POST `https://www.growingio.com/api/v1/projects/:project_id/meta/campaigns` 
 
 Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | name | String | 名字 | 双十一推广 |
-| productId | String | 对应 app 的 id | LPdgKARN |
 
 示例：
 
 ```text
 {
-  "productId":"rREJ88PL",
   "name":"双十一推广"
 }
 ```
@@ -149,7 +149,6 @@ Response: Status Code: 200 OK
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | id | String | 活动 id | gnPNkoWA |
-| productId | String | 对应 app 的 id | LPdgKARN |
 | name | String | 名字 | 双十一推广 |
 
 示例：
@@ -157,12 +156,11 @@ Response: Status Code: 200 OK
 ```text
 {
   "id": "gnPNkoWA",
-  "productId":"rREJ88PL",
   "name":"双十一推广"
 }
 ```
 
-GET `https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns` 
+GET `https://www.growingio.com/api/v1/projects/:project_id/meta/campaigns` 
 
 Response: Status Code: 200 OK
 
@@ -170,7 +168,6 @@ Response: Status Code: 200 OK
 | :--- | :--- | :--- | :--- |
 | id | String | campaign id | gnPNkoWA |
 | name | String | 名字 | 双十一推广 |
-| productId | String | 对应 app 的 id | LPdgKARN |
 
 Response 示例：
 
@@ -178,13 +175,11 @@ Response 示例：
 [
   {
     "id": "gnPNkoWA",
-    "name": "大太阳活动",
-    "productId": "LPdgKARN"
+    "name": "大太阳活动"
   },
   {
     "id": "La9BwRne",
-    "name": "美丽星辰",
-    "productId": "LPdgKARN"
+    "name": "美丽星辰"
   }
 ]
 ```
@@ -193,7 +188,7 @@ Response 示例：
 
 此相关部分API可以进行渠道的ID查询及新建渠道。 
 
-POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels` 
+POST `https://www.growingio.com/api/v1/projects/:project_id/meta/channels` 
 
 Request:
 
@@ -209,7 +204,7 @@ Request:
 }
 ```
 
-GET `https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels` 
+GET `https://www.growingio.com/api/v1/projects/:project_id/meta/channels` 
 
 Response: Status Code: 200 OK
 
@@ -251,16 +246,16 @@ Deeplink链接创建逻辑：
 
 ![](../.gitbook/assets/growingio_tracking_api_3.png)
 
-POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/deeplinks`
+POST `https://www.growingio.com/api/v1/projects/:project_id/meta/deeplinks`
 
 Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | 0523信息流推广 |
-| projectId | String | project 项目 UID | "GQPDxPNm" |
-| productIdAndroid | String | 选填,\(iOS Android 至少填一个\),每个移动应用的唯一说明 | com.growingio.package |
-| productIdIos | String | 选填,\(iOS Android 至少填一个\),仅当链接创建类型为Deeplink及Onelink需要填写 | com.growingio.package |
+| `project_id` | String | 项目 UID | GQPDxPNm |
+| productIdAndroid | String | Android产品ID \(从应用 API获取\) 选填,\(iOS Android 至少填一个\)  | Lj9yBRyD |
+| productIdIos | String | iOS产品ID \(从应用 API获取\) 选填,\(iOS Android 至少填一个\) | GQPDxPNm |
 | channelId | String | 渠道 id，必填 | gnPNkoWA |
 | campaignIdIos | String | iOS 活动 id 选填 \(iOS Android 必填至少一个\) | gnPNkoWA |
 | campaignIdAndroid | String | Android活动id 选填 \(iOS Android 必填至少一个\) | La9BwRne |
@@ -274,13 +269,10 @@ Request:
 ```text
 {
         "name": "ttsss223",
-        "projectId": "GQPDxPNm",
         "productIdIos": "GQPDxPNm",
-        "trackingUrl": "https://gio.ren/d1ev8VE",
-        "downloadUrlIos": "http://www.growingio.com",
-        "urlSchemaIos": "8137d31f4e7b819f",
+        "channelId": "gnPNkoWA",
         "campaignIdIos": "GQPDxPNm",
-        "channelId": "GQPDxPNm"
+        "downloadUrlIos": "http://www.growingio.com"
 }
 ```
 
@@ -291,12 +283,12 @@ Response: Status Code: 200 OK
 | linkId | String | 监测链接ID | GQPDxPNm |
 | id | String | 资源id | GQPDxPNm |
 | name | String | 链接名称 | 0523信息流推广 |
-| productIdAndroid | String | 每个移动应用的唯一说明 | com.growingio.package |
+| productIdAndroid | String | Android 产品ID | Lj9yBRyD |
 | productNameAndroid | String | 应用名称 | Growingio 测试产品 |
-| productIdIos | String | 每个移动应用的唯一说明 | com.growingio.package |
+| productIdIos | String | iOS 产品ID |  |
 | productNameIos | String | 应用名称 | Growingio 测试产品 |
-| channelId | String | 渠道 id，必填 | gnPNkoWA |
-| channelName | String | 目标渠道名称 | Growingio 测试渠道 |
+| channelId | String | 渠道 id | gnPNkoWA |
+| channelName | String | 渠道名称 | Growingio 测试渠道 |
 | campaignIdIos | String | iOS 活动 id | gnPNkoWA |
 | campaignIdAndroid | String | Android 活动 id | La9BwRne |
 | campaignNameIos | String | iOS 应用所属推广活动名称 | Growingio 测试 |
@@ -354,16 +346,16 @@ Onelink链接创建逻辑
 
  ![](../.gitbook/assets/growingio_tracking_api_4.png) 
 
-POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/onelinks`
+POST `https://www.growingio.com/api/v1/projects/:project_id/meta/onelinks`
 
 Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | 0523信息流推广 |
-| projectId | String | project 项目 UID | "GQPDxPNm" |
-| productIdAndroid | String | 每个移动应用的唯一说明，必填 | com.growingio.package |
-| productIdIos | String | 仅当链接创建类型为Deeplink及Onelink需要填写，必填 | com.growingio.package |
+| `project_id` | String | 项目 UID | GQPDxPNm |
+| productIdAndroid | String | Android产品ID, 必填 \(从应用 API获取\) | Lj9yBRyD |
+| productIdIos | String | iOS产品ID, 必填 \(从应用 API获取\) | GQPDxPNm |
 | channelId | String | 渠道 id，必填 | gnPNkoWA |
 | campaignIdIos | String | iOS 活动 id 必填 | gnPNkoWA |
 | campaignIdAndroid | String | Android活动id 必填 | La9BwRne |
@@ -390,17 +382,17 @@ Response: Status Code: 200 OK
 | linkId | String | 监测链接ID | GQPDxPNm |
 | id | String | 资源id | GQPDxPNm |
 | name | String | 链接名称 | 0523信息流推广 |
-| projectId | String | project 项目 UID | "GQPDxPNm" |
-| productIdAndroid | String | 每个移动应用的唯一说明 | GQPDxPNm |
+| projectId | String |  项目 UID | GQPDxPNm |
+| productIdAndroid | String | Android产品ID | GQPDxPNm |
 | productNameAndroid | String | Android 产品名称 | Growingio 测试产品 |
-| productIdIos | String | 每个移动应用的唯一说明 | GQPDxPNm |
+| productIdIos | String | iOS产品ID | GQPDxPNm |
 | productNameIos | String | iOS产品名称 | Growingio 测试产品 |
 | trackingUrl | String | GrowingIO 分配的追踪链接 | [https://gio.ren/o2VQjBL](https://gio.ren/o2VQjBL) |
 | redirectUrl | String | 目标链接 | [http://www.baidu.com](http://www.baidu.com/) |
 | channelId | String | 渠道 id | gnPNkoWA |
-| channelName | String | 目标渠道名称 | Growingio 测试渠道 |
-| campaignIdIos | String | iOS 活动 | gnPNkoWA |
-| campaignIdAndroid | String | Android 活动 | La9BwRne |
+| channelName | String | 渠道名称 | Growingio 测试渠道 |
+| campaignIdIos | String | iOS 活动ID | gnPNkoWA |
+| campaignIdAndroid | String | Android 活动ID | La9BwRne |
 | campaignNameIos | String | iOS 应用所属推广活动名称 | Growingio 测试 |
 | campaignNameAndroid | String | Android 应用所属推广活动名称 | Growingio 测试 |
 | status | String | 状态 | activated |
@@ -447,16 +439,16 @@ Normallink链接创建逻辑：
 
  ![](https://docs.growingio.com/.gitbook/assets/ads_tracking_api_5.png)
 
-POST `https://www.growingio.com/api/v1/projects/{项目编号}/meta/normallinks` 
+POST `https://www.growingio.com/api/v1/projects/:project_id/meta/normallinks` 
 
 Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | 0523信息流推广 |
-| productId | String | 必填 每个移动应用的唯一说明 | com.growingio.package |
+| productId | String | 应用ID, 必填  | GQPDxPNm |
 | channelId | String | 渠道 id，必填 | gnPNkoWA |
-| campaignId | String | 活动 id 选填 \(iOS Android 必填至少一个\) | gnPNkoWA |
+| campaignId | String | 活动 id 必填 | gnPNkoWA |
 | redirectUrl | String | 跳转链接 选填 | [http://www.download.com](http://www.download.com/) |
 
 示例：
@@ -478,15 +470,15 @@ Response: Status Code: 200 OK
 | linkId | String | 监测链接ID | GQPDxPNm |
 | id | String | 资源id | GQPDxPNm |
 | name | String | 链接名称 | 0523信息流推广 |
-| projectId | String | project 项目 UID | "GQPDxPNm" |
-| productId | String | 每个移动应用的唯一说明 | GQPDxPNm |
-| appId | String | 产品的包名 | "www.gioee.com\_ios |
+| projectId | String | 项目 UID | GQPDxPNm |
+| productId | String | 产品ID | GQPDxPNm |
+| appId | String | 产品的包名 | www.gioee.com\_ios |
 | trackingUrl | String | GrowingIO 分配的追踪链接 | [https://gio.ren/o2VQjBL](https://gio.ren/o2VQjBL) |
-| redirectUrl | String | 目标链接 | [http://www.baidu.com](http://www.baidu.com/) |
-| channelId | String | 渠道 id， | gnPNkoWA |
-| channelName | String | 目标渠道名称 | Growingio 测试渠道 |
+| redirectUrl | String | 跳转链接  | [http://www.baidu.com](http://www.baidu.com/) |
+| channelId | String | 渠道 id | gnPNkoWA |
+| channelName | String | 渠道名称 | Growingio 测试渠道 |
 | campaignId | String | 活动 id | gnPNkoWA |
-| campaignName | String | 应用所属推广活动名称 | Growingio 测试 |
+| campaignName | String | 推广活动名称 | Growingio 测试 |
 | status | String | 状态 | activated |
 | creatorId | String | 创建人 id | GQPDxPNm |
 | creatorName | String | 创建人名称 | 张溪梦 |
