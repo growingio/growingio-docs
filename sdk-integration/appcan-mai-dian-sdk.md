@@ -71,7 +71,7 @@ Android AppCan 集成方式与官网默认的无埋点集成方式不一样， �
 </manifest>
 ```
 
-### 3. 初始化 SDK
+### 2. 初始化 SDK
 
 在 `appcan.ready`的时候初始化 GrowingIO，如下：
 
@@ -95,7 +95,7 @@ function initGio() {
 
 ### 1. 获取 URL Scheme 和 ProjectId
 
-在官网创建 iOS  应用后，只需关心整个安装文档中的两个黄色高两块， 其为对应的 URL Scheme 和 accoundId。
+在官网创建 iOS  应用后，只需关心整个安装文档中的两个黄色高两块， 其为对应的 URL Scheme 和 AccoundId。
 
 ### 2. 添加 ProjectId 
 

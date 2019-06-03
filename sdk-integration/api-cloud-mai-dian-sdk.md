@@ -67,9 +67,13 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 ![](../.gitbook/assets/image%20%28315%29.png)
 
-## **5.插件支持的方法**
+## **5.插件API** 
 
-### （1）init\(\)
+### 初始化 
+
+```javascript
+gio.init();
+```
 
        **此接口为Android初始化， 在require后调用，iOS不需要，iOS已自动初始化**建议在require GrowingIO时调用此接口
 
@@ -81,7 +85,33 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
  }
 ```
 
-### （2）track\(event, callback\)
+
+
+### 设置地理位置
+
+```javascript
+gio.setGeoLocation(location);
+```
+
+| 参数名   | 类型 | 是否必填   | 参数描述 |
+| :--- | :--- | :--- | :--- |
+| location | object | 是 | 经纬度 |
+
+调用示例：
+
+```javascript
+var gio = api.require('GrowingIO');  //引用模块
+var param = {"longitude": longitude, "latitude": latitude}
+gio.setGeoLocation(param);
+```
+
+
+
+### 采集自定义事件
+
+```javascript
+gio.track(event, callback);
+```
 
 <table>
   <thead>
@@ -127,7 +157,13 @@ gio.track({
 });
 ```
 
-### （3）setEvar\(conversionVariables, callback\)
+### 
+
+### 设置转化变量
+
+```javascript
+gio.setEvar(conversionVariables,callback);
+```
 
 <table>
   <thead>
@@ -168,7 +204,13 @@ gio.setEvar({
 });
 ```
 
-### （4）setPeopleVariable\(peopleVariables, callback\)
+### 
+
+### 设置用户级变量
+
+```javascript
+gio.setPeopleVariable(peopleVariables,callback);
+```
 
 <table>
   <thead>
@@ -209,7 +251,13 @@ gio.setPeopleVariable({
   });
 ```
 
-### （5）setUserId\(userIdObject, callback\)
+### 
+
+### 关联注册用户
+
+```javascript
+gio.setUserId(userIdObject,callback);
+```
 
 <table>
   <thead>
@@ -250,7 +298,13 @@ var gio = api.require('GrowingIO');  //引用模块
    });
 ```
 
-### （6）clearUserId\(callback\)
+### 
+
+### 解除关注册用户
+
+```javascript
+gio.clearUserId(callback);
+```
 
 <table>
   <thead>
@@ -283,27 +337,66 @@ gio.clearUserId(function(ret, err){
 });
 ```
 
+### 
+
+### 设置访问用户变量
+
+当用户未登录时，定义用户属性变量，也可用于A/B测试上传标签。
+
+```javascript
+gio.setVisitor(visitorVar);
+```
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;</th>
+      <th style="text-align:left">&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x63CF;&#x8FF0;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">visitorVar</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left">&#x662F;</td>
+      <td style="text-align:left">
+        <p>&#x4E0D;&#x53EF;&#x4F7F;&#x7528;&#x5D4C;&#x5957;&#x7684;<code>JSONObject</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5373;&#x4E3A;JSONObject&#x4E2D;&#x4E0D;&#x53EF;&#x4EE5;&#x653E;&#x5165;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray</code>&#xFF1B;</p>
+        <p>key &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;value&#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
+      </td>
+    </tr>
+  </tbody>
+</table>调用示例：
+
+```javascript
+var gio = api.require('GrowingIO');  //引用模块
+gio.setVisitor({"gender":"male","age":21});
+```
+
+
+
 ## **6.常见问题**
 
-### 1，提示无法检测到urlScheme?
+### 1. 提示无法检测到 UrlScheme?
 
  答：\(1\)查看config.xml是否配置正确
 
          \(2\)需要同步代码到云端,云编译生效
 
-### 2，模拟器无法test? 
+### 2. 模拟器无法test? 
 
 答： 只能真机测试
 
-### 3 ，如何查看发送的数据? 
+### 3. 如何查看发送的数据? 
 
 答： 您可以使用GrowingIO官网提供的[mobileDebugger](growingio-debugger/#growingio-mobile-debugger)工具来查看
 
-### 4 ，此模块是否包含IDFA? 
+### 4. 此模块是否包含IDFA? 
 
 答： 包含IDFA, GrowingIO 使用IDFA 来做来源管理激活设备的精确匹配，让你更好的衡量广告效果。
 
-### 5 官网web提示未检测到sdk? 
+### 5. 官网web提示未检测到sdk? 
 
 答: 请使用正式版包来操作几次
 
