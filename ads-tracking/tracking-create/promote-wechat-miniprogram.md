@@ -10,11 +10,11 @@ description: 注：此文档功能目前是灰度版本，如果您是 GrowingIO
 
 1.微信公众号图文中插入小程序推广，例如以下形式：
 
-![](../../.gitbook/assets/image%20%28190%29.png)
+![](../../.gitbook/assets/image%20%28191%29.png)
 
 2. 微信广告中推广，其中包括朋友圈广告、公众号广告、小程序广告等，呈现方式如下：
 
-![](../../.gitbook/assets/image%20%28200%29.png)
+![](../../.gitbook/assets/image%20%28201%29.png)
 
 3. 部分小程序直接跳转换量等。
 
@@ -28,7 +28,7 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 广告监测入口在 导航-&gt;获客分析-&gt;广告监测。
 
-![&#x5BFC;&#x822A;&#x4F4D;&#x7F6E;&#x56FE;&#x793A;](../../.gitbook/assets/image%20%28122%29.png)
+![&#x5BFC;&#x822A;&#x4F4D;&#x7F6E;&#x56FE;&#x793A;](../../.gitbook/assets/image%20%28123%29.png)
 
 #### 新建链接
 
@@ -46,17 +46,17 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 其中点击「推广小程序」，展示的下拉列表中，显示的是项目中集成的小程序应用；
 
-![](../../.gitbook/assets/image%20%28235%29.png)
+![](../../.gitbook/assets/image%20%28236%29.png)
 
 点击落地页路径，展示的是对应的小程序的前几个访问量的页面；如果需要推广的落地页不在列表中，可以直接填写路径地址即可。
 
-![](../../.gitbook/assets/image%20%28216%29.png)
+![](../../.gitbook/assets/image%20%28217%29.png)
 
 推广渠道，系统中预置了几个推广渠道，如果不满足需求，点击「新建渠道」即可；所属推广活动，显示系统中已创建的推广活动，如果没有创建的话，点击「新建活动」即可。
 
 填写完成后，GrowingIO 即会根据填写的内容生成一条链接，按照[投放配置指南](promote-wechat-miniprogram.md#growingio-sheng-cheng-de-lian-jie-de-tou-fang-he-she-zhi-zhi-nan)，在微信做相应的配置即可。
 
-![&#x793A;&#x4F8B;&#x5185;&#x5BB9;](../../.gitbook/assets/image%20%28318%29.png)
+![&#x793A;&#x4F8B;&#x5185;&#x5BB9;](../../.gitbook/assets/image%20%28320%29.png)
 
 #### 管理链接、广告活动和推广渠道
 
@@ -119,7 +119,7 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 2.在微信广告页面，新功能模块，选择 “小程序落地页”
 
-![](../../.gitbook/assets/image%20%28195%29.png)
+![](../../.gitbook/assets/image%20%28196%29.png)
 
 3.进入创意设置，选择 "常规广告" 样式或 “卡片广告” 样式；当选用 “卡片广告” 样式时，卡片类型选择 “基础式卡片” ，点击跳转选择 “微信小程序” ； 当选用 “常规广告” 样式时，文字链跳转选择 “微信小程序” 。
 
@@ -133,11 +133,11 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 4.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](../../.gitbook/assets/image%20%28254%29.png)
+![](../../.gitbook/assets/image%20%28256%29.png)
 
 5.完成小程序设置，点击下一步，进入预览
 
-![](../../.gitbook/assets/image%20%28319%29.png)
+![](../../.gitbook/assets/image%20%28321%29.png)
 
 6.确认无误后，即可以提交审核了。
 
@@ -160,7 +160,7 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 步骤1.在微信广告计划页面，**推广目标**中，必须选择 “推广品牌活动” 或者 “推广我的商品”；**广告位**中，必须选择 “公众号文章底部” 
 
-![](../../.gitbook/assets/image%20%28246%29.png)
+![](../../.gitbook/assets/image%20%28248%29.png)
 
 步骤2.在创意页面，绑定广告投放的小程序及具体页面
 
@@ -168,7 +168,7 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 步骤2.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](../../.gitbook/assets/image%20%28305%29.png)
+![](../../.gitbook/assets/image%20%28307%29.png)
 
 #### 2.3 小程序广告 <a id="wechat-ads-other-miniprograms"></a>
 
@@ -189,7 +189,7 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 步骤1.在微信广告计划页面，**推广目标**中，必须选择 “推广品牌活动” 或者 “推广我的商品”；**广告位**中，选择 “小程序广告” ；
 
-![](../../.gitbook/assets/image%20%28304%29.png)
+![](../../.gitbook/assets/image%20%28306%29.png)
 
 步骤2.在创意页面，绑定广告投放的小程序及具体页面
 
@@ -197,7 +197,7 @@ GrowingIO的小程序推广广告链接，可以支持如上的投放形式。
 
 步骤2.2按照上述建议在GrowingIO生成相应的推广链接；将GrowingIO生成的链接，填入小程序的页面路径中。
 
-![](../../.gitbook/assets/image%20%28166%29.png)
+![](../../.gitbook/assets/image%20%28167%29.png)
 
 ### 三、小程序换量 <a id="exchange-from-other-miniprograms"></a>
 

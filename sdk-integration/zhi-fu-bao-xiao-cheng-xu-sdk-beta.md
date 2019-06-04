@@ -14,7 +14,7 @@ description: 支付宝小程序SDK目前属于灰度内测功能，如有需求�
 
 然后会到达SDK集成页面，**平台**选择支付宝小程序，填写支付宝小程序的应用名称，和支付宝小程序的AppID ,点击“下一步”，即可以到达支付宝小程序SDK接入的页面。
 
-![](../.gitbook/assets/image%20%28218%29.png)
+![](../.gitbook/assets/image%20%28219%29.png)
 
 目前仅支持小程序类应用集成在同一个项目下，暂不支持小程序产品和web\iOS\Android端产品集成在同一项目下。
 
@@ -24,7 +24,7 @@ description: 支付宝小程序SDK目前属于灰度内测功能，如有需求�
 
 选择”支付宝小程序“平台，填写”应用名称“ 和 "AppID"，点击"**下一步**"。
 
-![](../.gitbook/assets/image%20%28131%29.png)
+![](../.gitbook/assets/image%20%28132%29.png)
 
 ### 1、根据支付宝小程序框架选择SDK文件并添加跟踪代码
 
@@ -155,7 +155,7 @@ gio("identify", userid);
 2. 打开小程序详情/设置/开发设置
 3. 配置httpRequest接口请求域名白名单：https://wxapi.growingio.com
 
-![](../.gitbook/assets/image%20%28201%29.png)
+![](../.gitbook/assets/image%20%28202%29.png)
 
 ### 4 SDK支付宝用户属性设置
 
@@ -219,9 +219,9 @@ gio('setUserId', YOUR_USER_ID);
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面，点击右下角“**检测数据”**。请在添加了跟踪代码的支付宝小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
 
-![](../.gitbook/assets/image%20%28281%29.png)
+![](../.gitbook/assets/image%20%28283%29.png)
 
-![](../.gitbook/assets/image%20%28150%29.png)
+![](../.gitbook/assets/image%20%28151%29.png)
 
 
 

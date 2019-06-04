@@ -61,7 +61,7 @@ GrowingIO iOS SDK 2.7.6 包含以下2个组件SDK:
 
 * 添加编译参数，并注意大小写：
 
-![](../../.gitbook/assets/image%20%28212%29.png)
+![](../../.gitbook/assets/image%20%28213%29.png)
 
 ### 2. 设置 URL Scheme
 
@@ -70,7 +70,7 @@ GrowingIO iOS SDK 2.7.6 包含以下2个组件SDK:
 * 添加新产品：登录官网 -&gt; 点击项目选择框  -&gt; 点击“设置”icon -&gt; 点击“新建应用”  -&gt; 选择添加 iOS 应用 -&gt; 填写“应用名称”，点击下一步 -&gt; 在第二段中标黄字体。
 * 现有产品：登录官网  -&gt;   点击“设置”icon  -&gt;  点击“应用管理”  -&gt;  找到对应产品的 URL Scheme
 
-![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%28164%29.png)
+![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%28165%29.png)
 
 ####    2**.2  添加 URL Scheme（growing.xxxxxxxxxxxxxxxx）到项目中，以便唤醒您的程序进行圈选**
 
@@ -345,7 +345,7 @@ iOS SDK 不支持通知展现的事件采集，但是 Android SDK 支持，这�
 
 然后创建事件分析，等候片刻即可看到数据
 
-![&#x521B;&#x5EFA;&#x63A8;&#x9001;&#x4E8B;&#x4EF6;&#x5206;&#x6790;](../../.gitbook/assets/image%20%28290%29.png)
+![&#x521B;&#x5EFA;&#x63A8;&#x9001;&#x4E8B;&#x4EF6;&#x5206;&#x6790;](../../.gitbook/assets/image%20%28292%29.png)
 
 
 
