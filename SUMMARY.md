@@ -35,7 +35,7 @@
   * [创建监测链接](ads-tracking/tracking-create/README.md)
     * [推广 App](ads-tracking/tracking-create/tui-guang-app.md)
     * [推广网页](ads-tracking/tracking-create/tui-guang-wang-ye.md)
-    * [推广小程序（微信）（beta）](ads-tracking/tracking-create/promote-wechat-miniprogram.md)
+    * [推广小程序（微信）](ads-tracking/tracking-create/promote-wechat-miniprogram.md)
   * [数据报表](ads-tracking/data-report/README.md)
     * [应用级数据](ads-tracking/data-report/ying-yong-ji-shu-ju.md)
     * [深度数据分析](ads-tracking/data-report/shen-du-shu-ju-fen-xi.md)
