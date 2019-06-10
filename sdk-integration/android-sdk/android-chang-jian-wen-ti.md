@@ -94,7 +94,7 @@ TabHost.OnTabChangeListener listener = new TabHost.OnTabChangeListener() {
 
 ## 埋点 API 使用问题
 
-### 1. 自定义页面变量事件发送失败
+### 自定义页面变量事件发送失败
 
 此问题常发生在 `Activity` 中包含多个 `Fragment` 的页面中。
 
@@ -144,6 +144,14 @@ android {
 {% hint style="danger" %}
 SDK 2.7.4 以下版本不支持 Instant Run , 请开发者开发期间配置 `gioenable = false` ，即可使用 Instant Run。
 {% endhint %}
+
+
+
+### 2. SDK 数据发送策略
+
+如下图：
+
+![SDK &#x6570;&#x636E;&#x53D1;&#x9001;&#x7B56;&#x7565;](../../.gitbook/assets/image%20%28125%29.png)
 
 
 
