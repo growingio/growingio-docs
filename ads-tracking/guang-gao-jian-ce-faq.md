@@ -2,12 +2,6 @@
 
 ### 产品使用部分
 
-**Normal-Link、One-Link、Deep-link区别是什么？**
-
-* Normal-Link用来统计广告平台的投放（只能投放Android或者IOS其中一个应用）。
-* One-Link适用于落地页的投放（可以一条连接链接监测Android和IOS两个应用的数据）。
-* Deep-Link用来触达用户，点击可以直接唤醒APP。
-
 #### Android手机在自己的应用中使用Deeplink会报错？
 
 目前不支持在Android Web View中打开Deeplink，请根据使用场景调整活动页面。
