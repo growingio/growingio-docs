@@ -18,10 +18,7 @@
 
 9.联调成功
 
-![](https://docs.growingio.com/.gitbook/assets/-LGNxeGABUADKiTWTaEM-LRB7_dSMzjJ1OCU_A6G-LRB9UtvmYRIXwOsZ7gdimage.png)
+![](../../.gitbook/assets/image%20%28259%29.png)
 
 ![](https://docs.growingio.com/.gitbook/assets/-LGNxeGABUADKiTWTaEM-LRB7_dSMzjJ1OCU_A6G-LRB9PkkLaoMJQXZwkPeimage.png)
 
-###  <a id="35"></a>
-
-1. 

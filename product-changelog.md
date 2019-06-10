@@ -8,7 +8,7 @@ description: 我们一直在迭代！
 
 **关键词：微信小程序广告监测** 
 
-![](.gitbook/assets/image%20%28122%29.png)
+![](.gitbook/assets/image%20%28127%29.png)
 
 我们为**小程序的运营和市场，**在以下推广小程序的场景中，使用 GIO 创建微信小程序的推广链接，并查看链接带来的用户流量、转化等数据，更好的掌握微信小程序推广的情况。[查看更多详情](ads-tracking/tracking-create/promote-wechat-miniprogram.md)。
 
@@ -60,7 +60,7 @@ description: 我们一直在迭代！
 
 **关键词：GIO 看数助手 \| 小程序**
 
-![](.gitbook/assets/image%20%28232%29.png)
+![](.gitbook/assets/image%20%28241%29.png)
 
 「GIO看数助手」小程序，随时随地用微信小程序看数据！
 
@@ -70,7 +70,7 @@ description: 我们一直在迭代！
 
 **关键词：分布分析**
 
-![](.gitbook/assets/image%20%28162%29.png)
+![](.gitbook/assets/image%20%28171%29.png)
 
 * **分布分析**
 
@@ -80,7 +80,7 @@ description: 我们一直在迭代！
 
 **关键词：组织管理 \| 解绑手机号与邮箱 \| 看板全屏 \| 看板换行**
 
-![](.gitbook/assets/image%20%2873%29.png)
+![](.gitbook/assets/image%20%2877%29.png)
 
 * **组织管理**
 
@@ -90,7 +90,7 @@ description: 我们一直在迭代！
 
 我们为用户提供了解绑手机号与邮箱功能，帮助用户在更换账号后将原先绑定旧账号的手机号（邮箱）解绑，重新绑定到新的账号；
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](.gitbook/assets/image%20%2812%29.png)
 
 * **看板支持全屏和描述**
 
@@ -104,13 +104,13 @@ description: 我们一直在迭代！
 
 **关键词：官网 \| 实时\| 用户分群 \| 小游戏demo \| 小程序交互式圈选 \| 活动分析**
 
-![](.gitbook/assets/image%20%2873%29.png)
+![](.gitbook/assets/image%20%2877%29.png)
 
 * **官网**
 
 支持海外用户邮箱注册。
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](.gitbook/assets/image%20%2812%29.png)
 
 * **实时**
 
@@ -120,7 +120,7 @@ description: 我们一直在迭代！
 
 我们为**运营**和**产品**优化了用户分群的维度筛选功能，支持按照 like（包含），not like\(不包含）来进行维度值条件的筛选，提高筛选效率。
 
-![](.gitbook/assets/image%20%28173%29.png)
+![](.gitbook/assets/image%20%28182%29.png)
 
 * **小游戏demo**
 
@@ -130,13 +130,13 @@ description: 我们一直在迭代！
 
 **关键词：组织管理 \| 实时**
 
-![](.gitbook/assets/image%20%2873%29.png)
+![](.gitbook/assets/image%20%2877%29.png)
 
 * **组织管理**
 
 我们为**企业级管理用户**设计了组织管理完整功能，支持管理人员查看和管理公司组织在GrowingIO中的项目和成员。并可以查看项目中成员使用GrowingIO的情况。[查看更多详情](configuration/organizations-management.md)。
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](.gitbook/assets/image%20%2812%29.png)
 
 * **实时**
 
@@ -146,7 +146,7 @@ description: 我们一直在迭代！
 
 **关键词：留存魔法师 \| 官网 \| 小程序demo** 
 
-![](.gitbook/assets/image%20%28110%29.png)
+![](.gitbook/assets/image%20%28115%29.png)
 
 * **留存魔法师-支持自定义事件相关性统计**
 
@@ -156,7 +156,7 @@ description: 我们一直在迭代！
 
 加入**“关于我们”**导航菜单，让用户更了解清楚我们。
 
-![](.gitbook/assets/image%20%28173%29.png)
+![](.gitbook/assets/image%20%28182%29.png)
 
 * **小程序demo**
 
@@ -166,7 +166,7 @@ description: 我们一直在迭代！
 
 #### **关键词：小程序用户分群 \| 实时**
 
-![](.gitbook/assets/image%20%28166%29.png)
+![](.gitbook/assets/image%20%28175%29.png)
 
 * **小程序-用户列表**
 
@@ -176,7 +176,7 @@ description: 我们一直在迭代！
 
 我们为**小程序产品和运营**设计了上传OpenID和UnionID列表生成分群的功能，可以帮助产品经理和运营一键查看关注微信用户的行为特征并和其他分群进行行为指标的对比。
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](.gitbook/assets/image%20%2812%29.png)
 
 * **实时**
 
@@ -186,13 +186,13 @@ description: 我们一直在迭代！
 
 #### **关键词：预置看板权限 \| 历史用户上传**
 
-![](.gitbook/assets/image%20%28187%29.png)
+![](.gitbook/assets/image%20%28196%29.png)
 
 * **预置看板权限**
 
 我们为**企业权限管理用户**优化了预置看板的权限设置功能。超级管理员可以设置首页侧边预置看板的可见用户的范围。
 
-![](.gitbook/assets/image%20%28267%29.png)
+![](.gitbook/assets/image%20%28279%29.png)
 
 * **历史注册用户ID以及注册日期支持上传**
 
@@ -202,7 +202,7 @@ description: 我们一直在迭代！
 
 #### **关键词：H5活动分析 \| 实时 \| 小程序分享 \|微信内嵌页 \|用户分群**
 
-![](.gitbook/assets/image%20%28116%29.png)
+![](.gitbook/assets/image%20%28121%29.png)
 
 * **H5活动分析**
 
@@ -212,7 +212,7 @@ description: 我们一直在迭代！
 
 我们为**数据定义人员**设计了更为方便的分析页面属性的功能。在 web 圈选或自定义事件和变量中，可以直接将某个页面的查询条件定义为页面级变量，在分析页面时作为维度属性分析。[点击详情查看更多](data-definition/page-variable/query.md)
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](.gitbook/assets/image%20%2812%29.png)
 
 * **实时**
 
@@ -222,7 +222,7 @@ description: 我们一直在迭代！
 
 我们为**运营和产品**优化了用户分群详情的用户群对比功能，更新后，可以支持对比任意两个分群的核心行为差异，例如：对比购买转化和未转化用户群。[点击详情查看更多](data-analytics/user-segmentation.md#2-4)
 
-![](.gitbook/assets/image%20%28171%29.png)
+![](.gitbook/assets/image%20%28180%29.png)
 
 * **小程序分享分析**
 

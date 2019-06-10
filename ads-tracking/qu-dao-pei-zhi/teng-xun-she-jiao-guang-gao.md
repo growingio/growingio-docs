@@ -10,9 +10,9 @@
 
 3\)GrowingIO会根据用户的广告点击数据与激活数据做归因匹配，并将归因的结果展示在GrowingIO后台数据中。‌
 
-1、在GIO后台创建Normal—Link链接，目标渠道选择“腾讯社交广告”，然后点击保存‌
+1、在GIO后台创建 App 推广链接，目标渠道选择“腾讯社交广告”，然后点击保存‌
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LRQkXUuEuD5xER41iwA%2F-LRQsIRhMYXnE1Tl16NS%2Fimage.png?alt=media&token=15a423f9-19d2-4bf7-bbce-323f0ceacb7c)
+![](../../.gitbook/assets/image%20%28147%29.png)
 
 2、点击保存后进入绑定与授权，‌
 
@@ -22,7 +22,7 @@
 
 3）应用ID：填写您选取应用的对应ID，示例：iOS填写Appstore地址上面的数字。‌
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LGNxeGABUADKiTWTaEM%2F-LRQkXUuEuD5xER41iwA%2F-LRQsGDKGecgxqBZKI0x%2Fimage.png?alt=media&token=4b881975-3848-4366-b686-4108b3b08f09)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 其中，“投放账号”和“投放账号ID”，与广点通后台相对应。‌
 
