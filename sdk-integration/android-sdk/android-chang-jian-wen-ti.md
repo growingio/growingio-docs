@@ -151,7 +151,7 @@ SDK 2.7.4 以下版本不支持 Instant Run , 请开发者开发期间配置 `gi
 
 如下图：
 
-![SDK &#x6570;&#x636E;&#x53D1;&#x9001;&#x7B56;&#x7565;](../../.gitbook/assets/image%20%28130%29.png)
+![Android SDK &#x53D1;&#x9001;&#x6570;&#x636E;&#x7B56;&#x7565;](../../.gitbook/assets/image%20%2896%29.png)
 
 
 
