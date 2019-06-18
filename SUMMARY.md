@@ -18,7 +18,7 @@
   * [留存魔法师](data-analytics/magic-number.md)
   * [活跃用户分析 （线上版本）](data-analytics/huo-yue-yong-hu-fen-xi.md)
   * [活跃用户分析（灰度版本）](data-analytics/user-engagement-analysis.md)
-  * [热图](data-analytics/heatmap/README.md)
+  * [热图分析](data-analytics/heatmap/README.md)
     * [Web 端热图](data-analytics/heatmap/heatmap-web.md)
     * [App 热图](data-analytics/heatmap/heatmap-app.md)
   * [单图](data-analytics/charts.md)

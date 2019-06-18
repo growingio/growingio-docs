@@ -187,7 +187,7 @@ description: 最多用户使用的、强大而灵活的数据分析工具
 
 如勾选时间维度，则默认按时间维度进行排序：
 
-![](../.gitbook/assets/shi-jian%20%282%29.png)
+![](../.gitbook/assets/shi-jian%20%283%29.png)
 
 ### 4.**4 横向柱图**
 
