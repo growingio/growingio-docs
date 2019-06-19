@@ -42,7 +42,7 @@
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="data\_type" type="string" required=true %}
-导出数据类型，系统支持一下数据类型的导出，可选值：  
+导出数据类型，系统支持以下数据类型的导出，可选值：  
   
 \* visit: 访问事件  
 \* page: 页面事件  
