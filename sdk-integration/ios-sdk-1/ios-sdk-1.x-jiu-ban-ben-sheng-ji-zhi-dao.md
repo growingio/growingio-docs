@@ -1,4 +1,4 @@
-# IOS SDK 1.X旧版本升级指导
+# iOS SDK 1.X旧版本升级指导
 
 {% hint style="danger" %}
 #### 升级到2.x SDK前，请务必联系客服协助您完成后台配置的升级！

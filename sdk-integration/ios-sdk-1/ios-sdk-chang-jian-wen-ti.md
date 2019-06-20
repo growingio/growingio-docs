@@ -1,4 +1,4 @@
-# IOS SDK 常见问题
+# iOS SDK 常见问题
 
 #### 1. GrowingIO SDK 无埋点采集原理是什么？
 

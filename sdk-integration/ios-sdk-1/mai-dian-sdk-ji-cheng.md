@@ -5,7 +5,7 @@ description: >-
   原生开发，并且希望自动采集用户的点击事件、页面浏览事件等无埋点事件， 请集成 iOS 无埋点SDK 。
 ---
 
-# IOS埋点SDK
+# iOS埋点SDK
 
 ## 埋点 SDK集成 
 
@@ -19,7 +19,7 @@ description: >-
 
 #### （2）手动集成 SDK 
 
-* 下载 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.7.6.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.7.6.zip)
+* 下载 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.7.7.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.7.7.zip)
 * 解压 iOS SDK 压缩文件
 *  将Growing.h,GrowingCoreKit.framework添加到iOS工程中。
 
