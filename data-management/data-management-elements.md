@@ -2,7 +2,7 @@
 description: 无埋点事件管理功能帮助您对产品内所有通过圈选创建的无埋点事件进行统一的维护与管理
 ---
 
-# 无埋点事件管理\(beta\)
+# 无埋点事件管理
 
 * [1. 简介](data-management-elements.md#1-jian-jie)
 * [2. 无埋点事件管理功能使用](data-management-elements.md#2-wu-mai-dian-shi-jian-guan-li-gong-neng-shi-yong)

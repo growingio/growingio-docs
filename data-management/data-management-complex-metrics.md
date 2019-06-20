@@ -2,7 +2,7 @@
 description: 使用 GrowiongIO 的「计算指标」功能来创建自定义规则的计算指标，来更综合地衡量业务运营情况
 ---
 
-# 计算指标\(beta\)
+# 计算指标
 
 * [1. 简介](data-management-complex-metrics.md#1-jian-jie)
 * [2. 计算指标功能使用](data-management-complex-metrics.md#2-ji-suan-zhi-biao-gong-neng-shi-yong)

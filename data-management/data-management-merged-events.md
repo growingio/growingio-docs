@@ -2,7 +2,7 @@
 description: 使用 GrowiongIO 的「合并事件」功能将多个事件合并成为一个，进行跨平台转化分析与多入口转化分析
 ---
 
-# 合并事件管理\(beta\)
+# 合并事件管理
 
 * [1. 简介](data-management-merged-events.md#1-jian-jie)
 * [2. 合并事件功能使用](data-management-merged-events.md#2-he-bing-shi-jian-gong-neng-shi-yong)

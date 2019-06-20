@@ -2,7 +2,7 @@
 description: 埋点事件管理功能帮助您对产品内所有的埋点事件进行统一的维护与管理
 ---
 
-# 埋点事件管理\(beta\)
+# 埋点事件管理
 
 * [​1. 简介](data-management-variables.md#1-jian-jie)
 * ​2[. 埋点事件管理功能使用​](data-management-variables.md#2-mai-dian-shi-jian-guan-li-gong-neng-shi-yong)
@@ -40,11 +40,7 @@ description: 埋点事件管理功能帮助您对产品内所有的埋点事件�
 
 ![](https://lh3.googleusercontent.com/he6NWLKLOqRiUfMWjWuhVsaSg2OVV8GhYIKC4B_wn8ZKFIZSnml4Nsru7Lr5BwqToYmGwXNUVri3Fp9jKYn2a02Hgtj1r1l_wGN-AhdtNnEV3A0c6S9VPX100VNgW01LcGXEaRH2)
 
-接着将配置细项填入埋点事件配置界面：
-
-![](https://lh4.googleusercontent.com/szp7ktpPZrbAmcJch_071IbPNt9SWUAmwAw9nmyVQamEI9zLP-S7eMl3X8xdDC74Uo5or-hEAOmwnP2rUGLzgFAmt_tW8AZteaBlxSp-z6JCgb4ae-eQw-_8tjNoC7qXzzgDe0Z4)
-
-点击右下角确定按钮，即完成埋点事件的配置。在完成了配置，以及正确的代码实施后。我们即可开始在GrowingIO 使用埋点事件。
+接着将配置细项填入埋点事件配置界面，点击右下角确定按钮，即完成埋点事件的配置。在完成了配置，以及正确的代码实施后。我们即可开始在GrowingIO 使用埋点事件。
 
 埋点事件详细的部署说明请参考[埋点事件实施](https://growingio.gitbook.io/docs/data-definition/custom-event)​。
 
