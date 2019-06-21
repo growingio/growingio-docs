@@ -8,8 +8,8 @@ GitHub Demo ： [https://github.com/growingio/ReactNativeDemo](https://github.co
 
 ## 支持版本
 
-* 兼容 react native 版本：0.46-0.56
-* 兼容组件 react-navigation 版本：^2.7.4
+* 兼容 react native 版本：0.46-0.56、0.59.9
+* 兼容组件 react-navigation 版本：^2.7.4、^3.11.0
 * 兼容组件 react-native-navigation 版本：^1.1.486
 
 {% hint style="info" %}
@@ -29,7 +29,7 @@ npm install --save react-native-autotrack-growingio
 ```
 
 ```bash
-npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
+npm install --save https://github.com/growingio/GIORNHook.git#0.0.6
 ```
 
 #### （2） 配置 `package.json` 文件
@@ -52,7 +52,7 @@ npm install --save https://github.com/growingio/GIORNHook.git#0.0.5
 React  Native 无埋点 SDK 是在 Android 原生 SDK 上的扩展，参照 [Android 无埋点 SDK](../android-sdk/android-sdk.md#ji-cheng-wu-mai-dian-sdk)，集成步骤的 1~5.
 
 {% hint style="danger" %}
-**注意将 SDK 版本号替换成 RN 版本:`RN-autotrack-2.7.6 。`**
+**注意将 SDK 版本号替换成 RN 版本:`RN-autotrack-2.7.7 。`**
 {% endhint %}
 
 集成步骤中，只有版本号不同，适配 RN 与原生混合开发场景。

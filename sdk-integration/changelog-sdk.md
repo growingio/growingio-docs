@@ -1,5 +1,41 @@
 # SDK 更新日志 - Android、iOS、Web JS
 
+## 2019年6月21日
+
+### Android 2.7.7
+
+新特性：
+
+* 适配 ReactNative 0.59.9 版本
+* 适配  react-navigation ^3.11.0
+
+修复bug：
+
+* 修复编译期间用户主项目类文件过多时会触发编译期OOM
+
+优化:
+
+* 用户授予 `READ_PHONE_STATE` 后动态获取 imei 信息， 减少 imei 为空的统计数量。未优化前统计 imei 条件为：应用有权限后下一次冷启动采集。
+
+### iOS 2.7.7
+
+新特性：
+
+* 适配 ReactNative 0.59.9 版本
+* 适配  react-navigation ^3.11.0
+
+修复bug：
+
+* 修复地理位置相关的多线程问题
+* 修复访问用户 ID 可能为 0 的问题
+* 修复首次安装 app 可能会影响 `statusbar`展示方向问题
+* 修复 iOS13`UISearchBar`崩溃问题
+* 修复 hybrid 自定义事件匹配 page 问题
+
+优化：
+
+* 完善对`SDCycleScrollView`的支持
+
 ## 2019年6月4日
 
 ### Android 2.7.6
