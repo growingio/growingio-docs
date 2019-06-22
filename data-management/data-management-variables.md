@@ -38,7 +38,7 @@ description: 埋点事件管理功能帮助您对产品内所有的埋点事件�
 * **标识符：**此事件在代码中的标识，可以为英文、下划线和数字。不允许使用数据开头，且大小写敏感；
 * **事件级变量：**此埋点事件关联的事件级变量；
 
-![](https://lh3.googleusercontent.com/he6NWLKLOqRiUfMWjWuhVsaSg2OVV8GhYIKC4B_wn8ZKFIZSnml4Nsru7Lr5BwqToYmGwXNUVri3Fp9jKYn2a02Hgtj1r1l_wGN-AhdtNnEV3A0c6S9VPX100VNgW01LcGXEaRH2)
+![&#x57CB;&#x70B9;&#x4E8B;&#x4EF6;&#x914D;&#x7F6E;](../.gitbook/assets/wechatimg66.jpeg)
 
 接着将配置细项填入埋点事件配置界面，点击右下角确定按钮，即完成埋点事件的配置。在完成了配置，以及正确的代码实施后。我们即可开始在GrowingIO 使用埋点事件。
 
@@ -50,5 +50,5 @@ description: 埋点事件管理功能帮助您对产品内所有的埋点事件�
 
 点击任一埋点事件，您可以在右侧弹出的事件详情中，查看埋点事件的定义条件与统计趋势，以及修改事件的名称、标识符、描述，或是关联的事件级变量等。另外，您也可以在事件详情当中为事件添加业务标签。
 
-![](https://lh4.googleusercontent.com/VPjtvVhqmdoWcGSNVJzQvH8nWCROsmzJYrY9xJ6flzEcHQCeob25xhR2OODh2aE8WHUL5TTRhkxjHWET8Irlik9Y6YTLzNZYBbDNnjw3eAzVwD5SaC-Xflhq-oUPv-tiowkCPuD9)
+![&#x57CB;&#x70B9;&#x4E8B;&#x4EF6;&#x7BA1;&#x7406;](../.gitbook/assets/wechatimg67.jpeg)
 
