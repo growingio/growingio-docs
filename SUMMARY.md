@@ -143,7 +143,7 @@
     * [转化变量](data-definition/custom-event/convert-variable.md)
   * [小程序事件和变量](data-definition/mina.md)
 * [数据管理](data-management/README.md)
-  * [新版数据管理功能说明](data-management/data-management-gray-release.md)
+  * [新版数据管理功能说明](data-management/data-management-new.md)
   * [无埋点事件管理](data-management/data-management-elements.md)
   * [埋点事件管理](data-management/data-management-variables.md)
   * [变量管理](data-management/bian-liang-guan-li-beta.md)

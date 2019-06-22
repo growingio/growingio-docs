@@ -44,11 +44,11 @@ description: 无埋点事件管理功能帮助您对产品内所有通过圈选�
 
 点击任一无埋点事件所在的行，您可以在右侧弹出的事件详情中，查看无埋点事件的定义条件、统计趋势与事件截图，以及修改事件的定义条件，如页面类型事件的域名、路径，以及元素类型事件的所在页面、元素内容、元素位置等。另外，您也可以在事件详情当中为无埋点事件添加描述说明或是添加业务标签。
 
-![](https://lh4.googleusercontent.com/kr8I2eJrYI7SEpJCxXcB1QneOlOt25XH1i8vV5nQBo8wqPTjy3gTfybr7X5IYw7FEm3u-P00NoHbB-KgsU7VA1CX0dfft-jUmXTWGmCHCC6_oxWnG-2GG2X6RvqLHV6inJ1RdDp9)
+![&#x65E0;&#x57CB;&#x70B9;&#x4E8B;&#x4EF6;&#x7BA1;&#x7406;&#x8BE6;&#x60C5;](../.gitbook/assets/wechatimg63.jpeg)
 
 此外，新圈选的无埋点事件资源权限默认【所有人可见，不可编辑】，所有人都能够看到以及使用该事件，但只有该事件的创建者和项目的超级管理员拥有权限对该事件进行编辑。您可以通过点击【事件详情】-【其他信息】中点击【权限】方框，更改无埋点事件的资源权限。
 
-![](https://lh3.googleusercontent.com/ks-NwurxCRqzvNvg6yqV_2zy3oKUvw6wPdzSgw1Jk4haR8_lPMe-_zDggZHNCZh55UMGBO9ea9k9QbmeQRb3N5YVSJEmJsyd8LnH-RPKm0bO_VeyFHJffYUY98Z_Db5eeT4NxXMK)
+![&#x4E8B;&#x4EF6;&#x5176;&#x4ED6;&#x5C5E;&#x6027;](../.gitbook/assets/wechatimg65.jpeg)
 
 ### 3. 常见问题
 
@@ -60,4 +60,6 @@ description: 无埋点事件管理功能帮助您对产品内所有通过圈选�
 
 在新的数据管理上线后，我们将原先的「复合指标」功能升级为「计算指标」，将原先的「合并指标」功能调整为「合并事件」。新的合并事件与计算指标功能支持使用埋点事件，以及不同类型事件的合并与计算，不再仅限使用无埋点事件。您可以通过进入【数据管理】-【计算指标】与【合并事件】菜单，体验全新的计算指标与合并事件功能。  
 
+
+![](https://lh4.googleusercontent.com/kr8I2eJrYI7SEpJCxXcB1QneOlOt25XH1i8vV5nQBo8wqPTjy3gTfybr7X5IYw7FEm3u-P00NoHbB-KgsU7VA1CX0dfft-jUmXTWGmCHCC6_oxWnG-2GG2X6RvqLHV6inJ1RdDp9)
 

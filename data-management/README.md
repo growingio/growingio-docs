@@ -1,6 +1,6 @@
 # 数据管理
 
-{% page-ref page="data-management-gray-release.md" %}
+{% page-ref page="data-management-new.md" %}
 
 管理圈选创建的无埋点事件：
 
