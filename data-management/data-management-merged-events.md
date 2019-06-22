@@ -30,7 +30,7 @@ description: 使用 GrowiongIO 的「合并事件」功能将多个事件合并�
 
 点击合并事件管理界面左上角【创建合并事件】按钮，开始创建合并事件。
 
-![](https://lh4.googleusercontent.com/zfihcCY_0uPkIN_bxX06PJZueEh3AAC6-Q3SikjWTVotfCpYIFjT2k7YXcUY0rsiJL-6c_Xi6QT3JNyPTdvthBWI1rOr0_v0Ow6Q1-dl-F6yCFObnBGk0xFfvxEVEjhnW9gD5Ls5)
+![&#x5408;&#x5E76;&#x4E8B;&#x4EF6;&#x914D;&#x7F6E;&#x754C;&#x9762;](../.gitbook/assets/wechatimg70.jpeg)
 
 新的合并事件功能支持使用无埋点事件与埋点事件创建合并事件，以及使用跨平台（ex. iOS 注册成功事件与 Android 注册成功事件合并）、跨类型（ex. 埋点事件与无埋点事件合并、无埋点点击事件与无埋点页面浏览事件合并）的事件任意组合，您可以在创建合并事件时根据您的分析场景选择欲合并的事件。
 

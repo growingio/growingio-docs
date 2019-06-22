@@ -28,13 +28,11 @@ description: 使用 GrowiongIO 的「计算指标」功能来创建自定义规�
 
 您可以在计算指标管理界面创建计算指标，并对对产品内所有的计算指标进行统一的维护与管理。您可以通过点击导航栏【数据中心】-【数据管理】按钮，进入数据管理界面，点击左侧【计算指标】菜单，进入计算指标管理界面。
 
-![](https://lh3.googleusercontent.com/1I79eiZMYnDGAiX1GBtm0NtYKtp3Z2hv-ZZawoUgqOYtQ2pXYxhNr27BXBezuiRuCawLedU06G42Bn3dZHgnXO2K38D_WD8uKVOaEXLAtKPGCNAadow_sR_R1PbWC1btLHNjlpJP)
-
 ### **2.1 创建计算指标**
 
 点击计算指标管理界面左上角【创建计算指标】按钮，开始创建计算指标。
 
-![](https://lh4.googleusercontent.com/5ymX0pdwHVMbDZXQxX_dI0KbcrDZK5PU0T_yxB06EhOgfNPjtp-MNk-NdrMjPJum6lO1ehNvq0ETeLdVs-DYHNfUB3dV6WgVgxkKNCGDBqLIn5XW6vK104ahfPSTF5ESholAFYXf)
+![&#x8BA1;&#x7B97;&#x6307;&#x6807;&#x914D;&#x7F6E;&#x754C;&#x9762;](../.gitbook/assets/wechatimg69.jpeg)
 
 1. **分子计算区：**创建计算指标弹框左侧上方部分为分子计算区域，点击【添加事件或指标】，选择您想要进行计算的事件或指标进入此处进行加法运算。
 2. **分母计算区：**创建计算指标弹框左侧下方部分为分母计算区域，若您想要创建点击率、转化率、渗透率等涉及除法计算的指标，您可以通过在此处选择您想要进行计算的事件或指标作为分母进行指标计算。

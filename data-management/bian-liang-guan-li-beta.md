@@ -38,5 +38,5 @@ GrowingIO 提供了事件变量（包含事件级变量与页面级变量）、�
 
 点击任一变量，您可以在右侧弹出的事件详情中，查看变量的定义条件，以及修改变量的名称、标识符或是描述等。
 
-![](https://lh4.googleusercontent.com/dovEVvyrM_yp-9C-zGrGkZafM-awNmdWj_e6t8MxwkNmAAzAyacmBO1epXvozWRBW8aFtcO6XIFX1N5r1D2ygSjR7ItwAhM6337_CcH0jjJ6FiP-QatIB-6VTt2QopsjzCcjz3fj)
+![&#x4E8B;&#x4EF6;&#x53D8;&#x91CF;&#x7BA1;&#x7406;](../.gitbook/assets/wechatimg68.jpeg)
 
