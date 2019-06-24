@@ -18,7 +18,7 @@
 
 9.联调成功
 
-![](../../.gitbook/assets/image%20%28267%29.png)
+![](../../.gitbook/assets/image%20%28268%29.png)
 
 ![](https://docs.growingio.com/.gitbook/assets/-LGNxeGABUADKiTWTaEM-LRB7_dSMzjJ1OCU_A6G-LRB9PkkLaoMJQXZwkPeimage.png)
 
