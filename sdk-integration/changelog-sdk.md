@@ -1,5 +1,14 @@
 # SDK 更新日志 - Android、iOS、Web JS
 
+## 2019年6月29日
+
+### iOS 2.7.8
+
+修复bug：
+
+* 修复 iOS13`UISearchBar`崩溃问题
+* 修复 mobiledebugger 可能出现数据少显示的问题
+
 ## 2019年6月21日
 
 ### Android 2.7.7
@@ -29,7 +38,6 @@
 * 修复地理位置相关的多线程问题
 * 修复访问用户 ID 可能为 0 的问题
 * 修复首次安装 app 可能会影响 `statusbar`展示方向问题
-* 修复 iOS13`UISearchBar`崩溃问题
 * 修复 hybrid 自定义事件匹配 page 问题
 
 优化：
