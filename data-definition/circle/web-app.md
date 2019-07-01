@@ -6,8 +6,6 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 
 在使用电脑端圈选后，请确保已经接入 SDK 2.7.0 及以上，见下面：
 
-{% page-ref page="../../sdk-integration/app-circle-2.7.0/" %}
-
 ## 一、介绍
 
 为了提供更有效率的便捷的数据定义工作，我们为你提供了在电脑上圈选手机 app 的功能：
