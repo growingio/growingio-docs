@@ -2,7 +2,7 @@
 description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对接人。
 ---
 
-# 电脑端圈选 App （灰度功能）
+# 电脑端圈选 App
 
 在使用电脑端圈选后，请确保已经接入 SDK 2.7.0 及以上，见下面：
 
@@ -34,7 +34,7 @@ description: 目前处于灰度期间，想要体验请先联系 GrowingIO 对�
 请确保手机和电脑在同一个 wifi 局域网下。
 {% endhint %}
 
-![](../../.gitbook/assets/image-6.png)
+![](../../.gitbook/assets/image%20%28273%29.png)
 
 ### **3.查看基本信息**
 

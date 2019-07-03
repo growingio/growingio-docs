@@ -129,7 +129,7 @@
   * [无埋点圈选](data-definition/circle/README.md)
     * [Web 圈选](data-definition/circle/web.md)
     * [App 端圈选 App](data-definition/circle/app.md)
-    * [电脑端圈选 App （灰度功能）](data-definition/circle/web-app.md)
+    * [电脑端圈选 App](data-definition/circle/web-app.md)
     * [小程序数据定义](data-definition/circle/minp.md)
     * [微信内嵌页数据定义（beta）](data-definition/circle/wxh5-define-events.md)
     * [圈选指标管理](data-definition/circle/metric-management/README.md)
