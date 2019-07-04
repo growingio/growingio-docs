@@ -4,11 +4,11 @@
 
 2、在账户管理菜单，点击【获取移动应用激活数据】，进入对应功能页面。
 
-![](../../.gitbook/assets/image%20%28351%29.png)
+![](../../.gitbook/assets/image%20%28352%29.png)
 
 3、点击【+绑定移动应用】按钮，开始创建转化规则，可以选择 iOS 或者 Android 应用类型。
 
-![](../../.gitbook/assets/image%20%28259%29.png)
+![](../../.gitbook/assets/image%20%28260%29.png)
 
 4、填写需要创建数据转化规则的 Apple ID 校验，选择转化类别，并在 Feedback URL 中填写从 GIO 中获取的监测链接。
 

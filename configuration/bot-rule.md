@@ -11,7 +11,7 @@
 
 在下面表格中的爬虫为目前 GrowingIO 的预定义爬虫
 
-![](https://docs.growingio.com/.gitbook/assets/bot-rule.png)
+![](../.gitbook/assets/image%20%28216%29.png)
 
 ### 2.对数据分析的影响 <a id="2"></a>
 
