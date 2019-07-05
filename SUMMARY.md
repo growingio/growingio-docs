@@ -52,7 +52,7 @@
     * [Inmobi](ads-tracking/qu-dao-pei-zhi/inmobi.md)
     * [微信广告平台](ads-tracking/qu-dao-pei-zhi/wei-xin-guang-gao-ping-tai.md)
     * [凤羽广告平台](ads-tracking/qu-dao-pei-zhi/feng-yu-guang-gao-ping-tai.md)
-    * [bilibili](ads-tracking/qu-dao-pei-zhi/bilibili.md)
+    * [bilibili（B 站）](ads-tracking/qu-dao-pei-zhi/bilibili.md)
   * [其他功能](ads-tracking/qi-ta-gong-neng/README.md)
     * [日志导出](ads-tracking/qi-ta-gong-neng/ri-zhi-dao-chu.md)
     * [维度配置](ads-tracking/qi-ta-gong-neng/wei-du-pei-zhi.md)

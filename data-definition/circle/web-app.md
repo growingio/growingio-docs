@@ -30,7 +30,7 @@
 请确保手机和电脑在同一个 wifi 局域网下。
 {% endhint %}
 
-![](../../.gitbook/assets/image%20%28274%29.png)
+![](../../.gitbook/assets/image%20%28279%29.png)
 
 ### **3.查看基本信息**
 

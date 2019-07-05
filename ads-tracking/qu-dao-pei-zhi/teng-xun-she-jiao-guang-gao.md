@@ -12,7 +12,7 @@
 
 1、在GIO后台创建 App 推广链接，目标渠道选择“腾讯社交广告”，然后点击保存‌
 
-![](../../.gitbook/assets/image%20%28154%29.png)
+![](../../.gitbook/assets/image%20%28157%29.png)
 
 2、点击保存后进入绑定与授权，‌
 
@@ -22,7 +22,7 @@
 
 3）应用ID：填写您选取应用的对应ID，示例：iOS填写Appstore地址上面的数字。‌
 
-![](../../.gitbook/assets/image%20%2872%29.png)
+![](../../.gitbook/assets/image%20%2874%29.png)
 
 其中，“投放账号”和“投放账号ID”，与广点通后台相对应。‌
 
