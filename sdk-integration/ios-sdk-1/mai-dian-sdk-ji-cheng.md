@@ -15,6 +15,7 @@ description: >-
 
 * 添加`pod 'GrowingCoreKit'`到 Podfile 中
 * 执行`pod update`，不要用`--no-repo-update`选项
+* **\(optional\)** GrowingIO推荐您添加**AdSupport.framework**依赖库,用于来源管理激活匹配,有利于您更好的分析数据 ,添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
 * 直接进行第 2 步 “[设置 URL Scheme](mai-dian-sdk-ji-cheng.md#2-she-zhi-url-scheme)”
 
 #### （2）手动集成 SDK 
@@ -113,6 +114,17 @@ description: >-
 ```
 
 **请确保将代码添加在上面描述的位置，添加到其他函数中或者异步block 中可能导致数据不准确！**
+
+### **4.App Store 提交应用注意事项**
+
+如果您添加了库**AdSupport.framework**, GrowingIO则会启用 IDFA，所以在向 App Store 提交应用时，需要：
+
+* 对于问题 **Does this app use the Advertising Identifier \(IDFA\)**，选择 **YES**。
+* 对于选项**Attribute this app installation to a previously served advertisement**，打勾。
+* 对于选项**Attribute an action taken within this app to a previously served advertisement**，打勾。
+
+> **为什么 GrowingIO 使用 IDFA?**  
+> GrowingIO 使用 IDFA 来做来源管理激活设备的精确匹配，让你更好的衡量广告效果。如果您不希望启用IDFA，可以选择不引入 AdSupport.framework
 
 至此，您的SDK安装就成功了。
 

@@ -28,6 +28,7 @@ GrowingIO iOS SDK 2.7.8 包含以下2个组件SDK:
 
 * 添加`pod 'GrowingAutoTrackKit'`到 Podfile 中
 * 执行`pod update`，不要用`--no-repo-update`选项
+* **\(optional\)** GrowingIO推荐您添加**AdSupport.framework**依赖库,用于来源管理激活匹配,有利于您更好的分析数据 ,添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
 * 直接进行第 2 步 [“设置 URL Scheme”](ios-sdk.md#2-she-zhi-url-scheme)
 
 #### （2）手动集成 SDK 
@@ -300,21 +301,16 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 * 对于已经集成过旧版SDK并圈选过的应用，对某个元素设置ID后再圈选它，指标数值会从零开始计算，类似初次集成SDK后发版的效果，但不影响之前圈选的其它指标数据。如果不希望出现这种情况，请不要使用这个方法
 {% endhint %}
 
+### **App Store 提交应用注意事项**
 
+如果您添加了库**AdSupport.framework**, GrowingIO则会启用 IDFA，所以在向 App Store 提交应用时，需要：
 
-### 在 App Store 提交应用
-
-集成了 GrowingIO SDK 以后，默认会启用 IDFA，所以在向 App Store 提交应用时，需要：
-
-* 对于问题 **Does this app use the Advertising Identifier \(IDFA\)**，选择 YES。
+* 对于问题 **Does this app use the Advertising Identifier \(IDFA\)**，选择 **YES**。
 * 对于选项**Attribute this app installation to a previously served advertisement**，打勾。
 * 对于选项**Attribute an action taken within this app to a previously served advertisement**，打勾。
 
-{% hint style="info" %}
-#### 为**什么 GrowingIO 使用 IDFA?**
-
-GrowingIO 使用 IDFA 来做来源管理激活设备的精确匹配，让你更好的衡量广告效果。如果你不希望跟踪这个信息，可以选择不引入 AdSupport.framework 或者在用 Cocoapods 安装时使用 ‘GrowingIO/without-IDFA' subspec.
-{% endhint %}
+> **为什么 GrowingIO 使用 IDFA?**  
+> GrowingIO 使用 IDFA 来做来源管理激活设备的精确匹配，让你更好的衡量广告效果。如您不希望启用IDFA，可以选择不引入 AdSupport.framework
 
 ### 采集推送
 
