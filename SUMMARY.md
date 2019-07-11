@@ -67,7 +67,7 @@
 * [SDK 文档](sdk-integration/README.md)
   * [SDK 简介与安全性说明](sdk-integration/privacy.md)
   * [各平台 SDK 支持明细](sdk-integration/ge-ping-tai-sdk-zhi-chi-ming-xi.md)
-  * [SDK 更新日志 - Android、iOS、Web JS](sdk-integration/changelog-sdk.md)
+  * [SDK 更新日志](sdk-integration/changelog-sdk.md)
   * [Web JS SDK](sdk-integration/web-js-sdk/README.md)
     * [Web JS SDK API](sdk-integration/web-js-sdk/web-js-sdk-api.md)
     * [Web JS SDK 常见问题](sdk-integration/web-js-sdk/js-sdk-zhu-yi-shi-xiang.md)

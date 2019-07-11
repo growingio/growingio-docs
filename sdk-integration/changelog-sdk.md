@@ -1,4 +1,21 @@
-# SDK 更新日志 - Android、iOS、Web JS
+# SDK 更新日志
+
+## 2019年7月11日
+
+### Android2.7.8
+
+新特性：
+
+* 增加接口 `setAndroidIdEnable` , `setImeiEnable`, `setGoogleAdIdEnable` 为海外上架应用涉及采集用户 `androidId`, `imei`, `googleAdId` 隐私数据的开关支持。
+
+优化：
+
+* 兼容点击事件发生 Activity  `onCreate` 生命周期的采集。
+
+修复bug：
+
+* 埋点 SDK 设置用户 ID ， 从未设置 `setUserID`到设置 userID 成功后无 page 事件发出，导致用户 ID 采集遗漏，继而导致登录用户采集遗漏；
+* 修复在 Android 8.0 以上系统圈选时截图 Bitmap Config 为 HAREWARE 图片失败的问题。
 
 ## 2019年6月29日
 
@@ -6,8 +23,8 @@
 
 修复bug：
 
-* 修复 iOS13`UISearchBar`崩溃问题
-* 修复 mobiledebugger 可能出现数据少显示的问题
+* 修复 iOS13`UISearchBar`崩溃问题；
+* 修复 mobiledebugger 可能出现数据少显示的问题。
 
 ## 2019年6月21日
 
