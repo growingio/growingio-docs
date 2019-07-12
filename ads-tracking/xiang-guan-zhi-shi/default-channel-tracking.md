@@ -20,18 +20,18 @@ GrowingIO 会根据一次访问中的第一个页面的 referrer 判断访问来
 * case2: 某个用户今天最后一次访问是直接访问本站\(referrer\_domain是本站或者没有referrer\)，由于启用了『最终非直接点击』归因模型，回溯期是30天；GrowingIO会追踪该用户在当天及过去30天中最后一次通过外部网站进入的访问，并将这次访问的referrer\_domain作为访问来源；如果回溯30天发现用户没有通过站外渠道进入网站，那么本次访问的来源判定为「直接访问」
 
 如何判定本站和外站：  
-GrowingIO通过项目ID\(AI\)来区分是否外站，如果当前referrer页面上有相同的项目ID，则会被当成内部跳转，否则会外站; 另：用户直接输入URL或通过收藏夹等方式访问，没有referrer
+GrowingIO通过项目 ID\(AI\) 来区分是否外站，如果当前 referrer 页面上有相同的项目 ID，则会被当成内部跳转，否则会外站。例如：用户直接输入 URL 或通过收藏夹等方式访问，没有 referrer ，会被记为直接访问。
 
 最终非直接点击：  
-该模型会忽略直接流量，将用户访问100%归功于用户在本次访问之前点击访问的最后一个站外渠道。该模型认为，如果直接访问来自被站外渠道吸引的用户，那么您可能希望过滤直接访问流量，仅关注站外渠道
+该模型会忽略直接流量，将用户访问 100% 归功于用户在本次访问之前点击访问的最后一个站外渠道。该模型认为，如果直接访问来自被站外渠道吸引的用户，那么您可能希望过滤直接访问流量，仅关注站外渠道
 
-下图中，回溯30天，『最终非直接点击』对应的是前天baidu.com带来的访问；因此会将本次访问的来源归因为baidu.com
+下图中，回溯 30 天，「最终非直接点击」对应的是前天 Baidu 带来的访问；因此会将本次访问的来源归因为 Baidu
 
-![](https://docs.growingio.com/.gitbook/assets/growingio-qu-dao-gen-zong.jpg)
+![](../../.gitbook/assets/bang-zhu-wen-dang-1.jpg)
 
 下图中，回溯30天，找不到「最终非直接点击」；因此会将本次访问的来源归因为「直接访问」
 
-![](https://docs.growingio.com/.gitbook/assets/growingio-qu-dao-gen-zong-1.jpg)
+![](../../.gitbook/assets/bang-zhu-wen-dang-2.jpg)
 
 ### 2. 搜索词 <a id="2"></a>
 
