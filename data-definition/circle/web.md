@@ -331,10 +331,26 @@ GrowingIO 可以统计原生应用中的 H5 页面和 H5 做成的应用。
 Refused to display '**' in a frame because it set 'X-Frame-Options' to 'SAMEORIGIN'.
 ```
 
-此时只允许同个顶级域名加载，因此需要设置运行 iframe 加载，如果您的网站使用 https 协议，需将配置修改成：
+此时只允许同个顶级域名加载，所以需要设置http响应头允许 iframe 加载。
 
-```text
+如果你的网站使用https协议，需向响应头添加配置
+
+```javascript
+Content-Security-Policy: frame-ancestors 'self' https://www.growingio.com
 X-Frame-Options: Allow-From https://www.growingio.com
+```
+
+如果你的网站使用http协议，需向响应头添加配置
+
+```javascript
+Content-Security-Policy: frame-ancestors 'self' http://www.growingio.com
+X-Frame-Options: Allow-From http://www.growingio.com
+```
+
+由于 Chrome 浏览器已经不再支持 X-Frame-Options 配置项，如果你只需在 Chrome 浏览器中进行圈选，建议通过浏览器检查后，只给 Chrome 请求的响应头添加配置
+
+```javascript
+Content-Security-Policy: frame-ancestors 'self' http://www.growingio.com https://www.growingio.com
 ```
 
 **10.在 web 圈选的时候，为什么有时候会一下圈出一组同类元素，有办法区分开么？**
