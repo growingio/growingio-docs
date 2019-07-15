@@ -6,6 +6,46 @@ description: >-
 
 # Android 无埋点 SDK API
 
+## Gradle 编译时配置 API
+
+使您的应用在编译时即可自定义。
+
+{% hint style="info" %}
+Android 2.7.8 SDK 为海外上架应用涉及采集用户 `androidId`, `imei`, `googleAdId` 隐私数据的开关支持。
+
+增加分别可以在编译时、SDK 初始化、 APP 运行时调用的对应接口。
+{% endhint %}
+
+| 编译时配置项API | 默认值 | 说明 | 版本 |
+| :--- | :--- | :--- | :--- |
+| imeiEnable | true | 为了海外应用市场上架应用，设置为 false 则 SDK 不采集 `imei` 。**在编译期配置将删除该部分的采集代码，后续配置（初始化或者运行时）将失效。** | 2.7.8及以上 |
+| androidIdEnable | true | 为了海外应用市场上架应用，设置为 false 则 SDK 不采集 `androidId` 。**在编译期配置将删除该部分的采集代码，后续配置（初始化或者运行时）将失效。** | 2.7.8及以上 |
+| googleAdIdEnable | true | 为了海外应用市场上架应用，设置为 false 则 SDK 不采集 `GoogleAdId` 。**在编译期配置将删除该部分的采集代码，后续配置（初始化或者运行时）将失效。** | 2.7.8及以上 |
+
+**示例代码**
+
+```groovy
+android {
+    ···
+}
+// 须位于 android 代码块下
+growingio {
+    defaultConfig {
+        imeiEnable true
+        androidIdEnable true
+        googleAdIdEnable true
+    }
+
+    buildTypes {
+        googlePlay {
+            imeiEnable false
+            andoridIdEnable false
+            googleAdIdEnable true
+        }
+    }
+}
+```
+
 ## 初始化配置项 API
 
 初始化配置项均在`Application`的`onCreate`方法中 SDK 初始化代码块中设置，下面将分类并描述含义。
@@ -41,6 +81,10 @@ public class MyApplication extends Application {
             .setTrackWebView(true)
             .supportMultiProcessCircle(true)
             .trackAllFragments()
+            //以下 Android 2.7.8 新增
+            .setImeiEnable(true)
+            .setGoogleAdIdEnable(true)
+            .setAndroidIdEnable(true)
         );
     }
 }
@@ -119,6 +163,9 @@ public class MyApplication extends Application {
 | disableCellularImp | false | 否关闭移动蜂窝网`imp`事件采集，`imp`为元素展示事件 |
 | setCellularDataLimit | 3 \* 1024 \* 1024 | 一天的时间之内，在移动蜂窝网下的数据最大传输量，默认3M。 |
 | setBulkSize | 300 | 如果数据库存储数据条数大于等于`bulkSize`，则马上发送数据。 |
+| setImeiEnable | true | 为了海外应用市场上架应用，**Android 2.7.8** 新增初始化配置接口，设置为 false 则 SDK 不采集 `imei`  |
+| setAndroidIdEnable | true | 为了海外应用市场上架应用，**Android 2.7.8** 新增初始化配置接口，设置为 false 则 SDK 不采集 `androidid` 。 |
+| setGoogleAdIdEnable | true | 为了海外应用市场上架应用，**Android 2.7.8** 新增初始化配置接口，设置为 false 则 SDK 不采集 `GoogleAdId` 。 |
 
 
 
@@ -383,6 +430,26 @@ GrowingIO 所有 API 都需要在主线程调用。
       <td style="text-align:left">&#x5982;&#x679C;&#x60A8;&#x6709;&#x67D0;&#x4E9B;View&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x5230;ViewTree&#x4E2D;&#x5E76;&#x4E14;&#x5728;&#x7236;&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x4E0D;&#x56FA;&#x5B9A;&#xFF08;&#x4F8B;&#x5982;&#x5E38;&#x89C1;&#x7684;&#x591A;Fragment&#x5B9E;&#x73B0;&#x7684;Tab&#x5207;&#x6362;&#xFF09;&#xFF0C;&#x8BF7;&#x7ED9;&#x6BCF;&#x4E2A;View&#x8BBE;&#x7F6E;ID&#x6765;&#x8F85;&#x52A9;&#x7EDF;&#x8BA1;</td>
       <td
       style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">setImeiEnable</td>
+      <td style="text-align:left">&#x4E3A;&#x4E86;&#x6D77;&#x5916;&#x5E94;&#x7528;&#x5E02;&#x573A;&#x4E0A;&#x67B6;&#x5E94;&#x7528;&#xFF0C;<b>Android 2.7.8</b> &#x65B0;&#x589E;&#x8FD0;&#x884C;&#x65F6;&#x914D;&#x7F6E;&#x63A5;&#x53E3;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;
+        false &#x5219; SDK &#x4E0D;&#x91C7;&#x96C6; imei &#x3002;</td>
+      <td style="text-align:left">2.7.8&#x53CA;&#x4EE5;&#x4E0A;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">setAndroidIdEnable</td>
+      <td style="text-align:left">&#x4E3A;&#x4E86;&#x6D77;&#x5916;&#x5E94;&#x7528;&#x5E02;&#x573A;&#x4E0A;&#x67B6;&#x5E94;&#x7528;&#xFF0C;<b>Android 2.7.8</b> &#x65B0;&#x589E;&#x8FD0;&#x884C;&#x65F6;&#x914D;&#x7F6E;&#x63A5;&#x53E3;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;
+        false &#x5219; SDK &#x4E0D;&#x91C7;&#x96C6; <code>androidId</code> &#x3002;</td>
+      <td
+      style="text-align:left">2.7.8&#x53CA;&#x4EE5;&#x4E0A;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">setGoogleAdIdEnable</td>
+      <td style="text-align:left">&#x4E3A;&#x4E86;&#x6D77;&#x5916;&#x5E94;&#x7528;&#x5E02;&#x573A;&#x4E0A;&#x67B6;&#x5E94;&#x7528;&#xFF0C;<b>Android 2.7.8</b> &#x65B0;&#x589E;&#x8FD0;&#x884C;&#x65F6;&#x914D;&#x7F6E;&#x63A5;&#x53E3;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;
+        false &#x5219; SDK &#x4E0D;&#x91C7;&#x96C6; <code>GoogleAdId</code> &#x3002;</td>
+      <td
+      style="text-align:left">2.7.8&#x53CA;&#x4EE5;&#x4E0A;</td>
     </tr>
   </tbody>
 </table>### 
