@@ -226,6 +226,14 @@ Response 示例：
 
 #### 4.4 链接创建 API <a id="link-api"></a>
 
+**请求地址**
+
+POST 
+
+```text
+https://www.growingio.com/api/v1/projects/:project_id/meta/minplinks
+```
+
 **请求参数**
 
 路径参数：
