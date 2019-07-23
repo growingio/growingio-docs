@@ -35,13 +35,13 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 
 ### 开始使用
 
-#### 第一步：[集成SDK并进行配置 ](sdk-integration/wei-xin-xiao-cheng-xu-sdk/mina-sdk/) （开发者文档）
+#### 第一步：[集成SDK并进行配置 ](sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/wei-xin-xiao-cheng-xu-sdk/mina-sdk/) （开发者文档）
 
-1. [确定集成小程序的项目](sdk-integration/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#xiao-cheng-xu-sdk-ji-cheng-qian-gong-zuo)；
-2. [集成小程序SDK](sdk-integration/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)； 
+1. [确定集成小程序的项目](sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#xiao-cheng-xu-sdk-ji-cheng-qian-gong-zuo)；
+2. [集成小程序SDK](sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan)； 
 3. 进行小程序SDK配置；  
-   1. [配置微信用户属性](sdk-integration/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#sdk-wei-xin-yong-hu-shu-xing-she-zhi)
-   2. [打开SDK中分享跟踪参数](sdk-integration/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#sdk-fen-xiang-fen-xi-can-shu)
+   1. [配置微信用户属性](sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#sdk-wei-xin-yong-hu-shu-xing-she-zhi)
+   2. [打开SDK中分享跟踪参数](sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#sdk-fen-xiang-fen-xi-can-shu)
 4. 配置完成进入[数据校验](sdk-integration/growingio-debugger/#growingio-minidebugger)，确认数据开始收取
 
 #### 第二步：开始查看系统提供的数据内容
@@ -90,7 +90,7 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
   * [数据模型](data-model/)，帮助您进一步了解GrowingIO的数据采集口径，行为分析的数据逻辑。
   * [设置上报自定义事件和变量（埋点）](data-definition/custom-event/)使用场景，明确哪些场景需要进一步上报业务属性数据，以及怎么使用。
 * **开发者**
-  * 了解[无埋点事件采集逻辑](sdk-integration/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#wu-mai-dian-cai-ji-shi-jian-luo-ji-he-gao-ji-pei-zhi)，根据数据校验情况进行高级配置
+  * 了解[无埋点事件采集逻辑](sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#wu-mai-dian-cai-ji-shi-jian-luo-ji-he-gao-ji-pei-zhi)，根据数据校验情况进行高级配置
   * [设置上报自定义事件和变量（埋点）](data-definition/mina.md)
   * [API](api/)
 * **系统管理员**

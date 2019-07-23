@@ -76,5 +76,36 @@
 
 ### **16.**[**为何不建议自定义设备ID**](../android-sdk/android-chang-jian-wen-ti.md#wei-he-bu-jian-yi-zi-ding-yi-she-bei-id)\*\*\*\*
 
+### **17.** WebView crash
+
+**如果遇到此类崩溃:`Cannot form weak reference to instance (xxxxx) of class xxxxxx. It is possible that this object was over-released, or is in the process of deallocation` 或者程序卡死通过 bt 打印出的堆栈含有`weak_register_no_lock`并且错误是关于`UIWebView+Growing`的。**  
+解释如下:  
+由于业务需要我们会 hook `UIWebView` 的 `setDelegate` 方法 拿到传入的对象从而进行对`UIWebViewDelegate` 一系列方法的监听，并且对传入的对象实现 `weak` 处理,这样做是为了保证不影响客户对象的引用计数；  
+由于苹果 api 的不完善 `UIWebViewDelegate` 的声明至今为`assign，`所以`delegate`对象在释放后不会被置为`nil`;由此可能会造成的后果是`setDelegate`方法调用时，如果传入的是一个`over-released`, or is in the process of deallocation 的对象而我们 SDK 又对此对象进行了 `weak` 处理,从而导致崩溃；
+
+由于苹果api没有判断对象是否是over-released, or is in the process of deallocation的 api ，所以我们SDK暂时无法处理。需要手动解决一下，解决方式很简单，先分享一个发生崩溃的案例：
+
+**案例如下:**  
+这是客户UIWebViewDelegate对象中dealloc方法
+
+```objectivec
+- (void)dealloc
+{
+    self.webView.delegate = nil;
+}
+```
+
+上面的代码引发了崩溃,很多人奇怪delegate不是已经设置为nil了么? 为什么还崩，请看下面是如何解决的
+
+```objectivec
+- (void)dealloc
+{
+    _webView.delegate = nil;
+}
+```
+
+发现差异了么？我们没有调用的`webView`的`get`方法，因为再此案例中`webView`的`get`方法会提前执行一遍`setDelegate`方法从而导致崩溃。  
+所以希望您在`delegate`对象的`dealloc`方法中不要调用`webView`的`get`方法即`self.webView`，而是采用`_webView`的形式把`delegate`设置为`nil`。
+
 
 

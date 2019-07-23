@@ -16,7 +16,7 @@ GrowingIO采集的是微信默认分享功能，即转发小程序到一个好�
 
 需要在集成SDK时，设置 followShare 为true，才可以自动采集分享分析的数据。
 
-配置代码请协同工程师一起，参见[SDK分享分析参数](../sdk-integration/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#sdk-fen-xiang-fen-xi-can-shu)。
+配置代码请协同工程师一起，参见[SDK分享分析参数](../sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#sdk-fen-xiang-fen-xi-can-shu)。
 
 ## 分享分析功能使用 <a id="fen-xiang-fen-xi-gong-neng-shi-yong"></a>
 
