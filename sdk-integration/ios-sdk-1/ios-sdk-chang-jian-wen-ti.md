@@ -104,7 +104,7 @@
 }
 ```
 
-发现差异了么？我们没有调用的`webView`的`get`方法，因为再此案例中`webView`的`get`方法会提前执行一遍`setDelegate`方法从而导致崩溃。  
+发现差异了么？我们没有调用的`webView`的`get`方法，因为在此案例中`webView`的`get`方法会提前执行一遍`setDelegate`方法从而导致崩溃。  
 所以希望您在`delegate`对象的`dealloc`方法中不要调用`webView`的`get`方法即`self.webView`，而是采用`_webView`的形式把`delegate`设置为`nil`。
 
 
