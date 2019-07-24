@@ -9,7 +9,7 @@
 1.下载 **gio-minp.esm.js** 文件，把文件放在微信小程序项目里，比如 utils 目录下。
 
 ```text
-$ curl --compressed https://assets.growingio.com/gio-minp.esm.js -o gio-minp.js
+$ curl --compressed https://assets.giocdn.com/gio-minp.esm.js -o gio-minp.js
 ```
 
 2. 添加跟踪代码

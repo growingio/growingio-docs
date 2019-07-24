@@ -42,7 +42,7 @@ description: 支付宝小程序SDK目前属于灰度内测功能，如有需求�
 下载 gio-alip.js 文件
 
 ```text
-curl --compressed https://assets.growingio.com/gio-alip.js -o gio-alip.js
+curl --compressed https://assets.giocdn.com/gio-alip.js -o gio-alip.js
 ```
 
 当下载到 gio-alip.js 文件以后，把文件放在支付宝小程序项目里，比如 utils 目录下。下面会假设 SDK 文件放在 utils 目录下。
@@ -69,7 +69,7 @@ $global.GioPage({
 下载 gio-alip.js 文件
 
 ```text
-curl --compressed https://assets.growingio.com/gio-alip.js -o gio-alip.js
+curl --compressed https://assets.giocdn.com/gio-alip.js -o gio-alip.js
 ```
 
 当下载到 gio-alip.js 文件以后，把文件放在支付宝小程序项目里，比如 utils 目录下。下面会假设 SDK 文件放在 utils 目录下。

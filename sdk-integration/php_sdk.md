@@ -4,7 +4,7 @@
 
 ## 集成PHP SDK
 
-1. 下载 PHP 文件并解压：[https://assets.growingio.com/php/sdk/GrowingIO.php](https://assets.growingio.com/php/sdk/GrowingIO.php)
+1. 下载 PHP 文件并解压：[https://assets.giocdn.com/php/sdk/GrowingIO.php](https://assets.giocdn.com/php/sdk/GrowingIO.php)
 2. 将sdk加入到您的产品代码中
 
 参考如下Demo程序：

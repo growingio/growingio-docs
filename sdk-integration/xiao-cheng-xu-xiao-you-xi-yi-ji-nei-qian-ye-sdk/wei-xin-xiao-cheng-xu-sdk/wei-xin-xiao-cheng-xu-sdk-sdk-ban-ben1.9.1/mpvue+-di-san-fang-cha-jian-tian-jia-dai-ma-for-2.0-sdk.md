@@ -9,7 +9,7 @@
 1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
-https://assets.growingio.com/sdk/gio-minp.esm.zip
+https://assets.giocdn.com/sdk/gio-minp.esm.zip
 ```
 
 2. 添加跟踪代码

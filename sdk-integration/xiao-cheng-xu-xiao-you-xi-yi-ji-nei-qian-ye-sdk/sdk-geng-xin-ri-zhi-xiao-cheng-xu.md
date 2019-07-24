@@ -5,7 +5,7 @@
 ### 内嵌页 SDK 2.0
 
 * ```
-  https://assets.growingio.com/2.0/gio-wxwv.js
+  https://assets.giocdn.com/2.0/gio-wxwv.js
   ```
 
 本次内嵌页 SDK 升级到2.0，主要解决的是H5在多个场景使用，例如微信内嵌页（只能在微信打开）、以及小程序webview复用一套代码时，怎么更方便的集成 SDK，并做数据的统计。此 SDK 支持 H5 应用在以下多个场景中。

@@ -55,7 +55,7 @@
 1.下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
-https://assets.growingio.com/sdk/gio-minp.zip
+https://assets.giocdn.com/sdk/gio-minp.zip
 ```
 
 2、在根目录 app.js 文件的顶部添加跟踪代码
@@ -91,7 +91,7 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 1.下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
-https://assets.growingio.com/sdk/gio-minp.zip
+https://assets.giocdn.com/sdk/gio-minp.zip
 ```
 
 2.在根目录 app.js文件的顶部添加跟踪代码
@@ -134,7 +134,7 @@ const Page = global.GioPage;
 1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
-https://assets.growingio.com/sdk/gio-minp.zip
+https://assets.giocdn.com/sdk/gio-minp.zip
 ```
 
   2. 在根目录 app.tsx 文件的顶部添加跟踪代码
@@ -170,7 +170,7 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
-https://assets.growingio.com/sdk/gio-minp.esm.zip
+https://assets.giocdn.com/sdk/gio-minp.esm.zip
 ```
 
 2. 在根目录 app.wpy 文件的顶部添加跟踪代码
@@ -206,7 +206,7 @@ cml: false //是否使用了chameleon框架, 取值: false | Cml
 1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
-https://assets.growingio.com/sdk/gio-minp.esm.zip
+https://assets.giocdn.com/sdk/gio-minp.esm.zip
 ```
 
 2.在根目录 main.js 文件的顶部添加跟踪代码
@@ -251,7 +251,7 @@ mpvue + 第三方插件 设置代码较为复杂，请点击如下链接进行�
 1. 下载SDK文件包，解压后把 index.js 和 gioConfig.js 文件放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
-https://assets.growingio.com/sdk/gio-minp.zip
+https://assets.giocdn.com/sdk/gio-minp.zip
 ```
 
 2. 在app目录下 app.cml 文件顶部添加跟踪代码
