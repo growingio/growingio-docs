@@ -107,5 +107,69 @@
 发现差异了么？我们没有调用的`webView`的`get`方法，因为在此案例中`webView`的`get`方法会提前执行一遍`setDelegate`方法从而导致崩溃。  
 所以希望您在`delegate`对象的`dealloc`方法中不要调用`webView`的`get`方法即`self.webView`，而是采用`_webView`的形式把`delegate`设置为`nil`。
 
+在实际开发中，除了上述场景之外，还有如下两种情况：
 
+* `UIWebViewDelegate` 对象是自定义的 `UIWebView` 本身，通过上述方式会发现在自定义的 `UIWebView` 类中无法通过下划线的方式来访问 `delegate` 属性，即 `_delegate`，因此也就无法调用 `_delegate = nil；`解决方式如下：
+
+```objectivec
+-（void）dealloc 
+{
+        @autoreleasepool {
+        self.growingAttributesDonotTrack = YES;
+    }
+    self.delegate = nil;
+}
+```
+
+* 如果在其他的第三方SDK中发生了这样的问题，但是无法修改其源码的情况下，可以按照如下方式进行处理，首先根据崩溃信息找到崩溃产生的类名信息，例如
+
+```objectivec
+Cannot form weak reference to instance (0xXXXXX) of class NSKVONotifying_XXUIWebView
+```
+
+`XXUIWebView` 即为自定义的 `UIWebView` 类，  此时可以新增一个UIView的分类，具体实现代码如下，特别需要注意的是 `Class clazz = NSClassFromString(@"XXUIWebView");`
+
+```objectivec
+#import "UIView+Growing_fix.h"
+#import <objc/runtime.h>
+#import "Growing.h"
+@implementation UIView (Growing_fix)
++(void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class clazz = NSClassFromString(@"XXUIWebView");
+        
+        SEL originalSelector = NSSelectorFromString(@"dealloc");
+        SEL swizzledSelector = @selector(grow_dealloc);
+        
+        Method originalMethod = class_getInstanceMethod(clazz, originalSelector);
+        Method swizzledMethod = class_getInstanceMethod(clazz, swizzledSelector);
+        
+        BOOL didAddMethod =
+        class_addMethod(clazz,
+                        originalSelector,
+                        method_getImplementation(swizzledMethod),
+                        method_getTypeEncoding(swizzledMethod));
+        
+        if (didAddMethod) {
+            class_replaceMethod(clazz,
+                                swizzledSelector,
+                                method_getImplementation(originalMethod),
+                                method_getTypeEncoding(originalMethod));
+        } else {
+            method_exchangeImplementations(originalMethod, swizzledMethod);
+        }
+    });
+}
+
+- (void)grow_dealloc
+{
+    @autoreleasepool {
+        self.growingAttributeDonotTrack = YES;
+    }
+    [self grow_dealloc];
+}
+@end
+
+```
 
