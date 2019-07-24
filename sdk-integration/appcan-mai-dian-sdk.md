@@ -12,8 +12,8 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 | 插件平台    | 下载地址 |
 | :--- | :--- |
-| Android | [https://assets.growingio.com/sdk/android/uexGrowingIO-android-2.6.0.zip](https://assets.growingio.com/sdk/android/uexGrowingIO-android-2.6.0.zip) |
-| iOS | [https://assets.growingio.com/sdk/ios/uexGrowingIO-iOS-2.6.0.zip](https://assets.growingio.com/sdk/ios/uexGrowingIO-iOS-2.6.0.zip) |
+| Android | [https://assets.giocdn.com/sdk/android/uexGrowingIO-android-2.6.0.zip](https://assets.giocdn.com/sdk/android/uexGrowingIO-android-2.6.0.zip) |
+| iOS | [https://assets.giocdn.com/sdk/ios/uexGrowingIO-iOS-2.6.0.zip](https://assets.giocdn.com/sdk/ios/uexGrowingIO-iOS-2.6.0.zip) |
 
 * 在 AppCan IDE 中导航栏中选择 “AppCan” -&gt; “自定义插件“ -&gt; “添加插件”
 * 选择对应安装包后，如图所示：

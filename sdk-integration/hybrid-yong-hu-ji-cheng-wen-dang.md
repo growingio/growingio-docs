@@ -15,7 +15,7 @@ window.hybridEnableTouch 的值为 true。
 {% hint style="warning" %}
 注：如果无法进行H5页面与原生应用联调的情况下可手动在head标签中加入以下代码，上线时删除即可
 
- &lt;script src="https://assets.growingio.com/sdk/hybrid/2.0/gio\_hybrid.min.js" &gt;&lt;/script&gt;
+ &lt;script src="https://assets.giocdn.com/sdk/hybrid/2.0/gio\_hybrid.min.js" &gt;&lt;/script&gt;
 {% endhint %}
 
 ### 1. 设置自定义事件和事件级变量（track）
