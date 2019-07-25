@@ -52,14 +52,14 @@ GrowingIO 分配的公钥，见 API 认证文档
 ```
 [
   {
-    id: "Dashboard Uid",
-    name: "我的看板",
-    type: "看板类型", // normal: 普通看板, realtimeV2: 实时看板
-    createdAt: "2019-01-01",
-    updatedAt: "2019-01-02",
-    scope: "看板所属", // global: 全局, project: 项目, user: 个人
-    updater: "Dashboard Last Updator",
-    creator: "Dashboard Creator"
+    "id": "Dashboard Uid",
+    "name": "我的看板",
+    "type": "看板类型", // normal: 普通看板, realtimeV2: 实时看板
+    "createdAt": "2019-01-01",
+    "updatedAt": "2019-01-02",
+    "scope": "看板所属", // global: 全局, project: 项目, user: 个人
+    "updater": "Dashboard Last Updator",
+    "creator": "Dashboard Creator"
   },
   ...
 ]
@@ -111,20 +111,20 @@ GrowingIO 分配的公钥，见 API 认证文档
 
 ```
 {
-  id: "Dashboard Uid",
-  name: "Dashboard Name",
-  charts: [
+  "id": "Dashboard Uid",
+  "name": "Dashboard Name",
+  "charts": [
     {
-      id: "Chart Uid",
-      name: "Chart Name",
-      createor: "Chart Creator",
-      createdAt: "Created Time"
+      "id": "Chart Uid",
+      "name": "Chart Name",
+      "createor": "Chart Creator",
+      "createdAt": "Created Time"
     },
     {
-      id: "Chart Uid",
-      name: "Chart Name",
-      createor: "Chart Creator",
-      createdAt: "Created Time"
+      "id": "Chart Uid",
+      "name": "Chart Name",
+      "createor": "Chart Creator",
+      "createdAt": "Created Time"
     }
   ]
 }
@@ -194,19 +194,25 @@ GrowingIO 分配的公钥，见 API 认证文档
 
 ```
 {
-    id:  "Chart  Uid",
-    name:  "Chart  Name",
-    startTime:  1462118400000,
-    endTime:  1462118400000,
-    interval:  86400000,
-    meta:  [
-        {  name:  '目标用户',  dimension:  true},
-        {  name:  '城市',  dimension:  true  },
-        {  name:  '浏览器',  dimension:  true  },
-        {  name:  'Metric  1',  metric:  true  },
-        {  name:  'Metric  2',  metric:  true  }
+    "id":  "Chart  Uid",
+    "name":  "Chart  Name",
+    "startTime":  1462118400000,
+    "endTime":  1462118400000,
+    "interval":  86400000,
+    "aggregator": {    // 当大数字图时返回该字段
+        "values": [
+            27557,    // 本周期聚合值
+            25409     // 上周期聚合值
+        ]
+    }
+    "meta":  [
+        {  "name":  "目标用户",  "dimension":  true},
+        {  "name":  "城市",  "dimension":  true  },
+        {  "name":  "浏览器",  "dimension":  true  },
+        {  "name":  "Metric  1",  "metric":  true  },
+        {  "name":  "Metric  2",  "metric":  true  }
     ],
-    data:  [
+    "data":  [
         //  线图
         [目标用户,  timestamp,  metric1,  metric2],
         [目标用户,  timestamp,  metric1,  metric2]
@@ -279,18 +285,18 @@ GrowingIO 分配的公钥，见 API 认证文档
 ```
 [
   {
-    id: "Segmentation Uid",
-    name: "Segmentation Name",
-    userType: 'u',
-    userNum: 1230,
-    updatedAt: "2016-08-03"
+    "id": "Segmentation Uid",
+    "name": "Segmentation Name",
+    "userType": 'u',
+    "userNum": 1230,
+    "updatedAt": "2016-08-03"
   },
   {
-    id: "Segmentation Uid",
-    name: "Segmentation Name",
-    userType: 'cs1',
-    userNum: 1230,
-    updatedAt: "2016-08-03"
+    "id": "Segmentation Uid",
+    "name": "Segmentation Name",
+    "userType": 'cs1',
+    "userNum": 1230,
+    "updatedAt": "2016-08-03"
   },
   ...
 ]
