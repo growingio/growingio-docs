@@ -203,25 +203,7 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 * requestTime 客户请求发生时服务器时间
 * errorMsg 当请求发生错误时，服务器返回的错误信息
 
-### 3.不同导出类型的数据之间的关联关系
-
-三张数据表分别代表GIO定义的三种数据级别，访问级别（visit），页面级别（page）与标签级别（action）。visit 按照session定义，page 按照页面定义，action 代表页面元素标签的显示，点击，提交等事件，visit 和 page 是一对多的关系，page 和 action 是一对多的关系。三者形成整个用户行为数据层级，目前导出的数据类型除了action下的imp\(impression\)类型因为数据量过大不可导出，其它数据都已经导出
-
-#### 3.1 visit, page, action之间的相互关联关系
-
-三张数据表可以根据“外键”join，规则如下:
-
-1. visit表格有id字段
-2. page表格有id字段，page表格有 visit\_id 字段可以和 visit 表格的 id 字段关联，若是在小时级别page数据无法join到对应的visit记录，visit记录可能存在于之前的小时单位中。
-3. action 表格有 action\_id 子弹，action表格有 page\_id 字段可以和 page 表格的 id 字段关联
-
-#### 3.2 action\_tag, custom\_event 和 page, visit, action的关联关系
-
-1. action\_tag 的 page\_id 字段可以和 page 表格的 id 字段关联，action\_tag 的 visit\_id 字段可以和 visit 表格的 id 字段关联
-2. custom\_event 的 page\_id 字段可以和 page 表格的 id 字段关联
-3. action\_tag 事件并不导出impression（显示级别）的数据（数据量太大的缘故），所以建议通过action full outer join page 获得
-
-### 4.原始数据导出版本和GrowingIO数据主版本（SDK 版本）关系 <a id="sdk-explaination"></a>
+### 3.原始数据导出版本和GrowingIO数据主版本（SDK 版本）关系 <a id="sdk-explaination"></a>
 
 ![](https://docs.growingio.com/.gitbook/assets/datafeed.png)
 

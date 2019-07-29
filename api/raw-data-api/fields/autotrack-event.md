@@ -1,5 +1,49 @@
 # 无埋点事件
 
+## vst——访问事件
+
+| 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| visitUserId | userId | string\(64\) | 访问用户ID（visit user id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 匿名的访问用户ID，由GrowingIO自动生成。 |
+| sessionId | sessionId | string\(50\) | 访问ID（session id） | 6b5099c7-6006-422d-92ac-4f3bf4ddd37c | 访问ID |
+| accountVersion | （新加） | string\(20\) | SDK版本（account version） | 2.3.0 | SDK版本信息 |
+| platform | platform | string\(20\) | 平台（platform） | Web | 访问所属平台，可能值为 iOS / Android / Web 等 |
+| domain | domain | string\(100\) | 域名（domain） | growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
+| page | path（新旧不同） | string\(1024\) | 页面（page） | pages/index | 用户访问的当前页面 |
+| queryParameters | query（新旧不同） | string\(1024\) | 查询参数（query arameters） | cid=1234567 | 当前网站页面URL中的查询参数 |
+| referrer | refer（新旧不同） | string\(1024\) | 页面来源（referrer） | [http://www.growingio.com?cid=1234567](http://www.growingio.com/?cid=1234567) | 当前页面浏览的引荐来源 |
+| language | language | string\(10\) | 语言（language） | zh-cn | 系统使用的语言 |
+| screenHeight | （新加） | string\(10\) | 屏幕高度（screen height） | 1242 | 屏幕高度 |
+| screenWidth | （新加） | string\(10\) | 屏幕宽度（screen width） | 2016 | 屏幕宽度 |
+| time | eventTime\(新旧不同\) | bigint | 时间戳（time） | 1520899220665 | 请求在用户端发生的时间戳 |
+| sendTime | sendTime | bigint | 发送时间（send time） | 1520899221211 | 请求在SDK发送的时间戳 |
+| ip | ip | string\(15\) | IP地址（ip address） | 127.0.0.1 | IP地址（ip address） |
+| userAgent | userAgent | string\(512\) | User Agent，例如浏览器信息或者移动设备信息 | Mozilla/5.0 \(Linux; Android 6.0; V9 Build/MRA58K; wv\) AppleWebKit/537.36 \(KHTML |  |
+| operatingSystem | （新加） | string\(30\) | 操作系统（operating system） | iOS / Android |  |
+| operatingSystemVersion | osVersion\(新旧不同\) | string\(50\) | 操作系统版本（operating system version） | iOS 11.0.1 /Android 6.0.1 |  |
+| clientVersion | appVersion\(新旧不同\) | string\(50\) | 客户的产品版本，仅限移动端 | 1.0 |  |
+| channel | channel | string\(40\) | app的下载渠道，仅限移动端 | App Store |  |
+| deviceBrand | manufacturer\(新旧不同\) | string\(20\) | 设备品牌（device brand） | google |  |
+| deviceModel | model\(新旧不同\) | string\(50\) | 设备型号（device model） | Nexus 5 |  |
+| deviceType | （新加） | string\(50\) | 设备类型（device type） | 1 | 设备类型：1为手机，2为平板 |
+| deviceOrientation | （新加） | string\(10\) | 设备方向（device orientation） | PORTRAIT | 请求产生时设备方向 |
+| latitude | lat\(新旧不同\) | double | 地理位置维度（latitude） | 29.43982 | 精确到小数点后5位 |
+| longitude | lng\(新旧不同\) | double | 地理位置经度（longitude） | 29.43982 | 精确到小数点后5位 |
+| vstRequestId | visit\_id | string\(16\) | GrowingIO系统访问请求内部ID（internal visit id） | c7db72a5841506bd | GrowingIO系统内部用于标识一个访问请求的ID，可以用来关联访问数据 |
+| idfa | （新加） | string\(40\) | idfa\(identifier for advertising\) | A075A0F9-32D2-4671-A78D-144B6B7D2920 | 苹果系统用于监测广告的ID |
+| androidId | （新加） | string\(16\) | androidId | 6284760c2926bcd5 | 安卓系统的一个ID |
+| IMEI | （新加） | string\(16\) | IMEI（International Mobile Equipment Identity） | 867459000000000 | 国际移动设备识别码 |
+
+
+
+> **visit数据注意事项**
+
+API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接口中已经删除。原因是这三个字段实际由GrowingIO内部库通过**`解析IP、地理位置`**得到的结果，可能与客户自己解析出来的结果存在差异，这样会造成客户识别的困扰。
+
+vstRequestId 字段是 唯一标识，可以用来关联 vst 的数据
+
+
+
 ## page——页面事件
 
 | 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
@@ -38,55 +82,15 @@
 | pageAttributes8 | ps8（新旧不同） | string\(200\) | 页面属性8（pageattributes8） |  | SDK 1.x版本的PS8字段（Deprecated） |
 | pageAttributes9 | ps9（新旧不同） | string\(200\) | 页面属性9（pageattributes9） |  | SDK 1.x版本的PS9字段（Deprecated） |
 | pageAttributes10 | ps10（新旧不同） | string\(200\) | 页面属性10（pageattributes10） |  | SDK 1.x版本的PS10字段（Deprecated） |
-| pageRequestId | page\_id | string\(23\) | 页面请求ID（page request id） | 1521010820647fa5a9314e6 | GrowingIO系统内部用于标识一个唯一的页面请求的ID |
-| vstRequestId | visit\_id | string\(16\) | 访问请求ID（visit request id） | c7db72a5841506bd | GrowingIO系统内部用于标识一个访问请求的ID |
+| pageRequestId | page\_id | string\(23\) | 页面请求ID（page request id），页面唯一标识，可以用来关联page 数据 | 1521010820647fa5a9314e6 | GrowingIO系统内部用于标识一个唯一的页面请求的ID |
+| vstRequestId | visit\_id | string\(16\) | 访问请求ID（visit request id），可以和 vst 表格的 vstRequestId 字段关联，若是在小时级别page数据无法join到对应的visit记录，visit记录可能存在于之前的小时单位中。 | c7db72a5841506bd | GrowingIO系统内部用于标识一个访问请求的ID |
 
 > page数据注意事项
 
 `customerAttributes(cs)`和`pageAttributes(ps)` 只有当使用SDK1.0的时候才会有数据。  
 若您使用的是SDK2.0，需要使用导出API2.0接口才能下载[页面属性](custom.md#pvar-zi-ding-yi-ye-mian-bian-liang)，且用户属性不提供下载。
 
-## vst——访问事件
-
-| 原始数据导出 2.0 字段名称 | 原始数据导出 1.0 字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| visitUserId | userId | string\(64\) | 访问用户ID（visit user id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 匿名的访问用户ID，由GrowingIO自动生成。 |
-| sessionId | sessionId | string\(50\) | 访问ID（session id） | 6b5099c7-6006-422d-92ac-4f3bf4ddd37c | 访问ID |
-| accountVersion | （新加） | string\(20\) | SDK版本（account version） | 2.3.0 | SDK版本信息 |
-| platform | platform | string\(20\) | 平台（platform） | Web | 访问所属平台，可能值为 iOS / Android / Web 等 |
-| domain | domain | string\(100\) | 域名（domain） | growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
-| page | path（新旧不同） | string\(1024\) | 页面（page） | pages/index | 用户访问的当前页面 |
-| queryParameters | query（新旧不同） | string\(1024\) | 查询参数（query arameters） | cid=1234567 | 当前网站页面URL中的查询参数 |
-| referrer | refer（新旧不同） | string\(1024\) | 页面来源（referrer） | [http://www.growingio.com?cid=1234567](http://www.growingio.com/?cid=1234567) | 当前页面浏览的引荐来源 |
-| language | language | string\(10\) | 语言（language） | zh-cn | 系统使用的语言 |
-| screenHeight | （新加） | string\(10\) | 屏幕高度（screen height） | 1242 | 屏幕高度 |
-| screenWidth | （新加） | string\(10\) | 屏幕宽度（screen width） | 2016 | 屏幕宽度 |
-| time | eventTime\(新旧不同\) | bigint | 时间戳（time） | 1520899220665 | 请求在用户端发生的时间戳 |
-| sendTime | sendTime | bigint | 发送时间（send time） | 1520899221211 | 请求在SDK发送的时间戳 |
-| ip | ip | string\(15\) | IP地址（ip address） | 127.0.0.1 | IP地址（ip address） |
-| userAgent | userAgent | string\(512\) | User Agent，例如浏览器信息或者移动设备信息 | Mozilla/5.0 \(Linux; Android 6.0; V9 Build/MRA58K; wv\) AppleWebKit/537.36 \(KHTML |  |
-| operatingSystem | （新加） | string\(30\) | 操作系统（operating system） | iOS / Android |  |
-| operatingSystemVersion | osVersion\(新旧不同\) | string\(50\) | 操作系统版本（operating system version） | iOS 11.0.1 /Android 6.0.1 |  |
-| clientVersion | appVersion\(新旧不同\) | string\(50\) | 客户的产品版本，仅限移动端 | 1.0 |  |
-| channel | channel | string\(40\) | app的下载渠道，仅限移动端 | App Store |  |
-| deviceBrand | manufacturer\(新旧不同\) | string\(20\) | 设备品牌（device brand） | google |  |
-| deviceModel | model\(新旧不同\) | string\(50\) | 设备型号（device model） | Nexus 5 |  |
-| deviceType | （新加） | string\(50\) | 设备类型（device type） | 1 | 设备类型：1为手机，2为平板 |
-| deviceOrientation | （新加） | string\(10\) | 设备方向（device orientation） | PORTRAIT | 请求产生时设备方向 |
-| latitude | lat\(新旧不同\) | double | 地理位置维度（latitude） | 29.43982 | 精确到小数点后5位 |
-| longitude | lng\(新旧不同\) | double | 地理位置经度（longitude） | 29.43982 | 精确到小数点后5位 |
-| vstRequestId | visit\_id | string\(16\) | GrowingIO系统访问请求内部ID（internal visit id） | c7db72a5841506bd | GrowingIO系统内部用于标识一个访问请求的ID |
-| idfa | （新加） | string\(40\) | idfa\(identifier for advertising\) | A075A0F9-32D2-4671-A78D-144B6B7D2920 | 苹果系统用于监测广告的ID |
-| androidId | （新加） | string\(16\) | androidId | 6284760c2926bcd5 | 安卓系统的一个ID |
-| IMEI | （新加） | string\(16\) | IMEI（International Mobile Equipment Identity） | 867459000000000 | 国际移动设备识别码 |
-
-
-
-> **visit数据注意事项**
-
-API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接口中已经删除。原因是这三个字段实际由GrowingIO内部库通过**`解析IP、地理位置`**得到的结果，可能与客户自己解析出来的结果存在差异，这样会造成客户识别的困扰。
-
-
+pageRequestId 字段是唯一标识，可以用来关联page表；vstRequestId 字段可以和 vst 表格的 id 字段关联，若是在小时级别page数据无法join到对应的visit记录，visit记录可能存在于之前的小时单位中。
 
 ## action——动作事件
 
@@ -108,6 +112,12 @@ API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接�
 
 
 
+> action 数据注意事项
+
+pageRequestId 字段可以和 page 表格的 pageRequestId 字段关联；
+
+action 事件并不导出impression（显示级别）的数据（数据量太大的缘故），所以建议通过action full outer join page 获得
+
 ## action\_tag——元素圈选动作事件
 
 | 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
@@ -115,6 +125,8 @@ API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接�
 | sendTime | sendtime | bigint | 数据发送时间（send time） | 1521331200412 | 请求在SDK发送的时间戳 |
 | actionRequestId | action\_id | string\(30\) | GrowingIO系统Action内部ID | wa:0:24:1356477892:0 | 用于标识一个action请求的ID，`web的以wa开头`，`mobile的以ma开头` |
 | ruleId | rule\_id | string\(8\) | GrowingIO系统Rule内部ID | 99ae0dec | 用于标识`元素圈选`无埋点事件的唯一ID，由字母和数字组成 |
+
+
 
 ## rules——圈选规则
 
@@ -133,4 +145,6 @@ API1.0接口中的**`countryName、region、city`**三个字段，在API2.0接�
 3.  通过**action**中的`action_id`与**action\_tag**中的`action_id`聚合，然后绑定**action\_tag**中的`rule_id`到**rules**中对应的`rule_id、name`到action的数据上。这样就可以通过规则名称进行数据分析，识别导出数据中圈选部分的数据情况。
 4. 建议规则建立时保持名称的唯一性，GrowingIO平台不保证规则名称的唯一。
 5. 相同的名称下可能有多个规则类型，`规则名称+规则类型`才能区分开，此处类型与基础数据**action**中的`请求事件类型`保持一致。
+
+
 

@@ -16,7 +16,11 @@
 | eventNumber | （新加） | double | 事件数值（event number） | 99.99 | 自定义事件的值 |
 | eventVariable | （新加） | map&lt;string, string&gt; | 事件级变量（event variable） | {"price": "50.0", "item": "101"} | 自定义事件级变量 |
 | loginUserId | \_cs1（新旧不同） | string\(200\) | 登录用户ID（customer attributes 1） | user12345 | 登录用户ID，推荐使用那些不能定位到个人的ID信息，通常为企业内部使用的CRM ID |
-| pageRequestId | （新加） | string\(23\) | GrowingIO系统页面请求内部ID | 15208995970115f7e2c153f | 该自定义事件所归属的 page 事件 id |
+| pageRequestId | （新加） | string\(23\) | GrowingIO系统页面请求内部ID | 15208995970115f7e2c153f | 该自定义事件所归属的 page 事件 id，可以用来和page数据关联 |
+
+> cstm**数据注意事项**
+
+pageRequestId 字段可以用来和 page 数据的 pageRequestId 字段关联。
 
 ## pvar——自定义页面变量
 
@@ -30,7 +34,11 @@
 | domain | string\(100\) | 域名（domain） | www.growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
 | page | string\(1024\) | 页面（page） | /funnel | 用户访问的当前页面 |
 | pageVariable | map&lt;string, string&gt; | 页面级变量（page variable） | {"category": "funnel"} | 页面级变量键值对 |
-| pageRequestId | string\(23\) | GrowingIO系统页面请求内部ID | 15208995970115f7e2c153f | 该页面级变量所归属的 page 事件 id |
+| pageRequestId | string\(23\) | GrowingIO系统页面请求内部ID | 15208995970115f7e2c153f | 该页面级变量所归属的 page 事件 id，可以用来和 page 数据的 pageRequestId 字段关联。 |
+
+> pvar **数据注意事项**
+
+pageRequestId 字段可以用来和 page 数据的 pageRequestId 字段关联。
 
 ## evar——转化变量
 
