@@ -20,7 +20,7 @@ description: >-
 
 #### （2）手动集成 SDK 
 
-* 下载 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.7.8.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.7.8.zip)
+* 下载 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.8.0.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.8.0.zip)
 * 解压 iOS SDK 压缩文件
 *  将Growing.h,GrowingCoreKit.framework添加到iOS工程中。
 
