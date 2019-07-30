@@ -12,14 +12,18 @@
 
 4.在电脑上进行便捷的操作，右侧动态展示区详细解释「你在定义的是什么」；
 
-5.与 web 端圈选的 UI / UX 保持一致，降低不同平台圈选的学习成本。
+5.与 web 端圈选的 UI / UX 保持一致，降低不同平台圈选的学习成本；
+
+6.当前设备支持范围：手机、平板电脑，以及不同设备的横屏、竖屏分别圈选。
 
 ## 二、准备工作
 
 ### **1.SDK 版本要求**
 
 {% hint style="danger" %}
-将想要圈选的 App 升级到 2.7.0 以上 SDK版本。
+将想要圈选的 App 升级到 2.7.0 及以上的 SDK版本。
+
+使用横屏圈选，请将想要圈选的 App 升级到 2.8.0 及以上的 SDK 版本。 
 {% endhint %}
 
 ### **2.使用方法**
@@ -30,7 +34,7 @@
 请确保手机和电脑在同一个 wifi 局域网下。
 {% endhint %}
 
-![](../../.gitbook/assets/image%20%28282%29.png)
+![](../../.gitbook/assets/tong-yi-wifi.png)
 
 ### **3.查看基本信息**
 
@@ -40,7 +44,7 @@
 
 在这里查找 App 版本信息和 SDK 版本
 
-![](../../.gitbook/assets/1.png)
+![](../../.gitbook/assets/tu-1-cha-kan-ji-ben-xin-xi.png)
 
 **示意2 :** 
 
@@ -48,23 +52,25 @@
 
 【连接正常】
 
-![](../../.gitbook/assets/2.png)
+![](../../.gitbook/assets/tu-2-she-bei-lian-jie-zheng-chang.png)
 
-【界面停止同步】
+【界面暂停同步】
 
-![](../../.gitbook/assets/3-jie-mian-ting-zhi-tong-bu.png)
+![](../../.gitbook/assets/tu-3-jie-mian-zan-ting-tong-bu.png)
 
 这个情况出现是因为电脑端正处于定义的过程中，此时手机端界面若发生变化，为保证定义内容准确性，会暂停界面的同步。当结束定义后会将手机端的界面再次同步至电脑端。
 
 【设备断开连接】
 
-![](../../.gitbook/assets/4-she-bei-duan-kai-lian-jie.png)
+![](../../.gitbook/assets/tu-4-she-bei-duan-kai-lian-jie.png)
 
 当手机端退出正在圈选的应用或无线网断开等情况出现时，可能会导致两端设备连接断开，中断圈选。如要继续圈选可重新扫码进行连接。如要结束圈选，可点击右上角“退出圈选”。
 
 ### **4.异常情况处理**
 
-如果扫码失败，可能是手机 App 与在电脑端选择的应用不符，检查后仍然无法解决可以联系技术支持。
+如果扫码失败，可能存在图中所示原因，检查后仍然无法解决可以联系技术支持。
+
+![](../../.gitbook/assets/sao-ma-shi-bai.png)
 
 ## 三、圈选元素
 
@@ -80,11 +86,11 @@
 
 #### 情况1：多个元素共用一个“点击”动作，常见于商品列表和商品详情等
 
-![](../../.gitbook/assets/5-qing-kuang-1.png)
+![](../../.gitbook/assets/tu-5-duo-yuan-su-gong-yong-yi-ge-dian-ji-shi-jian-vs-du-li-dian-ji-shi-jian.png)
 
 这种情况是因为在这个 app 开发的时候，就把这些元素“绑定”在了一起。你会在右侧的文案中看到“区域”的字样，可以将鼠标移到“所有元素”上面，你将会看到左侧高亮的元素，他们的点击都是一样的，圈哪个元素的数据都是一样的。
 
-![](../../.gitbook/assets/6-qing-kuang-1.png)
+![](../../.gitbook/assets/tu-6-qu-yu-nei-suo-you-yuan-su.png)
 
 我们建议你按照分析的需求来定义这样的元素。
 
@@ -92,7 +98,7 @@
 
 你想要知道不同咖啡的点击情况，这里的元素有很多种“拿铁咖啡”、“23元”、“图片名称”，因为他们共用一个点击的动作，不管点到哪个元素，点击的数据都是一样的，所以你其实只需要定义任意一个元素都可以拿到这个区域的数据；
 
-![](../../.gitbook/assets/7-qing-kuang-1-an-li-1.png)
+![](../../.gitbook/assets/tu-7-an-li-1.png)
 
 **案例 2:**
 
@@ -100,27 +106,27 @@
 
 接下来在「事件分析」中选择这个指标，通过“元素内容”维度来区分，就像定义元素时右侧下面展示的柱图一样。
 
-![](../../.gitbook/assets/123456.png)
+![](../../.gitbook/assets/tu-8-an-li-2.png)
 
 **案例 3:**
 
 你想要知道这个列表不同位置的商品点击情况，也可以用与案例 2 相似的做法，选择这个区域的元素中，带有顺序标示的元素，在这里是外面的框，「不限定顺序」，统计所有位置的总数，然后也是定义“同类元素”，然后在「事件分析」中通过“元素位置”维度来区分。
 
-![](../../.gitbook/assets/23456.png)
+![](../../.gitbook/assets/tu-9-an-li-3.png)
 
 #### 情况2：一个元素有独立的“点击”动作，常见于菜单按钮等 ****
 
 这种情况是因为在这个 app 开发的时候，给每个元素单独设置了“点击”的动作，需要单独圈选。
 
-![](../../.gitbook/assets/10-qing-kuang-2.png)
+![](../../.gitbook/assets/tu-10-duo-yuan-su-gong-yong-yi-ge-dian-ji-shi-jian-vs-du-li-dian-ji-shi-jian.png)
 
 如果一个列表里既有区域圈选的元素也有单个圈选的元素，需要单独圈选单个圈选的元素，因为他们的数据是单独统计的。
 
-![](../../.gitbook/assets/11-qing-kuang-2.png)
+![](../../.gitbook/assets/tu-11-dan-du-tong-ji-de-yuan-su.png)
 
 单个元素的圈选也可以像区域圈选一样定义同类元素，统计多个元素之和，在「事件分析」中通过“元素内容”和“元素位置”维度来区分。
 
-![](../../.gitbook/assets/12-qing-kuang-2.png)
+![](../../.gitbook/assets/tu-12-dan-du-tong-ji-de-yuan-su-de-tong-lei-yuan-su.png)
 
 【对于 H5 元素的圈选方法详见 [https://docs.growingio.com/docs/data-definition/circle/web](https://docs.growingio.com/docs/data-definition/circle/web) 】
 
@@ -138,17 +144,17 @@
 
 在这个例子中，「加入购物车」元素在当前商品详情页的点击数据：
 
-![](../../.gitbook/assets/13-suo-shu-ye-mian.png)
+![](../../.gitbook/assets/tu-13-suo-shu-ye-mian.png)
 
 但是更多情况下，你其实是想统计所有页面中，不管这个按钮在哪些商品详情页，都要统计为「加入购物车」按钮的点击次数，这时就需要把元素所属页面改为所有页面。
 
-![](../../.gitbook/assets/14-suo-shu-ye-mian-suo-you-ye-mian.png)
+![](../../.gitbook/assets/tu-14-zhan-kai-yuan-su-suo-shu-ye-mian.png)
 
 ### **3.在热图模式下圈选元素**
 
 可以在圈选时开启热图模式，来查看点击热度：
 
-![](../../.gitbook/assets/15-re-tu.png)
+![](../../.gitbook/assets/tu-15-xian-shi-re-tu.png)
 
 ## 四、圈选页面
 
@@ -158,11 +164,13 @@
 
 你可以定义你关心的元素页面，以此来统计这些页面被浏览的次数。
 
-![](../../.gitbook/assets/19-yuan-sheng-ye-mian.png)
+![](../../.gitbook/assets/tu-16-ding-yi-yuan-sheng-ye-mian.png)
 
 ### **2.H5 页面**
 
 为了更方便地定义 H5 页面，页面选择中提供快捷模式和自定义模式
+
+![](../../.gitbook/assets/tu-17-ding-yi-h5-ye-mian.png)
 
 **快捷模式 ：该 H5 在本应用内的全部数据**
 
