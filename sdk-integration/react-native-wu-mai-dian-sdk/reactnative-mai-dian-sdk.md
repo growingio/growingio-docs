@@ -14,14 +14,14 @@ description: >-
 * React  Native 埋点 SDK 是在 Android 原生 SDK 上的扩展，参照[ Android 埋点 SDK](../android-sdk/android-mai-dian-sdk.md#ji-cheng-mai-dian-sdk)，集成步骤的 1~4.
 
 {% hint style="danger" %}
-**注意将 SDK 版本号替换成 RN 版本:`RN-track-2.7.9`**
+**注意将 SDK 版本号替换成 RN 版本:`RN-track-2.8.0`**
 {% endhint %}
 
 集成步骤中，只有版本号不同，适配 RN 与原生混合开发场景。
 
 #### 配置示例：
 
-将版本号更改为`RN-track-2.7.0`
+将版本号更改为`RN-track-2.8.0`
 
 ```groovy
 apply plugin: 'com.android.application'
@@ -33,7 +33,7 @@ android {
 }
 dependencies {
     //GrowingIO RN 埋点 SDK
-    implementation 'com.growingio.android:vds-android-agent:RN-track-2.7.0@aar'
+    implementation 'com.growingio.android:vds-android-agent:RN-track-2.8.0@aar'
 }
 ```
 

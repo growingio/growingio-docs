@@ -1,26 +1,53 @@
 # SDK 更新日志
 
+## 2019年7月30日
+
+### Android 2.8.0
+
+**新功能：**
+
+* 【电脑端圈选 APP】 支持**横屏圈选**和**平板电脑端圈选**。
+
+**优化：**
+
+* 初始化 SDK 时长优化。
+
+**修复bug：**
+
+* 修复在 Android 8.0 以上系统圈选时截图 Bitmap Config 为 HAREWARE 图片失败的问题。
+
+### iOS 2.8.0
+
+**新功能：**
+
+* 【电脑端圈选 APP】 支持**横屏圈选**和**平板电脑端圈选**。
+
+**修复bug：**
+
+* 修复在个别模拟器下 crash 的问题；
+* 修复电脑端圈选 APP ，H5页面热图坐标错位的问题。
+
 ## 2019年7月15日
 
-### Android2.7.9
+### Android 2.7.9
 
-修复bug：
+**修复bug：**
 
 * 修复 2.7.8 中卸载重新安装 app ， 访问用户 ID 变更的 bug 。
 
 ## 2019年7月11日
 
-### Android2.7.8
+### Android 2.7.8
 
-新特性：
+**新功能：**
 
 * 增加接口 `setAndroidIdEnable` , `setImeiEnable`, `setGoogleAdIdEnable` 为海外上架应用涉及采集用户 `androidId`, `imei`, `googleAdId` 隐私数据的开关支持。
 
-优化：
+**优化：**
 
 * 兼容点击事件发生 Activity  `onCreate` 生命周期的采集。
 
-修复bug：
+**修复bug：**
 
 * 埋点 SDK 设置用户 ID ， 从未设置 `setUserID`到设置 userID 成功后无 page 事件发出，导致用户 ID 采集遗漏，继而导致登录用户采集遗漏；
 * 修复在 Android 8.0 以上系统圈选时截图 Bitmap Config 为 HAREWARE 图片失败的问题。
@@ -29,7 +56,7 @@
 
 ### iOS 2.7.8
 
-修复bug：
+**修复bug：**
 
 * 修复 iOS13`UISearchBar`崩溃问题；
 * 修复 mobiledebugger 可能出现数据少显示的问题。
@@ -38,34 +65,34 @@
 
 ### Android 2.7.7
 
-新特性：
+**新功能：**
 
 * 适配 ReactNative 0.59.9 版本
 * 适配  react-navigation ^3.11.0
 
-修复bug：
+**修复bug：**
 
 * 修复编译期间用户主项目类文件过多时会触发编译期OOM
 
-优化:
+**优化:**
 
 * 用户授予 `READ_PHONE_STATE` 后动态获取 imei 信息， 减少 imei 为空的统计数量。未优化前统计 imei 条件为：应用有权限后下一次冷启动采集。
 
 ### iOS 2.7.7
 
-新特性：
+**新功能：**
 
 * 适配 ReactNative 0.59.9 版本
 * 适配  react-navigation ^3.11.0
 
-修复bug：
+**修复bug：**
 
 * 修复地理位置相关的多线程问题
 * 修复访问用户 ID 可能为 0 的问题
 * 修复首次安装 app 可能会影响 `statusbar`展示方向问题
 * 修复 hybrid 自定义事件匹配 page 问题
 
-优化：
+**优化：**
 
 * 完善对`SDCycleScrollView`的支持
 
@@ -73,7 +100,7 @@
 
 ### Android 2.7.6
 
-修复 bug :
+**修复 bug :**
 
 * 圈选截图问题，开启硬件加速则会造成离屏缓存，导致截图不准；
 * 圈选增加对内嵌 H5 页面中`chng`（输入框输入）事件的支持。
@@ -82,12 +109,12 @@
 
 ### iOS 2.7.6
 
-优化：
+**优化：**
 
 * 兼容推送低版本 API ；
 * 增强 `GrowingAspectModeSubClass` 的稳定性。
 
-修复bug：
+**修复bug：**
 
 * 圈选增加对内嵌 H5 页面中`chng`（输入框输入）事件的支持。
 
@@ -95,18 +122,18 @@
 
 ### Android 2.7.5
 
-新特性：
+**新功能：**
 
 * 支持 instant run , 方便开发期间提升应用编译速度。
 
-修复bug：
+**修复bug：**
 
 * 修复 Application onCreat 中 new WebView 可能造成的 crash ；
 * 修复 setPageVariable 引起的 fragment 内存泄漏。
 
 ### iOS 2.7.5
 
-修复bug：
+**修复bug：**
 
 * 数据库优化；
 * 打点参数规则修；
@@ -117,43 +144,43 @@
 
 ### Android 2.7.4
 
-新特性：
+**新功能：**
 
 * 支持采集 Lambda 表达式书写的点击事件。
 
-优化：
+**优化：**
 
 * Web 圈选 app 中截屏速度限制；
 * Mobile Debugger 下不发送 imp 事件，降低卡顿的可能性；
 * 优化用户的混淆文件未更新最新版，导致的异常；
 * 去除掉 EventBus 打印的 No Subscriber 日志。
 
-修复bug：
+**修复bug：**
 
 * 用户使用 IdleHandler 更新 UI， 导致的 Mobile debugger 、 web 圈选 app 白屏。
 
 ### iOS 2.7.4
 
-优化：
+**优化：**
 
 * web 圈 app 连接流畅度优化
 * 优化了 mobile debugger 的流畅度
 
-修复bug：
+**修复bug：**
 
 * 修复了`GrowingAspectModeDynamicSwizzling Mode` 下`WKWebView` crash 
 
 ### 2019年3月18日
 
-#### IOS2.7.3
+#### iOS 2.7.3
 
-代码优化：
+**优化：**
 
-优化web圈app
+* 优化web圈app
 
 ### 2019年3月13日
 
-#### IOS 2.7.2
+#### iOS 2.7.2
 
 兼容修复：
 
