@@ -4,6 +4,14 @@ description: GrowingIO 无埋点 SDK 会自动采集用户行为数据、页面�
 
 # iOS 无埋点SDK
 
+{% hint style="success" %}
+「用户浏览事件」自动采集方案火热内测中，请联系客户经理试用此功能。
+
+* - 事件/元素采集更具针对性，提升采集效率
+* - 优化采集逻辑，贴合业务场景，提升数据准确性
+* - 浏览事件关联自定义事件和变量，减少研发埋点工作量
+{% endhint %}
+
 ## **组件化SDK**
 
 GrowingIO iOS SDK 2.8.0 包含以下2个组件SDK:
@@ -62,7 +70,7 @@ GrowingIO iOS SDK 2.8.0 包含以下2个组件SDK:
 
 * 添加编译参数，并注意大小写：
 
-![](../../.gitbook/assets/image%20%28242%29.png)
+![](../../.gitbook/assets/image%20%28243%29.png)
 
 ### 2. 设置 URL Scheme
 
@@ -71,7 +79,7 @@ GrowingIO iOS SDK 2.8.0 包含以下2个组件SDK:
 * 添加新产品：登录官网 -&gt; 点击项目选择框  -&gt; 点击“设置”icon -&gt; 点击“新建应用”  -&gt; 选择添加 iOS 应用 -&gt; 填写“应用名称”，点击下一步 -&gt; 在第二段中标黄字体。
 * 现有产品：登录官网  -&gt;   点击“设置”icon  -&gt;  点击“应用管理”  -&gt;  找到对应产品的 URL Scheme
 
-![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%28190%29.png)
+![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%28191%29.png)
 
 ####    2**.2  添加 URL Scheme（growing.xxxxxxxxxxxxxxxx）到项目中，以便唤醒您的程序进行圈选**
 
@@ -341,7 +349,7 @@ iOS SDK 不支持通知展现的事件采集，但是 Android SDK 支持，这�
 
 然后创建事件分析，等候片刻即可看到数据
 
-![&#x521B;&#x5EFA;&#x63A8;&#x9001;&#x4E8B;&#x4EF6;&#x5206;&#x6790;](../../.gitbook/assets/image%20%28328%29.png)
+![&#x521B;&#x5EFA;&#x63A8;&#x9001;&#x4E8B;&#x4EF6;&#x5206;&#x6790;](../../.gitbook/assets/image%20%28329%29.png)
 
 
 
