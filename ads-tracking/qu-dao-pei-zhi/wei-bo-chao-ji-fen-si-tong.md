@@ -8,3 +8,5 @@
 
 3.将微博超级粉丝通后台生成的“company” 字段复制到GrowingIO后台
 
+![](../../.gitbook/assets/5d8573ed-5807-4523-be87-e11f3659e9a4.png)
+
