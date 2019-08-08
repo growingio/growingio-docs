@@ -105,19 +105,19 @@ public class MyApplication extends Application {
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">setTestMode</td>
+      <td style="text-align:left">setDebugMode</td>
       <td style="text-align:left">false</td>
       <td style="text-align:left">&#x5728;Logcat&#x4E2D;&#x8F93;&#x51FA;&#x91C7;&#x96C6;&#x65E5;&#x5FD7;</td>
       <td
       style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">setDebugMode</td>
+      <td style="text-align:left">setTestMode</td>
       <td style="text-align:left">false</td>
       <td style="text-align:left">
         <p>&#x5B9E;&#x65F6;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x5F00;&#x542F;&#x5219;&#x4E0D;&#x9075;&#x5FAA;&#x79FB;&#x52A8;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x4E0B;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5927;&#x5C0F;&#x9ED8;&#x8BA4;
           3M &#x9650;&#x5236;&#x4EE5;&#x53CA;&#x91C7;&#x96C6;&#x6570;&#x636E;&#x7F13;&#x5B58;30&#x79D2;&#x53D1;&#x9001;&#x7B56;&#x7565;&#x3002;</p>
-        <p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x8005;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#xFF0C;&#x4E00;&#x822C;&#x548C;<code>setTestMode</code>&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;</p>
+        <p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x8005;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#xFF0C;&#x4E00;&#x822C;&#x548C;<code>setDebugMode</code>&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
