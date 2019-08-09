@@ -170,7 +170,7 @@
     * [原始数据导出 API 的升级迁移](api/raw-data-api/yuan-shi-shu-ju-dao-chu-api-de-sheng-ji-qian-yi.md)
     * [原始数据导出格式及处理建议](api/raw-data-api/format.md)
   * [统计数据导出 API](api/reporting-api.md)
-  * [埋点数据上传API（Beta）](api/mai-dian-shu-ju-shang-chuan-api.md)
+  * [埋点数据上传API](api/mai-dian-shu-ju-shang-chuan-api.md)
   * [用户变量上传 API](api/user-property-upload.md)
   * [项目管理 API](api/xiang-mu-guan-li-api.md)
   * [数据管理 API \(GDPR\)](api/delete-visitor-api.md)
