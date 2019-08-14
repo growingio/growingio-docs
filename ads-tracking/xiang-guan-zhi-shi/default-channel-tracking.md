@@ -72,21 +72,37 @@ GrowingIO直接支持百度统计的参数解析；如果您的自主投放追�
 
 #### 4.1 需求背景： <a id="41"></a>
 
-A:针对诸如百度SEM等投放渠道，要求落地页链接为帐户注册主域名
+场景一：针对诸如百度SEM等投放渠道，要求落地页链接为帐户注册主域名
 
-B: 客户有品牌强化需求，希望用自己域名代替GIO短链
+场景二： 客户有品牌强化需求，希望用自己域名代替 GIO 短链域名
 
-#### 4.2 解决方案： <a id="42"></a>
+#### 4.2 解决方案：
 
-开发一个接口专门跳转到Growing的短链。
+贵司SRE运维人员或其他有权限解析域名的管理员新建一个子域名进行CNAME解析，替换GrowingIO后台监测域名，并且使用http协议。
 
-例如提供一个xxx.com/gs/:short\_id的接口，short\_id的参数是大小写敏感的7个字符，包含数字和字符。
+#### 4.3 流程示例：
 
-该接口只要将收到的short\_id参数拼接到 **https://s.growingio.com/** 之后， 并跳转过去即可。
+1、以百度后台为例，假设百度后台申请账号时，填写的主域名为 domain.com；
 
-投放广告前，将GrowingIO中来源管理生成的短链， 如**https://s.growingio.com/fjse7FE** 中的s.growingio.com替换为xxx.com/gs。
+2、GrowingIO后台，生成的监测链接为 https://gio.ren/w/rABC；
 
-如 xxx.com/gs/fjse7FE 。然后拿该链接正常投放就可以了。
+3、域名管理员，新建子域名 tc.domain.com，使用 CNAME 解析到 gio.ren；
+
+4、在投放使用时，将监测链接，gio.ren替换为子域名tc.domain.com：http://tc.domain.com/w/rABC。
+
+（以上 tc.domain.com 仅为示例，具体看贵司的二级域名使用情况。）
+
+#### 4.4 特殊说明：
+
+{% hint style="info" %}
+目前 GrowingIO 监测链接生成使用了 s.growingio.com 及 gio.ren ，如两域名都在投放使用，在映射时需对二者分别进行配置。
+{% endhint %}
+
+配置举例：
+
+1、s.growingio.com 使用 s.domain.com 替换；
+
+2、gio.ren 使用 tc.domain.com 替换。
 
 ### 5. 自主调用Api接口创建链接 <a id="5"></a>
 
