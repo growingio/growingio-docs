@@ -35,7 +35,16 @@ onGroupClick(android/widget/ExpandableListView;android/view/View)
 onChildClick(android/widget/ExpandableListView;android/view/View)
 ```
 
-如果您自定义了 Click 事件， 但是希望 SDK 采集。 可以放置一个 `onClickListener` 作为代理。这种方案及时随着我们的 SDK 升级也会被兼容。
+如果您自定义了 Click 事件， 但是希望 SDK 采集。 可以放置一个 `onClickListener` 作为代理。这种方案即使随着我们的 SDK 升级也会被兼容。
+
+{% hint style="warning" %}
+请注意设置您的 View 可点击： 
+
+```java
+//设置view Clickable, 如果不设置会不能圈选这个 View。
+view.setClickable(true);
+```
+{% endhint %}
 
 ```java
 public void onCustomClick(View view){
@@ -44,7 +53,7 @@ public void onCustomClick(View view){
 	// 为了 GrowingIO 能够采集自定义点击事件，调用 android.view.OnClickListener
     new View.OnClickListener() {
         @Override
-        public void onClick(View v) {}
+        public void onClick(View view) {}
     }.onClick(view);
 }
 ```
