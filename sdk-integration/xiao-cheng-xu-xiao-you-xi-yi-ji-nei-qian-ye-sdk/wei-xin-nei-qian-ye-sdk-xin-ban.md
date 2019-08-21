@@ -73,7 +73,7 @@ description: >-
 
 **GIO如果发现有多应用场景使用同一 H5的情况时，会进行不同应用端的判断，默认判断规则如下：**
 
-![](../../.gitbook/assets/image%20%28323%29.png)
+![](../../.gitbook/assets/image%20%28324%29.png)
 
 **当然，如果您对数据平台的逻辑有要求，您也可以自己进行 platform 的判断，需要在 SDK 初始化时告诉我们，使用如下：**
 
@@ -208,7 +208,7 @@ wx.getUserInfo({
 
 微信信息包含**微信昵称**、**微信头像**、**性别、微信所填国家、微信所填省份、微信所填城市**。
 
-![](../../.gitbook/assets/image%20%28271%29.png)
+![](../../.gitbook/assets/image%20%28272%29.png)
 
 ### 登录用户ID <a id="deng-lu-yong-hu-id"></a>
 

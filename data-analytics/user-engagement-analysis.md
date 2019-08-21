@@ -47,7 +47,7 @@ description: 对活跃用户提供用户”活跃“变化的洞察
 
 根据 **用户类型、用户做的事件、频次、事件的属性** 来定义活跃用户的条件
 
-![](../.gitbook/assets/image%20%28307%29.png)
+![](../.gitbook/assets/image%20%28308%29.png)
 
 例如 GrowingIO 的博客，是一个内容型产品，主要为用户提供数据分析、增长、学习等内容。 \(地址：[http://blog.growingio.com](http://blog.growingio.com)）；针对这个博客，活跃用户的定义，是至少浏览过1 篇博客文章详情页的访问用户。
 
@@ -98,7 +98,7 @@ description: 对活跃用户提供用户”活跃“变化的洞察
 
 例如，选择回流用户，选择用访问来源拆分，可以知道不活跃用户再次活跃的用户来源。
 
-![&#x4EE5;&#x4E0A;&#x4E3A;&#x6D4B;&#x8BD5;&#x793A;&#x4F8B;&#x6570;&#x636E;](../.gitbook/assets/image%20%28304%29.png)
+![&#x4EE5;&#x4E0A;&#x4E3A;&#x6D4B;&#x8BD5;&#x793A;&#x4F8B;&#x6570;&#x636E;](../.gitbook/assets/image%20%28305%29.png)
 
 
 
