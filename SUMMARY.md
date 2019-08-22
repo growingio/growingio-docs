@@ -1,6 +1,7 @@
 # Table of contents
 
 * [GrowingIO 帮助文档](README.md)
+* [快速提交工单](kuai-su-ti-jiao-gong-dan.md)
 * [快速上手-Web](kuai-su-shang-shou-web.md)
 * [快速上手-移动端](kuai-su-shang-shou-yi-dong-duan.md)
 * [快速上手-小程序](kuai-su-shang-shou-xiao-cheng-xu.md)
