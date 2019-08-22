@@ -12,7 +12,7 @@ description: GrowingIO工单系统使用说明
 
 ![](.gitbook/assets/1%20%281%29.png)
 
-描述的问题
+描述问题
 
 ![](.gitbook/assets/2.png)
 
