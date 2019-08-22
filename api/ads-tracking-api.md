@@ -13,7 +13,7 @@
   * [6.1 应用 API](ads-tracking-api.md#app-api)
   * [6.2 推广活动相关 API](ads-tracking-api.md#markerting-api)
   * [6.3 渠道管理 API](ads-tracking-api.md#channel-api)
-  * [6.4 链接创建 API](ads-tracking-api.md#link-api)
+  * [6.4 链接创建与查询 API](ads-tracking-api.md#link-api)
     * [6.4.1 ](ads-tracking-api.md#deeplink-api)[吸引用户直接打开 App](ads-tracking-api.md#deeplink-api)
     * [6.4.2 同时推广 IOS 和 Android 两个平台](ads-tracking-api.md#onelink)
     * [6.4.3 推广 IOS 或 Android 单个平台](ads-tracking-api.md#normallink)
@@ -84,7 +84,7 @@ Token获取详见：[“GrowingIO接口认证”文档](authentication.md)
 
 #### 6.1 应用 API <a id="app-api"></a>
 
-新建应用请在GIO后台操作，此接口仅提供应用ID的查询。（GET 和 POST 请求Head中均需要携带Token）
+新建应用请在GIO后台操作，此接口仅提供应用ID的查询。（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization）
 
 GET `https://www.growingio.com/api/v1/projects/:project_id/meta/products` 
 
@@ -130,7 +130,7 @@ Response 示例：
 
 #### 6.2 推广活动相关 API <a id="markerting-api"></a>
 
-此部分相关接口可以查询已有活动的活动ID或者创建新的活动。（GET 和 POST 请求Head中均需要携带Token）
+此部分相关接口可以查询已有活动的活动ID或者创建新的活动。（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization）
 
 POST `https://www.growingio.com/api/v1/projects/:project_id/meta/campaigns` 
 
@@ -190,7 +190,7 @@ Response 示例：
 
 ####  6.3 渠道管理 API <a id="channel-api"></a>
 
-此相关部分API可以进行渠道的ID查询及新建渠道。（GET 和 POST 请求Head中均需要携带Token） 
+此相关部分API可以进行渠道的ID查询及新建渠道。（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization）
 
 POST `https://www.growingio.com/api/v1/projects/:project_id/meta/channels` 
 
@@ -199,12 +199,14 @@ Request:
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | name | String | 名字 | 二维码推广 |
+| deprecated | Boolean | 渠道是否下线 | 默认false未下线，true已下线 |
 
 示例：
 
 ```text
 {
-  "name":"二维码推广"
+  "name":"二维码推广",
+  "deprecated":"false"
 }
 ```
 
@@ -216,6 +218,7 @@ Response: Status Code: 200 OK
 | :--- | :--- | :--- | :--- |
 | id | String | channel id | HnKoPtrq |
 | name | String | 名字 | 今日头条 |
+| deprecated | Boolean | 渠道是否下线 | 默认false未下线，true已下线 |
 
 Response 示例：
 
@@ -223,16 +226,18 @@ Response 示例：
 [
   {
     "id": "gnPNkoWA",
-    "name": "二维码推广"
+    "name": "二维码推广",
+    "deprecated":"false"
   },
   {
     "id": "HnKoPtrq",
-    "name": "今日头条"
+    "name": "今日头条",
+    "deprecated":"false"
   }
 ]
 ```
 
-#### 6.4 链接创建 API <a id="link-api"></a>
+#### 6.4 链接创建与查询 API <a id="link-api"></a>
 
 GIO目前提供两种类型的监测链接：吸引用户直接打开 App，增加 App 下载量。
 
@@ -249,7 +254,7 @@ GIO目前提供两种类型的监测链接：吸引用户直接打开 App，增�
 
 #### **6.4.1** 吸引用户直接打开 App <a id="deeplink-api"></a>
 
-链接创建逻辑（GET 和 POST 请求Head中均需要携带Token）：
+链接创建逻辑（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization）：
 
 ![](../.gitbook/assets/growingio_tracking_api_3.png)
 
@@ -260,11 +265,11 @@ Request:
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | 0523信息流推广 |
-| project\_id | String | 项目 UID | pRPDxPNm |
+| project\_id | String | 项目 UID | 4PYJMWoM |
 | productIdAndroid | String | Android产品ID \(从应用 API获取\) 选填,\(iOS Android 至少填一个\)  | Lj9yBRyD |
-| productIdIos | String | iOS产品ID \(从应用 API获取\) 选填,\(iOS Android 至少填一个\) | GQPDxPNm |
-| channelId | String | 渠道 id，必填 | gnPNkoWA |
-| campaignIdIos | String | iOS 活动 id 选填 \(iOS Android 必填至少一个\) | GHxDxPNm |
+| productIdIos | String | iOS产品ID \(从应用 API获取\) 选填,\(iOS Android 至少填一个\) | rREJ88PL |
+| channelId | String | 渠道 id，必填 | d4PY3M9M |
+| campaignIdIos | String | iOS 活动 id 选填 \(iOS Android 必填至少一个\) | 4RzMvWd9 |
 | campaignIdAndroid | String | Android活动id 选填 \(iOS Android 必填至少一个\) | La9BwRne |
 | downloadUrlIos | String | ios下载链接 选填 | http://www.growingio.com |
 | downloadUrlAndroid | String | Android下载链接 选填 | http://www.growingio.com |
@@ -276,9 +281,9 @@ Request:
 ```text
 {
         "name": "0523信息流推广",
-        "productIdIos": "GQPDxPNm",
-        "channelId": "gnPNkoWA",
-        "campaignIdIos": "GHxDxPNm",
+        "productIdIos": "rREJ88PL",
+        "channelId": "d4PY3M9M",
+        "campaignIdIos": "4RzMvWd9",
         "downloadUrlIos": "http://www.growingio.com"
 }
 ```
@@ -287,64 +292,66 @@ Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
-| linkId | String | 监测链接ID | d1ev8VE |
-| id | String | 资源id | GQPDxPNm |
+| linkId | String | 监测链接ID | d0B4MKe |
+| id | String | 资源id | LlPQka9p |
 | name | String | 链接名称 | 0523信息流推广 |
-| trackingUrl | String | 监测链接 | https://gio.ren/d1ev8VE |
+| trackingUrl | String | 监测链接 | https://gio.ren/d0B4MKe |
 | productIdAndroid | String | Android 产品ID | Lj9yBRyD |
 | productNameAndroid | String | 应用名称 | Growingio Android测试产品 |
-| productIdIos | String | iOS 产品ID | PNgtkoWQ |
-| productNameIos | String | 应用名称 | Growingio IOS测试产品 |
-| channelId | String | 渠道 id | KpPNkoWA |
-| channelName | String | 渠道名称 | Growingio 测试渠道 |
-| campaignIdIos | String | iOS 活动 id | gnPNkoWA |
+| productIdIos | String | iOS 产品ID | rREJ88PL |
+| productNameIos | String | 应用名称 | RnTestiOS |
+| channelId | String | 渠道 id | d4PY3M9M |
+| channelName | String | 渠道名称 | 打点 |
+| campaignIdIos | String | iOS 活动 id | 4RzMvWd9 |
 | campaignIdAndroid | String | Android 活动 id | La9BwRne |
-| campaignNameIos | String | iOS 应用所属推广活动名称 | Growingio 测试 |
+| campaignNameIos | String | iOS 应用所属推广活动名称 | 测试活动\_ch |
 | campaignNameAndroid | String | Android 应用所属推广活动名称 | Growingio 测试 |
 | downloadUrlIos | String | ios下载链接 | http://www.download.com |
 | downloadUrlAndroid | String | Android下载链接 | http://www.download.com |
 | iosParams | String | iOS 唤醒参数 | {"uri":"key1:value1&key2:value2"} |
 | androidParams | String | Android 唤醒参数 | {"uri":"key1:value1&key2:value2"} |
-| urlSchemaIos | String | ios url schema | 8137d31f4e7b819f |
+| urlSchemaIos | String | ios url schema | 80310c35a53c9a45 |
 | urlSchemaAndroid | String | Android url scheme | 6137d41f4e7b819g |
 | status | String | 状态 | activated |
-| creatorId | String | 创建人 id | GQPDxPNm |
-| creatorName | String | 创建人名称 | 张溪梦 |
-| updaterId | String | 最后更新人 id | GQPDxPNm |
-| updaterName | String | 最后更新人名称 | 张溪梦 |
-| createdAt | Long | 创建时间 | 1522411980015 |
-| updatedAt | Long | 更新时间 | 1525768692277 |
+| creatorId | String | 创建人 id | AwoVvo28 |
+| creatorName | String | 创建人名称 | 系统 |
+| updaterId | String | 最后更新人 id | AwoVvo28 |
+| updaterName | String | 最后更新人名称 | 系统 |
+| createdAt | Long | 创建时间 | 1566186819563 |
+| updatedAt | Long | 更新时间 | 1566186819563 |
 
 示例：
 
 ```text
 {
-        "id": "nxog09md",
-        "linkId": "d1ev8VE",
-        "name": "0523信息流推广",
-        "projectId": "pRPDxPNm",
-        "productIdIos": "PNgtkoWQ",
-        "productNameIos": "Growingio IOS测试产品",
-        "productIdAndroid": "Lj9yBRyD",
-        "productNameAndroid": "Growingio Android测试产品",
-        "trackingUrl": "https://gio.ren/d1ev8VE",
-        "downloadUrlIos": "http://www.download.com",
-        "downloadUrlAndroid": "http://www.download.com",
-        "urlSchemaIos": "8137d31f4e7b819f",
-        "urlSchemaAndroid": 6137d41f4e7b819g,
-        "campaignIdIos": "gnPNkoWA",
-        "campaignNameIos": "Growingio 测试",
-        "campaignIdAndroid": "La9BwRne",
-        "campaignNameAndroid": Growingio 测试,
-        "channelId": "KpPNkoWA",
-        "channelName": "test",
-        "status": "activated",
-        "creatorId": "GQPDxPNm",
-        "creatorName": "张溪梦",
-        "updaterId": "GQPDxPNm",
-        "updaterName": "张溪梦",
-        "createdAt": 1522411980015,
-        "updatedAt": 1525768692277
+    "id": "LlPQka9p",
+    "linkId": "d0B4MKe",
+    "name": "0523信息流推广",
+    "projectId": "4PYJMWoM",
+    "productIdIos": "rREJ88PL",
+    "productNameIos": "RnTestiOS",
+    "productIdAndroid": null,
+    "productNameAndroid": null,
+    "trackingUrl": "https://gio.ren/d0B4MKe",
+    "downloadUrlIos": "http://www.growingio.com",
+    "downloadUrlAndroid": null,
+    "urlSchemaIos": "80310c35a53c9a45",
+    "urlSchemaAndroid": null,
+    "campaignIdIos": "4RzMvWd9",
+    "campaignNameIos": "测试活动_ch",
+    "campaignIdAndroid": null,
+    "campaignNameAndroid": null,
+    "iosParams": null,
+    "androidParams": null,
+    "channelId": "d4PY3M9M",
+    "channelName": "打点",
+    "status": "activated",
+    "creatorId": "AwoVvo28",
+    "creatorName": "系统",
+    "updaterId": "AwoVvo28",
+    "updaterName": "系统",
+    "createdAt": 1566186819563,
+    "updatedAt": 1566186819563
 }
 ```
 
@@ -454,7 +461,7 @@ Response: Status Code: 200 OK
 
 #### **6.4.2** 同时推广 IOS 和 Android 两个平台 <a id="onelink"></a>
 
-链接创建逻辑（GET 和 POST 请求Head中均需要携带Token）：
+链接创建逻辑（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization）：
 
  ![](../.gitbook/assets/growingio_tracking_api_4.png) 
 
@@ -465,12 +472,12 @@ Request:
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | tt3ts |
-| project\_id | String | 项目 UID | GQPDxPNm |
-| productIdAndroid | String | Android产品ID, 必填 \(从应用 API获取\) | Lj9yBRyD |
-| productIdIos | String | iOS产品ID, 必填 \(从应用 API获取\) | GQPDxPNm |
-| channelId | String | 渠道 id，必填 | gnPNkoWA |
-| campaignIdIos | String | iOS 活动 id 必填 | ONPNkorA |
-| campaignIdAndroid | String | Android活动id 必填 | La9BwRne |
+| project\_id | String | 项目 UID | 4PYJMWoM |
+| productIdAndroid | String | Android产品ID, 必填 \(从应用 API获取\) | LPdgKARN |
+| productIdIos | String | iOS产品ID, 必填 \(从应用 API获取\) | rREJ88PL |
+| channelId | String | 渠道 id，必填 | yYo10lPl |
+| campaignIdIos | String | iOS 活动 id 必填 | 4AovZoza |
+| campaignIdAndroid | String | Android活动id 必填 | G39l3o20 |
 | redirectUrl | String | 跳转链接 选填 | http://www.download.com |
 
 示例：
@@ -478,12 +485,12 @@ Request:
 ```text
 {
     "name": "tt3ts",
-    "productIdIos": "GQPDxPNm",
-    "productIdAndroid": "Lj9yBRyD",
+    "productIdIos": "rREJ88PL",
+    "productIdAndroid": "LPdgKARN",
     "redirectUrl": "http://www.download.com",
-    "campaignIdIos": "ONPNkorA",
-    "campaignIdAndroid": "La9BwRne",
-    "channelId": "gnPNkoWA"
+    "campaignIdIos": "4AovZoza",
+    "campaignIdAndroid": "G39l3o20",
+    "channelId": "yYo10lPl"
 }
 ```
 
@@ -491,57 +498,57 @@ Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
-| linkId | String | 监测链接ID | o2VQjBL |
-| id | String | 资源id | Lj9yBRyD |
+| linkId | String | 监测链接ID | oBWXRgK |
+| id | String | 资源id | bR7mgxzo |
 | name | String | 链接名称 | tt3ts |
-| projectId | String |  项目 UID | GQPDxPNm |
-| productIdAndroid | String | Android产品ID | nTeDxPNm |
-| productNameAndroid | String | Android 产品名称 | Growingio IOS测试产品 |
-| productIdIos | String | iOS产品ID | GQPDxytE |
-| productNameIos | String | iOS产品名称 | Growingio Android测试产品 |
-| trackingUrl | String | GrowingIO 分配的追踪链接 | https://gio.ren/o2VQjBL |
-| redirectUrl | String | 目标链接 | http://www.growingio.com |
-| channelId | String | 渠道 id | OpPDxYtW |
-| channelName | String | 渠道名称 | Growingio 测试渠道 |
-| campaignIdIos | String | iOS 活动ID | PQyBRPTq |
-| campaignIdAndroid | String | Android 活动ID | GQyBRPNm |
-| campaignNameIos | String | iOS 应用所属推广活动名称 | tt |
-| campaignNameAndroid | String | Android 应用所属推广活动名称 | tt |
+| projectId | String |  项目 UID | 4PYJMWoM |
+| productIdAndroid | String | Android产品ID | LPdgKARN |
+| productNameAndroid | String | Android 产品名称 | Android SDK Demo |
+| productIdIos | String | iOS产品ID | rREJ88PL |
+| productNameIos | String | iOS产品名称 | RnTestiOS |
+| trackingUrl | String | GrowingIO 分配的追踪链接 | https://gio.ren/oBWXRgK |
+| redirectUrl | String | 目标链接 | http://www.download.com |
+| channelId | String | 渠道 id | yYo10lPl |
+| channelName | String | 渠道名称 | 一二三四五六七八... |
+| campaignIdIos | String | iOS 活动ID | 4AovZoza |
+| campaignIdAndroid | String | Android 活动ID | G39l3o20 |
+| campaignNameIos | String | iOS 应用所属推广活动名称 | 今日头条ios |
+| campaignNameAndroid | String | Android 应用所属推广活动名称 | 智汇推验证\_android |
 | status | String | 状态 | activated |
-| creatorId | String | 创建人 id | MkJDxPNm |
-| creatorName | String | 创建人名称 | 张溪梦 |
-| updaterId | String | 最后更新人 id | MkJDxPNm |
-| updaterName | String | 最后更新人名称 | 张溪梦 |
-| createdAt | Long | 创建时间 | 1522411980015 |
-| updatedAt | Long | 更新时间 | 1525768692277 |
+| creatorId | String | 创建人 id | AwoVvo28 |
+| creatorName | String | 创建人名称 | 系统 |
+| updaterId | String | 最后更新人 id | AwoVvo28 |
+| updaterName | String | 最后更新人名称 | 系统 |
+| createdAt | Long | 创建时间 | 1566187356083 |
+| updatedAt | Long | 更新时间 | 1566187356083 |
 
 示例：
 
 ```text
 {
-        "id": "Lj9yBRyD",
-        "linkId": "o2VQjBL",
-        "name": "tt3t",
-        "projectId": "GQPDxPNm",
-        "productIdIos": "GQPDxytE",
-        "productNameIos": "Growingio IOS测试产品",
-        "productIdAndroid": "nTeDxPNm",
-        "productNameAndroid": "Growingio Android测试产品",
-        "trackingUrl": "https://gio.ren/o2VQjBL",
-        "redirectUrl": "http://www.growingio.com",
-        "campaignIdIos": "PQyBRPTq",
-        "campaignNameIos": "tt",
-        "campaignIdAndroid": "GQyBRPNm",
-        "campaignNameAndroid": "tt",
-        "channelId": "OpPDxYtW",
-        "channelName": "Growingio 测试渠道",
-        "status": "activated",
-        "creatorId": "MkJDxPNm",
-        "creatorName": "张溪梦",
-        "updaterId": "MkJDxPNm",
-        "updaterName": "张溪梦",
-        "createdAt": 1522411980015,
-        "updatedAt": 1525768692277
+    "id": "bR7mgxzo",
+    "linkId": "oBWXRgK",
+    "name": "tt3ts",
+    "projectId": "4PYJMWoM",
+    "productIdIos": "rREJ88PL",
+    "productNameIos": "RnTestiOS",
+    "productIdAndroid": "LPdgKARN",
+    "productNameAndroid": "Android SDK Demo",
+    "trackingUrl": "https://gio.ren/oBWXRgK",
+    "redirectUrl": "http://www.download.com",
+    "campaignIdIos": "4AovZoza",
+    "campaignNameIos": "今日头条ios",
+    "campaignIdAndroid": "G39l3o20",
+    "campaignNameAndroid": "智汇推验证_android",
+    "channelId": "yYo10lPl",
+    "channelName": "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十",
+    "status": "activated",
+    "creatorId": "AwoVvo28",
+    "creatorName": "系统",
+    "updaterId": "AwoVvo28",
+    "updaterName": "系统",
+    "createdAt": 1566187356083,
+    "updatedAt": 1566187356083
 }
 ```
 
@@ -608,37 +615,37 @@ Response: Status Code: 200 OK
         "createdAt": 1521642287367,
         "updatedAt": 1521642287367
     },
-    {
-        "id": "KnoqDPka",
-        "linkId": "KnoqDPka_o",
-        "name": "测试123",
+       {
+        "id": "bR7mgxzo",
+        "linkId": "oBWXRgK",
+        "name": "tt3ts",
         "projectId": "4PYJMWoM",
-        "productIdIos": "xRxVp0o5",
-        "productNameIos": "TestAPP",
+        "productIdIos": "rREJ88PL",
+        "productNameIos": "RnTestiOS",
         "productIdAndroid": "LPdgKARN",
         "productNameAndroid": "Android SDK Demo",
-        "trackingUrl": "https://t.growingio.com/app/at2/KnoqDPka_o",
-        "redirectUrl": "http://baidu.com",
-        "campaignIdIos": "vkorEP14",
-        "campaignNameIos": "上线验证_ios",
-        "campaignIdAndroid": "5z98l9ax",
-        "campaignNameAndroid": "上线验证_android",
-        "channelId": "K5RpNzoN",
-        "channelName": "onelink上线",
+        "trackingUrl": "https://gio.ren/oBWXRgK",
+        "redirectUrl": "http://www.download.com",
+        "campaignIdIos": "4AovZoza",
+        "campaignNameIos": "今日头条ios",
+        "campaignIdAndroid": "G39l3o20",
+        "campaignNameAndroid": "智汇推验证_android",
+        "channelId": "yYo10lPl",
+        "channelName": "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十",
         "status": "activated",
-        "creatorId": "nRbm8d93",
-        "creatorName": "xx",
-        "updaterId": "nRbm8d93",
-        "updaterName": "xx",
-        "createdAt": 1509631329798,
-        "updatedAt": 1509631329798
+        "creatorId": "AwoVvo28",
+        "creatorName": "系统",
+        "updaterId": "AwoVvo28",
+        "updaterName": "系统",
+        "createdAt": 1566187356083,
+        "updatedAt": 1566187356083
     }
 ]
 ```
 
 #### **6.4.3** 推广 IOS 或 Android 单个平台 <a id="normallink"></a>
 
-链接创建逻辑（GET 和 POST 请求Head中均需要携带Token）：
+链接创建逻辑（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization）：
 
  ![](https://docs.growingio.com/.gitbook/assets/ads_tracking_api_5.png)
 
@@ -648,73 +655,74 @@ Request:
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
-| name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | 0523信息流推广 |
-| productId | String | 应用ID, 必填  | GQPDxPNm |
-| channelId | String | 渠道 id，必填 | gnPNkoWA |
-| campaignId | String | 活动 id 必填 | UPLNkoWA |
+| name | String | 链接名称,必填.长度50个字符内，同一个账号下系统会进行链接的同名校验，请勿重复提交同名链接。 | normallinkstest2 |
+| productId | String | 应用ID, 必填  | LPdgKARN |
+| channelId | String | 渠道 id，必填 | yYo10lPl |
+| campaignId | String | 活动 id 必填 | G39l3o20 |
 | redirectUrl | String | 跳转链接 选填 | http://www.growingio.com |
 
 示例：
 
 ```text
-    {
-        "name": "0523信息流推广",
-        "productId": "GQPDxPNm",
-        "channelId": "gnPNkoWA",
-        "campaignId": "UPLNkoWA",
+  {
+        "name": "normallinkstest2",
+        "productId": "LPdgKARN",
+        "channelId": "yYo10lPl",
+        "campaignId": "G39l3o20",
         "redirectUrl": "http://www.growingio.com"
-    }
+ }
 ```
 
 Response: Status Code: 200 OK
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
-| linkId | String | 监测链接ID | rPeJG3E |
-| id | String | 资源id | QGPn2PYy |
-| name | String | 链接名称 | ttss23\_Dseeplink\_iOS |
-| projectId | String | 项目 UID | GQPDxPNm |
-| productId | String | 产品ID | PTPDxPNm |
-| appId | String | 产品的包名 | www.gioee.com\_ios |
-| trackingUrl | String | GrowingIO 分配的追踪链接 | https://gio.ren/rPeJG3E |
+| linkId | String | 监测链接ID | reJmomJ |
+| id | String | 资源id | GPn0j0q9 |
+| name | String | 链接名称 | normallinkstest2 |
+| projectId | String | 项目 UID | 4PYJMWoM |
+| productId | String | 产品ID | LPdgKARN |
+| appId | String | 产品的包名 | com.demo.app.androidsdkdemo\_android |
+| trackingUrl | String | GrowingIO 分配的追踪链接 | https://gio.ren/reJmomJ |
 | redirectUrl | String | 跳转链接  | http://www.growingio.com |
-| channelId | String | 渠道 id | GUVDxPNm |
-| channelName | String | 渠道名称 | Growingio 测试渠道 |
-| campaignId | String | 活动 id | YtBDxPNm |
-| campaignName | String | 推广活动名称 | Growingio 测试活动 |
+| channelId | String | 渠道 id | yYo10lPl |
+| channelName | String | 渠道名称 | 一二三四五六七八九十一二三四五六... |
+| campaignId | String | 活动 id | G39l3o20 |
+| campaignName | String | 推广活动名称 | 智汇推验证\_android |
 | status | String | 状态 | activated |
 | creatorId | String | 创建人 id | AwoVvo28 |
 | creatorName | String | 创建人名称 | 系统创建 |
 | updaterId | String | 最后更新人 id | AwoVvo28 |
 | updaterName | String | 最后更新人名称 | 系统创建 |
-| createdAt | Long | 创建时间 | 1527133238808 |
-| updatedAt | Long | 更新时间 | 1527133238808 |
+| createdAt | Long | 创建时间 | 1566188740225 |
+| updatedAt | Long | 更新时间 | 1566188740225 |
 
 示例：
 
 ```text
 {
-        "id": "QGPn2PYy",
-        "linkId": "rPeJG3E",
-        "name": "ttss23_Dseeplink_iOS",
-        "projectId": "GQPDxPNm",
-        "productId": "PTPDxPNm",
-        "appId": "www.gioee.com_ios",
-        "trackingUrl": "https://gio.ren/rPeJG3E",
-        "redirectUrl": "http://www.growingio.com",
-        "impressionUrl": null,
-        "campaignId": "YtBDxPNm",
-        "campaignName": "Growingio 测试渠道",
-        "channelId": "GUVDxPNm",
-        "channelName": "Growingio 测试活动",
-        "status": "activated",
-        "creatorId": "AwoVvo28",
-        "creatorName": "系统创建",
-        "updaterId": "AwoVvo28",
-        "updaterName": "系统创建",
-        "createdAt": 1527133238808,
-        "updatedAt": 1527133238808
-    }
+    "id": "GPn0j0q9",
+    "linkId": "reJmomJ",
+    "name": "normallinkstest2",
+    "projectId": "4PYJMWoM",
+    "productId": "LPdgKARN",
+    "appId": "com.demo.app.androidsdkdemo_android",
+    "trackingUrl": "https://gio.ren/reJmomJ",
+    "redirectUrl": "http://www.growingio.com",
+    "impressionUrl": null,
+    "campaignId": "G39l3o20",
+    "campaignName": "智汇推验证_android",
+    "channelId": "yYo10lPl",
+    "channelName": "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十",
+    "status": "activated",
+    "creatorId": "AwoVvo28",
+    "creatorName": "系统",
+    "updaterId": "AwoVvo28",
+    "updaterName": "系统",
+    "createdAt": 1566188740225,
+    "updatedAt": 1566188740225,
+    "params": null
+}
 ```
 
 查询链接：
@@ -725,168 +733,42 @@ Response: Status Code: 200 OK
 
 示例：
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">&#x5B57;&#x6BB5;&#x540D;</th>
-      <th style="text-align:left">&#x5B57;&#x6BB5;&#x683C;&#x5F0F;</th>
-      <th style="text-align:left">&#x8BF4;&#x660E;</th>
-      <th style="text-align:left">&#x793A;&#x4F8B;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">id</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x8D44;&#x6E90;id</td>
-      <td style="text-align:left">La9BwRne</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">linkId</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x76D1;&#x6D4B;&#x94FE;&#x63A5;id</td>
-      <td style="text-align:left">LU5BwRnO</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">name</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x94FE;&#x63A5;&#x540D;&#x79F0;</td>
-      <td style="text-align:left">&#x6D4B;&#x8BD5;&#x94FE;&#x63A5;&#x4E8C;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">projectId</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x9879;&#x76EE;uid</td>
-      <td style="text-align:left">4PYJMWoM</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">productId</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x4EA7;&#x54C1;id</td>
-      <td style="text-align:left">LPdgKARN</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">appId</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">app&#x5305;&#x540D;</td>
-      <td style="text-align:left">com.demo.app.androidsdkdemo_android</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">trackingUrl</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x76D1;&#x6D4B;&#x94FE;&#x63A5;</td>
-      <td style="text-align:left">
-        <p>https://t.growingio.com/app/</p>
-        <p>at1/La9BwRne?idfa=</p>
-        <p>__IDFA__&amp;idfa_md5</p>
-        <p>=__MD5_IDFA__&amp;stm</p>
-        <p>=__CLICK_TMS__</p>
-        <p>&amp;ip=__CLIENT_IP</p>
-        <p>__&amp;ua=__UA__&amp;callback_param</p>
-        <p>=__APPKEY__</p>
-        <p>&amp;source=__SOURCE_</p>
-        <p>_&amp;sid=__SEARCH_ID_</p>
-        <p>_&amp;clkid=__CLK_ID__</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">redirectUrl</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x8DF3;&#x8F6C;&#x94FE;&#x63A5;</td>
-      <td style="text-align:left">null</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">impressionUrl</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x5E7F;&#x544A;&#x5C55;&#x793A;&#x94FE;&#x63A5;</td>
-      <td style="text-align:left">null</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">campaignId</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">ios&#x6D3B;&#x52A8;id</td>
-      <td style="text-align:left">d4PYjoME</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">campaignName</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">ios&#x6D3B;&#x52A8;&#x540D;&#x79F0;</td>
-      <td style="text-align:left">&#x5927;&#x591C;&#x5BB5;&#x6D3B;&#x52A8;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">channelId</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x6E20;&#x9053;id</td>
-      <td style="text-align:left">GQPDxPNm</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">channelName</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x6E20;&#x9053;&#x540D;&#x79F0;</td>
-      <td style="text-align:left">&#x591A;&#x76DF;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">status</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x72B6;&#x6001;</td>
-      <td style="text-align:left">activated</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">creatorId</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x521B;&#x5EFA;&#x4EBA;id</td>
-      <td style="text-align:left">nPNgQkoW</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">creatorName</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x521B;&#x5EFA;&#x4EBA;&#x540D;&#x79F0;</td>
-      <td style="text-align:left">xx</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">updaterId</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x6700;&#x540E;&#x66F4;&#x65B0;&#x4EBA;id</td>
-      <td style="text-align:left">nPNgQkoW</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">updaterName</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x6700;&#x540E;&#x66F4;&#x65B0;&#x4EBA;&#x540D;&#x79F0;</td>
-      <td style="text-align:left">xx</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">createdAt</td>
-      <td style="text-align:left">Long</td>
-      <td style="text-align:left">&#x521B;&#x5EFA;&#x65F6;&#x95F4;</td>
-      <td style="text-align:left">1521642287367</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">updatedAt</td>
-      <td style="text-align:left">Long</td>
-      <td style="text-align:left">&#x66F4;&#x65B0;&#x65F6;&#x95F4;</td>
-      <td style="text-align:left">1521642287367</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">params</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">&#x817E;&#x8BAF;&#x793E;&#x4EA4;&#x5E7F;&#x544A;&#x53C2;&#x6570;</td>
-      <td
-      style="text-align:left">null</td>
-    </tr>
-  </tbody>
-</table>示例：
+| 字段名 | 字段格式 | 说明 | 示例 |
+| :--- | :--- | :--- | :--- |
+| id | String | 资源id | La9BwRne |
+| linkId | String | 监测链接id | r3A5LOd |
+| name | String | 链接名称 | 测试链接二 |
+| projectId | String | 项目uid | 4PYJMWoM |
+| productId | String | 产品id | LPdgKARN |
+| appId | String | app包名 | com.demo.app.androidsdkdemo\_android |
+| trackingUrl | String | 监测链接 | https://gio.ren/r3A5LOd |
+| redirectUrl | String | 跳转链接 | null |
+| impressionUrl | String | 广告展示链接 | null |
+| campaignId | String | ios活动id | d4PYjoME |
+| campaignName | String | ios活动名称 | 大夜宵活动 |
+| channelId | String | 渠道id | GQPDxPNm |
+| channelName | String | 渠道名称 | 多盟 |
+| status | String | 状态 | activated |
+| creatorId | String | 创建人id | nPNgQkoW |
+| creatorName | String | 创建人名称 | fowindhe111 |
+| updaterId | String | 最后更新人id | nPNgQkoW |
+| updaterName | String | 最后更新人名称 | fowindhe111 |
+| createdAt | Long | 创建时间 | 1521642287367 |
+| updatedAt | Long | 更新时间 | 1521642287367 |
+| params | String | 腾讯社交广告参数 | null |
+
+示例：
 
 ```text
 [
     {
         "id": "La9BwRne",
-        "linkId": "LU5BwRnO",
+        "linkId": "r3A5LOd",
         "name": "测试链接二",
         "projectId": "4PYJMWoM",
         "productId": "LPdgKARN",
         "appId": "com.demo.app.androidsdkdemo_android",
-        "trackingUrl": "https://t.growingio.com/app/at1/La9BwRne?idfa=__IDFA__&idfa_md5=__MD5_IDFA__&stm=__CLICK_TMS__&ip=__CLIENT_IP__&ua=__UA__&callback_param=__APPKEY__&source=__SOURCE__&sid=__SEARCH_ID__&clkid=__CLK_ID__",
+        "trackingUrl":"https://gio.ren/r3A5LOd",
         "redirectUrl": null,
         "impressionUrl": null,
         "campaignId": "d4PYjoME",
@@ -904,12 +786,12 @@ Response: Status Code: 200 OK
     },
     {
         "id": "ebR7WRGz",
-        "linkId": "ebR7WRGz",
+        "linkId": "reJmomJ",
         "name": "验证流程",
         "projectId": "4PYJMWoM",
         "productId": "LPdgKARN",
         "appId": "com.demo.app.androidsdkdemo_android",
-        "trackingUrl": "https://t.growingio.com/app/at1/ebR7WRGz?imei=__IMEI__&imei_md5=__IMEIMD5__&stm=__CLICK_TMS__&ip=__CLIENT_IP__&ua=__UA__&callback_param=__APPKEY__&source=__SOURCE__&sid=__SEARCH_ID__&clkid=__CLK_ID__",
+        "trackingUrl": "https://gio.ren/reJmomJ",
         "redirectUrl": null,
         "impressionUrl": null,
         "campaignId": "vnomv9zJ",
