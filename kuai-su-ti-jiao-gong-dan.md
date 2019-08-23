@@ -10,7 +10,7 @@ description: GrowingIO工单系统使用说明
 
 提交工单入口（项目中点击右上角客服图标）
 
-![](.gitbook/assets/1%20%281%29.png)
+![](.gitbook/assets/1%20%282%29.png)
 
 描述问题
 
@@ -22,7 +22,15 @@ description: GrowingIO工单系统使用说明
 
 查看工单处理进度及回复
 
+第一种方式，工单平台和邮件中提醒。
+
 ![](.gitbook/assets/5.png)
+
+第二种方式，GIO系统内提醒
+
+![](.gitbook/assets/1%20%281%29.png)
+
+![](.gitbook/assets/2%20%282%29.png)
 
 {% hint style="info" %}
 如何获取邀请技术支持权限。
