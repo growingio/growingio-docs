@@ -6,7 +6,7 @@
 
 ![](../../.gitbook/assets/a6439143-82db-467e-a66f-7da32f17746d.png)
 
-![](../../.gitbook/assets/image%20%28143%29.png)
+![](../../.gitbook/assets/image%20%28148%29.png)
 
 ​​
 

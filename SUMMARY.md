@@ -22,6 +22,7 @@
     * [Web 端热图](data-analytics/heatmap/heatmap-web.md)
     * [App 热图](data-analytics/heatmap/heatmap-app.md)
   * [单图](data-analytics/charts.md)
+  * [微信应用用户分析](data-analytics/wei-xin-ying-yong-yong-hu-fen-xi.md)
   * [小程序-分享分析](data-analytics/xiao-cheng-xu-fen-xiang-fen-xi.md)
 * [看板](dashboard/README.md)
   * [自定义首页](dashboard/homepage.md)

@@ -18,7 +18,7 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
 
 ![&#x4E8B;&#x4EF6;&#x548C;&#x53D8;&#x91CF;](https://lh6.googleusercontent.com/A0rAnnpKQUnR0_mRW77uotOr7eQxB731Q61cvL3pIQe-PrZ_0qaez69oAWZ6Da5eKzVICJtvrS2vX934zQ9UhlHgkV0-Nenh_Oo1_9uMbjBJzj3Je8zRnUr_TJZOWIO4cfDbwDm1)
 
-![web &#x5708;&#x9009;](../../.gitbook/assets/image%20%2822%29.png)
+![web &#x5708;&#x9009;](../../.gitbook/assets/image%20%2823%29.png)
 
 {% hint style="info" %}
 遵循两个原则：
