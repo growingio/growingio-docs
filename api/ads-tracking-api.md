@@ -67,16 +67,16 @@ Token获取详见：[“GrowingIO接口认证”文档](authentication.md)
 
 ### 5.认证说明 <a id="authentication"></a>
 
-详细的认证过程请参考：[认证说明](authentication.md#authorization)
+详细的认证过程请参考：[认证说明](authentication.md#authorization)，[参考代码](https://github.com/growingio/tracking-link-examples/blob/master/src/main/scala/io/growing/openapi/AuthUtils.scala)。
 
 | 名字 | 类型 | 描述 | 示例 |
 | :--- | :--- | :--- | :--- |
-| X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | AoSoAAe9RZBmeb4R9zZd8YopJKcNIo5tozLZ9PYmDz2PbiHexQc0gAZ0R03qshRY |
-| Authorization | String | 认证后获取到的 Token | e16b3ccd3e2a4e1e995db36435837828 |
+| X-Client-Id | String | GrowingIO 分配的公钥，请在GrowingIO后台“项目配置”页面获取 | 略 |
+| Authorization | String | 认证后获取到的 Token | 略 |
 
 ### 6.API 接口详细
 
-所有接口的路径参数在 POST 和 GET 的意义相同，示例数据仅供形式上的参考：
+所有接口的路径参数在 POST 和 GET 的意义相同，示例数据仅供形式上的参考，不同接口上下文无关联：
 
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
@@ -84,7 +84,7 @@ Token获取详见：[“GrowingIO接口认证”文档](authentication.md)
 
 #### 6.1 应用 API <a id="app-api"></a>
 
-新建应用请在GIO后台操作，此接口仅提供应用ID的查询。（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization）
+新建应用请在GIO后台操作，此接口仅提供应用ID的查询。（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization），[参考代码](https://github.com/growingio/tracking-link-examples/blob/master/src/main/scala/io/growing/openapi/AppOpenApi.scala)。
 
 GET `https://www.growingio.com/api/v1/projects/:project_id/meta/products` 
 
@@ -130,7 +130,7 @@ Response 示例：
 
 #### 6.2 推广活动相关 API <a id="markerting-api"></a>
 
-此部分相关接口可以查询已有活动的活动ID或者创建新的活动。（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization）
+此部分相关接口可以查询已有活动的活动ID或者创建新的活动。（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization），[参考代码](https://github.com/growingio/tracking-link-examples/blob/master/src/main/scala/io/growing/openapi/CampaignsOpenApi.scala)。
 
 POST `https://www.growingio.com/api/v1/projects/:project_id/meta/campaigns` 
 
@@ -171,7 +171,7 @@ Response: Status Code: 200 OK
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | id | String | campaign id | gnPNkoWA |
-| name | String | 名字 | 大太阳活动 |
+| name | String | 名字 | 双十一推广 |
 
 Response 示例：
 
@@ -179,7 +179,7 @@ Response 示例：
 [
   {
     "id": "gnPNkoWA",
-    "name": "大太阳活动"
+    "name": "双十一推广"
   },
   {
     "id": "La9BwRne",
@@ -190,7 +190,7 @@ Response 示例：
 
 ####  6.3 渠道管理 API <a id="channel-api"></a>
 
-此相关部分API可以进行渠道的ID查询及新建渠道。（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization）
+此相关部分API可以进行渠道的ID查询及新建渠道。（GET 和 POST 请求Head中均需要携带X-Client-Id和Authorization），[参考代码](https://github.com/growingio/tracking-link-examples/blob/master/src/main/scala/io/growing/openapi/ChannelsOpenApi.scala)。
 
 POST `https://www.growingio.com/api/v1/projects/:project_id/meta/channels` 
 
@@ -199,14 +199,12 @@ Request:
 | 字段名 | 字段格式 | 说明 | 示例 |
 | :--- | :--- | :--- | :--- |
 | name | String | 名字 | 二维码推广 |
-| deprecated | Boolean | 渠道是否下线 | 默认false未下线，true已下线 |
 
 示例：
 
 ```text
 {
-  "name":"二维码推广",
-  "deprecated":"false"
+  "name":"二维码推广"
 }
 ```
 
@@ -218,7 +216,6 @@ Response: Status Code: 200 OK
 | :--- | :--- | :--- | :--- |
 | id | String | channel id | HnKoPtrq |
 | name | String | 名字 | 今日头条 |
-| deprecated | Boolean | 渠道是否下线 | 默认false未下线，true已下线 |
 
 Response 示例：
 
@@ -226,20 +223,18 @@ Response 示例：
 [
   {
     "id": "gnPNkoWA",
-    "name": "二维码推广",
-    "deprecated":"false"
+    "name": "二维码推广"
   },
   {
     "id": "HnKoPtrq",
-    "name": "今日头条",
-    "deprecated":"false"
+    "name": "今日头条"
   }
 ]
 ```
 
 #### 6.4 链接创建与查询 API <a id="link-api"></a>
 
-GIO目前提供两种类型的监测链接：吸引用户直接打开 App，增加 App 下载量。
+GIO目前提供两种类型的监测链接：吸引用户直接打开 App，增加 App 下载量，[参考代码](https://github.com/growingio/tracking-link-examples/blob/master/src/main/scala/io/growing/openapi/LinksOpenApi.scala)。
 
 其中增加 App 下载量又分为：
 
@@ -306,8 +301,8 @@ Response: Status Code: 200 OK
 | campaignIdAndroid | String | Android 活动 id | La9BwRne |
 | campaignNameIos | String | iOS 应用所属推广活动名称 | 测试活动\_ch |
 | campaignNameAndroid | String | Android 应用所属推广活动名称 | Growingio 测试 |
-| downloadUrlIos | String | ios下载链接 | http://www.download.com |
-| downloadUrlAndroid | String | Android下载链接 | http://www.download.com |
+| downloadUrlIos | String | ios下载链接 | http://www.growingio.com |
+| downloadUrlAndroid | String | Android下载链接 | http://www.growingio.com |
 | iosParams | String | iOS 唤醒参数 | {"uri":"key1:value1&key2:value2"} |
 | androidParams | String | Android 唤醒参数 | {"uri":"key1:value1&key2:value2"} |
 | urlSchemaIos | String | ios url schema | 80310c35a53c9a45 |
@@ -425,36 +420,6 @@ Response: Status Code: 200 OK
         "updaterName": "xx",
         "createdAt": 1521642287367,
         "updatedAt": 1521642287367
-    },
-    {
-        "id": "DnRbVR3g",
-        "linkId": "dG3pzBA",
-        "name": "上线验证",
-        "projectId": "4PYJMWoM",
-        "productIdIos": "rREJ88PL",
-        "productNameIos": "RnTestiOS",
-        "productIdAndroid": "j9yEwm9y",
-        "productNameAndroid": "renrenda",
-        "trackingUrl": "https://gio.ren/dG3pzBA",
-        "downloadUrlIos": "http://baidu.com",
-        "downloadUrlAndroid": "http://growingio.com",
-        "urlSchemaIos": "80310c35a53c9a45",
-        "urlSchemaAndroid": "8137d31f4e7b819f",
-        "campaignIdIos": "6LPdk4RN",
-        "campaignNameIos": "111_ios",
-        "campaignIdAndroid": "6WoMxNPk",
-        "campaignNameAndroid": "EEE",
-        "iosParams": null,
-        "androidParams": null,
-        "channelId": "gnPNgloW",
-        "channelName": "测试同名渠道新建删除",
-        "status": "activated",
-        "creatorId": "nRbm8d93",
-        "creatorName": "xx",
-        "updaterId": "nRbm8d93",
-        "updaterName": "xx",
-        "createdAt": 1523969909463,
-        "updatedAt": 1523969909463
     }
 ]
 ```
@@ -509,7 +474,7 @@ Response: Status Code: 200 OK
 | trackingUrl | String | GrowingIO 分配的追踪链接 | https://gio.ren/oBWXRgK |
 | redirectUrl | String | 目标链接 | http://www.download.com |
 | channelId | String | 渠道 id | yYo10lPl |
-| channelName | String | 渠道名称 | 一二三四五六七八... |
+| channelName | String | 渠道名称 | 测试渠道 |
 | campaignIdIos | String | iOS 活动ID | 4AovZoza |
 | campaignIdAndroid | String | Android 活动ID | G39l3o20 |
 | campaignNameIos | String | iOS 应用所属推广活动名称 | 今日头条ios |
@@ -541,7 +506,7 @@ Response: Status Code: 200 OK
     "campaignIdAndroid": "G39l3o20",
     "campaignNameAndroid": "智汇推验证_android",
     "channelId": "yYo10lPl",
-    "channelName": "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十",
+    "channelName": "测试渠道",
     "status": "activated",
     "creatorId": "AwoVvo28",
     "creatorName": "系统",
@@ -614,31 +579,6 @@ Response: Status Code: 200 OK
         "updaterName": "xx",
         "createdAt": 1521642287367,
         "updatedAt": 1521642287367
-    },
-       {
-        "id": "bR7mgxzo",
-        "linkId": "oBWXRgK",
-        "name": "tt3ts",
-        "projectId": "4PYJMWoM",
-        "productIdIos": "rREJ88PL",
-        "productNameIos": "RnTestiOS",
-        "productIdAndroid": "LPdgKARN",
-        "productNameAndroid": "Android SDK Demo",
-        "trackingUrl": "https://gio.ren/oBWXRgK",
-        "redirectUrl": "http://www.download.com",
-        "campaignIdIos": "4AovZoza",
-        "campaignNameIos": "今日头条ios",
-        "campaignIdAndroid": "G39l3o20",
-        "campaignNameAndroid": "智汇推验证_android",
-        "channelId": "yYo10lPl",
-        "channelName": "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十",
-        "status": "activated",
-        "creatorId": "AwoVvo28",
-        "creatorName": "系统",
-        "updaterId": "AwoVvo28",
-        "updaterName": "系统",
-        "createdAt": 1566187356083,
-        "updatedAt": 1566187356083
     }
 ]
 ```
@@ -664,7 +604,7 @@ Request:
 示例：
 
 ```text
-  {
+ {
         "name": "normallinkstest2",
         "productId": "LPdgKARN",
         "channelId": "yYo10lPl",
@@ -686,16 +626,17 @@ Response: Status Code: 200 OK
 | trackingUrl | String | GrowingIO 分配的追踪链接 | https://gio.ren/reJmomJ |
 | redirectUrl | String | 跳转链接  | http://www.growingio.com |
 | channelId | String | 渠道 id | yYo10lPl |
-| channelName | String | 渠道名称 | 一二三四五六七八九十一二三四五六... |
+| channelName | String | 渠道名称 | 测试渠道 |
 | campaignId | String | 活动 id | G39l3o20 |
 | campaignName | String | 推广活动名称 | 智汇推验证\_android |
 | status | String | 状态 | activated |
 | creatorId | String | 创建人 id | AwoVvo28 |
-| creatorName | String | 创建人名称 | 系统创建 |
+| creatorName | String | 创建人名称 | 系统 |
 | updaterId | String | 最后更新人 id | AwoVvo28 |
-| updaterName | String | 最后更新人名称 | 系统创建 |
+| updaterName | String | 最后更新人名称 | 系统 |
 | createdAt | Long | 创建时间 | 1566188740225 |
 | updatedAt | Long | 更新时间 | 1566188740225 |
+| params | String | 腾讯社交广告参数 | null |
 
 示例：
 
@@ -713,7 +654,7 @@ Response: Status Code: 200 OK
     "campaignId": "G39l3o20",
     "campaignName": "智汇推验证_android",
     "channelId": "yYo10lPl",
-    "channelName": "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十",
+    "channelName": "测试渠道",
     "status": "activated",
     "creatorId": "AwoVvo28",
     "creatorName": "系统",
@@ -782,29 +723,6 @@ Response: Status Code: 200 OK
         "updaterName": "fowindhe111",
         "createdAt": 1521642287367,
         "updatedAt": 1521642287367,
-        "params": null
-    },
-    {
-        "id": "ebR7WRGz",
-        "linkId": "reJmomJ",
-        "name": "验证流程",
-        "projectId": "4PYJMWoM",
-        "productId": "LPdgKARN",
-        "appId": "com.demo.app.androidsdkdemo_android",
-        "trackingUrl": "https://gio.ren/reJmomJ",
-        "redirectUrl": null,
-        "impressionUrl": null,
-        "campaignId": "vnomv9zJ",
-        "campaignName": "验证流程活动",
-        "channelId": "GQPDxPNm",
-        "channelName": "多盟",
-        "status": "activated",
-        "creatorId": "nPNgQkoW",
-        "creatorName": "fowindhe111",
-        "updaterId": "nPNgQkoW",
-        "updaterName": "fowindhe111",
-        "createdAt": 1499952124854,
-        "updatedAt": 1499952124854,
         "params": null
     }
 ]
