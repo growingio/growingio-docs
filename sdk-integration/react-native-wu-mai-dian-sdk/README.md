@@ -59,6 +59,8 @@ React  Native 无埋点 SDK 是在 Android 原生 SDK 上的扩展，参照 [And
 
 ### 2. 重要配置项
 
+#### 1.添加 GrowingIOPackage
+
 由于 SDK 需要在`java`代码中进行初始化。
 
 在项目的Application中，添加`GrowingIOPackage`：
@@ -76,7 +78,40 @@ public class MainApplication extends Application implements ReactApplication {
 }
 ```
 
+#### 2.混淆文件配置
 
+注意混淆文件比 Android 原生 SDK 多一条 RN 控件的混淆代码，请复制全部内容添加到您的 `proguard_rules.pro` 文件中，如下：
+
+{% code-tabs %}
+{% code-tabs-item title="proguard-rules.pro" %}
+```text
+# GIO RN 控件混淆代码，不添加则会造成点击事件采集失败
+-keep class com.facebook.react.uimanager.JSTouchDispatcher{
+    *;
+}
+-keep class com.growingio.** {
+    *;
+}
+-dontwarn com.growingio.**
+-keepnames class * extends android.view.View
+-keepnames class * extends android.app.Fragment
+-keepnames class * extends android.support.v4.app.Fragment
+-keepnames class * extends androidx.fragment.app.Fragment
+-keep class android.support.v4.view.ViewPager{
+    *;
+}
+-keep class android.support.v4.view.ViewPager$**{
+	*;
+}
+-keep class androidx.viewpager.widget.ViewPager{
+    *;
+}
+-keep class androidx.viewpager.widget.ViewPager$**{
+	*;
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ## iOS 集成
 
