@@ -82,6 +82,8 @@ public class MainApplication extends Application implements ReactApplication {
 
 ### **1. 选择SDK集成方式**
 
+#### 注意:请保证Growing,GrowingCoreKit,GrowingAutoTrackKit,GrowingReactNativeKit版本号一致
+
 一.使用 CocoaPods 管理依赖
 
 1. 添加`pod 'GrowingReactNativeKit'`到Podfile中

@@ -11,6 +11,8 @@ description: >-
 
 ### 1. 选择集成方式
 
+#### 注意: 请保证Growing,GrowingCoreKit版本号一致
+
 #### （1）使用 CocoaPods 快速集成
 
 * 添加`pod 'GrowingCoreKit'`到 Podfile 中

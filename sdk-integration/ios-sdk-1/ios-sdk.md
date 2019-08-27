@@ -32,6 +32,8 @@ GrowingIO iOS SDK 2.8.2 包含以下2个组件SDK:
 
 ### 1. 选择集成方式
 
+#### 注意: 请保证Growing,GrowingCoreKit,GrowingAutoTrackKit版本号一致
+
 #### （1）使用 CocoaPods 快速集成
 
 * 添加`pod 'GrowingAutoTrackKit'`到 Podfile 中
