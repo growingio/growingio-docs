@@ -62,9 +62,7 @@
 
 SDK 端配置：[iOS 端](https://docs.growingio.com/docs/sdk-integration/ios-sdk-1/ios-sdk#deeplink-hui-tiao-can-shu-huo-qu)、[Android 端](https://docs.growingio.com/docs/sdk-integration/android-sdk/android-sdk#deep-link-hui-tiao-can-shu-huo-qu)
 
-Universal Link / 腾讯应用宝微链接：[配置方法](https://docs.growingio.com/docs/configuration/project-configuration#3)
-
-（配图）
+Universal Link / 腾讯应用宝微下载：[配置方法](https://docs.growingio.com/docs/configuration/project-configuration#3)
 
 ### 3 SDK 相关信息
 
@@ -74,7 +72,7 @@ Universal Link / 腾讯应用宝微链接：[配置方法](https://docs.growingi
 | :--- | :--- |
 | 基础Deeplink功能（Scheme打开APP至首页） | 2.3.0 |
 | 直达落地页（Scheme打开至活动页） | 2.3.2 |
-| Universal Link/应用宝微链接支持 | 2.4.1 |
+| Universal Link/应用宝微下载支持 | 2.4.1 |
 
 注：使用 DeepLink 功能需要 SDK 升级到 2.3.0以上，SDK 版本功能向下兼容。
 

@@ -41,16 +41,12 @@ Notice：进入项目管理页面需要管理员权限，请您联系您公司�
 
 #### 4.1配置Universal Link、应用宝微链接
 
-* 在应用管理页面，配置Universal Link，应用宝微链接（可选项）。
+* 在应用管理页面，配置Universal Link，应用宝微下载（可选项）。
 * 配置Universal Link将会需要您公司的iOS工程师协同配合，在Xcode客户端进行操作。
 
 ![&#x627E;&#x5230;&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x9875;&#x9762;](../.gitbook/assets/image%20%2856%29.png)
 
 ![](../.gitbook/assets/ying-yong-guan-li.png)
-
-![](../.gitbook/assets/unilink.png)
-
-![](../.gitbook/assets/pei-zhi-wei-lian-jie.jpg)
 
 * 您需要按照如下提示完成配置Universal Link的配置
 
@@ -78,7 +74,9 @@ applinks:gio.ren
 
 
 
-4.应用宝微链接：GrowingIO 提供跳转到应用宝微链接的功能，应用宝微链接为腾讯应用宝体系下的微下载链接
+4.应用宝微下载：GrowingIO 提供跳转到应用宝微下载的功能，应用宝微下载为腾讯应用宝体系下的微下载链接
+
+![](../.gitbook/assets/tu-pian%20%281%29.png)
 
 5.完成配置
 

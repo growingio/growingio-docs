@@ -274,7 +274,7 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 
 使用 Universal Link 唤醒APP， 步骤如下：
 
-1.配置链接：[配置 Universal Link 、应用宝微链接（可选项）](../../configuration/project-configuration.md#4-1-pei-zhi-universal-link-ying-yong-bao-wei-lian-jie)。
+1.配置链接：[配置 Universal Link 、应用宝微下载（可选项）](../../configuration/project-configuration.md#4-1-pei-zhi-universal-link-ying-yong-bao-wei-lian-jie)。
 
 2.请在`AppDelegate.m`添加以下代码：
 
