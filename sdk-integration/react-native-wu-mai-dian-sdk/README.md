@@ -129,7 +129,7 @@ public class MainApplication extends Application implements ReactApplication {
 
 二.手动安装
 
-1. 获取 [GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.8.2.zip)、[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.8.2.zip)、[GrowingReactNativeKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-ReactNativeKit-2.8.2.zip)、[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.8.2.zip)包
+1. 获取 [GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.8.3.zip)、[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.8.3.zip)、[GrowingReactNativeKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-ReactNativeKit-2.8.3.zip)、[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.8.3.zip)包
 2. 解压上述 iOS SDK 压缩文件
 3. 将 Growing.h 、module.modulemap 和 GrowingCoreKit.framework、GrowingAutoTrackKit.framework、GrowingReactNativeKit.framework
 

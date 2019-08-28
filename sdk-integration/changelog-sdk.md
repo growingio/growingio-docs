@@ -1,5 +1,13 @@
 # SDK 更新日志
 
+## 2019年8月28日
+
+### iOS 2.8.3
+
+**修复bug：**
+
+* 修复 iOS 9 `UIInputWindowController`在`GrowingAspectModeSubClass` crash的问题
+
 ## 2019年8月27日
 
 ### iOS 2.8.2
