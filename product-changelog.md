@@ -60,7 +60,7 @@ description: 我们一直在迭代！
 
 **关键词：GIO 看数助手 \| 小程序**
 
-![](.gitbook/assets/image%20%28270%29.png)
+![](.gitbook/assets/image%20%28271%29.png)
 
 「GIO看数助手」小程序，随时随地用微信小程序看数据！
 
@@ -192,7 +192,7 @@ description: 我们一直在迭代！
 
 我们为**企业权限管理用户**优化了预置看板的权限设置功能。超级管理员可以设置首页侧边预置看板的可见用户的范围。
 
-![](.gitbook/assets/image%20%28311%29.png)
+![](.gitbook/assets/image%20%28312%29.png)
 
 * **历史注册用户ID以及注册日期支持上传**
 

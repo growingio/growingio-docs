@@ -1,10 +1,8 @@
 ---
-description: >-
-  为 小程序（包括微信、支付宝、百度小程序等）内 H5 页面、微信公众号 H5 应用等提供统一的数据采集 SDK。目前 H5 内嵌页 SDK
-  属于内测beta版本，如有需求，请联系GrowingIO和您对接的客户成功经理或销售，申请灰度试用。
+description: 为 小程序（包括微信、支付宝、百度小程序等）内 H5 页面、微信公众号 H5 应用等提供统一的数据采集 SDK。
 ---
 
-# H5 内嵌页 SDK （beta 新版）
+# H5 内嵌页 SDK
 
 ## 内嵌页SDK集成前工作 <a id="wei-xin-nei-qian-ye-sdk-ji-cheng-qian-gong-zuo"></a>
 
@@ -73,7 +71,7 @@ description: >-
 
 **GIO如果发现有多应用场景使用同一 H5的情况时，会进行不同应用端的判断，默认判断规则如下：**
 
-![](../../.gitbook/assets/image%20%28336%29.png)
+![](../../.gitbook/assets/image%20%28337%29.png)
 
 **当然，如果您对数据平台的逻辑有要求，您也可以自己进行 platform 的判断，需要在 SDK 初始化时告诉我们，使用如下：**
 
@@ -208,7 +206,7 @@ wx.getUserInfo({
 
 微信信息包含**微信昵称**、**微信头像**、**性别、微信所填国家、微信所填省份、微信所填城市**。
 
-![](../../.gitbook/assets/image%20%28281%29.png)
+![](../../.gitbook/assets/image%20%28282%29.png)
 
 ### 登录用户ID <a id="deng-lu-yong-hu-id"></a>
 

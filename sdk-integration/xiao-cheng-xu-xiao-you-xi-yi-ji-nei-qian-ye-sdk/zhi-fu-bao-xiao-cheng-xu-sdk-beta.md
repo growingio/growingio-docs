@@ -2,7 +2,7 @@
 description: 支付宝小程序SDK目前属于灰度内测功能，如有需求，请联系您的客户成功经理或商务对接人，申请进行灰度内测。
 ---
 
-# 支付宝小程序 SDK （beta\)
+# 支付宝小程序 SDK
 
 ## 接入前准备
 
@@ -14,7 +14,7 @@ description: 支付宝小程序SDK目前属于灰度内测功能，如有需求�
 
 然后会到达SDK集成页面，**平台**选择支付宝小程序，填写支付宝小程序的应用名称，和支付宝小程序的AppID ,点击“下一步”，即可以到达支付宝小程序SDK接入的页面。
 
-![](../../.gitbook/assets/image%20%28259%29.png)
+![](../../.gitbook/assets/image%20%28260%29.png)
 
 目前仅支持小程序类应用集成在同一个项目下，暂不支持小程序产品和web\iOS\Android端产品集成在同一项目下。
 
@@ -219,7 +219,7 @@ gio('setUserId', YOUR_USER_ID);
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面，点击右下角“**检测数据”**。请在添加了跟踪代码的支付宝小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
 
-![](../../.gitbook/assets/image%20%28332%29.png)
+![](../../.gitbook/assets/image%20%28333%29.png)
 
 ![](../../.gitbook/assets/image%20%28182%29.png)
 
