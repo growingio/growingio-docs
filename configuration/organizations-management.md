@@ -54,7 +54,7 @@ GrowingIO 组织管理预置了三种权限角色，分别为拥有者、管理�
 
 组织的拥有者与管理员可以在组织概览功能界面中查看公司组织在 GrowingIO 中的以下内容：
 
-![](https://lh3.googleusercontent.com/bCnKToPxAGhSMTP_LuVYhhpsIk4T1Vd11qOEnHE5_8_-C8VtKJ42DklDPeRTCj88F9hurtzoNcjNkuxGq_hLCrE5pAE_9dH0FmCdXIb5icYSTz-rZRNeeP49liKcYC72PAU3IsB2)
+![](../.gitbook/assets/zu-zhi-guan-li-1.png)
 
 1. **组织基本信息：**包含组织名称、组织 ID \(org\_id\)、组织拥有者、组织项目数、组织应用数、组织成员数与组织创建日期等信息，组织的拥有者与管理员可以通过此模块了解在 GrowingIO 中组织的基本情况。另外，组织拥有者可以在该模块中进行修改组织名称与更换组织拥有者的操作。
 2. **组织基础数据：**包含组织本月平均 DAU 与上个月平均 DAU 两部分数据；
@@ -66,7 +66,7 @@ GrowingIO 组织管理预置了三种权限角色，分别为拥有者、管理�
 
 组织的拥有者与管理员可以在组织项目功能界面中查看公司组织在 GrowingIO 中接入的项目列表以及各项目的基本情况，并进行新建项目、管理项目与删除项目等操作。各功能的操作说明如下：
 
-![](https://lh6.googleusercontent.com/HqKWztRHe5all70MUPpsXLIFjP3ZW1oa3u3BRU1pIMgOwL2Am1mJRVdS9A2MlkLaHt48Oy23ms6exx6kwi8ea_md6MZG1yoFelx2Yx_lV73Z96AhpjRu8kMhwL5AfwGw8BkuHXzH)
+![](../.gitbook/assets/zu-zhi-guan-li-2.png)
 
 1. **新建项目：**组织的拥有者与管理员可以通过点击新建项目按钮进行新建项目的操作。组织的拥有者新建项目时，项目角色为超级管理员；组织管理员新建项目时，组织拥有者会和其一起作为项目超级管理员进入到项目当中；
 2. **项目管理：**点击项目名称可以进入项目管理界面，但该操作受项目权限控制，只有当组织成员在项目中拥有项目管理权限时，才可以通过点击项目名称进入项目管理界面；
@@ -80,7 +80,7 @@ GrowingIO 组织管理预置了三种权限角色，分别为拥有者、管理�
 
 组织的拥有者与管理员可以在组织成员功能界面当中查看公司组织在 GrowingIO 下的所有成员列表与成员基本情况，并进行新邀请成员、管理成员、禁用成员与移除成员等操作。各功能的操作说明如下：
 
-![](https://lh4.googleusercontent.com/50mazhZDnokLRSP2-BcSVRG8OxaqcbuZOFjW1Jv8i4hLjkimeDeReFEgLOXo2Y5xQm6i83ErDOq0znt6efHSPSPKJLF9S7HQQqzjxWqX7Vhd1I3vYPhEvfpsDiZW0GSs8q7KfEFU)
+![](../.gitbook/assets/zu-zhi-guan-li-3.png)
 
 1. **邀请成员：**组织的拥有者与管理员可以邀请成员进到组织与组织下的项目当中。邀请成员时可为组织成员设置组织角色权限，并能够邀请成员至多个项目，并分别为项目权限角色，一次可以邀请多位成员
 2. **调成成员组织角色（限组织拥有者）：**组织拥有者能对组织成员分配管理员角色，或是对组织成员的既有角色进行调整；
@@ -108,7 +108,7 @@ GrowingIO 组织管理预置了三种权限角色，分别为拥有者、管理�
 
 组织的拥有者与管理员可以在成员使用看板功能界面中查看组织成员过去一段时间在 GrowingIO 上的的情况，成员使用看板包含以下图表：
 
-![](https://lh4.googleusercontent.com/yY0JvhiBG0wHEoGyPjS-1UAjL61_o40hVZuBCkcsZCH58CAaNVgZZD4QB-n4gWc4yHxH4fi2INIAb_2d1F5koHoLY86HxDopfEjLM9lVAWOkx4H2xK8j2iC79crH8gjKEscZuCvK)
+![](../.gitbook/assets/zu-zhi-guan-li-4.png)
 
 1. **过去 7 天登录成员数：**展示了过去 7 天登录 GrowingIO 的组织成员总数，以及每天的登录用户数量；
 2. **过去 90 天每周登录成员数：**展示了过去 90 天登录 GrowingIO 的组织成员总数，以及每周的登录用户数量；
