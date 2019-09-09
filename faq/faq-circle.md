@@ -193,7 +193,7 @@ URL Scheme 填写错误， 请检查您的 manifest.xml 文件中 Url Scheme 是
 
 **iOS：**
 
-[请参照文档正确配置 URL Scheme](../sdk-integration/ios-sdk-1/ios-sdk.md#2-she-zhi-url-scheme)，并检查确认和官网中的应用管理中的一致。
+[请参照文档正确配置 URL Scheme](../sdk-integration/ios-sdk/ios-sdk-2.x.md#2-she-zhi-url-scheme)，并检查确认和官网中的应用管理中的一致。
 
 #### **如果能够唤起APP，但是看不到小红点：**
 
@@ -227,5 +227,5 @@ if (data.getScheme().startsWith("growing.")){
 
 **iOS：**
 
-[是否添加了圈选激活代码](../sdk-integration/ios-sdk-1/ios-sdk.md#23-zai-appdelegate-zhong-tian-jia-ji-huo-quan-xuan-de-dai-ma)。
+[是否添加了圈选激活代码](../sdk-integration/ios-sdk/ios-sdk-2.x.md#23-zai-appdelegate-zhong-tian-jia-ji-huo-quan-xuan-de-dai-ma)。
 

@@ -22,7 +22,7 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 
 #### 添加iOS埋点SDK依赖
 
-Flutter埋点插件是在 iOS 原生 SDK 上的扩展，请参照 [iOS 埋点 SDK 集成步骤 1~3 ](ios-sdk-1/mai-dian-sdk-ji-cheng.md#mai-dian-sdk-ji-cheng)，操作完全一致
+Flutter埋点插件是在 iOS 原生 SDK 上的扩展，请参照 [iOS 埋点 SDK 集成步骤 1~3 ](ios-sdk/mai-dian-sdk-ji-cheng.md#mai-dian-sdk-ji-cheng)，操作完全一致
 
 ### 4. 常见问题
 

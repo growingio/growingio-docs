@@ -5,21 +5,24 @@ description: >-
   原生开发，并且希望自动采集用户的点击事件、页面浏览事件等无埋点事件， 请集成 iOS 无埋点SDK 。
 ---
 
-# IOS埋点SDK
+# iOS埋点SDK
 
 ## 埋点 SDK集成 
 
 ### 1. 选择集成方式
 
+#### 注意: 请保证Growing,GrowingCoreKit版本号一致
+
 #### （1）使用 CocoaPods 快速集成
 
 * 添加`pod 'GrowingCoreKit'`到 Podfile 中
 * 执行`pod update`，不要用`--no-repo-update`选项
+* **\(optional\)** GrowingIO推荐您添加**AdSupport.framework**依赖库,用于来源管理激活匹配,有利于您更好的分析数据 ,添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
 * 直接进行第 2 步 “[设置 URL Scheme](mai-dian-sdk-ji-cheng.md#2-she-zhi-url-scheme)”
 
 #### （2）手动集成 SDK 
 
-* 下载 2.6.5 版 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.6.5.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.6.5.zip)
+* 下载 iOS SDK以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.8.3.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.8.3.zip)
 * 解压 iOS SDK 压缩文件
 *  将Growing.h,GrowingCoreKit.framework添加到iOS工程中。
 
@@ -39,6 +42,8 @@ description: >-
 | libicucore.tbd | 用于WebSocket |
 | libsqlite3.tbd | 存储日志 |
 | CoreLocation.framework | 用于读取地理位置信息（如果您的app有权限） |
+| JavaScriptCore.framework | Web圈app交互 |
+| WebKit.framework | Web圈选 |
 
 {% hint style="warning" %}
 #### 提醒：添加项目依赖库的位置在项目设置target -&gt; 选项卡General -&gt; Linked Frameworks and Libraries
@@ -46,7 +51,7 @@ description: >-
 
   添加编译参数，注意大小写:
 
-![](../../.gitbook/assets/image%20%28197%29.png)
+![](../../.gitbook/assets/image%20%28334%29.png)
 
 ### **2.设置URL Scheme**
 
@@ -56,7 +61,7 @@ description: >-
 
 •   现有产品：登录官网-&gt; 点击项目选择框-&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 找到对应产品的URL Scheme
 
-![](../../.gitbook/assets/image%20%28187%29.png)
+![](../../.gitbook/assets/image%20%28315%29.png)
 
 #### **\(2\) 添加URL Scheme（growing.xxxxxxxxxxxxxxxx）到项目中**
 
@@ -111,6 +116,17 @@ description: >-
 ```
 
 **请确保将代码添加在上面描述的位置，添加到其他函数中或者异步block 中可能导致数据不准确！**
+
+### **4.App Store 提交应用注意事项**
+
+如果您添加了库**AdSupport.framework**, GrowingIO则会启用 IDFA，所以在向 App Store 提交应用时，需要：
+
+* 对于问题 **Does this app use the Advertising Identifier \(IDFA\)**，选择 **YES**。
+* 对于选项**Attribute this app installation to a previously served advertisement**，打勾。
+* 对于选项**Attribute an action taken within this app to a previously served advertisement**，打勾。
+
+> **为什么 GrowingIO 使用 IDFA?**  
+> GrowingIO 使用 IDFA 来做来源管理激活设备的精确匹配，让你更好的衡量广告效果。如果您不希望启用IDFA，可以选择不引入 AdSupport.framework
 
 至此，您的SDK安装就成功了。
 
@@ -171,25 +187,26 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">eventId</td>
-      <td style="text-align:left">英文数字组合的字符串，不能为 nil 或者""，长度小于等于50，且不能含有特殊字符</td>
+      <td style="text-align:left">&#x82F1;&#x6587;&#x6570;&#x5B57;&#x7EC4;&#x5408;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E0D;&#x80FD;&#x4E3A;
+        nil &#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;&#x4E14;&#x4E0D;&#x80FD;&#x542B;&#x6709;&#x7279;&#x6B8A;&#x5B57;&#x7B26;</td>
     </tr>
     <tr>
       <td style="text-align:left">number</td>
-      <td style="text-align:left">正整数或浮点数</td>
+      <td style="text-align:left">&#x6B63;&#x6574;&#x6570;&#x6216;&#x6D6E;&#x70B9;&#x6570;</td>
     </tr>
     <tr>
       <td style="text-align:left">eventLevelVariable</td>
       <td style="text-align:left">
-        <p>不能为nil；eventLevelVariable 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        <p>&#x4E0D;&#x80FD;&#x4E3A;nil&#xFF1B;eventLevelVariable &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
         </p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -220,6 +237,10 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 
 发送页面级别的信息，在添加代码之前必须在打点管理界面上声明页面级变量。
 
+{% hint style="danger" %}
+**SDK 2.6.7** 将页面级变量**`pageLevelVariables`**与该页面对象绑定，设置不同的值将会合并，如果想要清空，需要传 null 。
+{% endhint %}
+
 #### 参数说明：
 
 | 参数名称 | 参数类型 | 是否必须 | 说明 |
@@ -233,25 +254,26 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">key</td>
-      <td style="text-align:left">不能为 nil 或者""，长度小于等于50</td>
+      <td style="text-align:left">&#x4E0D;&#x80FD;&#x4E3A; nil &#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50</td>
     </tr>
     <tr>
       <td style="text-align:left">value</td>
-      <td style="text-align:left">不能为 nil 或者""，若为字符串则长度应小于等于 1000</td>
+      <td style="text-align:left">&#x4E0D;&#x80FD;&#x4E3A; nil &#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x82E5;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5219;&#x957F;&#x5EA6;&#x5E94;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;
+        1000</td>
     </tr>
     <tr>
       <td style="text-align:left">pageLevelVariable</td>
       <td style="text-align:left">
-        <p>不能为nil; pageLevelVariables 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        <p>&#x4E0D;&#x80FD;&#x4E3A;nil; pageLevelVariables &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
         </p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -289,25 +311,26 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">key</td>
-      <td style="text-align:left">不能为 nil 或者""，长度小于等于50</td>
+      <td style="text-align:left">&#x4E0D;&#x80FD;&#x4E3A; nil &#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50</td>
     </tr>
     <tr>
       <td style="text-align:left">Value</td>
-      <td style="text-align:left">变量不为nil或者""，若为字符串则长度应小于等于 1000</td>
+      <td style="text-align:left">&#x53D8;&#x91CF;&#x4E0D;&#x4E3A;nil&#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x82E5;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5219;&#x957F;&#x5EA6;&#x5E94;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;
+        1000</td>
     </tr>
     <tr>
       <td style="text-align:left">conversionLevelVariable</td>
       <td style="text-align:left">
-        <p>不能为nil; conversionLevelVariable 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        <p>&#x4E0D;&#x80FD;&#x4E3A;nil; conversionLevelVariable &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
         </p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -345,25 +368,26 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">key</td>
-      <td style="text-align:left">不能为nil或""，长度小于等于50</td>
+      <td style="text-align:left">&#x4E0D;&#x80FD;&#x4E3A;nil&#x6216;&quot;&quot;&#xFF0C;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50</td>
     </tr>
     <tr>
       <td style="text-align:left">value</td>
-      <td style="text-align:left">变量不为nil或者""，若为字符串则长度应小于等于 1000</td>
+      <td style="text-align:left">&#x53D8;&#x91CF;&#x4E0D;&#x4E3A;nil&#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x82E5;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5219;&#x957F;&#x5EA6;&#x5E94;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;
+        1000</td>
     </tr>
     <tr>
       <td style="text-align:left">customerVariables</td>
       <td style="text-align:left">
-        <p>不能为nil;customerVarialbes 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        <p>&#x4E0D;&#x80FD;&#x4E3A;nil;customerVarialbes &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
         </p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>
@@ -401,17 +425,17 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">参数名称</th>
-      <th style="text-align:left">限制条件</th>
+      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
+      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">variable</td>
       <td style="text-align:left">
-        <p>不能为<code>nil;variable</code> 内部不允许含有<code>JSONObject</code>或者<code>JSONArray&#xFF1B;</code>
+        <p>&#x4E0D;&#x80FD;&#x4E3A;<code>nil;variable</code> &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
         </p>
-        <p><code>key</code> 长度限制小于等于50，<code>value</code> 长度限制小等于1000，值不能为空串，也就是""。</p>
+        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
       </td>
     </tr>
   </tbody>

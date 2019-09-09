@@ -38,7 +38,7 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
 #### 第一步：集成SDK并进行配置  <a id="di-yi-bu-ji-cheng-sdk-bing-jin-hang-pei-zhi"></a>
 
 1. 集成移动端 SDK； 开发者文档
-   1. [iOS SDK](sdk-integration/ios-sdk-1/ios-sdk.md)
+   1. [iOS SDK](sdk-integration/ios-sdk/ios-sdk-2.x.md)
    2. [Android SDK](sdk-integration/android-sdk/android-sdk.md)
 2. 配置完成进入[数据校验](sdk-integration/growingio-debugger/#growingio-mobile-debugger)，确认数据采集
 
@@ -85,9 +85,9 @@ GrowingIO 是基于用户行为的新一代数据分析产品，吸取了国内�
   * [数据模型](data-model/)，帮助您进一步了解GrowingIO的数据采集口径，行为分析的数据逻辑。
   * 了解[埋点事件使用场景](data-model/event-model/custom-event/)，明确哪些场景需要进一步上报业务属性数据，以及怎么使用。
   * [用户变量](data-definition/user-variable/loginuserid.md)，进一步打通您的业务用户和访问用户。
-  * 了解SDK 中支持部分重要场景（例如采集时间、banner等）的配置，结合需求，和工程师一起进行重要项目的配置。（[Android](sdk-integration/android-sdk/android-sdk.md#zhong-yao-pei-zhi) 或 [iOS](sdk-integration/ios-sdk-1/ios-sdk.md#zhong-yao-pei-zhi)）
+  * 了解SDK 中支持部分重要场景（例如采集时间、banner等）的配置，结合需求，和工程师一起进行重要项目的配置。（[Android](sdk-integration/android-sdk/android-sdk.md#zhong-yao-pei-zhi) 或 [iOS](sdk-integration/ios-sdk/ios-sdk-2.x.md#zhong-yao-pei-zhi)）
 * **开发者**
-  * 了解**SDK的高级配置**\([Android](sdk-integration/android-sdk/android-sdk.md#zhong-yao-pei-zhi) 或 [iOS](sdk-integration/ios-sdk-1/ios-sdk.md#zhong-yao-pei-zhi)\)，根据数据校验情况进行高级配置
+  * 了解**SDK的高级配置**\([Android](sdk-integration/android-sdk/android-sdk.md#zhong-yao-pei-zhi) 或 [iOS](sdk-integration/ios-sdk/ios-sdk-2.x.md#zhong-yao-pei-zhi)\)，根据数据校验情况进行高级配置
   * [设置上报自定义事件和变量（埋点）](data-definition/mina.md)
   * [API](api/)
 * **系统管理员**

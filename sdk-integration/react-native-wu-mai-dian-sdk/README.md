@@ -135,7 +135,7 @@ public class MainApplication extends Application implements ReactApplication {
 
    添加到iOS工程
 
-其余参照[ iOS 无埋点 SDK ](../ios-sdk-1/ios-sdk.md#wu-mai-dian-sdk-ji-cheng)集成，操作步骤一致。
+其余参照[ iOS 无埋点 SDK ](../ios-sdk/ios-sdk-2.x.md#wu-mai-dian-sdk-ji-cheng)集成，操作步骤一致。
 
 ### 2. 集成 React Native 打点 SDK
 
@@ -169,9 +169,9 @@ react-native link react-native-growingio
 
 ### 3. 重要配置项
 
-与原生混合开发的开发者可详细查看[ iOS 无埋点 重要配置](../ios-sdk-1/ios-sdk.md#zhong-yao-pei-zhi)文档，如果原生控件使用不多，只需关注如下配置即可：
+与原生混合开发的开发者可详细查看[ iOS 无埋点 重要配置](../ios-sdk/ios-sdk-2.x.md#zhong-yao-pei-zhi)文档，如果原生控件使用不多，只需关注如下配置即可：
 
-* \*\*\*\*[**App Store 提交应用注意事项**](../ios-sdk-1/ios-sdk.md#zai-app-store-ti-jiao-ying-yong)\*\*\*\*
+* \*\*\*\*[**App Store 提交应用注意事项**](../ios-sdk/ios-sdk-2.x.md#zai-app-store-ti-jiao-ying-yong)\*\*\*\*
 
 
 
@@ -358,7 +358,7 @@ NativeModules.GrowingIO.setVisitor({ "age": 20, "gender": "male" });
 2. 验证 页面是否识别（page）
 3. 验证[热图](../../data-analytics/heatmap/heatmap-app.md)和[圈选](../../data-definition/circle/app.md)功能
 4. [原生验证内容](../android-sdk/android-mai-dian-sdk.md#yan-zheng-gong-ju)（Android）
-5. [原生验证内容](../ios-sdk-1/ios-sdk.md#3-quan-xuan-he-re-tu-gong-neng-yan-zheng)（iOS）
+5. [原生验证内容](../ios-sdk/ios-sdk-2.x.md#3-quan-xuan-he-re-tu-gong-neng-yan-zheng)（iOS）
 
 #### 验证工具：
 

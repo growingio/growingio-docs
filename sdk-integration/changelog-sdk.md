@@ -305,7 +305,7 @@ Feature：
 
 #### iOS 2.6.7
 
-1. 提供关闭单独元素展现事件接口—— [`growingAttributesDonotTrackImp`](ios-sdk-1/ios-sdk-api.md#shu-ju-cai-ji-fa-song-api)\`\`
+1. 提供关闭单独元素展现事件接口—— [`growingAttributesDonotTrackImp`](ios-sdk/ios-sdk-api.md#shu-ju-cai-ji-fa-song-api)\`\`
 2. 自定义页面事件（`pvar`）优化，之前 `setPageVariable` 接口需要用户每次进入页面的时候设置， 现更新为`pvar`只需要设置一次，在页面销毁之前每次展示都会补发`pvar`，如果用户设置`null`则清空 `pvar`事件；
 
 ### 2018年12月14日
@@ -337,7 +337,7 @@ Feature：
 #### iOS 2.6.3
 
 1. 修复多个`ViewController` 滑动切换时，没有识别导致用户页面访问事件数据错误；
-2. 支持[采集通知](ios-sdk-1/ios-sdk.md#push-tui-song-dian-ji-cai-ji)的点击。
+2. 支持[采集通知](ios-sdk/ios-sdk-2.x.md#push-tui-song-dian-ji-cai-ji)的点击。
 
 ### 2018年11月24日
 

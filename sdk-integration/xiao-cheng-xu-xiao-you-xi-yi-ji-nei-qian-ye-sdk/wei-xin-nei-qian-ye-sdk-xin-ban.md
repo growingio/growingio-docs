@@ -96,23 +96,7 @@ platform：支持传入一个判断函数或者一个字符串
 
 ### **第3步. 根据使用端的场景进行其他配置**
 
-####  3.1 微信小程序中 webview 使用说明
-
-**微信小程序中替换组件**
-
-更新微信小程序sdk，1.9.1版本以上（[SDK 地址列表](wei-xin-xiao-cheng-xu-sdk/wei-xin-xiao-cheng-xu-sdk-sdk-ban-ben1.9.1/#wei-xin-xiao-cheng-xu-sdk-biao-zhun-jie-ru-zhi-nan) ），会发现下载的sdk包中有一个 gio-minp/components/gio-webview/gio-webview  
-将使用到webview组件的地方替换为 gio-webview，如下：  
- （1） json文件中设置：
-
-```text
- "usingComponents": {
- "gio-webview": "/util/gio-minp/components/gio-webview/gio-webview"
- }
-```
-
- （2）用&lt;gio-webview&gt; 替换&lt;web-view&gt;标签
-
-**3.2 示例支付宝小程序 WebView H5** 
+**3.1 配置平台：示例支付宝小程序 WebView H5** 
 
 判断平台，加入如下代码，并在 「platform」中传值 'alip' 。
 
@@ -128,7 +112,9 @@ gio('send');
 </script>
 ```
 
-**3.2 在小程序里面 WebView 加载时 URL 添加额外属性 gio\('getGioInfo'\)  获取用户会话信息**
+**3.2 在小程序里面 WebView 加载时，添加用户信息**
+
+ **在小程序里面 WebView 加载时，URL 添加额外属性 gio\('getGioInfo'\)  获取用户会话信息**
 
 ```text
 举例：

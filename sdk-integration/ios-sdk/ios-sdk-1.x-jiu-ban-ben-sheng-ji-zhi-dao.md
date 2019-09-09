@@ -1,4 +1,4 @@
-# IOS SDK 1.X旧版本升级指导
+# iOS SDK 1.X旧版本升级指导
 
 {% hint style="danger" %}
 #### 升级到2.x SDK前，请务必联系客服协助您完成后台配置的升级！
@@ -12,7 +12,7 @@
 
 请您参考以下开发文档，完成SDK初始化代码的添加。
 
-* [iOS SDK 开发文档](./#ji-cheng-sdk)
+* [iOS SDK 开发文档](ios-sdk-2.x.md#ji-cheng-sdk)
 
 {% hint style="info" %}
 建议您在开发中，开启 Growing 调试日志来检验 SDK 的数据是否正常上传
@@ -161,5 +161,5 @@
 
 #### 5.3 使用 Mobile Debugger 验证
 
-Mobile Debugger 使用方式见[“验证SDK是否正常工作”](./#yan-zheng-sdk-shi-fou-zheng-chang-gong-zuo)。
+Mobile Debugger 使用方式见[“验证SDK是否正常工作”](ios-sdk-2.x.md#yan-zheng-sdk-shi-fou-zheng-chang-gong-zuo)。
 
