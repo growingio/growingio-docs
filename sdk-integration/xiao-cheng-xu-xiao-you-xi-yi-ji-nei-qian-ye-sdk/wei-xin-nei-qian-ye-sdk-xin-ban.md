@@ -76,7 +76,7 @@ description: 为 小程序（包括微信、支付宝、百度小程序等）内
 **当然，如果您对数据平台的逻辑有要求，您也可以自己进行 platform 的判断，需要在 SDK 初始化时告诉我们，使用如下：**
 
 ```text
-gio(‘init’, ‘您的 GrowingIO 项目ID’, ‘您的微信小程序的 AppID’, { 
+gio(‘init’, ‘您的 GrowingIO 项目ID’, ‘您的 AppID’, { 
 platform：支持传入一个判断函数或者一个字符串
  });
 
@@ -121,7 +121,7 @@ gio('send');
 # webview.js
 Page({
 data: {
-webUrl: `https://example.org/demo.html?gio('getGioInfo')}`
+webUrl: `https://example.org/demo.html?${gio('getGioInfo')}`
 }
 });
 # webview.wxml
