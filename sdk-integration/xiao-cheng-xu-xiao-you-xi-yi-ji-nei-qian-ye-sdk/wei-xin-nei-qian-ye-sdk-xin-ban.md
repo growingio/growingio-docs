@@ -91,7 +91,7 @@ platform：支持传入一个判断函数或者一个字符串
 | **百度小程序**内嵌 H5 页面 | baidup |
 
 {% hint style="warning" %}
-**目前内嵌页 SDK 仅自动判断了以上三个端的环境，如果您在支付宝、百度小程序中使用，请自己判断 并传入上面的值，注意传入的值要确保值使用上方表格中的值。具体示例可以点击**[**参考**](wei-xin-nei-qian-ye-sdk-xin-ban.md#3-zhi-fu-bao-xiao-cheng-xu-webview-shi-yong-shuo-ming)**。**
+**目前内嵌页 SDK 仅自动判断了 Minp、wxwv、Web 三个端的环境，如果您在支付宝、百度小程序中使用，请自己判断 并传入上面的值（alip、baidup），注意传入的值要确保值使用上方表格中的值。具体示例可以点击**[**参考**](wei-xin-nei-qian-ye-sdk-xin-ban.md#3-zhi-fu-bao-xiao-cheng-xu-webview-shi-yong-shuo-ming)**。**
 {% endhint %}
 
 ### **第3步. 根据使用端的场景进行其他配置**
