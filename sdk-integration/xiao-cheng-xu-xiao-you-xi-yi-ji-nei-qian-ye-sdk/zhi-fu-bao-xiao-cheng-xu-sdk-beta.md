@@ -14,7 +14,7 @@ description: 支付宝小程序SDK目前属于灰度内测功能，如有需求�
 
 然后会到达SDK集成页面，**平台**选择支付宝小程序，填写支付宝小程序的应用名称，和支付宝小程序的AppID ,点击“下一步”，即可以到达支付宝小程序SDK接入的页面。
 
-![](../../.gitbook/assets/image%20%28264%29.png)
+![](../../.gitbook/assets/image%20%28265%29.png)
 
 目前仅支持小程序类应用集成在同一个项目下，暂不支持小程序产品和web\iOS\Android端产品集成在同一项目下。
 
@@ -24,7 +24,7 @@ description: 支付宝小程序SDK目前属于灰度内测功能，如有需求�
 
 选择”支付宝小程序“平台，填写”应用名称“ 和 "AppID"，点击"**下一步**"。
 
-![](../../.gitbook/assets/image%20%28162%29.png)
+![](../../.gitbook/assets/image%20%28163%29.png)
 
 ### 1、根据支付宝小程序框架选择SDK文件并添加跟踪代码
 
@@ -118,7 +118,7 @@ gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '1.0',
 根据微信最新的用户地理位置获取的规则，GrowingIO 小程序SDK 默认不会在小程序启动时获取用户的坐标信息。 
 
 * 如果您的小程序在打开时就需要获取用户地理信息，就可以将这个参数配置为true。
-* 如果您的小程序在用户点击某些按钮时，才触发获取位置，则可以按照配置方式，进行[用户位置的补发](wei-xin-xiao-cheng-xu-sdk/mina-sdk/#huo-qu-yong-hu-de-di-li-xin-xi)，从而增强用户地理位置的分析能力。
+* 如果您的小程序在用户点击某些按钮时，才触发获取位置，则可以按照配置方式，进行[用户位置的补发]()，从而增强用户地理位置的分析能力。
 
 | 参数 | 值 | 解释 |
 | :--- | :--- | :--- |
@@ -155,7 +155,7 @@ gio("identify", userid);
 2. 打开小程序详情/设置/开发设置
 3. 配置httpRequest接口请求域名白名单：https://wxapi.growingio.com
 
-![](../../.gitbook/assets/image%20%28246%29.png)
+![](../../.gitbook/assets/image%20%28247%29.png)
 
 ### 4 SDK支付宝用户属性设置
 
@@ -219,9 +219,9 @@ gio('setUserId', YOUR_USER_ID);
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面，点击右下角“**检测数据”**。请在添加了跟踪代码的支付宝小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
 
-![](../../.gitbook/assets/image%20%28338%29.png)
+![](../../.gitbook/assets/image%20%28339%29.png)
 
-![](../../.gitbook/assets/image%20%28185%29.png)
+![](../../.gitbook/assets/image%20%28186%29.png)
 
 
 

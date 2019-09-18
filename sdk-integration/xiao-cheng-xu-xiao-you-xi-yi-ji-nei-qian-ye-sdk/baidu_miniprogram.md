@@ -8,7 +8,7 @@ description: 百度小程序SDK目前属于灰度内测功能，如有需求，�
 
 进入集成页面，选择百度小程序，填写应用名称和 AppID，点击「下一步」
 
-![](../../.gitbook/assets/image%20%28256%29.png)
+![](../../.gitbook/assets/image%20%28257%29.png)
 
 ### 1 下载百度小程序 SDK
 
@@ -75,7 +75,7 @@ var gio = require("utils/gio-baidup.js");
 gio('init', '你的项目 ID', '你的百度小程序 AppID', { version: '1.0', followShare: true });
 ```
 
-### 5 SDK 百度用户属性设置
+### 4 SDK 百度用户属性设置
 
 作为用户行为数据分析工具，用户信息的完善会给后续的分析带来很大的帮助。在小程序中，百度用户属性是非常重要的设置，只有完善了百度用户属性信息，百度的访问用户变量（如下表）才可以在分析工具中使用，交互数据定义、数据校验功能才会方便通过用百度相关的信息（百度姓名和头像）定位用户。  
 
@@ -113,17 +113,17 @@ gio('init', '你的项目 ID', '你的百度小程序 AppID', { version: '1.0', 
  `gio('setUserId', user.id); gio('setUser', { id: user.id, name: user.name });`  
 
 
-### 6 检测数据 <a id="jian-ce-shu-ju"></a>
+### 5 检测数据 <a id="jian-ce-shu-ju"></a>
 
-当集成成功后，需要回到 GrowingIO SDK 集成页面，点击右下角“**检测数据”**。请在添加了跟踪代码的支付宝小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
+当集成成功后，需要回到 GrowingIO SDK 集成页面，点击右下角“**检测数据”**。请在添加了跟踪代码的百度小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
 
-![](../../.gitbook/assets/image%20%28338%29.png)
+![](../../.gitbook/assets/image%20%28339%29.png)
 
-![](../../.gitbook/assets/image%20%28185%29.png)
+![](../../.gitbook/assets/image%20%28186%29.png)
 
 
 
-### 7 进入数据校验模块，查看数据发送情况
+### 6 进入数据校验模块，查看数据发送情况
 
 检测成功后，可以使用[数据验证功能](../growingio-debugger/#growingio-minidebugger)，实时查看数据发送情况。
 

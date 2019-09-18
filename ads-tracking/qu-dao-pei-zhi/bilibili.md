@@ -6,5 +6,5 @@
 
 2、将生成的监测链接填写到 bilibili 投放后台当中，开启点击数据监控。
 
-![](../../.gitbook/assets/image%20%2891%29.png)
+![](../../.gitbook/assets/image%20%2892%29.png)
 

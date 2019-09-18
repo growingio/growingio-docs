@@ -98,7 +98,7 @@
 
 参考开始讲到的使用场景，配合梳理业务需求并完成“指标 + 维度”的设计，确认需要将哪些变量设置为页转化变量,请勿直接开始代码的部署,需要先到 GrowingIO 后台找到 【数据管理】-【事件和变量】-【转化变量】 功能，在界面中完成对应的配置。
 
-![&#x914D;&#x7F6E;&#x5F52;&#x56E0;&#x65B9;&#x5F0F;&#x8BBE;&#x7F6E;](../../.gitbook/assets/image%20%28327%29.png)
+![&#x914D;&#x7F6E;&#x5F52;&#x56E0;&#x65B9;&#x5F0F;&#x8BBE;&#x7F6E;](../../.gitbook/assets/image%20%28328%29.png)
 
   
 
@@ -112,7 +112,7 @@
 * [JS 接口文档](../../sdk-integration/web-js-sdk/#3-web-js-sdk-2-1-api)
 * [Android 接口文档](../../sdk-integration/android-sdk/android-sdk.md#2-android-sdk-api)
 * [iOS 接口文档](../../sdk-integration/ios-sdk/ios-sdk-2.x.md#ios-sdk-api)
-* [小程序接口文档](../../sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#zi-ding-yi-shi-jian-he-bian-liang)
+* [小程序接口文档]()
 
 API中给出了转化变量的上传方式
 

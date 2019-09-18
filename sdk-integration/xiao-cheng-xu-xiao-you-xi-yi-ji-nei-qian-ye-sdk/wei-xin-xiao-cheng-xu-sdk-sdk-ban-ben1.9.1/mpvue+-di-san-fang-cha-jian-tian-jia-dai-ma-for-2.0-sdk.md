@@ -1,4 +1,8 @@
-# mpvue+第三方插件 添加代码 for SDK 1.9.1 及之后版本
+---
+description: 微信小程序 SDK 1.9.1 及之后版本
+---
+
+# mpvue+第三方插件 添加代码
 
 **mpvue + 第三方插件 设置代码较为复杂，故单独设帮助文档页面**：
 
@@ -168,5 +172,5 @@ App.mpType = 'app'
 {% endtab %}
 {% endtabs %}
 
-\*\*\*\*[**返回查看接下来的SDK配置**](../mina-sdk/#mpvue-di-san-fang-cha-jian)\*\*\*\*
+\*\*\*\*[**返回查看接下来的SDK配置**]()\*\*\*\*
 

@@ -16,7 +16,7 @@ GrowingIO采集的是微信默认分享功能，即转发小程序到一个好�
 
 需要在集成SDK时，设置 followShare 为true，才可以自动采集分享分析的数据。
 
-配置代码请协同工程师一起，参见[SDK分享分析参数](../sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/wei-xin-xiao-cheng-xu-sdk/mina-sdk/#sdk-fen-xiang-fen-xi-can-shu)。
+配置代码请协同工程师一起，参见[SDK分享分析参数]()。
 
 ## 分享分析功能使用 <a id="fen-xiang-fen-xi-gong-neng-shi-yong"></a>
 
@@ -26,7 +26,7 @@ GrowingIO会默认帮您统计转发事件，即分享用户量和分享次数�
 
 
 
-![&#x529F;&#x80FD;&#x603B;&#x89C8;-&#x56FE;&#x4E2D;&#x4E3A;&#x6D4B;&#x8BD5;&#x6570;&#x636E;](../.gitbook/assets/image%20%28383%29.png)
+![&#x529F;&#x80FD;&#x603B;&#x89C8;-&#x56FE;&#x4E2D;&#x4E3A;&#x6D4B;&#x8BD5;&#x6570;&#x636E;](../.gitbook/assets/image%20%28384%29.png)
 
 ### 功能介绍 <a id="gong-neng-jie-shao-zhi-biao-shi-yi"></a>
 
@@ -40,22 +40,22 @@ GrowingIO会默认帮您统计转发事件，即分享用户量和分享次数�
   * 选择新访问用户，即功能中的“转发分享带来的用户量”，统计的是由分享带来的新访问用户量，“转化目标”统计的是由分享带来的新访问用户中转化的用户量，KOL 分享带来的三度用户量，也在“新访问用户”基础上计算。
   * 选择访问用户，即功能中的“转发分享带来的用户量”，统计的是由分享带来的新访问用户量，“转化目标”统计的是由分享带来的全部访问用户中转化的用户量，KOL 分享带来的三度用户量，也在“全部访问用户”基础上计算。
 
-![&#x9009;&#x62E9;&#x63A7;&#x4EF6;&#x793A;&#x610F;&#x56FE;](../.gitbook/assets/image%20%28385%29.png)
+![&#x9009;&#x62E9;&#x63A7;&#x4EF6;&#x793A;&#x610F;&#x56FE;](../.gitbook/assets/image%20%28386%29.png)
 
 * 
 **分享数据总览**，主要是帮助您一目了然产生分享的用户数，次数，以及由转发分享带来的整体获客和拉新的用户量，计算整体的病毒系数，并且按天展示病毒系数的变化。
 
-![&#x5206;&#x4EAB;&#x6570;&#x636E;&#x603B;&#x89C8;&#x793A;&#x610F;&#x56FE;&#xFF08;&#x6570;&#x636E;&#x4E3A;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#xFF09;](../.gitbook/assets/image%20%28324%29.png)
+![&#x5206;&#x4EAB;&#x6570;&#x636E;&#x603B;&#x89C8;&#x793A;&#x610F;&#x56FE;&#xFF08;&#x6570;&#x636E;&#x4E3A;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#xFF09;](../.gitbook/assets/image%20%28325%29.png)
 
 **转化目标，**选择您关注的转化目标，了解分享带来的用户量中，转化的用户有多少，并可以直观的查看转化率、转化金额，转化的平均金额等。
 
-![](../.gitbook/assets/image%20%28390%29.png)
+![](../.gitbook/assets/image%20%28391%29.png)
 
-![](../.gitbook/assets/image%20%28319%29.png)
+![](../.gitbook/assets/image%20%28320%29.png)
 
 选择完转化目标后，点击「齿轮」按钮，查看转化次数、转化金额、平均单价等数据。
 
-![](../.gitbook/assets/image%20%28217%29.png)
+![](../.gitbook/assets/image%20%28218%29.png)
 
 \*\*\*\*
 
@@ -96,7 +96,7 @@ GrowingIO会默认帮您统计转发事件，即分享用户量和分享次数�
 
 **了解用户在哪些页面，以及哪些属性的页面发起分享**
 
-![](../.gitbook/assets/image%20%28178%29.png)
+![](../.gitbook/assets/image%20%28179%29.png)
 
 **了解分享带来的用户都被哪些内容吸引（通过哪些分享页面进入小程序），并且转化。**
 
