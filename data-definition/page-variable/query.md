@@ -16,7 +16,7 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
 
 作为 SDK 版本为 2.x 以上的用户，现在就可以在「事件和变量」和「web 圈选」中直接设置查询条件为页面级变量（即维度）了：
 
-![&#x4E8B;&#x4EF6;&#x548C;&#x53D8;&#x91CF;](https://lh6.googleusercontent.com/A0rAnnpKQUnR0_mRW77uotOr7eQxB731Q61cvL3pIQe-PrZ_0qaez69oAWZ6Da5eKzVICJtvrS2vX934zQ9UhlHgkV0-Nenh_Oo1_9uMbjBJzj3Je8zRnUr_TJZOWIO4cfDbwDm1)
+![](../../.gitbook/assets/shi-jian-he-bian-liang.png)
 
 ![web &#x5708;&#x9009;](../../.gitbook/assets/image%20%2823%29.png)
 
