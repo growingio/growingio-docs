@@ -145,11 +145,6 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 + (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;
 + (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;
 ​
-// 发送页面级变量 API
-+ (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;
-+ (void)setPageVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue toViewController:(UIViewController *)viewController;
-+ (void)setPageVariable:(NSDictionary<NSString *, NSObject *> *)variable toViewController:(UIViewController *)viewController;
-​
 // 发送转化变量 API
 + (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
 + (void)setEvarWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
@@ -233,66 +228,7 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 [Growing track:@"loanAmount" withNumber:@800000 andVariable:@{@"loanType":@"houseMortgage", @"province":@"Zhejiang"}];
 ```
 
-### setPageVariable
 
-发送页面级别的信息，在添加代码之前必须在打点管理界面上声明页面级变量。
-
-{% hint style="danger" %}
-**SDK 2.6.7** 将页面级变量**`pageLevelVariables`**与该页面对象绑定，设置不同的值将会合并，如果想要清空，需要传 null 。
-{% endhint %}
-
-#### 参数说明：
-
-| 参数名称 | 参数类型 | 是否必须 | 说明 |
-| :--- | :--- | :--- | :--- |
-| key | String | 否 | 页面级变量的标识符 |
-| value | String | 否 | 页面级变量的值 |
-| pageLevelVariables | JSON Object | 否 | 页面级别的信息 |
-
-**参数限制条件：**
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
-      <th style="text-align:left">&#x9650;&#x5236;&#x6761;&#x4EF6;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">key</td>
-      <td style="text-align:left">&#x4E0D;&#x80FD;&#x4E3A; nil &#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">value</td>
-      <td style="text-align:left">&#x4E0D;&#x80FD;&#x4E3A; nil &#x6216;&#x8005;&quot;&quot;&#xFF0C;&#x82E5;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5219;&#x957F;&#x5EA6;&#x5E94;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;
-        1000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">pageLevelVariable</td>
-      <td style="text-align:left">
-        <p>&#x4E0D;&#x80FD;&#x4E3A;nil; pageLevelVariables &#x5185;&#x90E8;&#x4E0D;&#x5141;&#x8BB8;&#x542B;&#x6709;<code>JSONObject</code>&#x6216;&#x8005;<code>JSONArray&#xFF1B;</code>
-        </p>
-        <p><code>key</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;50&#xFF0C;<code>value</code> &#x957F;&#x5EA6;&#x9650;&#x5236;&#x5C0F;&#x7B49;&#x4E8E;1000&#xFF0C;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&quot;&quot;&#x3002;</p>
-      </td>
-    </tr>
-  </tbody>
-</table>```objectivec
-// setPageVariable API原型
-+ (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;
-+ (void)setPageVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue toViewController:(UIViewController *)viewController;
-+ (void)setPageVariable:(NSDictionary<NSString *, NSObject *> *)variable toViewController:(UIViewController *)viewController;
-```
-
-```objectivec
-// setPageVariable API调用示例一
-[Growing setPageVariableWithKey:@"author" andStringValue:@"Zhang San" toViewController:myViewController];
-```
-
-```objectivec
-// setPageVariable API调用示例二
-[Growing setPageVariable:@{@"pageName":@"Home Page", @"author":@"Zhang San"} toViewController:myViewController];
-```
 
 ### setEvar
 
