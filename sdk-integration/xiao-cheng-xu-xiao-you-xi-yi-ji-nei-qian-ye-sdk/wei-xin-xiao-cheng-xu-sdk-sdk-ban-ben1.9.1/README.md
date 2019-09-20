@@ -4,8 +4,6 @@ description: SDK 1.9.1 及之后版本
 
 # 微信小程序 SDK
 
-
-
 ## 小程序SDK集成前工作
 
 ### 创建新的GrowingIO项目
@@ -200,7 +198,7 @@ gio('setConfig', gioConfig);
 1.下载SDK文件包，解压后把 gio-minp目录放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
-https://assets.giocdn.com/sdk/gio-minp.zip
+https://assets.giocdn.com/sdk/gio-minp.esm.zip
 ```
 
 2、添加跟踪代码
@@ -241,7 +239,7 @@ gio('setConfig', gioConfig);
 1.下载SDK文件包，解压后把 gio-minp目录放在小程序目录下\(比如: /src/utils 目录\)
 
 ```text
-https://assets.giocdn.com/sdk/gio-minp.zip
+https://assets.giocdn.com/sdk/gio-minp.esm.zip
 ```
 
 2、添加跟踪代码

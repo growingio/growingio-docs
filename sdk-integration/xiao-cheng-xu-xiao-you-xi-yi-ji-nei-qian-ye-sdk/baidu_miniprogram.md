@@ -10,25 +10,185 @@ description: 百度小程序SDK目前属于灰度内测功能，如有需求，�
 
 ![](../../.gitbook/assets/image%20%28257%29.png)
 
-### 1 下载百度小程序 SDK
+### 1 根据百度小程序框架选择SDK文件并添加跟踪代码
 
-下载 gio-baidup.js 文件
+参照小程序的开发框架，下载相应的SDK，并添加跟踪代码。
+
+* 原生框架
+* Taro 框架
+* mpvue / uni-app 框架
+* chameleon 框架
+
+#### 百度小程序原生框架
+
+1 下载 gio-baidup.js 文件，把文件放在百度小程序项目里，比如 utils 目录下。
 
 ```text
-curl --compressed https://assets.giocdn.com/gio-baidup.js -o gio-baidup.js
+curl --compressed https://assets.giocdn.com/sdk/gio-baidup.js -o gio-baidup.js
 ```
 
-当下载到 gio-baidup.js 文件以后，把文件放在百度小程序项目里，比如 utils 目录下。下面会假设 SDK 文件放在 utils 目录下。
+2 添加跟踪代码
 
-### 2 添加跟踪代码
+方式一：
 
-在百度小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码：
+在支付宝小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前：
+
+```javascript
+var gio = require("utils/gio-baidup.js").default;
+gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '你的小程序版本' });
+```
+
+方式二：
+
+步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
+
+```javascript
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本'
+...
+}
+
+```
+
+步骤二：在根目录 app.js文件的顶部添加跟踪代码
+
+```javascript
+var gio = require("utils/gio-baidup.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
+```
+
+#### Taro 框架
+
+1.下载 gio-baidup.js 文件，把文件放在百度小程序项目里，比如 utils 目录下。
 
 ```text
-var gio = require("utils/gio-baidup.js");
-// version 是你的小程序的版本号
-gio('init', '你的项目 ID', '你的百度小程序 AppID', { version: '1.0' });
+curl --compressed https://assets.giocdn.com/sdk/gio-baidup.js -o gio-baidup.js
 ```
+
+2、添加跟踪代码
+
+方式一：
+
+在根目录 app.js 文件的顶部添加跟踪代码
+
+```javascript
+import Taro from '@tarojs/taro';
+var gio = require("utils/gio-baidup.js").default;
+gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', taro: Taro });
+```
+
+方式二：
+
+步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
+
+```javascript
+import Taro from '@tarojs/taro';
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本',
+taro: Taro,
+...
+}
+```
+
+步骤二：在根目录 app.js文件的顶部添加跟踪代码
+
+```javascript
+var gio = require("utils/gio-baidup.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
+```
+
+#### mpvue框架 / uni-app 框架
+
+1.下载 gio-baidup.js 文件，把文件放在百度小程序项目里，比如 utils 目录下。
+
+```text
+curl --compressed https://assets.giocdn.com/sdk/gio-baidup.esm.js -o gio-baidup.js
+```
+
+方式一：在根目录 app.js 文件的顶部添加跟踪代码
+
+```javascript
+import Vue from 'vue';
+import App from './App';
+App.mpType = 'app';
+var gio = require("utils/gio-baidup.js").default;
+gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本',vue: Vue });
+
+```
+
+方式二：
+
+步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
+
+```javascript
+import Vue from 'vue';
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本',
+vue: Vue,
+...
+}
+```
+
+步骤二：在根目录 app.js文件的顶部添加跟踪代码
+
+```javascript
+var gio = require("utils/gio-baidup.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
+import App from './App';
+App.mpType = 'app';
+```
+
+#### Chameleon框架
+
+1.下载 gio-baidup.js 文件，把文件放在百度小程序项目里，比如 utils 目录下。
+
+```text
+curl --compressed https://assets.giocdn.com/sdk/gio-baidup.js -o gio-baidup.js
+```
+
+2、添加跟踪代码
+
+方式一：在根目录 app.js 文件的顶部添加跟踪代码
+
+```javascript
+import Cml from 'chameleon-runtime';
+var gio = require("utils/gio-baidup.js").default;
+gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', cml: Cml });
+```
+
+方式二：
+
+步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
+
+```javascript
+import Cml from 'chameleon-runtime';
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本',
+cml: Cml,
+...
+}
+```
+
+步骤二：在根目录 app.js文件的顶部添加跟踪代码
+
+```javascript
+var gio = require("utils/gio-baidup.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
+```
+
+### **2 进行SDK的配置设置**
 
 建议每次发布小程序新版本的时候，更新一下版本号 version，可以在 GrowingIO 分析不同版本的数据。除了 version 之外，还有以下额外参数可以使用。  
 

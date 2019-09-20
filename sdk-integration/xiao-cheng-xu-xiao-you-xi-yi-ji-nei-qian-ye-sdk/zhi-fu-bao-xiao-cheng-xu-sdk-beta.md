@@ -30,10 +30,10 @@ description: 支付宝小程序SDK目前属于灰度内测功能，如有需求�
 
 参照小程序的开发框架，下载相应的SDK，并添加跟踪代码。
 
-支付宝小程序原生框架
-
-* 支付宝小程序原生框架
-* 支付宝小程序 Taro 框架
+* 原生框架
+* Taro 框架
+* mpvue / uni-app 框架
+* chameleon 框架
 
 #### 支付宝小程序原生框架
 
@@ -42,47 +42,193 @@ description: 支付宝小程序SDK目前属于灰度内测功能，如有需求�
 下载 gio-alip.js 文件
 
 ```text
-curl --compressed https://assets.giocdn.com/gio-alip.js -o gio-alip.js
+curl --compressed https://assets.giocdn.com/sdk/gio-alip.js -o gio-alip.js
 ```
 
 当下载到 gio-alip.js 文件以后，把文件放在支付宝小程序项目里，比如 utils 目录下。下面会假设 SDK 文件放在 utils 目录下。
 
 2 添加跟踪代码
 
+方式一：
+
 在支付宝小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前：
 
 ```javascript
-var gio = require("utils/gio-alip.js");
+var gio = require("utils/gio-alip.js").default;
 // version 是你的小程序的版本号
-gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '1.0' });
-修改项目中的App和Page，如下：
-App({})改写为:
+gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '你的小程序版本'});
+
+// 修改项目中的App和Page，如下：
+// App({})改写为:
 App($global.trackApp({
+
 }))
-所有的Page({})改写为：
+// 所有的Page({})改写为：
 $global.GioPage({
+
+})
+
+```
+
+方式二：
+
+步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
+
+```javascript
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本'
+...
+}
+
+```
+
+步骤二：在根目录 app.js文件的顶部添加跟踪代码
+
+```javascript
+var gio = require("utils/gio-alip.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
+// 修改项目中的App和Page，如下：
+// App({})改写为:
+App($global.trackApp({
+
+}))
+// 所有的Page({})改写为：
+$global.GioPage({
+
 })
 ```
 
-支付宝小程序 Taro 框架
+#### Taro 框架
 
-下载 gio-alip.js 文件
+1.下载 gio-alip.js 文件，把文件放在支付宝小程序项目里，比如 utils 目录下。
 
 ```text
-curl --compressed https://assets.giocdn.com/gio-alip.js -o gio-alip.js
+curl --compressed https://assets.giocdn.com/sdk/gio-alip.js -o gio-alip.js
 ```
 
-当下载到 gio-alip.js 文件以后，把文件放在支付宝小程序项目里，比如 utils 目录下。下面会假设 SDK 文件放在 utils 目录下。
+2、添加跟踪代码
 
-2 添加跟踪代码
+方式一：
 
-在支付宝小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前：
+在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Taro from '@tarojs/taro'
-import gio from './utils/gio-alip'
-// version 是你的小程序的版本号
-gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '1.0', taro: Taro });
+import Taro from '@tarojs/taro';
+var gio = require("utils/gio-alip.js").default;
+gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', taro: Taro });
+```
+
+方式二：
+
+步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
+
+```javascript
+import Taro from '@tarojs/taro';
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本',
+taro: Taro,
+...
+}
+```
+
+步骤二：在根目录 app.js文件的顶部添加跟踪代码
+
+```javascript
+var gio = require("utils/gio-alip.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
+```
+
+#### mpvue框架 / uni-app 框架
+
+1.下载 gio-alip.js 文件，把文件放在支付宝小程序项目里，比如 utils 目录下。
+
+```text
+curl --compressed https://assets.giocdn.com/sdk/gio-alip.esm.js -o gio-alip.js
+```
+
+2. 添加跟踪代码
+
+方式一：在根目录 app.js 文件的顶部添加跟踪代码
+
+```javascript
+import Vue from 'vue';
+import App from './App';
+App.mpType = 'app';
+var gio = require("utils/gio-alip.js").default;
+gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本',vue: Vue });
+
+```
+
+方式二：
+
+步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
+
+```javascript
+import Vue from 'vue';
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本',
+vue: Vue,
+...
+}
+```
+
+步骤二：在根目录 app.js文件的顶部添加跟踪代码
+
+```javascript
+var gio = require("utils/gio-alip.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
+import App from './App';
+App.mpType = 'app';
+```
+
+#### Chameleon框架
+
+1.下载 gio-alip.js 文件，把文件放在支付宝小程序项目里，比如 utils 目录下。
+
+```text
+curl --compressed https://assets.giocdn.com/sdk/gio-alip.js -o gio-alip.js
+```
+
+2、添加跟踪代码
+
+方式一：在根目录 app.js 文件的顶部添加跟踪代码
+
+```javascript
+import Cml from 'chameleon-runtime';
+var gio = require("utils/gio-alip.js").default;
+gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', cml: Cml });
+```
+
+方式二：
+
+步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
+
+```javascript
+import Cml from 'chameleon-runtime';
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本',
+cml: Cml,
+...
+}
+```
+
+步骤二：在根目录 app.js文件的顶部添加跟踪代码
+
+```javascript
+var gio = require("utils/gio-alip.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
 ```
 
 ### **2、进行SDK的配置设置**
