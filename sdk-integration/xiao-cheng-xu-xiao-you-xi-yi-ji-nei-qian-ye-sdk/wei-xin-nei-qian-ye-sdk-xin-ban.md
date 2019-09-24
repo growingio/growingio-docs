@@ -69,15 +69,11 @@ description: 为 小程序（包括微信、支付宝、百度小程序等）内
 
 ### **第2步.多端使用同一sdk时的平台判断**
 
-**GIO如果发现有多应用场景使用同一 H5的情况时，会进行不同应用端的判断，默认判断规则如下：**
+**需要在 SDK 初始化时进行 平台 的设置，使用如下：**
 
-![](../../.gitbook/assets/image%20%28343%29.png)
-
-**当然，如果您对数据平台的逻辑有要求，您也可以自己进行 platform 的判断，需要在 SDK 初始化时告诉我们，使用如下：**
-
-```text
+```javascript
 gio(‘init’, ‘您的 GrowingIO 项目ID’, ‘您的 AppID’, { 
-platform：支持传入一个判断函数或者一个字符串
+    platform：支持传入一个判断函数或者一个字符串
  });
 
 ```
@@ -89,10 +85,6 @@ platform：支持传入一个判断函数或者一个字符串
 | **移动端浏览器**打开 H5 页面 | Web  |
 | **支付宝小程序**内嵌 H5 页面 | alip |
 | **百度小程序**内嵌 H5 页面 | baidup |
-
-{% hint style="warning" %}
-**目前内嵌页 SDK 仅自动判断了 Minp、wxwv、Web 三个端的环境，如果您在支付宝、百度小程序中使用，请自己判断 并传入上面的值（alip、baidup），注意传入的值要确保值使用上方表格中的值。具体示例可以点击**[**参考**](wei-xin-nei-qian-ye-sdk-xin-ban.md#3-zhi-fu-bao-xiao-cheng-xu-webview-shi-yong-shuo-ming)**。**
-{% endhint %}
 
 ### **第3步. 根据使用端的场景进行其他配置**
 
@@ -165,7 +157,7 @@ gio('init', '你的项目ID'[,'微信App_id'], { setImp:false, hashtag: true });
 
 当用户在你的微信内嵌页上授权获取到 openid 后，可以用过 `identify` 接口绑定微信用户ID，后续在 GrowingIO 中使用微信ID创建用户分群。示例代码如下，
 
-```text
+```javascript
 wx.request({ 
   url: 'https://YOUR_HOST_NAME/wechat/code2key',
   method: 'GET',
@@ -173,7 +165,7 @@ wx.request({
   success: res => 
     var openid = res.data.openid;
     var unionid = res.data.unionid;
-    ...
+    // ...
     gio('identify', res.data.openid, res.data.unionid)
 })
 ```
@@ -182,10 +174,10 @@ wx.request({
 
 当用户在你的微信内嵌页上绑定微信信息后，可以通过 `setVisitor` 接口设置微信用户信息，后续在 GrowingIO 中，使用访问用户变量分析这个数据。示例代码如下，
 
-```text
-wx.getUserInfo({ 
+```javascript
+wx.getUserInfo({
   success: res => 
-    ...
+    // ...
     gio('setVisitor', res.userInfo);
 })
 ```
@@ -206,20 +198,23 @@ wx.getUserInfo({
 | :--- | :--- | :--- | :--- |
 | userId | String | 是 | 用户的登录ID |
 
-```text
-//setUserId API原型gio('setUserId', userId);
+```javascript
+//setUserId API原型
+gio('setUserId', userId);
 ```
 
-```text
-//setuserId API调用示例gio('setUserId', '1234567890');
+```javascript
+//setuserId API调用示例
+gio('setUserId', '1234567890');
 ```
 
 #### 清除登录用户 ID（clearUserId） <a id="qing-chu-deng-lu-yong-hu-idclearuserid"></a>
 
 当用户登出之后调用 clearUserId ，清除已经设置的登录用户 ID 。
 
-```text
-//clearUserId API原型和调用示例gio('clearUserId');
+```javascript
+//clearUserId API原型和调用示例
+gio('clearUserId');
 ```
 
 ## 内嵌页自定义事件和变量 <a id="wei-xin-nei-qian-ye-zi-ding-yi-shi-jian-he-bian-liang"></a>
@@ -230,7 +225,7 @@ wx.getUserInfo({
 
 接口定义：
 
-```text
+```javascript
 gio('track', eventName: string, properties: object)
 ```
 
@@ -243,8 +238,13 @@ gio('track', eventName: string, properties: object)
 
 示例：
 
-```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 在 Page 的 clickBanner 函数里添加以下代码Page({  clickBanner(e) {    getApp().globalData.gio('track', 'clickBanner', {       id: movie.id,       title: movie.title,       index: e.currentTarget.dataset.index     });  }})
+```javascript
+// 在 Page 的 clickBanner 函数里添加以下代码
+gio('track', 'clickBanner', {
+    id: movie.id,
+    title: movie.title, 
+    index: e.currentTarget.dataset.index
+});
 ```
 
 ### 访问用户变量 <a id="fang-wen-yong-hu-bian-liang"></a>
@@ -253,7 +253,7 @@ gio('track', eventName: string, properties: object)
 
 接口定义：
 
-```text
+```javascript
 gio('setVisitor', properties: object)
 ```
 
@@ -265,8 +265,9 @@ gio('setVisitor', properties: object)
 
 示例：
 
-```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 比如在针对不同的用户做某个 Campaign 的 A/B 测试getApp().globalData.gio('setVisitor', {   campaign_id: 3,   campaign_group: 'A 组用户'});
+```javascript
+// 比如在针对不同的用户做某个 Campaign 的 A/B 测试
+gio('setVisitor', {campaign_id: 3, campaign_group: 'A 组用户'});
 ```
 
 ### 登录用户变量 <a id="deng-lu-yong-hu-bian-liang"></a>
@@ -275,7 +276,7 @@ gio('setVisitor', properties: object)
 
 接口定义：
 
-```text
+```javascript
 gio('setUser', properties: object)
 ```
 
@@ -287,8 +288,13 @@ gio('setUser', properties: object)
 
 示例：
 
-```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面getApp().globalData.gio('setUser', {   age: 30,   level: '高级用户',   company: 'GrowingIO',   title: '工程师'});
+```javascript
+gio('setUser', {
+    age: 30,
+    level: '高级用户',
+    company: 'GrowingIO',
+    title: '工程师'
+});
 ```
 
 ### 页面级变量 <a id="ye-mian-ji-bian-liang"></a>
@@ -297,7 +303,7 @@ gio('setUser', properties: object)
 
 接口定义：
 
-```text
+```javascript
 gio('setPage', properties: object)
 ```
 
@@ -309,8 +315,12 @@ gio('setPage', properties: object)
 
 示例：
 
-```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 推荐在 Page#onShow 处理这个事件// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 typePage({  onShow() {    getApp().globalData.gio('setPage', {       pageName: '电影列表页',       type: this.data.type    });  }}
+```javascript
+//下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 typePage
+gio('setPage', {
+    pageName: '电影列表页', 
+    type: this.data.type
+})
 ```
 
 ###  转化变量 <a id="zhuan-hua-bian-liang"></a>
@@ -319,7 +329,7 @@ gio('setPage', properties: object)
 
 接口定义：
 
-```text
+```javascript
 gio('setEvar', properties: object)
 ```
 
@@ -331,8 +341,8 @@ gio('setEvar', properties: object)
 
 示例：
 
-```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面getApp().globalData.gio('setEvar', {   campaign: '活动A'});
+```javascript
+gio('setEvar', {   campaign: '活动A'});
 ```
 
 ​  

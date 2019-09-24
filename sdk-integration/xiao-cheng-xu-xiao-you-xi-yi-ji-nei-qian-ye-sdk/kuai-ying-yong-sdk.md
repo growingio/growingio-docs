@@ -12,7 +12,7 @@ description: 快应用 SDK目前属于灰度内测功能，如有需求，请联
 
 1.下载 gio-quickapp.js 文件，把文件放在快应用应用项目里，比如 utils 目录下。
 
-```text
+```bash
 curl --compressed https://assets.giocdn.com/sdk/gio-quickapp.js -o gio-quickapp.js
 ```
 
@@ -20,21 +20,23 @@ curl --compressed https://assets.giocdn.com/sdk/gio-quickapp.js -o gio-quickapp.
 
 ```javascript
 var gio = require("utils/gio-quickapp").default;
-gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本' });
+gio('init', '你的 GrowingIO 项目ID', '你的快应用ID(包名)', { version: '小程序版本' });
+
 // 添加trackApp 和 trackPage 代码，如下：
 // app.ux 中改写如下：
-  export default {
-    ...
-  })
-  改为：
-  export default trackApp({
-    ...
-  })
+export default {
+  ...
+})
+// 改为：
+export default trackApp({
+  ...
+})
+
 // 所有的Page页面的index.ux改写如下：
 export default {
   ...
 })
-改为：
+// 改为：
 export default trackPage({
   ...
 })
@@ -46,7 +48,6 @@ export default trackPage({
 | 参数 | 值 | 解释 |
 | :--- | :--- | :--- |
 | version | string | 你的小程序的版本号 |
-| followShare | true \| false | 详细跟踪分享数据，开启后可使用分享分析功能。默认true |
 | forceLogin | true \| false | 你的快应用是否获取用户唯一标识，默认 false |
 | debug | true \| false | 是否开启调试模式，可以看到采集的数据。默认 false |
 
@@ -54,9 +55,9 @@ export default trackPage({
 
 在您项目中的 manifest.json 文件中的 features 属性中添加权限声明代码。
 
-```text
+```javascript
 "features": [
-  { "name": "system.app"},
+  {"name": "system.app"},
   {"name": "system.storage"},
   {"name": "system.device"},
   {"name": "system.network"},
@@ -72,11 +73,11 @@ export default trackPage({
 
 当用户在你的应用上登陆获取到 用户唯一id 后，可以用过 identify 接口绑定快应用用户ID，后续在 GrowingIO 中获取更准确的快应用访问用户量。示例代码如下：
 
-```text
+```javascript
 device.getUserId({
   success: function(res) {
     var userId = res.data.userId;
-    ...
+    // ...
     gio('identify', userId);
   }
 })
@@ -88,15 +89,17 @@ device.getUserId({
 
 当用户在你的快应用上注册以后，你的产品应用服务端会在用户数据库里添加一条记录并且分配一个 ID，可以通过 setUserId 接口设置注册用户ID，后续在 GrowingIO 中分析登录用户这个数据。示例代码如下，
 
-```text
+```javascript
 gio('setUserId', YOUR_USER_ID); 
 ```
 
 #### 设置注册用户信息
 
-当用户在你的快应用上传了注册用户ID后，可以通过 setUser 接口设置注册用户信息，后续在 GrowingIO 中分析这个数据。示例代码如下，  
- `gio('setUserId', user.id); gio('setUser', { id: user.id, name: user.name });`  
+当用户在你的快应用上传了注册用户ID后，可以通过 setUser 接口设置注册用户信息，后续在 GrowingIO 中分析这个数据。示例代码如下，
 
+```javascript
+gio('setUser', { id: user.id, name: user.name });
+```
 
 ### 4 检测数据 <a id="jian-ce-shu-ju"></a>
 
@@ -118,7 +121,7 @@ gio('setUserId', YOUR_USER_ID);
 
 接口定义：
 
-```text
+```javascript
 gio('track', eventName: string, properties: object)
 ```
 
@@ -131,18 +134,14 @@ gio('track', eventName: string, properties: object)
 
 示例：
 
-```text
+```javascript
 // 假设初始化后把 gio 对象放在 App 的 globalData 里面
 // 在 Page 的 clickBanner 函数里添加以下代码
-Page({
-  clickBanner(e) {
-    getApp().globalData.gio('track', 'clickBanner', { 
-      id: movie.id, 
-      title: movie.title, 
-      index: e.currentTarget.dataset.index 
-    });
-  }
-})
+gio('track', 'clickBanner', { 
+    id: movie.id, 
+    title: movie.title, 
+    index: e.currentTarget.dataset.index 
+});
 ```
 
 ### 访问用户变量
@@ -151,7 +150,7 @@ Page({
 
 接口定义：
 
-```text
+```javascript
 gio('setVisitor', properties: object)
 ```
 
@@ -163,10 +162,9 @@ gio('setVisitor', properties: object)
 
 示例：
 
-```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+```javascript
 // 比如在针对不同的用户做某个 Campaign 的 A/B 测试
-getApp().globalData.gio('setVisitor', { 
+gio('setVisitor', { 
   campaign_id: 3, 
   campaign_group: 'A 组用户'
 });
@@ -178,7 +176,7 @@ getApp().globalData.gio('setVisitor', {
 
 接口定义：
 
-```text
+```javascript
 gio('setUser', properties: object)
 ```
 
@@ -190,9 +188,8 @@ gio('setUser', properties: object)
 
 示例：
 
-```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-getApp().globalData.gio('setUser', { 
+```javascript
+gio('setUser', { 
   age: 30, 
   level: '高级用户', 
   company: 'GrowingIO', 
@@ -206,7 +203,7 @@ getApp().globalData.gio('setUser', {
 
 接口定义：
 
-```text
+```javascript
 gio('setPage', properties: object)
 ```
 
@@ -218,18 +215,12 @@ gio('setPage', properties: object)
 
 示例：
 
-```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-// 推荐在 Page#onShow 处理这个事件
+```javascript
 // 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 type
-Page({
-  onShow() {
-    getApp().globalData.gio('setPage', { 
-      pageName: '电影列表页', 
-      type: this.data.type
-    });
-  }
-}
+gio('setPage', { 
+    pageName: '电影列表页', 
+    type: this.data.type
+});
 ```
 
 ###  转化变量
@@ -238,7 +229,7 @@ Page({
 
 接口定义：
 
-```text
+```javascript
 gio('setEvar', properties: object)
 ```
 
@@ -250,9 +241,8 @@ gio('setEvar', properties: object)
 
 示例：
 
-```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-getApp().globalData.gio('setEvar', { 
+```javascript
+gio('setEvar', {
   campaign: '活动A'
 });
 ```
