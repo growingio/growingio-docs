@@ -69,7 +69,6 @@ https://assets.giocdn.com/sdk/gio-minp.zip
 ```javascript
 var gio = require("utils/gio-minp/index.js").default;
 gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本' });
-
 ```
 
 方式二：
@@ -78,10 +77,10 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 
 ```javascript
 export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本'
-...
+    projectId: '你的 GrowingIO 项目ID',
+    appId: '你的小程序AppID',
+    version: '小程序版本'
+    // ...
 }
 
 ```
@@ -118,6 +117,7 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 ```javascript
 //在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入）
 const Page = global.GioPage;
+const App = global.GioApp
 ```
 
 方式二：
@@ -126,11 +126,11 @@ const Page = global.GioPage;
 
 ```javascript
 export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本',
-usePlugin: true 
-...
+    projectId: '你的 GrowingIO 项目ID',
+    appId: '你的小程序AppID',
+    version: '小程序版本',
+    usePlugin: true 
+    // ...
 }
 
 ```
@@ -176,11 +176,11 @@ gio('init','你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小�
 
 ```javascript
 export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本',
-taro: Taro,
-...
+    projectId: '你的 GrowingIO 项目ID',
+    appId: '你的小程序AppID',
+    version: '小程序版本',
+    taro: Taro,
+    ...
 }
 
 ```

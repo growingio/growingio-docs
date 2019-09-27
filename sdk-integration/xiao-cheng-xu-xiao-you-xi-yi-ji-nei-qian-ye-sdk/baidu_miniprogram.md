@@ -23,7 +23,7 @@ description: 百度小程序SDK目前属于灰度内测功能，如有需求，�
 
 1 下载 gio-baidup.js 文件，把文件放在百度小程序项目里，比如 utils 目录下。
 
-```text
+```bash
 curl --compressed https://assets.giocdn.com/sdk/gio-baidup.js -o gio-baidup.js
 ```
 
@@ -31,7 +31,7 @@ curl --compressed https://assets.giocdn.com/sdk/gio-baidup.js -o gio-baidup.js
 
 方式一：
 
-在支付宝小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前：
+在百度小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前：
 
 ```javascript
 var gio = require("utils/gio-baidup.js").default;
@@ -44,10 +44,10 @@ gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '你�
 
 ```javascript
 export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本'
-...
+    projectId: '你的 GrowingIO 项目ID',
+    appId: '你的小程序AppID',
+    version: '小程序版本'
+    // ...
 }
 
 ```
@@ -64,7 +64,7 @@ gio('setConfig', gioConfig);
 
 1.下载 gio-baidup.js 文件，把文件放在百度小程序项目里，比如 utils 目录下。
 
-```text
+```bash
 curl --compressed https://assets.giocdn.com/sdk/gio-baidup.js -o gio-baidup.js
 ```
 
