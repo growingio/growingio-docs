@@ -110,14 +110,14 @@ https://assets.giocdn.com/sdk/gio-minp.zip
 ```javascript
 var gio = require("utils/gio-minp/index.js").default;
 gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', usePlugin: true });
+const App = global.GioApp;
 ```
 
 步骤二：在每个page页面（新增页面也需要添加）的 .js 文件顶部添加如下代码
 
 ```javascript
-//在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入）
+// 在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入）
 const Page = global.GioPage;
-const App = global.GioApp
 ```
 
 方式二：
@@ -148,7 +148,7 @@ const App = global.GioApp
 步骤三：在每个page页面（新增页面也需要添加）的 .js 文件顶部添加如下代码
 
 ```javascript
-//在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入）
+// 在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入）
 const Page = global.GioPage;
 ```
 
@@ -180,7 +180,7 @@ export default {
     appId: '你的小程序AppID',
     version: '小程序版本',
     taro: Taro,
-    ...
+    // ...
 }
 
 ```
@@ -218,11 +218,11 @@ gio('init','你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小�
 ```javascript
 import Wepy from '@wepy/core';
 export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本',
-wepy: Wepy,
-...
+    projectId: '你的 GrowingIO 项目ID',
+    appId: '你的小程序AppID',
+    version: '小程序版本',
+    wepy: Wepy,
+    // ...
 }
 ```
 
@@ -262,11 +262,11 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 ```javascript
 import Vue from 'vue';
 export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本',
-vue: Vue,
-...
+    projectId: '你的 GrowingIO 项目ID',
+    appId: '你的小程序AppID',
+    version: '小程序版本',
+    vue: Vue,
+    // ...
 }
 ```
 
@@ -309,11 +309,11 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 ```javascript
 import Cml from 'chameleon-runtime';
 export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本',
-cml: Cml,
-...
+    projectId: '你的 GrowingIO 项目ID',
+    appId: '你的小程序AppID',
+    version: '小程序版本',
+    cml: Cml,
+    // ...
 }
 ```
 
@@ -374,7 +374,7 @@ gio('getLocation')
 
 GrowingIO SDK 默认不会在小程序启动时获取用户的坐标信息。当用户访问到某一功能时需要位置信息时，可以调用以下位置接口，补发vst，采集位置信息，提升用户地域分布的分析准确性。
 
-```text
+```javascript
 gio('getLocation')
 ```
 
@@ -389,9 +389,7 @@ gio('getLocation')
 在 gioConfig.js 文件中将 followShare 配置如下:
 
 ```text
-```
 followShare: true,     //是否详细跟踪分享数据，开启后可使用分享分析功能。默认true
-```
 ```
 
 #### forceLogin 用户标识参数
@@ -403,14 +401,12 @@ forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程�
 
 在 gioConfig.js 文件中将 forceLogin 配置如下:
 
-```text
-```
+```javascript
 forceLogin: true,      //是否强制要求用户登陆微信获取 openid。默认 false
 ```
-```
 
-```text
-...
+```javascript
+// ...
 // 当获取到 openid 后，调用以下方法
 gio("identify", openid, unionid);
 ```
@@ -432,7 +428,7 @@ gio("identify", openid, unionid);
 
 当用户在你的小程序上登陆获取到 openid 后，可以用过 `identify` 接口绑定微信用户ID，后续在 GrowingIO 中获取更准确的微信访问用户量。示例代码如下，
 
-```text
+```javascript
 wx.request({ 
   url: 'https://YOUR_HOST_NAME/wechat/code2key',
   method: 'GET',
@@ -440,7 +436,7 @@ wx.request({
   success: res => 
     var openid = res.data.openid;
     var unionid = res.data.unionid;
-    ...
+    // ...
     gio('identify', res.data.openid, res.data.unionid)
 })
 ```
@@ -449,10 +445,10 @@ wx.request({
 
 当用户在你的小程序上绑定微信信息后，可以通过 `setVisitor` 接口设置微信用户信息，后续在 GrowingIO 中分析这个数据。示例代码如下，
 
-```text
+```javascript
 wx.getUserInfo({ 
   success: res => 
-    ...
+    // ...
     gio('setVisitor', res.userInfo);
 })
 ```
@@ -489,7 +485,7 @@ wx.getUserInfo({
 
 当用户在你的小程序上注册以后，你的产品应用服务端会在用户数据库里添加一条记录并且分配一个 ID，可以通过 setUserId 接口设置注册用户ID，后续在 GrowingIO 中分析登录用户这个数据。示例代码如下，
 
-```text
+```javascript
 gio('setUserId', YOUR_USER_ID); 
 ```
 
@@ -515,8 +511,11 @@ gio('setUserId', YOUR_USER_ID);
 
 tap 事件是手指触摸后马上离开时触发的事件。当 wxml 中的 view 绑定了 bindtap 事件以后，在事件处理函数执行的时候，SDK 会自动采集 tap 事件，发送数据包含但不限于以下信息：点击事件时间、事件发生所在页面、点击控件相关信息。比如如下，
 
-```text
-<view data-title='复仇者联盟3' data-index='1' bindtap='clickMovie'>  <image src='IMAGE—URL' mode='aspectFill'/>  <text>复仇者联盟3</text></view>
+```markup
+<view data-title='复仇者联盟3' data-index='1' bindtap='clickMovie'>
+    <image src='IMAGE—URL' mode='aspectFill'/>
+    <text>复仇者联盟3</text>
+</view>
 ```
 
 注意这里的 `data-title` 和 `data-index` 属性，因为微信小程序的限制，无法采集到控件的内容和结构数据，所以在小程序 SDK 里面我们采取的是声明式编程，通过在 wxml 文件里面设置 data- 属性，可以给 view 控件添加额外的`内容`和`位置`属性，方便后续在分析时可以按照元素内容和元素位置做分析，对于列表式的组件特别有用和方便。
@@ -527,7 +526,7 @@ tap 事件是手指触摸后马上离开时触发的事件。当 wxml 中的 vie
 
 longpress 事件是手指触摸后，超过350ms再离开时触发的事件。当 wxml 的 view 绑定了 bindlongpress 事件以后，在事件处理函数执行的时候，SDK 会自动采集 longpress 事件，发送数据包含但不限于以下信息：点击事件时间、事件发生所在页面、点击控件相关信息。比如如下，
 
-```text
+```markup
 <view data-title='复仇者联盟3' data-index='1' bindtap='clickMovie'>
   <image src='IMAGE—URL' mode='aspectFill'/>
   <text>复仇者联盟3</text>
@@ -542,7 +541,7 @@ longpress 事件是手指触摸后，超过350ms再离开时触发的事件。�
 
 change 事件是针对 checkbox, radio, picker-view 这些控件，当选择项发生改变时触发的事件。当 wxml 的 view 绑定了 bingchange 事件以后，在事件处理函数执行的时候，SDK 会自动采集 change 事件，发送数据包含但不限于以下信息：选择事件的发生时间、事件发生所在页面。如果设置了要采集内容，则也会包含选择项的内容信息。比如如下，
 
-```text
+```markup
 <checkbox-group bindchange='checkboxChange' data-growing-track>
   <label class='checkbox'>
     <checkbox value='GrowingIO' checked='true' /> GrowingIO
@@ -562,7 +561,7 @@ change 事件是针对 checkbox, radio, picker-view 这些控件，当选择项�
 
 confirm 事件是对于 input 和 textarea 控件，当输入完成后触发的事件。当 wxml 的 view 绑定了 bindconfirm 事件以后，在事件处理函数执行的时候，SDK 会自动采集 confirm 事件，发送数据包含但不限于以下信息：输入事件的发生时间、事件发生所在页面。如果设置了要采集内容，则也会包含输入的内容。比如如下，
 
-```text
+```markup
 <input class='new-todo'
        value='{{ input }}'
        placeholder='Anything here...'
@@ -578,7 +577,7 @@ confirm 事件是对于 input 和 textarea 控件，当输入完成后触发的�
 
 如果您的小程序使用了navigator组件，需要您手动绑定一个空的点击事GrowingIO才能实现跳转点击的采集。
 
-```text
+```markup
 <navigator ...>
   <view bindtap="nameForThisClickButton">
      ...
@@ -610,8 +609,8 @@ GrowingIO 预置了两个小程序的标准自定义事件：分享到群聊或�
 
 接口定义：
 
-```text
-gio('track', eventName: string, properties: object)
+```javascript
+gio('track', eventName: string, properties: object);
 ```
 
 参数说明：
@@ -623,7 +622,7 @@ gio('track', eventName: string, properties: object)
 
 示例：
 
-```text
+```javascript
 // 假设初始化后把 gio 对象放在 App 的 globalData 里面
 // 在 Page 的 clickBanner 函数里添加以下代码
 Page({
@@ -643,8 +642,8 @@ Page({
 
 接口定义：
 
-```text
-gio('setVisitor', properties: object)
+```javascript
+gio('setVisitor', properties: object);
 ```
 
 参数说明：
@@ -655,7 +654,7 @@ gio('setVisitor', properties: object)
 
 示例：
 
-```text
+```javascript
 // 假设初始化后把 gio 对象放在 App 的 globalData 里面
 // 比如在针对不同的用户做某个 Campaign 的 A/B 测试
 getApp().globalData.gio('setVisitor', { 
@@ -670,7 +669,7 @@ getApp().globalData.gio('setVisitor', {
 
 接口定义：
 
-```text
+```javascript
 gio('setUser', properties: object)
 ```
 
@@ -682,9 +681,9 @@ gio('setUser', properties: object)
 
 示例：
 
-```text
+```javascript
 // 假设初始化后把 gio 对象放在 App 的 globalData 里面
-getApp().globalData.gio('setUser', { 
+getApp().globalData.gio('setUser', {
   age: 30, 
   level: '高级用户', 
   company: 'GrowingIO', 
@@ -698,7 +697,7 @@ getApp().globalData.gio('setUser', {
 
 接口定义：
 
-```text
+```javascript
 gio('setPage', properties: object)
 ```
 
@@ -710,7 +709,7 @@ gio('setPage', properties: object)
 
 示例：
 
-```text
+```javascript
 // 假设初始化后把 gio 对象放在 App 的 globalData 里面
 // 推荐在 Page#onShow 处理这个事件
 // 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 type
@@ -730,7 +729,7 @@ Page({
 
 接口定义：
 
-```text
+```javascript
 gio('setEvar', properties: object)
 ```
 
@@ -742,7 +741,7 @@ gio('setEvar', properties: object)
 
 示例：
 
-```text
+```javascript
 // 假设初始化后把 gio 对象放在 App 的 globalData 里面
 getApp().globalData.gio('setEvar', { 
   campaign: '活动A'
