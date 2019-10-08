@@ -6,16 +6,36 @@
 
 #### 新功能:
 
-* deeplink短链支持
-* imp半自动打点 自动取v
+* deeplink 短链支持
+* imp 半自动打点自动取元素内容
 
 #### 优化:
 
-* 优化setUserId性能问题
+* 优化 setUserId 性能问题
 
 **修复bug：**
 
 * 修复GrowingReactNativeKit版本号读取不到正确值的问题
+
+### Android 2.8.4
+
+#### 新功能：
+
+* 广告 AppLink 支持，推广 App 可以从短信等应用中的 GIO 广告 URL 点击跳转 APP 内部指定页面
+* 支持 **com.android.tools.build:gradle:3.5.0** 
+* imp 半自动打点自动取元素内容
+
+#### ‌**优化：**
+
+* 优化 webview 的 js 注入  
+* 修复 web 圈选 app 的时候内嵌 H5 页面自定义 dennsity 时圈选错位问题
+* 优化编译警告日志 java.lang.NoClassDefFoundError 
+
+**修复bug：**‌
+
+* 修复 web 圈选 app 的时候内嵌 H5 页面自定义 dennsity 时圈选错位问题
+* 修复 Android 7.0 以下系统 Bug, 搜索 google diff 号： f1e55cdd8107685a8705e377e6d95859dbd28582 ，SIGABRT 问题
+*  在 JVM8 以上兼容第三方 SDK 不存在 StackMapTable 属性
 
 ## 2019年8月28日
 
