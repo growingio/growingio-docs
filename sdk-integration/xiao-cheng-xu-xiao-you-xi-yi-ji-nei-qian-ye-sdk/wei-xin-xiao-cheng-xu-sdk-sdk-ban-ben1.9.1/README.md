@@ -539,7 +539,7 @@ longpress 事件是手指触摸后，超过350ms再离开时触发的事件。�
 
 #### change
 
-change 事件是针对 checkbox, radio, picker-view 这些控件，当选择项发生改变时触发的事件。当 wxml 的 view 绑定了 bingchange 事件以后，在事件处理函数执行的时候，SDK 会自动采集 change 事件，发送数据包含但不限于以下信息：选择事件的发生时间、事件发生所在页面。如果设置了要采集内容，则也会包含选择项的内容信息。比如如下，
+change 事件是针对 checkbox, radio, picker-view 这些控件，当选择项发生改变时触发的事件。当 wxml 的 view 绑定了 bindchange 事件以后，在事件处理函数执行的时候，SDK 会自动采集 change 事件，发送数据包含但不限于以下信息：选择事件的发生时间、事件发生所在页面。如果设置了要采集内容，则也会包含选择项的内容信息。比如如下，
 
 ```markup
 <checkbox-group bindchange='checkboxChange' data-growing-track>
