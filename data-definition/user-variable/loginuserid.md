@@ -64,7 +64,7 @@
 
 #### 归因配置
 
-![&#x5F52;&#x56E0;&#x914D;&#x7F6E;](../../.gitbook/assets/image%20%2885%29.png)
+![&#x5F52;&#x56E0;&#x914D;&#x7F6E;](../../.gitbook/assets/image%20%2887%29.png)
 
 ### **第二步：代码部署** <a id="di-er-bu-dai-ma-bu-shu"></a>
 

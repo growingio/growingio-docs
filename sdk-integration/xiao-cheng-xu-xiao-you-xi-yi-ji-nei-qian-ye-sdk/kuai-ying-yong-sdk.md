@@ -1,7 +1,3 @@
----
-description: 快应用 SDK目前属于灰度内测功能，如有需求，请联系您的客户成功经理或商务对接人，申请进行灰度内测。
----
-
 # 快应用 SDK
 
 ## 快应用 SDK标准接入指南
@@ -105,9 +101,9 @@ gio('setUser', { id: user.id, name: user.name });
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面，点击右下角“**检测数据”**。请在添加了跟踪代码的快应用重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
 
-![](../../.gitbook/assets/image%20%28339%29.png)
+![](../../.gitbook/assets/image%20%28343%29.png)
 
-![](../../.gitbook/assets/image%20%28186%29.png)
+![](../../.gitbook/assets/image%20%28188%29.png)
 
 ### 5 进入数据校验模块，查看数据发送情况
 

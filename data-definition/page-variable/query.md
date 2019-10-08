@@ -18,7 +18,7 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
 
 ![](../../.gitbook/assets/shi-jian-he-bian-liang.png)
 
-![web &#x5708;&#x9009;](../../.gitbook/assets/image%20%2823%29.png)
+![web &#x5708;&#x9009;](../../.gitbook/assets/image%20%2824%29.png)
 
 {% hint style="info" %}
 遵循两个原则：

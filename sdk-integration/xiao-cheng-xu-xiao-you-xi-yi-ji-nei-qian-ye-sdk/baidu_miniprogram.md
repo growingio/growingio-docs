@@ -1,14 +1,10 @@
----
-description: 百度小程序SDK目前属于灰度内测功能，如有需求，请联系您的客户成功经理或商务对接人，申请进行灰度内测。
----
-
 # 百度小程序 SDK
 
 ## 百度小程序SDK标准接入指南
 
 进入集成页面，选择百度小程序，填写应用名称和 AppID，点击「下一步」
 
-![](../../.gitbook/assets/image%20%28257%29.png)
+![](../../.gitbook/assets/image%20%28259%29.png)
 
 ### 1 根据百度小程序框架选择SDK文件并添加跟踪代码
 
@@ -277,9 +273,9 @@ gio('init', '你的项目 ID', '你的百度小程序 AppID', { version: '1.0', 
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面，点击右下角“**检测数据”**。请在添加了跟踪代码的百度小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
 
-![](../../.gitbook/assets/image%20%28339%29.png)
+![](../../.gitbook/assets/image%20%28343%29.png)
 
-![](../../.gitbook/assets/image%20%28186%29.png)
+![](../../.gitbook/assets/image%20%28188%29.png)
 
 
 
