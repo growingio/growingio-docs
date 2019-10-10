@@ -250,14 +250,18 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 2. 添加自定义参数回调方法：
 
 ```objectivec
-// params 为解析正确时反回调的参数, error 为解析错误时返回的参数.
-// handler 默认为空, 客户需要手动设置.
-+ (void)registerDeeplinkHandler:(void(^)(NSDictionary *params, NSError *error))handler;
+/**
+ deeplink广告落地页参数回调设置
+
+ @param handler deeplink广告落地页参数回调, params 为解析正确时回调的参数, processTime为从app被deeplink唤起到handler回调的时间(单位秒), error 为解析错误时返回的参数.
+                 handler 默认为空, 客户需要手动设置.
+ */
++ (void)registerDeeplinkHandler:(void(^)(NSDictionary *params, NSTimeInterval processTime, NSError *error))handler;
 ```
 
 ```objectivec
 //DeepLink 调用示例
-[Growing registerDeeplinkHandler:^(NSDictionary *params, NSError *error) {
+[Growing registerDeeplinkHandler:^(NSDictionary *params, NSTimeInterval processTime, NSError *error) {
         NSLog(@"params : %@", params);
         XCTAssertNotNil(params);
         XCTAssertEqualObjects(params[@"key1"], @"value1");

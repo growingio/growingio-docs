@@ -28,12 +28,11 @@
 #### ‌**优化：**
 
 * 优化 webview 的 js 注入  
-* 修复 web 圈选 app 的时候内嵌 H5 页面自定义 dennsity 时圈选错位问题
+* 修复 web 圈选 app 的时候内嵌 H5 页面自定义 density 时圈选错位问题
 * 优化编译警告日志 java.lang.NoClassDefFoundError 
 
 **修复bug：**‌
 
-* 修复 web 圈选 app 的时候内嵌 H5 页面自定义 dennsity 时圈选错位问题
 * 修复 Android 7.0 以下系统 Bug, 搜索 google diff 号： f1e55cdd8107685a8705e377e6d95859dbd28582 ，SIGABRT 问题
 *  在 JVM8 以上兼容第三方 SDK 不存在 StackMapTable 属性
 
