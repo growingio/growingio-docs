@@ -10,7 +10,6 @@
 * [3 SDK 版本支持](tui-guang-app.md#3-sdk-xiang-guan-xin-xi)
   * [3.1 App 下载追踪](tui-guang-app.md#31-app-xia-zai-zhui-zong)
   * [3.2 DeepLink 唤起 App](tui-guang-app.md#32-deeplink-huan-qi-app)
-  * 
 
 ### 1 增加 App 下载量
 
