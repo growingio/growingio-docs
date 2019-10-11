@@ -26,7 +26,7 @@
 
 GIO广告监测链接信息架构
 
-![](../.gitbook/assets/image%20%28197%29.png)
+![](../.gitbook/assets/image%20%28200%29.png)
 
 因此，GIO中生成一条监测链接至少需要涵盖以下信息： 
 

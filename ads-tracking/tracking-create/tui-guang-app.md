@@ -3,11 +3,14 @@
 * [1 增加 App 下载量](tui-guang-app.md#1-zeng-jia-app-xia-zai-liang)
   * [1.1 场景适用](tui-guang-app.md#11-chang-jing-shi-yong)
   * [1.2 链接创建](tui-guang-app.md#12-lian-jie-chuang-jian)
-* [2 吸引用户直接打开 App](tui-guang-app.md#2-xi-yin-yong-hu-zhi-jie-da-kai-app)
+* [2 吸引用户直接打开 App（DeepLink）](tui-guang-app.md#2-xi-yin-yong-hu-zhi-jie-da-kai-app)
 * * [2.1 场景适用](tui-guang-app.md#21-chang-jing-shi-yong)
   * [2.2 链接创建](tui-guang-app.md#22-lian-jie-chuang-jian)
   * [2.3 相关配置](tui-guang-app.md#23-xiang-guan-pei-zhi)
-* [3 SDK 相关信息](tui-guang-app.md#3-sdk-xiang-guan-xin-xi)
+* [3 SDK 版本支持](tui-guang-app.md#3-sdk-xiang-guan-xin-xi)
+  * [3.1 App 下载追踪](tui-guang-app.md#31-app-xia-zai-zhui-zong)
+  * [3.2 DeepLink 唤起 App](tui-guang-app.md#32-deeplink-huan-qi-app)
+  * 
 
 ### 1 增加 App 下载量
 
@@ -15,7 +18,7 @@
 
 适用于拉新场景，对于常见的 App 下载行为追踪，可选择该方式创建链接来追踪用户 App下载行为，方便您衡量广告推广效果。
 
-![](../../.gitbook/assets/image%20%28123%29.png)
+![](../../.gitbook/assets/image%20%28124%29.png)
 
 #### 1.2 链接创建
 
@@ -29,13 +32,13 @@
 * 在一条链接推广一个平台 App 的情况下，支持批量创建监测链接，选择“批量创建”，输入链接数量即可批量生成一组监测链接；
 *  完成链接创建，准备投放，可获取监测链接或下载二维码。
 * 
-### 2 吸引用户直接打开 App
+### 2 吸引用户直接打开 App （DeepLink）
 
 #### 2.1 场景适用
 
 适用于促活、唤回场景，对于 App 已安装，希望通过广告推广促进用户打开 App 或是召回老客户，可通过该方式来创建深度链接（DeepLink）来促使用户回到您的 App 中。
 
-![](../../.gitbook/assets/image%20%28309%29.png)
+![](../../.gitbook/assets/image%20%28314%29.png)
 
 #### 2.2 链接创建
 
@@ -58,23 +61,34 @@
 如果要使用该技术，请与活动页的开发人员确认页面 URI 参数信息以及 Key/Value 值，确认无误后请填入直达落地页参数输入框，该条深度链接将会跳转到 App 内的具体页面。 
 {% endhint %}
 
-#### 2.3 相关配置
+#### 2.3 DeepLink 相关配置
+
+在正确集成 GrowingIO 提供的 SDK ，以及 URL Scheme 的配置后，即可开始使用 GrowingIO 提供的 DeepLink 深度链接功能。
 
 SDK 端配置：[iOS 端](https://docs.growingio.com/docs/sdk-integration/ios-sdk-1/ios-sdk#deeplink-hui-tiao-can-shu-huo-qu)、[Android 端](https://docs.growingio.com/docs/sdk-integration/android-sdk/android-sdk#deep-link-hui-tiao-can-shu-huo-qu)
 
-Universal Link / 腾讯应用宝微下载：[配置方法](https://docs.growingio.com/docs/configuration/project-configuration#3)
+为获得更好的用户使用体验，GrowingIO 同时建议您在 iOS 下开启 Universal Links 、在 Android 下开启 App Links ，该两项技术为 Apple 与 Google 提供的原生方案，使用该技术将在其系统生态中将获得更流畅的跳转体验。
 
-### 3 SDK 相关信息
+Universal Links 配置：[配置方法](../../configuration/project-configuration.md#pei-zhi-universal-linksios)
 
-如果您需要跟踪 App（安卓 or iOS）的推广效果，可以使用此功能。使用之前请确保您的 App 中加载了GrowingIO 的 SDK1.0.3 以上。
+App Links 配置：[配置方法](../../configuration/project-configuration.md#pei-zhi-app-linksandroid)
 
-| Deep-Link功能 | App  SDK版本 |
+### 3 SDK 版本支持
+
+#### 3.1 App 下载追踪
+
+如果您需要跟踪 App（ iOS & Android）由推广带来的 App 下载，可以使用此功能。使用之前请确保您的 App 中加载了GrowingIO 的 SDK1.0.3 以上。
+
+#### 3.2 DeepLink 唤起 App
+
+| DeepLink功能 | App  SDK版本 |
 | :--- | :--- |
-| 基础Deeplink功能（Scheme打开APP至首页） | 2.3.0 |
-| 直达落地页（Scheme打开至活动页） | 2.3.2 |
-| Universal Link/应用宝微下载支持 | 2.4.1 |
+|  DeepLink 基础功能（Scheme 唤起 App） | 2.3.0 |
+| DeepLink 直达 App 内落地页（Scheme打开至活动页） | 2.3.2 |
+| Universal Links / 应宝微下载支持 | 2.4.1 |
+| Universal Links / App Links 一步跳入 App 支持 | 2.8.4 |
 
-注：使用 DeepLink 功能需要 SDK 升级到 2.3.0以上，SDK 版本功能向下兼容。
+注：使用 DeepLink 功能需要 SDK 升级到 2.3.0 以上，SDK 版本功能向下兼容。
 
 
 
