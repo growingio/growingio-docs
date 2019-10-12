@@ -27,7 +27,7 @@
 * [看板](dashboard/README.md)
   * [自定义首页](dashboard/homepage.md)
   * [概览看板](dashboard/overview.md)
-  * [KPI版本（企业版）](dashboard/kpi-ban-ben-qi-ye-ban.md)
+  * [KPI看板（企业版）](dashboard/kpi-ban-ben-qi-ye-ban.md)
   * [小程序预置看板](dashboard/mina-overview.md)
   * [微信内嵌页预置看板](dashboard/wei-xin-nei-qian-ye-yu-zhi-kan-ban.md)
   * [实时监控模板](dashboard/realtime.md)
