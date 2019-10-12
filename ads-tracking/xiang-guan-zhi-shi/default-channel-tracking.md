@@ -104,13 +104,19 @@ GrowingIO直接支持百度统计的参数解析；如果您的自主投放追�
 
 2、gio.ren 使用 tc.domain.com 替换。
 
-### 5. 自主调用Api接口创建链接 <a id="5"></a>
+### 5. 自主调用 API 接口创建链接 <a id="5"></a>
+
+{% hint style="danger" %}
+下线通知：网页推广监测链接创建 API 已合并至广告监测链接创建服务 API 下，此 API 接口计划于 19 年 12 月 1 日下线，请您尽快切换至新版 API 接口，文档位置：[推广网页创建 API ](../../api/ads-tracking-api.md#normallink-2) 。
+{% endhint %}
 
 POST **https://gta.growingio.com/api/v1/projects/project\_id/activities**
 
 上述地址中的 project\_id 取值请参考[“GrowingIO接口认证”](../../api/authentication.md)章节的“术语”。
 
-注意：将以下内容作为JSON Body，post到上述链接。
+{% hint style="danger" %}
+注意：将以下内容作为JSON Body，post到上述链接。**该接口已废弃，请尽快升级到**[**新版本接口**](../../api/ads-tracking-api.md#normallink-1)\*\*\*\*
+{% endhint %}
 
 #### 5.1 输入 <a id="51"></a>
 
