@@ -61,5 +61,3 @@ description: 无埋点事件管理功能帮助您对产品内所有通过圈选�
 在新的数据管理上线后，我们将原先的「复合指标」功能升级为「计算指标」，将原先的「合并指标」功能调整为「合并事件」。新的合并事件与计算指标功能支持使用埋点事件，以及不同类型事件的合并与计算，不再仅限使用无埋点事件。您可以通过进入【数据管理】-【计算指标】与【合并事件】菜单，体验全新的计算指标与合并事件功能。  
 
 
-![](https://lh4.googleusercontent.com/kr8I2eJrYI7SEpJCxXcB1QneOlOt25XH1i8vV5nQBo8wqPTjy3gTfybr7X5IYw7FEm3u-P00NoHbB-KgsU7VA1CX0dfft-jUmXTWGmCHCC6_oxWnG-2GG2X6RvqLHV6inJ1RdDp9)
-

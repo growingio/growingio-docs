@@ -34,7 +34,7 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
 
 电商客户 S 为了分析商品的售卖情况，在详情页进行了埋点，将每个商品的编号、商品名称等设置成了页面级变量，已经实施后上线了，其中商品编号标识符为 id，是从内容中取值的。接下来，用户用这个页面级变量来拆分商品详情页，进行分析。
 
-商品详情页的 URL 是这样的 [www.s.com/pro?id=342817&city=bj](http://www.s.com/pro?id=342817&city=bj) ，我们可以看到查询条件中的 id 就是这个商品的商品编号， **当这个功能上线后，由于「商品编号标识符： id」与「查询条件中的：id 」是一样的，我们会从打点设置的规则和 URL 中的查询条件中同时取 id 的值，**有如下几种情况：
+假设商品详情页的 URL 是这样的 www.s.com/pro?id=342817&city=bj ，我们可以看到查询条件中的 id 就是这个商品的商品编号， **当这个功能上线后，由于「商品编号标识符： id」与「查询条件中的：id 」是一样的，我们会从打点设置的规则和 URL 中的查询条件中同时取 id 的值，**有如下几种情况：
 
 > 表格第四列「埋点取的值」 - 客户打点时的规则是从「内容」中取值；
 >
@@ -62,23 +62,12 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
       <td style="text-align:left">&#x7B2C; 1 &#x4E2A;&#x60C5;&#x51B5;</td>
       <td style="text-align:left">
-        <p>&#x5546;&#x54C1;&#x8BE6;&#x60C5;&#x9875;1</p>
-        <ul>
-          <li>&#x5546;&#x54C1;&#x9875;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x503C; 342817</li>
-          <li><a href="http://www.s.com/pro?id=342817&amp;city=bj">ww.s.com/pro?id=342817&amp;city=bj</a>
-          </li>
-        </ul>
+        <p><b>&#x5546;&#x54C1;&#x8BE6;&#x60C5;&#x9875;1</b>
+        </p>
+        <p>&#x5546;&#x54C1;&#x9875;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x503C; 342817</p>
+        <p>www.s.com/pro?id=342817&amp;city=bj</p>
       </td>
       <td style="text-align:left">&#x65E0;&#x53D8;&#x5316;</td>
       <td style="text-align:left"><b>342817</b>
@@ -91,12 +80,10 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
     <tr>
       <td style="text-align:left">&#x7B2C; 2 &#x4E2A;&#x60C5;&#x51B5;</td>
       <td style="text-align:left">
-        <p>&#x5546;&#x54C1;&#x8BE6;&#x60C5;&#x9875;1</p>
-        <ul>
-          <li>&#x5546;&#x54C1;&#x9875;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x503C; ac487</li>
-          <li><a href="http://www.s.com/pro?id=342817&amp;city=bj">ww.s.com/pro?id=342816&amp;city=bj</a>
-          </li>
-        </ul>
+        <p><b>&#x5546;&#x54C1;&#x8BE6;&#x60C5;&#x9875;1 </b>
+        </p>
+        <p>&#x5546;&#x54C1;&#x9875;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x503C; ac487</p>
+        <p>www.s.com/pro?id=342816&amp;city=bj</p>
       </td>
       <td style="text-align:left">&#x65E0;&#x53D8;&#x5316;</td>
       <td style="text-align:left"><b>ac487</b>
@@ -109,13 +96,11 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
     <tr>
       <td style="text-align:left">&#x7B2C; 3 &#x4E2A;&#x60C5;&#x51B5;</td>
       <td style="text-align:left">
-        <p>&#x5546;&#x54C1;&#x8BE6;&#x60C5;&#x9875;2</p>
-        <ul>
-          <li>&#x5546;&#x54C1;&#x9875;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x503C; 342815
-            &#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x65F6;&#x95F4;&#x7684;&#x7F18;&#x6545;&#xFF0C;&#x6CA1;&#x6709;&#x53D1;&#x51FA;&#x6765;&#x8FD9;&#x4E2A;&#x503C;</li>
-          <li><a href="http://www.s.com/pro?id=342817&amp;city=bj">ww.s.com/pro?id=342815&amp;city=bj</a>
-          </li>
-        </ul>
+        <p><b>&#x5546;&#x54C1;&#x8BE6;&#x60C5;&#x9875;2 </b>
+        </p>
+        <p>&#x5546;&#x54C1;&#x9875;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x503C; 342815
+          &#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x65F6;&#x95F4;&#x7684;&#x7F18;&#x6545;&#xFF0C;&#x6CA1;&#x6709;&#x53D1;&#x51FA;&#x6765;&#x8FD9;&#x4E2A;&#x503C;</p>
+        <p>www.s.com/pro?id=342815&amp;city=bj</p>
       </td>
       <td style="text-align:left">&#x8865;&#x4E86;&#x503C;</td>
       <td style="text-align:left">NA</td>
@@ -128,14 +113,10 @@ https://www.growingio.com/projects/1/homepage/overview?platform=ios&channel=bann
     <tr>
       <td style="text-align:left">&#x7B2C; 4 &#x4E2A;&#x60C5;&#x51B5;</td>
       <td style="text-align:left">
-        <p>&#x5546;&#x54C1;&#x8BA2;&#x5355;&#x9875;1</p>
-        <ul>
-          <li>&#x8BA2;&#x5355;&#x9875;&#x6CA1;&#x6709;&#x6253;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x6253;&#x70B9;&#x7684;&#x503C;</li>
-          <li><a href="http://www.s.com/pro?id=342817&amp;city=bj">ww.s.com/orderform</a>
-            <a
-            href="http://www.s.com/pro?id=342817&amp;city=bj">?id=53462&amp;city=bj</a>
-          </li>
-        </ul>
+        <p><b>&#x5546;&#x54C1;&#x8BA2;&#x5355;&#x9875;1 </b>
+        </p>
+        <p>&#x8BA2;&#x5355;&#x9875;&#x6CA1;&#x6709;&#x6253;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x6253;&#x70B9;&#x7684;&#x503C;</p>
+        <p>www.s.com/orderform?id=53462&amp;city=bj</p>
       </td>
       <td style="text-align:left">&#x8865;&#x4E86;&#x503C;</td>
       <td style="text-align:left">NA</td>
