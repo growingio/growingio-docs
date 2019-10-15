@@ -843,8 +843,8 @@ Response: Status Code: 200 OK
 | trackingUrl | String | GrowingIO 分配的追踪链接 | https://gio.ren/w/xogvY0Pm |
 | redirectUrl | String | 跳转链接 | http://www.www.www |
 | impressionUrl | String | 曝光检测链接 | null |
-| campaignId | String | iOS推广活动id | xogjZQ2P |
-| campaignName | String | iOS推广活动名称 | test0620 |
+| campaignId | String | 推广活动id | xogjZQ2P |
+| campaignName | String | 推广活动名称 | test0620 |
 | channelId | String | 渠道id | vnomv9zJ |
 | channelName | String | 渠道名称 | 百度联盟 |
 | utmMedium | String | 广告媒介 | 对对对 |
