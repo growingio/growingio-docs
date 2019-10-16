@@ -414,7 +414,9 @@ gio("identify", openid, unionid);
 
 **注意：**如果你的微信小程序在用户打开后不要求用户授权获取openid和/或 unionid，但是设置了forceLogin为True，那么GroiwngIO不能采集到用户的数据，采集到的用户会偏少，所以请特别注意这个参数的设置。如果您不能确定是否要设置这个参数，请先咨询我们。
 
-#### 2.2 进行 微信用户信息的配置
+### 3 进行 微信用户信息的配置
+
+上报微信信息，支持按照 openid、unionid 进行用户分群、以及使用微信推送等高级功能。
 
 #### SDK 微信用户属性设置
 
@@ -465,7 +467,7 @@ wx.getUserInfo({
 
 {% page-ref page="../wei-xin-nei-qian-ye-sdk-xin-ban.md" %}
 
-### 3、添加请求服务器域名
+### 4、添加请求服务器域名
 
 要正常采集微信小程序的数据并发送给 GrowingIO，需要在微信小程序里事先设置一个通讯域名，允许跟 GrowingIO API 服务器进行网络通信。具体步骤如下：
 
@@ -475,7 +477,7 @@ wx.getUserInfo({
 
 ![SDK &#x6DFB;&#x52A0;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;](../../../.gitbook/assets/image%20%28363%29.png)
 
-### 4、检测数据
+### 5、检测数据
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面检测数据。请在添加了跟踪代码的小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。详情可见小程序Debugger。
 
