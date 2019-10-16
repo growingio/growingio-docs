@@ -51,3 +51,62 @@ pageRequestId 字段可以用来和 page 数据的 pageRequestId 字段关联。
 | domain | string\(100\) | 域名（domain） | www.growingio.com | 访问的域名，当为 iOS / Android 时，为 app 包名 |
 | conversionVariable | map&lt;string, string&gt; | 转化变量（conversion variable） | {"keyword":"retention"} |  |
 
+## vstr——访问用户变量
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x539F;&#x59CB;&#x6570;&#x636E;&#x5BFC;&#x51FA; 2.0 &#x5B57;&#x6BB5;&#x540D;&#x79F0;</th>
+      <th
+      style="text-align:left">&#x5B57;&#x6BB5;&#x683C;&#x5F0F;</th>
+        <th style="text-align:left">&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</th>
+        <th style="text-align:left">&#x793A;&#x4F8B;&#x503C;</th>
+        <th style="text-align:left">&#x5907;&#x6CE8;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">visitUserId</td>
+      <td style="text-align:left">string(64)</td>
+      <td style="text-align:left">&#x8BBF;&#x95EE;&#x7528;&#x6237;ID&#xFF08;visit user id&#xFF09;</td>
+      <td
+      style="text-align:left">
+        <p>oN_b948b3x_U4HuosfHg8</p>
+        <p>WPP_dk3</p>
+        </td>
+        <td style="text-align:left">&#x8BBF;&#x95EE;&#x7528;&#x6237; ID &#x552F;&#x4E00;&#x6807;&#x8BC6;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">sessionId</td>
+      <td style="text-align:left">string(50)</td>
+      <td style="text-align:left">&#x8BBF;&#x95EE;ID&#xFF08;session id&#xFF09;</td>
+      <td style="text-align:left">2e75b9d3-7a6a-4bc4-adba-7e1991ad0984</td>
+      <td style="text-align:left">&#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x552F;&#x4E00;&#x6807;&#x8BC6;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">time</td>
+      <td style="text-align:left">bigint</td>
+      <td style="text-align:left">&#x65F6;&#x95F4;&#x6233;&#xFF08;time&#xFF09;</td>
+      <td style="text-align:left">1570759597880</td>
+      <td style="text-align:left">&#x8BF7;&#x6C42;&#x5728;&#x7528;&#x6237;&#x7AEF;&#x53D1;&#x751F;&#x7684;&#x65F6;&#x95F4;&#x6233;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">sendTime</td>
+      <td style="text-align:left">bigint</td>
+      <td style="text-align:left">&#x53D1;&#x9001;&#x65F6;&#x95F4;&#xFF08;send time&#xFF09;</td>
+      <td style="text-align:left">1570759599015</td>
+      <td style="text-align:left">&#x8BF7;&#x6C42;&#x5728;SDK&#x53D1;&#x9001;&#x7684;&#x65F6;&#x95F4;&#x6233;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">visitorVariable</td>
+      <td style="text-align:left">map&lt;string,string&gt;</td>
+      <td style="text-align:left">&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;&#xFF08;visitorVariable&#xFF09;</td>
+      <td
+      style="text-align:left">
+        <p>{&quot;openid&quot;:&quot;Q5gUtEqZJ5AaaQ&quot;,</p>
+        <p>&quot;unionid&quot;:&quot;IItwkiOBsfA6JhlM&quot;}</p>
+        </td>
+        <td style="text-align:left">&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x53D8;&#x91CF;&#x952E;&#x503C;&#x5BF9;</td>
+    </tr>
+  </tbody>
+</table>

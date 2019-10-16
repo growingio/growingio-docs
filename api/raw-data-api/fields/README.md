@@ -13,7 +13,7 @@
 ### 原始数据导出 2.0 提供的数据类型：
 
 * 无埋点事件：visit、page、action、action\_tag
-* 埋点事件与变量：custom\_event（原custom\_attr）、pvar（新增）、evar（新增）
+* 埋点事件与变量：custom\_event（原custom\_attr）、pvar（新增）、evar（新增）、vstr（新增）
 * 广告相关：ads\_track\_click、ads\_track\_activation
 
 一共9种类型的数据
