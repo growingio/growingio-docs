@@ -16,6 +16,10 @@ Android 2.7.8 SDK 为海外上架应用涉及采集用户 `androidId`, `imei`, `
 增加分别可以在编译时、SDK 初始化、 APP 运行时调用的对应接口。
 {% endhint %}
 
+{% hint style="danger" %}
+**注意，imeiEnable、androidEnable、googleAdIdEnable 配置项不支持  com.android.tools.build:gradle  3.0.x 以下版本**。
+{% endhint %}
+
 | 编译时配置项API | 默认值 | 说明 | 版本 |
 | :--- | :--- | :--- | :--- |
 | imeiEnable | true | 为了海外应用市场上架应用，设置为 false 则 SDK 不采集 `imei` 。**在编译期配置将删除该部分的采集代码，后续配置（初始化或者运行时）将失效。** | 2.7.8及以上 |
