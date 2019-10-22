@@ -193,6 +193,8 @@ Domains 为 manifest.xml 文件中配置 Intent filter 中的 host , GIO 可能�
 
 GrowingIO 提供跳转到应用宝微下载的功能，应用宝微下载为腾讯应用宝体系下的微下载链接。使用应用宝微下载，在微信等腾讯旗下软件中将转至微下载逻辑。
 
+腾讯微下载介绍：[https://wiki.open.qq.com/index.php?title=mobile/应用宝微下载](https://wiki.open.qq.com/index.php?title=mobile/应用宝微下载)
+
 ![](../.gitbook/assets/tu-pian%20%281%29.png)
 
 {% hint style="warning" %}
