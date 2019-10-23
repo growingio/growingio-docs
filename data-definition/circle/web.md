@@ -208,27 +208,32 @@ GrowingIO 互联网金融解决方案落地页 **https://www.growingio.com**​*
 
 ### 1.3 插件圈选
 
-GrowingIO 提供支持 web 圈选的 Chrome 扩展程序，推荐使用 Chrome网上应用店 一键安装，点击以下链接下载最新版扩展程序：
+GrowingIO 提供支持 eb 圈选的 Chrome 扩展程序。
 
-Chrome网上应用店一键安装（自动更新）：[https://chrome.google.com/webstore/detail/growingio-web%E5%9C%88%E9%80%89/iapmppbkobkiijkhndbnkncfaklmbhck](https://chrome.google.com/webstore/detail/growingio-web%E5%9C%88%E9%80%89/iapmppbkobkiijkhndbnkncfaklmbhck?authuser=3)
+**使用场景**
 
-插件（最新版）手动下载地址： [https://s.growingio.com/5EoKZl](https://s.growingio.com/5EoKZl)  
-  
-插件手动安装和使用文档： [https://s.growingio.com/2Z4mBB](https://s.growingio.com/2Z4mBB)
+* window.name、window.top等被复写，导致圈选不了；
+* 客户网站 block了外站加载 iframe，需要客户把我们加入白名单；
+* https/http 切换问题；
+* 客户网站的实现方式是新开一个tab显示新页面，现在会跳出 GIO；
+* 客户的header里面设置了Allow-orign 为他们自己的网站 导致没法在我们的官网里面被圈选。
 
-安装成功后，直接在 Chrome 浏览器中打开网站 url ，登录你的账号，圈选页面和元素的方式与上面相同。
+**插件安装**
 
-如果遇到以下问题，请直接使用「插件圈选」：
+> Chrome网上应用店一键安装（自动更新）：[https://chrome.google.com/webstore/detail/growingio-web%E5%9C%88%E9%80%89/iapmppbkobkiijkhndbnkncfaklmbhck](https://chrome.google.com/webstore/detail/growingio-web%E5%9C%88%E9%80%89/iapmppbkobkiijkhndbnkncfaklmbhck?authuser=3)
+>
+> 插件（最新版）手动下载地址： [https://s.growingio.com/5EoKZl](https://s.growingio.com/5EoKZl)，请参考[手动安装插件方法](https://s.growingio.com/2Z4mBB)。
 
-1. window.name、window.top等被复写，导致圈选不了；
+**圈选步骤**
 
-2.客户网站 block了外站加载 iframe，需要客户把我们加入白名单；
+1. **圈**选插件安装成功后，**直接在 Chrome 浏览器中打开待圈选网站**。
+2. 单机插件图标登录你的账号。
 
-3.https/http 切换问题；
+![](../../.gitbook/assets/image%20%28286%29.png)
 
-4.客户网站的实现方式是新开一个tab显示新页面，现在会跳出 GIO；
+3. 将插件模式切换到圈选模式，就可以开始圈选了，插件圈选方式与页面圈选功能相同。
 
-5.客户的header里面设置了Allow-orign 为他们自己的网站 导致没法在我们的官网里面被圈选。
+![](../../.gitbook/assets/image%20%2833%29.png)
 
 ## 2.常见问题 FAQ
 

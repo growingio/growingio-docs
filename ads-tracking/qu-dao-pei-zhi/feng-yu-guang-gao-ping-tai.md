@@ -2,9 +2,9 @@
 
 1、在广告监测创建环节中，推广渠道选择【凤羽】，并在推广目标页地址中配置广告落地页 URL。
 
-![](../../.gitbook/assets/image%20%2834%29.png)
+![](../../.gitbook/assets/image%20%2835%29.png)
 
 2、监测链接回填至凤羽后台，在凤羽平台“新建创意”时，第三方监测中请选择“GrowingIO”，并将监测链接填写到落地页地址当中。
 
-![](../../.gitbook/assets/image%20%28194%29.png)
+![](../../.gitbook/assets/image%20%28195%29.png)
 
