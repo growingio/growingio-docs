@@ -328,7 +328,7 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 
 ### 采集推送
 
-在**IOS  SDK 2.6.3** 版本， 支持采集用户**点击**本应用的通知的题和内容，和 Android SDK 不同，**不支持通知展现事件的采集**。此功能默认关闭，如需开启，请在 Application 初始化 GrowingIO 中设置，例如：
+在**IOS  SDK 2.6.3** 版本， 支持采集用户**点击**本应用的通知的题和内容。此采集点击事件功能默认关闭，如需开启，请在 Application 初始化 GrowingIO 中设置，例如：
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application
