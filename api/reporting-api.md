@@ -2,12 +2,20 @@
 
 * [1.看板数据信息 API](reporting-api.md#dashboard-api)
 * [2.事件分析下载 API](reporting-api.md#chart-api)
-* [3.分群下载 API](reporting-api.md#segmentation-api)
+* [3.漏斗分析下载API](reporting-api.md#funnel-api)
+* [4.留存分析下载API](reporting-api.md#retention-api)
+* [5.分群下载 API](reporting-api.md#segmentation-api)
 * [4.规则逻辑 API 接口](reporting-api.md#rule-api)
 
 注意：
 
-* 本页 API 中的 project\_id、dashboard\_id、chart\_id 字段，均可在项目页面url中找到，如："[https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R](https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R)"  中的 "nxog09md" 和 "YoX28w7R" 分别是 project\_id 和dashboard\_id。
+* 本页 API 中的 project\_id、dashboard\_id、chart\_id 、funnel\_id、retention\_id字段，均可在项目页面url中找到，如："[https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R](https://www.growingio.com/admin/projects/nxog09md/dashboard/YoX28w7R)"  中的 "nxog09md" 和 "YoX28w7R" 分别是 project\_id 和dashboard\_id。
+* dashboard\_id的获取方式：
+  * 第一种是在项目的url上获取。
+  * 第二种是根据1.1获取看板列表的api根据project\_id获取所有看板信息。
+* chart\_id、funnel\_id、retention\_id的获取方式：
+  * 第一种是在项目页面的url中获取。
+  * 第二种是根据1.2获取看板中的图表信息api，根据dashboard\_id获取当前看板的所有图表信息，返回的信息中会包含图表id、图表类型等信息。
 * 在进行导出之前，请务必参考[“GrowingIO接口认证”文档](authentication.md)，完成接口认证获取 token 。
 * 统计数据导出的延迟一般为 30 分钟，比如导出早上 8 点到 9 点之间的数据时，一般需要 9:30 才能统计完毕。另外，每天凌晨因为需要运行天级别的统计任务，此时前一天的统计数据大概有 3-4 小时的延迟，一般凌晨 4 点以后会统计完毕。
 
@@ -118,14 +126,24 @@ GrowingIO 分配的公钥，见 API 认证文档
       "id": "Chart Uid",
       "name": "Chart Name",
       "createor": "Chart Creator",
-      "createdAt": "Created Time"
+      "createdAt": "Created Time",
+      "resource_type": "chart"
     },
     {
-      "id": "Chart Uid",
+      "id": "Funnel Uid",
       "name": "Chart Name",
       "createor": "Chart Creator",
-      "createdAt": "Created Time"
+      "createdAt": "Created Time",
+      "resource_type": "funnel"
     }
+    {
+      "id": "Retention Uid",
+      "name": "Chart Name",
+      "createor": "Chart Creator",
+      "createdAt": "Created Time",
+      "resource_type": "retention"
+    }
+    ...
   ]
 }
 ```
@@ -242,11 +260,193 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% endapi-method-spec %}
 {% endapi-method %}
 
+###  <a id="funnel-api"></a>
 
+### 3.漏斗分析下载API <a id="funnel-api"></a>
 
-### 3.分群下载 API <a id="segmentation-api"></a>
+获取漏斗分析数据（单图下载每秒限速 2 次）
 
-#### 3.1 获取分群列表 <a id="resource"></a>
+{% api-method method="get" host="https://www.growingio.com" path="/v2/projects/:project\_id/funnels/funnel\_id.json" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="funnel\_id" type="string" required=true %}
+漏斗分析（单图ID）
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="project\_id" type="string" required=true %}
+项目uid
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+认证Token，见API认证文档
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="X-Client-Id" type="string" required=true %}
+GrowingIO分配的公匙，见API认证文档
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="conversionWindow" type="integer" required=false %}
+转化周期
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="endTime" type="integer" required=true %}
+数据结束时间，unix毫秒时间戳
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="startTime" type="integer" required=true %}
+数据起始时间，unix毫秒时间戳
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+"id":  "Funnel Uid",
+"name":  "Funnel Name",
+"conversionWindow":  1,
+"startTime":  1571068800000,
+"endTime":  1572278399999,
+"interval":  86400000,
+"meta":  [
+    {"name":"目标用户","dimension":true},
+    {"name":"时间","dimension":true},
+    {"name":"总转化率","metric":true},
+    {"name":"第一步人数","metric":true},
+    {"name":"第一步转化率","metric":true},
+    ...
+    {"name":"最后一步人数","metric":true},
+    {"name":"最后一步转化率","metric":true}
+]
+"data":  [
+    [目标用户, 时间, 总转化率, 第一步人数, ... , 最后一步转化率],
+    [目标用户, 时间, 总转化率, 第一步人数, ... , 最后一步转化率],
+    ...
+]
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+###  <a id="retention-api"></a>
+
+### 4.留存分析下载 API <a id="retention-api"></a>
+
+获取留存分析数据（单图下载每秒限速 2 次）
+
+{% api-method method="get" host="https://www.growingio.com" path="/v2/projects/:project\_id/retentions/:retention\_id.json" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="retention\_id" type="string" required=true %}
+留存分析（单图ID）
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="project\_id" type="string" required=true %}
+项目uid
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+认证Token，见API认证文档
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="X-Client-Id" type="string" required=true %}
+GrowingIO分配的公匙，见API认证文档
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="range" type="string" required=false %}
+范围 day（日留存） \| week（周留存） \| month（月留存）
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="endTime" type="integer" required=true %}
+数据结束时间，unix毫秒时间戳
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="startTime" type="integer" required=true %}
+数据起始时间，unix毫秒时间戳
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "id":  "Retention Uid",
+    "name":  "Retention Name",
+    "range":  "day",
+    "startTime":  1569686400000,
+    "endTime":  1572278399999,
+    "interval":  86400000,
+    "meta":  [
+        {"name":"目标用户","dimension":true},
+        {"name":"对比值","dimension":true},
+        {"name":"用户行为","dimension":true},
+        {"name":"时间","dimension":true},
+        {"name":"留存人数","metric":true},
+        {"name":"当日","metric":true},
+        {"name":"当日留存率","metric":true},
+        {"name":"次日","metric":true},
+        {"name":"次日留存率","metric":true},
+        {"name":"2日后","metric":true},
+        {"name":"2日后留存率","metric":true},
+        . . .
+        {"name":"29日后","metric":true},
+        {"name":"29日后留存率","metric":true}
+    ],
+    "data":  [
+        [目标用户,对比值,用户行为,时间,留存,...,29日后留存],
+        . . .,
+        [目标用户,对比值,用户行为,时间,留存,...,29日后留存]
+    ]
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+###  <a id="segmentation-api"></a>
+
+### 5.分群下载 API <a id="segmentation-api"></a>
+
+#### 5.1 获取分群列表 <a id="resource"></a>
 
 {% api-method method="get" host="https://www.growingio.com" path="/projects/:project\_id/segmentations.json" %}
 {% api-method-summary %}
@@ -306,7 +506,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### 3.2 获取特定分群的用户列表 <a id="resource"></a>
+#### 5.2 获取特定分群的用户列表 <a id="resource"></a>
 
 {% api-method method="get" host="https://www.growingio.com" path="/projects/:project\_id/segmentations/:segmentation\_id/users.csv" %}
 {% api-method-summary %}
@@ -357,7 +557,7 @@ cs1    name
 
 \*\*\*\*
 
-### 4.规则逻辑 API 接口 <a id="rule-api"></a>
+### 6.规则逻辑 API 接口 <a id="rule-api"></a>
 
 获取圈选元素定义
 

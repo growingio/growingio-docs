@@ -14,7 +14,9 @@ Hybrid SDK 负责采集用户在 App 中内嵌 H5 页面中的用户行为数据
 
 如果内嵌 H5 页面不仅在移动端投放，还可在 Web 端浏览，需要集成 Web JS SDK 并使用 Web 圈选，可以拆分出移动端和 Web 浏览器的数据。 
 
-
+{% hint style="info" %}
+如果同时存在 web js sdk 和 hybrid js sdk , 埋点调用代码只用写一遍，数据会自动发两份。
+{% endhint %}
 
 ## 重要配置项
 
