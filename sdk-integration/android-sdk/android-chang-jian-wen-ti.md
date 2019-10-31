@@ -135,9 +135,9 @@ TabHost.OnTabChangeListener listener = new TabHost.OnTabChangeListener() {
 
 
 
-## 埋点 API 使用问题
+## API 使用问题
 
-### 自定义页面变量事件发送失败
+### setPageVariable 自定义页面变量事件发送失败
 
 此问题常发生在 `Activity` 中包含多个 `Fragment` 的页面中。
 
