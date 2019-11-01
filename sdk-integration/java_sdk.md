@@ -1,6 +1,4 @@
-# Java 埋点 SDK（Beta）
-
-#### 该功能还处于Beta测试阶段，如需使用，请联系您的客户成功经理
+# Java 埋点 SDK
 
 ## 集成Java SDK
 
@@ -17,7 +15,7 @@
       <dependency>
         <groupId>io.growing.sdk.java</groupId>
         <artifactId>growingio-java-sdk</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.3</version>
       </dependency>
     </dependencies>
 ```
@@ -35,7 +33,7 @@
       <dependency>
         <groupId>io.growing.sdk.java</groupId>
         <artifactId>growingio-java-sdk</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.3</version>
         <classifier>standalone</classifier>
       </dependency>
     </dependencies>
@@ -79,6 +77,12 @@ logger.implemention=io.growing.sdk.java.logger.GioLoggerImpl
 
 # 运行模式，test：仅输出消息体，不发送消息，production：发送消息
 run.mode=test
+
+#http 连接超时时间，默认2000ms
+#connection.timeout=2000
+
+#http 连接读取时间，默认2000ms
+#read.timeout=2000
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}

@@ -1,6 +1,4 @@
-# PHP 埋点 SDK（Beta）
-
-#### 该功能还处于Beta测试阶段，如需使用，请联系您的客户成功经理
+# PHP 埋点 SDK
 
 ## 集成PHP SDK
 
