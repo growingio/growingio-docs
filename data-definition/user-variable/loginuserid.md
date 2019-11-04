@@ -73,7 +73,7 @@
 * [JS 接口文档](../../sdk-integration/web-js-sdk/#3-web-js-sdk-2-1-api)
 * [Android 接口文档](../../sdk-integration/android-sdk/android-sdk.md#2-android-sdk-api)
 * [iOS 接口文档](../../sdk-integration/ios-sdk/ios-sdk-2.x.md#ios-sdk-api)
-* [小程序接口文档]()
+* [小程序、小游戏以及内嵌页 SDK](../../sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/)
 
 API中给出了登录用户变量的上传方式
 

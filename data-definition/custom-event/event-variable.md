@@ -52,7 +52,7 @@
 * [​JS 接口文档​](../../sdk-integration/web-js-sdk/#track)
 * [​Android 接口文档​](../../sdk-integration/android-sdk/android-sdk.md#2-zi-ding-yi-shi-jian-he-bian-liang-api)
 * [​iOS 接口文档​](../../sdk-integration/ios-sdk/ios-sdk-2.x.md#ios-sdk-api)
-* ​[小程序接口文档​]()
+* ​[小程序、小游戏以及内嵌页 SDK](../../sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/)
 
 API 中给出了埋点事件和埋点事件变量的上传方式。
 
