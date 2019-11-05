@@ -20,13 +20,50 @@ Android 2.7.8 SDK 为海外上架应用涉及采集用户 `androidId`, `imei`, `
 **注意，imeiEnable、androidEnable、googleAdIdEnable 配置项不支持  com.android.tools.build:gradle  3.0.x 以下版本**。
 {% endhint %}
 
-| 编译时配置项API | 默认值 | 说明 | 版本 |
-| :--- | :--- | :--- | :--- |
-| imeiEnable | true | 为了海外应用市场上架应用，设置为 false 则 SDK 不采集 `imei` 。**在编译期配置将删除该部分的采集代码，后续配置（初始化或者运行时）将失效。** | 2.7.8及以上 |
-| androidIdEnable | true | 为了海外应用市场上架应用，设置为 false 则 SDK 不采集 `androidId` 。**在编译期配置将删除该部分的采集代码，后续配置（初始化或者运行时）将失效。** | 2.7.8及以上 |
-| googleAdIdEnable | true | 为了海外应用市场上架应用，设置为 false 则 SDK 不采集 `GoogleAdId` 。**在编译期配置将删除该部分的采集代码，后续配置（初始化或者运行时）将失效。** | 2.7.8及以上 |
-
-**示例代码**
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x7F16;&#x8BD1;&#x65F6;&#x914D;&#x7F6E;&#x9879;API</th>
+      <th style="text-align:left">&#x9ED8;&#x8BA4;&#x503C;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
+      <th style="text-align:left">&#x7248;&#x672C;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">imeiEnable</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">&#x4E3A;&#x4E86;&#x6D77;&#x5916;&#x5E94;&#x7528;&#x5E02;&#x573A;&#x4E0A;&#x67B6;&#x5E94;&#x7528;&#xFF0C;<b>&#x8BBE;&#x7F6E;&#x4E3A; false &#x5219; SDK &#x4E0D;&#x91C7;&#x96C6; <code>IMEI</code> &#x3002;&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x914D;&#x7F6E;&#x5C06;&#x5220;&#x9664;&#x8BE5;&#x90E8;&#x5206;&#x7684;&#x91C7;&#x96C6;&#x4EE3;&#x7801;&#xFF0C;&#x540E;&#x7EED;&#x914D;&#x7F6E;&#xFF08;&#x521D;&#x59CB;&#x5316;&#x6216;&#x8005;&#x8FD0;&#x884C;&#x65F6;&#xFF09;&#x5C06;&#x5931;&#x6548;&#x3002;</b>
+      </td>
+      <td style="text-align:left">2.7.8&#x53CA;&#x4EE5;&#x4E0A;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">androidIdEnable</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">&#x4E3A;&#x4E86;&#x6D77;&#x5916;&#x5E94;&#x7528;&#x5E02;&#x573A;&#x4E0A;&#x67B6;&#x5E94;&#x7528;&#xFF0C;<b>&#x8BBE;&#x7F6E;&#x4E3A; false &#x5219; SDK &#x4E0D;&#x91C7;&#x96C6; <code>androidId</code> &#x3002;&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x914D;&#x7F6E;&#x5C06;&#x5220;&#x9664;&#x8BE5;&#x90E8;&#x5206;&#x7684;&#x91C7;&#x96C6;&#x4EE3;&#x7801;&#xFF0C;&#x540E;&#x7EED;&#x914D;&#x7F6E;&#xFF08;&#x521D;&#x59CB;&#x5316;&#x6216;&#x8005;&#x8FD0;&#x884C;&#x65F6;&#xFF09;&#x5C06;&#x5931;&#x6548;&#x3002;</b>
+      </td>
+      <td style="text-align:left">2.7.8&#x53CA;&#x4EE5;&#x4E0A;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">googleAdIdEnable</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">&#x4E3A;&#x4E86;&#x6D77;&#x5916;&#x5E94;&#x7528;&#x5E02;&#x573A;&#x4E0A;&#x67B6;&#x5E94;&#x7528;&#xFF0C;<b>&#x8BBE;&#x7F6E;&#x4E3A; false &#x5219; SDK &#x4E0D;&#x91C7;&#x96C6; <code>GoogleAdId</code> &#xFF0C;&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x914D;&#x7F6E;&#x5C06;&#x5220;&#x9664;&#x8BE5;&#x90E8;&#x5206;&#x7684;&#x91C7;&#x96C6;&#x4EE3;&#x7801;&#xFF0C;&#x540E;&#x7EED;&#x914D;&#x7F6E;&#xFF08;&#x521D;&#x59CB;&#x5316;&#x6216;&#x8005;&#x8FD0;&#x884C;&#x65F6;&#xFF09;&#x5C06;&#x5931;&#x6548;&#x3002;</b>
+      </td>
+      <td style="text-align:left">2.7.8&#x53CA;&#x4EE5;&#x4E0A;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">oaidEnable</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">
+        <p>&#x56FD;&#x5185;<a href="http://www.msa-alliance.cn/col.jsp?id=120">&#x79FB;&#x52A8;&#x5B89;&#x5168;&#x8054;&#x76DF;MSA</a> &#x8054;&#x5408;&#x5404;&#x5927;&#x624B;&#x673A;&#x5236;&#x9020;&#x5546;&#x63A8;&#x51FA;&#x4E86;
+          OAID &#xFF0C; &#x4F5C;&#x4E3A;&#x552F;&#x4E00;&#x5E7F;&#x544A;&#x6807;&#x8BC6;&#x7B26;&#x3002;</p>
+        <p><b>&#x8BBE;&#x7F6E;&#x4E3A; false &#x5219;&#x8FD0;&#x884C;&#x65F6;&#x548C;&#x521D;&#x59CB;&#x5316;&#x7684;&#x914D;&#x7F6E;&#x5219;&#x65E0;&#x6548;&#x3002;</b>
+        </p>
+      </td>
+      <td style="text-align:left">2.8.5&#x53CA;&#x4EE5;&#x4E0A;</td>
+    </tr>
+  </tbody>
+</table>**示例代码**
 
 ```groovy
 android {
@@ -67,9 +104,10 @@ public class MyApplication extends Application {
             .setCellularDataLimit(1000)
             .setChannel("渠道号")
             .setDebugMode(true)
+            // 2.8.4 新增 appAwakePassedTime 参数: 单位毫秒，App 唤醒到收到 GIO callback 的时间，用以判断网络状态不好的情况，应用已经打开很久，才收到回调，开发人员决定是否收到参数后仍然跳转自定义的指定页面。当返回值为 0 的时候，为 DeepLink 方式打开。
             .setDeeplinkCallback(new DeeplinkCallback() {
                 @Override
-                public void onReceive(Map<String, String> params, int error) {
+                public void onReceive(Map<String, String> params, int error, long appAwakePassedTime) {
         
                 }
             })
@@ -89,6 +127,8 @@ public class MyApplication extends Application {
             .setImeiEnable(true)
             .setGoogleAdIdEnable(true)
             .setAndroidIdEnable(true)
+            //以下 Android 2.8.5 新增
+            .setOAIDEnable(true)
         );
     }
 }
@@ -170,6 +210,7 @@ public class MyApplication extends Application {
 | setImeiEnable | true | 为了海外应用市场上架应用，**Android 2.7.8** 新增初始化配置接口，设置为 false 则 SDK 不采集 `imei`  |
 | setAndroidIdEnable | true | 为了海外应用市场上架应用，**Android 2.7.8** 新增初始化配置接口，设置为 false 则 SDK 不采集 `androidid` 。 |
 | setGoogleAdIdEnable | true | 为了海外应用市场上架应用，**Android 2.7.8** 新增初始化配置接口，设置为 false 则 SDK 不采集 `GoogleAdId` 。 |
+| setOAIDEnable | true | 国内[移动安全联盟MSA](http://www.msa-alliance.cn/col.jsp?id=120) 联合各大手机制造商推出了 OAID ， 作为唯一广告标识符。**Android 2.8.5** 新增。 |
 
 
 
@@ -454,6 +495,13 @@ GrowingIO 所有 API 都需要在主线程调用。
         false &#x5219; SDK &#x4E0D;&#x91C7;&#x96C6; <code>GoogleAdId</code> &#x3002;</td>
       <td
       style="text-align:left">2.7.8&#x53CA;&#x4EE5;&#x4E0A;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">setOAIDEnable</td>
+      <td style="text-align:left">&#x56FD;&#x5185;<a href="http://www.msa-alliance.cn/col.jsp?id=120">&#x79FB;&#x52A8;&#x5B89;&#x5168;&#x8054;&#x76DF;MSA</a> &#x8054;&#x5408;&#x5404;&#x5927;&#x624B;&#x673A;&#x5236;&#x9020;&#x5546;&#x63A8;&#x51FA;&#x4E86;
+        OAID &#xFF0C; &#x4F5C;&#x4E3A;&#x552F;&#x4E00;&#x5E7F;&#x544A;&#x6807;&#x8BC6;&#x7B26;&#x3002;<b>Android 2.8.5 </b>&#x65B0;&#x589E;&#x3002;</td>
+      <td
+      style="text-align:left">2.8.5&#x53CA;&#x4EE5;&#x4E0A;</td>
     </tr>
   </tbody>
 </table>### 
