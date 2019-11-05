@@ -7,11 +7,25 @@
 #### 新功能:
 
 * 延迟深度链接
-* imp半自动打点可以设置视图比例来判定是否满足展示条件
+* MP 半自动化埋点支持设置 View 可见比例再触发自动埋点事件
 
 **修复bug：**
 
-* web圈app 输入框可以圈选
+* web 圈选 app 输入框可以圈选
+
+### Android 2.8.5
+
+#### **新功能：**
+
+* 广告监测新功能：延迟深度链接
+* 支持采集 OAID
+* IMP 半自动化埋点支持设置 View 可见比例再触发自动埋点事件
+
+#### **优化：**
+
+* 优化 lambda 表达式支持
+* 优化日志 GrowingIO.DNSService: Unable to use HttpDNS: api.growingio.com 日志信息
+* 优化埋点 API 在子线程调用 Crash 时 Exception 类型，GIO 所有 API 都必须在主线程调用 
 
 ## 2019年10月9日
 
