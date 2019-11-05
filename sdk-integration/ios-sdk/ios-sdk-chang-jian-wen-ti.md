@@ -14,7 +14,7 @@
 
 ### 2. GrowingIO SDK 支持哪些 iOS 系统？
 
-    答：目前支持 iOS 7 ～ iOS 12。
+    答：目前支持 iOS 7 ～ iOS 13。
 
 ### 3. 如果动态添加 UIView、删除 UIView 或者 修改 UIView 在父视图中的位置，会有什么影响？
 
