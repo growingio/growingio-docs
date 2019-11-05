@@ -269,10 +269,13 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
  }];
 ```
 
-{% hint style="info" %}
+{% hint style="danger" %}
 * params 参数为您在 DeepLink 页面设置的“直达落地页参数”
-* 请在 `+ (BOOL)handleUrl:(NSURL*)url`被调用前注册回调方法
+* SDK版本 &lt; 2.8.5 请在 `+ (BOOL)handleUrl:(NSURL*)url`被调用前注册回调方法
+* SDK版本 &gt;= 2.8.5 请保证注册回调方法的时机在startWithAccountId函数之前,并且在主线程当中
 {% endhint %}
+
+
 
 #### **二、  Universal Link**
 
