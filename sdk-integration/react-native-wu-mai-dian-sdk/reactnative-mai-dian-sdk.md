@@ -62,7 +62,7 @@ public class MainApplication extends Application implements ReactApplication {
 
 ### 1. **添加 iOS 埋点 SDK 依赖**
 
-React  Native 埋点 SDK 是在 iOS 原生 SDK 上的扩展，请参照 [iOS 埋点 SDK 集成步骤 1~3 ](../ios-sdk/mai-dian-sdk-ji-cheng.md#mai-dian-sdk-ji-cheng)，操作完全一致。
+React  Native 埋点 SDK 是在 iOS 原生 SDK 上的扩展，请参照 [iOS 埋点 SDK 集成步骤 1~3 ]()，操作完全一致。
 
 ### 2. 集成 React Native 打点 SDK
 

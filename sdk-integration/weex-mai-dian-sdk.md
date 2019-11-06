@@ -49,7 +49,7 @@ compile 'com.growingio.android:vds-weex:0.3'
 
 ### 1. **添加 iOS 埋点 SDK 依赖**
 
-Weex埋点 SDK 是在 iOS 原生 SDK 上的扩展，请参照 [iOS 埋点 SDK 集成步骤 1~3 ](ios-sdk/mai-dian-sdk-ji-cheng.md#mai-dian-sdk-ji-cheng)，操作完全一致。
+Weex埋点 SDK 是在 iOS 原生 SDK 上的扩展，请参照 [iOS 埋点 SDK 集成步骤 1~3 ]()，操作完全一致。
 
 ### 2. 添加 SDK
 

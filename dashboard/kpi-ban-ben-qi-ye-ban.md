@@ -119,13 +119,13 @@ KPI 由 事件，事件的度量方式（人 次 人均）和 过滤条件构成
 
 您可以借助时间选择器，查看相同周期下的不同KPI表现。适合做周月数据汇总分析的场景。
 
-![](../.gitbook/assets/image%20%28338%29.png)
+![](../.gitbook/assets/image%20%28339%29.png)
 
 您可以借助和历史数据的对比，快速定位问题。
 
 ![](../.gitbook/assets/image%20%2818%29.png)
 
-![](../.gitbook/assets/image%20%28284%29.png)
+![](../.gitbook/assets/image%20%28285%29.png)
 
 您可以借助GrowingIO提供的数据权限功能，对KPI看板进行分享，将KPI分享给你的团队、下属或领导。
 

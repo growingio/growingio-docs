@@ -273,7 +273,7 @@ gio('init', '你的项目 ID', '你的百度小程序 AppID', { version: '1.0', 
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面，点击右下角“**检测数据”**。请在添加了跟踪代码的百度小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
 
-![](../../.gitbook/assets/image%20%28355%29.png)
+![](../../.gitbook/assets/image%20%28356%29.png)
 
 ![](../../.gitbook/assets/image%20%28195%29.png)
 

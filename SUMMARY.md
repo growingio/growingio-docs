@@ -83,7 +83,7 @@
     * [iOS 无埋点SDK](sdk-integration/ios-sdk/ios-sdk-2.x.md)
     * [iOS SDK API](sdk-integration/ios-sdk/ios-sdk-api.md)
     * [iOS SDK 1.X旧版本升级指导](sdk-integration/ios-sdk/ios-sdk-1.x-jiu-ban-ben-sheng-ji-zhi-dao.md)
-    * [iOS埋点SDK](sdk-integration/ios-sdk/mai-dian-sdk-ji-cheng.md)
+    * [iOS 埋点SDK](sdk-integration/ios-sdk/ios-mai-dian-sdk.md)
     * [iOS SDK 常见问题](sdk-integration/ios-sdk/ios-sdk-chang-jian-wen-ti.md)
   * [Hybrid SDK \(App内嵌H5\)](sdk-integration/hybrid-yong-hu-ji-cheng-wen-dang.md)
   * [小程序、小游戏以及内嵌页 SDK](sdk-integration/xiao-cheng-xu-xiao-you-xi-yi-ji-nei-qian-ye-sdk/README.md)

@@ -6,7 +6,7 @@
 
 2、选择“用户跟踪应用下载”，并填写应用下载地址，iOS 应用请填写 APP 的 iTunes 下载地址，Android 应用请填写投放 APP 对应的下载地址。
 
-![](../../.gitbook/assets/image%20%28317%29.png)
+![](../../.gitbook/assets/image%20%28318%29.png)
 
 3、在 GIO 中创建广告监测，推广渠道选择【今日头条】，创建监测链接。
 
