@@ -10,7 +10,14 @@
 {% tab title="pom.xml" %}
 ```markup
 
-    <dependencies>      // ...      <dependency>        <groupId>io.growing.sdk.java</groupId>        <artifactId>growingio-java-sdk</artifactId>        <version>1.0.3</version>      </dependency>    </dependencies>
+    <dependencies>
+      // ...
+      <dependency>
+        <groupId>io.growing.sdk.java</groupId>
+        <artifactId>growingio-java-sdk</artifactId>
+        <version>1.0.3</version>
+      </dependency>
+    </dependencies>
 ```
 {% endtab %}
 {% endtabs %}
@@ -21,7 +28,15 @@
 {% tab title="pom.xml" %}
 ```markup
 
-    <dependencies>      // ...      <dependency>        <groupId>io.growing.sdk.java</groupId>        <artifactId>growingio-java-sdk</artifactId>        <version>1.0.3</version>        <classifier>standalone</classifier>      </dependency>    </dependencies>
+    <dependencies>
+      // ...
+      <dependency>
+        <groupId>io.growing.sdk.java</groupId>
+        <artifactId>growingio-java-sdk</artifactId>
+        <version>1.0.3</version>
+        <classifier>standalone</classifier>
+      </dependency>
+    </dependencies>
 ```
 {% endtab %}
 {% endtabs %}
@@ -35,7 +50,39 @@
 {% tabs %}
 {% tab title="gio\_default.properties" %}
 ```text
-#项目采集端地址api.host=https://api.growingio.com#项目ID#project.id=填写您项目的AccountID#消息发送间隔时间,单位ms（默认 100）send.msg.interval=100#消息发送线程数量send.msg.thread=3#消息队列大小msg.store.queue.size=500# 数据压缩 false:不压缩, true:压缩# 不压缩可节省cpu，压缩可省带宽compress=true# 日志输出级别（debug | error）logger.level=debug# 自定义日志输出实现类logger.implemention=io.growing.sdk.java.logger.GioLoggerImpl# 运行模式，test：仅输出消息体，不发送消息，production：发送消息run.mode=test#http 连接超时时间，默认2000ms#connection.timeout=2000#http 连接读取时间，默认2000ms#read.timeout=2000
+#项目采集端地址
+api.host=https://api.growingio.com
+
+#项目ID
+#project.id=填写您项目的AccountID
+
+#消息发送间隔时间,单位ms（默认 100）
+send.msg.interval=100
+
+#消息发送线程数量
+send.msg.thread=3
+
+#消息队列大小
+msg.store.queue.size=500
+
+# 数据压缩 false:不压缩, true:压缩
+# 不压缩可节省cpu，压缩可省带宽
+compress=true
+
+# 日志输出级别（debug | error）
+logger.level=debug
+
+# 自定义日志输出实现类
+logger.implemention=io.growing.sdk.java.logger.GioLoggerImpl
+
+# 运行模式，test：仅输出消息体，不发送消息，production：发送消息
+run.mode=test
+
+#http 连接超时时间，默认2000ms
+#connection.timeout=2000
+
+#http 连接读取时间，默认2000ms
+#read.timeout=2000
 ```
 {% endtab %}
 {% endtabs %}
@@ -45,7 +92,17 @@
 {% tabs %}
 {% tab title="gio.properties" %}
 ```text
-#项目采集端地址api.host=https://api.growingio.com#项目IDproject.id=xxxxxxxxx# 日志输出级别logger.level=error# 运行模式，test：仅输出消息体，不发送消息，production：发送消息run.mode=production
+#项目采集端地址
+api.host=https://api.growingio.com
+
+#项目ID
+project.id=xxxxxxxxx
+
+# 日志输出级别
+logger.level=error
+
+# 运行模式，test：仅输出消息体，不发送消息，production：发送消息
+run.mode=production
 ```
 {% endtab %}
 {% endtabs %}
@@ -57,7 +114,18 @@ Java SDK会优先读取gio.properties中的配置
 {% tabs %}
 {% tab title="SDK-Demo.java" %}
 ```text
-//事件行为消息体GIOEventMessage eventMessage = new GIOEventMessage.Builder()    .eventTime(System.currentTimeMillis())            // 事件时间，默认为系统时间（选填）    .eventKey("BuyProduct")                           // 事件标识 (必填)    .loginUserId("417abcabcabcbac")                   // 登录用户ID (必填)    .addEventVariable("product_name", "苹果")          // 事件级变量 (选填)    .addEventVariable("product_classify", "水果")      // 事件级变量 (选填)    .addEventVariable("product_price", 14)            // 事件级变量 (选填)    .build();//上传事件行为消息到服务器GrowingAPI.send(eventMessage);
+//事件行为消息体
+GIOEventMessage eventMessage = new GIOEventMessage.Builder()
+    .eventTime(System.currentTimeMillis())            // 事件时间，默认为系统时间（选填）
+    .eventKey("BuyProduct")                           // 事件标识 (必填)
+    .loginUserId("417abcabcabcbac")                   // 登录用户ID (必填)
+    .addEventVariable("product_name", "苹果")          // 事件级变量 (选填)
+    .addEventVariable("product_classify", "水果")      // 事件级变量 (选填)
+    .addEventVariable("product_price", 14)            // 事件级变量 (选填)
+    .build();
+
+//上传事件行为消息到服务器
+GrowingAPI.send(eventMessage);
 
 ```
 {% endtab %}

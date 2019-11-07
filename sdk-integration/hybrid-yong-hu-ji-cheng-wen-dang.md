@@ -34,7 +34,12 @@ Hybrid 支持基于 touch 事件实现的点击数据采集,
 如果用户需要在hybrid界面加载过程中或者加载完成后立刻调用埋点方法，需要在该H5页面的script标签最前端添加如下代码
 
 ```javascript
-(function(){	window["gio"] = window["gio"] || function(){		(window["gio"].q = window["gio"].q || []).push(arguments);	}	gio('init', 'fakeAccountID');})()
+(function(){
+	window["gio"] = window["gio"] || function(){
+		(window["gio"].q = window["gio"].q || []).push(arguments);
+	}
+	gio('init', 'fakeAccountID');
+})()
 ```
 
 为了不影响用户 H5 页面的加载速度，我们优先加载用户的页面再注入Hybrid JS SDK ，保证用户页面先加载。这样就引出一个问题：用户的界面在加载过程中或者加载完成后立刻调用埋点方法会出现gio未定义，因为这时候hybrid js sdk可能还没有完全注入成功。
@@ -64,7 +69,15 @@ Hybrid 支持基于 touch 事件实现的点击数据采集,
 | eventLevelVariables | JSON Object | 否 | 包含事件级变量的JSON对象，暨事件发生时所伴随的维度信息。 |
 
 ```javascript
-// track API原型gio('track', eventId, eventLevelVariables);gio('track', eventId, number, eventLevelVariables);// track API调用示例一gio('track', 'registerSuccess');// track API调用示例二gio('track', 'registerSuccess', {'gender':'male', 'age':21});// track API调用示例三gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zhejiang'})
+// track API原型
+gio('track', eventId, eventLevelVariables);
+gio('track', eventId, number, eventLevelVariables);
+// track API调用示例一
+gio('track', 'registerSuccess');
+// track API调用示例二
+gio('track', 'registerSuccess', {'gender':'male', 'age':21});
+// track API调用示例三
+gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zhejiang'})
 ```
 
 ### 2. 设置页面级变量（page.set）
@@ -78,7 +91,13 @@ Hybrid 支持基于 touch 事件实现的点击数据采集,
 | pageLevelVariables | JSON Object | 否 | 包含页面级变量的JSON对象，暨页面级别的信息 |
 
 ```javascript
-// page.set API原型gio('page.set', key, value);gio('page.set', pageLevelVariables);// page.set API调用示例一gio('page.set', {'pageName': 'Home Page', 'author': 'Zhang San'});// page.set API调用示例二gio('page.set', 'author', 'Zhang San');
+// page.set API原型
+gio('page.set', key, value);
+gio('page.set', pageLevelVariables);
+// page.set API调用示例一
+gio('page.set', {'pageName': 'Home Page', 'author': 'Zhang San'});
+// page.set API调用示例二
+gio('page.set', 'author', 'Zhang San');
 ```
 
 ### 3. 设置转化变量（evar.set）
@@ -92,7 +111,13 @@ Hybrid 支持基于 touch 事件实现的点击数据采集,
 | conversionVariables | JSON Object | 否 | 包含转化变量的JSON对象 |
 
 ```javascript
-// evar.set API原型gio('evar.set', key, value);gio('evar.set', conversionVariables);// evar.set API调用示例一gio('evar.set', 'campaignId'，'1234567890');// evar.set API调用示例二gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
+// evar.set API原型
+gio('evar.set', key, value);
+gio('evar.set', conversionVariables);
+// evar.set API调用示例一
+gio('evar.set', 'campaignId'，'1234567890');
+// evar.set API调用示例二
+gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
 ```
 
 ### 4. 设置用户级变量（people.set）
@@ -106,7 +131,13 @@ Hybrid 支持基于 touch 事件实现的点击数据采集,
 | customerVariables | JSON Object | 否 | 包含用户变量的JSON对象 |
 
 ```javascript
-// people.set API原型gio('people.set', key, value);gio('people.set', customerVariables);// people.set API调用示例一gio('people.set', 'gender', 'male');//people.set API调用示例二gio('people.set', {'gender':'male', 'age':'25'});
+// people.set API原型
+gio('people.set', key, value);
+gio('people.set', customerVariables);
+// people.set API调用示例一
+gio('people.set', 'gender', 'male');
+//people.set API调用示例二
+gio('people.set', {'gender':'male', 'age':'25'});
 ```
 
 ### 5. 设置用户id（hybridSetUserId）
@@ -118,19 +149,22 @@ Hybrid 支持基于 touch 事件实现的点击数据采集,
 | customerVariables | String | 是 | 长度不可以大于1000,并且不可为Null |
 
 ```javascript
-//调用示例gio('hybridSetUserId', '1234567890');
+//调用示例
+gio('hybridSetUserId', '1234567890');
 ```
 
 ### 6. 清除用户id（hybridClearUserId）
 
 ```javascript
-//调用示例gio('hybridClearUserId');
+//调用示例
+gio('hybridClearUserId');
 ```
 
 ### 7. 设置访问用户变量
 
 ```javascript
-//调用示例gio('hybridSetVisitor',{'testkey': 'testValue', 'testNumKey': 2333});
+//调用示例
+gio('hybridSetVisitor',{'testkey': 'testValue', 'testNumKey': 2333});
 ```
 
 ## 

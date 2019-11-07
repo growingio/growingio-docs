@@ -8,7 +8,28 @@
 参考如下Demo程序：
 
 ```php
-<?php/** * GrowingIO PHP SDK Demo * User: tianyi * Date: 2018-12-28 * Time: 13:34 */include_once "GrowingIO.php";// 请在您调试前，将accountID修改为您的项目AccountID// 所有自定义事件需要提前在GrowingIO产品中进行定义// 所有自定义事件的属性也需要提前在GrowingIO产品中进行定义$accountID = "";$gio = GrowingIO::getInstance($accountID, array());//$gio->track($登录用户ID，$自定义事件关键字， array(自定义变量关键字=>自定义变量值));$gio->track("17729", "BuyProduct", array("product_type" => "水果", "amount" => "5"));?>
+<?php
+/**
+ * GrowingIO PHP SDK Demo
+ * User: tianyi
+ * Date: 2018-12-28
+ * Time: 13:34
+ */
+
+include_once "GrowingIO.php";
+
+// 请在您调试前，将accountID修改为您的项目AccountID
+// 所有自定义事件需要提前在GrowingIO产品中进行定义
+// 所有自定义事件的属性也需要提前在GrowingIO产品中进行定义
+
+$accountID = "";
+
+$gio = GrowingIO::getInstance($accountID, array());
+
+//$gio->track($登录用户ID，$自定义事件关键字， array(自定义变量关键字=>自定义变量值));
+$gio->track("17729", "BuyProduct", array("product_type" => "水果", "amount" => "5"));
+
+?>
 ```
 
 ## 配置PHP SDK

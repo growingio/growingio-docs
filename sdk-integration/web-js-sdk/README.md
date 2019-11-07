@@ -37,7 +37,21 @@
 请将以下的页面代码放置到需要分析的页面中的 &lt;head&gt; 和 &lt;/head&gt; 标签之间，即可完成 Web JS SDK 2.1页面代码的安装。请注意使用**具体的项目 ID** 替换代码中的 **your projectId** 。
 
 ```markup
-<!-- GrowingIO Analytics code version 2.1 --><!-- Copyright 2015-2017 GrowingIO, Inc. More info available at http://www.growingio.com --><script type='text/javascript'>!function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.giocdn.com/2.1/gio.js","gio");  gio('init', 'your projectId', {});  //custom page code begin here  //custom page code end here  gio('send');  </script><!-- End GrowingIO Analytics code version: 2.1 -->
+<!-- GrowingIO Analytics code version 2.1 -->
+<!-- Copyright 2015-2017 GrowingIO, Inc. More info available at http://www.growingio.com -->
+<script type='text/javascript'>
+!function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.giocdn.com/2.1/gio.js","gio");
+  gio('init', 'your projectId', {});
+
+  //custom page code begin here
+
+
+  //custom page code end here
+
+  gio('send');
+  
+</script>
+<!-- End GrowingIO Analytics code version: 2.1 -->
 ```
 
 #### 1.2 GrowingIO Web Debugger
@@ -69,7 +83,10 @@ gio('config', {'imp':false}); //放在init和send之间
 也可以直接在init进行配置，如下：
 
 ```text
-gio('init', 'your projectId', {  'imp':false，  'hashtag':true});
+gio('init', 'your projectId', {
+  'imp':false，
+  'hashtag':true
+});
 ```
 
 ### 3.Web JS SDK 高级设置 <a id="13"></a>
@@ -81,7 +98,17 @@ gio('init', 'your projectId', {  'imp':false，  'hashtag':true});
 默认视button或a标签为可圈选容器。同时，默认可以圈选页面dom上所有叶子结点和叶子结点的上一级父节点。比如，
 
 ```markup
-<div id="1" data-growing-container>  <div id="2">    <h1 id="3">商品名称</h1>  </div>  <div id="4">    <div id="5">商品图片</div>  </div>  <div id="6">    <div id="7">商品描述</div>  </div></div>
+<div id="1" data-growing-container>
+  <div id="2">
+    <h1 id="3">商品名称</h1>
+  </div>
+  <div id="4">
+    <div id="5">商品图片</div>
+  </div>
+  <div id="6">
+    <div id="7">商品描述</div>
+  </div>
+</div>
 ```
 
 由于数据采集准确性的原因，默认不支持以id="1"的div作为容器进行圈选。你可以为期望的容器元素添加data-growing-container 属性，圈选时即可圈到这个容器。
@@ -91,7 +118,9 @@ gio('init', 'your projectId', {  'imp':false，  'hashtag':true});
 对于一些图片或者区块，可以通过设置 title 或者 data-growing-title 属性来设置采集点文本。比如，
 
 ```markup
-<li data-growing-title="上一页" class="ant-pagination-disabled ant-pagination-prev">  <a></a></li>
+<li data-growing-title="上一页" class="ant-pagination-disabled ant-pagination-prev">
+  <a></a>
+</li>
 ```
 
 这时，采集到的 li 结点的内容就是_"上一页"_。
@@ -105,13 +134,23 @@ gio('init', 'your projectId', {  'imp':false，  'hashtag':true});
 LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表内所有元素结点都会附带上位置信息。其他标签默认并不会带有位置信息，比如一些用 DIV 标签做的平铺容器。对于这种情况，可以使用 data-growing-idx。当在容器 DOM 结点上设置 data-growing-idx 属性，容器内的所有 DOM 元素同样，都会继承该属性值。比如
 
 ```markup
-<div data-growing-idx="1">  <div class="left-container">    <img src="" alt="图片1"/>  </div>  <div class="right-container">    <h3 class="title">      文章一标题    </h3>  </div></div>
+<div data-growing-idx="1">
+  <div class="left-container">
+    <img src="" alt="图片1"/>
+  </div>
+  <div class="right-container">
+    <h3 class="title">
+      文章一标题
+    </h3>
+  </div>
+</div>
 ```
 
 注意: 由于 index 必须是数字类型，Web JS SDK 在采集数据时，只会截取 data-growing-idx 中的数字部分，自动忽略其他字符串。例如
 
 ```javascript
-<div data-growing-idx="123abc">test</div>// SDK 采集的index是 123
+<div data-growing-idx="123abc">test</div>
+// SDK 采集的index是 123
 ```
 
 更多的位置信息规则，可以参考[第2节：位置规则](https://sishen.gitbooks.io/gio-js-book/5/2.html)
@@ -121,7 +160,9 @@ LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表�
 如果你希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
 
 ```markup
-<div growing-ignore='true'> …</div>
+<div growing-ignore='true'>
+ …
+</div>
 ```
 
 #### 3.5 开启输入文本框内容采集 \(growing-track\) <a id="35track"></a>
@@ -171,7 +212,11 @@ Tips：建议您在开发中，使用 debug mode 校验 GrowingIO SDK 的数据�
 * 1.x 版本方法格式：
 
 ```javascript
-_vds.push(['setCS1', 'CS1的key', 'CS1的value']);_vds.push(['setCS2', 'CS2的key', 'CS2的value']);_vds.push(['setCS3', 'CS3的key', 'CS3的value']);..._vds.push(['setCS10', 'CS10的key', 'CS10的value']);
+_vds.push(['setCS1', 'CS1的key', 'CS1的value']);
+_vds.push(['setCS2', 'CS2的key', 'CS2的value']);
+_vds.push(['setCS3', 'CS3的key', 'CS3的value']);
+...
+_vds.push(['setCS10', 'CS10的key', 'CS10的value']);
 ```
 
 * 2.x 版本方法格式：
@@ -179,19 +224,25 @@ _vds.push(['setCS1', 'CS1的key', 'CS1的value']);_vds.push(['setCS2', 'CS2的ke
 对于 CS1 字段，也就是登陆用户ID，请使用以下方法：
 
 ```javascript
-// 设置登录用户IDgio('setUserId', userId);// 清除登录用户IDgio('clearUserId');
+// 设置登录用户ID
+gio('setUserId', userId);
+
+// 清除登录用户ID
+gio('clearUserId');
 ```
 
 对于应用级变量，也就是 1.x 版本中的 CS2 - CS10，请使用以下方法：
 
 ```javascript
-gio(‘app.set’, key, value) // 单个变量gio('app.set', appLevelVariables) // 多个变量，可组合为一个JSON对象appLevelVariables传入
+gio(‘app.set’, key, value) // 单个变量
+gio('app.set', appLevelVariables) // 多个变量，可组合为一个JSON对象appLevelVariables传入
 ```
 
 对于用户变量，也就是 1.x 版本中的 CS11 - CS20，请使用以下方法：
 
 ```javascript
-gio('people.set', key, value); // 单个变量gio('people.set', peopleVariables); // 多个变量，可组合为一个JSON对象peopleVariables传入
+gio('people.set', key, value); // 单个变量
+gio('people.set', peopleVariables); // 多个变量，可组合为一个JSON对象peopleVariables传入
 ```
 
 #### **2.2 GrowingIO 后台配置**
@@ -207,13 +258,17 @@ gio('people.set', key, value); // 单个变量gio('people.set', peopleVariables)
 * 1.x 版本方法格式：
 
 ```javascript
-_vds.push([’setPageGroup‘, ‘PageGroup 的名称’];_vds.push([‘setPS1’, ‘PS1 的值’]);_vds.push([‘setPS2’, ‘PS2 的值’]);_vds.push([‘setPS3’, ‘PS1 的值’]);
+_vds.push([’setPageGroup‘, ‘PageGroup 的名称’];
+_vds.push([‘setPS1’, ‘PS1 的值’]);
+_vds.push([‘setPS2’, ‘PS2 的值’]);
+_vds.push([‘setPS3’, ‘PS1 的值’]);
 ```
 
 * 2.x 版本方法格式：
 
 ```javascript
-gio('page.set', key, value);gio('page.set', pageLevelVariables); //多个变量，可组合为一个对象传入
+gio('page.set', key, value);
+gio('page.set', pageLevelVariables); //多个变量，可组合为一个对象传入
 ```
 
 #### **3.2 GrowingIO 后台配置**
@@ -237,7 +292,10 @@ window._vds.track(event_name, properties)
 * 2.x 版本方法格式：
 
 ```javascript
-gio('track', eventId);gio('track', eventId, number);gio('track', eventId, eventLevelVariables);gio('track', eventId, number, eventLevelVariables);
+gio('track', eventId);
+gio('track', eventId, number);
+gio('track', eventId, eventLevelVariables);
+gio('track', eventId, number, eventLevelVariables);
 ```
 
 #### **4.2 GrowingIO 后台配置**
@@ -291,7 +349,25 @@ debug 工具的工作界面如下图：
 将我们提供给您的 JS SDK 加入到您所需要分析的页面，请将我们给您提供的 JS SDK 复制到 `<head>` 和 `</head>` 标签之间即可, 例如：
 
 ```markup
-<head>...<script type='text/javascript'>    var _vds = _vds || [];    window._vds = _vds;    (function(){      _vds.push(['setAccountId', '您的项目ID']);      (function() {        var vds = document.createElement('script');        vds.type='text/javascript';        vds.async = true;        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'assets.giocdn.com/vds.js';        var s = document.getElementsByTagName('script')[0];        s.parentNode.insertBefore(vds, s);      })();    })();</script>...</head>
+<head>
+...
+<script type='text/javascript'>
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function(){
+      _vds.push(['setAccountId', '您的项目ID']);
+      (function() {
+        var vds = document.createElement('script');
+        vds.type='text/javascript';
+        vds.async = true;
+        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'assets.giocdn.com/vds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(vds, s);
+      })();
+    })();
+</script>
+...
+</head>
 ```
 
 成功加载SDK后GrowingIO会自动采集页面浏览量、元素浏览、点击量。我们还提供一些高级设置：用户属性、页面属性、采样采集、禁用元素浏览量采集、单页面应用启用hashtag、开启输入文本框内容等。具体设置方法请参考下面的详细说明。
@@ -335,7 +411,9 @@ GrowingIO 提供两种采集，元素浏览和元素点击/修改等交互行为
 如果你希望过滤一些内容，可以在网站 DOM 结点上设置 growing-ignore 属性，这样这个容器里所有的元素的浏览量和点击量都不会被采集。
 
 ```javascript
-    <div growing-ignore='true'>      …    </div>
+    <div growing-ignore='true'>
+      …
+    </div>
 ```
 
 #### 4.6 **开启输入文本框内容采集**
@@ -355,7 +433,10 @@ JS代码请以售前人员提供的为主，进行正确添加。
 对于一些图片或者区块，可以通过设置 title 或者 data-growing-title 属性来设置采集点点文本。比如，
 
 ```javascript
-<li data-growing-title="上一页"                  class="ant-pagination-disabled ant-pagination-prev">  <a></a></li>
+<li data-growing-title="上一页" 
+                 class="ant-pagination-disabled ant-pagination-prev">
+  <a></a>
+</li>
 ```
 
 这时，采集到的 li 结点的内容就是_"上一页"_。
@@ -369,7 +450,16 @@ JS代码请以售前人员提供的为主，进行正确添加。
 LI 标签、TR 标签、DL 标签，会被自动识别为列表元素，列表内所有元素结点都会附带上位置信息。其他标签默认并不会带有位置信息，比如一些用 DIV 标签做的平铺容器。对于这种情况，可以使用 data-growing-idx。当在容器 DOM 结点上设置 data-growing-idx 属性，容器内的所有 DOM 元素同样，都会继承该属性值。比如
 
 ```javascript
-<div data-growing-idx="1">  <div class="left-container">    <img src="" alt="图片1"/>  </div>  <div class="right-container">    <h3 class="title">      文章一标题    </h3>  </div></div>
+<div data-growing-idx="1">
+  <div class="left-container">
+    <img src="" alt="图片1"/>
+  </div>
+  <div class="right-container">
+    <h3 class="title">
+      文章一标题
+    </h3>
+  </div>
+</div>
 ```
 
 更多的位置信息规则，可以参考[第2节：位置规则](https://sishen.gitbooks.io/gio-js-book/5/2.html)。

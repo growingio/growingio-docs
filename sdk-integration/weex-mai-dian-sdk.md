@@ -174,7 +174,12 @@ track(event);
 </table>**示例代码：**
 
 ```java
-//获取 giovar gio = weex.requireModule('GrowingIO');gio.track({'eventId':'trackTest'});gio.track({'eventId':'Test','number':65});gio.track({'eventId':'Test','number':65,'eventLevelVariable':{'city':'dalian'}});
+//获取 gio
+var gio = weex.requireModule('GrowingIO');
+
+gio.track({'eventId':'trackTest'});
+gio.track({'eventId':'Test','number':65});
+gio.track({'eventId':'Test','number':65,'eventLevelVariable':{'city':'dalian'}});
 ```
 
 **检验数据发送日志示例：** 
@@ -182,7 +187,26 @@ track(event);
 注意 `t` 等于 `cstm` 字段，表示自定义事件发送成功，只需注意 `var`、`n` 、`num`字段，其它字段无需仔细验证**。**
 
 ```javascript
-//展示 track 接口调用示例三日志内容{    "s":"31e3aa14-5241-490c-821c-a741e9bf0f87",    // t 为事件类型， track 接口调用发送的事件类型为 cstm    "t":"cstm",    "tm":1532085495251,    "d":"com.growingio.android.test",    // n 为 eventId 参数携带的值    "n":"Test",    // var 为 eventLevelVariable 参数携带的值    "var":{        'city':'dalian'    },    "ptm":0,    // num 为 number 参数携带的值    "num":65,    "gesid":18,    "esid":0,    "u":"b6247b01-a31a-3bc6-a391-4c456888c1ee"}
+//展示 track 接口调用示例三日志内容
+{
+    "s":"31e3aa14-5241-490c-821c-a741e9bf0f87",
+    // t 为事件类型， track 接口调用发送的事件类型为 cstm
+    "t":"cstm",
+    "tm":1532085495251,
+    "d":"com.growingio.android.test",
+    // n 为 eventId 参数携带的值
+    "n":"Test",
+    // var 为 eventLevelVariable 参数携带的值
+    "var":{
+        'city':'dalian'
+    },
+    "ptm":0,
+    // num 为 number 参数携带的值
+    "num":65,
+    "gesid":18,
+    "esid":0,
+    "u":"b6247b01-a31a-3bc6-a391-4c456888c1ee"
+}
 ```
 
 {% hint style="info" %}
@@ -229,7 +253,12 @@ setEvar(conversionVariables);
 </table>**示例**
 
 ```javascript
-//获取 giovar gio = weex.requireModule('GrowingIO');gio.setEvar({ "evarTest":111,        "campaignId":"1234567890",        "campaignOwner":"Li Si" })
+//获取 gio
+var gio = weex.requireModule('GrowingIO');
+
+gio.setEvar({ "evarTest":111,
+        "campaignId":"1234567890",
+        "campaignOwner":"Li Si" })
 ```
 
 **检验数据发送日志示例：** 
@@ -237,7 +266,22 @@ setEvar(conversionVariables);
 注意 `t` 等于`evar`字段，表示自定义事件发送成功，只需注意 `var` 字段，其它字段无需仔细验证**。**
 
 ```javascript
-{    "s":"e1c48845-dd60-4cf2-b1a5-a8e529d2188d",    // t 为事件类型， evar 为转化事件    "t":"evar",    "tm":1532338526083,    "d":"com.growingio.android.test",    "cs1":"GrowingIO",    // 转化变量    "var":{        "evarTest":111,        "campaignId":"1234567890",        "campaignOwner":"Li Si"    },    "gesid":300,    "esid":22}
+{
+    "s":"e1c48845-dd60-4cf2-b1a5-a8e529d2188d",
+    // t 为事件类型， evar 为转化事件
+    "t":"evar",
+    "tm":1532338526083,
+    "d":"com.growingio.android.test",
+    "cs1":"GrowingIO",
+    // 转化变量
+    "var":{
+        "evarTest":111,
+        "campaignId":"1234567890",
+        "campaignOwner":"Li Si"
+    },
+    "gesid":300,
+    "esid":22
+}
 ```
 
 {% hint style="info" %}
@@ -284,7 +328,9 @@ setPeopleVariable(peopleVariables);
 </table>**示例代码：**
 
 ```java
-//获取 giovar gio = weex.requireModule('GrowingIO');gio.setPeopleVariable({ 'name': '玎玎', 'email': 'dingding@growingio.com' })
+//获取 gio
+var gio = weex.requireModule('GrowingIO');
+gio.setPeopleVariable({ 'name': '玎玎', 'email': 'dingding@growingio.com' })
 ```
 
 **检验数据发送日志示例：** 
@@ -292,7 +338,21 @@ setPeopleVariable(peopleVariables);
 注意 `t` 等于`ppl`字段，表示用户变量发送成功，只需注意 `var`字段，其它字段无需仔细验证。
 
 ```javascript
-{    "s":"a35872af-13df-4479-90bc-25558d12328e",    // t 为事件类型， pvar 为发送用户变量事件    "t":"ppl",    "tm":1532339208991,    "d":"com.growingio.android.test",    "cs1":"GrowingIO",    // 用户变量    "var":{        'name': '玎玎',         'email': 'dingding@growingio.com'    },    "gesid":311,    "esid":0}
+{
+    "s":"a35872af-13df-4479-90bc-25558d12328e",
+    // t 为事件类型， pvar 为发送用户变量事件
+    "t":"ppl",
+    "tm":1532339208991,
+    "d":"com.growingio.android.test",
+    "cs1":"GrowingIO",
+    // 用户变量
+    "var":{
+        'name': '玎玎', 
+        'email': 'dingding@growingio.com'
+    },
+    "gesid":311,
+    "esid":0
+}
 ```
 
 {% hint style="info" %}
@@ -335,7 +395,9 @@ setUserId(userId);
 </table>**示例代码：**
 
 ```java
-//获取 giovar gio = weex.requireModule('GrowingIO');gio.setUserId('xiaoming');
+//获取 gio
+var gio = weex.requireModule('GrowingIO');
+gio.setUserId('xiaoming');
 ```
 
 注：您的 App 每次用户升级版本时无需重新登录的话，建议在用户每次升级App 版本后初次访问时重新调用上述 setUserId 方法。
@@ -357,7 +419,9 @@ clearUserId();
 **示例**
 
 ```javascript
-//获取 giovar gio = weex.requireModule('GrowingIO');gio.clearUserId();
+//获取 gio
+var gio = weex.requireModule('GrowingIO');
+gio.clearUserId();
 ```
 
 
@@ -396,7 +460,9 @@ setVisitor(visitorVar);
 </table>**示例代码：**
 
 ```java
-//获取 giovar gio = weex.requireModule('GrowingIO');gio.setVisitor({"gender":"male","age":21});
+//获取 gio
+var gio = weex.requireModule('GrowingIO');
+gio.setVisitor({"gender":"male","age":21});
 ```
 
 **检验数据发送日志示例：** 
@@ -404,7 +470,21 @@ setVisitor(visitorVar);
 注意 `t` 等于`vstr`字段，表示访问用户变量发送成功，其它字段无需仔细验证。
 
 ```javascript
-{    "s":"d334b4a1-57eb-4bf4-b426-64c1cce5a5c0",    // t 为事件类型， vstr 为发送访问用户变量事件    "t":"vstr",    "tm":1532341259134,    "d":"com.growingio.android.test",    "cs1":"GrowingIO",    //访问用户变量    "var":{        "gender":"male",        "age":21    },    "gesid":322,    "esid":0}
+{
+    "s":"d334b4a1-57eb-4bf4-b426-64c1cce5a5c0",
+    // t 为事件类型， vstr 为发送访问用户变量事件
+    "t":"vstr",
+    "tm":1532341259134,
+    "d":"com.growingio.android.test",
+    "cs1":"GrowingIO",
+    //访问用户变量
+    "var":{
+        "gender":"male",
+        "age":21
+    },
+    "gesid":322,
+    "esid":0
+}
 ```
 
 
@@ -421,7 +501,12 @@ setVisitor(visitorVar);
 2. Android [查看日志： ](android-sdk/android-sdk.md#she-zhi-debug-mo-shi)设置 TestMode  和 Debug Mode ：
 
 ```java
-GrowingIO.startWithConfiguration(this,new Configuration()    //BuildConfig.DEBUG 这样配置就不会上线忘记关闭    .setDebugMode(BuildConfig.DEBUG)    .setTestMode(true)    ...    );
+GrowingIO.startWithConfiguration(this,new Configuration()
+    //BuildConfig.DEBUG 这样配置就不会上线忘记关闭
+    .setDebugMode(BuildConfig.DEBUG)
+    .setTestMode(true)
+    ...
+    );
 ```
 
     3. iOS 查看日志：iOS 在 AppDelegate 文件中配置：

@@ -85,13 +85,28 @@ Body 内的 userProperty 1-N 为您在 GrowingIO 系统内定义的用户属性�
 一次上传一条：
 
 ```text
-{    "loginUserId":"1234",    "user_name":"张三",    "gender":"男"}
+{
+    "loginUserId":"1234",
+    "user_name":"张三",
+    "gender":"男"
+}
 ```
 
 一次上传多条：
 
 ```text
-[{    "loginUserId":"1234",    "user_name":"张三",    "gender":"男"},{    "loginUserId":"1235",    "user_name":"李四",    "gender":"女"}]
+[
+{
+    "loginUserId":"1234",
+    "user_name":"张三",
+    "gender":"男"
+},
+{
+    "loginUserId":"1235",
+    "user_name":"李四",
+    "gender":"女"
+}
+]
 ```
 
 ### 1.2 认证
@@ -101,25 +116,48 @@ Body 内的 userProperty 1-N 为您在 GrowingIO 系统内定义的用户属性�
 Java:
 
 ```java
-public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {    String message = "ai="+projectKeyId+"&loginUserId="+keyArray;    Mac hmac = Mac.getInstance("HmacSHA256");    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));    return Hex.encodeHexString(signature);}
+public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {
+    String message = "ai="+projectKeyId+"&loginUserId="+keyArray;
+    Mac hmac = Mac.getInstance("HmacSHA256");
+    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));
+    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
+    return Hex.encodeHexString(signature);
+}
 ```
 
 Scala:
 
 ```scala
-def authToken(projectKeyId: String, secretKey: String, keyArray: String): String = {  val message = s"ai=$projectKeyId&loginUserId=$keyArray"  val hmac: Mac = Mac.getInstance("HmacSHA256")  hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"))  val signature = hmac.doFinal(message.getBytes("UTF-8"))  Hex.encodeHexString(signature)}
+def authToken(projectKeyId: String, secretKey: String, keyArray: String): String = {
+  val message = s"ai=$projectKeyId&loginUserId=$keyArray"
+  val hmac: Mac = Mac.getInstance("HmacSHA256")
+  hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"))
+  val signature = hmac.doFinal(message.getBytes("UTF-8"))
+  Hex.encodeHexString(signature)
+}
 ```
 
 Python:
 
 ```python
-#coding:utf-8 import hashlibimport hmacdef authToken(projectKeyId,secretKey,keyArray):    message = ("ai=" + projectKeyId + "&loginUserId=" + keyArray).encode('utf-8')    signature = hmac.new(bytes(secretKey.encode('utf-8')), bytes(message), digestmod=hashlib.sha256).hexdigest()    return signature
+#coding:utf-8 
+import hashlib
+import hmac
+
+def authToken(projectKeyId,secretKey,keyArray):
+    message = ("ai=" + projectKeyId + "&loginUserId=" + keyArray).encode('utf-8')
+    signature = hmac.new(bytes(secretKey.encode('utf-8')), bytes(message), digestmod=hashlib.sha256).hexdigest()
+    return signature
 ```
 
 PHP:
 
 ```text
-function authToken($projectKeyId, $secretKey, $keyArray){   $message="ai=".$projectKeyId."&loginUserId=".$keyArray;   return hash_hmac('sha256',$message, $secretKey, false);}
+function authToken($projectKeyId, $secretKey, $keyArray)
+{
+   $message="ai=".$projectKeyId."&loginUserId=".$keyArray;
+   return hash_hmac('sha256',$message, $secretKey, false);
+}
 ```
 
 
@@ -187,7 +225,13 @@ Public Key
 如 Java：
 
 ```java
-public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {    String message = "ai="+projectKeyId+"&cs="+keyArray;    Mac hmac = Mac.getInstance("HmacSHA256");    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));    return Hex.encodeHexString(signature);}
+public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {
+    String message = "ai="+projectKeyId+"&cs="+keyArray;
+    Mac hmac = Mac.getInstance("HmacSHA256");
+    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));
+    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
+    return Hex.encodeHexString(signature);
+}
 ```
 
 ## 维度分类上传
@@ -270,7 +314,13 @@ Body 内的 variable\_name、userProperty 1-N 为您在 GrowingIO 系统内定�
 如 Java：
 
 ```java
-public String authToken(String projectKeyId, String variableName, String secretKey, String keyArray) throws Exception {    String message = "ai="+projectKeyId+"&"+variableName+"="+keyArray;    Mac hmac = Mac.getInstance("HmacSHA256");    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));    return Hex.encodeHexString(signature);}
+public String authToken(String projectKeyId, String variableName, String secretKey, String keyArray) throws Exception {
+    String message = "ai="+projectKeyId+"&"+variableName+"="+keyArray;
+    Mac hmac = Mac.getInstance("HmacSHA256");
+    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));
+    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
+    return Hex.encodeHexString(signature);
+}
 ```
 
 ### 2.3 旧版本上传接口
@@ -345,7 +395,13 @@ application/json
 如 Java：
 
 ```java
-public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {    String message = "ai="+projectKeyId+"&cs="+keyArray;    Mac hmac = Mac.getInstance("HmacSHA256");    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));    return Hex.encodeHexString(signature);}
+public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {
+    String message = "ai="+projectKeyId+"&cs="+keyArray;
+    Mac hmac = Mac.getInstance("HmacSHA256");
+    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));
+    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
+    return Hex.encodeHexString(signature);
+}
 ```
 
 ## 既有登录用户ID上传
@@ -415,7 +471,10 @@ public String authToken(String projectKeyId, String secretKey, String keyArray) 
 上传Body的限制规则与上述其他接口一致，内容示例如下：
 
 ```javascript
-{  "loginUserId": ["abcdef", "bcdefg", ...],  "registerTime": 1514764800000}
+{
+  "loginUserId": ["abcdef", "bcdefg", ...],
+  "registerTime": 1514764800000
+}
 ```
 
 ### 3.2 认证
@@ -423,6 +482,17 @@ public String authToken(String projectKeyId, String secretKey, String keyArray) 
 auth的计算需要将`loginUserId`的值拼接成`keyArray，`多条使用`逗号`分隔，如上述示例中的keyArray为`abcdef,bcdefg`。Java代码示例如下：
 
 ```java
-/** * projectKeyId: 项目ID * secretKey: 项目私钥 * keyArray: loginUserId用逗号拼接的字符串*/ public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {    String message = "projectId="+projectKeyId+"&loginUserId="+keyArray;    Mac hmac = Mac.getInstance("HmacSHA256");    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));    return Hex.encodeHexString(signature);}
+/**
+ * projectKeyId: 项目ID
+ * secretKey: 项目私钥
+ * keyArray: loginUserId用逗号拼接的字符串
+*/ 
+public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {
+    String message = "projectId="+projectKeyId+"&loginUserId="+keyArray;
+    Mac hmac = Mac.getInstance("HmacSHA256");
+    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));
+    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
+    return Hex.encodeHexString(signature);
+}
 ```
 

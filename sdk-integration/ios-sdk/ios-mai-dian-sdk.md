@@ -76,13 +76,22 @@ description: >-
 #### **\(3\) 在AppDelegate 中添加代码** <a id="3-zai-appdelegate-zhong-tian-jia-dai-ma"></a>
 
 ```java
-- (BOOL)application:(UIApplication*)application openURL:(NSURL*)url sourceApplication:(NSString*)sourceApplication annotation:(id)annotation{    if([Growing handleUrl:url]){        return YES;    }    ...    return NO;}
+- (BOOL)application:(UIApplication*)application openURL:(NSURL*)url sourceApplication:(NSString*)sourceApplication annotation:(id)annotation
+{
+    if([Growing handleUrl:url]){
+        return YES;
+    }
+    ...
+    return NO;
+}
 ```
 
  若您在 AppDelegate 中实现了以下一个或多个方法，请在已实现的函数中，调用`[Growing handleUrl:]`
 
 ```java
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
 ```
 
  若以上所有方法均未实现，请实现以下方法并调用`[Growing handleUrl:]`
@@ -98,7 +107,16 @@ description: >-
  在AppDelegate 中引入`#import "Growing.h"`并添加启动方法
 
 ```java
-#import "Growing.h"- (BOOL)application:(UIApplication*)application    didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {      ...      //启动GrowingIO     [Growing startWithAccountId:@"xxxxxxxxxxxxxxxx"]; //替换为您的ID     // 其他配置     // 开启Growing调试日志可以开启日志     // [Growing setEnableLog:YES];  }
+#import "Growing.h"
+- (BOOL)application:(UIApplication*)application
+    didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
+      ...
+      //启动GrowingIO
+     [Growing startWithAccountId:@"xxxxxxxxxxxxxxxx"]; //替换为您的ID
+     // 其他配置
+     // 开启Growing调试日志可以开启日志
+     // [Growing setEnableLog:YES];
+  }
 ```
 
  **请确保将代码添加在上面描述的位置，添加到其他函数中或者异步block 中可能导致数据不准确！**
@@ -124,7 +142,30 @@ description: >-
 SDK 提供多种不同类型的API，请根据您的实际需要正确地调用。
 
 ```java
-// 发送自定义事件 API+ (void)track:(NSString *)eventId;+ (void)track:(NSString *)eventId withNumber:(NSNumber *)number;+ (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;+ (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;​// 发送转化变量 API+ (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue;+ (void)setEvarWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;+ (void)setEvar:(NSDictionary<NSString *, NSObject *> *)variable;​// 发送用户变量 API+ (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;+ (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;+ (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable;​// 访问用户变量 API+ (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable;​// 设置登录用户ID API+ (void)setUserId:(NSString *)userId;​// 清除登录用户ID API+ (void)clearUserId;
+// 发送自定义事件 API
++ (void)track:(NSString *)eventId;
++ (void)track:(NSString *)eventId withNumber:(NSNumber *)number;
++ (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;
++ (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;
+​
+// 发送转化变量 API
++ (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
++ (void)setEvarWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
++ (void)setEvar:(NSDictionary<NSString *, NSObject *> *)variable;
+​
+// 发送用户变量 API
++ (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
++ (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
++ (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable;
+​
+// 访问用户变量 API
++ (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable;
+​
+// 设置登录用户ID API
++ (void)setUserId:(NSString *)userId;
+​
+// 清除登录用户ID API
++ (void)clearUserId;
 ```
 
 ### track <a id="track"></a>
@@ -168,19 +209,26 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
     </tr>
   </tbody>
 </table>```java
-// track API原型+ (void)track:(NSString *)eventId;+ (void)track:(NSString *)eventId withNumber:(NSNumber *)number;+ (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;+ (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;
+// track API原型
++ (void)track:(NSString *)eventId;
++ (void)track:(NSString *)eventId withNumber:(NSNumber *)number;
++ (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;
++ (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
 ```java
-// track API调用示例一[Growing track:@"registerSuccess"];
+// track API调用示例一
+[Growing track:@"registerSuccess"];
 ```
 
 ```java
-// track API调用示例二[Growing track:@"registerSuccess" withVariable:@{@"gender":@"male", @"age":@"21"}];
+// track API调用示例二
+[Growing track:@"registerSuccess" withVariable:@{@"gender":@"male", @"age":@"21"}];
 ```
 
 ```java
-// track API调用示例三[Growing track:@"loanAmount" withNumber:@800000 andVariable:@{@"loanType":@"houseMortgage", @"province":@"Zhejiang"}];
+// track API调用示例三
+[Growing track:@"loanAmount" withNumber:@800000 andVariable:@{@"loanType":@"houseMortgage", @"province":@"Zhejiang"}];
 ```
 
 ​
@@ -226,15 +274,20 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
     </tr>
   </tbody>
 </table>```java
-// setEvar API原型+ (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue;+ (void)setEvarWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;+ (void)setEvar:(NSDictionary<NSString *, NSObject *> *)variable;
+// setEvar API原型
++ (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
++ (void)setEvarWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
++ (void)setEvar:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
 ```java
-// setEvar API调用示例一[Growing setEvarWithKey:@"campaignId" andStringValue:@"1234567890"];
+// setEvar API调用示例一
+[Growing setEvarWithKey:@"campaignId" andStringValue:@"1234567890"];
 ```
 
 ```java
-// setEvar API调用示例二[Growing setEvar:@{@"campaignId":@"12345", @"campaignOwner":@"Li Si"}];
+// setEvar API调用示例二
+[Growing setEvar:@{@"campaignId":@"12345", @"campaignOwner":@"Li Si"}];
 ```
 
 ### setPeopleVariable <a id="setpeoplevariable"></a>
@@ -278,15 +331,20 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
     </tr>
   </tbody>
 </table>```java
-// setPeopleVariable API原型+ (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;+ (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;+ (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable;
+// setPeopleVariable API原型
++ (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
++ (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
++ (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
 ```java
-// setPeopleVariable API调用示例一[Growing setPeopleVariableWithKey:@"gender" andStringValue:@"male"];
+// setPeopleVariable API调用示例一
+[Growing setPeopleVariableWithKey:@"gender" andStringValue:@"male"];
 ```
 
 ```java
-// setPeopleVariable API调用示例二[Growing setPeopleVariable:@{@"gender":@"male", @"age":@"25"}];
+// setPeopleVariable API调用示例二
+[Growing setPeopleVariable:@{@"gender":@"male", @"age":@"25"}];
 ```
 
 ### setVisitor <a id="setvisitor"></a>
@@ -321,11 +379,13 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
     </tr>
   </tbody>
 </table>```java
-// setVisitor 访问用户变量 API原型+ (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable;
+// setVisitor 访问用户变量 API原型
++ (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
 ```java
-// setVisitor API调用示例[Growing setVisitor:@{@"gender":@"male", @"age":@"25"}];
+// setVisitor API调用示例
+[Growing setVisitor:@{@"gender":@"male", @"age":@"25"}];
 ```
 
 ### setUserId <a id="setuserid"></a>
@@ -345,11 +405,13 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | userId | 英文数字组合的字符串，长度小于等于1000，且不能含有特殊字符，不允许传空、`""` 或者`nil`，如有清除操作，请调用 `clearUserId` 方法 |
 
 ```java
-// setUserId API原型+ (void)setUserId:(NSString *)userId;
+// setUserId API原型
++ (void)setUserId:(NSString *)userId;
 ```
 
 ```java
-// setuserId API调用示例[Growing setUserId:@"1234567890"];
+// setuserId API调用示例
+[Growing setUserId:@"1234567890"];
 ```
 
 {% hint style="warning" %}
@@ -361,11 +423,13 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 当用户登出之后调用clearUserId，清除已经设置的登录用户ID。
 
 ```java
-// clearUserId API原型+ (void)clearUserId;
+// clearUserId API原型
++ (void)clearUserId;
 ```
 
 ```java
-// clearUserId API调用示例[Growing clearUserId];
+// clearUserId API调用示例
+[Growing clearUserId];
 ```
 
 ## 埋点SDK支持的其他接口 <a id="mai-dian-sdk-zhi-chi-de-qi-ta-jie-kou"></a>
@@ -377,6 +441,82 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 埋点SDK除了支持上面的打点事件，还支持以接口，接口详情请参考[IOS SDK API](https://docs.growingio.com/docs/sdk-integration/ios-sdk/ios-sdk-api)中的说明：
 
 ```java
-1，如果需要采样设置一个采样值  0.01即1% 0.001即1‰  最多支持小数点后5位+ (void)startWithAccountId:(NSString*)accountId withAppId:(NSString*)appId withSampling:(CGFloat)sampling;+ (void)startWithAccountId:(NSString*)accountId withSampling:(CGFloat)sampling;​2，默认采样100%+ (void)startWithAccountId:(NSString*)accountId withAppId:(NSString*)appId;+ (void)startWithAccountId:(NSString*)accountId;​3，命令行输出调试日志+ (void)setEnableLog:(BOOL)enableLog;+ (BOOL)getEnableLog;​4，若使用加密功能,请在UI元素初始化之前设置此函数+ (void)setEncryptStringBlock:(NSString*(^)(NSString*string))block;​5，以下函数设置后会覆盖原有设置// 并且只会在第一次安装后调用以保证同一设备的设备ID相同// 请在方法startWithAccountId之前调用// 使用自定义的ID 自定义ID长度不可大于64 否则会被抛弃NSUUID的UUIDString长度为36+ (void)setDeviceIDModeToCustomBlock:(NSString*(^)(void))customBlock;​6，deeplink广告落地页参数回调设置+ (void)registerDeeplinkHandler:(void(^)(NSDictionary*params, NSError*error))handler;​7，Universallink广告落地页参数回调设置+ (void)registerUniversallinkHandler:(void(^)(NSDictionary*params, NSError*error))handler;​8，该函数请在main函数第一行调用APP启动后将不允许修改采集模式+ (void)setAspectMode:(GrowingAspectMode)aspectMode;+ (GrowingAspectMode)getAspectMode;​9，是否允许发送基本性能诊断信息，默认为开+ (void)setEnableDiagnose:(BOOL)enable;​10，全局不发送统计信息+ (void)disable;​11，设置发送数据的时间间隔（单位为秒）+ (void)setFlushInterval:(NSTimeInterval)interval;+ (NSTimeInterval)getFlushInterval;​12，设置每天使用数据网络（2G、3G、4G）上传的数据量的上限（单位是KB）+ (void)setDailyDataLimit:(NSUInteger)numberOfKiloByte;+ (NSUInteger)getDailyDataLimit;​13，设置数据收集平台服务器地址+ (void)setTrackerHost:(NSString*)host;​14，设置设备报活服务器地址+ (void)setReportHost:(NSString*)host;​15，设置数据查看平台服务器地址+ (void)setDataHost:(NSString*)host;​16，设置数据后台服务器地址+ (void)setGtaHost:(NSString*)host;​17，设置数据后台服务器地址+ (void)setWsHost:(NSString*)host;​18，设置zone信息+ (void)setZone:(NSString*)zone;​19，设置GDPR 生效+ (void)disableDataCollect;​20，设置GDPR 失效+ (void)enableDataCollect;​21，获取当前设备id+ (NSString*)getDeviceId;​22，获取当前uid+ (NSString*)getVisitUserId;​23，获取当前访问id+ (NSString*)getSessionId;
+1，如果需要采样设置一个采样值  0.01即1% 0.001即1‰  最多支持小数点后5位
++ (void)startWithAccountId:(NSString*)accountId withAppId:(NSString*)appId withSampling:(CGFloat)sampling;
++ (void)startWithAccountId:(NSString*)accountId withSampling:(CGFloat)sampling;
+​
+2，默认采样100%
++ (void)startWithAccountId:(NSString*)accountId withAppId:(NSString*)appId;
++ (void)startWithAccountId:(NSString*)accountId;
+​
+3，命令行输出调试日志
++ (void)setEnableLog:(BOOL)enableLog;
++ (BOOL)getEnableLog;
+​
+4，若使用加密功能,请在UI元素初始化之前设置此函数
++ (void)setEncryptStringBlock:(NSString*(^)(NSString*string))block;
+​
+5，以下函数设置后会覆盖原有设置
+// 并且只会在第一次安装后调用以保证同一设备的设备ID相同
+// 请在方法startWithAccountId之前调用
+// 使用自定义的ID 自定义ID长度不可大于64 否则会被抛弃NSUUID的UUIDString长度为36
++ (void)setDeviceIDModeToCustomBlock:(NSString*(^)(void))customBlock;
+​
+6，deeplink广告落地页参数回调设置
++ (void)registerDeeplinkHandler:(void(^)(NSDictionary*params, NSError*error))handler;
+​
+7，Universallink广告落地页参数回调设置
++ (void)registerUniversallinkHandler:(void(^)(NSDictionary*params, NSError*error))handler;
+​
+8，该函数请在main函数第一行调用APP启动后将不允许修改采集模式
++ (void)setAspectMode:(GrowingAspectMode)aspectMode;
++ (GrowingAspectMode)getAspectMode;
+​
+9，是否允许发送基本性能诊断信息，默认为开
++ (void)setEnableDiagnose:(BOOL)enable;
+​
+10，全局不发送统计信息
++ (void)disable;
+​
+11，设置发送数据的时间间隔（单位为秒）
++ (void)setFlushInterval:(NSTimeInterval)interval;
++ (NSTimeInterval)getFlushInterval;
+​
+12，设置每天使用数据网络（2G、3G、4G）上传的数据量的上限（单位是KB）
++ (void)setDailyDataLimit:(NSUInteger)numberOfKiloByte;
++ (NSUInteger)getDailyDataLimit;
+​
+13，设置数据收集平台服务器地址
++ (void)setTrackerHost:(NSString*)host;
+​
+14，设置设备报活服务器地址
++ (void)setReportHost:(NSString*)host;
+​
+15，设置数据查看平台服务器地址
++ (void)setDataHost:(NSString*)host;
+​
+16，设置数据后台服务器地址
++ (void)setGtaHost:(NSString*)host;
+​
+17，设置数据后台服务器地址
++ (void)setWsHost:(NSString*)host;
+​
+18，设置zone信息
++ (void)setZone:(NSString*)zone;
+​
+19，设置GDPR 生效
++ (void)disableDataCollect;
+​
+20，设置GDPR 失效
++ (void)enableDataCollect;
+​
+21，获取当前设备id
++ (NSString*)getDeviceId;
+​
+22，获取当前uid
++ (NSString*)getVisitUserId;
+​
+23，获取当前访问id
++ (NSString*)getSessionId;
 ```
 

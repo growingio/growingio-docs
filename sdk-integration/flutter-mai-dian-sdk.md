@@ -66,7 +66,11 @@ import 'package:growingioflutter/growingio_track.dart';
 ```
 
 ```dart
-GrowingIO.track('eventId');GrowingIO.track('testEventId', num: 23.0, variable: {'testKey': 'testValue', 'testNumKey': 233});GrowingIO.track('eventId', num: 23.0);GrowingIO.track('eventId', variable: {'testkey': 'testValue', 'testNumKey': 2333});
+GrowingIO.track('eventId');
+GrowingIO.track('testEventId', num: 23.0, variable: {'testKey': 'testValue', 'testNumKey': 233});
+GrowingIO.track('eventId', num: 23.0);
+GrowingIO.track('eventId', variable: {'testkey': 'testValue', 'testNumKey': 2333});
+
 ```
 
 ### 2. setEvar
@@ -80,7 +84,10 @@ import 'package:growingioflutter/growingio_track.dart';
 ```
 
 ```dart
-GrowingIO.setEvar({  'testKey': 'testValue', 'testNumKey': 2333.0});
+GrowingIO.setEvar({
+  'testKey': 'testValue', 'testNumKey': 2333.0
+});
+
 ```
 
 ### 3. setPeopleVariable
@@ -96,7 +103,10 @@ import 'package:growingioflutter/growingio_track.dart';
 ```
 
 ```dart
-GrowingIO.setPeopleVariable({  'testKey': 'testValue', 'testNumKey': 2333.0});
+GrowingIO.setPeopleVariable({
+  'testKey': 'testValue', 'testNumKey': 2333.0
+});
+
 ```
 
 ### 4. setUserId
@@ -148,7 +158,9 @@ import 'package:growingioflutter/growingio_track.dart';
 ```
 
 ```dart
-GrowingIO.setVisitor({	  "visitorKey": 'key', "visitorValue": 34});
+GrowingIO.setVisitor({
+	  "visitorKey": 'key', "visitorValue": 34
+});
 ```
 
 

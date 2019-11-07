@@ -88,7 +88,13 @@ GrowingIO iOS SDK 2.8.5 包含以下2个组件SDK:
 ####    2**.3  在 AppDelegate 中添加激活圈选的代码**
 
 ```objectivec
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {    if ([Growing handleUrl:url]) {        return YES;    }    ...    return NO;}
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if ([Growing handleUrl:url]) {
+        return YES;
+    }
+    ...
+    return NO;
+}
 ```
 
 {% hint style="warning" %}
@@ -97,7 +103,9 @@ GrowingIO iOS SDK 2.8.5 包含以下2个组件SDK:
 * 若您在 AppDelegate 中实现了以下一个或多个方法，请在已实现的函数中，调用`[Growing handleUrl:]`
 
   ```objectivec
-  - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
+  - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation
+  - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+  - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
   ```
 
 * 若以上所有方法均未实现，请实现以下方法并调用`[Growing handleUrl:]`
@@ -120,7 +128,14 @@ GrowingIO iOS SDK 2.8.5 包含以下2个组件SDK:
 ![&#x9879;&#x76EE;ID&#x67E5;&#x770B;](../../.gitbook/assets/image%20%28134%29.png)
 
 ```objectivec
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    ...    // 启动GrowingIO    [Growing startWithAccountId:@"xxxxxxxxxxxxxxxx"]; //替换为您的项目ID    // 其他配置    // 开启Growing调试日志 可以开启日志    // [Growing setEnableLog:YES];}
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    ...
+    // 启动GrowingIO
+    [Growing startWithAccountId:@"xxxxxxxxxxxxxxxx"]; //替换为您的项目ID
+    // 其他配置
+    // 开启Growing调试日志 可以开启日志
+    // [Growing setEnableLog:YES];
+}
 ```
 
 {% hint style="warning" %}
@@ -142,7 +157,9 @@ GrowingIO iOS SDK 2.8.5 包含以下2个组件SDK:
        如果您的 app 上方有横向滚动的 Banner 广告，若要收集 Banner 相关数据，请在响应点击的控件上添加如下代码：
 
 ```objectivec
-UIView *view;…view.growingAttributesValue = 广告的唯一ID;
+UIView *view;
+…
+view.growingAttributesValue = 广告的唯一ID;
 ```
 
 其中 view 是您的广告元素，请确保两点：
@@ -153,7 +170,9 @@ UIView *view;…view.growingAttributesValue = 广告的唯一ID;
 #### 【例子】当您的横向滚动广告共有3张广告图时，您可以在3个响应点击的View上分别设置不同的广告唯一ID，实现方式：
 
 ```objectivec
-view1.growingAttributesValue = @"ad1";view2.growingAttributesValue = @"ad2";view3.growingAttributesValue = @"ad3";
+view1.growingAttributesValue = @"ad1";
+view2.growingAttributesValue = @"ad2";
+view3.growingAttributesValue = @"ad3";
 ```
 
 
@@ -165,7 +184,9 @@ view1.growingAttributesValue = @"ad1";view2.growingAttributesValue = @"ad2";view
 如果您需要采集应用内某个输入框内的文字（例如搜索框），请调用如下接口进行设置：
 
 ```objectivec
-UIView *view; // view 可以是 UITextField, UITextView, UISearchBar ...view.growingAttributesDonotTrackValue = NO;
+UIView *view; // view 可以是 UITextField, UITextView, UISearchBar
+ ...
+view.growingAttributesDonotTrackValue = NO;
 ```
 
 view代表要被采集的输入框。 当这个输入框失去焦点（包括应用退到后台），且输入框内容跟获取焦点前相比发生变化时，输入框内文字会被发送回GrowingIO。
@@ -197,7 +218,8 @@ SDK 会自动采集H5页面的数据，不需要特殊配置。
 您可以在项目中添加以下方法以启用 Hashtag 识别：
 
 ```objectivec
-// 设置为 YES, 将启用 HashTag+ (void)enableHybridHashTag:(BOOL)enable;
+// 设置为 YES, 将启用 HashTag
++ (void)enableHybridHashTag:(BOOL)enable;
 ```
 
 ### GDPR 数据采集开关
@@ -205,7 +227,11 @@ SDK 会自动采集H5页面的数据，不需要特殊配置。
 GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的API供开发者调用，`SDK 2.3.2`以上版本支持。
 
 ```objectivec
-// 开启GDPR，不采集数据[Growing disableDataCollect]; // 关闭GDPR，采集数据[Growing enableDataCollect];
+// 开启GDPR，不采集数据
+[Growing disableDataCollect];
+ 
+// 关闭GDPR，采集数据
+[Growing enableDataCollect];
 ```
 
 
@@ -224,11 +250,23 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 2. 添加自定义参数回调方法：
 
 ```objectivec
-/** deeplink广告落地页参数回调设置 @param handler deeplink广告落地页参数回调, params 为解析正确时回调的参数, processTime为从app被deeplink唤起到handler回调的时间(单位秒), error 为解析错误时返回的参数.                 handler 默认为空, 客户需要手动设置. */+ (void)registerDeeplinkHandler:(void(^)(NSDictionary *params, NSTimeInterval processTime, NSError *error))handler;
+/**
+ deeplink广告落地页参数回调设置
+
+ @param handler deeplink广告落地页参数回调, params 为解析正确时回调的参数, processTime为从app被deeplink唤起到handler回调的时间(单位秒), error 为解析错误时返回的参数.
+                 handler 默认为空, 客户需要手动设置.
+ */
++ (void)registerDeeplinkHandler:(void(^)(NSDictionary *params, NSTimeInterval processTime, NSError *error))handler;
 ```
 
 ```objectivec
-//DeepLink 调用示例[Growing registerDeeplinkHandler:^(NSDictionary *params, NSTimeInterval processTime, NSError *error) {        NSLog(@"params : %@", params);        XCTAssertNotNil(params);        XCTAssertEqualObjects(params[@"key1"], @"value1");        XCTAssertEqualObjects(params[@"key2"], @"value2"); }];
+//DeepLink 调用示例
+[Growing registerDeeplinkHandler:^(NSDictionary *params, NSTimeInterval processTime, NSError *error) {
+        NSLog(@"params : %@", params);
+        XCTAssertNotNil(params);
+        XCTAssertEqualObjects(params[@"key1"], @"value1");
+        XCTAssertEqualObjects(params[@"key2"], @"value2");
+ }];
 ```
 
 {% hint style="danger" %}
@@ -248,7 +286,10 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 2.请在`AppDelegate.m`添加以下代码：
 
 ```objectivec
-- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler{    [Growing handleUrl:userActivity.webpageURL];	return YES;}
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler{
+    [Growing handleUrl:userActivity.webpageURL];
+	return YES;
+}
 ```
 
 3.添加 Universal Link 参数解析回调方法，此方法与 Deep Link 方法一致。
@@ -265,7 +306,11 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 若要为元素设置 ID，请在 viewWillAppear 或者时机更早的方法里添加以下代码：
 
 ```objectivec
--(void)viewWillAppear {    UIView *MyView;    …    MyView.growingAttributesUniqueTag = @"my_view";}
+-(void)viewWillAppear {
+    UIView *MyView;
+    …
+    MyView.growingAttributesUniqueTag = @"my_view";
+}
 ```
 
 {% hint style="danger" %}
@@ -289,7 +334,14 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 在**IOS  SDK 2.6.3** 版本， 支持采集用户**点击**本应用的通知的题和内容。此采集点击事件功能默认关闭，如需开启，请在 Application 初始化 GrowingIO 中设置，例如：
 
 ```objectivec
-- (BOOL)application:(UIApplication *)application    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { ...  //开启推送点击采集  [Growing disablePushTrack:NO];  ...  }  
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ ...
+  //开启推送点击采集
+  [Growing disablePushTrack:NO];
+  ...
+  }
+  
 ```
 
 **查看通知采集数据**
@@ -317,7 +369,35 @@ iOS SDK 不支持通知展现的事件采集，但是 Android SDK 支持，这�
 SDK 提供多种不同类型的API，请根据您的实际需要正确地调用。
 
 ```objectivec
-// 发送自定义事件 API+ (void)track:(NSString *)eventId;+ (void)track:(NSString *)eventId withNumber:(NSNumber *)number;+ (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;+ (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;// 发送页面级变量 API+ (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;+ (void)setPageVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue toViewController:(UIViewController *)viewController;+ (void)setPageVariable:(NSDictionary<NSString *, NSObject *> *)variable toViewController:(UIViewController *)viewController;// 发送转化变量 API+ (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue;+ (void)setEvarWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;+ (void)setEvar:(NSDictionary<NSString *, NSObject *> *)variable;// 发送用户变量 API+ (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;+ (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;+ (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable;// 访问用户变量 API+ (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable;// 设置登录用户ID API+ (void)setUserId:(NSString *)userId;// 清除登录用户ID API+ (void)clearUserId;
+// 发送自定义事件 API
++ (void)track:(NSString *)eventId;
++ (void)track:(NSString *)eventId withNumber:(NSNumber *)number;
++ (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;
++ (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;
+
+// 发送页面级变量 API
++ (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;
++ (void)setPageVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue toViewController:(UIViewController *)viewController;
++ (void)setPageVariable:(NSDictionary<NSString *, NSObject *> *)variable toViewController:(UIViewController *)viewController;
+
+// 发送转化变量 API
++ (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
++ (void)setEvarWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
++ (void)setEvar:(NSDictionary<NSString *, NSObject *> *)variable;
+
+// 发送用户变量 API
++ (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
++ (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
++ (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable;
+
+// 访问用户变量 API
++ (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable;
+
+// 设置登录用户ID API
++ (void)setUserId:(NSString *)userId;
+
+// 清除登录用户ID API
++ (void)clearUserId;
 ```
 
 ### track
@@ -361,19 +441,26 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
     </tr>
   </tbody>
 </table>```objectivec
-// track API原型+ (void)track:(NSString *)eventId;+ (void)track:(NSString *)eventId withNumber:(NSNumber *)number;+ (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;+ (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;
+// track API原型
++ (void)track:(NSString *)eventId;
++ (void)track:(NSString *)eventId withNumber:(NSNumber *)number;
++ (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;
++ (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
 ```objectivec
-// track API调用示例一[Growing track:@"registerSuccess"];
+// track API调用示例一
+[Growing track:@"registerSuccess"];
 ```
 
 ```objectivec
-// track API调用示例二[Growing track:@"registerSuccess" withVariable:@{@"gender":@"male", @"age":@"21"}];
+// track API调用示例二
+[Growing track:@"registerSuccess" withVariable:@{@"gender":@"male", @"age":@"21"}];
 ```
 
 ```objectivec
-// track API调用示例三[Growing track:@"loanAmount" withNumber:@800000 andVariable:@{@"loanType":@"houseMortgage", @"province":@"Zhejiang"}];
+// track API调用示例三
+[Growing track:@"loanAmount" withNumber:@800000 andVariable:@{@"loanType":@"houseMortgage", @"province":@"Zhejiang"}];
 ```
 
 ### setPageVariable
@@ -421,15 +508,20 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
     </tr>
   </tbody>
 </table>```objectivec
-// setPageVariable API原型+ (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;+ (void)setPageVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue toViewController:(UIViewController *)viewController;+ (void)setPageVariable:(NSDictionary<NSString *, NSObject *> *)variable toViewController:(UIViewController *)viewController;
+// setPageVariable API原型
++ (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;
++ (void)setPageVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue toViewController:(UIViewController *)viewController;
++ (void)setPageVariable:(NSDictionary<NSString *, NSObject *> *)variable toViewController:(UIViewController *)viewController;
 ```
 
 ```objectivec
-// setPageVariable API调用示例一[Growing setPageVariableWithKey:@"author" andStringValue:@"Zhang San" toViewController:myViewController];
+// setPageVariable API调用示例一
+[Growing setPageVariableWithKey:@"author" andStringValue:@"Zhang San" toViewController:myViewController];
 ```
 
 ```objectivec
-// setPageVariable API调用示例二[Growing setPageVariable:@{@"pageName":@"Home Page", @"author":@"Zhang San"} toViewController:myViewController];
+// setPageVariable API调用示例二
+[Growing setPageVariable:@{@"pageName":@"Home Page", @"author":@"Zhang San"} toViewController:myViewController];
 ```
 
 ### setEvar
@@ -473,15 +565,20 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
     </tr>
   </tbody>
 </table>```objectivec
-// setEvar API原型+ (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue;+ (void)setEvarWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;+ (void)setEvar:(NSDictionary<NSString *, NSObject *> *)variable;
+// setEvar API原型
++ (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
++ (void)setEvarWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
++ (void)setEvar:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
 ```objectivec
-// setEvar API调用示例一[Growing setEvarWithKey:@"campaignId" andStringValue:@"1234567890"];
+// setEvar API调用示例一
+[Growing setEvarWithKey:@"campaignId" andStringValue:@"1234567890"];
 ```
 
 ```objectivec
-// setEvar API调用示例二[Growing setEvar:@{@"campaignId":@"12345", @"campaignOwner":@"Li Si"}];
+// setEvar API调用示例二
+[Growing setEvar:@{@"campaignId":@"12345", @"campaignOwner":@"Li Si"}];
 ```
 
 ### setPeopleVariable
@@ -525,15 +622,20 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
     </tr>
   </tbody>
 </table>```objectivec
-// setPeopleVariable API原型+ (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;+ (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;+ (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable;
+// setPeopleVariable API原型
++ (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
++ (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
++ (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
 ```objectivec
-// setPeopleVariable API调用示例一[Growing setPeopleVariableWithKey:@"gender" andStringValue:@"male"];
+// setPeopleVariable API调用示例一
+[Growing setPeopleVariableWithKey:@"gender" andStringValue:@"male"];
 ```
 
 ```objectivec
-// setPeopleVariable API调用示例二[Growing setPeopleVariable:@{@"gender":@"male", @"age":@"25"}];
+// setPeopleVariable API调用示例二
+[Growing setPeopleVariable:@{@"gender":@"male", @"age":@"25"}];
 ```
 
 ### setVisitor
@@ -568,11 +670,13 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
     </tr>
   </tbody>
 </table>```objectivec
-// setVisitor 访问用户变量 API原型+ (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable;
+// setVisitor 访问用户变量 API原型
++ (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
 ```text
-// setVisitor API调用示例[Growing setVisitor:@{@"gender":@"male", @"age":@"25"}];
+// setVisitor API调用示例
+[Growing setVisitor:@{@"gender":@"male", @"age":@"25"}];
 ```
 
 ### setUserId
@@ -592,11 +696,13 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 | userId | 英文数字组合的字符串，长度小于等于1000，且不能含有特殊字符，不允许传空、`""` 或者`nil`，如有清除操作，请调用 `clearUserId` 方法 |
 
 ```objectivec
-// setUserId API原型+ (void)setUserId:(NSString *)userId;
+// setUserId API原型
++ (void)setUserId:(NSString *)userId;
 ```
 
 ```objectivec
-// setuserId API调用示例[Growing setUserId:@"1234567890"];
+// setuserId API调用示例
+[Growing setUserId:@"1234567890"];
 ```
 
 {% hint style="warning" %}
@@ -608,11 +714,13 @@ SDK 提供多种不同类型的API，请根据您的实际需要正确地调用�
 当用户登出之后调用clearUserId，清除已经设置的登录用户ID。
 
 ```objectivec
-// clearUserId API原型+ (void)clearUserId;
+// clearUserId API原型
++ (void)clearUserId;
 ```
 
 ```objectivec
-// clearUserId API调用示例[Growing clearUserId];
+// clearUserId API调用示例
+[Growing clearUserId];
 ```
 
 ## 验证 SDK 是否正常工作

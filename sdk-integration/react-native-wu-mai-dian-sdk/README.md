@@ -38,7 +38,9 @@ npm install --save https://github.com/growingio/GIORNHook.git#0.0.6
 在原有文件中，添加如下代码，保存后执行**`npm install`**。
 
 ```bash
-"scripts": {	  "postinstall": "node node_modules/react-native-autotrack-growingio/hook.js -run"}
+"scripts": {
+	  "postinstall": "node node_modules/react-native-autotrack-growingio/hook.js -run"
+}
 ```
 
 
@@ -64,7 +66,16 @@ React  Native 无埋点 SDK 是在 Android 原生 SDK 上的扩展，参照 [And
 在项目的Application中，添加`GrowingIOPackage`：
 
 ```java
-public class MainApplication extends Application implements ReactApplication {    @Override    protected List<ReactPackage> getPackages() {      return Arrays.<ReactPackage>asList(          new MainReactPackage(),           // 此处加入GrowingIOPackage          new GrowingIOPackage()      );    }}
+public class MainApplication extends Application implements ReactApplication {
+    @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage(), 
+          // 此处加入GrowingIOPackage
+          new GrowingIOPackage()
+      );
+    }
+}
 ```
 
 #### 2.混淆文件配置
@@ -74,7 +85,30 @@ public class MainApplication extends Application implements ReactApplication {  
 {% tabs %}
 {% tab title="proguard-rules.pro" %}
 ```text
-# GIO RN 控件混淆代码，不添加则会造成点击事件采集失败-keep class com.facebook.react.uimanager.JSTouchDispatcher{    *;}-keep class com.growingio.** {    *;}-dontwarn com.growingio.**-keepnames class * extends android.view.View-keepnames class * extends android.app.Fragment-keepnames class * extends android.support.v4.app.Fragment-keepnames class * extends androidx.fragment.app.Fragment-keep class android.support.v4.view.ViewPager{    *;}-keep class android.support.v4.view.ViewPager$**{	*;}-keep class androidx.viewpager.widget.ViewPager{    *;}-keep class androidx.viewpager.widget.ViewPager$**{	*;}
+# GIO RN 控件混淆代码，不添加则会造成点击事件采集失败
+-keep class com.facebook.react.uimanager.JSTouchDispatcher{
+    *;
+}
+-keep class com.growingio.** {
+    *;
+}
+-dontwarn com.growingio.**
+-keepnames class * extends android.view.View
+-keepnames class * extends android.app.Fragment
+-keepnames class * extends android.support.v4.app.Fragment
+-keepnames class * extends androidx.fragment.app.Fragment
+-keep class android.support.v4.view.ViewPager{
+    *;
+}
+-keep class android.support.v4.view.ViewPager$**{
+	*;
+}
+-keep class androidx.viewpager.widget.ViewPager{
+    *;
+}
+-keep class androidx.viewpager.widget.ViewPager$**{
+	*;
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -169,7 +203,14 @@ this.props.navigation.setParams({growingPagePath: 'xx'});
 如果SDK目前支持的路由方案不能满足您的需求， SDK留下拓展接口， 您需要在您认为页面发生切换时， 将最新的page名称告诉我们。 调用方法如下：
 
 ```javascript
-import {    NativeModules  } from 'react-native';// 在react native页面将要展示时调用NativeModules.GrowingIO.onPagePrepare("pageName");// 在react native页面已经展示时调用NativeModules.GrowingIO.onPageShow("pageName");
+import {
+    NativeModules
+  } from 'react-native';
+
+// 在react native页面将要展示时调用
+NativeModules.GrowingIO.onPagePrepare("pageName");
+// 在react native页面已经展示时调用
+NativeModules.GrowingIO.onPageShow("pageName");
 ```
 
 
@@ -241,7 +282,34 @@ import {    NativeModules  } from 'react-native';// 在react native页面将要�
 GrowingIOPackage 向 RN 提供了一个 NativeModule ， 所有打点接口都是由其实现，使用方法如下：
 
 ```javascript
-//在使用 GrowingIO 埋点功能的文件中导入 NativeModulesimport {    NativeModules  } from 'react-native';//埋点方法调用示例如下：//track 设置自定义事件NativeModules.GrowingIO.track('testEventId', {'卖家Id': 'xxxxxx', '地点': '北京'});//trackWithNumber 设置自定义事件NativeModules.GrowingIO.trackWithNumber('addCart',97,{"book":"EnglishBook"});//setPeopleVariable 设置用户变量NativeModules.GrowingIO.setPeopleVariable({ "name": "Danny", "Age": 20 });//setEvar 设置转化变量NativeModules.GrowingIO.setEvar({ "registered": true, "fee": "200" });//setUserId 设置登录用户名称NativeModules.GrowingIO.setUserId("Gioer");//clearUserId 清除登录用户名称NativeModules.GrowingIO.clearUserId();//setVisitor 设置访问用户变量NativeModules.GrowingIO.setVisitor({ "age": 20, "gender": "male" });
+//在使用 GrowingIO 埋点功能的文件中导入 NativeModules
+import {
+    NativeModules
+  } from 'react-native';
+
+//埋点方法调用示例如下：
+
+//track 设置自定义事件
+NativeModules.GrowingIO.track('testEventId', {'卖家Id': 'xxxxxx', '地点': '北京'});
+
+//trackWithNumber 设置自定义事件
+NativeModules.GrowingIO.trackWithNumber('addCart',97,{"book":"EnglishBook"});
+
+//setPeopleVariable 设置用户变量
+NativeModules.GrowingIO.setPeopleVariable({ "name": "Danny", "Age": 20 });
+
+//setEvar 设置转化变量
+NativeModules.GrowingIO.setEvar({ "registered": true, "fee": "200" });
+
+//setUserId 设置登录用户名称
+NativeModules.GrowingIO.setUserId("Gioer");
+
+//clearUserId 清除登录用户名称
+NativeModules.GrowingIO.clearUserId();
+
+//setVisitor 设置访问用户变量
+NativeModules.GrowingIO.setVisitor({ "age": 20, "gender": "male" });
+
 ```
 
 

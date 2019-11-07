@@ -52,7 +52,20 @@ curl --compressed https://assets.giocdn.com/sdk/gio-alip.js -o gio-alip.js
 在支付宝小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前：
 
 ```javascript
-var gio = require("utils/gio-alip.js").default;// version 是你的小程序的版本号gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '你的小程序版本'});// 修改项目中的App和Page，如下：// App({})改写为:App($global.trackApp({}))// 所有的Page({})改写为：$global.GioPage({})
+var gio = require("utils/gio-alip.js").default;
+// version 是你的小程序的版本号
+gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '你的小程序版本'});
+
+// 修改项目中的App和Page，如下：
+// App({})改写为:
+App($global.trackApp({
+
+}))
+// 所有的Page({})改写为：
+$global.GioPage({
+
+})
+
 ```
 
 方式二：
@@ -60,13 +73,30 @@ var gio = require("utils/gio-alip.js").default;// version 是你的小程序的�
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-export default {projectId: '你的 GrowingIO 项目ID',appId: '你的小程序AppID',version: '小程序版本'...}
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本'
+...
+}
+
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-alip.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);// 修改项目中的App和Page，如下：// App({})改写为:App($global.trackApp({}))// 所有的Page({})改写为：$global.GioPage({})
+var gio = require("utils/gio-alip.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
+// 修改项目中的App和Page，如下：
+// App({})改写为:
+App($global.trackApp({
+
+}))
+// 所有的Page({})改写为：
+$global.GioPage({
+
+})
 ```
 
 #### Taro 框架
@@ -84,7 +114,9 @@ curl --compressed https://assets.giocdn.com/sdk/gio-alip.js -o gio-alip.js
 在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Taro from '@tarojs/taro';var gio = require("utils/gio-alip.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', taro: Taro });
+import Taro from '@tarojs/taro';
+var gio = require("utils/gio-alip.js").default;
+gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', taro: Taro });
 ```
 
 方式二：
@@ -92,13 +124,22 @@ import Taro from '@tarojs/taro';var gio = require("utils/gio-alip.js").default;g
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-import Taro from '@tarojs/taro';export default {projectId: '你的 GrowingIO 项目ID',appId: '你的小程序AppID',version: '小程序版本',taro: Taro,...}
+import Taro from '@tarojs/taro';
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本',
+taro: Taro,
+...
+}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-alip.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
+var gio = require("utils/gio-alip.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
 ```
 
 #### mpvue框架 / uni-app 框架
@@ -114,7 +155,12 @@ curl --compressed https://assets.giocdn.com/sdk/gio-alip.esm.js -o gio-alip.js
 方式一：在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Vue from 'vue';import App from './App';App.mpType = 'app';var gio = require("utils/gio-alip.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本',vue: Vue });
+import Vue from 'vue';
+import App from './App';
+App.mpType = 'app';
+var gio = require("utils/gio-alip.js").default;
+gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本',vue: Vue });
+
 ```
 
 方式二：
@@ -122,13 +168,24 @@ import Vue from 'vue';import App from './App';App.mpType = 'app';var gio = requi
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-import Vue from 'vue';export default {projectId: '你的 GrowingIO 项目ID',appId: '你的小程序AppID',version: '小程序版本',vue: Vue,...}
+import Vue from 'vue';
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本',
+vue: Vue,
+...
+}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-alip.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);import App from './App';App.mpType = 'app';
+var gio = require("utils/gio-alip.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
+import App from './App';
+App.mpType = 'app';
 ```
 
 #### Chameleon框架
@@ -144,7 +201,9 @@ curl --compressed https://assets.giocdn.com/sdk/gio-alip.js -o gio-alip.js
 方式一：在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Cml from 'chameleon-runtime';var gio = require("utils/gio-alip.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', cml: Cml });
+import Cml from 'chameleon-runtime';
+var gio = require("utils/gio-alip.js").default;
+gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', cml: Cml });
 ```
 
 方式二：
@@ -152,13 +211,22 @@ import Cml from 'chameleon-runtime';var gio = require("utils/gio-alip.js").defau
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-import Cml from 'chameleon-runtime';export default {projectId: '你的 GrowingIO 项目ID',appId: '你的小程序AppID',version: '小程序版本',cml: Cml,...}
+import Cml from 'chameleon-runtime';
+export default {
+projectId: '你的 GrowingIO 项目ID',
+appId: '你的小程序AppID',
+version: '小程序版本',
+cml: Cml,
+...
+}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-alip.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
+var gio = require("utils/gio-alip.js").default;
+var gioConfig = require("你的 gioConfig.js 文件地址").default;
+gio('setConfig', gioConfig);
 ```
 
 ### **2、进行SDK的配置设置**
@@ -184,7 +252,9 @@ var gio = require("utils/gio-alip.js").default;var gioConfig = require("你的 g
 即支付宝小程序项目根目录的 app.js 文件设置参数如下：
 
 ```text
-var gio = require("utils/gio-alip.js");// version 是你的小程序的版本号，发版时请调整gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '1.0', followShare: true });
+var gio = require("utils/gio-alip.js");
+// version 是你的小程序的版本号，发版时请调整
+gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '1.0', followShare: true });
 ```
 
 #### getLocation 参数
@@ -214,7 +284,10 @@ forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程�
 
 
 ```javascript
-gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '1.0', forceLogin: true });...// 当获取到 userid 后，调用以下方法gio("identify", userid);
+gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '1.0', forceLogin: true });
+...
+// 当获取到 userid 后，调用以下方法
+gio("identify", userid);
 ```
 {% endhint %}
 
@@ -239,7 +312,15 @@ gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '1.0',
 当用户在你的小程序上登陆获取到 userid 后，可以用过 identify 接口绑定支付宝用户ID，后续在 GrowingIO 中获取更准确的支付宝访问用户量。示例代码如下：
 
 ```text
-my.httpRequest({    url: 'http://isv.com/auth', // 该url是自己的服务地址，实现的功能是服务端拿到authcode去开放平台进行token验证    data: {      authcode: res.authCode    },    success: (res) => {      gio('identify', res.uid)    }  });
+my.httpRequest({
+    url: 'http://isv.com/auth', // 该url是自己的服务地址，实现的功能是服务端拿到authcode去开放平台进行token验证
+    data: {
+      authcode: res.authCode
+    },
+    success: (res) => {
+      gio('identify', res.uid)
+    }
+  });
 ```
 
 #### 设置支付宝用户信息
@@ -247,7 +328,11 @@ my.httpRequest({    url: 'http://isv.com/auth', // 该url是自己的服务地�
 当用户在你的小程序上绑定支付宝信息后，可以通过 setVisitor 接口设置支付宝用户信息，后续在 GrowingIO 中分析这个数据。示例代码如下：
 
 ```text
-my.getAuthUserInfo({    success: (userInfo) => {        gio('setVisitor', userInfo);    }    });
+my.getAuthUserInfo({
+    success: (userInfo) => {
+        gio('setVisitor', userInfo);
+    }
+    });
 ```
 
 支付宝信息包含**用户昵称**、**用户头像**、**性别**、**支付宝所填国家**、**支付宝所填省份**、**支付宝所填城市**、**用户类型**、**用户状态**、**是否通过实名认证**、**学生认证**。
@@ -267,7 +352,11 @@ gio('setUserId', YOUR_USER_ID);
 当用户在你的小程序上传了注册用户ID后，可以通过 setUser 接口设置注册用户信息,例如用户会员等级，后续在 GrowingIO 中分析这个数据。示例代码如下，
 
 ```text
-    gio('setUserId', user.id);    gio('setUser', {        id: user.id,        level: user.level    });
+    gio('setUserId', user.id);
+    gio('setUser', {
+        id: user.id,
+        level: user.level
+    });
 ```
 
 ### 5 检测数据 <a id="jian-ce-shu-ju"></a>
@@ -306,7 +395,17 @@ gio('track', eventName: string, properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 在 Page 的 clickBanner 函数里添加以下代码Page({  clickBanner(e) {    getApp().globalData.gio('track', 'clickBanner', {       id: movie.id,       title: movie.title,       index: e.currentTarget.dataset.index     });  }})
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+// 在 Page 的 clickBanner 函数里添加以下代码
+Page({
+  clickBanner(e) {
+    getApp().globalData.gio('track', 'clickBanner', { 
+      id: movie.id, 
+      title: movie.title, 
+      index: e.currentTarget.dataset.index 
+    });
+  }
+})
 ```
 
 ### 访问用户变量
@@ -328,7 +427,12 @@ gio('setVisitor', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 比如在针对不同的用户做某个 Campaign 的 A/B 测试getApp().globalData.gio('setVisitor', {   campaign_id: 3,   campaign_group: 'A 组用户'});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+// 比如在针对不同的用户做某个 Campaign 的 A/B 测试
+getApp().globalData.gio('setVisitor', { 
+  campaign_id: 3, 
+  campaign_group: 'A 组用户'
+});
 ```
 
 ### 注册用户变量
@@ -350,7 +454,13 @@ gio('setUser', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面getApp().globalData.gio('setUser', {   age: 30,   level: '高级用户',   company: 'GrowingIO',   title: '工程师'});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+getApp().globalData.gio('setUser', { 
+  age: 30, 
+  level: '高级用户', 
+  company: 'GrowingIO', 
+  title: '工程师'
+});
 ```
 
 ### 页面级变量
@@ -372,7 +482,17 @@ gio('setPage', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 推荐在 Page#onShow 处理这个事件// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 typePage({  onShow() {    getApp().globalData.gio('setPage', {       pageName: '电影列表页',       type: this.data.type    });  }}
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+// 推荐在 Page#onShow 处理这个事件
+// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 type
+Page({
+  onShow() {
+    getApp().globalData.gio('setPage', { 
+      pageName: '电影列表页', 
+      type: this.data.type
+    });
+  }
+}
 ```
 
 ###  转化变量
@@ -394,7 +514,10 @@ gio('setEvar', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面getApp().globalData.gio('setEvar', {   campaign: '活动A'});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+getApp().globalData.gio('setEvar', { 
+  campaign: '活动A'
+});
 ```
 
 

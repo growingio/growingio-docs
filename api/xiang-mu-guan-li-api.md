@@ -47,7 +47,9 @@ GrowingIO 分配的公钥
 {% endapi-method-response-example-description %}
 
 ```
-{    "status": "success"}
+{
+    "status": "success"
+}
 ```
 {% endapi-method-response-example %}
 
@@ -57,7 +59,10 @@ GrowingIO 分配的公钥
 {% endapi-method-response-example-description %}
 
 ```
-{    "status": "fail",    "message": "error message"}
+{
+    "status": "fail",
+    "message": "error message"
+}
 ```
 {% endapi-method-response-example %}
 
@@ -115,7 +120,32 @@ GrowingIO 分配的公钥
 {% endapi-method-response-example-description %}
 
 ```
-[    {        "id": "id1", // 事件 uid        "key": "test1", // 事件标识符        "name": "测试1", // 事件名称        "description": "测试", // 事件描述        "type": "counter", // 事件类型, counter: 计数器, number: 数值        "attrs": [ // 事件级变量            {                "id": "id2", // 变量 uid                "key": "labore111", // 变量标识符                "name": "变量1", // 变量名称                "type": "String", // 变量类型, 目前有 String, Int, Double 类型                "projectId": "id3", // 项目 uid                "createdAt": 1534820494000, // 变量创建时间，unix 毫秒时间戳                "updatedAt": 1534820494000 // 变量最后一次更新时间, unix 毫秒时间戳            }        ],        "projectId": "id3", // 项目 uid        "createdAt": 1534426936000, // 事件创建时间, unix 毫秒时间戳        "updatedAt": 1535425076000, // 事件最后一次更新时间, unix 毫秒时间戳        "creator": "User1", // 创建人        "updater": "User1", // 最后一次更新人        "eventType": "dash" // 事件类型, 目前仅有 dash，表示为打点事件    }]
+[
+    {
+        "id": "id1", // 事件 uid
+        "key": "test1", // 事件标识符
+        "name": "测试1", // 事件名称
+        "description": "测试", // 事件描述
+        "type": "counter", // 事件类型, counter: 计数器, number: 数值
+        "attrs": [ // 事件级变量
+            {
+                "id": "id2", // 变量 uid
+                "key": "labore111", // 变量标识符
+                "name": "变量1", // 变量名称
+                "type": "String", // 变量类型, 目前有 String, Int, Double 类型
+                "projectId": "id3", // 项目 uid
+                "createdAt": 1534820494000, // 变量创建时间，unix 毫秒时间戳
+                "updatedAt": 1534820494000 // 变量最后一次更新时间, unix 毫秒时间戳
+            }
+        ],
+        "projectId": "id3", // 项目 uid
+        "createdAt": 1534426936000, // 事件创建时间, unix 毫秒时间戳
+        "updatedAt": 1535425076000, // 事件最后一次更新时间, unix 毫秒时间戳
+        "creator": "User1", // 创建人
+        "updater": "User1", // 最后一次更新人
+        "eventType": "dash" // 事件类型, 目前仅有 dash，表示为打点事件
+    }
+]
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -229,7 +259,17 @@ GrowingIO 分配的公钥
 {% endapi-method-response-example-description %}
 
 ```
-[    {        "id": "id1", // 打点维度 uid        "key": "test1", // 打点维度标识符        "name": "测试", // 打点维度名称        "type": "String", // 打点维度类型，目前有 String, Int, Double 三种类型        "projectId": "pid1", // 项目 uid        "createdAt": 1534820494000, // 打点维度创建时间， unix 毫秒时间戳        "updatedAt": 1534820494000 // 打点维度最后更新时间， unix 毫秒时间戳    }]
+[
+    {
+        "id": "id1", // 打点维度 uid
+        "key": "test1", // 打点维度标识符
+        "name": "测试", // 打点维度名称
+        "type": "String", // 打点维度类型，目前有 String, Int, Double 三种类型
+        "projectId": "pid1", // 项目 uid
+        "createdAt": 1534820494000, // 打点维度创建时间， unix 毫秒时间戳
+        "updatedAt": 1534820494000 // 打点维度最后更新时间， unix 毫秒时间戳
+    }
+]
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -331,7 +371,18 @@ GrowingIO 分配的公钥
 {% endapi-method-response-example-description %}
 
 ```
-[  {        "id": "id1", // 变量 uid        "key": "test1", // 变量标识符        "name": "测试", // 变量名称        "mode": "DIRECT", // 变量创建方式，DIRECT: 通过接口或则打点管理创建， PAGE: 通过页面圈选创建        "projectId": "pid1", // 项目 uid        "createdAt": 1521446011241, // 创建时间， unix 毫秒时间戳        "updatedAt": 1534163546862, // 最后一次更新时间， unix 毫秒时间戳        "mappingId": 15 // 变量序号    }]
+[
+  {
+        "id": "id1", // 变量 uid
+        "key": "test1", // 变量标识符
+        "name": "测试", // 变量名称
+        "mode": "DIRECT", // 变量创建方式，DIRECT: 通过接口或则打点管理创建， PAGE: 通过页面圈选创建
+        "projectId": "pid1", // 项目 uid
+        "createdAt": 1521446011241, // 创建时间， unix 毫秒时间戳
+        "updatedAt": 1534163546862, // 最后一次更新时间， unix 毫秒时间戳
+        "mappingId": 15 // 变量序号
+    }
+]
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -429,7 +480,18 @@ GrowingIO 分配的公钥
 {% endapi-method-response-example-description %}
 
 ```
-[   {        "id": "id1", // 变量 uid        "key": "test1", // 变量标识符        "name": "测试", // 变量名称        "description": "测试", // 变量描述        "projectId": "pid1", // 项目 uid        "createdAt": 1532416276546, // 变量创建时间， unix 毫秒时间戳        "updatedAt": 1532416276546, // 变量最后一次修改时间， unix 毫秒时间戳        "attribution": "mostRecent" // 变量类型，mostRecent: 最近归因，final: 最终归因    }]
+[
+   {
+        "id": "id1", // 变量 uid
+        "key": "test1", // 变量标识符
+        "name": "测试", // 变量名称
+        "description": "测试", // 变量描述
+        "projectId": "pid1", // 项目 uid
+        "createdAt": 1532416276546, // 变量创建时间， unix 毫秒时间戳
+        "updatedAt": 1532416276546, // 变量最后一次修改时间， unix 毫秒时间戳
+        "attribution": "mostRecent" // 变量类型，mostRecent: 最近归因，final: 最终归因
+    }
+]
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -531,7 +593,12 @@ GrowingIO 分配的公钥
 {% endapi-method-response-example-description %}
 
 ```
-{    "event": 50000, // 打点事件限额    "var": 100, // 事件级变量限额    "pvar": 50, // 页面级变量限额    "ppl": 50000 // 登录用户变量限额}
+{
+    "event": 50000, // 打点事件限额
+    "var": 100, // 事件级变量限额
+    "pvar": 50, // 页面级变量限额
+    "ppl": 50000 // 登录用户变量限额
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

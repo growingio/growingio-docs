@@ -36,7 +36,13 @@ date分为两种格式：精确到天\(20160520\)或者精确到小时\(20160520
 Status Code: 200 OK
 
 ```text
-{  "status": "FINISHED",  "downlinks": [    "link1",    "link2"  ]}
+{
+  "status": "FINISHED",
+  "downlinks": [
+    "link1",
+    "link2"
+  ]
+}
 ```
 
 响应中的 status 字段，状态值有： 1. FINISHED 任务完成； 2. RUNNING 任务正在跑； 3. NOT\_EXISTS 任务不存在，可能是任务还没跑或者请求日期格式不对。
@@ -282,7 +288,9 @@ streamingContext.fileStream[KeyClass, ValueClass, InputFormatClass](dataDirector
 在依赖中添加：
 
 ```text
-groupId: com.databricksartifactId: spark-csv_2.10version: 1.4.0
+groupId: com.databricks
+artifactId: spark-csv_2.10
+version: 1.4.0
 ```
 
 具体数据操作参考spark-csv\([https://github.com/databricks/spark-csv](https://github.com/databricks/spark-csv)\)
@@ -302,13 +310,29 @@ create external table xxx
 新建maven project，在pom.xml中添加以下依赖
 
 ```text
-    <dependency>      <groupId>org.apache.commons</groupId>      <artifactId>commons-compress</artifactId>      <version>1.12</version>    </dependency>    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->    <dependency>      <groupId>org.apache.commons</groupId>      <artifactId>commons-csv</artifactId>      <version>1.4</version>    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-compress</artifactId>
+      <version>1.12</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-csv</artifactId>
+      <version>1.4</version>
+    </dependency>
 ```
 
 而后在读取数据的方法中：
 
 ```text
-    GzipCompressorInputStream stream = new GzipCompressorInputStream(new BufferedInputStream(new FileInputStream("data/test.gz")));    Reader reader = new InputStreamReader(stream);    Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(reader);    for (CSVRecord record : records) {        System.out.println(record);    }
+    GzipCompressorInputStream stream = new GzipCompressorInputStream(new BufferedInputStream(new FileInputStream("data/test.gz")));
+
+    Reader reader = new InputStreamReader(stream);
+    Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(reader);
+    for (CSVRecord record : records) {
+        System.out.println(record);
+    }
 ```
 
 上例中，数据读取依赖于commons-compress与commons-csv库，同样在python中有类似的数据处理库。

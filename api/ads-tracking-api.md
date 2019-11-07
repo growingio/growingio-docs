@@ -108,7 +108,28 @@ Response: Status Code: 200 OK
 Response 示例：
 
 ```text
-[    {        "displayName": "renrendai",        "name": "renrendai",        "activated": true,        "spn": "com.hecom.Guanghua",        "id": "Lj9yBRyD",        "createdAt": 1480635903152,        "urlSchema": "8137d31f4e7b819f",        "platform": "android"    },    {        "displayName": "gio",        "name": "Growingio 测试产品",        "activated": true,        "spn": "www.gioee.com",        "id": "GQPDxPNm",        "createdAt": 1522019721098,        "urlSchema": "8137d31f4e7b819f",        "platform": "ios"    }]
+[
+    {
+        "displayName": "renrendai",
+        "name": "renrendai",
+        "activated": true,
+        "spn": "com.hecom.Guanghua",
+        "id": "Lj9yBRyD",
+        "createdAt": 1480635903152,
+        "urlSchema": "8137d31f4e7b819f",
+        "platform": "android"
+    },
+    {
+        "displayName": "gio",
+        "name": "Growingio 测试产品",
+        "activated": true,
+        "spn": "www.gioee.com",
+        "id": "GQPDxPNm",
+        "createdAt": 1522019721098,
+        "urlSchema": "8137d31f4e7b819f",
+        "platform": "ios"
+    }
+]
 ```
 
 
@@ -128,7 +149,9 @@ Request:
 示例：
 
 ```text
-{  "name":"双十一推广"}
+{
+  "name":"双十一推广"
+}
 ```
 
 Response: Status Code: 200 OK
@@ -141,7 +164,10 @@ Response: Status Code: 200 OK
 示例：
 
 ```text
-{  "id": "gnPNkoWA",  "name":"双十一推广"}
+{
+  "id": "gnPNkoWA",
+  "name":"双十一推广"
+}
 ```
 
 GET `https://www.growingio.com/api/v1/projects/:project_id/meta/campaigns` 
@@ -156,7 +182,16 @@ Response: Status Code: 200 OK
 Response 示例：
 
 ```text
-[  {    "id": "gnPNkoWA",    "name": "双十一推广"  },  {    "id": "La9BwRne",    "name": "美丽星辰"  }]
+[
+  {
+    "id": "gnPNkoWA",
+    "name": "双十一推广"
+  },
+  {
+    "id": "La9BwRne",
+    "name": "美丽星辰"
+  }
+]
 ```
 
 
@@ -176,7 +211,9 @@ Request:
 示例：
 
 ```text
-{  "name":"二维码推广"}
+{
+  "name":"二维码推广"
+}
 ```
 
 GET `https://www.growingio.com/api/v1/projects/:project_id/meta/channels` 
@@ -191,7 +228,16 @@ Response: Status Code: 200 OK
 Response 示例：
 
 ```text
-[  {    "id": "gnPNkoWA",    "name": "二维码推广"  },  {    "id": "HnKoPtrq",    "name": "今日头条"  }]
+[
+  {
+    "id": "gnPNkoWA",
+    "name": "二维码推广"
+  },
+  {
+    "id": "HnKoPtrq",
+    "name": "今日头条"
+  }
+]
 ```
 
 
@@ -230,7 +276,13 @@ Request:
 示例：
 
 ```text
- {        "name": "normallinkstest2",        "productId": "LPdgKARN",        "channelId": "yYo10lPl",        "campaignId": "G39l3o20",        "redirectUrl": "http://www.growingio.com" }
+ {
+        "name": "normallinkstest2",
+        "productId": "LPdgKARN",
+        "channelId": "yYo10lPl",
+        "campaignId": "G39l3o20",
+        "redirectUrl": "http://www.growingio.com"
+ }
 ```
 
 Response: Status Code: 200 OK
@@ -261,7 +313,29 @@ Response: Status Code: 200 OK
 示例：
 
 ```text
-{    "id": "GPn0j0q9",    "linkId": "reJmomJ",    "name": "normallinkstest2",    "projectId": "4PYJMWoM",    "productId": "LPdgKARN",    "appId": "com.demo.app.androidsdkdemo_android",    "trackingUrl": "https://gio.ren/reJmomJ",    "redirectUrl": "http://www.growingio.com",    "impressionUrl": null,    "campaignId": "G39l3o20",    "campaignName": "智汇推验证_android",    "channelId": "yYo10lPl",    "channelName": "测试渠道",    "status": "activated",    "creatorId": "AwoVvo28",    "creatorName": "系统",    "updaterId": "AwoVvo28",    "updaterName": "系统",    "createdAt": 1566188740225,    "updatedAt": 1566188740225,    "params": null}
+{
+    "id": "GPn0j0q9",
+    "linkId": "reJmomJ",
+    "name": "normallinkstest2",
+    "projectId": "4PYJMWoM",
+    "productId": "LPdgKARN",
+    "appId": "com.demo.app.androidsdkdemo_android",
+    "trackingUrl": "https://gio.ren/reJmomJ",
+    "redirectUrl": "http://www.growingio.com",
+    "impressionUrl": null,
+    "campaignId": "G39l3o20",
+    "campaignName": "智汇推验证_android",
+    "channelId": "yYo10lPl",
+    "channelName": "测试渠道",
+    "status": "activated",
+    "creatorId": "AwoVvo28",
+    "creatorName": "系统",
+    "updaterId": "AwoVvo28",
+    "updaterName": "系统",
+    "createdAt": 1566188740225,
+    "updatedAt": 1566188740225,
+    "params": null
+}
 ```
 
 查询链接：
@@ -297,7 +371,31 @@ Response: Status Code: 200 OK
 示例：
 
 ```text
-[    {        "id": "La9BwRne",        "linkId": "r3A5LOd",        "name": "测试链接二",        "projectId": "4PYJMWoM",        "productId": "LPdgKARN",        "appId": "com.demo.app.androidsdkdemo_android",        "trackingUrl":"https://gio.ren/r3A5LOd",        "redirectUrl": null,        "impressionUrl": null,        "campaignId": "d4PYjoME",        "campaignName": "大夜宵活动",        "channelId": "GQPDxPNm",        "channelName": "多盟",        "status": "activated",        "creatorId": "nPNgQkoW",        "creatorName": "fowindhe111",        "updaterId": "nPNgQkoW",        "updaterName": "fowindhe111",        "createdAt": 1521642287367,        "updatedAt": 1521642287367,        "params": null    }]
+[
+    {
+        "id": "La9BwRne",
+        "linkId": "r3A5LOd",
+        "name": "测试链接二",
+        "projectId": "4PYJMWoM",
+        "productId": "LPdgKARN",
+        "appId": "com.demo.app.androidsdkdemo_android",
+        "trackingUrl":"https://gio.ren/r3A5LOd",
+        "redirectUrl": null,
+        "impressionUrl": null,
+        "campaignId": "d4PYjoME",
+        "campaignName": "大夜宵活动",
+        "channelId": "GQPDxPNm",
+        "channelName": "多盟",
+        "status": "activated",
+        "creatorId": "nPNgQkoW",
+        "creatorName": "fowindhe111",
+        "updaterId": "nPNgQkoW",
+        "updaterName": "fowindhe111",
+        "createdAt": 1521642287367,
+        "updatedAt": 1521642287367,
+        "params": null
+    }
+]
 ```
 
 
@@ -325,7 +423,15 @@ Request:
 示例：
 
 ```text
-{    "name": "tt3ts",    "productIdIos": "rREJ88PL",    "productIdAndroid": "LPdgKARN",    "redirectUrl": "http://www.download.com",    "campaignIdIos": "4AovZoza",    "campaignIdAndroid": "G39l3o20",    "channelId": "yYo10lPl"}
+{
+    "name": "tt3ts",
+    "productIdIos": "rREJ88PL",
+    "productIdAndroid": "LPdgKARN",
+    "redirectUrl": "http://www.download.com",
+    "campaignIdIos": "4AovZoza",
+    "campaignIdAndroid": "G39l3o20",
+    "channelId": "yYo10lPl"
+}
 ```
 
 Response: Status Code: 200 OK
@@ -359,7 +465,31 @@ Response: Status Code: 200 OK
 示例：
 
 ```text
-{    "id": "bR7mgxzo",    "linkId": "oBWXRgK",    "name": "tt3ts",    "projectId": "4PYJMWoM",    "productIdIos": "rREJ88PL",    "productNameIos": "RnTestiOS",    "productIdAndroid": "LPdgKARN",    "productNameAndroid": "Android SDK Demo",    "trackingUrl": "https://gio.ren/oBWXRgK",    "redirectUrl": "http://www.download.com",    "campaignIdIos": "4AovZoza",    "campaignNameIos": "今日头条ios",    "campaignIdAndroid": "G39l3o20",    "campaignNameAndroid": "智汇推验证_android",    "channelId": "yYo10lPl",    "channelName": "测试渠道",    "status": "activated",    "creatorId": "AwoVvo28",    "creatorName": "系统",    "updaterId": "AwoVvo28",    "updaterName": "系统",    "createdAt": 1566187356083,    "updatedAt": 1566187356083}
+{
+    "id": "bR7mgxzo",
+    "linkId": "oBWXRgK",
+    "name": "tt3ts",
+    "projectId": "4PYJMWoM",
+    "productIdIos": "rREJ88PL",
+    "productNameIos": "RnTestiOS",
+    "productIdAndroid": "LPdgKARN",
+    "productNameAndroid": "Android SDK Demo",
+    "trackingUrl": "https://gio.ren/oBWXRgK",
+    "redirectUrl": "http://www.download.com",
+    "campaignIdIos": "4AovZoza",
+    "campaignNameIos": "今日头条ios",
+    "campaignIdAndroid": "G39l3o20",
+    "campaignNameAndroid": "智汇推验证_android",
+    "channelId": "yYo10lPl",
+    "channelName": "测试渠道",
+    "status": "activated",
+    "creatorId": "AwoVvo28",
+    "creatorName": "系统",
+    "updaterId": "AwoVvo28",
+    "updaterName": "系统",
+    "createdAt": 1566187356083,
+    "updatedAt": 1566187356083
+}
 ```
 
 查询链接：
@@ -399,7 +529,33 @@ Response: Status Code: 200 OK
 示例：
 
 ```text
-[    {        "id": "nxog09md",        "linkId": "dGVr8e9",        "name": "qwe",        "projectId": "4PYJMWoM",        "productIdIos": "xRxVp0o5",        "productNameIos": "TestAPP",        "productIdAndroid": "j9yEwm9y",        "productNameAndroid": "123测试编辑编辑",        "trackingUrl": "https://gio.ren/dGVr8e9",        "redirectUrl": "http://123.com",        "campaignIdIos": "O4PKxoEb",        "campaignNameIos": "321上线",        "campaignIdAndroid": "xoga4DRm",        "campaignNameAndroid": "321上线验证1",        "channelId": "34RzeX9V",        "channelName": "123测试编辑编辑",        "status": "activated",        "creatorId": "nRbm8d93",        "creatorName": "xx,        "updaterId": "nRbm8d93",        "updaterName": "xx",        "createdAt": 1521642287367,        "updatedAt": 1521642287367    }]
+[
+    {
+        "id": "nxog09md",
+        "linkId": "dGVr8e9",
+        "name": "qwe",
+        "projectId": "4PYJMWoM",
+        "productIdIos": "xRxVp0o5",
+        "productNameIos": "TestAPP",
+        "productIdAndroid": "j9yEwm9y",
+        "productNameAndroid": "123测试编辑编辑",
+        "trackingUrl": "https://gio.ren/dGVr8e9",
+        "redirectUrl": "http://123.com",
+        "campaignIdIos": "O4PKxoEb",
+        "campaignNameIos": "321上线",
+        "campaignIdAndroid": "xoga4DRm",
+        "campaignNameAndroid": "321上线验证1",
+        "channelId": "34RzeX9V",
+        "channelName": "123测试编辑编辑",
+        "status": "activated",
+        "creatorId": "nRbm8d93",
+        "creatorName": "xx,
+        "updaterId": "nRbm8d93",
+        "updaterName": "xx",
+        "createdAt": 1521642287367,
+        "updatedAt": 1521642287367
+    }
+]
 ```
 
 #### **6.4.3** 吸引用户直接打开 App <a id="deeplink-api"></a>
@@ -428,7 +584,13 @@ Request:
 示例：
 
 ```text
-{        "name": "0523信息流推广",        "productIdIos": "rREJ88PL",        "channelId": "d4PY3M9M",        "campaignIdIos": "4RzMvWd9",        "downloadUrlIos": "http://www.growingio.com"}
+{
+        "name": "0523信息流推广",
+        "productIdIos": "rREJ88PL",
+        "channelId": "d4PY3M9M",
+        "campaignIdIos": "4RzMvWd9",
+        "downloadUrlIos": "http://www.growingio.com"
+}
 ```
 
 Response: Status Code: 200 OK
@@ -466,7 +628,36 @@ Response: Status Code: 200 OK
 示例：
 
 ```text
-{    "id": "LlPQka9p",    "linkId": "d0B4MKe",    "name": "0523信息流推广",    "projectId": "4PYJMWoM",    "productIdIos": "rREJ88PL",    "productNameIos": "RnTestiOS",    "productIdAndroid": null,    "productNameAndroid": null,    "trackingUrl": "https://gio.ren/d0B4MKe",    "downloadUrlIos": "http://www.growingio.com",    "downloadUrlAndroid": null,    "urlSchemaIos": "80310c35a53c9a45",    "urlSchemaAndroid": null,    "campaignIdIos": "4RzMvWd9",    "campaignNameIos": "测试活动_ch",    "campaignIdAndroid": null,    "campaignNameAndroid": null,    "iosParams": null,    "androidParams": null,    "channelId": "d4PY3M9M",    "channelName": "打点",    "status": "activated",    "creatorId": "AwoVvo28",    "creatorName": "系统",    "updaterId": "AwoVvo28",    "updaterName": "系统",    "createdAt": 1566186819563,    "updatedAt": 1566186819563}
+{
+    "id": "LlPQka9p",
+    "linkId": "d0B4MKe",
+    "name": "0523信息流推广",
+    "projectId": "4PYJMWoM",
+    "productIdIos": "rREJ88PL",
+    "productNameIos": "RnTestiOS",
+    "productIdAndroid": null,
+    "productNameAndroid": null,
+    "trackingUrl": "https://gio.ren/d0B4MKe",
+    "downloadUrlIos": "http://www.growingio.com",
+    "downloadUrlAndroid": null,
+    "urlSchemaIos": "80310c35a53c9a45",
+    "urlSchemaAndroid": null,
+    "campaignIdIos": "4RzMvWd9",
+    "campaignNameIos": "测试活动_ch",
+    "campaignIdAndroid": null,
+    "campaignNameAndroid": null,
+    "iosParams": null,
+    "androidParams": null,
+    "channelId": "d4PY3M9M",
+    "channelName": "打点",
+    "status": "activated",
+    "creatorId": "AwoVvo28",
+    "creatorName": "系统",
+    "updaterId": "AwoVvo28",
+    "updaterName": "系统",
+    "createdAt": 1566186819563,
+    "updatedAt": 1566186819563
+}
 ```
 
 查询链接：
@@ -509,7 +700,38 @@ Response: Status Code: 200 OK
 示例：
 
 ```text
-[    {        "id": "GQPDxPNm",        "linkId": "dGVr8e9",        "name": "321deeplink",        "projectId": "4PYJMWoM",        "productIdIos": "xRxVp0o5",        "productNameIos": "TestAPP",        "productIdAndroid": "LPdgKARN",        "productNameAndroid": "Android SDK Demo",        "trackingUrl": "https://gio.ren/dGVr8e9",        "downloadUrlIos": "http://baidu.com",        "downloadUrlAndroid": "http://growingio.com",        "urlSchemaIos": "c35abef955cd913a",        "urlSchemaAndroid": "8137d31f4e7b819f",        "campaignIdIos": "j9yB1nRy",        "campaignNameIos": "321上线",        "campaignIdAndroid": "xoga4DRm",        "campaignNameAndroid": "321上线验证1",        "iosParams": null,        "androidParams": null,        "channelId": "34RzeX9V",        "channelName": "123测试编辑编辑",        "status": "activated",        "creatorId": "nRbm8d93",        "creatorName": "xx",        "updaterId": "nRbm8d93",        "updaterName": "xx",        "createdAt": 1521642287367,        "updatedAt": 1521642287367    }]
+[
+    {
+        "id": "GQPDxPNm",
+        "linkId": "dGVr8e9",
+        "name": "321deeplink",
+        "projectId": "4PYJMWoM",
+        "productIdIos": "xRxVp0o5",
+        "productNameIos": "TestAPP",
+        "productIdAndroid": "LPdgKARN",
+        "productNameAndroid": "Android SDK Demo",
+        "trackingUrl": "https://gio.ren/dGVr8e9",
+        "downloadUrlIos": "http://baidu.com",
+        "downloadUrlAndroid": "http://growingio.com",
+        "urlSchemaIos": "c35abef955cd913a",
+        "urlSchemaAndroid": "8137d31f4e7b819f",
+        "campaignIdIos": "j9yB1nRy",
+        "campaignNameIos": "321上线",
+        "campaignIdAndroid": "xoga4DRm",
+        "campaignNameAndroid": "321上线验证1",
+        "iosParams": null,
+        "androidParams": null,
+        "channelId": "34RzeX9V",
+        "channelName": "123测试编辑编辑",
+        "status": "activated",
+        "creatorId": "nRbm8d93",
+        "creatorName": "xx",
+        "updaterId": "nRbm8d93",
+        "updaterName": "xx",
+        "createdAt": 1521642287367,
+        "updatedAt": 1521642287367
+    }
+]
 ```
 
 #### \*\*\*\* <a id="onelink"></a>
@@ -538,7 +760,16 @@ Request:
 示例：
 
 ```text
-{    "redirectUrl":"http://www.www.www",    "utmMedium":"对对对",    "utmTerm":"免费观看",    "utmContent":"内容",    "comments":"备注",    "name":"测试web8",    "campaignId":"xogjZQ2P",    "channelId":"vnomv9zJ"}
+{
+    "redirectUrl":"http://www.www.www",
+    "utmMedium":"对对对",
+    "utmTerm":"免费观看",
+    "utmContent":"内容",
+    "comments":"备注",
+    "name":"测试web8",
+    "campaignId":"xogjZQ2P",
+    "channelId":"vnomv9zJ"
+}
 ```
 
 Response: Status Code: 200 OK
@@ -571,7 +802,30 @@ Response: Status Code: 200 OK
 示例：
 
 ```text
-{    "id": "xogvY0Pm",    "linkId": "xogvY0Pm",    "name": "测试web8",    "projectId": "4PYJMWoM",    "trackingUrl": "https://gio.ren/w/xogvY0Pm",    "impTrackingUrl": null,    "redirectUrl": "http://www.www.www",    "campaignId": "xogjZQ2P",    "campaignName": "test0620",    "channelId": "vnomv9zJ",    "channelName": "百度联盟",    "utmMedium": "对对对",    "utmContent": "内容",    "utmTerm": "免费观看",    "comments": "备注",    "status": "activated",    "creatorId": "AwoVvo28",    "creatorName": "系统",    "updaterId": "AwoVvo28",    "updaterName": "系统",    "createdAt": 1569465492862,    "updatedAt": 1569465492862}
+{
+    "id": "xogvY0Pm",
+    "linkId": "xogvY0Pm",
+    "name": "测试web8",
+    "projectId": "4PYJMWoM",
+    "trackingUrl": "https://gio.ren/w/xogvY0Pm",
+    "impTrackingUrl": null,
+    "redirectUrl": "http://www.www.www",
+    "campaignId": "xogjZQ2P",
+    "campaignName": "test0620",
+    "channelId": "vnomv9zJ",
+    "channelName": "百度联盟",
+    "utmMedium": "对对对",
+    "utmContent": "内容",
+    "utmTerm": "免费观看",
+    "comments": "备注",
+    "status": "activated",
+    "creatorId": "AwoVvo28",
+    "creatorName": "系统",
+    "updaterId": "AwoVvo28",
+    "updaterName": "系统",
+    "createdAt": 1569465492862,
+    "updatedAt": 1569465492862
+}
 ```
 
 查询链接：
@@ -608,6 +862,31 @@ Response: Status Code: 200 OK
 示例：
 
 ```text
-[    {        "id": "xogvY0Pm",        "linkId": "xogvY0Pm",        "name": "测试web8",        "projectId": "4PYJMWoM",        "trackingUrl": "https://gio.ren/w/xogvY0Pm",        "impTrackingUrl": null,        "redirectUrl": "http://www.www.www",        "campaignId": "xogjZQ2P",        "campaignName": "test0620",        "channelId": "vnomv9zJ",        "channelName": "百度联盟",        "utmMedium": "对对对",        "utmContent": "内容",        "utmTerm": "免费观看",        "comments": "备注",        "status": "activated",        "creatorId": "AwoVvo28",        "creatorName": "系统",        "updaterId": "AwoVvo28",        "updaterName": "系统",        "createdAt": 1569465492862,        "updatedAt": 1569465492913    }]
+[
+    {
+        "id": "xogvY0Pm",
+        "linkId": "xogvY0Pm",
+        "name": "测试web8",
+        "projectId": "4PYJMWoM",
+        "trackingUrl": "https://gio.ren/w/xogvY0Pm",
+        "impTrackingUrl": null,
+        "redirectUrl": "http://www.www.www",
+        "campaignId": "xogjZQ2P",
+        "campaignName": "test0620",
+        "channelId": "vnomv9zJ",
+        "channelName": "百度联盟",
+        "utmMedium": "对对对",
+        "utmContent": "内容",
+        "utmTerm": "免费观看",
+        "comments": "备注",
+        "status": "activated",
+        "creatorId": "AwoVvo28",
+        "creatorName": "系统",
+        "updaterId": "AwoVvo28",
+        "updaterName": "系统",
+        "createdAt": 1569465492862,
+        "updatedAt": 1569465492913
+    }
+]
 ```
 

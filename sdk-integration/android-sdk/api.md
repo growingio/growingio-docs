@@ -66,7 +66,22 @@ Android 2.7.8 SDK 为海外上架应用涉及采集用户 `androidId`, `imei`, `
 </table>**示例代码**
 
 ```groovy
-android {    ···}// 须位于 android 代码块下growingio {    defaultConfig {        imeiEnable true        androidIdEnable true        googleAdIdEnable true    }    buildTypes {        googlePlay {            imeiEnable false            andoridIdEnable false            googleAdIdEnable true        }    }}
+android { · · · }
+// 须位于 android 代码块下
+growingio {
+    defaultConfig { 
+        imeiEnable true 
+        androidIdEnable true 
+        googleAdIdEnable true 
+    }
+    buildTypes {
+        googlePlay { 
+            imeiEnable false a
+            ndoridIdEnable false 
+            googleAdIdEnable true 
+        }
+    }
+}
 ```
 
 ## 初始化配置项 API

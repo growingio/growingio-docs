@@ -15,7 +15,27 @@ curl --compressed https://assets.giocdn.com/sdk/gio-quickapp.js -o gio-quickapp.
 2、在根目录 app.ux文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-quickapp").default;gio('init', '你的 GrowingIO 项目ID', '你的快应用ID(包名)', { version: '小程序版本' });// 添加trackApp 和 trackPage 代码，如下：// app.ux 中改写如下：export default {  ...})// 改为：export default trackApp({  ...})// 所有的Page页面的index.ux改写如下：export default {  ...})// 改为：export default trackPage({  ...})
+var gio = require("utils/gio-quickapp").default;
+gio('init', '你的 GrowingIO 项目ID', '你的快应用ID(包名)', { version: '小程序版本' });
+
+// 添加trackApp 和 trackPage 代码，如下：
+// app.ux 中改写如下：
+export default {
+  ...
+})
+// 改为：
+export default trackApp({
+  ...
+})
+
+// 所有的Page页面的index.ux改写如下：
+export default {
+  ...
+})
+// 改为：
+export default trackPage({
+  ...
+})
 ```
 
 建议每次发布小程序新版本的时候，更新一下版本号 version，可以在 GrowingIO 分析不同版本的数据。除了 version 之外，还有以下额外参数可以使用。  
@@ -32,7 +52,15 @@ var gio = require("utils/gio-quickapp").default;gio('init', '你的 GrowingIO �
 在您项目中的 manifest.json 文件中的 features 属性中添加权限声明代码。
 
 ```javascript
-"features": [  {"name": "system.app"},  {"name": "system.storage"},  {"name": "system.device"},  {"name": "system.network"},  {"name": "service.router"},  {"name": "system.fetch"}  {"name": "system.geolocation"}];
+"features": [
+  {"name": "system.app"},
+  {"name": "system.storage"},
+  {"name": "system.device"},
+  {"name": "system.network"},
+  {"name": "service.router"},
+  {"name": "system.fetch"}
+  {"name": "system.geolocation"}
+];
 ```
 
 ### 3 SDK 快应用 用户属性设置
@@ -42,7 +70,13 @@ var gio = require("utils/gio-quickapp").default;gio('init', '你的 GrowingIO �
 当用户在你的应用上登陆获取到 用户唯一id 后，可以用过 identify 接口绑定快应用用户ID，后续在 GrowingIO 中获取更准确的快应用访问用户量。示例代码如下：
 
 ```javascript
-device.getUserId({  success: function(res) {    var userId = res.data.userId;    // ...    gio('identify', userId);  }})
+device.getUserId({
+  success: function(res) {
+    var userId = res.data.userId;
+    // ...
+    gio('identify', userId);
+  }
+})
 ```
 
 #### 
@@ -97,7 +131,13 @@ gio('track', eventName: string, properties: object)
 示例：
 
 ```javascript
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 在 Page 的 clickBanner 函数里添加以下代码gio('track', 'clickBanner', {     id: movie.id,     title: movie.title,     index: e.currentTarget.dataset.index });
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面
+// 在 Page 的 clickBanner 函数里添加以下代码
+gio('track', 'clickBanner', { 
+    id: movie.id, 
+    title: movie.title, 
+    index: e.currentTarget.dataset.index 
+});
 ```
 
 ### 访问用户变量
@@ -119,7 +159,11 @@ gio('setVisitor', properties: object)
 示例：
 
 ```javascript
-// 比如在针对不同的用户做某个 Campaign 的 A/B 测试gio('setVisitor', {   campaign_id: 3,   campaign_group: 'A 组用户'});
+// 比如在针对不同的用户做某个 Campaign 的 A/B 测试
+gio('setVisitor', { 
+  campaign_id: 3, 
+  campaign_group: 'A 组用户'
+});
 ```
 
 ### 注册用户变量
@@ -141,7 +185,12 @@ gio('setUser', properties: object)
 示例：
 
 ```javascript
-gio('setUser', {   age: 30,   level: '高级用户',   company: 'GrowingIO',   title: '工程师'});
+gio('setUser', { 
+  age: 30, 
+  level: '高级用户', 
+  company: 'GrowingIO', 
+  title: '工程师'
+});
 ```
 
 ### 页面级变量
@@ -163,7 +212,11 @@ gio('setPage', properties: object)
 示例：
 
 ```javascript
-// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 typegio('setPage', {     pageName: '电影列表页',     type: this.data.type});
+// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 type
+gio('setPage', { 
+    pageName: '电影列表页', 
+    type: this.data.type
+});
 ```
 
 ###  转化变量
@@ -185,7 +238,9 @@ gio('setEvar', properties: object)
 示例：
 
 ```javascript
-gio('setEvar', {  campaign: '活动A'});
+gio('setEvar', {
+  campaign: '活动A'
+});
 ```
 
 

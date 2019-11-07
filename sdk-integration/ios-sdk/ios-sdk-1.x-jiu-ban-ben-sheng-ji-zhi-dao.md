@@ -35,7 +35,9 @@
 * 1.x 版本方法格式：
 
 ```objectivec
-[Growing setCS1Value:@"100324" forKey:@"user_id"];[Growing setCS2Value:@"943123" forKey:@"company_id"];[Growing setCS3Value:@"张溪梦" forKey:@"user_name"];
+[Growing setCS1Value:@"100324" forKey:@"user_id"];
+[Growing setCS2Value:@"943123" forKey:@"company_id"];
+[Growing setCS3Value:@"张溪梦" forKey:@"user_name"];
 ```
 
 * 2.x 版本方法格式：
@@ -43,19 +45,27 @@
 #### 对于 CS1 字段，也就是登陆用户ID，请使用以下方法：
 
 ```objectivec
-// 设置登录用户ID API+ (void)setUserId:(NSString *)userId;// 清除登录用户ID API+ (void)clearUserId;
+// 设置登录用户ID API
++ (void)setUserId:(NSString *)userId;
+
+// 清除登录用户ID API
++ (void)clearUserId;
 ```
 
 #### 对于应用级变量，也就是 1.x 版本中的 CS2 - CS10，请使用以下方法：
 
 ```objectivec
-[Growing setAppVariable:@{@"key1":@"value1", @"key2":@2}];[Growing setAppVariableWithKey:@"key1" andStringValue:@"value1"];[Growing setAppVariableWithKey:@"key2" andNumberValue:@2];
+[Growing setAppVariable:@{@"key1":@"value1", @"key2":@2}];
+[Growing setAppVariableWithKey:@"key1" andStringValue:@"value1"];
+[Growing setAppVariableWithKey:@"key2" andNumberValue:@2];
 ```
 
 #### 对于用户变量，也就是 1.x 版本中的 CS11 - CS20，请使用以下方法：
 
 ```objectivec
-+ (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;+ (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;+ (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable; // 多个变量，可组合为一个对象传入
++ (void)setPeopleVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue;
++ (void)setPeopleVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue;
++ (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable; // 多个变量，可组合为一个对象传入
 ```
 
 #### **2.2 GrowingIO 后台配置**
@@ -73,13 +83,20 @@
 * 1.x 版本方法格式：
 
 ```objectivec
-@property (nonatomic, copy) NSString* growingAttributesPageGroup;@property (nonatomic, copy) NSString* growingAttributesPS1;@property (nonatomic, copy) NSString* growingAttributesPS2;@property (nonatomic, copy) NSString* growingAttributesPS3;
+@property (nonatomic, copy) NSString* growingAttributesPageGroup;
+@property (nonatomic, copy) NSString* growingAttributesPS1;
+@property (nonatomic, copy) NSString* growingAttributesPS2;
+@property (nonatomic, copy) NSString* growingAttributesPS3;
 ```
 
 * 2.x 版本方法格式：
 
 ```objectivec
-+ (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;+ (void)setPageVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue toViewController:(UIViewController *)viewController;+ (void)setPageVariable:(NSDictionary<NSString *, NSObject *> *)variable toViewController:(UIViewController *)viewController;
++ (void)setPageVariableWithKey:(NSString *)key andStringValue:(NSString *)stringValue toViewController:(UIViewController *)viewController;
+
++ (void)setPageVariableWithKey:(NSString *)key andNumberValue:(NSNumber *)numberValue toViewController:(UIViewController *)viewController;
+
++ (void)setPageVariable:(NSDictionary<NSString *, NSObject *> *)variable toViewController:(UIViewController *)viewController;
 ```
 
 #### 3**.2 GrowingIO 后台配置**
@@ -97,13 +114,18 @@
 * 1.x 版本方法格式：
 
 ```objectivec
-@interface Growing: NSObject+ (void)track: (NSString *) event properties: (nullable NSDictionary *) properties;@end
+@interface Growing: NSObject
++ (void)track: (NSString *) event properties: (nullable NSDictionary *) properties;
+@end
 ```
 
 * 2.x 版本方法格式：
 
 ```objectivec
-+ (void)track:(NSString *)eventId;+ (void)track:(NSString *)eventId withNumber:(NSNumber *)number;+ (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;+ (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;
++ (void)track:(NSString *)eventId;
++ (void)track:(NSString *)eventId withNumber:(NSNumber *)number;
++ (void)track:(NSString *)eventId withNumber:(NSNumber *)number andVariable:(NSDictionary<NSString *, NSObject *> *)variable;
++ (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable;
 ```
 
 #### **4.2 GrowingIO 后台配置**
@@ -119,7 +141,16 @@
 在下面方法中添加 `[Growing setEnableLog:YES]`开启调试日志。
 
 ```objectivec
-#import "Growing.h"- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {      ...      // 启动GrowingIO      [Growing startWithAccountId:@"xxxxxxxxxxxxxxxx"]; //替换为您的ID      // 其他配置      // 开启Growing调试日志，可在log中校验事件数据      [Growing setEnableLog:YES];  }
+#import "Growing.h"
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+      ...
+      // 启动GrowingIO
+      [Growing startWithAccountId:@"xxxxxxxxxxxxxxxx"]; //替换为您的ID
+      // 其他配置
+      // 开启Growing调试日志，可在log中校验事件数据
+      [Growing setEnableLog:YES];
+  }
 ```
 
 开启 debug 模式后，您需要在app上触发打点事件，在 log 里搜索上述关键字就能找到对应自定义事件和变量上传的数据。
