@@ -55,7 +55,7 @@ GrowingIO提供了强大而全面的管理功能，您可以根据您的具体�
 
 #### 1.在您的 Xcode 中勾选如下功能
 
-![](../.gitbook/assets/image%20%28230%29.png)
+![](../.gitbook/assets/image%20%28232%29.png)
 
 #### 2.添加GIO域名到 Xcode
 
@@ -71,7 +71,7 @@ applinks:gio.ren
 
 #### 3.在苹果开发者网站中找到 Team ID 与 Bundle ID
 
-![](../.gitbook/assets/image%20%28164%29.png)
+![](../.gitbook/assets/image%20%28166%29.png)
 
 #### 4.将 Team ID / Bundle ID 到 GrowingIO 后台,并勾选“我已完成Xcode配置，开启Universal Link跳转”
 
@@ -85,7 +85,7 @@ GrowingIO 支持 Android 系统提供的原生方案 App Links 实现 DeepLink �
 
 App Links 技术只支持 Android 6.0 以上的机型，但是不用担心，6.0 以下机型将会通过 URL Scheme 的方式实现 DeepLink 跳转。
 
-![](../.gitbook/assets/image%20%28184%29.png)
+![](../.gitbook/assets/image%20%28186%29.png)
 
 #### 1. 获取应用签名 SHA256 指纹证书
 
@@ -98,7 +98,7 @@ App Links 技术只支持 Android 6.0 以上的机型，但是不用担心，6.0
 
 3. 执行后你将看到类似下面这样的结果，请复制下来并填写进 GrowingIO 对应的应用配置中。
 
-![](../.gitbook/assets/image%20%28170%29.png)
+![](../.gitbook/assets/image%20%28172%29.png)
 
 #### 2. 在 Manifest.xml 中配置 Intent Filter 
 

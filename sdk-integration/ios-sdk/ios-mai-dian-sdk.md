@@ -51,7 +51,7 @@ description: >-
 
 添加编译参数，注意大小写:
 
-![](../../.gitbook/assets/image%20%28281%29.png)
+![](../../.gitbook/assets/image%20%28283%29.png)
 
 ### **2. 设置URL Scheme** <a id="2-she-zhi-url-scheme"></a>
 
@@ -67,7 +67,7 @@ description: >-
 
 • 现有产品：登录官网-&gt; 点击项目选择框-&gt; 点击“项目管理” -&gt; 点击“应用管理” -&gt; 找到对应产品的URL Scheme
 
-![](../../.gitbook/assets/image%20%28384%29.png)
+![](../../.gitbook/assets/image%20%28386%29.png)
 
 
 

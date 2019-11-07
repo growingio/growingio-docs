@@ -77,6 +77,7 @@
   * [Android SDK](sdk-integration/android-sdk/README.md)
     * [Android 无埋点 SDK](sdk-integration/android-sdk/android-sdk.md)
     * [Android 无埋点 SDK API](sdk-integration/android-sdk/api.md)
+    * [Android 半自动采集浏览事件](sdk-integration/android-sdk/android-imp.md)
     * [Android 埋点 SDK](sdk-integration/android-sdk/android-mai-dian-sdk.md)
     * [Android SDK 常见问题](sdk-integration/android-sdk/android-chang-jian-wen-ti.md)
   * [iOS SDK](sdk-integration/ios-sdk/README.md)
