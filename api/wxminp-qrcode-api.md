@@ -87,28 +87,7 @@ Response: Status Code: 200 OK
 Response 示例：
 
 ```text
-[
-    {
-        "displayName": "mina growth",
-        "name": "GIO测试 SDK",
-        "activated": true,
-        "spn": "wx51cba5e78d4ef4d8",
-        "id": "Lj9yBRyD",
-        "createdAt": 1480635903152,
-        "urlSchema": "8137d31f4e7b819f",
-        "platform": "minp"
-    },
-    {
-        "displayName": "gio",
-        "name": "Growingio 测试产品",
-        "activated": true,
-        "spn": "2018071560686136",
-        "id": "GQPDxPNm",
-        "createdAt": 1522019721098,
-        "urlSchema": "8137d31f4e7b819f",
-        "platform": "alip"
-    }
-]
+[    {        "displayName": "mina growth",        "name": "GIO测试 SDK",        "activated": true,        "spn": "wx51cba5e78d4ef4d8",        "id": "Lj9yBRyD",        "createdAt": 1480635903152,        "urlSchema": "8137d31f4e7b819f",        "platform": "minp"    },    {        "displayName": "gio",        "name": "Growingio 测试产品",        "activated": true,        "spn": "2018071560686136",        "id": "GQPDxPNm",        "createdAt": 1522019721098,        "urlSchema": "8137d31f4e7b819f",        "platform": "alip"    }]
 ```
 
 #### 4.2 推广活动相关 API <a id="markerting-api"></a>
@@ -127,10 +106,7 @@ Request:
 示例：
 
 ```text
-{
-  "productId":"rREJ88PL",
-  "name":"双十一推广"
-}
+{  "productId":"rREJ88PL",  "name":"双十一推广"}
 ```
 
 Response: Status Code: 200 OK
@@ -144,11 +120,7 @@ Response: Status Code: 200 OK
 示例：
 
 ```text
-{
-  "id": "gnPNkoWA",
-  "productId":"rREJ88PL",
-  "name":"双十一推广"
-}
+{  "id": "gnPNkoWA",  "productId":"rREJ88PL",  "name":"双十一推广"}
 ```
 
 GET `https://www.growingio.com/api/v1/projects/{项目编号}/meta/campaigns` 
@@ -164,18 +136,7 @@ Response: Status Code: 200 OK
 Response 示例：
 
 ```text
-[
-  {
-    "id": "gnPNkoWA",
-    "name": "大太阳活动",
-    "productId": "LPdgKARN"
-  },
-  {
-    "id": "La9BwRne",
-    "name": "美丽星辰",
-    "productId": "LPdgKARN"
-  }
-]
+[  {    "id": "gnPNkoWA",    "name": "大太阳活动",    "productId": "LPdgKARN"  },  {    "id": "La9BwRne",    "name": "美丽星辰",    "productId": "LPdgKARN"  }]
 ```
 
 ####  4.3 渠道管理 API <a id="channel-api"></a>
@@ -193,9 +154,7 @@ Request:
 示例：
 
 ```text
-{
-  "name":"线下地推"
-}
+{  "name":"线下地推"}
 ```
 
 GET `https://www.growingio.com/api/v1/projects/{项目编号}/meta/channels` 
@@ -210,16 +169,7 @@ Response: Status Code: 200 OK
 Response 示例：
 
 ```text
-[
-  {
-    "id": "gnPNkoWA",
-    "name": "二维码推广"
-  },
-  {
-    "id": "jinritoutiao",
-    "name": "今日头条"
-  }
-]
+[  {    "id": "gnPNkoWA",    "name": "二维码推广"  },  {    "id": "jinritoutiao",    "name": "今日头条"  }]
 ```
 
 ####  <a id="link-api"></a>
@@ -281,41 +231,13 @@ Body:
 调用 A 接口创建 小程序码 的请求参数示例
 
 ```text
-// 创建小程序广告监测链接，同时创建小程序码 (A码)
-// Request Payload
-{
-    "name": "minp-qrcode-test-001",
-    "productId": "3oL4DgoW",
-    "redirectUrl": "pages/list/list",
-    "channelId": "woVOxv92",
-    "campaignId": "39l1r3R2",
-    "utmMedium": "广告媒介",
-    "utmTerm": "免费试用",
-    "utmContent": "广告内容",
-    "comments": "这是注释",
-    "buildQrCode": true,
-    "codeType": "A"
-}
+// 创建小程序广告监测链接，同时创建小程序码 (A码)// Request Payload{    "name": "minp-qrcode-test-001",    "productId": "3oL4DgoW",    "redirectUrl": "pages/list/list",    "channelId": "woVOxv92",    "campaignId": "39l1r3R2",    "utmMedium": "广告媒介",    "utmTerm": "免费试用",    "utmContent": "广告内容",    "comments": "这是注释",    "buildQrCode": true,    "codeType": "A"}
 ```
 
 调用 C 接口创建 小程序码 的请求参数示例
 
 ```text
-// 创建小程序广告监测链接，同时创建小程序二维码 （C码）
-// Request Payload
-{
-    "name": "minp-qrcode-test-002",
-    "productId": "3oL4DgoW",
-    "redirectUrl": "pages/list/list",
-    "channelId": "woVOxv92",
-    "campaignId": "39l1r3R2",
-    "utmMedium": "广告媒介",
-    "utmTerm": "免费试用",
-    "utmContent": "广告内容",
-    "comments": "这是注释",
-    "buildQrCode": true,
-    "codeType": "C"
-}
+// 创建小程序广告监测链接，同时创建小程序二维码 （C码）// Request Payload{    "name": "minp-qrcode-test-002",    "productId": "3oL4DgoW",    "redirectUrl": "pages/list/list",    "channelId": "woVOxv92",    "campaignId": "39l1r3R2",    "utmMedium": "广告媒介",    "utmTerm": "免费试用",    "utmContent": "广告内容",    "comments": "这是注释",    "buildQrCode": true,    "codeType": "C"}
 ```
 
 ### 返回数据
@@ -348,63 +270,12 @@ Body:
 调用 A 接口创建 小程序码 的请求，返回参数示例
 
 ```text
-// Response
-{
-    "id": "a9a84ZoB",
-    "linkId": "a9a84ZoB",
-    "name": "minp-qrcode-test-001",
-    "projectId": "GR4mj3PM",
-    "spn": "wx51cba5e78d4ef4d8",
-    "trackingUrl": "pages/list/list?aid=a9a84ZoB",
-    "redirectUrl": "pages/list/list",
-    "campaignId": "39l1r3R2",
-    "campaignName": "上线前测试",
-    "channelId": "woVOxv92",
-    "channelName": "csdn",
-    "utmMedium": "广告媒介",
-    "utmContent": "广告内容",
-    "utmTerm": "免费试用",
-    "comments": "这是注释",
-    "qrCode": "https://gta.growingio.com/buckets/uploads/files/81624/wxcode/A/1557038991079/wxcode.jpg?sign=QNV9UcW0i%2BLVbDj%2F59KXV5l0kVQtGN%2BwxRDDOLyQQWc%3D&expires=1557039291693",
-    "status": "activated",
-    "creatorId": "6LPdeoNl",
-    "creatorName": "Dingding",
-    "updaterId": "6LPdeoNl",
-    "updaterName": "Dingding",
-    "createdAt": 1557038990657,
-    "updatedAt": 1557038990657
-}
-
+// Response{    "id": "a9a84ZoB",    "linkId": "a9a84ZoB",    "name": "minp-qrcode-test-001",    "projectId": "GR4mj3PM",    "spn": "wx51cba5e78d4ef4d8",    "trackingUrl": "pages/list/list?aid=a9a84ZoB",    "redirectUrl": "pages/list/list",    "campaignId": "39l1r3R2",    "campaignName": "上线前测试",    "channelId": "woVOxv92",    "channelName": "csdn",    "utmMedium": "广告媒介",    "utmContent": "广告内容",    "utmTerm": "免费试用",    "comments": "这是注释",    "qrCode": "https://gta.growingio.com/buckets/uploads/files/81624/wxcode/A/1557038991079/wxcode.jpg?sign=QNV9UcW0i%2BLVbDj%2F59KXV5l0kVQtGN%2BwxRDDOLyQQWc%3D&expires=1557039291693",    "status": "activated",    "creatorId": "6LPdeoNl",    "creatorName": "Dingding",    "updaterId": "6LPdeoNl",    "updaterName": "Dingding",    "createdAt": 1557038990657,    "updatedAt": 1557038990657}
 ```
 
 调用 C 接口创建 小程序码 的请求，返回参数示例
 
 ```text
-//Response 
-{
-    "id": "nPNWAaoW",
-    "linkId": "nPNWAaoW",
-    "name": "minp-qrcode-test-002",
-    "projectId": "GR4mj3PM",
-    "spn": "wx51cba5e78d4ef4d8",
-    "trackingUrl": "pages/list/list?aid=nPNWAaoW",
-    "redirectUrl": "pages/list/list",
-    "campaignId": "39l1r3R2",
-    "campaignName": "上线前测试",
-    "channelId": "woVOxv92",
-    "channelName": "csdn",
-    "utmMedium": "广告媒介",
-    "utmContent": "广告内容",
-    "utmTerm": "免费试用",
-    "comments": "这是注释",
-    "qrCode": "https://gta.growingio.com/buckets/uploads/files/81624/wxcode/C/1557039139065/wxcode.jpg?sign=NIWNlKpis743%2BJ%2FJbB3ObrqTHXi0OCRlWyfGD8ng%2BIQ%3D&expires=1557039439512",
-    "status": "activated",
-    "creatorId": "6LPdeoNl",
-    "creatorName": "Dingding",
-    "updaterId": "6LPdeoNl",
-    "updaterName": "Dingding",
-    "createdAt": 1557039138779,
-    "updatedAt": 1557039138779
-}
+//Response {    "id": "nPNWAaoW",    "linkId": "nPNWAaoW",    "name": "minp-qrcode-test-002",    "projectId": "GR4mj3PM",    "spn": "wx51cba5e78d4ef4d8",    "trackingUrl": "pages/list/list?aid=nPNWAaoW",    "redirectUrl": "pages/list/list",    "campaignId": "39l1r3R2",    "campaignName": "上线前测试",    "channelId": "woVOxv92",    "channelName": "csdn",    "utmMedium": "广告媒介",    "utmContent": "广告内容",    "utmTerm": "免费试用",    "comments": "这是注释",    "qrCode": "https://gta.growingio.com/buckets/uploads/files/81624/wxcode/C/1557039139065/wxcode.jpg?sign=NIWNlKpis743%2BJ%2FJbB3ObrqTHXi0OCRlWyfGD8ng%2BIQ%3D&expires=1557039439512",    "status": "activated",    "creatorId": "6LPdeoNl",    "creatorName": "Dingding",    "updaterId": "6LPdeoNl",    "updaterName": "Dingding",    "createdAt": 1557039138779,    "updatedAt": 1557039138779}
 ```
 

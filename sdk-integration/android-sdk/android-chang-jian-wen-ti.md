@@ -19,20 +19,7 @@
 设置以下点击事件的控件会被采集点击事件，如果您自定义了点击事件，不在下方列举之内，将无法采集点击事件，影响数据分析。
 
 ```java
-onCheckedChanged(android/widget/CompoundButton)
-onCheckedChanged(android/widget/RadioGroup)
-onClick(android/content/DialogInterface)
-onClick(android/view/View)
-onItemClick(android/widget/AdapterView;android/view/View)
-onItemSelected(android/widget/AdapterView;android/view/View)
-onNewIntent(android/content/Intent)
-onRatingChanged(android/widget/RatingBar)
-onStopTrackingTouch(android/widget/SeekBar)
-onFocusChange(android/view/View)
-onMenuItemClick(android/view/MenuItem)
-onOptionsItemSelected(android/view/MenuItem)
-onGroupClick(android/widget/ExpandableListView;android/view/View)
-onChildClick(android/widget/ExpandableListView;android/view/View)
+onCheckedChanged(android/widget/CompoundButton)onCheckedChanged(android/widget/RadioGroup)onClick(android/content/DialogInterface)onClick(android/view/View)onItemClick(android/widget/AdapterView;android/view/View)onItemSelected(android/widget/AdapterView;android/view/View)onNewIntent(android/content/Intent)onRatingChanged(android/widget/RatingBar)onStopTrackingTouch(android/widget/SeekBar)onFocusChange(android/view/View)onMenuItemClick(android/view/MenuItem)onOptionsItemSelected(android/view/MenuItem)onGroupClick(android/widget/ExpandableListView;android/view/View)onChildClick(android/widget/ExpandableListView;android/view/View)
 ```
 
 如果您自定义了 Click 事件， 但是希望 SDK 采集。 可以放置一个 `onClickListener` 作为代理。这种方案即使随着我们的 SDK 升级也会被兼容。
@@ -41,35 +28,18 @@ onChildClick(android/widget/ExpandableListView;android/view/View)
 请注意设置您的 View 可点击： 
 
 ```java
-//设置view Clickable, 如果不设置会不能圈选这个 View。
-view.setClickable(true);
+//设置view Clickable, 如果不设置会不能圈选这个 View。view.setClickable(true);
 ```
 {% endhint %}
 
 ```java
-public void onCustomClick(View view){
-	// 您的业务
-	...	
-	// 为了 GrowingIO 能够采集自定义点击事件，调用 android.view.OnClickListener
-    new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {}
-    }.onClick(view);
-}
+public void onCustomClick(View view){	// 您的业务	...		// 为了 GrowingIO 能够采集自定义点击事件，调用 android.view.OnClickListener    new View.OnClickListener() {        @Override        public void onClick(View view) {}    }.onClick(view);}
 ```
 
 例： `TabHost` 的点击事件采集增加 onClickListener 后可以采集到点击事件
 
 ```java
-TabHost.OnTabChangeListener listener = new TabHost.OnTabChangeListener() {
-    public void onTabChanged(String tabId) {
-        // GrowingIO 点击事件采集适配 TabHost 添加代码
-        new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {}
-        }.onClick(mTabHost.getCurrentTabView());
-    }
-}
+TabHost.OnTabChangeListener listener = new TabHost.OnTabChangeListener() {    public void onTabChanged(String tabId) {        // GrowingIO 点击事件采集适配 TabHost 添加代码        new View.OnClickListener() {            @Override            public void onClick(View view) {}        }.onClick(mTabHost.getCurrentTabView());    }}
 ```
 
 最后，如果您是在布局文件中在`view`上使用 `onClick` 属性的点击事件，不会被采集，不支持。
@@ -106,31 +76,7 @@ TabHost.OnTabChangeListener listener = new TabHost.OnTabChangeListener() {
 在 Android 无埋点 SDK 集成步骤中，其中有一步需要在 manifest.xml 文件中配置 `intent-filter` 代码块，如果有多个 `URLScheme` 配置，请参照以下代码：
 
 ```markup
-<activity
-    android:name=".LauncherActivity"
-    android:launchMode="singleTop"
-    android:theme="@style/AppTheme">
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
-    <!-- GrowingIO URLScheme -->
-    <intent-filter>
-        <data android:scheme="growing.xxxxxxxxxxxxxxxx" />
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-    </intent-filter>
-    <!-- 测试多个 scheme 能够成功被唤醒 -->
-    <intent-filter>
-        <data
-            android:host="share"
-            android:scheme="will" />
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-    </intent-filter>
-</activity>
+<activity    android:name=".LauncherActivity"    android:launchMode="singleTop"    android:theme="@style/AppTheme">    <intent-filter>        <action android:name="android.intent.action.MAIN" />        <category android:name="android.intent.category.LAUNCHER" />    </intent-filter>    <!-- GrowingIO URLScheme -->    <intent-filter>        <data android:scheme="growing.xxxxxxxxxxxxxxxx" />        <action android:name="android.intent.action.VIEW" />        <category android:name="android.intent.category.DEFAULT" />        <category android:name="android.intent.category.BROWSABLE" />    </intent-filter>    <!-- 测试多个 scheme 能够成功被唤醒 -->    <intent-filter>        <data            android:host="share"            android:scheme="will" />        <action android:name="android.intent.action.VIEW" />        <category android:name="android.intent.category.DEFAULT" />        <category android:name="android.intent.category.BROWSABLE" />    </intent-filter></activity>
 ```
 
 
@@ -163,21 +109,13 @@ GrowingIO Android SDK 的编译时耗时取决于您的项目大小，我们的�
 1.在 Project 项目中，gradle.properties 文件内添加
 
 ```text
-# true GrowingIO 参与编译，false 不参与编译
-gioenable = true
+# true GrowingIO 参与编译，false 不参与编译gioenable = true
 ```
 
 2.在 Module 级别的 build.gradle 文件中增加配置 
 
 ```groovy
-android {
-    defaultConfig {
-        resValue("string", "growingio_project_id", "您的项目ID")
-        resValue("string", "growingio_url_scheme", "您的URL Scheme")
-        // 增加 gioenable 的配置
-        resValue("string", "growingio_enable", project.gioenable)
-    }
-}
+android {    defaultConfig {        resValue("string", "growingio_project_id", "您的项目ID")        resValue("string", "growingio_url_scheme", "您的URL Scheme")        // 增加 gioenable 的配置        resValue("string", "growingio_enable", project.gioenable)    }}
 ```
 
 {% hint style="danger" %}
@@ -213,11 +151,7 @@ SDK 2.7.4 以下版本不支持 Instant Run , 请开发者开发期间配置 `gi
 请您在代码逻辑中判断如果是以 `growing` 开头的 `scheme` 不处理它，代码示例：
 
 ```java
-// 请注意自己判断 intent 是否为空
-Uri data = intent.getData();
-if (data.getScheme().startsWith("growing.")){    
-    Log.d(TAG, "GrowingIO url scheme, not process");
-}
+// 请注意自己判断 intent 是否为空Uri data = intent.getData();if (data.getScheme().startsWith("growing.")){        Log.d(TAG, "GrowingIO url scheme, not process");}
 ```
 
 
@@ -287,13 +221,7 @@ Android 无埋点 SDK 支持 `com.android.tools.build:gradle` **2.3.3** 及其�
 示例代码：
 
 ```groovy
-dependencies {
-    //使用 gradle 3.2.1 以下并且 SDK 2.8.4 版本会触发此问题
-    classpath 'com.android.tools.build:gradle:3.1.4'
-    classpath 'com.growingio.android:vds-gradle-plugin:autotrack-2.8.4'
-    //添加以下依赖能够解决，或者升级 gradle
-    classpath "org.apache.httpcomponents:httpclient:4.5.10"
-}
+dependencies {    //使用 gradle 3.2.1 以下并且 SDK 2.8.4 版本会触发此问题    classpath 'com.android.tools.build:gradle:3.1.4'    classpath 'com.growingio.android:vds-gradle-plugin:autotrack-2.8.4'    //添加以下依赖能够解决，或者升级 gradle    classpath "org.apache.httpcomponents:httpclient:4.5.10"}
 ```
 
  
@@ -303,22 +231,7 @@ dependencies {
 依据[官网说明](https://developer.android.com/studio/write/java8-support#migrate)，SDK不支持 Jack 编译器，请确认移除 jackOptions 代码块。
 
 ```groovy
-android {
-    ...
-    defaultConfig {
-        ...
-        // Remove this block. 删掉这里！！！
-        jackOptions {
-            enabled true
-            ...
-        }
-    }
-    // Keep the following configuration in order to target Java 8.
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-}
+android {    ...    defaultConfig {        ...        // Remove this block. 删掉这里！！！        jackOptions {            enabled true            ...        }    }    // Keep the following configuration in order to target Java 8.    compileOptions {        sourceCompatibility JavaVersion.VERSION_1_8        targetCompatibility JavaVersion.VERSION_1_8    }}
 ```
 
 如果您未移除，集成 SDK 后 App 将 Crash 。

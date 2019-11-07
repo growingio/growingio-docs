@@ -107,52 +107,7 @@ App Links 技术只支持 Android 6.0 以上的机型，但是不用担心，6.0
 3. 复制完成后，您的 manifest.xml 文件将类似这样：
 
 ```markup
-...
-<activity
-    android:name=".LauncherActivity"
-    android:launchMode="singleTop"
-    android:theme="@style/AppTheme">
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
-    <!-- GIO DeepLink -->
-    <intent-filter>
-        <data android:scheme="growing.856a6ce98c31281d" />
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-    </intent-filter>
-    <!-- GIO App Links -->
-    <intent-filter android:autoVerify="true">
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-        <data
-            android:host="gio.ren"
-            android:pathPattern="/v8aud.*"
-            android:scheme="https" />
-    </intent-filter>
-    <intent-filter android:autoVerify="true">
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-        <data
-            android:host="gio.ren"
-            android:pathPattern="/v8a.*id.*"
-            android:scheme="https" />
-    </intent-filter>
-    <intent-filter android:autoVerify="true">
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-        <data
-            android:host="gio.ren"
-            android:pathPattern="/v8a.*td.*"
-            android:scheme="https" />
-    </intent-filter>
-</activity>
-...
+...<activity    android:name=".LauncherActivity"    android:launchMode="singleTop"    android:theme="@style/AppTheme">    <intent-filter>        <action android:name="android.intent.action.MAIN" />        <category android:name="android.intent.category.LAUNCHER" />    </intent-filter>    <!-- GIO DeepLink -->    <intent-filter>        <data android:scheme="growing.856a6ce98c31281d" />        <action android:name="android.intent.action.VIEW" />        <category android:name="android.intent.category.DEFAULT" />        <category android:name="android.intent.category.BROWSABLE" />    </intent-filter>    <!-- GIO App Links -->    <intent-filter android:autoVerify="true">        <action android:name="android.intent.action.VIEW" />        <category android:name="android.intent.category.DEFAULT" />        <category android:name="android.intent.category.BROWSABLE" />        <data            android:host="gio.ren"            android:pathPattern="/v8aud.*"            android:scheme="https" />    </intent-filter>    <intent-filter android:autoVerify="true">        <action android:name="android.intent.action.VIEW" />        <category android:name="android.intent.category.DEFAULT" />        <category android:name="android.intent.category.BROWSABLE" />        <data            android:host="gio.ren"            android:pathPattern="/v8a.*id.*"            android:scheme="https" />    </intent-filter>    <intent-filter android:autoVerify="true">        <action android:name="android.intent.action.VIEW" />        <category android:name="android.intent.category.DEFAULT" />        <category android:name="android.intent.category.BROWSABLE" />        <data            android:host="gio.ren"            android:pathPattern="/v8a.*td.*"            android:scheme="https" />    </intent-filter></activity>...
 ```
 
 {% hint style="danger" %}
@@ -172,9 +127,7 @@ App Links 技术只支持 Android 6.0 以上的机型，但是不用担心，6.0
 3. 上述命令执行后的结果中，查找您应用的包名，只有 Status 为 always 才通过了系统校验。示例如下：
 
 ```text
-  Package: com.growingio.android.test
-  Domains: gio.ren
-  Status:  always
+  Package: com.growingio.android.test  Domains: gio.ren  Status:  always
 ```
 
 {% hint style="info" %}

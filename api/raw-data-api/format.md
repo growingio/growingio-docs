@@ -31,38 +31,13 @@ groupId: com.databricksartifactId: spark-csv_2.10version: 1.4.0
 推荐使用 `org.apache.commons.csv` 来处理下载到本地的数据文件，如下面的例子：
 
 ```text
-import java.io.{BufferedReader, File, FileInputStream, InputStreamReader}
-import org.apache.commons.csv.{CSVFormat, CSVParser, QuoteMode}
-import scala.collection.JavaConverters._
-
-object Test extends App {
-  val file = new File("xxx")
-  val br = new BufferedReader(new InputStreamReader(new FileInputStream(file)))
-  val csvFileFormat = CSVFormat.DEFAULT.withEscape('\\').withQuote('"')
-  val csvParser = new CSVParser(br, csvFileFormat)
-  val records = csvParser.getRecords
-
-  for (record <- records.asScala) {
-    val sb = new StringBuilder()
-    val length = record.size()
-    (0 until length).foreach(i => {
-      sb.append(record.get(i))
-      sb.append(",")
-    })
-    println(sb.toString)
-  }
-}
+import java.io.{BufferedReader, File, FileInputStream, InputStreamReader}import org.apache.commons.csv.{CSVFormat, CSVParser, QuoteMode}import scala.collection.JavaConverters._object Test extends App {  val file = new File("xxx")  val br = new BufferedReader(new InputStreamReader(new FileInputStream(file)))  val csvFileFormat = CSVFormat.DEFAULT.withEscape('\\').withQuote('"')  val csvParser = new CSVParser(br, csvFileFormat)  val records = csvParser.getRecords  for (record <- records.asScala) {    val sb = new StringBuilder()    val length = record.size()    (0 until length).foreach(i => {      sb.append(record.get(i))      sb.append(",")    })    println(sb.toString)  }}
 ```
 
 ### Python处理建议及示例
 
 ```text
-import csv
-
-with open(FILE_NAME, "rb") as f:
-    reader = csv.reader(f, quotechar='"', escapechar='\\')
-    for line in reader:
-        print(line)
+import csvwith open(FILE_NAME, "rb") as f:    reader = csv.reader(f, quotechar='"', escapechar='\\')    for line in reader:        print(line)
 ```
 
 ## 导入到数据仓库示例
@@ -73,24 +48,7 @@ with open(FILE_NAME, "rb") as f:
 2. 使用hadoop fs -put /xx.csv /tmp/test\_export/ 将csv放到外部表目录下。
 
 ```text
-CREATE EXTERNAL TABLE TEST_EXPORT
-(
-sessionId STRING,
-time BIGINT,
-sendTime BIGINT,
-pageTime BIGINT,
-domain STRING,
-page STRING,
-queryParameters STRING,
-eventName STRING,
-eventNumber DOUBLE,
-eventVariable map<string, string>,
-loginUserId STRING
-)
-ROW FORMAT SERDE EATE EXTE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
-STORED AS TEXTFILE
-location '/tmp/test_export'
-tblproperties ("skip.header.line.count"="1", "quote.delim"="\"", "escape.delim"="\\")
+CREATE EXTERNAL TABLE TEST_EXPORT(sessionId STRING,time BIGINT,sendTime BIGINT,pageTime BIGINT,domain STRING,page STRING,queryParameters STRING,eventName STRING,eventNumber DOUBLE,eventVariable map<string, string>,loginUserId STRING)ROW FORMAT SERDE EATE EXTE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'STORED AS TEXTFILElocation '/tmp/test_export'tblproperties ("skip.header.line.count"="1", "quote.delim"="\"", "escape.delim"="\\")
 ```
 
 ### 利用Spark导入到其他数据仓库
@@ -99,11 +57,7 @@ tblproperties ("skip.header.line.count"="1", "quote.delim"="\"", "escape.delim"=
 2. 使用databricks提供的函数Load到Hive数据库\(这里省去spark和hive的配置\)，如： df.select\("sessionId", "time", "sendTime", "pageTime", "domain", "page", "queryParameters", "eventName", "eventNumber", "eventVariable", "loginUserId"\).write.mode\("append"\).insertInto\("TEXT\_EXPORT"\)
 
 ```text
-val df = spark.read
-	.option("header","true")
-	.option("escape", "\\")
-	.option("quote", "\"")
-	.csv("filePath")
+val df = spark.read	.option("header","true")	.option("escape", "\\")	.option("quote", "\"")	.csv("filePath")
 ```
 
 ## **md5进行文件完整性校验**

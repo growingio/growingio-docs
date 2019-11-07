@@ -11,15 +11,13 @@ JS SDK 支持所有主流前端框架，包括但不限于React.js, Vue.js, Angu
 如果你的网站使用https协议，需向响应头添加配置
 
 ```javascript
-Content-Security-Policy: frame-ancestors 'self' https://www.growingio.com
-X-Frame-Options: Allow-From https://www.growingio.com
+Content-Security-Policy: frame-ancestors 'self' https://www.growingio.comX-Frame-Options: Allow-From https://www.growingio.com
 ```
 
 如果你的网站使用http协议，需向响应头添加配置
 
 ```javascript
-Content-Security-Policy: frame-ancestors 'self' http://www.growingio.com
-X-Frame-Options: Allow-From http://www.growingio.com
+Content-Security-Policy: frame-ancestors 'self' http://www.growingio.comX-Frame-Options: Allow-From http://www.growingio.com
 ```
 
 由于 Chrome 浏览器已经不再支持 X-Frame-Options 配置项，如果你只需在 Chrome 浏览器中进行圈选，建议通过浏览器检查后，只给 Chrome 请求的响应头添加配置

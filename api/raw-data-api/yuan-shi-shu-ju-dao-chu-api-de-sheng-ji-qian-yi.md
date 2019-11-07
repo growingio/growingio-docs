@@ -17,31 +17,13 @@
 原始数据导出 1.0 接口返回数据格式：
 
 ```text
-{
-  "status":"FINISHED",
-  "downlinks":[
-    "link1",
-    "link2"
-  ]
-}
+{  "status":"FINISHED",  "downlinks":[    "link1",    "link2"  ]}
 ```
 
 原始数据导出 2.0 接口返回数据格式：
 
 ```text
-{
-  "status”:"FINISHED",
-  "downloadLinks":[
-    "link1",
-    "link2"
-  ],
-  "exportType":"",
-  "dataType":"",
-  "exportDate":"",
-  "exportVersion":"",
-  "requestTime":"",
-  "errorMsg":""
-}
+{  "status”:"FINISHED",  "downloadLinks":[    "link1",    "link2"  ],  "exportType":"",  "dataType":"",  "exportDate":"",  "exportVersion":"",  "requestTime":"",  "errorMsg":""}
 ```
 
 #### 数据文件的获取方式和组织 <a id="&#x6570;&#x636E;&#x6587;&#x4EF6;&#x7684;&#x83B7;&#x53D6;&#x65B9;&#x5F0F;&#x548C;&#x7EC4;&#x7EC7;"></a>

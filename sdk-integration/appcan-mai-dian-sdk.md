@@ -33,42 +33,7 @@ Android AppCan 集成方式与官网默认的无埋点集成方式不一样， �
 把 URL Scheme 添加到您的项目，以便使用 [MobileDebugger](growingio-debugger/) 时唤醒您的程序。将该产品的URLScheme添加到你的`AndroidManifest.xml`中的`LAUNCHER` `Activity`下。例如：
 
 ```markup
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="org.zywx.wbpalmstar.widgetone.uexDemo"
-    android:versionCode="1"
-    android:versionName="3.0"
-    tools:overrideLibrary="org.zywx.wbpalmstar.widgetone.uex">    
-    <!-- GrowingIO 需要的权限 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <application
-        android:label="Plugin Demo">
-        <activity
-            android:name="org.zywx.wbpalmstar.engine.LoadingActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:launchMode="standard"
-            android:screenOrientation="portrait"
-            android:theme="@style/browser_loading_theme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <!--GrowingIO 请添加这里的整个 intent-filter 区块，并确保其中只有一个 data 字段-->
-            <intent-filter>
-                <data android:scheme="growing.您的URL Scheme" />
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-            </intent-filter>
-            <!--请添加这里的整个 intent-filter 区块，并确保其中只有一个 data 字段-->
-        </activity>
-        <activity android:name="com.test.HelloAppCanNativeActivity" />
-    </application>
-</manifest>
+<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:tools="http://schemas.android.com/tools"    package="org.zywx.wbpalmstar.widgetone.uexDemo"    android:versionCode="1"    android:versionName="3.0"    tools:overrideLibrary="org.zywx.wbpalmstar.widgetone.uex">        <!-- GrowingIO 需要的权限 -->    <uses-permission android:name="android.permission.INTERNET" />    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>    <application        android:label="Plugin Demo">        <activity            android:name="org.zywx.wbpalmstar.engine.LoadingActivity"            android:configChanges="keyboardHidden|orientation"            android:launchMode="standard"            android:screenOrientation="portrait"            android:theme="@style/browser_loading_theme">            <intent-filter>                <action android:name="android.intent.action.MAIN" />                <category android:name="android.intent.category.LAUNCHER" />            </intent-filter>            <!--GrowingIO 请添加这里的整个 intent-filter 区块，并确保其中只有一个 data 字段-->            <intent-filter>                <data android:scheme="growing.您的URL Scheme" />                <action android:name="android.intent.action.VIEW" />                <category android:name="android.intent.category.DEFAULT" />                <category android:name="android.intent.category.BROWSABLE" />            </intent-filter>            <!--请添加这里的整个 intent-filter 区块，并确保其中只有一个 data 字段-->        </activity>        <activity android:name="com.test.HelloAppCanNativeActivity" />    </application></manifest>
 ```
 
 ### 2. 初始化 SDK
@@ -76,17 +41,7 @@ Android AppCan 集成方式与官网默认的无埋点集成方式不一样， �
 在 `appcan.ready`的时候初始化 GrowingIO，如下：
 
 ```javascript
-appcan.ready(function() {
-    //appcan.initBounce();
-    initGio();
-})
-function initGio() {
-    var options = {
-        debug : true,
-        channel : 'xx应用市场'
-    };
-    uexGrowingIO.init("您的 ProjectId ", "您的 URL Scheme", options);
-}
+appcan.ready(function() {    //appcan.initBounce();    initGio();})function initGio() {    var options = {        debug : true,        channel : 'xx应用市场'    };    uexGrowingIO.init("您的 ProjectId ", "您的 URL Scheme", options);}
 ```
 
 
@@ -214,12 +169,7 @@ uexGrowingIO.track(eventId, number, eventLevelVariable)
 </table>**示例代码：**
 
 ```java
-// track API调用示例一
-uexGrowingIO.track("registerSuccess");
-// track API调用示例二
-uexGrowingIO.track("registerSuccess",{ 'item': '123' });
-// track API调用示例三
-uexGrowingIO.track("loanAmount", 80000, { "gender":"male","age":"21" });
+// track API调用示例一uexGrowingIO.track("registerSuccess");// track API调用示例二uexGrowingIO.track("registerSuccess",{ 'item': '123' });// track API调用示例三uexGrowingIO.track("loanAmount", 80000, { "gender":"male","age":"21" });
 ```
 
 **检验数据发送日志示例：** 
@@ -227,27 +177,7 @@ uexGrowingIO.track("loanAmount", 80000, { "gender":"male","age":"21" });
 注意 `t` 等于 `cstm` 字段，表示自定义事件发送成功，只需注意 `var`、`n` 、`num`字段，其它字段无需仔细验证**。**
 
 ```javascript
-//展示 track 接口调用示例三日志内容
-{
-    "s":"31e3aa14-5241-490c-821c-a741e9bf0f87",
-    // t 为事件类型， track 接口调用发送的事件类型为 cstm
-    "t":"cstm",
-    "tm":1532085495251,
-    "d":"com.growingio.android.test",
-    // n 为 eventId 参数携带的值
-    "n":"loanAmount",
-    // var 为 eventLevelVariable 参数携带的值
-    "var":{
-        "gender":"male",
-        "age":"21"
-    },
-    "ptm":0,
-    // num 为 number 参数携带的值
-    "num":80000,
-    "gesid":18,
-    "esid":0,
-    "u":"b6247b01-a31a-3bc6-a391-4c456888c1ee"
-}
+//展示 track 接口调用示例三日志内容{    "s":"31e3aa14-5241-490c-821c-a741e9bf0f87",    // t 为事件类型， track 接口调用发送的事件类型为 cstm    "t":"cstm",    "tm":1532085495251,    "d":"com.growingio.android.test",    // n 为 eventId 参数携带的值    "n":"loanAmount",    // var 为 eventLevelVariable 参数携带的值    "var":{        "gender":"male",        "age":"21"    },    "ptm":0,    // num 为 number 参数携带的值    "num":80000,    "gesid":18,    "esid":0,    "u":"b6247b01-a31a-3bc6-a391-4c456888c1ee"}
 ```
 
 {% hint style="info" %}
@@ -302,22 +232,7 @@ uexGrowingIO.setEvar({ "evarTest":111,"campaignId":"1234567890","campaignOwner":
 注意 `t` 等于`evar`字段，表示自定义事件发送成功，只需注意 `var` 字段，其它字段无需仔细验证**。**
 
 ```javascript
-{
-    "s":"e1c48845-dd60-4cf2-b1a5-a8e529d2188d",
-    // t 为事件类型， evar 为转化事件
-    "t":"evar",
-    "tm":1532338526083,
-    "d":"com.growingio.android.test",
-    "cs1":"GrowingIO",
-    // 转化变量
-    "var":{
-        "evarTest":111,
-        "campaignId":"1234567890",
-        "campaignOwner":"Li Si"
-    },
-    "gesid":300,
-    "esid":22
-}
+{    "s":"e1c48845-dd60-4cf2-b1a5-a8e529d2188d",    // t 为事件类型， evar 为转化事件    "t":"evar",    "tm":1532338526083,    "d":"com.growingio.android.test",    "cs1":"GrowingIO",    // 转化变量    "var":{        "evarTest":111,        "campaignId":"1234567890",        "campaignOwner":"Li Si"    },    "gesid":300,    "esid":22}
 ```
 
 {% hint style="info" %}
@@ -372,21 +287,7 @@ uexGrowingIO.setPeopleVariable({ 'name': '玎玎', 'email': 'dingding@growingio.
 注意 `t` 等于`ppl`字段，表示用户变量发送成功，只需注意 `var`字段，其它字段无需仔细验证。
 
 ```javascript
-{
-    "s":"a35872af-13df-4479-90bc-25558d12328e",
-    // t 为事件类型， pvar 为发送用户变量事件
-    "t":"ppl",
-    "tm":1532339208991,
-    "d":"com.growingio.android.test",
-    "cs1":"GrowingIO",
-    // 用户变量
-    "var":{
-        'name': '玎玎', 
-        'email': 'dingding@growingio.com'
-    },
-    "gesid":311,
-    "esid":0
-}
+{    "s":"a35872af-13df-4479-90bc-25558d12328e",    // t 为事件类型， pvar 为发送用户变量事件    "t":"ppl",    "tm":1532339208991,    "d":"com.growingio.android.test",    "cs1":"GrowingIO",    // 用户变量    "var":{        'name': '玎玎',         'email': 'dingding@growingio.com'    },    "gesid":311,    "esid":0}
 ```
 
 {% hint style="info" %}
@@ -498,21 +399,7 @@ uexGrowingIO.setVisitor({"gender":"male","age":21});
 注意 `t` 等于`vstr`字段，表示访问用户变量发送成功，其它字段无需仔细验证。
 
 ```javascript
-{
-    "s":"d334b4a1-57eb-4bf4-b426-64c1cce5a5c0",
-    // t 为事件类型， vstr 为发送访问用户变量事件
-    "t":"vstr",
-    "tm":1532341259134,
-    "d":"com.growingio.android.test",
-    "cs1":"GrowingIO",
-    //访问用户变量
-    "var":{
-        "gender":"male",
-        "age":21
-    },
-    "gesid":322,
-    "esid":0
-}
+{    "s":"d334b4a1-57eb-4bf4-b426-64c1cce5a5c0",    // t 为事件类型， vstr 为发送访问用户变量事件    "t":"vstr",    "tm":1532341259134,    "d":"com.growingio.android.test",    "cs1":"GrowingIO",    //访问用户变量    "var":{        "gender":"male",        "age":21    },    "gesid":322,    "esid":0}
 ```
 
 
@@ -529,12 +416,7 @@ uexGrowingIO.setVisitor({"gender":"male","age":21});
 2. Android [查看日志：](android-sdk/android-sdk.md#she-zhi-debug-mo-shi)初始化GrowingIO时打开测试模式
 
 ```java
-var options = {
-        //打开测试模式
-        debug : true,
-        channel : 'xx应用市场'
-    };
-uexGrowingIO.init("您的 ProjectId ", "您的 URL Scheme", options);
+var options = {        //打开测试模式        debug : true,        channel : 'xx应用市场'    };uexGrowingIO.init("您的 ProjectId ", "您的 URL Scheme", options);
 ```
 
     

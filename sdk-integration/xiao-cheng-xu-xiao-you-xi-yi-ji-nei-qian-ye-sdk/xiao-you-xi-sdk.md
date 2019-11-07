@@ -54,9 +54,7 @@ curl --compressed https://assets.giocdn.com/gio-ming.js -o gio-ming.js
 在微信小游戏项目根目录的 game.js 文件的顶部添加以下 JS 代码：
 
 ```javascript
-var gio = require("utils/gio-ming.js");
-// version 是你的小游戏的版本号
-gio('init', '你的 GrowingIO 项目ID', '你的微信小游戏的 AppID', { version: '1.0' });
+var gio = require("utils/gio-ming.js");// version 是你的小游戏的版本号gio('init', '你的 GrowingIO 项目ID', '你的微信小游戏的 AppID', { version: '1.0' });
 ```
 
 #### 使用游戏引擎构建微信小游戏
@@ -82,8 +80,7 @@ var gio = require("utils/gio-ming.js");
 在初始场景文件 start 方法中 init ；
 
 ```javascript
-// version 是你的小游戏的版本号
-gio('init', '你的 GrowingIO 项目ID', '你的微信小游戏的 AppID', { version: '1.0' });
+// version 是你的小游戏的版本号gio('init', '你的 GrowingIO 项目ID', '你的微信小游戏的 AppID', { version: '1.0' });
 ```
 
 ![&#x521D;&#x59CB;&#x573A;&#x666F;&#x6587;&#x4EF6;&#x793A;&#x4F8B;](../../.gitbook/assets/image%20%2841%29.png)
@@ -133,9 +130,7 @@ forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小游�
 
 
 ```javascript
-gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', forceLogin: true });
-...
-// 当获取到 openid 后，调用以下方法gio("identify", openid, unionid);
+gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { version: '1.0', forceLogin: true });...// 当获取到 openid 后，调用以下方法gio("identify", openid, unionid);
 ```
 {% endhint %}
 
@@ -169,42 +164,13 @@ gio('init', '你的 GrowingIO 项目ID', '你的微信小程序的 AppID', { ver
 即微信小游戏项目根目录的 game.js 文件设置参数如下：
 
 ```javascript
-var gio = require("utils/gio-ming.js");
-// version 是你的小游戏的版本号，发版时请调整
-gio('init', '9c76fe4756c3404d', 'wx87c6f4a3a6cf31e7', { version: '1.0', followShare: true });
-//将微信的wx.OnShareAppMessage替换成gio("gioOnShareAppMessage", function(){})
-//分享，监听用户点击右上角菜单的“转发”按钮时触发的事件
-gio("gioOnShareAppMessage", function(){
-return {
-title: "试试我的小游戏"
-}
-})
-//将微信的wx. shareAppMessage替换成gio("gioShareAppMessage", {})
-//分享，主动拉起转发，进入选择通讯录界面
-gio("gioShareAppMessage", {
-title: "试试我的小游戏"
-}
-)
+var gio = require("utils/gio-ming.js");// version 是你的小游戏的版本号，发版时请调整gio('init', '9c76fe4756c3404d', 'wx87c6f4a3a6cf31e7', { version: '1.0', followShare: true });//将微信的wx.OnShareAppMessage替换成gio("gioOnShareAppMessage", function(){})//分享，监听用户点击右上角菜单的“转发”按钮时触发的事件gio("gioOnShareAppMessage", function(){return {title: "试试我的小游戏"}})//将微信的wx. shareAppMessage替换成gio("gioShareAppMessage", {})//分享，主动拉起转发，进入选择通讯录界面gio("gioShareAppMessage", {title: "试试我的小游戏"})
 ```
 
 #### \*\*如果您希望采用微信的原生接口，那么需要在分享触发事件上做这样的配置操作，这样GrowingIO才能采集到分享的数据。
 
 ```javascript
-//设置follwShare
-gio('init', '', '', { version: '1.0', debug: true, followShare: true});
-//分享，监听用户点击右上角菜单的“转发”按钮时触发的事件
-//调用 pageShareInfo 发送分享事件以及处理分享追踪信息
-wx.onShareAppMessage(function () {
-  var obj = {
-    title: "试试我的小游戏"
-  }
-  obj = gio('pageShareInfo', obj);
-  return obj;
-})
-//分享，主动拉起转发，进入选择通讯录界面
-//调用 pageShareInfo 发送分享事件以及处理分享追踪信息
-obj = gio('pageShareInfo', obj);
-wx.shareAppMessage(obj)
+//设置follwSharegio('init', '', '', { version: '1.0', debug: true, followShare: true});//分享，监听用户点击右上角菜单的“转发”按钮时触发的事件//调用 pageShareInfo 发送分享事件以及处理分享追踪信息wx.onShareAppMessage(function () {  var obj = {    title: "试试我的小游戏"  }  obj = gio('pageShareInfo', obj);  return obj;})//分享，主动拉起转发，进入选择通讯录界面//调用 pageShareInfo 发送分享事件以及处理分享追踪信息obj = gio('pageShareInfo', obj);wx.shareAppMessage(obj)
 ```
 
 ### SDK 微信用户属性设置 <a id="sdk-wei-xin-yong-hu-shu-xing-she-zhi"></a>

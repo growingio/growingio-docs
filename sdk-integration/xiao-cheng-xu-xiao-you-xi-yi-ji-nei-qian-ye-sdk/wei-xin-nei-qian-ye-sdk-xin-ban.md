@@ -61,12 +61,7 @@ description: 为 小程序（包括微信、支付宝、百度小程序等）内
 将以下深色区域内的 JS 代码复制到H5页面中的 **&lt;head&gt;** 和 **&lt;/head&gt;** 标签之间即可。安装成功后，除 localhost 和 IP 地址外，所有网址下的行为数据都将会被收集。
 
 ```javascript
-<script type="text/javascript">
-      !function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.giocdn.com/2.0/gio-wxwv.js","gio");
-      // ‘你的appid’为选填项，如果你的微信内嵌页应用有微信分配的appid，建议填写；如果没有，可以留空。
-      gio('init', '你的项目ID', '你的 appid', { debug: false });
-      gio('send');
-</script>
+<script type="text/javascript">      !function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.giocdn.com/2.0/gio-wxwv.js","gio");      // ‘你的appid’为选填项，如果你的微信内嵌页应用有微信分配的appid，建议填写；如果没有，可以留空。      gio('init', '你的项目ID', '你的 appid', { debug: false });      gio('send');</script>
 ```
 
 
@@ -76,10 +71,7 @@ description: 为 小程序（包括微信、支付宝、百度小程序等）内
 **需要在 SDK 初始化时进行 平台 的设置，使用如下：**
 
 ```javascript
-gio(‘init’, ‘您的 GrowingIO 项目ID’, ‘您的 AppID’, { 
-    platform：支持传入一个判断函数或者一个字符串
- });
-
+gio(‘init’, ‘您的 GrowingIO 项目ID’, ‘您的 AppID’, {     platform：支持传入一个判断函数或者一个字符串 });
 ```
 
 | 场景 | 如果自行判断，需要传入的platform 的值 |
@@ -99,15 +91,7 @@ gio(‘init’, ‘您的 GrowingIO 项目ID’, ‘您的 AppID’, {
 判断平台，加入如下代码，并在 「platform」中传值 'alip' 。
 
 ```text
-<!-- GrowingIO Analytics code version 2.1 -->
-<!-- Copyright 2015-2017 GrowingIO, Inc. More info available at http://www.growingio.com -->
-<script type='text/javascript'>
-!function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.giocdn.com/2.0/gio-wxwv.js","gio");
-gio('init', '你的 GrowingIO 项目ID', '你的支付宝小程序的 AppID', {
-platform: 'alip'
-});
-gio('send');
-</script>
+<!-- GrowingIO Analytics code version 2.1 --><!-- Copyright 2015-2017 GrowingIO, Inc. More info available at http://www.growingio.com --><script type='text/javascript'>!function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.giocdn.com/2.0/gio-wxwv.js","gio");gio('init', '你的 GrowingIO 项目ID', '你的支付宝小程序的 AppID', {platform: 'alip'});gio('send');</script>
 ```
 
 **3.2 在小程序里面 WebView 加载时，添加用户信息**
@@ -115,15 +99,7 @@ gio('send');
  **在小程序里面 WebView 加载时，URL 添加额外属性 gio\('getGioInfo'\)  获取用户会话信息**
 
 ```text
-举例：
-# webview.js
-Page({
-data: {
-webUrl: `https://example.org/demo.html?${gio('getGioInfo')}`
-}
-});
-# webview.wxml
-<web-view src="{{ webUrl }}"></web-view>
+举例：# webview.jsPage({data: {webUrl: `https://example.org/demo.html?${gio('getGioInfo')}`}});# webview.wxml<web-view src="{{ webUrl }}"></web-view>
 ```
 
 ### **第4步. 根据需求场景，进行 SDK 高级设置的配置，以及自定义事件等定义。**
@@ -149,8 +125,7 @@ GrowingIO默认不会把 hashtag 识别成页面 URL 的一部分。对于使用
 即微信小程序项目根目录的 app.js 文件设置参数如下：
 
 ```javascript
-//如果内嵌页存在微信App_id，建议您填写相应的微信App_id,如果没有，就不用填写
-gio('init', '你的项目ID'[,'微信App_id'], { setImp:false, hashtag: true });
+//如果内嵌页存在微信App_id，建议您填写相应的微信App_id,如果没有，就不用填写gio('init', '你的项目ID'[,'微信App_id'], { setImp:false, hashtag: true });
 ```
 
 ### 微信用户ID 和 用户属性 <a id="sdk-wei-xin-yong-hu-shu-xing-she-zhi"></a>
@@ -164,16 +139,7 @@ gio('init', '你的项目ID'[,'微信App_id'], { setImp:false, hashtag: true });
 当用户在你的微信内嵌页上授权获取到 openid 后，可以用过 `identify` 接口绑定微信用户ID，后续在 GrowingIO 中使用微信ID创建用户分群。示例代码如下，
 
 ```javascript
-wx.request({ 
-  url: 'https://YOUR_HOST_NAME/wechat/code2key',
-  method: 'GET',
-  data: { code: res.code }
-  success: res => 
-    var openid = res.data.openid;
-    var unionid = res.data.unionid;
-    // ...
-    gio('identify', res.data.openid, res.data.unionid)
-})
+wx.request({   url: 'https://YOUR_HOST_NAME/wechat/code2key',  method: 'GET',  data: { code: res.code }  success: res =>     var openid = res.data.openid;    var unionid = res.data.unionid;    // ...    gio('identify', res.data.openid, res.data.unionid)})
 ```
 
 #### 设置微信用户信息 <a id="she-zhi-wei-xin-yong-hu-xin-xi"></a>
@@ -181,11 +147,7 @@ wx.request({
 当用户在你的微信内嵌页上绑定微信信息后，可以通过 `setVisitor` 接口设置微信用户信息，后续在 GrowingIO 中，使用访问用户变量分析这个数据。示例代码如下，
 
 ```javascript
-wx.getUserInfo({
-  success: res => 
-    // ...
-    gio('setVisitor', res.userInfo);
-})
+wx.getUserInfo({  success: res =>     // ...    gio('setVisitor', res.userInfo);})
 ```
 
 微信信息包含**微信昵称**、**微信头像**、**性别、微信所填国家、微信所填省份、微信所填城市**。
@@ -205,13 +167,11 @@ wx.getUserInfo({
 | userId | String | 是 | 用户的登录ID |
 
 ```javascript
-//setUserId API原型
-gio('setUserId', userId);
+//setUserId API原型gio('setUserId', userId);
 ```
 
 ```javascript
-//setuserId API调用示例
-gio('setUserId', '1234567890');
+//setuserId API调用示例gio('setUserId', '1234567890');
 ```
 
 #### 清除登录用户 ID（clearUserId） <a id="qing-chu-deng-lu-yong-hu-idclearuserid"></a>
@@ -219,8 +179,7 @@ gio('setUserId', '1234567890');
 当用户登出之后调用 clearUserId ，清除已经设置的登录用户 ID 。
 
 ```javascript
-//clearUserId API原型和调用示例
-gio('clearUserId');
+//clearUserId API原型和调用示例gio('clearUserId');
 ```
 
 ## 内嵌页自定义事件和变量 <a id="wei-xin-nei-qian-ye-zi-ding-yi-shi-jian-he-bian-liang"></a>
@@ -245,12 +204,7 @@ gio('track', eventName: string, properties: object)
 示例：
 
 ```javascript
-// 在 Page 的 clickBanner 函数里添加以下代码
-gio('track', 'clickBanner', {
-    id: movie.id,
-    title: movie.title, 
-    index: e.currentTarget.dataset.index
-});
+// 在 Page 的 clickBanner 函数里添加以下代码gio('track', 'clickBanner', {    id: movie.id,    title: movie.title,     index: e.currentTarget.dataset.index});
 ```
 
 ### 访问用户变量 <a id="fang-wen-yong-hu-bian-liang"></a>
@@ -272,8 +226,7 @@ gio('setVisitor', properties: object)
 示例：
 
 ```javascript
-// 比如在针对不同的用户做某个 Campaign 的 A/B 测试
-gio('setVisitor', {campaign_id: 3, campaign_group: 'A 组用户'});
+// 比如在针对不同的用户做某个 Campaign 的 A/B 测试gio('setVisitor', {campaign_id: 3, campaign_group: 'A 组用户'});
 ```
 
 ### 登录用户变量 <a id="deng-lu-yong-hu-bian-liang"></a>
@@ -295,12 +248,7 @@ gio('setUser', properties: object)
 示例：
 
 ```javascript
-gio('setUser', {
-    age: 30,
-    level: '高级用户',
-    company: 'GrowingIO',
-    title: '工程师'
-});
+gio('setUser', {    age: 30,    level: '高级用户',    company: 'GrowingIO',    title: '工程师'});
 ```
 
 ### 页面级变量 <a id="ye-mian-ji-bian-liang"></a>
@@ -322,11 +270,7 @@ gio('setPage', properties: object)
 示例：
 
 ```javascript
-//下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 typePage
-gio('setPage', {
-    pageName: '电影列表页', 
-    type: this.data.type
-})
+//下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 typePagegio('setPage', {    pageName: '电影列表页',     type: this.data.type})
 ```
 
 ###  转化变量 <a id="zhuan-hua-bian-liang"></a>

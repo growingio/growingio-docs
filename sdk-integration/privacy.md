@@ -75,10 +75,7 @@ Android:
 * 关闭或开启全局数据采集
 
 ```java
-// 不采集数据 
-GrowingIO.getInstance().disableDataCollect(); 
-// 收集数据 
-GrowingIO.getInstance().enableDataCollect();
+// 不采集数据 GrowingIO.getInstance().disableDataCollect(); // 收集数据 GrowingIO.getInstance().enableDataCollect();
 ```
 
 * 获取访问用户ID
@@ -90,16 +87,7 @@ GrowingIO.getInstance().getVisitUserId();
 * 样例
 
 ```java
-GrowingIO.startWithConfiguration(this, new Configuration() 
-.disableDataCollect() // 开启GDPR， 不采集数据。 默认采集 
-.useID() 
-.trackAllFragments()); 
-// 不采集数据 
-GrowingIO.getInstance().disableDataCollect(); 
-// 收集数据 
-GrowingIO.getInstance().enableDataCollect(); 
-// 获取访问用户ID 
-GrowingIO.getInstance().getVisitUserId(); 
+GrowingIO.startWithConfiguration(this, new Configuration() .disableDataCollect() // 开启GDPR， 不采集数据。 默认采集 .useID() .trackAllFragments()); // 不采集数据 GrowingIO.getInstance().disableDataCollect(); // 收集数据 GrowingIO.getInstance().enableDataCollect(); // 获取访问用户ID GrowingIO.getInstance().getVisitUserId(); 
 ```
 
 iOS:
@@ -108,8 +96,7 @@ iOS:
 * 关闭或开启全局数据采集
 
 ```objectivec
-disableDataCollect 
-enableDataCollect 
+disableDataCollect enableDataCollect 
 ```
 
 * 获取访问用户ID
@@ -121,12 +108,7 @@ getVisitUserId
 * 样例
 
 ```objectivec
-// 开启GDPR 
-[Growing disableDataCollect]; 
-// 关闭GDPR 
-[Growing enableDataCollect]; 
-// 获取设备ID 
-NSString *viId = [Growing getVisitUserId]; 
+// 开启GDPR [Growing disableDataCollect]; // 关闭GDPR [Growing enableDataCollect]; // 获取设备ID NSString *viId = [Growing getVisitUserId]; 
 ```
 
 JS:
@@ -135,10 +117,7 @@ JS:
 * 关闭或开启全局数据采集
 
 ```javascript
-// 开启gdpr，停止数据采集 
-window.gio('config',{"dataCollect":"false"}); 
-// 关闭gdpr，开始数据采集 
-window.gio('config',{"dataCollect":"true"}); // 放在init和send之间 
+// 开启gdpr，停止数据采集 window.gio('config',{"dataCollect":"false"}); // 关闭gdpr，开始数据采集 window.gio('config',{"dataCollect":"true"}); // 放在init和send之间 
 ```
 
 * 获取访问用户 ID
@@ -150,11 +129,6 @@ window.gio('getVisitUserId'); // 放在send之后
 * 样例
 
 ```javascript
-// 开启gdpr，停止数据采集 
-window.gio('config',{"dataCollect":"false"}); 
-// 关闭gdpr，开始数据采集 
-window.gio('config',{"dataCollect":"true"}); 
-// 获取访问用户ID 
-window.gio('getVisitUserId'); // 放在send之后
+// 开启gdpr，停止数据采集 window.gio('config',{"dataCollect":"false"}); // 关闭gdpr，开始数据采集 window.gio('config',{"dataCollect":"true"}); // 获取访问用户ID window.gio('getVisitUserId'); // 放在send之后
 ```
 

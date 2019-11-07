@@ -30,8 +30,7 @@ curl --compressed https://assets.giocdn.com/sdk/gio-baidup.js -o gio-baidup.js
 在百度小程序项目根目录的 app.js 文件的顶部添加以下 JS 代码，请注意一定要放在 App\(\) 之前：
 
 ```javascript
-var gio = require("utils/gio-baidup.js").default;
-gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '你的小程序版本' });
+var gio = require("utils/gio-baidup.js").default;gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '你的小程序版本' });
 ```
 
 方式二：
@@ -39,21 +38,13 @@ gio('init', '你的项目ID', '你的支付宝小程序AppID', { version: '你�
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-export default {
-    projectId: '你的 GrowingIO 项目ID',
-    appId: '你的小程序AppID',
-    version: '小程序版本'
-    // ...
-}
-
+export default {    projectId: '你的 GrowingIO 项目ID',    appId: '你的小程序AppID',    version: '小程序版本'    // ...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-baidup.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
+var gio = require("utils/gio-baidup.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
 ```
 
 #### Taro 框架
@@ -71,9 +62,7 @@ curl --compressed https://assets.giocdn.com/sdk/gio-baidup.js -o gio-baidup.js
 在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Taro from '@tarojs/taro';
-var gio = require("utils/gio-baidup.js").default;
-gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', taro: Taro });
+import Taro from '@tarojs/taro';var gio = require("utils/gio-baidup.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', taro: Taro });
 ```
 
 方式二：
@@ -81,22 +70,13 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-import Taro from '@tarojs/taro';
-export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本',
-taro: Taro,
-...
-}
+import Taro from '@tarojs/taro';export default {projectId: '你的 GrowingIO 项目ID',appId: '你的小程序AppID',version: '小程序版本',taro: Taro,...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-baidup.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
+var gio = require("utils/gio-baidup.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
 ```
 
 #### mpvue框架 / uni-app 框架
@@ -110,12 +90,7 @@ curl --compressed https://assets.giocdn.com/sdk/gio-baidup.esm.js -o gio-baidup.
 方式一：在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Vue from 'vue';
-import App from './App';
-App.mpType = 'app';
-var gio = require("utils/gio-baidup.js").default;
-gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本',vue: Vue });
-
+import Vue from 'vue';import App from './App';App.mpType = 'app';var gio = require("utils/gio-baidup.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本',vue: Vue });
 ```
 
 方式二：
@@ -123,24 +98,13 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-import Vue from 'vue';
-export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本',
-vue: Vue,
-...
-}
+import Vue from 'vue';export default {projectId: '你的 GrowingIO 项目ID',appId: '你的小程序AppID',version: '小程序版本',vue: Vue,...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-baidup.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
-import App from './App';
-App.mpType = 'app';
+var gio = require("utils/gio-baidup.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);import App from './App';App.mpType = 'app';
 ```
 
 #### Chameleon框架
@@ -156,9 +120,7 @@ curl --compressed https://assets.giocdn.com/sdk/gio-baidup.js -o gio-baidup.js
 方式一：在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Cml from 'chameleon-runtime';
-var gio = require("utils/gio-baidup.js").default;
-gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', cml: Cml });
+import Cml from 'chameleon-runtime';var gio = require("utils/gio-baidup.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', cml: Cml });
 ```
 
 方式二：
@@ -166,22 +128,13 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-import Cml from 'chameleon-runtime';
-export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本',
-cml: Cml,
-...
-}
+import Cml from 'chameleon-runtime';export default {projectId: '你的 GrowingIO 项目ID',appId: '你的小程序AppID',version: '小程序版本',cml: Cml,...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-baidup.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
+var gio = require("utils/gio-baidup.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
 ```
 
 ### **2 进行SDK的配置设置**
@@ -200,10 +153,7 @@ forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程�
 
 
 ```text
-gio('init', '你的项目 ID', '你的百度小程序 AppID', { version: '1.0', forceLogin: true });
-...
-// 当获取到 swanid 后，调用以下方法
-gio("identify", swanid);
+gio('init', '你的项目 ID', '你的百度小程序 AppID', { version: '1.0', forceLogin: true });...// 当获取到 swanid 后，调用以下方法gio("identify", swanid);
 ```
 
 ### 3 添加请求服务器域名
@@ -226,9 +176,7 @@ gio("identify", swanid);
 即百度小程序项目根目录的 app.js 文件设置参数如下：
 
 ```text
-var gio = require("utils/gio-baidup.js");
-// version 是你的小程序的版本号，发版时请调整
-gio('init', '你的项目 ID', '你的百度小程序 AppID', { version: '1.0', followShare: true });
+var gio = require("utils/gio-baidup.js");// version 是你的小程序的版本号，发版时请调整gio('init', '你的项目 ID', '你的百度小程序 AppID', { version: '1.0', followShare: true });
 ```
 
 ### 4 SDK 百度用户属性设置
@@ -305,17 +253,7 @@ gio('track', eventName: string, properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-// 在 Page 的 clickBanner 函数里添加以下代码
-Page({
-  clickBanner(e) {
-    getApp().globalData.gio('track', 'clickBanner', { 
-      id: movie.id, 
-      title: movie.title, 
-      index: e.currentTarget.dataset.index 
-    });
-  }
-})
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 在 Page 的 clickBanner 函数里添加以下代码Page({  clickBanner(e) {    getApp().globalData.gio('track', 'clickBanner', {       id: movie.id,       title: movie.title,       index: e.currentTarget.dataset.index     });  }})
 ```
 
 ### 访问用户变量
@@ -337,12 +275,7 @@ gio('setVisitor', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-// 比如在针对不同的用户做某个 Campaign 的 A/B 测试
-getApp().globalData.gio('setVisitor', { 
-  campaign_id: 3, 
-  campaign_group: 'A 组用户'
-});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 比如在针对不同的用户做某个 Campaign 的 A/B 测试getApp().globalData.gio('setVisitor', {   campaign_id: 3,   campaign_group: 'A 组用户'});
 ```
 
 ### 注册用户变量
@@ -364,13 +297,7 @@ gio('setUser', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-getApp().globalData.gio('setUser', { 
-  age: 30, 
-  level: '高级用户', 
-  company: 'GrowingIO', 
-  title: '工程师'
-});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面getApp().globalData.gio('setUser', {   age: 30,   level: '高级用户',   company: 'GrowingIO',   title: '工程师'});
 ```
 
 ### 页面级变量
@@ -392,17 +319,7 @@ gio('setPage', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-// 推荐在 Page#onShow 处理这个事件
-// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 type
-Page({
-  onShow() {
-    getApp().globalData.gio('setPage', { 
-      pageName: '电影列表页', 
-      type: this.data.type
-    });
-  }
-}
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 推荐在 Page#onShow 处理这个事件// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 typePage({  onShow() {    getApp().globalData.gio('setPage', {       pageName: '电影列表页',       type: this.data.type    });  }}
 ```
 
 ###  转化变量
@@ -424,10 +341,7 @@ gio('setEvar', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-getApp().globalData.gio('setEvar', { 
-  campaign: '活动A'
-});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面getApp().globalData.gio('setEvar', {   campaign: '活动A'});
 ```
 
 

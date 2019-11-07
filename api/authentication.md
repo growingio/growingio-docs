@@ -16,14 +16,7 @@
 ### 2. 认证 <a id="authentication"></a>
 
 ```text
-____________                  ___________    (ai/project/auth)   _____________
-|          |                 |           |--(B) Authorization ->|             |
-|          |--(A) Request  ->|   Client  |                      |             |
-|  Client  |<-(D)-- Code  ---|   Server  |<--(C) Auth Grant  ---|  GrowingIO  |
-|          |                 |___________|     (Auth Code)      |   Server    |
-|          |                                                    |             |
-|          |--(E)------------  Access Code  ------------------> |             |
-|__________|                                                    |_____________|
+____________                  ___________    (ai/project/auth)   _____________|          |                 |           |--(B) Authorization ->|             ||          |--(A) Request  ->|   Client  |                      |             ||  Client  |<-(D)-- Code  ---|   Server  |<--(C) Auth Grant  ---|  GrowingIO  ||          |                 |___________|     (Auth Code)      |   Server    ||          |                                                    |             ||          |--(E)------------  Access Code  ------------------> |             ||__________|                                                    |_____________|
 ```
 
 GrowingIO 会给每个项目分配个公钥 \(X-Client-Id\) 和私钥。具体认证步骤如下。
@@ -61,10 +54,7 @@ Post body 采用 raw 格式上传而不是 key-value 键值对方式上传。如
 #### Response <a id="response"></a>
 
 ```text
-   {
-     "status":"success",
-     "code":"2RhY0XZ9xyBfayAPm0aa5CoJhDJkEUcmRiBJBT6XyeIXhHrdz334Tf3I85Esm74Q"
-   }
+   {     "status":"success",     "code":"2RhY0XZ9xyBfayAPm0aa5CoJhDJkEUcmRiBJBT6XyeIXhHrdz334Tf3I85Esm74Q"   }
 ```
 
 #### Auth 计算示例代码
@@ -72,62 +62,25 @@ Post body 采用 raw 格式上传而不是 key-value 键值对方式上传。如
 Java 版本示例代码
 
 ```text
-public String authToken(String secret, String project, String ai, Long tm) throws Exception {
-  String message = "POST\n/auth/token\nproject="+project+"&ai="+ai+"&tm="+tm;
-  Mac hmac = Mac.getInstance("HmacSHA256");
-  hmac.init(new SecretKeySpec(secret.getBytes("UTF-8"), "HmacSHA256"));
-  byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
-  return Hex.encodeHexString(signature);
-}
-
-authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
+public String authToken(String secret, String project, String ai, Long tm) throws Exception {  String message = "POST\n/auth/token\nproject="+project+"&ai="+ai+"&tm="+tm;  Mac hmac = Mac.getInstance("HmacSHA256");  hmac.init(new SecretKeySpec(secret.getBytes("UTF-8"), "HmacSHA256"));  byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));  return Hex.encodeHexString(signature);}authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
 ```
 
 Scala 版本示例代码
 
 ```text
-import javax.crypto.Mac
-import javax.crypto.spec.SecretKeySpec
-import org.apache.commons.codec.binary.Hex
-
-def authToken(secret: String, project: String, ai: String, tm: Long) = {
- val messages = s"POST\n/auth/token\nproject=$project&ai=$ai&tm=$tm"
- val hmac = Mac.getInstance("HmacSHA256")
- hmac.init(new SecretKeySpec(secret.getBytes("UTF-8"), "HmacSHA256"))
- val signature = hmac.doFinal(messages.getBytes("UTF-8"))
- Hex.encodeHexString(signature)
-}
-
-authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
+import javax.crypto.Macimport javax.crypto.spec.SecretKeySpecimport org.apache.commons.codec.binary.Hexdef authToken(secret: String, project: String, ai: String, tm: Long) = { val messages = s"POST\n/auth/token\nproject=$project&ai=$ai&tm=$tm" val hmac = Mac.getInstance("HmacSHA256") hmac.init(new SecretKeySpec(secret.getBytes("UTF-8"), "HmacSHA256")) val signature = hmac.doFinal(messages.getBytes("UTF-8")) Hex.encodeHexString(signature)}authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
 ```
 
 PHP 版本示例代码
 
 ```text
-<?php
-
-function authToken($secret, $project, $ai, $tm) {
-    $str = "POST\n/auth/token\nproject=${project}&ai=${ai}&tm=${tm}";
-    $signature = hash_hmac("sha256", $str, $secret);
-    return $signature;
-}
-
-authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
-?>
+<?phpfunction authToken($secret, $project, $ai, $tm) {    $str = "POST\n/auth/token\nproject=${project}&ai=${ai}&tm=${tm}";    $signature = hash_hmac("sha256", $str, $secret);    return $signature;}authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")?>
 ```
 
 Python 版本示例代码
 
 ```text
-import hashlib
-import hmac
-
-def authToken(secret, project, ai, tm):
-  message = ("POST\n/auth/token\nproject=" + project + "&ai=" + ai + "&tm=" + tm).encode('utf-8')
-  signature = hmac.new(bytes(secret.encode('utf-8')), bytes(message), digestmod=hashlib.sha256).hexdigest()
-  return signature
-
-authToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
+import hashlibimport hmacdef authToken(secret, project, ai, tm):  message = ("POST\n/auth/token\nproject=" + project + "&ai=" + ai + "&tm=" + tm).encode('utf-8')  signature = hmac.new(bytes(secret.encode('utf-8')), bytes(message), digestmod=hashlib.sha256).hexdigest()  return signatureauthToken("这里是 GrowingIO 给项目分配的私钥", "项目UID", "项目ID", "申请时间戳")
 ```
 
 1. Growing Server 收到数据后，会用请求的 body 和 key 做同样的加密，计算是不是匹配。如果匹配，返回认证码给 Client Server。

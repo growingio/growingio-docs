@@ -29,14 +29,7 @@ XPath 其实是描述基于 XML 文档这种树型结构的语言，它以一些
 XPath 的规则是： 
 
 ```text
-/          满足该绝对路径的元素
-//         所有满足其后面的规则的元素
-*          所有元素
-[表达式]    限定表达式
-[数字]：    第几个元素
-[last()]:  最后一个
-[@属性]：   满足该属性
-|          逻辑或，将多个路径合并到一起
+/          满足该绝对路径的元素//         所有满足其后面的规则的元素*          所有元素[表达式]    限定表达式[数字]：    第几个元素[last()]:  最后一个[@属性]：   满足该属性|          逻辑或，将多个路径合并到一起
 ```
 
 ![XPath &#x56FE;&#x793A;](../.gitbook/assets/image%20%28313%29.png)
@@ -98,15 +91,13 @@ Refused to display '**' in a frame because it set 'X-Frame-Options' to 'SAMEORIG
 如果你的网站使用https协议，需向响应头添加配置
 
 ```javascript
-Content-Security-Policy: frame-ancestors 'self' https://www.growingio.com
-X-Frame-Options: Allow-From https://www.growingio.com
+Content-Security-Policy: frame-ancestors 'self' https://www.growingio.comX-Frame-Options: Allow-From https://www.growingio.com
 ```
 
 如果你的网站使用http协议，需向响应头添加配置
 
 ```javascript
-Content-Security-Policy: frame-ancestors 'self' http://www.growingio.com
-X-Frame-Options: Allow-From http://www.growingio.com
+Content-Security-Policy: frame-ancestors 'self' http://www.growingio.comX-Frame-Options: Allow-From http://www.growingio.com
 ```
 
 由于 Chrome 浏览器已经不再支持 X-Frame-Options 配置项，如果你只需在 Chrome 浏览器中进行圈选，建议通过浏览器检查后，只给 Chrome 请求的响应头添加配置
@@ -158,38 +149,14 @@ Content-Security-Policy: frame-ancestors 'self' http://www.growingio.com https:/
 
 URL Scheme 填写错误， 请检查您的 manifest.xml 文件中 Url Scheme 是否和您官网的应用管理中的一致，示例代码如下：
 
-{% code-tabs %}
-{% code-tabs-item title="AndroidManifest.xml" %}
+{% tabs %}
+{% tab title="AndroidManifest.xml" %}
 ```markup
-<activity
-    android:name=".LauncherActivity"
-    android:theme="@style/AppTheme"
-    tools:replace="screenOrientation">
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-
-    </intent-filter>
-    <!-- GrowingIO Url Scheme 配置，请从官网的应用管理中获取，正确填写 -->
-    <intent-filter>
-        <data android:scheme="growing.您的 URL Scheme" /> 
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-    </intent-filter>
-    <!-- 即使含有自定义 scheme 也能正常唤醒，不互斥，不相互影响 -->
-    <intent-filter>
-        <data
-            android:host="share"
-            android:scheme="will" />
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-    </intent-filter>
-</activity>
+<activity    android:name=".LauncherActivity"    android:theme="@style/AppTheme"    tools:replace="screenOrientation">    <intent-filter>        <action android:name="android.intent.action.MAIN" />        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>    <!-- GrowingIO Url Scheme 配置，请从官网的应用管理中获取，正确填写 -->    <intent-filter>        <data android:scheme="growing.您的 URL Scheme" />         <action android:name="android.intent.action.VIEW" />        <category android:name="android.intent.category.DEFAULT" />        <category android:name="android.intent.category.BROWSABLE" />    </intent-filter>    <!-- 即使含有自定义 scheme 也能正常唤醒，不互斥，不相互影响 -->    <intent-filter>        <data            android:host="share"            android:scheme="will" />        <action android:name="android.intent.action.VIEW" />        <category android:name="android.intent.category.DEFAULT" />        <category android:name="android.intent.category.BROWSABLE" />    </intent-filter></activity>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 **iOS：**
 
@@ -218,11 +185,7 @@ URL Scheme 填写错误， 请检查您的 manifest.xml 文件中 Url Scheme 是
 请您在代码逻辑中判断如果是以 `growing` 开头的 `scheme` 不处理它，代码示例：
 
 ```java
-// 请注意自己判断 intent 是否为空
-Uri data = intent.getData();
-if (data.getScheme().startsWith("growing.")){
-    Log.d(TAG, "GrowingIO url scheme, not process");
-}
+// 请注意自己判断 intent 是否为空Uri data = intent.getData();if (data.getScheme().startsWith("growing.")){    Log.d(TAG, "GrowingIO url scheme, not process");}
 ```
 
 **iOS：**

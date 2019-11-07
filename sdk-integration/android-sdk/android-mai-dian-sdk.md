@@ -25,16 +25,7 @@ URL Scheme的格式是growing.xxxxxxxxxxxxxxxx，它的获取方式有两种：
 您的项目ID获取方式是：点击“设置”icon-&gt;点击“项目配置”-&gt;即可看到您的项目ID
 
 ```groovy
-android {
-    defaultConfig {
-        resValue("string", "growingio_project_id", "您的项目ID")
-        resValue("string", "growingio_url_scheme", "您的URL Scheme")
-    }
-}
-dependencies {
-    //GrowingIO 埋点 SDK
-    implementation 'com.growingio.android:vds-android-agent:track-2.8.5@aar'
-}
+android {    defaultConfig {        resValue("string", "growingio_project_id", "您的项目ID")        resValue("string", "growingio_url_scheme", "您的URL Scheme")    }}dependencies {    //GrowingIO 埋点 SDK    implementation 'com.growingio.android:vds-android-agent:track-2.8.5@aar'}
 ```
 
 ### 2.添加URLScheme和权限
@@ -42,44 +33,7 @@ dependencies {
 把URL Scheme添加到您的项目，以便在使用 [Mobile Debugger](../growingio-debugger/) 的时候通过 Deep Link 方式唤醒您的程序。将该产品的 URLScheme 添加到你的 AndroidManifest.xml 中的 LAUNCHER Activity下。例如：
 
 ```markup
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.growingio.testdemo">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--非危险权限，不需要运行时请求，Manifest文件中添加即可-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
-    <!--请注意<application/>标签中的name属性值（这里为android:name=".MyApplication"）必须为您的Application类-->
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:name=".MyApplication"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <!--请添加这里的整个 intent-filter 区块，并确保其中只有一个 data 字段-->
-            <intent-filter>
-                <data android:scheme="growing.您的URL Scheme" />
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-            </intent-filter>
-            <!--请添加这里的整个 intent-filter 区块，并确保其中只有一个 data 字段-->
-        </activity>
-    </application>
-
-</manifest>
+<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"    package="com.example.growingio.testdemo">    <uses-permission android:name="android.permission.INTERNET" />    <!--非危险权限，不需要运行时请求，Manifest文件中添加即可-->    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />    <!--请注意<application/>标签中的name属性值（这里为android:name=".MyApplication"）必须为您的Application类-->    <application        android:allowBackup="true"        android:icon="@mipmap/ic_launcher"        android:label="@string/app_name"        android:roundIcon="@mipmap/ic_launcher_round"        android:supportsRtl="true"        android:name=".MyApplication"        android:theme="@style/AppTheme">        <activity android:name=".MainActivity">            <intent-filter>                <action android:name="android.intent.action.MAIN" />                <category android:name="android.intent.category.LAUNCHER" />            </intent-filter>            <!--请添加这里的整个 intent-filter 区块，并确保其中只有一个 data 字段-->            <intent-filter>                <data android:scheme="growing.您的URL Scheme" />                <action android:name="android.intent.action.VIEW" />                <category android:name="android.intent.category.DEFAULT" />                <category android:name="android.intent.category.BROWSABLE" />            </intent-filter>            <!--请添加这里的整个 intent-filter 区块，并确保其中只有一个 data 字段-->        </activity>    </application></manifest>
 ```
 
 ### 3.初始化SDK
@@ -87,15 +41,7 @@ dependencies {
 请将以下 GrowingIO.startWithConfiguration加在您的Application 的 onCreate 方法中
 
 ```java
-public class MyApplication extends Application {
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        GrowingIO.startWithConfiguration(this, new Configuration()     
-            .setChannel("XXX应用商店")
-        );
-    }
-}
+public class MyApplication extends Application {    @Override    public void onCreate() {        super.onCreate();        GrowingIO.startWithConfiguration(this, new Configuration()                 .setChannel("XXX应用商店")        );    }}
 ```
 
 （1）请确保将代码添加在`Application`的`onCreate`方法中，添加到其他方法中可能导致数据不准确。
@@ -109,26 +55,7 @@ public class MyApplication extends Application {
 如果你启用了混淆，请在你的proguard-rules.pro中加入如下代码：
 
 ```text
--keep class com.growingio.** {
-    *;
-}
--dontwarn com.growingio.**
--keepnames class * extends android.view.View
--keepnames class * extends android.app.Fragment
--keepnames class * extends android.support.v4.app.Fragment
--keepnames class * extends androidx.fragment.app.Fragment
--keep class android.support.v4.view.ViewPager{
-    *;
-}
--keep class android.support.v4.view.ViewPager$**{
-	*;
-}
--keep class androidx.viewpager.widget.ViewPager{
-    *;
-}
--keep class androidx.viewpager.widget.ViewPager$**{
-	*;
-}
+-keep class com.growingio.** {    *;}-dontwarn com.growingio.**-keepnames class * extends android.view.View-keepnames class * extends android.app.Fragment-keepnames class * extends android.support.v4.app.Fragment-keepnames class * extends androidx.fragment.app.Fragment-keep class android.support.v4.view.ViewPager{    *;}-keep class android.support.v4.view.ViewPager$**{	*;}-keep class androidx.viewpager.widget.ViewPager{    *;}-keep class androidx.viewpager.widget.ViewPager$**{	*;}
 ```
 
 如果您使用了AndResGuard,请在白名单里添加GrowingIO,如下：
@@ -162,11 +89,7 @@ setDebugMode(boolean debugMode);
 **示例代码：**
 
 ```java
-GrowingIO.startWithConfiguration(this,new Configuration()
-    //BuildConfig.DEBUG 这样配置就不会上线忘记关闭
-    .setDebugMode(BuildConfig.DEBUG)
-    ...
-    );
+GrowingIO.startWithConfiguration(this,new Configuration()    //BuildConfig.DEBUG 这样配置就不会上线忘记关闭    .setDebugMode(BuildConfig.DEBUG)    ...    );
 ```
 
 
@@ -190,11 +113,7 @@ setTestMode(boolean testMode);
 **示例代码：**
 
 ```java
-GrowingIO.startWithConfiguration(this,new Configuration()
-    //BuildConfig.DEBUG 这样配置就不会上线忘记关闭
-    .setTestMode(BuildConfig.DEBUG)
-    ...
-    );
+GrowingIO.startWithConfiguration(this,new Configuration()    //BuildConfig.DEBUG 这样配置就不会上线忘记关闭    .setTestMode(BuildConfig.DEBUG)    ...    );
 ```
 
 \*\*\*\*
@@ -219,8 +138,7 @@ GrowingIO.getInstance().setGeoLocation(double latitude,double longitude);
 **示例代码：**
 
 ```java
-//北京的经纬度
-GrowingIO.getInstance().setGeoLocation(39.9046900000,116.4071700000);
+//北京的经纬度GrowingIO.getInstance().setGeoLocation(39.9046900000,116.4071700000);
 ```
 
 {% hint style="warning" %}
@@ -236,8 +154,7 @@ GrowingIO.getInstance().setGeoLocation(39.9046900000,116.4071700000);
 多进程支持，`SDK`默认不支持多进程使用， 但是可以通过`confiuration`进行设置支持多进程。 在`Application onCreate` 中初始化SDK代码块中配置。
 
 ```java
-//支持多进程数据采集
-setMutiprocess(boolean setMutiprocess);
+//支持多进程数据采集setMutiprocess(boolean setMutiprocess);
 ```
 
 **参数说明：**
@@ -249,9 +166,7 @@ setMutiprocess(boolean setMutiprocess);
 **示例代码：**
 
 ```java
-GrowingIO.startWithConfiguration(this, new Configuration()
-                  .setMutiprocess(true)
-                  );
+GrowingIO.startWithConfiguration(this, new Configuration()                  .setMutiprocess(true)                  );
 ```
 
 {% hint style="info" %}
@@ -284,14 +199,7 @@ GrowingIO.startWithConfiguration(this, new Configuration()
 在 GrowingIO SDK 代码初始化部分配置。
 
 ```java
-GrowingIO.startWithConfiguration(this, new Configuration()
-                .setDeeplinkCallback(new DeeplinkCallback() {
-                            @Override
-                            public void onReceive(Map<String, String> params, int status) {
-                                // 接收并匹配参数，跳转 APP 内对应页面    
-                            }
-                        })
-            );
+GrowingIO.startWithConfiguration(this, new Configuration()                .setDeeplinkCallback(new DeeplinkCallback() {                            @Override                            public void onReceive(Map<String, String> params, int status) {                                // 接收并匹配参数，跳转 APP 内对应页面                                }                        })            );
 ```
 
 **返回值说明：**
@@ -304,17 +212,7 @@ GrowingIO.startWithConfiguration(this, new Configuration()
 **示例代码：**
 
 ```java
-GrowingIO.startWithConfiguration(this, new Configuration()
-    .setDeeplinkCallback(new DeeplinkCallback() {
-                @Override
-                public void onReceive(Map<String, String> params, int status) {
-                     if (status == DeeplinkCallback.SUCCESS) {
-                        //获得您的自定义参数，处理您的相关逻辑
-                        Log.d("TestApplication", "DeepLink 参数获取成功，params" + params.toString());
-                    }
-                }
-            })
-);
+GrowingIO.startWithConfiguration(this, new Configuration()    .setDeeplinkCallback(new DeeplinkCallback() {                @Override                public void onReceive(Map<String, String> params, int status) {                     if (status == DeeplinkCallback.SUCCESS) {                        //获得您的自定义参数，处理您的相关逻辑                        Log.d("TestApplication", "DeepLink 参数获取成功，params" + params.toString());                    }                }            }));
 ```
 
 
@@ -326,35 +224,7 @@ GrowingIO.startWithConfiguration(this, new Configuration()
 ### API 简介 
 
 ```java
-// 发送自定义事件 API
-GrowingIO gio = GrowingIO.getInstance();
-gio.track(String eventId);
-gio.track(String eventId, Number eventNumber);
-gio.track(String eventId, JSONObject eventLevelVariables);
-gio.track(String eventId, Number eventNumber, JSONObject eventLevelVariables);
-
-// 发送转化变量 API
-GrowingIO gio = GrowingIO.getInstance();
-gio.setEvar(String key, String value);
-gio.setEvar(String key, Number value);
-gio.setEvar(String key, Boolean value);
-gio.setEvar(JSONObject conversionVariables);
-
-// 发送用户变量 API
-GrowingIO gio = GrowingIO.getInstance();
-gio.setPeopleVariable(String key, String value);
-gio.setPeopleVariable(String key, Number value);
-gio.setPeopleVariable(String key, Boolean value);
-gio.setPeopleVariable(JSONObject peopleVariables);
-
-// 设置登录用户ID API
-GrowingIO.getInstance().setUserId(String userId);
-
-// 清除登录用户ID API
-GrowingIO.getInstance().clearUserId();
-
-// 设置访问用户变量，或者设置 A/B 测试标签
-GrowingIO.getInstance().setVisitor(JSONObject visitorVariable);
+// 发送自定义事件 APIGrowingIO gio = GrowingIO.getInstance();gio.track(String eventId);gio.track(String eventId, Number eventNumber);gio.track(String eventId, JSONObject eventLevelVariables);gio.track(String eventId, Number eventNumber, JSONObject eventLevelVariables);// 发送转化变量 APIGrowingIO gio = GrowingIO.getInstance();gio.setEvar(String key, String value);gio.setEvar(String key, Number value);gio.setEvar(String key, Boolean value);gio.setEvar(JSONObject conversionVariables);// 发送用户变量 APIGrowingIO gio = GrowingIO.getInstance();gio.setPeopleVariable(String key, String value);gio.setPeopleVariable(String key, Number value);gio.setPeopleVariable(String key, Boolean value);gio.setPeopleVariable(JSONObject peopleVariables);// 设置登录用户ID APIGrowingIO.getInstance().setUserId(String userId);// 清除登录用户ID APIGrowingIO.getInstance().clearUserId();// 设置访问用户变量，或者设置 A/B 测试标签GrowingIO.getInstance().setVisitor(JSONObject visitorVariable);
 ```
 
 ### track
@@ -362,12 +232,7 @@ GrowingIO.getInstance().setVisitor(JSONObject visitorVariable);
 发送一个自定义事件。在添加所需要发送的事件代码之前，需要在打点管理用户界面配置事件以及事件级变量。
 
 ```java
-// track API原型
-GrowingIO gio = GrowingIO.getInstance();
-gio.track(String eventId);
-gio.track(String eventId, Number eventNumber);
-gio.track(String eventId, Number eventNumber, JSONObject eventLevelVariables);
-gio.track(String eventId, JSONObject eventLevelVariables);
+// track API原型GrowingIO gio = GrowingIO.getInstance();gio.track(String eventId);gio.track(String eventId, Number eventNumber);gio.track(String eventId, Number eventNumber, JSONObject eventLevelVariables);gio.track(String eventId, JSONObject eventLevelVariables);
 ```
 
 **参数说明：**
@@ -441,27 +306,15 @@ gio.track(String eventId, JSONObject eventLevelVariables);
 </table>**示例代码：**
 
 ```java
-// track API调用示例一
-GrowingIO gio = GrowingIO.getInstance();
-gio.track("registerSuccess");
+// track API调用示例一GrowingIO gio = GrowingIO.getInstance();gio.track("registerSuccess");
 ```
 
 ```java
-// track API调用示例二
-GrowingIO gio = GrowingIO.getInstance();
-JSONObject jsonObject = new JSONObject();
-jsonObject.put("gender", "male");
-jsonObject.put("age", "21");
-gio.track("registerSuccess", jsonObject);
+// track API调用示例二GrowingIO gio = GrowingIO.getInstance();JSONObject jsonObject = new JSONObject();jsonObject.put("gender", "male");jsonObject.put("age", "21");gio.track("registerSuccess", jsonObject);
 ```
 
 ```java
-// track API调用示例三
-GrowingIO gio = GrowingIO.getInstance();
-JSONObject jsonObject = new JSONObject();
-jsonObject.put("gender", "male");
-jsonObject.put("age", "21");
-gio.track("loanAmount", 80000, jsonObject);
+// track API调用示例三GrowingIO gio = GrowingIO.getInstance();JSONObject jsonObject = new JSONObject();jsonObject.put("gender", "male");jsonObject.put("age", "21");gio.track("loanAmount", 80000, jsonObject);
 ```
 
 **检验数据发送日志示例：** 
@@ -469,27 +322,7 @@ gio.track("loanAmount", 80000, jsonObject);
 注意 `t` 等于 `cstm` 字段，表示自定义事件发送成功，只需注意 `var`、`n` 、`num`字段，其它字段无需仔细验证**。**
 
 ```javascript
-//展示 track 接口调用示例三日志内容
-{
-    "s":"31e3aa14-5241-490c-821c-a741e9bf0f87",
-    // t 为事件类型， track 接口调用发送的事件类型为 cstm
-    "t":"cstm",
-    "tm":1532085495251,
-    "d":"com.growingio.android.test",
-    // n 为 eventId 参数携带的值
-    "n":"loanAmount",
-    // var 为 eventLevelVariable 参数携带的值
-    "var":{
-        "gender":"male",
-        "age":"21"
-    },
-    "ptm":0,
-    // num 为 number 参数携带的值
-    "num":80000,
-    "gesid":18,
-    "esid":0,
-    "u":"b6247b01-a31a-3bc6-a391-4c456888c1ee"
-}
+//展示 track 接口调用示例三日志内容{    "s":"31e3aa14-5241-490c-821c-a741e9bf0f87",    // t 为事件类型， track 接口调用发送的事件类型为 cstm    "t":"cstm",    "tm":1532085495251,    "d":"com.growingio.android.test",    // n 为 eventId 参数携带的值    "n":"loanAmount",    // var 为 eventLevelVariable 参数携带的值    "var":{        "gender":"male",        "age":"21"    },    "ptm":0,    // num 为 number 参数携带的值    "num":80000,    "gesid":18,    "esid":0,    "u":"b6247b01-a31a-3bc6-a391-4c456888c1ee"}
 ```
 
 {% hint style="info" %}
@@ -505,12 +338,7 @@ gio.track("loanAmount", 80000, jsonObject);
 发送一个转化信息用于高级归因分析，在添加代码之前必须在打点管理界面上声明转化变量。
 
 ```java
-// setEvar API原型
-GrowingIO gio = GrowingIO.getInstance();
-gio.setEvar(String key, String value);
-gio.setEvar(String key, Number value);
-gio.setEvar(String key, Boolean value);
-gio.setEvar(JSONObject conversionVariables);
+// setEvar API原型GrowingIO gio = GrowingIO.getInstance();gio.setEvar(String key, String value);gio.setEvar(String key, Number value);gio.setEvar(String key, Boolean value);gio.setEvar(JSONObject conversionVariables);
 ```
 
 **参数说明：**
@@ -551,18 +379,11 @@ gio.setEvar(JSONObject conversionVariables);
 </table>**示例代码：**
 
 ```java
-// setEvar API调用示例一
-GrowingIO gio = GrowingIO.getInstance();
-gio.setEvar("campaignId", "1234567890");
+// setEvar API调用示例一GrowingIO gio = GrowingIO.getInstance();gio.setEvar("campaignId", "1234567890");
 ```
 
 ```java
-// setEvar API调用示例二
-GrowingIO gio = GrowingIO.getInstance();
-JSONObject jsonObject = new JSONObject();
-jsonObject.put("campaignId", "1234567890");
-jsonObject.put("campaignOwner", "Li Si");
-gio.setEvar(jsonObject);
+// setEvar API调用示例二GrowingIO gio = GrowingIO.getInstance();JSONObject jsonObject = new JSONObject();jsonObject.put("campaignId", "1234567890");jsonObject.put("campaignOwner", "Li Si");gio.setEvar(jsonObject);
 ```
 
 **检验数据发送日志示例：** 
@@ -570,22 +391,7 @@ gio.setEvar(jsonObject);
 注意 `t` 等于`evar`字段，表示转化事件发送成功，只需注意 `var`字段，其它字段无需仔细验证。
 
 ```javascript
-{
-    "s":"e1c48845-dd60-4cf2-b1a5-a8e529d2188d",
-    // t 为事件类型， evar 为转化事件
-    "t":"evar",
-    "tm":1532338526083,
-    "d":"com.growingio.android.test",
-    "cs1":"GrowingIO",
-    // 转化变量
-    "var":{
-        "evarTest":111,
-        "campaignId":"1234567890",
-        "campaignOwner":"Li Si"
-    },
-    "gesid":300,
-    "esid":22
-}
+{    "s":"e1c48845-dd60-4cf2-b1a5-a8e529d2188d",    // t 为事件类型， evar 为转化事件    "t":"evar",    "tm":1532338526083,    "d":"com.growingio.android.test",    "cs1":"GrowingIO",    // 转化变量    "var":{        "evarTest":111,        "campaignId":"1234567890",        "campaignOwner":"Li Si"    },    "gesid":300,    "esid":22}
 ```
 
 {% hint style="info" %}
@@ -597,12 +403,7 @@ gio.setEvar(jsonObject);
 发送用户信息用于用户信息相关分析，在添加代码之前必须在打点管理界面上声明用户变量。
 
 ```java
-// people.set API原型
-GrowingIO gio = GrowingIO.getInstance();
-gio.setPeopleVariable(String key, String value);
-gio.setPeopleVariable(String key, Number value);
-gio.setPeopleVariable(String key, Boolean value);
-gio.setPeopleVariable(JSONObject peopleVariables);
+// people.set API原型GrowingIO gio = GrowingIO.getInstance();gio.setPeopleVariable(String key, String value);gio.setPeopleVariable(String key, Number value);gio.setPeopleVariable(String key, Boolean value);gio.setPeopleVariable(JSONObject peopleVariables);
 ```
 
 **参数说明：**
@@ -643,17 +444,11 @@ gio.setPeopleVariable(JSONObject peopleVariables);
 </table>**示例代码：**
 
 ```java
-// people.set API调用示例一
-GrowingIO gio = GrowingIO.getInstance();
-gio.setPeopleVariable("gender", "male");
+// people.set API调用示例一GrowingIO gio = GrowingIO.getInstance();gio.setPeopleVariable("gender", "male");
 ```
 
 ```java
-// people.set API调用示例二
-GrowingIO gio = GrowingIO.getInstance();
-jsonObject.put("gender", "male");
-jsonObject.put("age", "21");
-gio.setPeopleVariable(jsonObject);
+// people.set API调用示例二GrowingIO gio = GrowingIO.getInstance();jsonObject.put("gender", "male");jsonObject.put("age", "21");gio.setPeopleVariable(jsonObject);
 ```
 
 **检验数据发送日志示例：** 
@@ -661,21 +456,7 @@ gio.setPeopleVariable(jsonObject);
 注意 `t` 等于`ppl`字段，表示用户变量发送成功，只需注意 `var`字段，其它字段无需仔细验证。
 
 ```javascript
-{
-    "s":"a35872af-13df-4479-90bc-25558d12328e",
-    // t 为事件类型， pvar 为发送用户变量事件
-    "t":"ppl",
-    "tm":1532339208991,
-    "d":"com.growingio.android.test",
-    "cs1":"GrowingIO",
-    // 用户变量
-    "var":{
-        "gender":"male",
-        "age":"21"
-    },
-    "gesid":311,
-    "esid":0
-}
+{    "s":"a35872af-13df-4479-90bc-25558d12328e",    // t 为事件类型， pvar 为发送用户变量事件    "t":"ppl",    "tm":1532339208991,    "d":"com.growingio.android.test",    "cs1":"GrowingIO",    // 用户变量    "var":{        "gender":"male",        "age":"21"    },    "gesid":311,    "esid":0}
 ```
 
 {% hint style="info" %}
@@ -778,10 +559,7 @@ GrowingIO.getInstance().setVisitor(JSONObject visitorVar)
 </table>**示例代码：**
 
 ```java
-GrowingIO gio = GrowingIO.getInstance();
-jsonObject.put("gender", "male");
-jsonObject.put("age", "21");
-gio.setVisitor(jsonObject);
+GrowingIO gio = GrowingIO.getInstance();jsonObject.put("gender", "male");jsonObject.put("age", "21");gio.setVisitor(jsonObject);
 ```
 
 **检验数据发送日志示例：** 
@@ -789,21 +567,7 @@ gio.setVisitor(jsonObject);
 注意 `t` 等于`vstr`字段，表示访问用户变量发送成功，其它字段无需仔细验证。
 
 ```javascript
-{
-    "s":"d334b4a1-57eb-4bf4-b426-64c1cce5a5c0",
-    // t 为事件类型， vstr 为发送访问用户变量事件
-    "t":"vstr",
-    "tm":1532341259134,
-    "d":"com.growingio.android.test",
-    "cs1":"GrowingIO",
-    //访问用户变量
-    "var":{
-        "gender":"male",
-        "age":"21"
-    },
-    "gesid":322,
-    "esid":0
-}
+{    "s":"d334b4a1-57eb-4bf4-b426-64c1cce5a5c0",    // t 为事件类型， vstr 为发送访问用户变量事件    "t":"vstr",    "tm":1532341259134,    "d":"com.growingio.android.test",    "cs1":"GrowingIO",    //访问用户变量    "var":{        "gender":"male",        "age":"21"    },    "gesid":322,    "esid":0}
 ```
 
 ## 验证 SDK 是否正常工作
@@ -882,30 +646,7 @@ GrowingIO 提供了初始化配置项 API 和运行时 API 来自定义 SDK 的�
 #### 示例代码
 
 ```java
-public class MyApplication extends Application {
-    @Override
-    public void onCreate() {
-        GrowingIO.startWithConfiguration(this,new Configuration()
-            .setBulkSize(100)
-            .setCellularDataLimit(1000)
-            .setChannel("渠道号")
-            .setDebugMode(true)
-            .setDeeplinkCallback(new DeeplinkCallback() {
-                @Override
-                public void onReceive(Map<String, String> params, int error) {
-                ​    //接收参数，跳转 APP 内指定页面
-                }
-            })
-            .setDiagnose(false)
-            .setDisabled(false)
-            .setFlushInterval(1000)
-            .setSampling(0.34)
-            .setSessionInterval(23000)
-            .setTestMode(true)
-            .setMutiprocess(true)
-        );
-    }
-}
+public class MyApplication extends Application {    @Override    public void onCreate() {        GrowingIO.startWithConfiguration(this,new Configuration()            .setBulkSize(100)            .setCellularDataLimit(1000)            .setChannel("渠道号")            .setDebugMode(true)            .setDeeplinkCallback(new DeeplinkCallback() {                @Override                public void onReceive(Map<String, String> params, int error) {                ​    //接收参数，跳转 APP 内指定页面                }            })            .setDiagnose(false)            .setDisabled(false)            .setFlushInterval(1000)            .setSampling(0.34)            .setSessionInterval(23000)            .setTestMode(true)            .setMutiprocess(true)        );    }}
 ```
 
 \*\*\*\*
@@ -970,9 +711,7 @@ public class MyApplication extends Application {
 GrowingIO 为 APP 提供运行时随意调用的 API，使用方法如下：
 
 ```java
-// 得到 GrowingIO 实例后可以调用其中 API
-GrowingIO gio = GrowingIO.getInstance();
-gio.setUserId("张溪梦");
+// 得到 GrowingIO 实例后可以调用其中 APIGrowingIO gio = GrowingIO.getInstance();gio.setUserId("张溪梦");
 ```
 
 {% hint style="danger" %}

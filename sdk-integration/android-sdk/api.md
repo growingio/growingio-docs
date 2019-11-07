@@ -66,25 +66,7 @@ Android 2.7.8 SDK 为海外上架应用涉及采集用户 `androidId`, `imei`, `
 </table>**示例代码**
 
 ```groovy
-android {
-    ···
-}
-// 须位于 android 代码块下
-growingio {
-    defaultConfig {
-        imeiEnable true
-        androidIdEnable true
-        googleAdIdEnable true
-    }
-
-    buildTypes {
-        googlePlay {
-            imeiEnable false
-            andoridIdEnable false
-            googleAdIdEnable true
-        }
-    }
-}
+android {    ···}// 须位于 android 代码块下growingio {    defaultConfig {        imeiEnable true        androidIdEnable true        googleAdIdEnable true    }    buildTypes {        googlePlay {            imeiEnable false            andoridIdEnable false            googleAdIdEnable true        }    }}
 ```
 
 ## 初始化配置项 API
@@ -94,44 +76,7 @@ growingio {
 #### 示例代码
 
 ```java
-public class MyApplication extends Application {
-    @Override
-    public void onCreate() {
-        GrowingIO.startWithConfiguration(this,new Configuration()
-            .disableCellularImp()
-            .disableImageViewCollection(false)
-            .setBulkSize(100)
-            .setCellularDataLimit(1000)
-            .setChannel("渠道号")
-            .setDebugMode(true)
-            // 2.8.4 新增 appAwakePassedTime 参数: 单位毫秒，App 唤醒到收到 GIO callback 的时间，用以判断网络状态不好的情况，应用已经打开很久，才收到回调，开发人员决定是否收到参数后仍然跳转自定义的指定页面。当返回值为 0 的时候，为 DeepLink 方式打开。
-            .setDeeplinkCallback(new DeeplinkCallback() {
-                @Override
-                public void onReceive(Map<String, String> params, int error, long appAwakePassedTime) {
-        
-                }
-            })
-            .setDiagnose(false)
-            .setDisabled(false)
-            .setDisableImpression(false)
-            .setFlushInterval(1000)
-            .setMutiprocess(true)
-            .setSampling(0.34)
-            .setSessionInterval(23000)
-            .setTestMode(true)
-            .setThrottle(false)
-            .setTrackWebView(true)
-            .supportMultiProcessCircle(true)
-            .trackAllFragments()
-            //以下 Android 2.7.8 新增
-            .setImeiEnable(true)
-            .setGoogleAdIdEnable(true)
-            .setAndroidIdEnable(true)
-            //以下 Android 2.8.5 新增
-            .setOAIDEnable(true)
-        );
-    }
-}
+public class MyApplication extends Application {    @Override    public void onCreate() {        GrowingIO.startWithConfiguration(this,new Configuration()            .disableCellularImp()            .disableImageViewCollection(false)            .setBulkSize(100)            .setCellularDataLimit(1000)            .setChannel("渠道号")            .setDebugMode(true)            // 2.8.4 新增 appAwakePassedTime 参数: 单位毫秒，App 唤醒到收到 GIO callback 的时间，用以判断网络状态不好的情况，应用已经打开很久，才收到回调，开发人员决定是否收到参数后仍然跳转自定义的指定页面。当返回值为 0 的时候，为 DeepLink 方式打开。            .setDeeplinkCallback(new DeeplinkCallback() {                @Override                public void onReceive(Map<String, String> params, int error, long appAwakePassedTime) {                        }            })            .setDiagnose(false)            .setDisabled(false)            .setDisableImpression(false)            .setFlushInterval(1000)            .setMutiprocess(true)            .setSampling(0.34)            .setSessionInterval(23000)            .setTestMode(true)            .setThrottle(false)            .setTrackWebView(true)            .supportMultiProcessCircle(true)            .trackAllFragments()            //以下 Android 2.7.8 新增            .setImeiEnable(true)            .setGoogleAdIdEnable(true)            .setAndroidIdEnable(true)            //以下 Android 2.8.5 新增            .setOAIDEnable(true)        );    }}
 ```
 
 
@@ -221,9 +166,7 @@ public class MyApplication extends Application {
 GrowingIO 为 APP 提供运行时随意调用的 API，使用方法如下：
 
 ```java
-// 得到 GrowingIO 实例后可以调用其中 API
-GrowingIO gio = GrowingIO.getInstance();
-gio.setUserId("张溪梦");
+// 得到 GrowingIO 实例后可以调用其中 APIGrowingIO gio = GrowingIO.getInstance();gio.setUserId("张溪梦");
 ```
 
 {% hint style="danger" %}

@@ -63,9 +63,7 @@ user id
 Body由多个visitUserId组成，一次性最多上传 100 条，大小最大限制为 2M。示例如下：
 
 ```javascript
-{
-  "visitUserId":["abcdef","bcdefg",...]
-}
+{  "visitUserId":["abcdef","bcdefg",...]}
 ```
 
 #### 认证
@@ -75,13 +73,7 @@ Body由多个visitUserId组成，一次性最多上传 100 条，大小最大限
 > Java
 
 ```java
-public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {
-    String message = "projectId="+projectKeyId+"&visitUserId="+keyArray;
-    Mac hmac = Mac.getInstance("HmacSHA256");
-    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));
-    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));
-    return Hex.encodeHexString(signature);
-}
+public String authToken(String projectKeyId, String secretKey, String keyArray) throws Exception {    String message = "projectId="+projectKeyId+"&visitUserId="+keyArray;    Mac hmac = Mac.getInstance("HmacSHA256");    hmac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256"));    byte[] signature = hmac.doFinal(message.getBytes("UTF-8"));    return Hex.encodeHexString(signature);}
 ```
 
 > 其他语言可以参考[用户变量上传 API](user-property-upload.md#2-ren-zheng)

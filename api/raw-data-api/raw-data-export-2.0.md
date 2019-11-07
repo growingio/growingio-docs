@@ -92,16 +92,7 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 {% endapi-method-response-example-description %}
 
 ```
-{
-  "status": "",
-  "downloadLinks": [],
-  "exportType": "",
-  "dataType": "",
-  "exportDate": "",
-  "exportVersion": "",
-  "requestTime": "",
-  "errorMsg": ""
-}
+{  "status": "",  "downloadLinks": [],  "exportType": "",  "dataType": "",  "exportDate": "",  "exportVersion": "",  "requestTime": "",  "errorMsg": ""}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -160,25 +151,7 @@ GrowingIO 分配的公钥，请在 GrowingIO 后台项目管理页面获得。�
 {% endapi-method-response-example-description %}
 
 ```
-{
-    "status": "FINISHED",
-    "downloadLinks": {
-        "evar": [],
-        "pvar": [],
-        "action_tag": [],
-        "custom_event": [],
-        "page": [],
-        "ads_track_activation": [],
-        "visit": [],
-        "ads_track_click": [],
-        "action": []
-    },
-    "exportType": "hour",
-    "exportDate": "2018070100",
-    "exportVersion": "v2",
-    "requestTime": "2018-07-18 02:37",
-    "errorMsg": ""
-}
+{    "status": "FINISHED",    "downloadLinks": {        "evar": [],        "pvar": [],        "action_tag": [],        "custom_event": [],        "page": [],        "ads_track_activation": [],        "visit": [],        "ads_track_click": [],        "action": []    },    "exportType": "hour",    "exportDate": "2018070100",    "exportVersion": "v2",    "requestTime": "2018-07-18 02:37",    "errorMsg": ""}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

@@ -67,8 +67,7 @@ https://assets.giocdn.com/sdk/gio-minp.zip
 在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-minp/index.js").default;
-gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本' });
+var gio = require("utils/gio-minp/index.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本' });
 ```
 
 方式二：
@@ -76,21 +75,13 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-export default {
-    projectId: '你的 GrowingIO 项目ID',
-    appId: '你的小程序AppID',
-    version: '小程序版本'
-    // ...
-}
-
+export default {    projectId: '你的 GrowingIO 项目ID',    appId: '你的小程序AppID',    version: '小程序版本'    // ...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-minp/index.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
+var gio = require("utils/gio-minp/index.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
 ```
 
 #### 微信小程序原生框架+第三方插件
@@ -108,16 +99,13 @@ https://assets.giocdn.com/sdk/gio-minp.zip
 步骤一：在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-minp/index.js").default;
-gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', usePlugin: true });
-const App = global.GioApp;
+var gio = require("utils/gio-minp/index.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', usePlugin: true });const App = global.GioApp;
 ```
 
 步骤二：在每个page页面（新增页面也需要添加）的 .js 文件顶部添加如下代码
 
 ```javascript
-// 在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入）
-const Page = global.GioPage;
+// 在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入）const Page = global.GioPage;
 ```
 
 方式二：
@@ -125,31 +113,19 @@ const Page = global.GioPage;
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-export default {
-    projectId: '你的 GrowingIO 项目ID',
-    appId: '你的小程序AppID',
-    version: '小程序版本',
-    usePlugin: true 
-    // ...
-}
-
+export default {    projectId: '你的 GrowingIO 项目ID',    appId: '你的小程序AppID',    version: '小程序版本',    usePlugin: true     // ...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-minp/index.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
-// app.js 文件，在文件顶部 （其他代码之前）添加如下代码:
-const App = global.GioApp
+var gio = require("utils/gio-minp/index.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);// app.js 文件，在文件顶部 （其他代码之前）添加如下代码:const App = global.GioApp
 ```
 
 步骤三：在每个page页面（新增页面也需要添加）的 .js 文件顶部添加如下代码
 
 ```javascript
-// 在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入）
-const Page = global.GioPage;
+// 在每个Page页面的 .js 文件顶部（其他代码之前）添加如下代码。（请注意是每个页面都要引入）const Page = global.GioPage;
 ```
 
 #### taro框架
@@ -165,9 +141,7 @@ https://assets.giocdn.com/sdk/gio-minp.zip
 方式一：在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Taro from '@tarojs/taro';
-var gio = require("utils/gio-minp/index.js").default;
-gio('init','你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', taro: Taro });
+import Taro from '@tarojs/taro';var gio = require("utils/gio-minp/index.js").default;gio('init','你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', taro: Taro });
 ```
 
 方式二：
@@ -175,22 +149,13 @@ gio('init','你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小�
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-export default {
-    projectId: '你的 GrowingIO 项目ID',
-    appId: '你的小程序AppID',
-    version: '小程序版本',
-    taro: Taro,
-    // ...
-}
-
+export default {    projectId: '你的 GrowingIO 项目ID',    appId: '你的小程序AppID',    version: '小程序版本',    taro: Taro,    // ...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-minp/index.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
+var gio = require("utils/gio-minp/index.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
 ```
 
 #### wepy框架
@@ -206,9 +171,7 @@ https://assets.giocdn.com/sdk/gio-minp.esm.zip
 方式一：在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Taro from import Wepy from '@wepy/core';
-var gio = require("utils/gio-minp/index.js").default;
-gio('init','你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', wepy: Wepy });
+import Taro from import Wepy from '@wepy/core';var gio = require("utils/gio-minp/index.js").default;gio('init','你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', wepy: Wepy });
 ```
 
 方式二：
@@ -216,22 +179,13 @@ gio('init','你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小�
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-import Wepy from '@wepy/core';
-export default {
-    projectId: '你的 GrowingIO 项目ID',
-    appId: '你的小程序AppID',
-    version: '小程序版本',
-    wepy: Wepy,
-    // ...
-}
+import Wepy from '@wepy/core';export default {    projectId: '你的 GrowingIO 项目ID',    appId: '你的小程序AppID',    version: '小程序版本',    wepy: Wepy,    // ...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-minp/index.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
+var gio = require("utils/gio-minp/index.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
 ```
 
 #### mpvue框架 / uni-app 框架
@@ -247,12 +201,7 @@ https://assets.giocdn.com/sdk/gio-minp.esm.zip
 方式一：在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Vue from 'vue';
-import App from './App';
-App.mpType = 'app';
-var gio = require("utils/gio-minp/index.js").default;
-gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本',vue: Vue });
-
+import Vue from 'vue';import App from './App';App.mpType = 'app';var gio = require("utils/gio-minp/index.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本',vue: Vue });
 ```
 
 方式二：
@@ -260,24 +209,13 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-import Vue from 'vue';
-export default {
-    projectId: '你的 GrowingIO 项目ID',
-    appId: '你的小程序AppID',
-    version: '小程序版本',
-    vue: Vue,
-    // ...
-}
+import Vue from 'vue';export default {    projectId: '你的 GrowingIO 项目ID',    appId: '你的小程序AppID',    version: '小程序版本',    vue: Vue,    // ...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-minp/index.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
-import App from './App';
-App.mpType = 'app';
+var gio = require("utils/gio-minp/index.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);import App from './App';App.mpType = 'app';
 ```
 
 #### mpvue + 第三方插件
@@ -297,9 +235,7 @@ https://assets.giocdn.com/sdk/gio-minp.zip
 方式一：在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Cml from 'chameleon-runtime';
-var gio = require("utils/gio-minp/index.js").default;
-gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', cml: Cml });
+import Cml from 'chameleon-runtime';var gio = require("utils/gio-minp/index.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', cml: Cml });
 ```
 
 方式二：
@@ -307,22 +243,13 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-import Cml from 'chameleon-runtime';
-export default {
-    projectId: '你的 GrowingIO 项目ID',
-    appId: '你的小程序AppID',
-    version: '小程序版本',
-    cml: Cml,
-    // ...
-}
+import Cml from 'chameleon-runtime';export default {    projectId: '你的 GrowingIO 项目ID',    appId: '你的小程序AppID',    version: '小程序版本',    cml: Cml,    // ...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-minp/index.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
+var gio = require("utils/gio-minp/index.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
 ```
 
 ### **2、进行SDK的配置设置**
@@ -354,20 +281,13 @@ gio('setConfig', gioConfig);
 在 gioConfig.js 文件中将 getLocation 配置如下:
 
 ```text
-```
-getLocation: {          //是否自动获取用户的地理位置信息, 并设置获取方式
-   autoGet: true,       //默认不自动获取
-   type: 'gcj02'           //支持wgs84 | gcj02为火星坐标系, 默认wgs84
-},
-```
+```getLocation: {          //是否自动获取用户的地理位置信息, 并设置获取方式   autoGet: true,       //默认不自动获取   type: 'gcj02'           //支持wgs84 | gcj02为火星坐标系, 默认wgs84},```
 ```
 
 * 如果您的小程序在用户点击某些按钮时，才触发获取位置，则可以按照配置方式，在触发地理位置上报时，进行[用户位置的补发]()，从而增强用户地理位置的分析能力。
 
 ```javascript
-// 获取用户的地理信息
-// GrowingIO SDK 默认不会在小程序启动时获取用户的坐标信息。当用户访问到某一功能时需要位置信息时，可以调用以下位置接口，补发vst，采集位置信息，提升用户地域分布的分析准确性。
-gio('getLocation')
+// 获取用户的地理信息// GrowingIO SDK 默认不会在小程序启动时获取用户的坐标信息。当用户访问到某一功能时需要位置信息时，可以调用以下位置接口，补发vst，采集位置信息，提升用户地域分布的分析准确性。gio('getLocation')
 ```
 
 #### 获取用户的地理信息
@@ -406,9 +326,7 @@ forceLogin: true,      //是否强制要求用户登陆微信获取 openid。默
 ```
 
 ```javascript
-// ...
-// 当获取到 openid 后，调用以下方法
-gio("identify", openid, unionid);
+// ...// 当获取到 openid 后，调用以下方法gio("identify", openid, unionid);
 ```
 {% endhint %}
 
@@ -431,16 +349,7 @@ gio("identify", openid, unionid);
 当用户在你的小程序上登陆获取到 openid 后，可以用过 `identify` 接口绑定微信用户ID，后续在 GrowingIO 中获取更准确的微信访问用户量。示例代码如下，
 
 ```javascript
-wx.request({ 
-  url: 'https://YOUR_HOST_NAME/wechat/code2key',
-  method: 'GET',
-  data: { code: res.code }
-  success: res => 
-    var openid = res.data.openid;
-    var unionid = res.data.unionid;
-    // ...
-    gio('identify', res.data.openid, res.data.unionid)
-})
+wx.request({   url: 'https://YOUR_HOST_NAME/wechat/code2key',  method: 'GET',  data: { code: res.code }  success: res =>     var openid = res.data.openid;    var unionid = res.data.unionid;    // ...    gio('identify', res.data.openid, res.data.unionid)})
 ```
 
 #### 设置微信用户信息
@@ -448,11 +357,7 @@ wx.request({
 当用户在你的小程序上绑定微信信息后，可以通过 `setVisitor` 接口设置微信用户信息，后续在 GrowingIO 中分析这个数据。示例代码如下，
 
 ```javascript
-wx.getUserInfo({ 
-  success: res => 
-    // ...
-    gio('setVisitor', res.userInfo);
-})
+wx.getUserInfo({   success: res =>     // ...    gio('setVisitor', res.userInfo);})
 ```
 
 微信信息包含**微信昵称**、**微信头像**、**性别、微信所填国家、微信所填省份、微信所填城市**。
@@ -514,10 +419,7 @@ gio('setUserId', YOUR_USER_ID);
 tap 事件是手指触摸后马上离开时触发的事件。当 wxml 中的 view 绑定了 bindtap 事件以后，在事件处理函数执行的时候，SDK 会自动采集 tap 事件，发送数据包含但不限于以下信息：点击事件时间、事件发生所在页面、点击控件相关信息。比如如下，
 
 ```markup
-<view data-title='复仇者联盟3' data-index='1' bindtap='clickMovie'>
-    <image src='IMAGE—URL' mode='aspectFill'/>
-    <text>复仇者联盟3</text>
-</view>
+<view data-title='复仇者联盟3' data-index='1' bindtap='clickMovie'>    <image src='IMAGE—URL' mode='aspectFill'/>    <text>复仇者联盟3</text></view>
 ```
 
 注意这里的 `data-title` 和 `data-index` 属性，因为微信小程序的限制，无法采集到控件的内容和结构数据，所以在小程序 SDK 里面我们采取的是声明式编程，通过在 wxml 文件里面设置 data- 属性，可以给 view 控件添加额外的`内容`和`位置`属性，方便后续在分析时可以按照元素内容和元素位置做分析，对于列表式的组件特别有用和方便。
@@ -529,10 +431,7 @@ tap 事件是手指触摸后马上离开时触发的事件。当 wxml 中的 vie
 longpress 事件是手指触摸后，超过350ms再离开时触发的事件。当 wxml 的 view 绑定了 bindlongpress 事件以后，在事件处理函数执行的时候，SDK 会自动采集 longpress 事件，发送数据包含但不限于以下信息：点击事件时间、事件发生所在页面、点击控件相关信息。比如如下，
 
 ```markup
-<view data-title='复仇者联盟3' data-index='1' bindtap='clickMovie'>
-  <image src='IMAGE—URL' mode='aspectFill'/>
-  <text>复仇者联盟3</text>
-</view>
+<view data-title='复仇者联盟3' data-index='1' bindtap='clickMovie'>  <image src='IMAGE—URL' mode='aspectFill'/>  <text>复仇者联盟3</text></view>
 ```
 
 注意这里的 `data-title` 和 `data-index` 属性，因为微信小程序的限制，无法采集到控件的内容和结构数据，所以在小程序 SDK 里面我们采取的是声明式编程，通过在 wxml 文件里面设置 data- 属性，可以给 view 控件添加额外的`内容`和`位置`属性，方便后续在分析时可以按照元素内容和元素位置做分析，对于列表式的组件特别有用和方便。
@@ -544,17 +443,7 @@ longpress 事件是手指触摸后，超过350ms再离开时触发的事件。�
 change 事件是针对 checkbox, radio, picker-view 这些控件，当选择项发生改变时触发的事件。当 wxml 的 view 绑定了 bindchange 事件以后，在事件处理函数执行的时候，SDK 会自动采集 change 事件，发送数据包含但不限于以下信息：选择事件的发生时间、事件发生所在页面。如果设置了要采集内容，则也会包含选择项的内容信息。比如如下，
 
 ```markup
-<checkbox-group bindchange='checkboxChange' data-growing-track>
-  <label class='checkbox'>
-    <checkbox value='GrowingIO' checked='true' /> GrowingIO
-  </label>
-  <label class='checkbox'>
-    <checkbox value='Tencent' checked='false' /> 腾讯小程序分析工具
-  </label>
-  <label class='checkbox'>
-    <checkbox value='Google' checked='false' /> Google Analytics
-  </label>
-</checkbox-group>
+<checkbox-group bindchange='checkboxChange' data-growing-track>  <label class='checkbox'>    <checkbox value='GrowingIO' checked='true' /> GrowingIO  </label>  <label class='checkbox'>    <checkbox value='Tencent' checked='false' /> 腾讯小程序分析工具  </label>  <label class='checkbox'>    <checkbox value='Google' checked='false' /> Google Analytics  </label></checkbox-group>
 ```
 
 当用户选择了某项以后，因为这里设置了 `data-growing-track` 属性，所以会采集到这一项对应的 value 值。
@@ -564,13 +453,7 @@ change 事件是针对 checkbox, radio, picker-view 这些控件，当选择项�
 confirm 事件是对于 input 和 textarea 控件，当输入完成后触发的事件。当 wxml 的 view 绑定了 bindconfirm 事件以后，在事件处理函数执行的时候，SDK 会自动采集 confirm 事件，发送数据包含但不限于以下信息：输入事件的发生时间、事件发生所在页面。如果设置了要采集内容，则也会包含输入的内容。比如如下，
 
 ```markup
-<input class='new-todo'
-       value='{{ input }}'
-       placeholder='Anything here...'
-       data-growing-track='true'
-       bindinput='inputChangeHandle'
-       bindconfirm='addTodoHandle'
-/>
+<input class='new-todo'       value='{{ input }}'       placeholder='Anything here...'       data-growing-track='true'       bindinput='inputChangeHandle'       bindconfirm='addTodoHandle'/>
 ```
 
 当用户输入完成后，因为这里指定了 `data-growing-track` 属性，所以会采集到输入的内容。
@@ -580,11 +463,7 @@ confirm 事件是对于 input 和 textarea 控件，当输入完成后触发的�
 如果您的小程序使用了navigator组件，需要您手动绑定一个空的点击事GrowingIO才能实现跳转点击的采集。
 
 ```markup
-<navigator ...>
-  <view bindtap="nameForThisClickButton">
-     ...
-  </view>
-</navigator>
+<navigator ...>  <view bindtap="nameForThisClickButton">     ...  </view></navigator>
 ```
 
 ## 自定义事件和变量
@@ -625,17 +504,7 @@ gio('track', eventName: string, properties: object);
 示例：
 
 ```javascript
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-// 在 Page 的 clickBanner 函数里添加以下代码
-Page({
-  clickBanner(e) {
-    getApp().globalData.gio('track', 'clickBanner', { 
-      id: movie.id, 
-      title: movie.title, 
-      index: e.currentTarget.dataset.index 
-    });
-  }
-})
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 在 Page 的 clickBanner 函数里添加以下代码Page({  clickBanner(e) {    getApp().globalData.gio('track', 'clickBanner', {       id: movie.id,       title: movie.title,       index: e.currentTarget.dataset.index     });  }})
 ```
 
 ### 访问用户变量
@@ -657,12 +526,7 @@ gio('setVisitor', properties: object);
 示例：
 
 ```javascript
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-// 比如在针对不同的用户做某个 Campaign 的 A/B 测试
-getApp().globalData.gio('setVisitor', { 
-  campaign_id: 3, 
-  campaign_group: 'A 组用户'
-});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 比如在针对不同的用户做某个 Campaign 的 A/B 测试getApp().globalData.gio('setVisitor', {   campaign_id: 3,   campaign_group: 'A 组用户'});
 ```
 
 ### 注册用户变量
@@ -684,13 +548,7 @@ gio('setUser', properties: object)
 示例：
 
 ```javascript
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-getApp().globalData.gio('setUser', {
-  age: 30, 
-  level: '高级用户', 
-  company: 'GrowingIO', 
-  title: '工程师'
-});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面getApp().globalData.gio('setUser', {  age: 30,   level: '高级用户',   company: 'GrowingIO',   title: '工程师'});
 ```
 
 ### 页面级变量
@@ -712,17 +570,7 @@ gio('setPage', properties: object)
 示例：
 
 ```javascript
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-// 推荐在 Page#onShow 处理这个事件
-// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 type
-Page({
-  onShow() {
-    getApp().globalData.gio('setPage', { 
-      pageName: '电影列表页', 
-      type: this.data.type
-    });
-  }
-}
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 推荐在 Page#onShow 处理这个事件// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 typePage({  onShow() {    getApp().globalData.gio('setPage', {       pageName: '电影列表页',       type: this.data.type    });  }}
 ```
 
 ###  转化变量
@@ -744,10 +592,7 @@ gio('setEvar', properties: object)
 示例：
 
 ```javascript
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-getApp().globalData.gio('setEvar', { 
-  campaign: '活动A'
-});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面getApp().globalData.gio('setEvar', {   campaign: '活动A'});
 ```
 
 

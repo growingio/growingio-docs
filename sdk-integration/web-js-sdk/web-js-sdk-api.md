@@ -17,39 +17,7 @@
 ### 1.1 API 简介
 
 ```javascript
-// 初始化参数
-gio('init', projectId, options); 
-
-// 修改系统变量API
-gio('config', options);
-
-// 发送事件API
-gio('track', eventId);
-gio('track', eventId, number);
-gio('track', eventId, eventLevelVariables);
-gio('track', eventId, number, eventLevelVariables);
-
-// 发送页面级变量API
-gio('page.set', key, value);
-gio('page.set', pageLevelVariables);
-
-// 发送转化变量API
-gio('evar.set', key, value);
-gio('evar.set', conversionVariables);
-
-// 发送登录用户变量API
-gio('people.set', key, value);
-gio('people.set', customerVariables);
-
-// 发送访问用户变量API
-gio('visitor.set', key, value);
-gio('visitor.set', visitorVariables);
-
-// 设置登录用户ID
-gio('setUserId', userId); 
-
-// 清除登录用户ID
-gio('clearUserId');
+// 初始化参数gio('init', projectId, options); // 修改系统变量APIgio('config', options);// 发送事件APIgio('track', eventId);gio('track', eventId, number);gio('track', eventId, eventLevelVariables);gio('track', eventId, number, eventLevelVariables);// 发送页面级变量APIgio('page.set', key, value);gio('page.set', pageLevelVariables);// 发送转化变量APIgio('evar.set', key, value);gio('evar.set', conversionVariables);// 发送登录用户变量APIgio('people.set', key, value);gio('people.set', customerVariables);// 发送访问用户变量APIgio('visitor.set', key, value);gio('visitor.set', visitorVariables);// 设置登录用户IDgio('setUserId', userId); // 清除登录用户IDgio('clearUserId');
 ```
 
 ### 1.2 初始化 \(init\)​
@@ -62,14 +30,11 @@ gio('clearUserId');
 | options | JSON Object | 否 | 系统变量配置 |
 
 ```javascript
-//init API原型
-gio('init', projectId, options);
+//init API原型gio('init', projectId, options);
 ```
 
 ```javascript
-//init API调用示例
-//配置imp类型的数据关闭发送
-gio('init', '1234567890', {'imp':false});
+//init API调用示例//配置imp类型的数据关闭发送gio('init', '1234567890', {'imp':false});
 ```
 
 ### 1.3 设置登录用户 ID（setUserId）
@@ -81,13 +46,11 @@ gio('init', '1234567890', {'imp':false});
 | userId | String | 是 | 用户的登录用户ID |
 
 ```javascript
-//setUserId API原型
-gio('setUserId', userId);
+//setUserId API原型gio('setUserId', userId);
 ```
 
 ```javascript
-//setuserId API调用示例
-gio('setUserId', '1234567890');
+//setuserId API调用示例gio('setUserId', '1234567890');
 ```
 
 ### 1.4 清除登录用户 ID（clearUserId）
@@ -95,8 +58,7 @@ gio('setUserId', '1234567890');
 当用户登出之后调用 clearUserId ，清除已经设置的登录用户 ID 。
 
 ```javascript
-//clearUserId API原型和调用示例
-gio('clearUserId');
+//clearUserId API原型和调用示例gio('clearUserId');
 ```
 
 ### 1.5 设置登录用户级变量（people.set）
@@ -110,19 +72,15 @@ gio('clearUserId');
 | customerVariables | JSON Object | 否 | 包含登录用户变量的JSON对象 |
 
 ```javascript
-// people.set API原型
-gio('people.set', key, value);
-gio('people.set', customerVariables);
+// people.set API原型gio('people.set', key, value);gio('people.set', customerVariables);
 ```
 
 ```javascript
-// people.set API调用示例一
-gio('people.set', 'gender', 'male');
+// people.set API调用示例一gio('people.set', 'gender', 'male');
 ```
 
 ```javascript
-//people.set API调用示例二
-gio('people.set', {'gender':'male', 'age':'25'});
+//people.set API调用示例二gio('people.set', {'gender':'male', 'age':'25'});
 ```
 
 ### 1.6  设置访问用户级变量（visitor.set）
@@ -136,19 +94,15 @@ gio('people.set', {'gender':'male', 'age':'25'});
 | customerVariables | JSON Object | 否 | 包含访问用户变量的JSON对象 |
 
 ```javascript
-// visitor.set API原型
-gio('visitor.set', key, value);
-gio('visitor.set', visitorVariables);
+// visitor.set API原型gio('visitor.set', key, value);gio('visitor.set', visitorVariables);
 ```
 
 ```javascript
-// visitor.set API调用示例一
-gio('visitor.set', 'gender', 'male');
+// visitor.set API调用示例一gio('visitor.set', 'gender', 'male');
 ```
 
 ```javascript
-// visitor.set API调用示例二
-gio('visitor.set', {'gender':'male', 'age':'25'});
+// visitor.set API调用示例二gio('visitor.set', {'gender':'male', 'age':'25'});
 ```
 
 ### 1.7 设置页面级变量（page.set）
@@ -162,19 +116,15 @@ gio('visitor.set', {'gender':'male', 'age':'25'});
 | pageLevelVariables | JSON Object | 否 | 包含页面级变量的JSON对象，暨页面级别的信息 |
 
 ```javascript
-// page.set API原型
-gio('page.set', key, value);
-gio('page.set', pageLevelVariables);
+// page.set API原型gio('page.set', key, value);gio('page.set', pageLevelVariables);
 ```
 
 ```javascript
-// page.set API调用示例一
-gio('page.set', {'pageName': 'Home Page', 'author': 'Zhang San'});
+// page.set API调用示例一gio('page.set', {'pageName': 'Home Page', 'author': 'Zhang San'});
 ```
 
 ```javascript
-// page.set API调用示例二
-gio('page.set', 'author', 'Zhang San');
+// page.set API调用示例二gio('page.set', 'author', 'Zhang San');
 ```
 
 ### 1.8 设置转化变量（evar.set）
@@ -188,19 +138,15 @@ gio('page.set', 'author', 'Zhang San');
 | conversionVariables | JSON Object | 否 | 包含转化变量的JSON对象 |
 
 ```javascript
-// evar.set API原型
-gio('evar.set', key, value);
-gio('evar.set', conversionVariables);
+// evar.set API原型gio('evar.set', key, value);gio('evar.set', conversionVariables);
 ```
 
 ```javascript
-// evar.set API调用示例一
-gio('evar.set', 'campaignId'，'1234567890');
+// evar.set API调用示例一gio('evar.set', 'campaignId'，'1234567890');
 ```
 
 ```javascript
-// evar.set API调用示例二
-gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
+// evar.set API调用示例二gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
 ```
 
 ### 1.9 设置自定义事件和事件级变量（track）
@@ -214,24 +160,19 @@ gio('evar.set', {'campaignId': '1234567890', 'campaignOwner':'lisi'});
 | eventLevelVariables | JSON Object | 否 | 包含事件级变量的JSON对象，暨事件发生时所伴随的维度信息。 |
 
 ```javascript
-// track API原型
-gio('track', eventId, eventLevelVariables);
-gio('track', eventId, number, eventLevelVariables);
+// track API原型gio('track', eventId, eventLevelVariables);gio('track', eventId, number, eventLevelVariables);
 ```
 
 ```javascript
-// track API调用示例一
-gio('track', 'registerSuccess');
+// track API调用示例一gio('track', 'registerSuccess');
 ```
 
 ```javascript
-// track API调用示例二
-gio('track', 'registerSuccess', {'gender':'male', 'age':21});
+// track API调用示例二gio('track', 'registerSuccess', {'gender':'male', 'age':21});
 ```
 
 ```javascript
-// track API调用示例三
-gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zhejiang'});
+// track API调用示例三gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zhejiang'});
 ```
 
 ### 1.10 手动发送页面浏览事件 sendPage \(sendPage\)​
@@ -241,8 +182,7 @@ gio('track', 'loanAmount', 800000, {'loanType':'houseMortgage','province':'Zheji
 这时，可以调用GrowingIO提供的 sendPage 接口手动发送页面浏览事件。这个接口的调用将会发送出一条‘page’类型的数据，GIO 服务器在收到 page 类型的数据之后，页面浏览量这个预定义指标会加 1。
 
 ```javascript
-//sendPage API原型和调用示例
-gio('sendPage'); // 放在send之后
+//sendPage API原型和调用示例gio('sendPage'); // 放在send之后
 ```
 
 ### 1.11 GDPR 数据采集开关
@@ -252,10 +192,7 @@ GrowingIO 全面支持 [欧盟《一般数据保护条例》 \(GDPR\)](../privac
 * 关闭或开启全局数据采集
 
 ```javascript
-// 开启gdpr，停止数据采集 
-gio('config',{"dataCollect":"false"}); 
-// 关闭gdpr，开始数据采集 
-gio('config',{"dataCollect":"true"}); // 放在init和send之间
+// 开启gdpr，停止数据采集 gio('config',{"dataCollect":"false"}); // 关闭gdpr，开始数据采集 gio('config',{"dataCollect":"true"}); // 放在init和send之间
 ```
 
 * 获取访问用户 ID
@@ -269,11 +206,7 @@ gio('getVisitUserId'); // 放在send之后
 GrowingIO 的数据分析工具本身提供了例如 “访问来源”，“关键字”，“城市”,“操作系统"，”浏览器“等等这些维度。这些维度都可以和用户创建的指标进行多维的分析。但是因为每个公司的产品都有各自的用户维度，比如客户所服务的公司，用户正在使用的产品版本等等，为了能够让数据分析变得更加的灵活，我们在 JS SDK 中提供了用户自定义维度的 API 接口:
 
 ```javascript
-_vds.push(['setCS1', 'CS1的key', 'CS1的value']);
-_vds.push(['setCS2', 'CS2的key', 'CS2的value']);
-_vds.push(['setCS3', 'CS3的key', 'CS3的value']);
-...
-_vds.push(['setCS10', 'CS10的key', 'CS10的value']);
+_vds.push(['setCS1', 'CS1的key', 'CS1的value']);_vds.push(['setCS2', 'CS2的key', 'CS2的value']);_vds.push(['setCS3', 'CS3的key', 'CS3的value']);..._vds.push(['setCS10', 'CS10的key', 'CS10的value']);
 ```
 
 在 JS SDK 中，我们总计支持上传 10 个自定义维度 CS1 - CS10，**所有CS属性都必须是用户的属性，不能是订单 ID，商品ID 等和用户没有确定的关联关系的属性。**
@@ -297,28 +230,7 @@ _vds.push(['setCS10', 'CS10的key', 'CS10的value']);
 **CS5:** sales\_name:销售员小王
 
 ```javascript
-    <script type='text/javascript'>
-        var _vds = _vds || [];
-        window._vds = _vds;
-        (function(){
-          _vds.push(['setAccountId', '您的项目ID']);
-
-          _vds.push(['setCS1', 'user_id', '100324']);
-          _vds.push(['setCS2', 'company_id', '943123']);
-          _vds.push(['setCS3', 'user_name', '张溪梦']);
-          _vds.push(['setCS4', 'company_name', 'GrowingIO']);
-          _vds.push(['setCS5', 'sales_name', '销售员小王']);
-
-          (function() {
-            var vds = document.createElement('script');
-            vds.type='text/javascript';
-            vds.async = true;
-            vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'assets.growingio.com/vds.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(vds, s);
-          })();
-        })();
-    </script>
+    <script type='text/javascript'>        var _vds = _vds || [];        window._vds = _vds;        (function(){          _vds.push(['setAccountId', '您的项目ID']);          _vds.push(['setCS1', 'user_id', '100324']);          _vds.push(['setCS2', 'company_id', '943123']);          _vds.push(['setCS3', 'user_name', '张溪梦']);          _vds.push(['setCS4', 'company_name', 'GrowingIO']);          _vds.push(['setCS5', 'sales_name', '销售员小王']);          (function() {            var vds = document.createElement('script');            vds.type='text/javascript';            vds.async = true;            vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'assets.growingio.com/vds.js';            var s = document.getElementsByTagName('script')[0];            s.parentNode.insertBefore(vds, s);          })();        })();    </script>
 ```
 
 **需要注意，CS11~CS20 不支持在 SDK 中上传，必须通过服务器上传，具体请参考** [**用户变量上传 API**](https://docs.growingio.com/docs/api/user-property-upload#3-jiu-ban-ben-shang-chuan-jie-kou)\*\*\*\*

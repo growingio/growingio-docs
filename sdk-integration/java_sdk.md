@@ -6,40 +6,25 @@
 
 我们推荐使用 [Maven](http://search.maven.org/) 管理 Java 项目，请在 `pom.xml` 文件中，添加以下依赖信息，Maven 将自动获取Java SDK 并更新项目配置。
 
-{% code-tabs %}
-{% code-tabs-item title="pom.xml" %}
+{% tabs %}
+{% tab title="pom.xml" %}
 ```markup
 
-    <dependencies>
-      // ...
-      <dependency>
-        <groupId>io.growing.sdk.java</groupId>
-        <artifactId>growingio-java-sdk</artifactId>
-        <version>1.0.3</version>
-      </dependency>
-    </dependencies>
+    <dependencies>      // ...      <dependency>        <groupId>io.growing.sdk.java</groupId>        <artifactId>growingio-java-sdk</artifactId>        <version>1.0.3</version>      </dependency>    </dependencies>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 若出现依赖冲突的问题（例如运行时找不到类），可以使用 `standalone` 版本：
 
-{% code-tabs %}
-{% code-tabs-item title="pom.xml" %}
+{% tabs %}
+{% tab title="pom.xml" %}
 ```markup
 
-    <dependencies>
-      // ...
-      <dependency>
-        <groupId>io.growing.sdk.java</groupId>
-        <artifactId>growingio-java-sdk</artifactId>
-        <version>1.0.3</version>
-        <classifier>standalone</classifier>
-      </dependency>
-    </dependencies>
+    <dependencies>      // ...      <dependency>        <groupId>io.growing.sdk.java</groupId>        <artifactId>growingio-java-sdk</artifactId>        <version>1.0.3</version>        <classifier>standalone</classifier>      </dependency>    </dependencies>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 目前，Java SDK 支持的Java版本为 Java 1.6+。
 
@@ -47,89 +32,36 @@
 
 在Java SDK的jar包中，包含了一个默认的配置文件
 
-{% code-tabs %}
-{% code-tabs-item title="gio\_default.properties" %}
+{% tabs %}
+{% tab title="gio\_default.properties" %}
 ```text
-#项目采集端地址
-api.host=https://api.growingio.com
-
-#项目ID
-#project.id=填写您项目的AccountID
-
-#消息发送间隔时间,单位ms（默认 100）
-send.msg.interval=100
-
-#消息发送线程数量
-send.msg.thread=3
-
-#消息队列大小
-msg.store.queue.size=500
-
-# 数据压缩 false:不压缩, true:压缩
-# 不压缩可节省cpu，压缩可省带宽
-compress=true
-
-# 日志输出级别（debug | error）
-logger.level=debug
-
-# 自定义日志输出实现类
-logger.implemention=io.growing.sdk.java.logger.GioLoggerImpl
-
-# 运行模式，test：仅输出消息体，不发送消息，production：发送消息
-run.mode=test
-
-#http 连接超时时间，默认2000ms
-#connection.timeout=2000
-
-#http 连接读取时间，默认2000ms
-#read.timeout=2000
+#项目采集端地址api.host=https://api.growingio.com#项目ID#project.id=填写您项目的AccountID#消息发送间隔时间,单位ms（默认 100）send.msg.interval=100#消息发送线程数量send.msg.thread=3#消息队列大小msg.store.queue.size=500# 数据压缩 false:不压缩, true:压缩# 不压缩可节省cpu，压缩可省带宽compress=true# 日志输出级别（debug | error）logger.level=debug# 自定义日志输出实现类logger.implemention=io.growing.sdk.java.logger.GioLoggerImpl# 运行模式，test：仅输出消息体，不发送消息，production：发送消息run.mode=test#http 连接超时时间，默认2000ms#connection.timeout=2000#http 连接读取时间，默认2000ms#read.timeout=2000
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 其中，开发者需要根据自己的情况修改配置参数，保存为gio.properties，并放置在自己Java程序的classpath之中。例如：
 
-{% code-tabs %}
-{% code-tabs-item title="gio.properties" %}
+{% tabs %}
+{% tab title="gio.properties" %}
 ```text
-#项目采集端地址
-api.host=https://api.growingio.com
-
-#项目ID
-project.id=xxxxxxxxx
-
-# 日志输出级别
-logger.level=error
-
-# 运行模式，test：仅输出消息体，不发送消息，production：发送消息
-run.mode=production
+#项目采集端地址api.host=https://api.growingio.com#项目IDproject.id=xxxxxxxxx# 日志输出级别logger.level=error# 运行模式，test：仅输出消息体，不发送消息，production：发送消息run.mode=production
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Java SDK会优先读取gio.properties中的配置
 
 ## 调用SDK API发送事件
 
-{% code-tabs %}
-{% code-tabs-item title="SDK-Demo.java" %}
+{% tabs %}
+{% tab title="SDK-Demo.java" %}
 ```text
-//事件行为消息体
-GIOEventMessage eventMessage = new GIOEventMessage.Builder()
-    .eventTime(System.currentTimeMillis())            // 事件时间，默认为系统时间（选填）
-    .eventKey("BuyProduct")                           // 事件标识 (必填)
-    .loginUserId("417abcabcabcbac")                   // 登录用户ID (必填)
-    .addEventVariable("product_name", "苹果")          // 事件级变量 (选填)
-    .addEventVariable("product_classify", "水果")      // 事件级变量 (选填)
-    .addEventVariable("product_price", 14)            // 事件级变量 (选填)
-    .build();
-
-//上传事件行为消息到服务器
-GrowingAPI.send(eventMessage);
+//事件行为消息体GIOEventMessage eventMessage = new GIOEventMessage.Builder()    .eventTime(System.currentTimeMillis())            // 事件时间，默认为系统时间（选填）    .eventKey("BuyProduct")                           // 事件标识 (必填)    .loginUserId("417abcabcabcbac")                   // 登录用户ID (必填)    .addEventVariable("product_name", "苹果")          // 事件级变量 (选填)    .addEventVariable("product_classify", "水果")      // 事件级变量 (选填)    .addEventVariable("product_price", 14)            // 事件级变量 (选填)    .build();//上传事件行为消息到服务器GrowingAPI.send(eventMessage);
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## 程序调试
 

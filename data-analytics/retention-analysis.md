@@ -216,11 +216,7 @@ c.可以选择的最远日期从该项目生效日期开始；
 设置方案：选择了特定的 "起始行为"和 "留存行为"，目标用户设定为 "新访问用户"，维度对比设置如下：
 
 ```text
-维度对比 > App 版本：
- 1 全部
- 2 2.1
- 3 2.2
- 4 2.3
+维度对比 > App 版本： 1 全部 2 2.1 3 2.2 4 2.3
 ```
 
 ![](https://assets.growingio.com/docs/retention/%E5%9B%BE15%EF%BC%9A%E7%BB%B4%E5%BA%A6%E5%AF%B9%E6%AF%94.png)
@@ -242,11 +238,7 @@ c.可以选择的最远日期从该项目生效日期开始；
 设置方法：
 
 ```text
-对比不同行为的回访：
- 1 功能A
- 2 功能B
- 3 功能C
- 4 功能D
+对比不同行为的回访： 1 功能A 2 功能B 3 功能C 4 功能D
 ```
 
 ![](https://assets.growingio.com/docs/retention/%E5%9B%BE12%EF%BC%9A%E5%8A%9F%E8%83%BD%E5%AF%B9%E6%AF%94%E6%A1%88%E4%BE%8B%E5%9B%BE.png)
@@ -264,11 +256,7 @@ c.可以选择的最远日期从该项目生效日期开始；
 设置方法：
 
 ```text
-起始行为：签到奖励
-
-对比留存行为：
- 1 签到奖励
- 2 购买商品
+起始行为：签到奖励对比留存行为： 1 签到奖励 2 购买商品
 ```
 
 ![](https://assets.growingio.com/docs/retention/%E5%9B%BE13%EF%BC%9A%E5%AF%B9%E6%AF%94%E7%95%99%E5%AD%98%E8%A1%8C%E4%B8%BA.png)
@@ -285,12 +273,7 @@ c.可以选择的最远日期从该项目生效日期开始；
 设置方法：
 
 ```text
-留存行为：投资/购买
-
-对比起始行为：
- 1 A 类优惠券 
- 2 B 类优惠券
- 3 C 类优惠券
+留存行为：投资/购买对比起始行为： 1 A 类优惠券  2 B 类优惠券 3 C 类优惠券
 ```
 
 ![](https://assets.growingio.com/docs/retention/%E5%9B%BE14%EF%BC%9A%E5%AF%B9%E6%AF%94%E8%B5%B7%E5%A7%8B%E8%A1%8C%E4%B8%BA.png)

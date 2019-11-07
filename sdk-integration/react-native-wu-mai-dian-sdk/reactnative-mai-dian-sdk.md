@@ -24,17 +24,7 @@ description: >-
 将版本号更改为`RN-track-2.8.0`
 
 ```groovy
-apply plugin: 'com.android.application'
-android {
-    defaultConfig {
-        resValue("string", "growingio_project_id", "您的项目ID")
-        resValue("string", "growingio_url_scheme", "您的URL Scheme")
-    }
-}
-dependencies {
-    //GrowingIO RN 埋点 SDK
-    implementation 'com.growingio.android:vds-android-agent:RN-track-2.8.5@aar'
-}
+apply plugin: 'com.android.application'android {    defaultConfig {        resValue("string", "growingio_project_id", "您的项目ID")        resValue("string", "growingio_url_scheme", "您的URL Scheme")    }}dependencies {    //GrowingIO RN 埋点 SDK    implementation 'com.growingio.android:vds-android-agent:RN-track-2.8.5@aar'}
 ```
 
 ### 2. 重要配置项
@@ -44,16 +34,7 @@ dependencies {
 在项目的Application中，添加`GrowingIOPackage`：
 
 ```java
-public class MainApplication extends Application implements ReactApplication {
-    @Override
-    protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(), 
-          // 此处加入GrowingIOPackage
-          new GrowingIOPackage()
-      );
-    }
-}
+public class MainApplication extends Application implements ReactApplication {    @Override    protected List<ReactPackage> getPackages() {      return Arrays.<ReactPackage>asList(          new MainReactPackage(),           // 此处加入GrowingIOPackage          new GrowingIOPackage()      );    }}
 ```
 
 
@@ -118,12 +99,7 @@ react-native link react-native-growingio
 2. Android [查看日志： ](../android-sdk/android-sdk.md#she-zhi-debug-mo-shi)设置 TestMode  和 Debug Mode ：
 
 ```java
-GrowingIO.startWithConfiguration(this,new Configuration()
-    //BuildConfig.DEBUG 这样配置就不会上线忘记关闭
-    .setDebugMode(BuildConfig.DEBUG)
-    .setTestMode(true)
-    ...
-    );
+GrowingIO.startWithConfiguration(this,new Configuration()    //BuildConfig.DEBUG 这样配置就不会上线忘记关闭    .setDebugMode(BuildConfig.DEBUG)    .setTestMode(true)    ...    );
 ```
 
     3. iOS 查看日志：iOS 在 AppDelegate 文件中配置：

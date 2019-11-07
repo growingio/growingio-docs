@@ -27,8 +27,7 @@ curl --compressed https://assets.giocdn.com/sdk/gio-qq-minp.js -o gio-qq-minp.js
 在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-qq-minp.js").default;
-gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本' });
+var gio = require("utils/gio-qq-minp.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本' });
 ```
 
 方式二：
@@ -36,21 +35,13 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本'
-...
-}
-
+export default {projectId: '你的 GrowingIO 项目ID',appId: '你的小程序AppID',version: '小程序版本'...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-qq-minp.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
+var gio = require("utils/gio-qq-minp.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
 ```
 
 #### Taro 框架
@@ -68,9 +59,7 @@ curl --compressed https://assets.giocdn.com/sdk/gio-qq-minp.js -o gio-qq-minp.js
 在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Taro from '@tarojs/taro';
-var gio = require("utils/gio-qq-minp.js").default;
-gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', taro: Taro });
+import Taro from '@tarojs/taro';var gio = require("utils/gio-qq-minp.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', taro: Taro });
 ```
 
 方式二：
@@ -78,22 +67,13 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-import Taro from '@tarojs/taro';
-export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本',
-taro: Taro,
-...
-}
+import Taro from '@tarojs/taro';export default {projectId: '你的 GrowingIO 项目ID',appId: '你的小程序AppID',version: '小程序版本',taro: Taro,...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-qq-minp.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
+var gio = require("utils/gio-qq-minp.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
 ```
 
 #### uni-app 框架
@@ -111,11 +91,7 @@ curl --compressed https://assets.giocdn.com/sdk/gio-qq-minp.esm.js -o gio-qq-min
 在根目录 app.js 文件的顶部添加跟踪代码
 
 ```javascript
-import Vue from 'vue';
-import App from './App';
-App.mpType = 'app';
-var gio = require("utils/gio-qq-minp.js").default;
-gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', vue: Vue });
+import Vue from 'vue';import App from './App';App.mpType = 'app';var gio = require("utils/gio-qq-minp.js").default;gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小程序版本', vue: Vue });
 ```
 
 方式二：
@@ -123,22 +99,13 @@ gio('init', '你的 GrowingIO 项目ID', '你的小程序AppID', { version: '小
 步骤一：新建一个 gioConfig.js 文件，并且配置 gioConfig.js 文件中的 必要 配置参数
 
 ```javascript
-import Vue from 'vue';
-export default {
-projectId: '你的 GrowingIO 项目ID',
-appId: '你的小程序AppID',
-version: '小程序版本',
-vue: Vue
-...
-}
+import Vue from 'vue';export default {projectId: '你的 GrowingIO 项目ID',appId: '你的小程序AppID',version: '小程序版本',vue: Vue...}
 ```
 
 步骤二：在根目录 app.js文件的顶部添加跟踪代码
 
 ```javascript
-var gio = require("utils/gio-qq-minp.js").default;
-var gioConfig = require("你的 gioConfig.js 文件地址").default;
-gio('setConfig', gioConfig);
+var gio = require("utils/gio-qq-minp.js").default;var gioConfig = require("你的 gioConfig.js 文件地址").default;gio('setConfig', gioConfig);
 ```
 
 
@@ -184,17 +151,7 @@ forceLogin 是一个需要特别注意的参数。GrowingIO 默认会在小程�
 当用户在你的小程序上登陆获取到 openid 后，可以用过 identify 接口绑定QQ用户ID，后续在 GrowingIO 中获取更准确的QQ访问用户量。示例代码如下：
 
 ```text
-qq.request({
-  url: 'https://YOUR_HOST_NAME/wechat/code2key',
-  method: 'GET',
-  data: { code: res.code },
-  success: function(res) {
-    var openid = res.data.openid;
-    var unionid = res.data.unionid;
-    ...
-    gio('identify', openid, unionid);
-  }
-})
+qq.request({  url: 'https://YOUR_HOST_NAME/wechat/code2key',  method: 'GET',  data: { code: res.code },  success: function(res) {    var openid = res.data.openid;    var unionid = res.data.unionid;    ...    gio('identify', openid, unionid);  }})
 ```
 
 #### 设置QQ用户信息
@@ -202,12 +159,7 @@ qq.request({
 当用户在你的小程序上绑定QQ信息后，可以通过 setVisitor 接口设置QQ用户信息，后续在 GrowingIO 中分析这个数据。示例代码如下，
 
 ```text
-qq.getUserInfo({
-  success: function(res) {
-    ...
-    gio('setVisitor', res.userInfo);
-  }
-})
+qq.getUserInfo({  success: function(res) {    ...    gio('setVisitor', res.userInfo);  }})
 ```
 
 QQ信息包含**QQ昵称**、**QQ头像**、**性别**、**QQ所填国家**、**QQ所填省份**、**QQ所填城市**。  
@@ -266,17 +218,7 @@ gio('track', eventName: string, properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-// 在 Page 的 clickBanner 函数里添加以下代码
-Page({
-  clickBanner(e) {
-    getApp().globalData.gio('track', 'clickBanner', { 
-      id: movie.id, 
-      title: movie.title, 
-      index: e.currentTarget.dataset.index 
-    });
-  }
-})
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 在 Page 的 clickBanner 函数里添加以下代码Page({  clickBanner(e) {    getApp().globalData.gio('track', 'clickBanner', {       id: movie.id,       title: movie.title,       index: e.currentTarget.dataset.index     });  }})
 ```
 
 ### 访问用户变量
@@ -298,12 +240,7 @@ gio('setVisitor', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-// 比如在针对不同的用户做某个 Campaign 的 A/B 测试
-getApp().globalData.gio('setVisitor', { 
-  campaign_id: 3, 
-  campaign_group: 'A 组用户'
-});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 比如在针对不同的用户做某个 Campaign 的 A/B 测试getApp().globalData.gio('setVisitor', {   campaign_id: 3,   campaign_group: 'A 组用户'});
 ```
 
 ### 注册用户变量
@@ -325,13 +262,7 @@ gio('setUser', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-getApp().globalData.gio('setUser', { 
-  age: 30, 
-  level: '高级用户', 
-  company: 'GrowingIO', 
-  title: '工程师'
-});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面getApp().globalData.gio('setUser', {   age: 30,   level: '高级用户',   company: 'GrowingIO',   title: '工程师'});
 ```
 
 ### 页面级变量
@@ -353,17 +284,7 @@ gio('setPage', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-// 推荐在 Page#onShow 处理这个事件
-// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 type
-Page({
-  onShow() {
-    getApp().globalData.gio('setPage', { 
-      pageName: '电影列表页', 
-      type: this.data.type
-    });
-  }
-}
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面// 推荐在 Page#onShow 处理这个事件// 下面假设我在 GrowingIO 后台已经配置了两个页面级变量 pageName 和 typePage({  onShow() {    getApp().globalData.gio('setPage', {       pageName: '电影列表页',       type: this.data.type    });  }}
 ```
 
 ###  转化变量
@@ -385,10 +306,7 @@ gio('setEvar', properties: object)
 示例：
 
 ```text
-// 假设初始化后把 gio 对象放在 App 的 globalData 里面
-getApp().globalData.gio('setEvar', { 
-  campaign: '活动A'
-});
+// 假设初始化后把 gio 对象放在 App 的 globalData 里面getApp().globalData.gio('setEvar', {   campaign: '活动A'});
 ```
 
 

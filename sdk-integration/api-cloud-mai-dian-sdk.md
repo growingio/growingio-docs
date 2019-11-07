@@ -15,22 +15,7 @@ description: GrowingIO 埋点 SDK 仅自动采集设备信息和您埋点内容�
 • 可选参数: trackerHost, reportHost, dataHost, gtaHost, wsHost, zone
 
 ```markup
-<feature name="GrowingIO">
-<param name="android_accountId" value="xxxxx"/>
-<param name="ios_accountId" value="xxxx"/>
-<param name="ios_urlScheme" value="xx ios项目的urlScheme  xx"/>
-<param name="android_urlScheme" value="xx android项目的urlScheme  xx"/>
-<param name="trackerHost" value="xxxxx"/>
-<param name="reportHost" value="xxxxx"/>
-<param name="dataHost" value="xxxxx"/>
-<param name="gtaHost" value="xxxxx"/>
-<param name="wsHost" value="xxxxx"/>
-<param name="zone" value="xxxxx"/>
-<param name="channel" value="xxxx"/>
-<param name="debug" value="true or false"/>
-</feature>
-<preference name="urlScheme" value=" xx ios项目的urlScheme  x " />
-<preference name="urlScheme" value=" xx android项目的urlScheme  x " />
+<feature name="GrowingIO"><param name="android_accountId" value="xxxxx"/><param name="ios_accountId" value="xxxx"/><param name="ios_urlScheme" value="xx ios项目的urlScheme  xx"/><param name="android_urlScheme" value="xx android项目的urlScheme  xx"/><param name="trackerHost" value="xxxxx"/><param name="reportHost" value="xxxxx"/><param name="dataHost" value="xxxxx"/><param name="gtaHost" value="xxxxx"/><param name="wsHost" value="xxxxx"/><param name="zone" value="xxxxx"/><param name="channel" value="xxxx"/><param name="debug" value="true or false"/></feature><preference name="urlScheme" value=" xx ios项目的urlScheme  x " /><preference name="urlScheme" value=" xx android项目的urlScheme  x " />
 ```
 
     **注意preference的urlScheme需要配置两个， 一个为Android项目的， 另一个为IOS项目的， 如果只有一个平台填写自己相应平台的即可, 同理feature中的android\_urlScheme与ios\_urlScheme**
@@ -78,11 +63,7 @@ gio.init();
        **此接口为Android初始化， 在require后调用，iOS不需要，iOS已自动初始化**建议在require GrowingIO时调用此接口
 
 ```javascript
- vargio =null;
- apiready=function(){
-     gio =api.require('GrowingIO');
-     gio.init();
- }
+ vargio =null; apiready=function(){     gio =api.require('GrowingIO');     gio.init(); }
 ```
 
 
@@ -100,9 +81,7 @@ gio.setGeoLocation(location);
 调用示例：
 
 ```javascript
-var gio = api.require('GrowingIO');  //引用模块
-var param = {"longitude": longitude, "latitude": latitude}
-gio.setGeoLocation(param);
+var gio = api.require('GrowingIO');  //引用模块var param = {"longitude": longitude, "latitude": latitude}gio.setGeoLocation(param);
 ```
 
 
@@ -149,12 +128,7 @@ gio.track(event, callback);
 </table>调用示例：
 
 ```javascript
-var gio = api.require('GrowingIO');  //引用模块
-gio.track({
-        eventId: 'GIOKey'
-    },function(ret, err){
-        //回调函数事件处理
-});
+var gio = api.require('GrowingIO');  //引用模块gio.track({        eventId: 'GIOKey'    },function(ret, err){        //回调函数事件处理});
 ```
 
 ### 
@@ -196,12 +170,7 @@ gio.setEvar(conversionVariables,callback);
 </table>调用示例：
 
 ```javascript
-var gio = api.require('GrowingIO');  //引用模块
-gio.setEvar({
-           "ekey":"evalue","Date":"2018-07-02"
-      },function(ret, err){
-           //回调函数事件处理
-});
+var gio = api.require('GrowingIO');  //引用模块gio.setEvar({           "ekey":"evalue","Date":"2018-07-02"      },function(ret, err){           //回调函数事件处理});
 ```
 
 ### 
@@ -243,12 +212,7 @@ gio.setPeopleVariable(peopleVariables,callback);
 </table>调用示例：
 
 ```javascript
-var gio = api.require('GrowingIO');  //引用模块
-gio.setPeopleVariable({
-           "ekey":"evalue","Date":"2018-07-02"
-      },function(ret, err){
-            //回调函数事件处理
-  });
+var gio = api.require('GrowingIO');  //引用模块gio.setPeopleVariable({           "ekey":"evalue","Date":"2018-07-02"      },function(ret, err){            //回调函数事件处理  });
 ```
 
 ### 
@@ -290,12 +254,7 @@ gio.setUserId(userIdObject,callback);
 </table>调用示例：
 
 ```javascript
-var gio = api.require('GrowingIO');  //引用模块
-  gio.setUserId({
-             "userId":"GIO"
-        },function(ret, err){
-             //回调函数事件处理
-   });
+var gio = api.require('GrowingIO');  //引用模块  gio.setUserId({             "userId":"GIO"        },function(ret, err){             //回调函数事件处理   });
 ```
 
 ### 
@@ -331,10 +290,7 @@ gio.clearUserId(callback);
 </table>调用示例：
 
 ```javascript
-var gio = api.require('GrowingIO');  //引用模块
-gio.clearUserId(function(ret, err){
-             //回调函数事件处理
-});
+var gio = api.require('GrowingIO');  //引用模块gio.clearUserId(function(ret, err){             //回调函数事件处理});
 ```
 
 ### 
@@ -370,8 +326,7 @@ gio.setVisitor(visitorVar);
 </table>调用示例：
 
 ```javascript
-var gio = api.require('GrowingIO');  //引用模块
-gio.setVisitor({"gender":"male","age":21});
+var gio = api.require('GrowingIO');  //引用模块gio.setVisitor({"gender":"male","age":21});
 ```
 
 

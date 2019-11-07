@@ -58,19 +58,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% endapi-method-response-example-description %}
 
 ```
-[
-  {
-    "id": "Dashboard Uid",
-    "name": "我的看板",
-    "type": "看板类型", // normal: 普通看板, realtimeV2: 实时看板
-    "createdAt": "2019-01-01",
-    "updatedAt": "2019-01-02",
-    "scope": "看板所属", // global: 全局, project: 项目, user: 个人
-    "updater": "Dashboard Last Updator",
-    "creator": "Dashboard Creator"
-  },
-  ...
-]
+[  {    "id": "Dashboard Uid",    "name": "我的看板",    "type": "看板类型", // normal: 普通看板, realtimeV2: 实时看板    "createdAt": "2019-01-01",    "updatedAt": "2019-01-02",    "scope": "看板所属", // global: 全局, project: 项目, user: 个人    "updater": "Dashboard Last Updator",    "creator": "Dashboard Creator"  },  ...]
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -118,34 +106,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% endapi-method-response-example-description %}
 
 ```
-{
-  "id": "Dashboard Uid",
-  "name": "Dashboard Name",
-  "charts": [
-    {
-      "id": "Chart Uid",
-      "name": "Chart Name",
-      "createor": "Chart Creator",
-      "createdAt": "Created Time",
-      "resource_type": "chart"
-    },
-    {
-      "id": "Funnel Uid",
-      "name": "Chart Name",
-      "createor": "Chart Creator",
-      "createdAt": "Created Time",
-      "resource_type": "funnel"
-    }
-    {
-      "id": "Retention Uid",
-      "name": "Chart Name",
-      "createor": "Chart Creator",
-      "createdAt": "Created Time",
-      "resource_type": "retention"
-    }
-    ...
-  ]
-}
+{  "id": "Dashboard Uid",  "name": "Dashboard Name",  "charts": [    {      "id": "Chart Uid",      "name": "Chart Name",      "createor": "Chart Creator",      "createdAt": "Created Time",      "resource_type": "chart"    },    {      "id": "Funnel Uid",      "name": "Chart Name",      "createor": "Chart Creator",      "createdAt": "Created Time",      "resource_type": "funnel"    }    {      "id": "Retention Uid",      "name": "Chart Name",      "createor": "Chart Creator",      "createdAt": "Created Time",      "resource_type": "retention"    }    ...  ]}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -211,49 +172,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% endapi-method-response-example-description %}
 
 ```
-{
-    "id":  "Chart  Uid",
-    "name":  "Chart  Name",
-    "startTime":  1462118400000,
-    "endTime":  1462118400000,
-    "interval":  86400000,
-    "aggregator": {    // 当大数字图时返回该字段
-        "values": [
-            27557,    // 本周期聚合值
-            25409     // 上周期聚合值
-        ]
-    }
-    "meta":  [
-        {  "name":  "目标用户",  "dimension":  true},
-        {  "name":  "城市",  "dimension":  true  },
-        {  "name":  "浏览器",  "dimension":  true  },
-        {  "name":  "Metric  1",  "metric":  true  },
-        {  "name":  "Metric  2",  "metric":  true  }
-    ],
-    "data":  [
-        //  线图
-        [目标用户,  timestamp,  metric1,  metric2],
-        [目标用户,  timestamp,  metric1,  metric2]
-​
-        //  横向柱图
-        [目标用户,  dimension_v1,  metric1],
-        [目标用户,  dimension_v2,  metric1]
-​
-        //  纵向柱图
-        [目标用户,  timestamp,  metric1,  metrics2],
-        [目标用户,  timestamp,  metric1,  metrics2]
-​
-        //  表格
-        [目标用户,  dimension1_v1,  dimension2_v1,  metric1,  metric2],
-        [目标用户,  dimension1_v2,  dimension2_v1,  metric1,  metric2]
-​
-        //  大数字
-        [目标用户,  timestamp,  metric1]
-
-        //  气泡图
-        [目标用户,  dimension1_v1,  dimension2_v1,  metric1,  metric2]
-    ]
-}
+{    "id":  "Chart  Uid",    "name":  "Chart  Name",    "startTime":  1462118400000,    "endTime":  1462118400000,    "interval":  86400000,    "aggregator": {    // 当大数字图时返回该字段        "values": [            27557,    // 本周期聚合值            25409     // 上周期聚合值        ]    }    "meta":  [        {  "name":  "目标用户",  "dimension":  true},        {  "name":  "城市",  "dimension":  true  },        {  "name":  "浏览器",  "dimension":  true  },        {  "name":  "Metric  1",  "metric":  true  },        {  "name":  "Metric  2",  "metric":  true  }    ],    "data":  [        //  线图        [目标用户,  timestamp,  metric1,  metric2],        [目标用户,  timestamp,  metric1,  metric2]​        //  横向柱图        [目标用户,  dimension_v1,  metric1],        [目标用户,  dimension_v2,  metric1]​        //  纵向柱图        [目标用户,  timestamp,  metric1,  metrics2],        [目标用户,  timestamp,  metric1,  metrics2]​        //  表格        [目标用户,  dimension1_v1,  dimension2_v1,  metric1,  metric2],        [目标用户,  dimension1_v2,  dimension2_v1,  metric1,  metric2]​        //  大数字        [目标用户,  timestamp,  metric1]        //  气泡图        [目标用户,  dimension1_v1,  dimension2_v1,  metric1,  metric2]    ]}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -319,29 +238,7 @@ GrowingIO分配的公匙，见API认证文档
 {% endapi-method-response-example-description %}
 
 ```
-{
-"id":  "Funnel Uid",
-"name":  "Funnel Name",
-"conversionWindow":  1,
-"startTime":  1571068800000,
-"endTime":  1572278399999,
-"interval":  86400000,
-"meta":  [
-    {"name":"目标用户","dimension":true},
-    {"name":"时间","dimension":true},
-    {"name":"总转化率","metric":true},
-    {"name":"第一步人数","metric":true},
-    {"name":"第一步转化率","metric":true},
-    ...
-    {"name":"最后一步人数","metric":true},
-    {"name":"最后一步转化率","metric":true}
-]
-"data":  [
-    [目标用户, 时间, 总转化率, 第一步人数, ... , 最后一步转化率],
-    [目标用户, 时间, 总转化率, 第一步人数, ... , 最后一步转化率],
-    ...
-]
-}
+{"id":  "Funnel Uid","name":  "Funnel Name","conversionWindow":  1,"startTime":  1571068800000,"endTime":  1572278399999,"interval":  86400000,"meta":  [    {"name":"目标用户","dimension":true},    {"name":"时间","dimension":true},    {"name":"总转化率","metric":true},    {"name":"第一步人数","metric":true},    {"name":"第一步转化率","metric":true},    ...    {"name":"最后一步人数","metric":true},    {"name":"最后一步转化率","metric":true}]"data":  [    [目标用户, 时间, 总转化率, 第一步人数, ... , 最后一步转化率],    [目标用户, 时间, 总转化率, 第一步人数, ... , 最后一步转化率],    ...]}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -407,35 +304,7 @@ GrowingIO分配的公匙，见API认证文档
 {% endapi-method-response-example-description %}
 
 ```
-{
-    "id":  "Retention Uid",
-    "name":  "Retention Name",
-    "range":  "day",
-    "startTime":  1569686400000,
-    "endTime":  1572278399999,
-    "interval":  86400000,
-    "meta":  [
-        {"name":"目标用户","dimension":true},
-        {"name":"对比值","dimension":true},
-        {"name":"用户行为","dimension":true},
-        {"name":"时间","dimension":true},
-        {"name":"留存人数","metric":true},
-        {"name":"当日","metric":true},
-        {"name":"当日留存率","metric":true},
-        {"name":"次日","metric":true},
-        {"name":"次日留存率","metric":true},
-        {"name":"2日后","metric":true},
-        {"name":"2日后留存率","metric":true},
-        . . .
-        {"name":"29日后","metric":true},
-        {"name":"29日后留存率","metric":true}
-    ],
-    "data":  [
-        [目标用户,对比值,用户行为,时间,留存,...,29日后留存],
-        . . .,
-        [目标用户,对比值,用户行为,时间,留存,...,29日后留存]
-    ]
-}
+{    "id":  "Retention Uid",    "name":  "Retention Name",    "range":  "day",    "startTime":  1569686400000,    "endTime":  1572278399999,    "interval":  86400000,    "meta":  [        {"name":"目标用户","dimension":true},        {"name":"对比值","dimension":true},        {"name":"用户行为","dimension":true},        {"name":"时间","dimension":true},        {"name":"留存人数","metric":true},        {"name":"当日","metric":true},        {"name":"当日留存率","metric":true},        {"name":"次日","metric":true},        {"name":"次日留存率","metric":true},        {"name":"2日后","metric":true},        {"name":"2日后留存率","metric":true},        . . .        {"name":"29日后","metric":true},        {"name":"29日后留存率","metric":true}    ],    "data":  [        [目标用户,对比值,用户行为,时间,留存,...,29日后留存],        . . .,        [目标用户,对比值,用户行为,时间,留存,...,29日后留存]    ]}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -483,23 +352,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% endapi-method-response-example-description %}
 
 ```
-[
-  {
-    "id": "Segmentation Uid",
-    "name": "Segmentation Name",
-    "userType": 'u',
-    "userNum": 1230,
-    "updatedAt": "2016-08-03"
-  },
-  {
-    "id": "Segmentation Uid",
-    "name": "Segmentation Name",
-    "userType": 'cs1',
-    "userNum": 1230,
-    "updatedAt": "2016-08-03"
-  },
-  ...
-]
+[  {    "id": "Segmentation Uid",    "name": "Segmentation Name",    "userType": 'u',    "userNum": 1230,    "updatedAt": "2016-08-03"  },  {    "id": "Segmentation Uid",    "name": "Segmentation Name",    "userType": 'cs1',    "userNum": 1230,    "updatedAt": "2016-08-03"  },  ...]
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -547,8 +400,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% endapi-method-response-example-description %}
 
 ```
-cs1    name    
-12249    GrowingIO
+cs1    name    12249    GrowingIO
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -596,8 +448,7 @@ GrowingIO 分配的公钥，见 API 认证文档
 {% endapi-method-response-example-description %}
 
 ```
-ruleId,eventName,eventType
-f2503720,元素_注册按钮,clck
+ruleId,eventName,eventTypef2503720,元素_注册按钮,clck
 ```
 {% endapi-method-response-example %}
 
@@ -607,10 +458,7 @@ f2503720,元素_注册按钮,clck
 {% endapi-method-response-example-description %}
 
 ```
-{
-  "message": "Unauthorized",
-  "errors": []
-}
+{  "message": "Unauthorized",  "errors": []}
 ```
 {% endapi-method-response-example %}
 
@@ -620,15 +468,7 @@ f2503720,元素_注册按钮,clck
 {% endapi-method-response-example-description %}
 
 ```
-{
-  "message": "Request timeout",
-  "errors": [
-    {
-      "code": "request_timeout",
-      "message": "Request timeout in 5000 milliseconds"
-    }
-  ]
-}
+{  "message": "Request timeout",  "errors": [    {      "code": "request_timeout",      "message": "Request timeout in 5000 milliseconds"    }  ]}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

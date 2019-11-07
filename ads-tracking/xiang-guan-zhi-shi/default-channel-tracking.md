@@ -158,21 +158,6 @@ POST **https://gta.growingio.com/api/v1/projects/project\_id/activities**
 #### 5.3 接口请求示例 <a id="53"></a>
 
 ```text
-POST /api/v1/projects/nxog09md/activities HTTP/1.1
-Host:  gta.growingio.com
-Content-Type: application/json
-X-Client-Id: zzzzzzzzzzzzn5cvuvzzzzzzzzz //来自于授权
-Authorization: 1yL0Y3C8hm5zPwMDdgsnBBB0tZarChOnpBek057MKqhqkqvPdYyebOHtl5xANeF //来自于授权
-Cache-Control: no-cache
-
-{
-        "advertiser": "none",
-        "href": "http://m.youlanw.com/sh",
-        "name": "12.16增长_Hello_World大会",
-        "platform": "web",
-        "utmCampaign": "增长大会活动首页",
-        "utmMedium": "CPC_3",
-        "utmSource": "广点通"
-}
+POST /api/v1/projects/nxog09md/activities HTTP/1.1Host:  gta.growingio.comContent-Type: application/jsonX-Client-Id: zzzzzzzzzzzzn5cvuvzzzzzzzzz //来自于授权Authorization: 1yL0Y3C8hm5zPwMDdgsnBBB0tZarChOnpBek057MKqhqkqvPdYyebOHtl5xANeF //来自于授权Cache-Control: no-cache{        "advertiser": "none",        "href": "http://m.youlanw.com/sh",        "name": "12.16增长_Hello_World大会",        "platform": "web",        "utmCampaign": "增长大会活动首页",        "utmMedium": "CPC_3",        "utmSource": "广点通"}
 ```
 
