@@ -78,7 +78,7 @@ description: 我们一直在迭代！
 
 **关键词：GIO 看数助手 \| 小程序**
 
-![](.gitbook/assets/image%20%28291%29.png)
+![](.gitbook/assets/image%20%28292%29.png)
 
 「GIO看数助手」小程序，随时随地用微信小程序看数据！
 
@@ -138,7 +138,7 @@ description: 我们一直在迭代！
 
 我们为**运营**和**产品**优化了用户分群的维度筛选功能，支持按照 like（包含），not like\(不包含）来进行维度值条件的筛选，提高筛选效率。
 
-![](.gitbook/assets/image%20%28220%29.png)
+![](.gitbook/assets/image%20%28221%29.png)
 
 * **小游戏demo**
 
@@ -174,7 +174,7 @@ description: 我们一直在迭代！
 
 加入**“关于我们”**导航菜单，让用户更了解清楚我们。
 
-![](.gitbook/assets/image%20%28220%29.png)
+![](.gitbook/assets/image%20%28221%29.png)
 
 * **小程序demo**
 
@@ -184,7 +184,7 @@ description: 我们一直在迭代！
 
 #### **关键词：小程序用户分群 \| 实时**
 
-![](.gitbook/assets/image%20%28212%29.png)
+![](.gitbook/assets/image%20%28213%29.png)
 
 * **小程序-用户列表**
 
@@ -204,13 +204,13 @@ description: 我们一直在迭代！
 
 #### **关键词：预置看板权限 \| 历史用户上传**
 
-![](.gitbook/assets/image%20%28238%29.png)
+![](.gitbook/assets/image%20%28239%29.png)
 
 * **预置看板权限**
 
 我们为**企业权限管理用户**优化了预置看板的权限设置功能。超级管理员可以设置首页侧边预置看板的可见用户的范围。
 
-![](.gitbook/assets/image%20%28335%29.png)
+![](.gitbook/assets/image%20%28336%29.png)
 
 * **历史注册用户ID以及注册日期支持上传**
 
@@ -240,7 +240,7 @@ description: 我们一直在迭代！
 
 我们为**运营和产品**优化了用户分群详情的用户群对比功能，更新后，可以支持对比任意两个分群的核心行为差异，例如：对比购买转化和未转化用户群。[点击详情查看更多](data-analytics/user-segmentation.md#2-4)
 
-![](.gitbook/assets/image%20%28218%29.png)
+![](.gitbook/assets/image%20%28219%29.png)
 
 * **小程序分享分析**
 

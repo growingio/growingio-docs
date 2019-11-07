@@ -83,6 +83,7 @@
   * [iOS SDK](sdk-integration/ios-sdk/README.md)
     * [iOS 无埋点SDK](sdk-integration/ios-sdk/ios-sdk-2.x.md)
     * [iOS SDK API](sdk-integration/ios-sdk/ios-sdk-api.md)
+    * [iOS 半自动采集浏览事件](sdk-integration/ios-sdk/ios-ban-zi-dong-cai-ji-liu-lan-shi-jian.md)
     * [iOS SDK 1.X旧版本升级指导](sdk-integration/ios-sdk/ios-sdk-1.x-jiu-ban-ben-sheng-ji-zhi-dao.md)
     * [iOS 埋点SDK](sdk-integration/ios-sdk/ios-mai-dian-sdk.md)
     * [iOS SDK 常见问题](sdk-integration/ios-sdk/ios-sdk-chang-jian-wen-ti.md)

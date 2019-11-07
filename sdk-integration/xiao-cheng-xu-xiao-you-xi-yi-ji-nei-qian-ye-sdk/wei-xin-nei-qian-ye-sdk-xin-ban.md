@@ -152,7 +152,7 @@ wx.getUserInfo({  success: res =>     // ...    gio('setVisitor', res.userInfo);
 
 微信信息包含**微信昵称**、**微信头像**、**性别、微信所填国家、微信所填省份、微信所填城市**。
 
-![](../../.gitbook/assets/image%20%28305%29.png)
+![](../../.gitbook/assets/image%20%28306%29.png)
 
 ### 登录用户ID <a id="deng-lu-yong-hu-id"></a>
 

@@ -68,7 +68,7 @@ appcan.ready(function() {    //appcan.initBounce();    initGio();})function init
 * 添加新产品：登录官网 -&gt; 点击项目选择框  -&gt; 点击“设置”icon -&gt; 点击“新建应用”  -&gt; 选择添加 iOS 应用 -&gt; 填写“应用名称”，点击下一步 -&gt; 在第二段中标黄字体。
 * 现有产品：登录官网  -&gt;   点击“设置”icon  -&gt;  点击“应用管理”  -&gt;  找到对应产品的 URL Scheme
 
-![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../.gitbook/assets/image%20%28214%29.png)
+![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../.gitbook/assets/image%20%28215%29.png)
 
 #### \(2\) 添加 URL Scheme
 
