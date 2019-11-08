@@ -7,7 +7,7 @@ description: 半自动浏览事件能够携带用户添加的自定义事件和�
 ## 更新日志
 
 {% hint style="info" %}
-最低支持版本为 **无埋点 SDK 2.8.2** ，React Native 无埋点 SDK 目前还不支持。
+React Native 无埋点 SDK 目前还不支持。
 {% endhint %}
 
 | 无埋点 SDK 版本   | ReleaseNote |
