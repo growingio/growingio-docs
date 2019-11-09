@@ -46,11 +46,13 @@ dependencies {
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.growingio.testdemo">
 
+    <!-- GIO 需要的权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!--非危险权限，不需要运行时请求，Manifest文件中添加即可-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- GIO 需要的权限 -->
 
     <!--请注意<application/>标签中的name属性值（这里为android:name=".MyApplication"）必须为您的Application类-->
     <application
