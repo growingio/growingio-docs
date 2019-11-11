@@ -77,7 +77,7 @@ growingio {
     buildTypes {
         googlePlay { 
             imeiEnable false
-            ndoridIdEnable false 
+            androidIdEnable false 
             googleAdIdEnable true 
         }
     }
