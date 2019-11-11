@@ -39,7 +39,7 @@ XPath 的规则是：
 |          逻辑或，将多个路径合并到一起
 ```
 
-![XPath &#x56FE;&#x793A;](../.gitbook/assets/image%20%28316%29.png)
+![XPath &#x56FE;&#x793A;](../.gitbook/assets/image%20%28317%29.png)
 
 如果您依然半知半解，请遵循以下原则也可： 
 

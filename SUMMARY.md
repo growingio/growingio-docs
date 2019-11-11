@@ -66,6 +66,7 @@
     * [创建小程序的推广码](ads-tracking/xiang-guan-zhi-shi/miniprogram-qrcode.md)
     * [移动端转化归因](ads-tracking/xiang-guan-zhi-shi/mobile-conversion-attribution.md)
     * [默认的渠道来源跟踪](ads-tracking/xiang-guan-zhi-shi/default-channel-tracking.md)
+    * [DeepLink 启用新域名](ads-tracking/xiang-guan-zhi-shi/deeplink-qi-yong-xin-yu-ming.md)
   * [广告监测FAQ](ads-tracking/guang-gao-jian-ce-faq.md)
 * [SDK 文档](sdk-integration/README.md)
   * [SDK 简介与安全性说明](sdk-integration/privacy.md)
