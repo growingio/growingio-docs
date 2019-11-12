@@ -16,11 +16,11 @@ description: 目前各个平台兼容范围明细，范围之外的 SDK 暂不�
   <tbody>
     <tr>
       <td style="text-align:left">Android &#x65E0;&#x57CB;&#x70B9; SDK</td>
-      <td style="text-align:left">Android 4.2 - 9.0</td>
+      <td style="text-align:left">Android 4.2 - 10.0</td>
     </tr>
     <tr>
       <td style="text-align:left">Android &#x57CB;&#x70B9; SDK</td>
-      <td style="text-align:left">Android 4.2 - 9.0</td>
+      <td style="text-align:left">Android 4.2 - 10.0</td>
     </tr>
     <tr>
       <td style="text-align:left">iOS &#x65E0;&#x57CB;&#x70B9; SDK</td>
