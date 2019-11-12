@@ -57,7 +57,7 @@ applinks:datayi.cn
 
 1、在 App Links 配置下重新获取 PathPattern 信息，其中将会包含支持新域名的代码片段。
 
-![](../../.gitbook/assets/image%20%2837%29.png)
+![](../../.gitbook/assets/image%20%2838%29.png)
 
 2、在 Manifest.xml 中重新配置 Intent Filter 代码，将代码片段更新到您的 Manifest.xml 当中。
 

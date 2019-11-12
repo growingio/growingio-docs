@@ -61,6 +61,7 @@
     * [维度配置](ads-tracking/qi-ta-gong-neng/wei-du-pei-zhi.md)
     * [权限配置](ads-tracking/qi-ta-gong-neng/quan-xian-pei-zhi.md)
     * [反作弊规则](ads-tracking/qi-ta-gong-neng/fan-zuo-bi-gui-ze.md)
+    * [深度链接配置](ads-tracking/qi-ta-gong-neng/shen-du-lian-jie-pei-zhi.md)
   * [相关知识](ads-tracking/xiang-guan-zhi-shi/README.md)
     * [UTM 参数使用指南](ads-tracking/xiang-guan-zhi-shi/utm-parameters.md)
     * [创建小程序的推广码](ads-tracking/xiang-guan-zhi-shi/miniprogram-qrcode.md)
