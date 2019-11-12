@@ -14,7 +14,7 @@ description: GrowingIO 无埋点 SDK 会自动采集用户行为数据、页面�
 
 ## **组件化SDK**
 
-GrowingIO iOS SDK 2.8.5 包含以下2个组件SDK:
+GrowingIO iOS SDK 2.8.6 包含以下2个组件SDK:
 
 •  GrowingCoreKit \(组件基础库,具备分析功能\)
 
@@ -43,7 +43,7 @@ GrowingIO iOS SDK 2.8.5 包含以下2个组件SDK:
 
 #### （2）手动集成 SDK 
 
-* 下载 iOS SDK 以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.8.5.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.8.5.zip)，[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.8.5.zip)
+* 下载 iOS SDK 以下包：[GrowingHeader](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-PublicHeader-2.8.6.zip) ，[GrowingCoreKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.8.6.zip)，[GrowingAutoTrackKit](https://assets.growingio.com/sdk/ios/GrowingIO-iOS-AutoTrackKit-2.8.6.zip)
 * 解压 iOS SDK 压缩文件
 *  将`Growing.h`，`GrowingCoreKit.framework`，`GrowingAutoTrackKit.framework`添加到iOS工程中。
 
@@ -211,7 +211,10 @@ SDK 会自动采集H5页面的数据，不需要特殊配置。
 
 ### 采集GPS数据
 
-如果您的应用有相应权限，SDK 将自动采集您的GPS数据。
+如果您的应用有相应权限，SDK 将自动采集您的GPS数据。如果不想采集可以手动关闭采集GPS数据，`SDK 2.8.6`以上版本支持。
+
+  `//设置为NO，将关闭GPS采集     
+ +(void)setEnableLocationTrack:(BOOL)enable;`
 
 ### 启用Hashtag识别
 

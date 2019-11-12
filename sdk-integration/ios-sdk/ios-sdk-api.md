@@ -273,6 +273,16 @@ description: >-
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x91C7;&#x96C6;push&#x63A8;&#x9001;&#x70B9;&#x51FB;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x91C7;&#x96C6;</td>
     </tr>
+    <tr>
+      <td style="text-align:left">setEnableLocationTrack</td>
+      <td style="text-align:left">Yes</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x91C7;&#x96C6;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x91C7;&#x96C6;&#xFF0C;2.8.6&#x4EE5;&#x4E0A;&#x652F;&#x6301;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">getEnableLocationTrack</td>
+      <td style="text-align:left">&#x65E0;</td>
+      <td style="text-align:left">&#x83B7;&#x53D6;&#x662F;&#x5426;&#x91C7;&#x96C6;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#xFF0C;2.8.6&#x4EE5;&#x4E0A;&#x652F;&#x6301;</td>
+    </tr>
   </tbody>
 </table>### ​ 自定义事件和变量API 
 
