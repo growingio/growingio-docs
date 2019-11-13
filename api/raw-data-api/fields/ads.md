@@ -2,6 +2,10 @@
 
 ## ads\_track\_activation——广告激活事件
 
+激活事件指GrowingIO 移动端Android/iOS sdk采集上报的激活事件数据。
+
+ 如果激活事件能归因到某次点击事件，其中linkId,campaignId,channelId,linkName,campaignName,channelName,adsVariable 是对应点击事件的链接信息。
+
 | 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | visitUserId | userId | string\(64\) | 访问用户ID（visit user id） | fc55728b-41ab-42ff-8b1f-714e44c65fd6 | 匿名的访问用户ID，由GrowingIO自动生成。 |
@@ -23,6 +27,8 @@
 | adsVariable | N/A | Map&lt;String, String&gt; | 链接维度参数 | {''city" -&gt; "beijing"} | 2018/8/7 开始生效 |
 
 ## ads\_track\_click——广告点击事件
+
+点击事件指Growingio广告监测链接收到\(点击\)访问数据。 其中的idfa,imei,uuid,androidId，如果有通常是由渠道方通过监测链接发送过来的数据。
 
 | 原始数据导出2.0字段名称 | 原始数据导出1.0字段名称 | 字段格式 | 字段说明 | 示例值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
