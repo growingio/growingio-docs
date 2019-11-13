@@ -240,9 +240,9 @@ gio('setUserId', YOUR_USER_ID);
 
 当集成成功后，需要回到 GrowingIO SDK 集成页面，点击右下角“**检测数据”**。请在添加了跟踪代码的字节跳动小程序重新启动几次，发送数据给 GrowingIO，完成安装最后一步。
 
-![](../../.gitbook/assets/image%20%28373%29.png)
+![](../../.gitbook/assets/image%20%28374%29.png)
 
-![](../../.gitbook/assets/image%20%28203%29.png)
+![](../../.gitbook/assets/image%20%28204%29.png)
 
 
 

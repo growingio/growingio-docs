@@ -72,7 +72,7 @@ GrowingIO iOS SDK 2.8.6 包含以下2个组件SDK:
 
 * 添加编译参数，并注意大小写：
 
-![](../../.gitbook/assets/image%20%28282%29.png)
+![](../../.gitbook/assets/image%20%28283%29.png)
 
 ### 2. 设置 URL Scheme
 
@@ -81,7 +81,7 @@ GrowingIO iOS SDK 2.8.6 包含以下2个组件SDK:
 * 添加新产品：登录官网 -&gt; 点击项目选择框  -&gt; 点击“设置”icon -&gt; 点击“新建应用”  -&gt; 选择添加 iOS 应用 -&gt; 填写“应用名称”，点击下一步 -&gt; 在第二段中标黄字体。
 * 现有产品：登录官网  -&gt;   点击“设置”icon  -&gt;  点击“应用管理”  -&gt;  找到对应产品的 URL Scheme
 
-![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%28221%29.png)
+![&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%28222%29.png)
 
 ####    2**.2  添加 URL Scheme（growing.xxxxxxxxxxxxxxxx）到项目中，以便唤醒您的程序进行圈选**
 
@@ -125,7 +125,7 @@ GrowingIO iOS SDK 2.8.6 包含以下2个组件SDK:
 
 ![&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x9875;&#x9762;&#x5165;&#x53E3;](../../.gitbook/assets/image%20%2829%29.png)
 
-![&#x9879;&#x76EE;ID&#x67E5;&#x770B;](../../.gitbook/assets/image%20%28139%29.png)
+![&#x9879;&#x76EE;ID&#x67E5;&#x770B;](../../.gitbook/assets/image%20%28140%29.png)
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -355,13 +355,13 @@ GrowingIO SDK  针对欧盟区的一般数据保护法\(GDPR\)提供了以下的
 iOS SDK 不支持通知展现的事件采集，但是 Android SDK 支持，这里为了满足大部分客户都有 Android 和 iOS 两个应用的情况，演示创建 `notificaion_show` 。
 {% endhint %}
 
-![&#x521B;&#x5EFA;&#x901A;&#x77E5;&#x7684;&#x4E8B;&#x4EF6;&#x7EA7;&#x53D8;&#x91CF;](../../.gitbook/assets/image%20%28117%29.png)
+![&#x521B;&#x5EFA;&#x901A;&#x77E5;&#x7684;&#x4E8B;&#x4EF6;&#x7EA7;&#x53D8;&#x91CF;](../../.gitbook/assets/image%20%28118%29.png)
 
-![&#x521B;&#x5EFA;&#x901A;&#x77E5;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;](../../.gitbook/assets/image%20%28131%29.png)
+![&#x521B;&#x5EFA;&#x901A;&#x77E5;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;](../../.gitbook/assets/image%20%28132%29.png)
 
 然后创建事件分析，等候片刻即可看到数据
 
-![&#x521B;&#x5EFA;&#x63A8;&#x9001;&#x4E8B;&#x4EF6;&#x5206;&#x6790;](../../.gitbook/assets/image%20%28383%29.png)
+![&#x521B;&#x5EFA;&#x63A8;&#x9001;&#x4E8B;&#x4EF6;&#x5206;&#x6790;](../../.gitbook/assets/image%20%28384%29.png)
 
 
 

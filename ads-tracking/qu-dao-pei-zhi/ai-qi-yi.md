@@ -2,11 +2,11 @@
 
 1、在 GIO 广告监测下创建监测链接，渠道选择为“爱奇艺”，生成监测链接。
 
-![](../../.gitbook/assets/image%20%28405%29.png)
+![](../../.gitbook/assets/image%20%28406%29.png)
 
 2、在爱奇艺配置后台找到转化回传配置界面，如下图所示：
 
-![](../../.gitbook/assets/image%20%28248%29.png)
+![](../../.gitbook/assets/image%20%28249%29.png)
 
 3、选择转化目标，并将 GrowingIO 生成的监测代码填入「点击监测地址」中，提交配置。
 
