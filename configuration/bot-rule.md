@@ -15,9 +15,11 @@
 
 ### 2.对数据分析的影响 <a id="2"></a>
 
-![](https://docs.growingio.com/.gitbook/assets/botruleimpactondatavisualizationtools.png)
+GrowingIO 爬虫规则会过滤事件分析、漏斗分析、分群、细查等数据分析工具中的数据。
 
-GrowingIO 爬虫规则会过滤单图，漏斗流程，分群，细查，实时等数据工具中的数据。 
+![](../.gitbook/assets/pa-chong-gui-ze-sheng-xiao-tu.png)
 
-**但是出于性能等方面的考虑，目前爬虫规则并没有过回溯功能中的数据。**
+{% hint style="info" %}
+**出于性能等方面的考虑，目前爬虫规则并没有过回溯功能中的数据。**
+{% endhint %}
 
