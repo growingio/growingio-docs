@@ -4,10 +4,6 @@ description: 最有效的转化分析利器
 
 # 漏斗分析
 
-> 📖 [**漏斗分析使用手册**](https://s.growingio.com/9PXbR0%20)
->
-> 📽 [**漏斗分析教学视频**](https://s.growingio.com/kKdDjv)
-
 * [1.简介](funnel-analysis.md#1-jian-jie)
 * [2.使用场景和案例](funnel-analysis.md#2-shi-yong-chang-jing-he-an-li)
   * [2.1 案例](funnel-analysis.md#2-1-an-li)
