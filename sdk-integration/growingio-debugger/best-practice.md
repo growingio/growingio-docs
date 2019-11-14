@@ -62,7 +62,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](../../.gitbook/assets/image%20%28401%29.png)
+![](../../.gitbook/assets/image%20%28403%29.png)
 
 ### **场景二：有关联事件级变量的计数器类型场景**
 
@@ -102,7 +102,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 在本例中，如下图的数据请求说明打点代码生效
 
-![](../../.gitbook/assets/image%20%28315%29.png)
+![](../../.gitbook/assets/image%20%28316%29.png)
 
 ## **pvar\(**页面级变量**\) 事件**
 
@@ -340,7 +340,7 @@ Debugger 安装/打开方式请见：[Web Debugger](./#growingio-web-debugger)�
 
 ![](../../.gitbook/assets/image%20%2851%29.png)
 
-![](../../.gitbook/assets/image%20%28310%29.png)
+![](../../.gitbook/assets/image%20%28311%29.png)
 
 ### **场景二：其他用户变量**
 

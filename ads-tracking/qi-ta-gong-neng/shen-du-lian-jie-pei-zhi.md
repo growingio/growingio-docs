@@ -16,11 +16,11 @@
 
 在广告监测产品菜单栏下找到深度链接配置项，其中会展示当前项目下集成的所有移动端 App。
 
-![](../../.gitbook/assets/image%20%28286%29.png)
+![](../../.gitbook/assets/image%20%28287%29.png)
 
 ### iOS 应用配置
 
-![](../../.gitbook/assets/image%20%28295%29.png)
+![](../../.gitbook/assets/image%20%28296%29.png)
 
 找到需要配置的 iOS 应用，查看当前应用的配置。其中将包含所有当前应用的全部 DeepLink 配置信息。
 
@@ -38,7 +38,7 @@ Universal Links 是 Apple 在 iOS 系统中提供的原生方案，如果您希�
 
 Universal Links 适用于 iOS 9 及以上的版本，当用户设备系统版本在 iOS 9 以下时，DeepLink 将会自动回落至 URL Scheme 方案进行跳转。
 
-![](../../.gitbook/assets/image%20%28234%29.png)
+![](../../.gitbook/assets/image%20%28235%29.png)
 
 详细配置步骤：
 
@@ -48,7 +48,7 @@ Universal Links 适用于 iOS 9 及以上的版本，当用户设备系统版本
 
 **二、添加GIO域名到 Xcode**
 
-![](../../.gitbook/assets/lgnxegabuadkitwtaem-loi25m03qmz5g29l78t-loi2x8y23pxuptyanuaimage.png)
+![](../../.gitbook/assets/image%20%28228%29.png)
 
 注：添加至Domain的链接为：
 
@@ -61,15 +61,15 @@ applinks:datayi.cn
 
 **三、在苹果开发者网站中找到 Team ID 与 Bundle ID**
 
-![](../../.gitbook/assets/lgnxegabuadkitwtaem-loi25m03qmz5g29l78t-loi2hvq_f7vn9is2up5image%20%281%29.png)
+![](../../.gitbook/assets/image%20%28328%29.png)
 
 **四、将 Team ID / Bundle ID 到 GrowingIO 后台,并勾选“我已完成Xcode配置，开启Universal Link跳转”，同时确认您的 SDK 版本并进行确认。**
 
-![](../../.gitbook/assets/image%20%28289%29.png)
+![](../../.gitbook/assets/image%20%28290%29.png)
 
 ### Android 应用配置
 
-![](../../.gitbook/assets/image%20%28350%29.png)
+![](../../.gitbook/assets/image%20%28352%29.png)
 
 找到需要配置的 Android 应用，查看当前应用的配置。其中将包含所有当前应用的全部 DeepLink 配置信息。
 
@@ -85,7 +85,7 @@ App Links 是 Google 在 Android 系统中提供的原生方案，如果您希�
 
 App Links 适用于 Android 6.0 及以上的版本，当用户设备系统版本在 Android 6.0 以下时，DeepLink 将会自动回落至 URL Scheme 方案进行跳转。
 
-![](../../.gitbook/assets/image%20%28276%29.png)
+![](../../.gitbook/assets/image%20%28277%29.png)
 
 详细配置步骤：
 
