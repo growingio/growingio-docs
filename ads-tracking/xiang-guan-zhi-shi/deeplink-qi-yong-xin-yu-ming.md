@@ -20,9 +20,9 @@ SDK 端配置：[iOS 端](https://docs.growingio.com/docs/sdk-integration/ios-sd
 
 #### 1.2 GrowingIO 产品配置
 
-Universal Links 配置：[配置方法](https://docs.growingio.com/docs/configuration/project-configuration#pei-zhi-universal-linksios)​
+Universal Links 配置：[配置方法​](../qi-ta-gong-neng/shen-du-lian-jie-pei-zhi.md#universal-links)
 
-App Links 配置：[配置方法](https://docs.growingio.com/docs/configuration/project-configuration#pei-zhi-app-linksandroid)​
+App Links 配置：[配置方法​](../qi-ta-gong-neng/shen-du-lian-jie-pei-zhi.md#applinks)
 
 ### 二、添加新域名支持
 
