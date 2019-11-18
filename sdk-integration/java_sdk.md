@@ -6,8 +6,7 @@
 
 我们推荐使用 [Maven](http://search.maven.org/) 管理 Java 项目，请在 `pom.xml` 文件中，添加以下依赖信息，Maven 将自动获取Java SDK 并更新项目配置。
 
-{% tabs %}
-{% tab title="pom.xml" %}
+{% code title="pom.xml" %}
 ```markup
 
     <dependencies>
@@ -19,13 +18,11 @@
       </dependency>
     </dependencies>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 若出现依赖冲突的问题（例如运行时找不到类），可以使用 `standalone` 版本：
 
-{% tabs %}
-{% tab title="pom.xml" %}
+{% code title="pom.xml" %}
 ```markup
 
     <dependencies>
@@ -38,8 +35,7 @@
       </dependency>
     </dependencies>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 目前，Java SDK 支持的Java版本为 Java 1.6+。
 
@@ -47,8 +43,7 @@
 
 在Java SDK的jar包中，包含了一个默认的配置文件
 
-{% tabs %}
-{% tab title="gio\_default.properties" %}
+{% code title="gio\_default.properties" %}
 ```text
 #项目采集端地址
 api.host=https://api.growingio.com
@@ -84,13 +79,11 @@ run.mode=test
 #http 连接读取时间，默认2000ms
 #read.timeout=2000
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 其中，开发者需要根据自己的情况修改配置参数，保存为gio.properties，并放置在自己Java程序的classpath之中。例如：
 
-{% tabs %}
-{% tab title="gio.properties" %}
+{% code title="gio.properties" %}
 ```text
 #项目采集端地址
 api.host=https://api.growingio.com
@@ -104,15 +97,13 @@ logger.level=error
 # 运行模式，test：仅输出消息体，不发送消息，production：发送消息
 run.mode=production
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Java SDK会优先读取gio.properties中的配置
 
 ## 调用SDK API发送事件
 
-{% tabs %}
-{% tab title="SDK-Demo.java" %}
+{% code title="SDK-Demo.java" %}
 ```text
 //事件行为消息体
 GIOEventMessage eventMessage = new GIOEventMessage.Builder()
@@ -128,8 +119,7 @@ GIOEventMessage eventMessage = new GIOEventMessage.Builder()
 GrowingAPI.send(eventMessage);
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## 程序调试
 

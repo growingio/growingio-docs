@@ -158,8 +158,7 @@ Content-Security-Policy: frame-ancestors 'self' http://www.growingio.com https:/
 
 URL Scheme 填写错误， 请检查您的 manifest.xml 文件中 Url Scheme 是否和您官网的应用管理中的一致，示例代码如下：
 
-{% tabs %}
-{% tab title="AndroidManifest.xml" %}
+{% code title="AndroidManifest.xml" %}
 ```markup
 <activity
     android:name=".LauncherActivity"
@@ -188,8 +187,7 @@ URL Scheme 填写错误， 请检查您的 manifest.xml 文件中 Url Scheme 是
     </intent-filter>
 </activity>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 **iOS：**
 
