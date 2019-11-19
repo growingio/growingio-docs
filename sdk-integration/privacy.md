@@ -75,9 +75,9 @@ Android:
 * 关闭或开启全局数据采集
 
 ```java
-// 不采集数据 
+// 停止采集数据 
 GrowingIO.getInstance().disableDataCollect(); 
-// 收集数据 
+// 采集数据 （默认）
 GrowingIO.getInstance().enableDataCollect();
 ```
 
@@ -91,12 +91,12 @@ GrowingIO.getInstance().getVisitUserId();
 
 ```java
 GrowingIO.startWithConfiguration(this, new Configuration() 
-.disableDataCollect() // 开启GDPR， 不采集数据。 默认采集 
+.disableDataCollect() // 停止采集数据
 .useID() 
 .trackAllFragments()); 
-// 不采集数据 
+// 停止采集数据 
 GrowingIO.getInstance().disableDataCollect(); 
-// 收集数据 
+// 采集数据 
 GrowingIO.getInstance().enableDataCollect(); 
 // 获取访问用户ID 
 GrowingIO.getInstance().getVisitUserId(); 
@@ -121,9 +121,9 @@ getVisitUserId
 * 样例
 
 ```objectivec
-// 开启GDPR 
+// 停止采集数据
 [Growing disableDataCollect]; 
-// 关闭GDPR 
+// 采集数据 （默认）
 [Growing enableDataCollect]; 
 // 获取设备ID 
 NSString *viId = [Growing getVisitUserId]; 
@@ -131,14 +131,15 @@ NSString *viId = [Growing getVisitUserId];
 
 JS:
 
-* 全局配置项 （无）
+* 全局配置, 可以放到send之后
 * 关闭或开启全局数据采集
 
 ```javascript
-// 开启gdpr，停止数据采集 
-window.gio('config',{"dataCollect":"false"}); 
-// 关闭gdpr，开始数据采集 
-window.gio('config',{"dataCollect":"true"}); // 放在init和send之间 
+// 停止采集数据
+window.gio('config',{"dataCollect": true}); // 全局配置, 可以放到send之后
+// 采集数据 (默认)
+window.gio('config',{"dataCollect": false}); 
+
 ```
 
 * 获取访问用户 ID
@@ -150,10 +151,10 @@ window.gio('getVisitUserId'); // 放在send之后
 * 样例
 
 ```javascript
-// 开启gdpr，停止数据采集 
-window.gio('config',{"dataCollect":"false"}); 
-// 关闭gdpr，开始数据采集 
-window.gio('config',{"dataCollect":"true"}); 
+// 停止采集数据
+window.gio('config',{"dataCollect": true}); // 全局配置, 可以放到send之后
+// 采集数据 (默认)
+window.gio('config',{"dataCollect": false}); 
 // 获取访问用户ID 
 window.gio('getVisitUserId'); // 放在send之后
 ```

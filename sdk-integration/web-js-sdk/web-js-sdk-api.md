@@ -249,13 +249,16 @@ gio('sendPage'); // 放在send之后
 
 GrowingIO 全面支持 [欧盟《一般数据保护条例》 \(GDPR\)](../privacy.md#4)
 
+* 全局配置, 可以放到send之后
 * 关闭或开启全局数据采集
 
 ```javascript
-// 开启gdpr，停止数据采集 
-gio('config',{"dataCollect":"false"}); 
-// 关闭gdpr，开始数据采集 
-gio('config',{"dataCollect":"true"}); // 放在init和send之间
+// 停止采集数据
+window.gio('config',{"dataCollect": true}); // 全局配置, 可以放到send之后
+// 采集数据 (默认)
+window.gio('config',{"dataCollect": false}); 
+// 获取访问用户ID 
+window.gio('getVisitUserId'); // 放在send之后
 ```
 
 * 获取访问用户 ID
