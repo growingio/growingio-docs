@@ -5,7 +5,7 @@
 * [3.漏斗分析下载API](reporting-api.md#funnel-api)
 * [4.留存分析下载API](reporting-api.md#retention-api)
 * [5.分群下载 API](reporting-api.md#segmentation-api)
-* [4.规则逻辑 API 接口](reporting-api.md#rule-api)
+* [6.规则逻辑 API 接口](reporting-api.md#rule-api)
 
 注意：
 

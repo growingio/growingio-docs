@@ -25,7 +25,7 @@
 | channel | channel | string\(40\) | app的下载渠道，仅限移动端 | App Store |  |
 | deviceBrand | manufacturer\(新旧不同\) | string\(20\) | 设备品牌（device brand） | google |  |
 | deviceModel | model\(新旧不同\) | string\(50\) | 设备型号（device model） | Nexus 5 |  |
-| deviceType | （新加） | string\(50\) | 设备类型（device type） | 1 | 设备类型：1为手机，2为平板 |
+| deviceType | （新加） | string\(50\) | 设备类型（device type） | 1 | 设备类型：0为手机，1为平板 |
 | deviceOrientation | （新加） | string\(10\) | 设备方向（device orientation） | PORTRAIT | 请求产生时设备方向 |
 | latitude | lat\(新旧不同\) | double | 地理位置维度（latitude） | 29.43982 | 精确到小数点后5位 |
 | longitude | lng\(新旧不同\) | double | 地理位置经度（longitude） | 29.43982 | 精确到小数点后5位 |
