@@ -99,18 +99,6 @@ description: >-
       style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">
-        <p>setDeviceIDModeTo</p>
-        <p>CustomBlock</p>
-      </td>
-      <td style="text-align:center">&#x65E0;</td>
-      <td style="text-align:left">
-        <p>&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;ID&#xFF08;&#x5373; u &#x503C;&#xFF09;,&#x4F1A;&#x8986;&#x76D6;&#x539F;&#x6765;</p>
-        <p>&#x7684; u &#x503C;</p>
-      </td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
       <td style="text-align:left">setTrackerHost</td>
       <td style="text-align:center">&#x65E0;</td>
       <td style="text-align:left">&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x6536;&#x96C6;&#x5E73;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</td>
