@@ -1,5 +1,15 @@
 # SDK 更新日志
 
+## 2019年11月26日
+
+### Android 2.8.7
+
+#### 修复 bugs :
+
+* 修复 Android 7.0 以下，HTTP 请求低概率耗时过长
+* 修复 `setThrottle(true)` 接口和 `setDisableImpression(true)` 同时调用不能关闭 IMP 事件
+* 修复 `gioenable` 设置为 `false` 时如果在 build.gradle 中配置了 `growingio` 插件报错
+
 ## 2019年11月12日
 
 ### iOS 2.8.6
