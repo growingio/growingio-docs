@@ -61,7 +61,7 @@ React Native 无埋点 SDK 目前还不支持。
 
 #### **场景1** **：** **不同的页面共享同一个元素**
 
-![imp &#x573A;&#x666F; 1](../../.gitbook/assets/image%20%28392%29.png)
+![imp &#x573A;&#x666F; 1](../../.gitbook/assets/image%20%28394%29.png)
 
 底部的导航栏在 Tab 页面中是共享元素，即切换 Tab ，底部的导航栏持续可见，在不同的 Tab 页面中是共享元素。
 

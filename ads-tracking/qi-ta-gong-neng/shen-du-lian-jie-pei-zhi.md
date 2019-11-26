@@ -42,11 +42,11 @@ Universal Links 适用于 iOS 9 及以上的版本，当用户设备系统版本
 
 详细配置步骤：
 
-**一、在您的 Xcode 中勾选如下功能**
+**一、在您的 Xcode 中勾选如下功能。**
 
 ![](../../.gitbook/assets/lgnxegabuadkitwtaem-loi25m03qmz5g29l78t-loi2ffwmy02yx1s5-tbimage.png)
 
-**二、添加GIO域名到 Xcode**
+**二、添加GIO域名到 Xcode。**
 
 ![](../../.gitbook/assets/image%20%28228%29.png)
 
@@ -59,17 +59,25 @@ applinks:datayi.cn
 
 （请注意该 Domain 链接内容的正确填写）
 
-**三、在苹果开发者网站中找到 Team ID 与 Bundle ID**
+**三、在 Apple 开发者网站中找到 Team ID 与 Bundle ID。**
 
-![](../../.gitbook/assets/image%20%28328%29.png)
+![](../../.gitbook/assets/image%20%28330%29.png)
 
-**四、将 Team ID / Bundle ID 到 GrowingIO 后台,并勾选“我已完成Xcode配置，开启Universal Link跳转”，同时确认您的 SDK 版本并进行确认。**
+**四、将 Bundle ID/Team ID 填写到 GrowingIO 后台，需要注意此处必须与 Apple 开发者网站信息保持一致，否则 DeepLink 将无法生效。**
 
-![](../../.gitbook/assets/image%20%28290%29.png)
+![](../../.gitbook/assets/image%20%28310%29.png)
+
+\*\*\*\*
+
+\*\*\*\*
+
+**五、若以上配置完成后，且 App 端已经完成 SDK 集成，请勾选“我已完成Xcode 配置，开启 Universal Link 跳转”；如果 SDK 版本为 2.8.4（及以上），请勾选“已确认将 iOS SDK 升级至 2.8.4 或更高版本”，将开启 DeepLink 2.0 方案，将获得更佳使用体验。**
+
+![](../../.gitbook/assets/image%20%28309%29.png)
 
 ### Android 应用配置
 
-![](../../.gitbook/assets/image%20%28352%29.png)
+![](../../.gitbook/assets/image%20%28354%29.png)
 
 找到需要配置的 Android 应用，查看当前应用的配置。其中将包含所有当前应用的全部 DeepLink 配置信息。
 
@@ -89,7 +97,7 @@ App Links 适用于 Android 6.0 及以上的版本，当用户设备系统版本
 
 详细配置步骤：
 
-**一、获取应用签名 SHA256 指纹证书**
+**一、获取应用签名 SHA256 指纹证书。**
 
 1.1 使用命令行进入你的证书目录，一般签名分为 debug keystore 和 release keystore ，开发期间建议先配置为 debug keystore ，上线前一定要更新为 release keystore 。如果担心忘记，建议新建应用。
 
@@ -103,7 +111,7 @@ keytool -list -v -keystore my-release-key.keystore
 
 ![](../../.gitbook/assets/lgnxegabuadkitwtaem-lqj1aycsvz98vlmmoj_-lqjdzowsf3cf7b2qr5gimage.png)
 
-**二、在 Manifest.xml 中配置 Intent Filter** 
+**二、在 Manifest.xml 中配置 Intent Filter 。**
 
 2.1 点击「复制代码片段」
 
@@ -165,7 +173,7 @@ keytool -list -v -keystore my-release-key.keystore
 * 不要尝试修改或者合并 GIO 的 intent filter ，[Google 官方解释](https://developer.android.com/training/app-links/deep-linking#adding-filters)。
 {% endhint %}
 
-**三、测试并验证您的 App Links** 
+**三、测试并验证您的 App Links。**
 
 3.1 完成上述配置后，安装在手机上
 

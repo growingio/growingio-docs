@@ -4,11 +4,23 @@ description: 我们一直在迭代！
 
 # 产品更新日志
 
+### **GrowingIO 更新 2019 年 11 月 19 日**
+
+**关键词：DeepLink（深度链接）**
+
+![](.gitbook/assets/01994acd8198a98440ab6d0fb2675c3e%20%281%29.jpg)
+
+我们上线了 DeepLink 2.0 ，助力您在获客召回环节获得更佳表现，在 DeepLink 2.0 方案中我们结合系统平台提供的原生技术方案，对整个技术方案进行整体升级，使得用户在唤起流程中更佳精简，使得用户转化过程更高效。
+
+* 在 iOS 下对已有方案重新优化 [了解更多](ads-tracking/qi-ta-gong-neng/shen-du-lian-jie-pei-zhi.md#universal-links)
+* 在 Android 下新增 AppLink 原生方案支持 [了解更多](ads-tracking/qi-ta-gong-neng/shen-du-lian-jie-pei-zhi.md#applinks)
+* 下载引导中间页支持自定义，可以按照您的产品风格进行定制 [定制方式](ads-tracking/qi-ta-gong-neng/shen-du-lian-jie-pei-zhi.md#xia-zai-yin-dao-zhong-jian-ye)
+
 ### **GrowingIO 更新 2019 年 10 月 29 日**
 
 **关键词：广告转化数据回传** 
 
-![](.gitbook/assets/01994acd8198a98440ab6d0fb2675c3e.jpg)
+![](.gitbook/assets/01994acd8198a98440ab6d0fb2675c3e%20%281%29.jpg)
 
 我们上线了转化数据回传功能，当您在广告平台以 oCPM / oCPC / oCPA 模式进行广告投放时，GrowingIO 可帮您回传转化数据以及深度转化数据，来支持您更好的优化广告投放活动。目前支持深度转化回传的渠道：
 
@@ -126,7 +138,9 @@ description: 我们一直在迭代！
 
 * **官网**
 
-支持海外用户邮箱注册。
+支
+
+持海外用户邮箱注册。
 
 ![](.gitbook/assets/image%20%2815%29.png)
 
@@ -210,7 +224,7 @@ description: 我们一直在迭代！
 
 我们为**企业权限管理用户**优化了预置看板的权限设置功能。超级管理员可以设置首页侧边预置看板的可见用户的范围。
 
-![](.gitbook/assets/image%20%28353%29.png)
+![](.gitbook/assets/image%20%28355%29.png)
 
 * **历史注册用户ID以及注册日期支持上传**
 
