@@ -231,8 +231,8 @@ description: >-
     </tr>
     <tr>
       <td style="text-align:left">setFlushInterval</td>
-      <td style="text-align:left">10s</td>
-      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x3001;&#x83B7;&#x53D6;&#x53D1;&#x9001;&#x6570;&#x636E;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;10&#x79D2;</td>
+      <td style="text-align:left">30s</td>
+      <td style="text-align:left">&#x8BBE;&#x7F6E;&#x3001;&#x83B7;&#x53D6;&#x53D1;&#x9001;&#x6570;&#x636E;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;30&#x79D2;</td>
     </tr>
     <tr>
       <td style="text-align:left">setDailyDataLimit</td>
